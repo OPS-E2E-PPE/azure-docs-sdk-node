@@ -6,7 +6,6 @@ items:
     children:
       - microsoft-cognitiveservices-speech-sdk.RequestSession.audioNodeId
       - microsoft-cognitiveservices-speech-sdk.RequestSession.bytesSent
-      - microsoft-cognitiveservices-speech-sdk.RequestSession.completionPromise
       - >-
         microsoft-cognitiveservices-speech-sdk.RequestSession.currentTurnAudioOffset
       - microsoft-cognitiveservices-speech-sdk.RequestSession.dispose
@@ -29,13 +28,18 @@ items:
         microsoft-cognitiveservices-speech-sdk.RequestSession.onServiceRecognized
       - >-
         microsoft-cognitiveservices-speech-sdk.RequestSession.onServiceTurnEndResponse
+      - >-
+        microsoft-cognitiveservices-speech-sdk.RequestSession.onServiceTurnStartResponse
       - microsoft-cognitiveservices-speech-sdk.RequestSession.onSpeechEnded
       - microsoft-cognitiveservices-speech-sdk.RequestSession.onStopRecognizing
+      - microsoft-cognitiveservices-speech-sdk.RequestSession.recogNumber
       - microsoft-cognitiveservices-speech-sdk.RequestSession.requestId
       - microsoft-cognitiveservices-speech-sdk.RequestSession.constructor
       - microsoft-cognitiveservices-speech-sdk.RequestSession.sessionId
       - >-
         microsoft-cognitiveservices-speech-sdk.RequestSession.startNewRecognition
+      - >-
+        microsoft-cognitiveservices-speech-sdk.RequestSession.turnCompletionPromise
     langs:
       - typeScript
     type: class
@@ -50,10 +54,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'audioNodeId: string'
+      content: string audioNodeId
       return:
         type:
           - string
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.bytesSent
     name: bytesSent
@@ -64,24 +69,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'bytesSent: number'
+      content: number bytesSent
       return:
         type:
           - number
-    package: microsoft-cognitiveservices-speech-sdk
-  - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.completionPromise
-    name: completionPromise
-    fullName: completionPromise
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'completionPromise: Promise<boolean>'
-      return:
-        type:
-          - microsoft-cognitiveservices-speech-sdk.Promise<boolean>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.RequestSession.currentTurnAudioOffset
@@ -93,10 +85,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'currentTurnAudioOffset: number'
+      content: number currentTurnAudioOffset
       return:
         type:
           - number
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.dispose
     name: dispose
@@ -111,6 +104,7 @@ items:
       return:
         type:
           - '(error?: string) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.getTelemetry
     name: getTelemetry
@@ -125,6 +119,7 @@ items:
       return:
         type:
           - () => string
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.isRecognizing
     name: isRecognizing
@@ -135,10 +130,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'isRecognizing: boolean'
+      content: boolean isRecognizing
       return:
         type:
           - boolean
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.isSpeechEnded
     name: isSpeechEnded
@@ -149,10 +145,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'isSpeechEnded: boolean'
+      content: boolean isSpeechEnded
       return:
         type:
           - boolean
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.RequestSession.listenForServiceTelemetry
@@ -206,6 +203,7 @@ items:
           - >-
             (audioNode: ReplayableAudioNode, isError: boolean, error?: string)
             => void
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.onAuthCompleted
     name: onAuthCompleted
@@ -220,6 +218,7 @@ items:
       return:
         type:
           - '(isError: boolean, error?: string) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.RequestSession.onConnectionEstablishCompleted
@@ -237,6 +236,7 @@ items:
       return:
         type:
           - '(statusCode: number, reason?: string) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.onHypothesis
     name: onHypothesis(number)
@@ -283,6 +283,7 @@ items:
       return:
         type:
           - '(authFetchEventId: string, connectionId: string) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.onServiceRecognized
     name: onServiceRecognized(number)
@@ -313,6 +314,23 @@ items:
       return:
         type:
           - '(continuousRecognition: boolean) => void'
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.RequestSession.onServiceTurnStartResponse
+    name: onServiceTurnStartResponse
+    fullName: onServiceTurnStartResponse
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'onServiceTurnStartResponse: () => void'
+      return:
+        type:
+          - () => void
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.onSpeechEnded
     name: onSpeechEnded()
@@ -336,6 +354,21 @@ items:
       content: function onStopRecognizing()
       parameters: []
     package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.recogNumber
+    name: recogNumber
+    fullName: recogNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: number recogNumber
+      return:
+        type:
+          - number
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.requestId
     name: requestId
     fullName: requestId
@@ -345,10 +378,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'requestId: string'
+      content: string requestId
       return:
         type:
           - string
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.constructor
     name: RequestSession(string)
@@ -374,10 +408,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'sessionId: string'
+      content: string sessionId
       return:
         type:
           - string
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.RequestSession.startNewRecognition
     name: startNewRecognition()
@@ -389,6 +424,22 @@ items:
     syntax:
       content: function startNewRecognition()
       parameters: []
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.RequestSession.turnCompletionPromise
+    name: turnCompletionPromise
+    fullName: turnCompletionPromise
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: Promise<boolean> turnCompletionPromise
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.Promise<boolean>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
 references:
   - uid: microsoft-cognitiveservices-speech-sdk.Promise<boolean>

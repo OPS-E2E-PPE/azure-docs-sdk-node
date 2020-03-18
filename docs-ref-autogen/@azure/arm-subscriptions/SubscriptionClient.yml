@@ -17,6 +17,7 @@ items:
       - '@azure/arm-subscriptions.SubscriptionClient.sendRequest'
       - '@azure/arm-subscriptions.SubscriptionClient.constructor'
       - '@azure/arm-subscriptions.SubscriptionClient.subscriptionFactory'
+      - '@azure/arm-subscriptions.SubscriptionClient.subscriptionOperation'
       - '@azure/arm-subscriptions.SubscriptionClient.subscriptionOperations'
       - '@azure/arm-subscriptions.SubscriptionClient.subscriptions'
       - '@azure/arm-subscriptions.SubscriptionClient.tenants'
@@ -40,6 +41,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.beginLongRunningRequest'
     name: >-
@@ -73,6 +75,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: |-
+          The HttpLongRunningOperationResponse
+          that provides methods for interacting with the LRO.
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.credentials'
     name: credentials
@@ -87,6 +92,7 @@ items:
       return:
         type:
           - ServiceClientCredentials
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: >-
       @azure/arm-subscriptions.SubscriptionClient.longRunningOperationRetryTimeout
@@ -105,6 +111,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.operations'
     name: operations
@@ -119,6 +126,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.Operations'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.restoreLROPoller'
     name: restoreLROPoller(LROPollState)
@@ -141,6 +149,7 @@ items:
       return:
         type:
           - LROPoller
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.sendLongRunningRequest'
     name: >-
@@ -170,6 +179,9 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: >-
+          The HttpOperationResponse containing the final polling request,
+          response and the responseBody.
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.sendLRORequest'
     name: 'sendLRORequest(OperationArguments, OperationSpec, RequestOptionsBase)'
@@ -203,6 +215,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: >-
+          The LROPoller object that provides methods for interacting with the
+          LRO.
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.sendOperationRequest'
     name: >-
@@ -237,6 +252,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.sendRequest'
     name: sendRequest(RequestPrepareOptions | WebResource)
@@ -255,6 +271,7 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.constructor'
     name: >-
@@ -293,6 +310,22 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.SubscriptionFactory'
+        description: ''
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.subscriptionOperation'
+    name: subscriptionOperation
+    fullName: subscriptionOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'subscriptionOperation: SubscriptionOperationOperations'
+      return:
+        type:
+          - '@azure/arm-subscriptions.SubscriptionOperationOperations'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.subscriptionOperations'
     name: subscriptionOperations
@@ -307,6 +340,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.SubscriptionOperations'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.subscriptions'
     name: subscriptions
@@ -321,6 +355,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.Subscriptions'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.SubscriptionClient.tenants'
     name: tenants
@@ -335,6 +370,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.Tenants'
+        description: ''
     package: '@azure/arm-subscriptions'
 references:
   - uid: '@azure/arm-subscriptions.SubscriptionClientContext'
@@ -355,6 +391,12 @@ references:
       - name: SubscriptionFactory
         fullName: SubscriptionFactory
         uid: '@azure/arm-subscriptions.SubscriptionFactory'
+  - uid: '@azure/arm-subscriptions.SubscriptionOperationOperations'
+    name: SubscriptionOperationOperations
+    spec.typeScript:
+      - name: SubscriptionOperationOperations
+        fullName: SubscriptionOperationOperations
+        uid: '@azure/arm-subscriptions.SubscriptionOperationOperations'
   - uid: '@azure/arm-subscriptions.SubscriptionOperations'
     name: SubscriptionOperations
     spec.typeScript:

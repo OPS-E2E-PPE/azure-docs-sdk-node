@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.ApplicationGatewayListResult.entries'
       - '@azure/arm-network.ApplicationGatewayListResult.every'
       - '@azure/arm-network.ApplicationGatewayListResult.fill'
-      - '@azure/arm-network.ApplicationGatewayListResult.filter_1'
       - '@azure/arm-network.ApplicationGatewayListResult.filter'
+      - '@azure/arm-network.ApplicationGatewayListResult.filter_1'
       - '@azure/arm-network.ApplicationGatewayListResult.find'
       - '@azure/arm-network.ApplicationGatewayListResult.find_1'
       - '@azure/arm-network.ApplicationGatewayListResult.findIndex'
       - '@azure/arm-network.ApplicationGatewayListResult.forEach'
+      - '@azure/arm-network.ApplicationGatewayListResult.includes'
       - '@azure/arm-network.ApplicationGatewayListResult.indexOf'
       - '@azure/arm-network.ApplicationGatewayListResult.join'
       - '@azure/arm-network.ApplicationGatewayListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.concat'
     name: 'concat(ConcatArray<ApplicationGateway>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.every'
     name: >-
       every((value: ApplicationGateway, index: number, array:
-      ApplicationGateway[]) => boolean, any)
+      ApplicationGateway[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ApplicationGateway, index: number,
-        array: ApplicationGateway[]) => boolean, thisArg?: any)
+        array: ApplicationGateway[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ApplicationGateway, index: number, array:
-              ApplicationGateway[]) => boolean
+              ApplicationGateway[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.fill'
     name: 'fill(ApplicationGateway, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ApplicationGatewayListResult.filter_1'
-    name: >-
-      filter((value: ApplicationGateway, index: number, array:
-      ApplicationGateway[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ApplicationGateway, index: number,
-        array: ApplicationGateway[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ApplicationGateway, index: number, array:
-              ApplicationGateway[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.ApplicationGateway[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayListResult.filter_1'
+    name: >-
+      filter((value: ApplicationGateway, index: number, array:
+      ApplicationGateway[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ApplicationGateway, index: number,
+        array: ApplicationGateway[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ApplicationGateway, index: number, array:
+              ApplicationGateway[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.ApplicationGateway[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.find_1'
     name: >-
       find((value: ApplicationGateway, index: number, obj: ApplicationGateway[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ApplicationGateway, index: number, obj:
-        ApplicationGateway[]) => boolean, thisArg?: any)
+        ApplicationGateway[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ApplicationGateway, index: number, obj:
-              ApplicationGateway[]) => boolean
+              ApplicationGateway[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.findIndex'
     name: >-
       findIndex((value: ApplicationGateway, index: number, obj:
-      ApplicationGateway[]) => boolean, any)
+      ApplicationGateway[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ApplicationGateway, index: number,
-        obj: ApplicationGateway[]) => boolean, thisArg?: any)
+        obj: ApplicationGateway[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ApplicationGateway, index: number, obj:
-              ApplicationGateway[]) => boolean
+              ApplicationGateway[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayListResult.includes'
+    name: 'includes(ApplicationGateway, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ApplicationGateway, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.ApplicationGateway'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.indexOf'
     name: 'indexOf(ApplicationGateway, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.lastIndexOf'
     name: 'lastIndexOf(ApplicationGateway, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.push'
     name: 'push(ApplicationGateway[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.reduce'
     name: >-
@@ -686,6 +734,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.reduce_1'
     name: >-
@@ -696,10 +745,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ApplicationGateway,
@@ -721,6 +767,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.reduce_2'
     name: >-
@@ -759,6 +806,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.reduceRight'
     name: >-
@@ -793,6 +841,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.reduceRight_1'
     name: >-
@@ -803,11 +852,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ApplicationGateway,
@@ -829,6 +874,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.reduceRight_2'
     name: >-
@@ -868,6 +914,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.reverse'
     name: reverse()
@@ -882,6 +929,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.shift'
     name: shift()
@@ -896,6 +944,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -921,11 +970,12 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.some'
     name: >-
       some((value: ApplicationGateway, index: number, array:
-      ApplicationGateway[]) => boolean, any)
+      ApplicationGateway[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -936,13 +986,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ApplicationGateway, index: number,
-        array: ApplicationGateway[]) => boolean, thisArg?: any)
+        array: ApplicationGateway[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ApplicationGateway, index: number, array:
-              ApplicationGateway[]) => boolean
+              ApplicationGateway[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -958,6 +1008,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.sort'
     name: 'sort(undefined | (a: ApplicationGateway, b: ApplicationGateway) => number)'
@@ -984,6 +1035,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.splice_1'
     name: 'splice(number, number, ApplicationGateway[])'
@@ -1017,6 +1069,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1045,6 +1098,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.toLocaleString'
     name: toLocaleString()
@@ -1061,6 +1115,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.toString'
     name: toString()
@@ -1075,6 +1130,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.unshift'
     name: 'unshift(ApplicationGateway[])'
@@ -1094,6 +1150,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayListResult.values'
     name: values()
@@ -1108,6 +1165,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-network.ApplicationGateway>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.ApplicationGateway>

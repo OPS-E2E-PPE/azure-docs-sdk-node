@@ -11,12 +11,13 @@ items:
       - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.entries'
       - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.every'
       - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.fill'
-      - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.filter_1'
       - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.filter'
+      - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.filter_1'
       - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.find'
       - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.find_1'
       - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.findIndex'
       - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.forEach'
+      - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.includes'
       - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.indexOf'
       - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.join'
       - '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.keys'
@@ -66,6 +67,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.concat'
     name: 'concat(ConcatArray<VirtualMachineScaleSet>[])'
@@ -85,6 +87,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -104,6 +107,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -147,6 +151,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.entries'
     name: entries()
@@ -161,11 +166,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.every'
     name: >-
       every((value: VirtualMachineScaleSet, index: number, array:
-      VirtualMachineScaleSet[]) => boolean, any)
+      VirtualMachineScaleSet[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -174,13 +180,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: VirtualMachineScaleSet, index:
-        number, array: VirtualMachineScaleSet[]) => boolean, thisArg?: any)
+        number, array: VirtualMachineScaleSet[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VirtualMachineScaleSet, index: number, array:
-              VirtualMachineScaleSet[]) => boolean
+              VirtualMachineScaleSet[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -196,6 +202,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.fill'
     name: 'fill(VirtualMachineScaleSet, undefined | number, undefined | number)'
@@ -236,43 +243,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.filter_1'
-    name: >-
-      filter((value: VirtualMachineScaleSet, index: number, array:
-      VirtualMachineScaleSet[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: VirtualMachineScaleSet, index:
-        number, array: VirtualMachineScaleSet[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: VirtualMachineScaleSet, index: number, array:
-              VirtualMachineScaleSet[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-compute.VirtualMachineScaleSet[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.filter'
     name: >-
@@ -310,6 +281,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.filter_1'
+    name: >-
+      filter((value: VirtualMachineScaleSet, index: number, array:
+      VirtualMachineScaleSet[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: VirtualMachineScaleSet, index:
+        number, array: VirtualMachineScaleSet[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: VirtualMachineScaleSet, index: number, array:
+              VirtualMachineScaleSet[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSet[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.find'
     name: >-
@@ -355,30 +365,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.find_1'
     name: >-
       find((value: VirtualMachineScaleSet, index: number, obj:
-      VirtualMachineScaleSet[]) => boolean, any)
+      VirtualMachineScaleSet[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: VirtualMachineScaleSet, index: number,
-        obj: VirtualMachineScaleSet[]) => boolean, thisArg?: any)
+        obj: VirtualMachineScaleSet[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VirtualMachineScaleSet, index: number, obj:
-              VirtualMachineScaleSet[]) => boolean
+              VirtualMachineScaleSet[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -388,11 +395,12 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.findIndex'
     name: >-
       findIndex((value: VirtualMachineScaleSet, index: number, obj:
-      VirtualMachineScaleSet[]) => boolean, any)
+      VirtualMachineScaleSet[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -405,13 +413,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: VirtualMachineScaleSet, index:
-        number, obj: VirtualMachineScaleSet[]) => boolean, thisArg?: any)
+        number, obj: VirtualMachineScaleSet[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VirtualMachineScaleSet, index: number, obj:
-              VirtualMachineScaleSet[]) => boolean
+              VirtualMachineScaleSet[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -433,6 +441,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.forEach'
     name: >-
@@ -465,6 +474,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.includes'
+    name: 'includes(VirtualMachineScaleSet, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: VirtualMachineScaleSet, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-compute.VirtualMachineScaleSet'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.indexOf'
     name: 'indexOf(VirtualMachineScaleSet, undefined | number)'
     children: []
@@ -491,6 +530,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.join'
     name: join(undefined | string)
@@ -515,6 +555,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.keys'
     name: keys()
@@ -529,6 +570,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.lastIndexOf'
     name: 'lastIndexOf(VirtualMachineScaleSet, undefined | number)'
@@ -556,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.length'
     name: length
@@ -572,6 +615,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.map'
     name: >-
@@ -608,6 +652,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.nextLink'
     name: nextLink
@@ -627,6 +672,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.pop'
     name: pop()
@@ -641,6 +687,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.push'
     name: 'push(VirtualMachineScaleSet[])'
@@ -660,6 +707,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.reduce_2'
     name: >-
@@ -698,6 +746,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.reduce'
     name: >-
@@ -731,6 +780,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.reduce_1'
     name: >-
@@ -742,10 +792,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: VirtualMachineScaleSet,
@@ -767,6 +814,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.reduceRight_2'
     name: >-
@@ -806,6 +854,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.reduceRight'
     name: >-
@@ -840,6 +889,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.reduceRight_1'
     name: >-
@@ -851,11 +901,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: VirtualMachineScaleSet,
@@ -877,6 +923,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.reverse'
     name: reverse()
@@ -891,6 +938,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.shift'
     name: shift()
@@ -905,6 +953,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -930,11 +979,12 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.some'
     name: >-
       some((value: VirtualMachineScaleSet, index: number, array:
-      VirtualMachineScaleSet[]) => boolean, any)
+      VirtualMachineScaleSet[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -945,13 +995,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: VirtualMachineScaleSet, index: number,
-        array: VirtualMachineScaleSet[]) => boolean, thisArg?: any)
+        array: VirtualMachineScaleSet[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VirtualMachineScaleSet, index: number, array:
-              VirtualMachineScaleSet[]) => boolean
+              VirtualMachineScaleSet[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -967,6 +1017,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.sort'
     name: >-
@@ -995,6 +1046,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.splice_1'
     name: 'splice(number, number, VirtualMachineScaleSet[])'
@@ -1028,6 +1080,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1056,6 +1109,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSet[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.toLocaleString'
     name: toLocaleString()
@@ -1072,6 +1126,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.toString'
     name: toString()
@@ -1086,6 +1141,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.unshift'
     name: 'unshift(VirtualMachineScaleSet[])'
@@ -1105,6 +1161,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetListWithLinkResult.values'
     name: values()
@@ -1119,6 +1176,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-compute.VirtualMachineScaleSet>
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: Array<@azure/arm-compute.VirtualMachineScaleSet>

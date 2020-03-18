@@ -11,12 +11,13 @@ items:
       - '@azure/arm-azurestack.ProductList.entries'
       - '@azure/arm-azurestack.ProductList.every'
       - '@azure/arm-azurestack.ProductList.fill'
-      - '@azure/arm-azurestack.ProductList.filter_1'
       - '@azure/arm-azurestack.ProductList.filter'
+      - '@azure/arm-azurestack.ProductList.filter_1'
       - '@azure/arm-azurestack.ProductList.find'
       - '@azure/arm-azurestack.ProductList.find_1'
       - '@azure/arm-azurestack.ProductList.findIndex'
       - '@azure/arm-azurestack.ProductList.forEach'
+      - '@azure/arm-azurestack.ProductList.includes'
       - '@azure/arm-azurestack.ProductList.indexOf'
       - '@azure/arm-azurestack.ProductList.join'
       - '@azure/arm-azurestack.ProductList.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.concat'
     name: 'concat(ConcatArray<Product>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product[]'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product[]'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.every'
-    name: 'every((value: Product, index: number, array: Product[]) => boolean, any)'
+    name: 'every((value: Product, index: number, array: Product[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Product, index: number, array:
-        Product[]) => boolean, thisArg?: any)
+        Product[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Product, index: number, array: Product[]) => boolean'
+            - '(value: Product, index: number, array: Product[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.fill'
     name: 'fill(Product, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-azurestack'
-  - uid: '@azure/arm-azurestack.ProductList.filter_1'
-    name: 'filter((value: Product, index: number, array: Product[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Product, index: number, array:
-        Product[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Product, index: number, array: Product[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-azurestack.Product[]'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.filter'
     name: 'filter((value: Product, index: number, array: Product[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-azurestack'
+  - uid: '@azure/arm-azurestack.ProductList.filter_1'
+    name: 'filter((value: Product, index: number, array: Product[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Product, index: number, array:
+        Product[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Product, index: number, array: Product[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-azurestack.Product[]'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.find'
     name: >-
@@ -340,26 +350,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.find_1'
-    name: 'find((value: Product, index: number, obj: Product[]) => boolean, any)'
+    name: 'find((value: Product, index: number, obj: Product[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Product, index: number, obj: Product[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Product, index: number, obj: Product[]) => boolean'
+            - '(value: Product, index: number, obj: Product[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -369,9 +376,10 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product | undefined'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.findIndex'
-    name: 'findIndex((value: Product, index: number, obj: Product[]) => boolean, any)'
+    name: 'findIndex((value: Product, index: number, obj: Product[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -384,11 +392,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Product, index: number, obj:
-        Product[]) => boolean, thisArg?: any)
+        Product[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Product, index: number, obj: Product[]) => boolean'
+            - '(value: Product, index: number, obj: Product[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -410,6 +418,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.forEach'
     name: 'forEach((value: Product, index: number, array: Product[]) => void, any)'
@@ -438,6 +447,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-azurestack'
+  - uid: '@azure/arm-azurestack.ProductList.includes'
+    name: 'includes(Product, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Product, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-azurestack.Product'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.indexOf'
     name: 'indexOf(Product, undefined | number)'
     children: []
@@ -462,6 +501,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.join'
     name: join(undefined | string)
@@ -486,6 +526,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.keys'
     name: keys()
@@ -500,6 +541,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.lastIndexOf'
     name: 'lastIndexOf(Product, undefined | number)'
@@ -527,6 +569,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.length'
     name: length
@@ -543,6 +586,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.map'
     name: 'map((value: Product, index: number, array: Product[]) => U, any)'
@@ -575,6 +619,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.nextLink'
     name: nextLink
@@ -583,13 +628,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: URI to the next page.
     optional: true
     syntax:
       content: 'nextLink?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.pop'
     name: pop()
@@ -604,6 +650,7 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product | undefined'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.push'
     name: 'push(Product[])'
@@ -623,6 +670,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.reduce'
     name: >-
@@ -653,6 +701,7 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.reduce_1'
     name: >-
@@ -662,10 +711,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Product, currentValue:
@@ -685,6 +731,7 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.reduce_2'
     name: >-
@@ -722,6 +769,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.reduceRight'
     name: >-
@@ -753,6 +801,7 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.reduceRight_1'
     name: >-
@@ -762,11 +811,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Product, currentValue:
@@ -786,6 +831,7 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.reduceRight_2'
     name: >-
@@ -824,6 +870,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.reverse'
     name: reverse()
@@ -838,6 +885,7 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product[]'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.shift'
     name: shift()
@@ -852,6 +900,7 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product | undefined'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -877,9 +926,10 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product[]'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.some'
-    name: 'some((value: Product, index: number, array: Product[]) => boolean, any)'
+    name: 'some((value: Product, index: number, array: Product[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -890,11 +940,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Product, index: number, array:
-        Product[]) => boolean, thisArg?: any)
+        Product[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Product, index: number, array: Product[]) => boolean'
+            - '(value: Product, index: number, array: Product[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -910,6 +960,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.sort'
     name: 'sort(undefined | (a: Product, b: Product) => number)'
@@ -934,6 +985,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.splice_1'
     name: 'splice(number, number, Product[])'
@@ -965,6 +1017,7 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product[]'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.splice'
     name: 'splice(number, undefined | number)'
@@ -993,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/arm-azurestack.Product[]'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.toLocaleString'
     name: toLocaleString()
@@ -1009,6 +1063,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.toString'
     name: toString()
@@ -1023,6 +1078,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.unshift'
     name: 'unshift(Product[])'
@@ -1042,6 +1098,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.ProductList.values'
     name: values()
@@ -1056,6 +1113,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-azurestack.Product>
+        description: ''
     package: '@azure/arm-azurestack'
 references:
   - uid: Array<@azure/arm-azurestack.Product>

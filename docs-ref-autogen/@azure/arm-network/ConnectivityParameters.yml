@@ -5,6 +5,7 @@ items:
     fullName: ConnectivityParameters
     children:
       - '@azure/arm-network.ConnectivityParameters.destination'
+      - '@azure/arm-network.ConnectivityParameters.preferredIPVersion'
       - '@azure/arm-network.ConnectivityParameters.protocol'
       - '@azure/arm-network.ConnectivityParameters.protocolConfiguration'
       - '@azure/arm-network.ConnectivityParameters.source'
@@ -26,6 +27,25 @@ items:
       return:
         type:
           - '@azure/arm-network.ConnectivityDestination'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ConnectivityParameters.preferredIPVersion'
+    name: preferredIPVersion
+    fullName: preferredIPVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Preferred IP version of the connection. Possible values include: 'IPv4',
+      'IPv6'
+    optional: true
+    syntax:
+      content: 'preferredIPVersion?: IPVersion'
+      return:
+        type:
+          - '@azure/arm-network.IPVersion'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectivityParameters.protocol'
     name: protocol
@@ -41,6 +61,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Protocol'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectivityParameters.protocolConfiguration'
     name: protocolConfiguration
@@ -56,6 +77,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ProtocolConfiguration'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectivityParameters.source'
     name: source
@@ -70,6 +92,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ConnectivitySource'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.ConnectivityDestination'
@@ -78,6 +101,12 @@ references:
       - name: ConnectivityDestination
         fullName: ConnectivityDestination
         uid: '@azure/arm-network.ConnectivityDestination'
+  - uid: '@azure/arm-network.IPVersion'
+    name: IPVersion
+    spec.typeScript:
+      - name: IPVersion
+        fullName: IPVersion
+        uid: '@azure/arm-network.IPVersion'
   - uid: '@azure/arm-network.Protocol'
     name: Protocol
     spec.typeScript:

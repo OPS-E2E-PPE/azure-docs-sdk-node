@@ -11,12 +11,13 @@ items:
       - '@azure/arm-customerinsights.HubListResult.entries'
       - '@azure/arm-customerinsights.HubListResult.every'
       - '@azure/arm-customerinsights.HubListResult.fill'
-      - '@azure/arm-customerinsights.HubListResult.filter_1'
       - '@azure/arm-customerinsights.HubListResult.filter'
+      - '@azure/arm-customerinsights.HubListResult.filter_1'
       - '@azure/arm-customerinsights.HubListResult.find'
       - '@azure/arm-customerinsights.HubListResult.find_1'
       - '@azure/arm-customerinsights.HubListResult.findIndex'
       - '@azure/arm-customerinsights.HubListResult.forEach'
+      - '@azure/arm-customerinsights.HubListResult.includes'
       - '@azure/arm-customerinsights.HubListResult.indexOf'
       - '@azure/arm-customerinsights.HubListResult.join'
       - '@azure/arm-customerinsights.HubListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.concat'
     name: 'concat(ConcatArray<Hub>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.every'
-    name: 'every((value: Hub, index: number, array: Hub[]) => boolean, any)'
+    name: 'every((value: Hub, index: number, array: Hub[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Hub, index: number, array: Hub[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Hub, index: number, array: Hub[]) => boolean'
+            - '(value: Hub, index: number, array: Hub[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.fill'
     name: 'fill(Hub, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-customerinsights'
-  - uid: '@azure/arm-customerinsights.HubListResult.filter_1'
-    name: 'filter((value: Hub, index: number, array: Hub[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Hub, index: number, array: Hub[]) =>
-        any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Hub, index: number, array: Hub[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-customerinsights.Hub[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.filter'
     name: 'filter((value: Hub, index: number, array: Hub[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-customerinsights'
+  - uid: '@azure/arm-customerinsights.HubListResult.filter_1'
+    name: 'filter((value: Hub, index: number, array: Hub[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Hub, index: number, array: Hub[]) =>
+        unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Hub, index: number, array: Hub[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-customerinsights.Hub[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.find'
     name: 'find((this: void, value: Hub, index: number, obj: Hub[]) => boolean, any)'
@@ -336,26 +346,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.find_1'
-    name: 'find((value: Hub, index: number, obj: Hub[]) => boolean, any)'
+    name: 'find((value: Hub, index: number, obj: Hub[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Hub, index: number, obj: Hub[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Hub, index: number, obj: Hub[]) => boolean'
+            - '(value: Hub, index: number, obj: Hub[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -365,9 +372,10 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.findIndex'
-    name: 'findIndex((value: Hub, index: number, obj: Hub[]) => boolean, any)'
+    name: 'findIndex((value: Hub, index: number, obj: Hub[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -380,11 +388,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Hub, index: number, obj: Hub[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Hub, index: number, obj: Hub[]) => boolean'
+            - '(value: Hub, index: number, obj: Hub[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -406,6 +414,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.forEach'
     name: 'forEach((value: Hub, index: number, array: Hub[]) => void, any)'
@@ -434,6 +443,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-customerinsights'
+  - uid: '@azure/arm-customerinsights.HubListResult.includes'
+    name: 'includes(Hub, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Hub, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-customerinsights.Hub'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.indexOf'
     name: 'indexOf(Hub, undefined | number)'
     children: []
@@ -458,6 +495,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.join'
     name: join(undefined | string)
@@ -482,6 +520,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.keys'
     name: keys()
@@ -496,6 +535,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.lastIndexOf'
     name: 'lastIndexOf(Hub, undefined | number)'
@@ -521,6 +561,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.length'
     name: length
@@ -537,6 +578,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.map'
     name: 'map((value: Hub, index: number, array: Hub[]) => U, any)'
@@ -569,6 +611,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.nextLink'
     name: nextLink
@@ -584,6 +627,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.pop'
     name: pop()
@@ -598,6 +642,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.push'
     name: 'push(Hub[])'
@@ -617,6 +662,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.reduce'
     name: >-
@@ -647,6 +693,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.reduce_1'
     name: >-
@@ -656,10 +703,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Hub, currentValue: Hub,
@@ -678,6 +722,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.reduce_2'
     name: >-
@@ -715,6 +760,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.reduceRight'
     name: >-
@@ -746,6 +792,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.reduceRight_1'
     name: >-
@@ -755,11 +802,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Hub, currentValue: Hub,
@@ -778,6 +821,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.reduceRight_2'
     name: >-
@@ -816,6 +860,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.reverse'
     name: reverse()
@@ -830,6 +875,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.shift'
     name: shift()
@@ -844,6 +890,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -869,9 +916,10 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.some'
-    name: 'some((value: Hub, index: number, array: Hub[]) => boolean, any)'
+    name: 'some((value: Hub, index: number, array: Hub[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -882,11 +930,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Hub, index: number, array: Hub[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Hub, index: number, array: Hub[]) => boolean'
+            - '(value: Hub, index: number, array: Hub[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -902,6 +950,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.sort'
     name: 'sort(undefined | (a: Hub, b: Hub) => number)'
@@ -924,6 +973,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.splice_1'
     name: 'splice(number, number, Hub[])'
@@ -955,6 +1005,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -983,6 +1034,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.Hub[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.toLocaleString'
     name: toLocaleString()
@@ -999,6 +1051,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.toString'
     name: toString()
@@ -1013,6 +1066,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.unshift'
     name: 'unshift(Hub[])'
@@ -1032,6 +1086,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.HubListResult.values'
     name: values()
@@ -1046,6 +1101,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-customerinsights.Hub>
+        description: ''
     package: '@azure/arm-customerinsights'
 references:
   - uid: Array<@azure/arm-customerinsights.Hub>

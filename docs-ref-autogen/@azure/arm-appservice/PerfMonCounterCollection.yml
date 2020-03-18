@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.PerfMonCounterCollection.entries'
       - '@azure/arm-appservice.PerfMonCounterCollection.every'
       - '@azure/arm-appservice.PerfMonCounterCollection.fill'
-      - '@azure/arm-appservice.PerfMonCounterCollection.filter_1'
       - '@azure/arm-appservice.PerfMonCounterCollection.filter'
+      - '@azure/arm-appservice.PerfMonCounterCollection.filter_1'
       - '@azure/arm-appservice.PerfMonCounterCollection.find'
       - '@azure/arm-appservice.PerfMonCounterCollection.find_1'
       - '@azure/arm-appservice.PerfMonCounterCollection.findIndex'
       - '@azure/arm-appservice.PerfMonCounterCollection.forEach'
+      - '@azure/arm-appservice.PerfMonCounterCollection.includes'
       - '@azure/arm-appservice.PerfMonCounterCollection.indexOf'
       - '@azure/arm-appservice.PerfMonCounterCollection.join'
       - '@azure/arm-appservice.PerfMonCounterCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.concat'
     name: 'concat(ConcatArray<PerfMonResponse>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.every'
     name: >-
       every((value: PerfMonResponse, index: number, array: PerfMonResponse[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: PerfMonResponse, index: number,
-        array: PerfMonResponse[]) => boolean, thisArg?: any)
+        array: PerfMonResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: PerfMonResponse, index: number, array: PerfMonResponse[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.fill'
     name: 'fill(PerfMonResponse, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.PerfMonCounterCollection.filter_1'
-    name: >-
-      filter((value: PerfMonResponse, index: number, array: PerfMonResponse[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: PerfMonResponse, index: number,
-        array: PerfMonResponse[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: PerfMonResponse, index: number, array: PerfMonResponse[])
-              => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.PerfMonResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.PerfMonCounterCollection.filter_1'
+    name: >-
+      filter((value: PerfMonResponse, index: number, array: PerfMonResponse[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: PerfMonResponse, index: number,
+        array: PerfMonResponse[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: PerfMonResponse, index: number, array: PerfMonResponse[])
+              => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.PerfMonResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.find_1'
     name: >-
       find((value: PerfMonResponse, index: number, obj: PerfMonResponse[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: PerfMonResponse, index: number, obj:
-        PerfMonResponse[]) => boolean, thisArg?: any)
+        PerfMonResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: PerfMonResponse, index: number, obj: PerfMonResponse[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.findIndex'
     name: >-
       findIndex((value: PerfMonResponse, index: number, obj: PerfMonResponse[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: PerfMonResponse, index: number,
-        obj: PerfMonResponse[]) => boolean, thisArg?: any)
+        obj: PerfMonResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: PerfMonResponse, index: number, obj: PerfMonResponse[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.PerfMonCounterCollection.includes'
+    name: 'includes(PerfMonResponse, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: PerfMonResponse, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.PerfMonResponse'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.indexOf'
     name: 'indexOf(PerfMonResponse, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.lastIndexOf'
     name: 'lastIndexOf(PerfMonResponse, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.push'
     name: 'push(PerfMonResponse[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.reduce'
     name: >-
@@ -688,6 +736,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.reduce_1'
     name: >-
@@ -698,10 +747,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: PerfMonResponse,
@@ -721,6 +767,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.reduce_2'
     name: >-
@@ -759,6 +806,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.reduceRight'
     name: >-
@@ -792,6 +840,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.reduceRight_1'
     name: >-
@@ -802,11 +851,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: PerfMonResponse,
@@ -826,6 +871,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.reduceRight_2'
     name: >-
@@ -865,6 +911,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.reverse'
     name: reverse()
@@ -879,6 +926,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.shift'
     name: shift()
@@ -893,6 +941,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -918,11 +967,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.some'
     name: >-
       some((value: PerfMonResponse, index: number, array: PerfMonResponse[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -933,13 +983,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: PerfMonResponse, index: number, array:
-        PerfMonResponse[]) => boolean, thisArg?: any)
+        PerfMonResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: PerfMonResponse, index: number, array: PerfMonResponse[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -955,6 +1005,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.sort'
     name: 'sort(undefined | (a: PerfMonResponse, b: PerfMonResponse) => number)'
@@ -979,6 +1030,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.splice_1'
     name: 'splice(number, number, PerfMonResponse[])'
@@ -1012,6 +1064,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1040,6 +1093,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.PerfMonResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.toLocaleString'
     name: toLocaleString()
@@ -1056,6 +1110,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.toString'
     name: toString()
@@ -1070,6 +1125,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.unshift'
     name: 'unshift(PerfMonResponse[])'
@@ -1089,6 +1145,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.PerfMonCounterCollection.values'
     name: values()
@@ -1103,6 +1160,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-appservice.PerfMonResponse>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.PerfMonResponse>

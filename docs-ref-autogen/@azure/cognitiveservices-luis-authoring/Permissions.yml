@@ -54,6 +54,7 @@ items:
       return:
         type:
           - Promise<Models.PermissionsAddResponse>
+        description: Promise<Models.PermissionsAddResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Permissions.add_2'
     name: >-
@@ -87,9 +88,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PermissionsAddResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Permissions.add_1'
     name: 'add(string, UserCollaborator, ServiceCallback<OperationStatus>)'
@@ -117,9 +115,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PermissionsAddResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Permissions.deleteMethod'
     name: 'deleteMethod(string, UserCollaborator, msRest.RequestOptionsBase)'
@@ -153,6 +148,7 @@ items:
       return:
         type:
           - Promise<Models.PermissionsDeleteMethodResponse>
+        description: Promise<Models.PermissionsDeleteMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Permissions.deleteMethod_2'
     name: >-
@@ -186,9 +182,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PermissionsDeleteMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Permissions.deleteMethod_1'
     name: 'deleteMethod(string, UserCollaborator, ServiceCallback<OperationStatus>)'
@@ -216,9 +209,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PermissionsDeleteMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Permissions.list'
     name: 'list(string, msRest.RequestOptionsBase)'
@@ -244,6 +234,7 @@ items:
       return:
         type:
           - Promise<Models.PermissionsListResponse>
+        description: Promise<Models.PermissionsListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Permissions.list_2'
     name: 'list(string, RequestOptionsBase, ServiceCallback<UserAccessList>)'
@@ -271,9 +262,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.UserAccessList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PermissionsListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Permissions.list_1'
     name: 'list(string, ServiceCallback<UserAccessList>)'
@@ -295,9 +283,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.UserAccessList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PermissionsListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Permissions.constructor'
     name: Permissions(LUISAuthoringClientContext)
@@ -322,10 +307,10 @@ items:
     langs:
       - typeScript
     summary: >-
-      Replaces the current users access list with the one sent in the body. If
-      an empty list is sent,
+      Replaces the current user access list with the new list sent in the body.
+      If an empty list is
 
-      all access to other users will be removed.
+      sent, all access to other users will be removed.
     syntax:
       content: >-
         function update(appId: string, collaborators: CollaboratorsArray,
@@ -338,7 +323,7 @@ items:
         - id: collaborators
           type:
             - '@azure/cognitiveservices-luis-authoring.CollaboratorsArray'
-          description: A model containing a list of user's email addresses.
+          description: A model containing a list of user email addresses.
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -347,6 +332,7 @@ items:
       return:
         type:
           - Promise<Models.PermissionsUpdateResponse>
+        description: Promise<Models.PermissionsUpdateResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Permissions.update_2'
     name: >-
@@ -369,7 +355,7 @@ items:
         - id: collaborators
           type:
             - '@azure/cognitiveservices-luis-authoring.CollaboratorsArray'
-          description: A model containing a list of user's email addresses.
+          description: A model containing a list of user email addresses.
         - id: options
           type:
             - RequestOptionsBase
@@ -380,9 +366,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PermissionsUpdateResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Permissions.update_1'
     name: 'update(string, CollaboratorsArray, ServiceCallback<OperationStatus>)'
@@ -403,16 +386,13 @@ items:
         - id: collaborators
           type:
             - '@azure/cognitiveservices-luis-authoring.CollaboratorsArray'
-          description: A model containing a list of user's email addresses.
+          description: A model containing a list of user email addresses.
         - id: callback
           type:
             - >-
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PermissionsUpdateResponse>
     package: '@azure/cognitiveservices-luis-authoring'
 references:
   - uid: '@azure/cognitiveservices-luis-authoring.LUISAuthoringClientContext'

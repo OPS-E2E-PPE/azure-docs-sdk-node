@@ -18,9 +18,9 @@ items:
         @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.every
       - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.fill'
       - >-
-        @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.filter_1
-      - >-
         @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.filter
+      - >-
+        @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.filter_1
       - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.find'
       - >-
         @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.find_1
@@ -28,6 +28,8 @@ items:
         @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.findIndex
       - >-
         @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.forEach
+      - >-
+        @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.includes
       - >-
         @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.indexOf
       - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.join'
@@ -93,6 +95,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.concat'
     name: 'concat(ConcatArray<IotDpsSkuDefinition>[])'
@@ -113,6 +116,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition[]'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.concat_1
@@ -133,6 +137,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition[]'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.copyWithin
@@ -177,6 +182,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.entries
@@ -192,11 +198,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.every'
     name: >-
       every((value: IotDpsSkuDefinition, index: number, array:
-      IotDpsSkuDefinition[]) => boolean, any)
+      IotDpsSkuDefinition[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -205,13 +212,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: IotDpsSkuDefinition, index: number,
-        array: IotDpsSkuDefinition[]) => boolean, thisArg?: any)
+        array: IotDpsSkuDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: IotDpsSkuDefinition, index: number, array:
-              IotDpsSkuDefinition[]) => boolean
+              IotDpsSkuDefinition[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -227,6 +234,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.fill'
     name: 'fill(IotDpsSkuDefinition, undefined | number, undefined | number)'
@@ -267,44 +275,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-deviceprovisioningservices'
-  - uid: >-
-      @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.filter_1
-    name: >-
-      filter((value: IotDpsSkuDefinition, index: number, array:
-      IotDpsSkuDefinition[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: IotDpsSkuDefinition, index: number,
-        array: IotDpsSkuDefinition[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: IotDpsSkuDefinition, index: number, array:
-              IotDpsSkuDefinition[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition[]'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.filter'
     name: >-
@@ -342,6 +313,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-deviceprovisioningservices'
+  - uid: >-
+      @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.filter_1
+    name: >-
+      filter((value: IotDpsSkuDefinition, index: number, array:
+      IotDpsSkuDefinition[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: IotDpsSkuDefinition, index: number,
+        array: IotDpsSkuDefinition[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: IotDpsSkuDefinition, index: number, array:
+              IotDpsSkuDefinition[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition[]'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.find'
     name: >-
@@ -387,30 +398,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.find_1'
     name: >-
       find((value: IotDpsSkuDefinition, index: number, obj:
-      IotDpsSkuDefinition[]) => boolean, any)
+      IotDpsSkuDefinition[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: IotDpsSkuDefinition, index: number,
-        obj: IotDpsSkuDefinition[]) => boolean, thisArg?: any)
+        obj: IotDpsSkuDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: IotDpsSkuDefinition, index: number, obj:
-              IotDpsSkuDefinition[]) => boolean
+              IotDpsSkuDefinition[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -422,12 +430,13 @@ items:
           - >-
             @azure/arm-deviceprovisioningservices.IotDpsSkuDefinition |
             undefined
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.findIndex
     name: >-
       findIndex((value: IotDpsSkuDefinition, index: number, obj:
-      IotDpsSkuDefinition[]) => boolean, any)
+      IotDpsSkuDefinition[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -440,13 +449,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: IotDpsSkuDefinition, index:
-        number, obj: IotDpsSkuDefinition[]) => boolean, thisArg?: any)
+        number, obj: IotDpsSkuDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: IotDpsSkuDefinition, index: number, obj:
-              IotDpsSkuDefinition[]) => boolean
+              IotDpsSkuDefinition[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -468,6 +477,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.forEach
@@ -502,6 +512,37 @@ items:
           optional: true
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
+      @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.includes
+    name: 'includes(IotDpsSkuDefinition, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: IotDpsSkuDefinition, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-deviceprovisioningservices'
+  - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.indexOf
     name: 'indexOf(IotDpsSkuDefinition, undefined | number)'
     children: []
@@ -528,6 +569,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.join'
     name: join(undefined | string)
@@ -552,6 +594,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.keys'
     name: keys()
@@ -566,6 +609,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.lastIndexOf
@@ -594,6 +638,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.length'
     name: length
@@ -610,6 +655,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.map'
     name: >-
@@ -646,6 +692,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.nextLink
@@ -662,6 +709,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.pop'
     name: pop()
@@ -678,6 +726,7 @@ items:
           - >-
             @azure/arm-deviceprovisioningservices.IotDpsSkuDefinition |
             undefined
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.push'
     name: 'push(IotDpsSkuDefinition[])'
@@ -697,6 +746,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.reduce'
     name: >-
@@ -730,6 +780,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.reduce_1
@@ -741,10 +792,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: IotDpsSkuDefinition,
@@ -766,6 +814,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.reduce_2
@@ -805,6 +854,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.reduceRight
@@ -840,6 +890,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.reduceRight_1
@@ -851,11 +902,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: IotDpsSkuDefinition,
@@ -877,6 +924,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.reduceRight_2
@@ -917,6 +965,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.reverse
@@ -932,6 +981,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition[]'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.shift'
     name: shift()
@@ -948,6 +998,7 @@ items:
           - >-
             @azure/arm-deviceprovisioningservices.IotDpsSkuDefinition |
             undefined
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -973,11 +1024,12 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition[]'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.some'
     name: >-
       some((value: IotDpsSkuDefinition, index: number, array:
-      IotDpsSkuDefinition[]) => boolean, any)
+      IotDpsSkuDefinition[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -988,13 +1040,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: IotDpsSkuDefinition, index: number,
-        array: IotDpsSkuDefinition[]) => boolean, thisArg?: any)
+        array: IotDpsSkuDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: IotDpsSkuDefinition, index: number, array:
-              IotDpsSkuDefinition[]) => boolean
+              IotDpsSkuDefinition[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -1010,6 +1062,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.sort'
     name: >-
@@ -1038,6 +1091,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.splice_1
@@ -1072,6 +1126,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition[]'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1100,6 +1155,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition[]'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.toLocaleString
@@ -1117,6 +1173,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.toString
@@ -1132,6 +1189,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.unshift
@@ -1152,6 +1210,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: '@azure/arm-deviceprovisioningservices.IotDpsSkuDefinitionListResult.values'
     name: values()
@@ -1167,6 +1226,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition>
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
 references:
   - uid: Array<@azure/arm-deviceprovisioningservices.IotDpsSkuDefinition>

@@ -30,14 +30,17 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets a unique read-only string that changes whenever the resource is
-      updated.
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateEndpoint.id'
     name: id
@@ -53,6 +56,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateEndpoint.location'
     name: location
@@ -68,6 +72,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateEndpoint.manualPrivateLinkServiceConnections'
     name: manualPrivateLinkServiceConnections
@@ -87,6 +92,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PrivateLinkServiceConnection[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateEndpoint.name'
     name: name
@@ -106,6 +112,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateEndpoint.networkInterfaces'
     name: networkInterfaces
@@ -115,8 +122,8 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets an array of references to the network interfaces created for this
-      private endpoint.
+      An array of references to the network interfaces created for this private
+      endpoint.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -126,6 +133,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterface[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateEndpoint.privateLinkServiceConnections'
     name: privateLinkServiceConnections
@@ -141,6 +149,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PrivateLinkServiceConnection[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateEndpoint.provisioningState'
     name: provisioningState
@@ -150,19 +159,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the private endpoint. Possible values are:
-      'Updating', 'Deleting',
+      The provisioning state of the private endpoint resource. Possible values
+      include: 'Succeeded',
 
-      and 'Failed'.
+      'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateEndpoint.subnet'
     name: subnet
@@ -178,6 +188,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Subnet'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateEndpoint.tags'
     name: tags
@@ -193,6 +204,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateEndpoint.type'
     name: type
@@ -212,6 +224,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -236,6 +249,12 @@ references:
         uid: '@azure/arm-network.NetworkInterface'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.Subnet'
     name: Subnet
     spec.typeScript:

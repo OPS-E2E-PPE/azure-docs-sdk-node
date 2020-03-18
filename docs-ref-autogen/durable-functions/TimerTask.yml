@@ -6,6 +6,7 @@ items:
     children:
       - durable-functions.TimerTask.action
       - durable-functions.TimerTask.cancel
+      - durable-functions.TimerTask.completionIndex
       - durable-functions.TimerTask.exception
       - durable-functions.TimerTask.id
       - durable-functions.TimerTask.isCanceled
@@ -14,6 +15,7 @@ items:
       - durable-functions.TimerTask.result
       - durable-functions.TimerTask.constructor
       - durable-functions.TimerTask.timestamp
+      - durable-functions.TimerTask.yieldNewActions
     langs:
       - typeScript
     type: class
@@ -34,6 +36,7 @@ items:
       return:
         type:
           - durable-functions.CreateTimerAction
+        description: ''
     package: durable-functions
   - uid: durable-functions.TimerTask.cancel
     name: cancel()
@@ -46,6 +49,22 @@ items:
       content: function cancel()
       parameters: []
     package: durable-functions
+  - uid: durable-functions.TimerTask.completionIndex
+    name: completionIndex
+    fullName: completionIndex
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'completionIndex?: number | undefined'
+      return:
+        type:
+          - number | undefined
+        description: ''
+    package: durable-functions
   - uid: durable-functions.TimerTask.exception
     name: exception
     fullName: exception
@@ -56,10 +75,11 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'exception?: unknown'
+      content: 'exception?: Error | undefined'
       return:
         type:
-          - unknown
+          - Error | undefined
+        description: ''
     package: durable-functions
   - uid: durable-functions.TimerTask.id
     name: id
@@ -71,10 +91,11 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'id?: number'
+      content: 'id?: number | undefined'
       return:
         type:
-          - number
+          - number | undefined
+        description: ''
     package: durable-functions
   - uid: durable-functions.TimerTask.isCanceled
     name: isCanceled
@@ -89,6 +110,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: durable-functions
   - uid: durable-functions.TimerTask.isCompleted
     name: isCompleted
@@ -103,6 +125,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: durable-functions
   - uid: durable-functions.TimerTask.isFaulted
     name: isFaulted
@@ -117,6 +140,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: durable-functions
   - uid: durable-functions.TimerTask.result
     name: result
@@ -132,9 +156,10 @@ items:
       return:
         type:
           - unknown
+        description: ''
     package: durable-functions
   - uid: durable-functions.TimerTask.constructor
-    name: 'TimerTask(boolean, boolean, CreateTimerAction, unknown, Date, number)'
+    name: 'TimerTask(boolean, CreateTimerAction, Date, number, number)'
     children: []
     type: constructor
     langs:
@@ -142,14 +167,10 @@ items:
     summary: ''
     syntax:
       content: >-
-        new TimerTask(isCompleted: boolean, isFaulted: boolean, action:
-        CreateTimerAction, result?: unknown, timestamp?: Date, id?: number)
+        new TimerTask(isCompleted: boolean, action: CreateTimerAction,
+        timestamp?: Date, id?: number, completionIndex?: number)
       parameters:
         - id: isCompleted
-          type:
-            - boolean
-          description: ''
-        - id: isFaulted
           type:
             - boolean
           description: ''
@@ -157,17 +178,17 @@ items:
           type:
             - durable-functions.CreateTimerAction
           description: ''
-        - id: result
-          type:
-            - unknown
-          description: ''
-          optional: true
         - id: timestamp
           type:
             - Date
           description: ''
           optional: true
         - id: id
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: completionIndex
           type:
             - number
           description: ''
@@ -183,10 +204,26 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'timestamp?: Date'
+      content: 'timestamp?: Date | undefined'
       return:
         type:
-          - Date
+          - Date | undefined
+        description: ''
+    package: durable-functions
+  - uid: durable-functions.TimerTask.yieldNewActions
+    name: yieldNewActions()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function yieldNewActions()
+      parameters: []
+      return:
+        type:
+          - 'durable-functions.IAction[]'
+        description: ''
     package: durable-functions
 references:
   - uid: durable-functions.Task
@@ -201,3 +238,11 @@ references:
       - name: CreateTimerAction
         fullName: CreateTimerAction
         uid: durable-functions.CreateTimerAction
+  - uid: 'durable-functions.IAction[]'
+    name: 'IAction[]'
+    spec.typeScript:
+      - name: IAction
+        fullName: IAction
+        uid: durable-functions.IAction
+      - name: '[]'
+        fullName: '[]'

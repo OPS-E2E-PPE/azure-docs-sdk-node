@@ -24,7 +24,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Phoenix server linked service.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.allowHostNameCNMismatch'
     name: allowHostNameCNMismatch
@@ -33,13 +33,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether to require a CA-issued SSL certificate name to match the
+      host name of the
+
+      server when connecting over SSL. The default value is false.
     optional: true
     syntax:
       content: 'allowHostNameCNMismatch?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.allowSelfSignedServerCert'
     name: allowSelfSignedServerCert
@@ -48,13 +53,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether to allow self-signed certificates from the server. The
+      default value is
+
+      false.
     optional: true
     syntax:
       content: 'allowSelfSignedServerCert?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.annotations'
     name: annotations
@@ -63,13 +73,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the linked service.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.authenticationType'
     name: authenticationType
@@ -78,12 +89,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The authentication mechanism used to connect to the Phoenix server.
+      Possible values include:
+
+      'Anonymous', 'UsernameAndPassword', 'WindowsAzureHDInsightService'
     syntax:
       content: 'authenticationType: PhoenixAuthenticationType'
       return:
         type:
           - '@azure/arm-datafactory.PhoenixAuthenticationType'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.connectVia'
     name: connectVia
@@ -92,13 +108,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The integration runtime reference.
     optional: true
     syntax:
       content: 'connectVia?: IntegrationRuntimeReference'
       return:
         type:
           - '@azure/arm-datafactory.IntegrationRuntimeReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.description'
     name: description
@@ -107,13 +124,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.enableSsl'
     name: enableSsl
@@ -122,13 +140,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether the connections to the server are encrypted using SSL.
+      The default value is
+
+      false.
     optional: true
     syntax:
       content: 'enableSsl?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.encryptedCredential'
     name: encryptedCredential
@@ -137,13 +160,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The encrypted credential used for authentication. Credentials are
+      encrypted using the
+
+      integration runtime credential manager. Type: string (or Expression with
+      resultType string).
     optional: true
     syntax:
       content: 'encryptedCredential?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.host'
     name: host
@@ -152,12 +181,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The IP address or host name of the Phoenix server. (i.e. 192.168.222.160)
     syntax:
       content: 'host: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.httpPath'
     name: httpPath
@@ -166,13 +196,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The partial URL corresponding to the Phoenix server. (i.e.
+      /gateway/sandbox/phoenix/version).
+
+      The default value is hbasephoenix if using WindowsAzureHDInsightService.
     optional: true
     syntax:
       content: 'httpPath?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.parameters'
     name: parameters
@@ -181,7 +216,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for linked service.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -190,6 +225,7 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.password'
     name: password
@@ -198,13 +234,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The password corresponding to the user name.
     optional: true
     syntax:
       content: 'password?: SecretBaseUnion'
       return:
         type:
           - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.port'
     name: port
@@ -213,13 +250,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The TCP port that the Phoenix server uses to listen for client
+      connections. The default value
+
+      is 8765.
     optional: true
     syntax:
       content: 'port?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.trustedCertPath'
     name: trustedCertPath
@@ -228,13 +270,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The full path of the .pem file containing trusted CA certificates for
+      verifying the server
+
+      when connecting over SSL. This property can only be set when using SSL on
+      self-hosted IR. The
+
+      default value is the cacerts.pem file installed with the IR.
     optional: true
     syntax:
       content: 'trustedCertPath?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.type'
     name: type
@@ -243,12 +293,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Phoenix"'
       return:
         type:
           - '"Phoenix"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.username'
     name: username
@@ -257,13 +308,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The user name used to connect to the Phoenix server.
     optional: true
     syntax:
       content: 'username?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PhoenixLinkedService.useSystemTrustStore'
     name: useSystemTrustStore
@@ -272,13 +324,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether to use a CA certificate from the system trust store or
+      from a specified PEM
+
+      file. The default value is false.
     optional: true
     syntax:
       content: 'useSystemTrustStore?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.PhoenixAuthenticationType'

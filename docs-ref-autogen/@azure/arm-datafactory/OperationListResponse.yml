@@ -11,12 +11,13 @@ items:
       - '@azure/arm-datafactory.OperationListResponse.entries'
       - '@azure/arm-datafactory.OperationListResponse.every'
       - '@azure/arm-datafactory.OperationListResponse.fill'
-      - '@azure/arm-datafactory.OperationListResponse.filter_1'
       - '@azure/arm-datafactory.OperationListResponse.filter'
+      - '@azure/arm-datafactory.OperationListResponse.filter_1'
       - '@azure/arm-datafactory.OperationListResponse.find'
       - '@azure/arm-datafactory.OperationListResponse.find_1'
       - '@azure/arm-datafactory.OperationListResponse.findIndex'
       - '@azure/arm-datafactory.OperationListResponse.forEach'
+      - '@azure/arm-datafactory.OperationListResponse.includes'
       - '@azure/arm-datafactory.OperationListResponse.indexOf'
       - '@azure/arm-datafactory.OperationListResponse.join'
       - '@azure/arm-datafactory.OperationListResponse.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.concat'
     name: 'concat(ConcatArray<Operation>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.entries'
     name: entries()
@@ -158,10 +163,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.every'
     name: >-
-      every((value: Operation, index: number, array: Operation[]) => boolean,
+      every((value: Operation, index: number, array: Operation[]) => unknown,
       any)
     children: []
     type: method
@@ -171,11 +177,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Operation, index: number, array:
-        Operation[]) => boolean, thisArg?: any)
+        Operation[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Operation, index: number, array: Operation[]) => boolean'
+            - '(value: Operation, index: number, array: Operation[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -191,6 +197,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.fill'
     name: 'fill(Operation, undefined | number, undefined | number)'
@@ -231,39 +238,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.OperationListResponse.filter_1'
-    name: 'filter((value: Operation, index: number, array: Operation[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Operation, index: number, array:
-        Operation[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Operation, index: number, array: Operation[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-datafactory.Operation[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.filter'
     name: >-
@@ -299,6 +274,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.OperationListResponse.filter_1'
+    name: >-
+      filter((value: Operation, index: number, array: Operation[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Operation, index: number, array:
+        Operation[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Operation, index: number, array: Operation[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-datafactory.Operation[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.find'
     name: >-
@@ -344,26 +356,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.find_1'
-    name: 'find((value: Operation, index: number, obj: Operation[]) => boolean, any)'
+    name: 'find((value: Operation, index: number, obj: Operation[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Operation, index: number, obj:
-        Operation[]) => boolean, thisArg?: any)
+        Operation[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Operation, index: number, obj: Operation[]) => boolean'
+            - '(value: Operation, index: number, obj: Operation[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -373,10 +382,11 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation | undefined'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.findIndex'
     name: >-
-      findIndex((value: Operation, index: number, obj: Operation[]) => boolean,
+      findIndex((value: Operation, index: number, obj: Operation[]) => unknown,
       any)
     children: []
     type: method
@@ -390,11 +400,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Operation, index: number, obj:
-        Operation[]) => boolean, thisArg?: any)
+        Operation[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Operation, index: number, obj: Operation[]) => boolean'
+            - '(value: Operation, index: number, obj: Operation[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -416,6 +426,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.forEach'
     name: >-
@@ -446,6 +457,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.OperationListResponse.includes'
+    name: 'includes(Operation, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Operation, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-datafactory.Operation'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.indexOf'
     name: 'indexOf(Operation, undefined | number)'
     children: []
@@ -472,6 +513,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.join'
     name: join(undefined | string)
@@ -496,6 +538,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.keys'
     name: keys()
@@ -510,6 +553,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.lastIndexOf'
     name: 'lastIndexOf(Operation, undefined | number)'
@@ -537,6 +581,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.length'
     name: length
@@ -553,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.map'
     name: 'map((value: Operation, index: number, array: Operation[]) => U, any)'
@@ -585,6 +631,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.nextLink'
     name: nextLink
@@ -593,13 +640,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'The link to the next page of results, if any remaining results exist.'
     optional: true
     syntax:
       content: 'nextLink?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.pop'
     name: pop()
@@ -614,6 +662,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation | undefined'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.push'
     name: 'push(Operation[])'
@@ -633,6 +682,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.reduce'
     name: >-
@@ -663,6 +713,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.reduce_1'
     name: >-
@@ -672,10 +723,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Operation, currentValue:
@@ -695,6 +743,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.reduce_2'
     name: >-
@@ -733,6 +782,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.reduceRight'
     name: >-
@@ -765,6 +815,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.reduceRight_1'
     name: >-
@@ -774,11 +825,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Operation,
@@ -798,6 +845,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.reduceRight_2'
     name: >-
@@ -837,6 +885,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.reverse'
     name: reverse()
@@ -851,6 +900,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.shift'
     name: shift()
@@ -865,6 +915,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation | undefined'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -890,10 +941,11 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.some'
     name: >-
-      some((value: Operation, index: number, array: Operation[]) => boolean,
+      some((value: Operation, index: number, array: Operation[]) => unknown,
       any)
     children: []
     type: method
@@ -905,11 +957,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Operation, index: number, array:
-        Operation[]) => boolean, thisArg?: any)
+        Operation[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Operation, index: number, array: Operation[]) => boolean'
+            - '(value: Operation, index: number, array: Operation[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -925,6 +977,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.sort'
     name: 'sort(undefined | (a: Operation, b: Operation) => number)'
@@ -949,6 +1002,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.splice_1'
     name: 'splice(number, number, Operation[])'
@@ -980,6 +1034,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.splice'
     name: 'splice(number, undefined | number)'
@@ -1008,6 +1063,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Operation[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.toLocaleString'
     name: toLocaleString()
@@ -1024,6 +1080,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.toString'
     name: toString()
@@ -1038,6 +1095,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.unshift'
     name: 'unshift(Operation[])'
@@ -1057,6 +1115,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.OperationListResponse.values'
     name: values()
@@ -1071,6 +1130,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-datafactory.Operation>
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: Array<@azure/arm-datafactory.Operation>

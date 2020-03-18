@@ -4,17 +4,38 @@ items:
     name: RerunTumblingWindowTrigger
     fullName: RerunTumblingWindowTrigger
     children:
+      - '@azure/arm-datafactory.RerunTumblingWindowTrigger.annotations'
       - '@azure/arm-datafactory.RerunTumblingWindowTrigger.description'
-      - '@azure/arm-datafactory.RerunTumblingWindowTrigger.maxConcurrency'
       - '@azure/arm-datafactory.RerunTumblingWindowTrigger.parentTrigger'
       - '@azure/arm-datafactory.RerunTumblingWindowTrigger.requestedEndTime'
       - '@azure/arm-datafactory.RerunTumblingWindowTrigger.requestedStartTime'
+      - '@azure/arm-datafactory.RerunTumblingWindowTrigger.rerunConcurrency'
       - '@azure/arm-datafactory.RerunTumblingWindowTrigger.runtimeState'
       - '@azure/arm-datafactory.RerunTumblingWindowTrigger.type'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      Trigger that schedules pipeline reruns for all fixed time interval windows
+      from a requested
+
+      start time to requested end time.
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.RerunTumblingWindowTrigger.annotations'
+    name: annotations
+    fullName: annotations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of tags that can be used for describing the trigger.
+    optional: true
+    syntax:
+      content: 'annotations?: any[]'
+      return:
+        type:
+          - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RerunTumblingWindowTrigger.description'
     name: description
@@ -23,27 +44,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Trigger description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
-    package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.RerunTumblingWindowTrigger.maxConcurrency'
-    name: maxConcurrency
-    fullName: maxConcurrency
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'maxConcurrency: number'
-      return:
-        type:
-          - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RerunTumblingWindowTrigger.parentTrigger'
     name: parentTrigger
@@ -52,13 +60,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
-    optional: true
+    summary: The parent trigger reference.
     syntax:
-      content: 'parentTrigger?: any'
+      content: 'parentTrigger: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RerunTumblingWindowTrigger.requestedEndTime'
     name: requestedEndTime
@@ -67,12 +75,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The end time for the time period for which restatement is initiated. Only
+      UTC time is
+
+      currently supported.
     syntax:
       content: 'requestedEndTime: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RerunTumblingWindowTrigger.requestedStartTime'
     name: requestedStartTime
@@ -81,12 +94,34 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The start time for the time period for which restatement is initiated.
+      Only UTC time is
+
+      currently supported.
     syntax:
       content: 'requestedStartTime: Date'
       return:
         type:
           - Date
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.RerunTumblingWindowTrigger.rerunConcurrency'
+    name: rerunConcurrency
+    fullName: rerunConcurrency
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The max number of parallel time windows (ready for execution) for which a
+      rerun is triggered.
+    syntax:
+      content: 'rerunConcurrency: number'
+      return:
+        type:
+          - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RerunTumblingWindowTrigger.runtimeState'
     name: runtimeState
@@ -95,13 +130,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Indicates if trigger is running or not. Updated when Start/Stop APIs are
+      called on the
+
+      Trigger. Possible values include: 'Started', 'Stopped', 'Disabled'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'runtimeState?: TriggerRuntimeState'
       return:
         type:
           - '@azure/arm-datafactory.TriggerRuntimeState'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RerunTumblingWindowTrigger.type'
     name: type
@@ -110,12 +153,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "RerunTumblingWindowTrigger"'
       return:
         type:
           - '"RerunTumblingWindowTrigger"'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.TriggerRuntimeState'

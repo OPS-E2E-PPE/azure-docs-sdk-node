@@ -27,10 +27,11 @@ items:
     type: property
     summary: Gets the activity ID for the request from the Azure Cosmos DB service.
     syntax:
-      content: 'activityId: string'
+      content: string activityId
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ChangeFeedResponse.continuation'
     name: continuation
@@ -45,10 +46,11 @@ items:
 
       This is equivalent to the `etag` property.
     syntax:
-      content: 'continuation: string'
+      content: string continuation
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ChangeFeedResponse.count'
     name: count
@@ -59,10 +61,11 @@ items:
     type: property
     summary: Gets the number of items returned in the response from Azure Cosmos DB
     syntax:
-      content: 'count: number'
+      content: 'public count: number'
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ChangeFeedResponse.etag'
     name: etag
@@ -80,16 +83,17 @@ items:
 
       `continuation` property of `ChangeFeedOptions` parameter for
 
-      `Items.readChangeFeed()`
+      `Items.changeFeed()`
 
       to get feed changes since the transaction specified by this entity tag.
 
       This is equivalent to the `continuation` property.
     syntax:
-      content: 'etag: string'
+      content: string etag
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ChangeFeedResponse.headers'
     name: headers
@@ -100,10 +104,11 @@ items:
     type: property
     summary: Response headers of the response from Azure Cosmos DB
     syntax:
-      content: 'headers: CosmosHeaders'
+      content: 'public headers: CosmosHeaders'
       return:
         type:
           - '@azure/cosmos.CosmosHeaders'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ChangeFeedResponse.requestCharge'
     name: requestCharge
@@ -114,10 +119,11 @@ items:
     type: property
     summary: Gets the request charge for this request from the Azure Cosmos DB service.
     syntax:
-      content: 'requestCharge: number'
+      content: number requestCharge
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ChangeFeedResponse.result'
     name: result
@@ -128,10 +134,11 @@ items:
     type: property
     summary: Gets the items returned in the response from Azure Cosmos DB
     syntax:
-      content: 'result: T'
+      content: 'public result: T'
       return:
         type:
           - T
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ChangeFeedResponse.sessionToken'
     name: sessionToken
@@ -144,10 +151,11 @@ items:
       Gets the session token for use in session consistency reads from the Azure
       Cosmos DB service.
     syntax:
-      content: 'sessionToken: string'
+      content: string sessionToken
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ChangeFeedResponse.statusCode'
     name: statusCode
@@ -158,10 +166,11 @@ items:
     type: property
     summary: Gets the status code of the response from Azure Cosmos DB
     syntax:
-      content: 'statusCode: number'
+      content: 'public statusCode: number'
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
 references:
   - uid: '@azure/cosmos.CosmosHeaders'

@@ -34,6 +34,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFirewallRuleSet.location'
     name: location
@@ -49,6 +50,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFirewallRuleSet.name'
     name: name
@@ -68,6 +70,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFirewallRuleSet.provisioningState'
     name: provisioningState
@@ -76,13 +79,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The provisioning state of the web application firewall rule set.
+    summary: >-
+      The provisioning state of the web application firewall rule set. Possible
+      values include:
+
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFirewallRuleSet.ruleGroups'
     name: ruleGroups
@@ -97,6 +108,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewayFirewallRuleGroup[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFirewallRuleSet.ruleSetType'
     name: ruleSetType
@@ -111,6 +123,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFirewallRuleSet.ruleSetVersion'
     name: ruleSetVersion
@@ -125,6 +138,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFirewallRuleSet.tags'
     name: tags
@@ -140,6 +154,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFirewallRuleSet.type'
     name: type
@@ -159,6 +174,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -167,6 +183,12 @@ references:
       - name: Resource
         fullName: Resource
         uid: '@azure/arm-network.Resource'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.ApplicationGatewayFirewallRuleGroup[]'
     name: 'ApplicationGatewayFirewallRuleGroup[]'
     spec.typeScript:

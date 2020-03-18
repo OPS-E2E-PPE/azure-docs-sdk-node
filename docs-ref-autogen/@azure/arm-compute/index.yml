@@ -14,9 +14,12 @@ items:
       - '@azure/arm-compute.ApiErrorBase'
       - '@azure/arm-compute.AutomaticOSUpgradePolicy'
       - '@azure/arm-compute.AutomaticOSUpgradeProperties'
+      - '@azure/arm-compute.AutomaticRepairsPolicy'
       - '@azure/arm-compute.AvailabilitySet'
       - '@azure/arm-compute.AvailabilitySetListResult'
       - '@azure/arm-compute.AvailabilitySetUpdate'
+      - '@azure/arm-compute.AvailabilitySetsListBySubscriptionOptionalParams'
+      - '@azure/arm-compute.BillingProfile'
       - '@azure/arm-compute.BootDiagnostics'
       - '@azure/arm-compute.BootDiagnosticsInstanceView'
       - '@azure/arm-compute.ComputeManagementClientOptions'
@@ -38,37 +41,69 @@ items:
       - '@azure/arm-compute.CreationData'
       - '@azure/arm-compute.DataDisk'
       - '@azure/arm-compute.DataDiskImage'
+      - '@azure/arm-compute.DataDiskImageEncryption'
+      - '@azure/arm-compute.DedicatedHost'
+      - '@azure/arm-compute.DedicatedHostAllocatableVM'
+      - '@azure/arm-compute.DedicatedHostAvailableCapacity'
+      - '@azure/arm-compute.DedicatedHostGroup'
+      - '@azure/arm-compute.DedicatedHostGroupListResult'
+      - '@azure/arm-compute.DedicatedHostGroupUpdate'
+      - '@azure/arm-compute.DedicatedHostInstanceView'
+      - '@azure/arm-compute.DedicatedHostListResult'
+      - '@azure/arm-compute.DedicatedHostUpdate'
+      - '@azure/arm-compute.DedicatedHostsGetOptionalParams'
       - '@azure/arm-compute.DiagnosticsProfile'
       - '@azure/arm-compute.DiffDiskSettings'
       - '@azure/arm-compute.Disallowed'
       - '@azure/arm-compute.Disk'
+      - '@azure/arm-compute.DiskEncryptionSet'
+      - '@azure/arm-compute.DiskEncryptionSetList'
+      - '@azure/arm-compute.DiskEncryptionSetParameters'
+      - '@azure/arm-compute.DiskEncryptionSetUpdate'
       - '@azure/arm-compute.DiskEncryptionSettings'
+      - '@azure/arm-compute.DiskImageEncryption'
       - '@azure/arm-compute.DiskInstanceView'
       - '@azure/arm-compute.DiskList'
       - '@azure/arm-compute.DiskSku'
       - '@azure/arm-compute.DiskUpdate'
+      - '@azure/arm-compute.Encryption'
+      - '@azure/arm-compute.EncryptionImages'
+      - '@azure/arm-compute.EncryptionSetIdentity'
       - '@azure/arm-compute.EncryptionSettingsCollection'
       - '@azure/arm-compute.EncryptionSettingsElement'
       - '@azure/arm-compute.Gallery'
+      - '@azure/arm-compute.GalleryApplication'
+      - '@azure/arm-compute.GalleryApplicationList'
+      - '@azure/arm-compute.GalleryApplicationUpdate'
+      - '@azure/arm-compute.GalleryApplicationVersion'
+      - '@azure/arm-compute.GalleryApplicationVersionList'
+      - '@azure/arm-compute.GalleryApplicationVersionPublishingProfile'
+      - '@azure/arm-compute.GalleryApplicationVersionUpdate'
+      - '@azure/arm-compute.GalleryApplicationVersionsGetOptionalParams'
       - '@azure/arm-compute.GalleryArtifactPublishingProfileBase'
       - '@azure/arm-compute.GalleryArtifactSource'
+      - '@azure/arm-compute.GalleryArtifactVersionSource'
       - '@azure/arm-compute.GalleryDataDiskImage'
       - '@azure/arm-compute.GalleryDiskImage'
       - '@azure/arm-compute.GalleryIdentifier'
       - '@azure/arm-compute.GalleryImage'
       - '@azure/arm-compute.GalleryImageIdentifier'
       - '@azure/arm-compute.GalleryImageList'
+      - '@azure/arm-compute.GalleryImageUpdate'
       - '@azure/arm-compute.GalleryImageVersion'
       - '@azure/arm-compute.GalleryImageVersionList'
       - '@azure/arm-compute.GalleryImageVersionPublishingProfile'
       - '@azure/arm-compute.GalleryImageVersionStorageProfile'
+      - '@azure/arm-compute.GalleryImageVersionUpdate'
       - '@azure/arm-compute.GalleryImageVersionsGetOptionalParams'
       - '@azure/arm-compute.GalleryList'
       - '@azure/arm-compute.GalleryOSDiskImage'
+      - '@azure/arm-compute.GalleryUpdate'
       - '@azure/arm-compute.GrantAccessData'
       - '@azure/arm-compute.HardwareProfile'
       - '@azure/arm-compute.Image'
       - '@azure/arm-compute.ImageDataDisk'
+      - '@azure/arm-compute.ImageDisk'
       - '@azure/arm-compute.ImageDiskReference'
       - '@azure/arm-compute.ImageListResult'
       - '@azure/arm-compute.ImageOSDisk'
@@ -95,8 +130,13 @@ items:
       - '@azure/arm-compute.NetworkProfile'
       - '@azure/arm-compute.OSDisk'
       - '@azure/arm-compute.OSDiskImage'
+      - '@azure/arm-compute.OSDiskImageEncryption'
       - '@azure/arm-compute.OSProfile'
       - '@azure/arm-compute.Plan'
+      - '@azure/arm-compute.ProximityPlacementGroup'
+      - '@azure/arm-compute.ProximityPlacementGroupListResult'
+      - '@azure/arm-compute.ProximityPlacementGroupUpdate'
+      - '@azure/arm-compute.ProximityPlacementGroupsGetOptionalParams'
       - '@azure/arm-compute.PurchasePlan'
       - '@azure/arm-compute.RecommendedMachineConfiguration'
       - '@azure/arm-compute.RecoveryWalkResponse'
@@ -112,6 +152,8 @@ items:
       - '@azure/arm-compute.ResourceSkuLocationInfo'
       - '@azure/arm-compute.ResourceSkuRestrictionInfo'
       - '@azure/arm-compute.ResourceSkuRestrictions'
+      - '@azure/arm-compute.ResourceSkuZoneDetails'
+      - '@azure/arm-compute.ResourceSkusListOptionalParams'
       - '@azure/arm-compute.ResourceSkusResult'
       - '@azure/arm-compute.RollbackStatusInfo'
       - '@azure/arm-compute.RollingUpgradePolicy'
@@ -125,6 +167,9 @@ items:
       - '@azure/arm-compute.RunCommandListResult'
       - '@azure/arm-compute.RunCommandParameterDefinition'
       - '@azure/arm-compute.RunCommandResult'
+      - '@azure/arm-compute.ScaleInPolicy'
+      - '@azure/arm-compute.ScheduledEventsProfile'
+      - '@azure/arm-compute.ShareInfoElement'
       - '@azure/arm-compute.Sku'
       - '@azure/arm-compute.Snapshot'
       - '@azure/arm-compute.SnapshotList'
@@ -136,15 +181,19 @@ items:
       - '@azure/arm-compute.StorageProfile'
       - '@azure/arm-compute.SubResource'
       - '@azure/arm-compute.SubResourceReadOnly'
+      - '@azure/arm-compute.SubResourceWithColocationStatus'
       - '@azure/arm-compute.TargetRegion'
+      - '@azure/arm-compute.TerminateNotificationProfile'
       - '@azure/arm-compute.ThrottledRequestsInput'
       - '@azure/arm-compute.UpdateResource'
+      - '@azure/arm-compute.UpdateResourceDefinition'
       - '@azure/arm-compute.UpgradeOperationHistoricalStatusInfo'
       - '@azure/arm-compute.UpgradeOperationHistoricalStatusInfoProperties'
       - '@azure/arm-compute.UpgradeOperationHistoryStatus'
       - '@azure/arm-compute.UpgradePolicy'
       - '@azure/arm-compute.Usage'
       - '@azure/arm-compute.UsageName'
+      - '@azure/arm-compute.UserArtifactSource'
       - '@azure/arm-compute.VMScaleSetConvertToSinglePlacementGroupInput'
       - '@azure/arm-compute.VaultCertificate'
       - '@azure/arm-compute.VaultSecretGroup'
@@ -177,6 +226,7 @@ items:
       - '@azure/arm-compute.VirtualMachineScaleSetExtension'
       - '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult'
       - '@azure/arm-compute.VirtualMachineScaleSetExtensionProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetExtensionUpdate'
       - '@azure/arm-compute.VirtualMachineScaleSetExtensionsGetOptionalParams'
       - '@azure/arm-compute.VirtualMachineScaleSetIPConfiguration'
       - '@azure/arm-compute.VirtualMachineScaleSetIdentity'
@@ -213,6 +263,8 @@ items:
       - '@azure/arm-compute.VirtualMachineScaleSetUpdateStorageProfile'
       - '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile'
       - '@azure/arm-compute.VirtualMachineScaleSetVM'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsGetOptionalParams'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsListOptionalParams'
       - '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsSummary'
       - '@azure/arm-compute.VirtualMachineScaleSetVMInstanceIDs'
       - '@azure/arm-compute.VirtualMachineScaleSetVMInstanceRequiredIDs'
@@ -224,6 +276,7 @@ items:
       - '@azure/arm-compute.VirtualMachineScaleSetVMReimageParameters'
       - '@azure/arm-compute.VirtualMachineScaleSetVMsBeginPowerOffOptionalParams'
       - '@azure/arm-compute.VirtualMachineScaleSetVMsBeginReimageOptionalParams'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMsGetOptionalParams'
       - '@azure/arm-compute.VirtualMachineScaleSetVMsListOptionalParams'
       - '@azure/arm-compute.VirtualMachineScaleSetVMsPowerOffOptionalParams'
       - '@azure/arm-compute.VirtualMachineScaleSetVMsReimageOptionalParams'
@@ -252,6 +305,7 @@ items:
       - '@azure/arm-compute.VirtualMachinesBeginPowerOffOptionalParams'
       - '@azure/arm-compute.VirtualMachinesBeginReimageOptionalParams'
       - '@azure/arm-compute.VirtualMachinesGetOptionalParams'
+      - '@azure/arm-compute.VirtualMachinesListAllOptionalParams'
       - '@azure/arm-compute.VirtualMachinesPowerOffOptionalParams'
       - '@azure/arm-compute.VirtualMachinesReimageOptionalParams'
       - '@azure/arm-compute.WinRMConfiguration'
@@ -279,9 +333,34 @@ items:
       - '@azure/arm-compute.ContainerServicesListByResourceGroupResponse'
       - '@azure/arm-compute.ContainerServicesListNextResponse'
       - '@azure/arm-compute.ContainerServicesListResponse'
+      - '@azure/arm-compute.DedicatedHostGroupsCreateOrUpdateResponse'
+      - '@azure/arm-compute.DedicatedHostGroupsGetResponse'
+      - '@azure/arm-compute.DedicatedHostGroupsListByResourceGroupNextResponse'
+      - '@azure/arm-compute.DedicatedHostGroupsListByResourceGroupResponse'
+      - '@azure/arm-compute.DedicatedHostGroupsListBySubscriptionNextResponse'
+      - '@azure/arm-compute.DedicatedHostGroupsListBySubscriptionResponse'
+      - '@azure/arm-compute.DedicatedHostGroupsUpdateResponse'
+      - '@azure/arm-compute.DedicatedHostLicenseTypes'
+      - '@azure/arm-compute.DedicatedHostsBeginCreateOrUpdateResponse'
+      - '@azure/arm-compute.DedicatedHostsBeginUpdateResponse'
+      - '@azure/arm-compute.DedicatedHostsCreateOrUpdateResponse'
+      - '@azure/arm-compute.DedicatedHostsGetResponse'
+      - '@azure/arm-compute.DedicatedHostsListByHostGroupNextResponse'
+      - '@azure/arm-compute.DedicatedHostsListByHostGroupResponse'
+      - '@azure/arm-compute.DedicatedHostsUpdateResponse'
       - '@azure/arm-compute.DiffDiskOptions'
       - '@azure/arm-compute.DiskCreateOption'
       - '@azure/arm-compute.DiskCreateOptionTypes'
+      - '@azure/arm-compute.DiskEncryptionSetIdentityType'
+      - '@azure/arm-compute.DiskEncryptionSetsBeginCreateOrUpdateResponse'
+      - '@azure/arm-compute.DiskEncryptionSetsBeginUpdateResponse'
+      - '@azure/arm-compute.DiskEncryptionSetsCreateOrUpdateResponse'
+      - '@azure/arm-compute.DiskEncryptionSetsGetResponse'
+      - '@azure/arm-compute.DiskEncryptionSetsListByResourceGroupNextResponse'
+      - '@azure/arm-compute.DiskEncryptionSetsListByResourceGroupResponse'
+      - '@azure/arm-compute.DiskEncryptionSetsListNextResponse'
+      - '@azure/arm-compute.DiskEncryptionSetsListResponse'
+      - '@azure/arm-compute.DiskEncryptionSetsUpdateResponse'
       - '@azure/arm-compute.DiskState'
       - '@azure/arm-compute.DiskStorageAccountTypes'
       - '@azure/arm-compute.DisksBeginCreateOrUpdateResponse'
@@ -295,25 +374,50 @@ items:
       - '@azure/arm-compute.DisksListNextResponse'
       - '@azure/arm-compute.DisksListResponse'
       - '@azure/arm-compute.DisksUpdateResponse'
+      - '@azure/arm-compute.EncryptionType'
       - '@azure/arm-compute.GalleriesBeginCreateOrUpdateResponse'
+      - '@azure/arm-compute.GalleriesBeginUpdateResponse'
       - '@azure/arm-compute.GalleriesCreateOrUpdateResponse'
       - '@azure/arm-compute.GalleriesGetResponse'
       - '@azure/arm-compute.GalleriesListByResourceGroupNextResponse'
       - '@azure/arm-compute.GalleriesListByResourceGroupResponse'
       - '@azure/arm-compute.GalleriesListNextResponse'
       - '@azure/arm-compute.GalleriesListResponse'
+      - '@azure/arm-compute.GalleriesUpdateResponse'
+      - '@azure/arm-compute.GalleryApplicationVersionsBeginCreateOrUpdateResponse'
+      - '@azure/arm-compute.GalleryApplicationVersionsBeginUpdateResponse'
+      - '@azure/arm-compute.GalleryApplicationVersionsCreateOrUpdateResponse'
+      - '@azure/arm-compute.GalleryApplicationVersionsGetResponse'
+      - >-
+        @azure/arm-compute.GalleryApplicationVersionsListByGalleryApplicationNextResponse
+      - >-
+        @azure/arm-compute.GalleryApplicationVersionsListByGalleryApplicationResponse
+      - '@azure/arm-compute.GalleryApplicationVersionsUpdateResponse'
+      - '@azure/arm-compute.GalleryApplicationsBeginCreateOrUpdateResponse'
+      - '@azure/arm-compute.GalleryApplicationsBeginUpdateResponse'
+      - '@azure/arm-compute.GalleryApplicationsCreateOrUpdateResponse'
+      - '@azure/arm-compute.GalleryApplicationsGetResponse'
+      - '@azure/arm-compute.GalleryApplicationsListByGalleryNextResponse'
+      - '@azure/arm-compute.GalleryApplicationsListByGalleryResponse'
+      - '@azure/arm-compute.GalleryApplicationsUpdateResponse'
       - '@azure/arm-compute.GalleryImageVersionsBeginCreateOrUpdateResponse'
+      - '@azure/arm-compute.GalleryImageVersionsBeginUpdateResponse'
       - '@azure/arm-compute.GalleryImageVersionsCreateOrUpdateResponse'
       - '@azure/arm-compute.GalleryImageVersionsGetResponse'
       - '@azure/arm-compute.GalleryImageVersionsListByGalleryImageNextResponse'
       - '@azure/arm-compute.GalleryImageVersionsListByGalleryImageResponse'
+      - '@azure/arm-compute.GalleryImageVersionsUpdateResponse'
       - '@azure/arm-compute.GalleryImagesBeginCreateOrUpdateResponse'
+      - '@azure/arm-compute.GalleryImagesBeginUpdateResponse'
       - '@azure/arm-compute.GalleryImagesCreateOrUpdateResponse'
       - '@azure/arm-compute.GalleryImagesGetResponse'
       - '@azure/arm-compute.GalleryImagesListByGalleryNextResponse'
       - '@azure/arm-compute.GalleryImagesListByGalleryResponse'
+      - '@azure/arm-compute.GalleryImagesUpdateResponse'
       - '@azure/arm-compute.HostCaching'
       - '@azure/arm-compute.HyperVGeneration'
+      - '@azure/arm-compute.HyperVGenerationType'
+      - '@azure/arm-compute.HyperVGenerationTypes'
       - '@azure/arm-compute.IPVersion'
       - '@azure/arm-compute.ImagesBeginCreateOrUpdateResponse'
       - '@azure/arm-compute.ImagesBeginUpdateResponse'
@@ -339,6 +443,17 @@ items:
       - '@azure/arm-compute.ProvisioningState'
       - '@azure/arm-compute.ProvisioningState1'
       - '@azure/arm-compute.ProvisioningState2'
+      - '@azure/arm-compute.ProvisioningState3'
+      - '@azure/arm-compute.ProximityPlacementGroupType'
+      - '@azure/arm-compute.ProximityPlacementGroupsCreateOrUpdateResponse'
+      - '@azure/arm-compute.ProximityPlacementGroupsGetResponse'
+      - >-
+        @azure/arm-compute.ProximityPlacementGroupsListByResourceGroupNextResponse
+      - '@azure/arm-compute.ProximityPlacementGroupsListByResourceGroupResponse'
+      - >-
+        @azure/arm-compute.ProximityPlacementGroupsListBySubscriptionNextResponse
+      - '@azure/arm-compute.ProximityPlacementGroupsListBySubscriptionResponse'
+      - '@azure/arm-compute.ProximityPlacementGroupsUpdateResponse'
       - '@azure/arm-compute.ReplicationState'
       - '@azure/arm-compute.ReplicationStatusTypes'
       - '@azure/arm-compute.ResourceIdentityType'
@@ -391,14 +506,25 @@ items:
       - '@azure/arm-compute.VirtualMachineRunCommandsListResponse'
       - >-
         @azure/arm-compute.VirtualMachineScaleSetExtensionsBeginCreateOrUpdateResponse
+      - '@azure/arm-compute.VirtualMachineScaleSetExtensionsBeginUpdateResponse'
       - >-
         @azure/arm-compute.VirtualMachineScaleSetExtensionsCreateOrUpdateResponse
       - '@azure/arm-compute.VirtualMachineScaleSetExtensionsGetResponse'
       - '@azure/arm-compute.VirtualMachineScaleSetExtensionsListNextResponse'
       - '@azure/arm-compute.VirtualMachineScaleSetExtensionsListResponse'
+      - '@azure/arm-compute.VirtualMachineScaleSetExtensionsUpdateResponse'
       - >-
         @azure/arm-compute.VirtualMachineScaleSetRollingUpgradesGetLatestResponse
+      - '@azure/arm-compute.VirtualMachineScaleSetScaleInRules'
       - '@azure/arm-compute.VirtualMachineScaleSetSkuScaleType'
+      - >-
+        @azure/arm-compute.VirtualMachineScaleSetVMExtensionsBeginCreateOrUpdateResponse
+      - '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsBeginUpdateResponse'
+      - >-
+        @azure/arm-compute.VirtualMachineScaleSetVMExtensionsCreateOrUpdateResponse
+      - '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsGetResponse'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsListResponse'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsUpdateResponse'
       - '@azure/arm-compute.VirtualMachineScaleSetVMsBeginRunCommandResponse'
       - '@azure/arm-compute.VirtualMachineScaleSetVMsBeginUpdateResponse'
       - '@azure/arm-compute.VirtualMachineScaleSetVMsGetInstanceViewResponse'
@@ -445,13 +571,19 @@ items:
       - '@azure/arm-compute.VirtualMachinesUpdateResponse'
       - '@azure/arm-compute.AvailabilitySets'
       - '@azure/arm-compute.ContainerServices'
+      - '@azure/arm-compute.DedicatedHostGroups'
+      - '@azure/arm-compute.DedicatedHosts'
+      - '@azure/arm-compute.DiskEncryptionSets'
       - '@azure/arm-compute.Disks'
       - '@azure/arm-compute.Galleries'
+      - '@azure/arm-compute.GalleryApplicationVersions'
+      - '@azure/arm-compute.GalleryApplications'
       - '@azure/arm-compute.GalleryImageVersions'
       - '@azure/arm-compute.GalleryImages'
       - '@azure/arm-compute.Images'
       - '@azure/arm-compute.LogAnalytics'
       - '@azure/arm-compute.Operations'
+      - '@azure/arm-compute.ProximityPlacementGroups'
       - '@azure/arm-compute.ResourceSkus'
       - '@azure/arm-compute.Snapshots'
       - '@azure/arm-compute.UsageOperations'
@@ -460,8 +592,8 @@ items:
       - '@azure/arm-compute.VirtualMachineImages'
       - '@azure/arm-compute.VirtualMachineRunCommands'
       - '@azure/arm-compute.VirtualMachineScaleSetExtensions'
-      - '@azure/arm-compute.VirtualMachineScaleSetOperations'
       - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMExtensions'
       - '@azure/arm-compute.VirtualMachineScaleSetVMs'
       - '@azure/arm-compute.VirtualMachineScaleSets'
       - '@azure/arm-compute.VirtualMachineSizes'
@@ -490,12 +622,18 @@ references:
     name: AutomaticOSUpgradePolicy
   - uid: '@azure/arm-compute.AutomaticOSUpgradeProperties'
     name: AutomaticOSUpgradeProperties
+  - uid: '@azure/arm-compute.AutomaticRepairsPolicy'
+    name: AutomaticRepairsPolicy
   - uid: '@azure/arm-compute.AvailabilitySet'
     name: AvailabilitySet
   - uid: '@azure/arm-compute.AvailabilitySetListResult'
     name: AvailabilitySetListResult
   - uid: '@azure/arm-compute.AvailabilitySetUpdate'
     name: AvailabilitySetUpdate
+  - uid: '@azure/arm-compute.AvailabilitySetsListBySubscriptionOptionalParams'
+    name: AvailabilitySetsListBySubscriptionOptionalParams
+  - uid: '@azure/arm-compute.BillingProfile'
+    name: BillingProfile
   - uid: '@azure/arm-compute.BootDiagnostics'
     name: BootDiagnostics
   - uid: '@azure/arm-compute.BootDiagnosticsInstanceView'
@@ -538,6 +676,28 @@ references:
     name: DataDisk
   - uid: '@azure/arm-compute.DataDiskImage'
     name: DataDiskImage
+  - uid: '@azure/arm-compute.DataDiskImageEncryption'
+    name: DataDiskImageEncryption
+  - uid: '@azure/arm-compute.DedicatedHost'
+    name: DedicatedHost
+  - uid: '@azure/arm-compute.DedicatedHostAllocatableVM'
+    name: DedicatedHostAllocatableVM
+  - uid: '@azure/arm-compute.DedicatedHostAvailableCapacity'
+    name: DedicatedHostAvailableCapacity
+  - uid: '@azure/arm-compute.DedicatedHostGroup'
+    name: DedicatedHostGroup
+  - uid: '@azure/arm-compute.DedicatedHostGroupListResult'
+    name: DedicatedHostGroupListResult
+  - uid: '@azure/arm-compute.DedicatedHostGroupUpdate'
+    name: DedicatedHostGroupUpdate
+  - uid: '@azure/arm-compute.DedicatedHostInstanceView'
+    name: DedicatedHostInstanceView
+  - uid: '@azure/arm-compute.DedicatedHostListResult'
+    name: DedicatedHostListResult
+  - uid: '@azure/arm-compute.DedicatedHostUpdate'
+    name: DedicatedHostUpdate
+  - uid: '@azure/arm-compute.DedicatedHostsGetOptionalParams'
+    name: DedicatedHostsGetOptionalParams
   - uid: '@azure/arm-compute.DiagnosticsProfile'
     name: DiagnosticsProfile
   - uid: '@azure/arm-compute.DiffDiskSettings'
@@ -546,8 +706,18 @@ references:
     name: Disallowed
   - uid: '@azure/arm-compute.Disk'
     name: Disk
+  - uid: '@azure/arm-compute.DiskEncryptionSet'
+    name: DiskEncryptionSet
+  - uid: '@azure/arm-compute.DiskEncryptionSetList'
+    name: DiskEncryptionSetList
+  - uid: '@azure/arm-compute.DiskEncryptionSetParameters'
+    name: DiskEncryptionSetParameters
+  - uid: '@azure/arm-compute.DiskEncryptionSetUpdate'
+    name: DiskEncryptionSetUpdate
   - uid: '@azure/arm-compute.DiskEncryptionSettings'
     name: DiskEncryptionSettings
+  - uid: '@azure/arm-compute.DiskImageEncryption'
+    name: DiskImageEncryption
   - uid: '@azure/arm-compute.DiskInstanceView'
     name: DiskInstanceView
   - uid: '@azure/arm-compute.DiskList'
@@ -556,16 +726,40 @@ references:
     name: DiskSku
   - uid: '@azure/arm-compute.DiskUpdate'
     name: DiskUpdate
+  - uid: '@azure/arm-compute.Encryption'
+    name: Encryption
+  - uid: '@azure/arm-compute.EncryptionImages'
+    name: EncryptionImages
+  - uid: '@azure/arm-compute.EncryptionSetIdentity'
+    name: EncryptionSetIdentity
   - uid: '@azure/arm-compute.EncryptionSettingsCollection'
     name: EncryptionSettingsCollection
   - uid: '@azure/arm-compute.EncryptionSettingsElement'
     name: EncryptionSettingsElement
   - uid: '@azure/arm-compute.Gallery'
     name: Gallery
+  - uid: '@azure/arm-compute.GalleryApplication'
+    name: GalleryApplication
+  - uid: '@azure/arm-compute.GalleryApplicationList'
+    name: GalleryApplicationList
+  - uid: '@azure/arm-compute.GalleryApplicationUpdate'
+    name: GalleryApplicationUpdate
+  - uid: '@azure/arm-compute.GalleryApplicationVersion'
+    name: GalleryApplicationVersion
+  - uid: '@azure/arm-compute.GalleryApplicationVersionList'
+    name: GalleryApplicationVersionList
+  - uid: '@azure/arm-compute.GalleryApplicationVersionPublishingProfile'
+    name: GalleryApplicationVersionPublishingProfile
+  - uid: '@azure/arm-compute.GalleryApplicationVersionUpdate'
+    name: GalleryApplicationVersionUpdate
+  - uid: '@azure/arm-compute.GalleryApplicationVersionsGetOptionalParams'
+    name: GalleryApplicationVersionsGetOptionalParams
   - uid: '@azure/arm-compute.GalleryArtifactPublishingProfileBase'
     name: GalleryArtifactPublishingProfileBase
   - uid: '@azure/arm-compute.GalleryArtifactSource'
     name: GalleryArtifactSource
+  - uid: '@azure/arm-compute.GalleryArtifactVersionSource'
+    name: GalleryArtifactVersionSource
   - uid: '@azure/arm-compute.GalleryDataDiskImage'
     name: GalleryDataDiskImage
   - uid: '@azure/arm-compute.GalleryDiskImage'
@@ -578,6 +772,8 @@ references:
     name: GalleryImageIdentifier
   - uid: '@azure/arm-compute.GalleryImageList'
     name: GalleryImageList
+  - uid: '@azure/arm-compute.GalleryImageUpdate'
+    name: GalleryImageUpdate
   - uid: '@azure/arm-compute.GalleryImageVersion'
     name: GalleryImageVersion
   - uid: '@azure/arm-compute.GalleryImageVersionList'
@@ -586,12 +782,16 @@ references:
     name: GalleryImageVersionPublishingProfile
   - uid: '@azure/arm-compute.GalleryImageVersionStorageProfile'
     name: GalleryImageVersionStorageProfile
+  - uid: '@azure/arm-compute.GalleryImageVersionUpdate'
+    name: GalleryImageVersionUpdate
   - uid: '@azure/arm-compute.GalleryImageVersionsGetOptionalParams'
     name: GalleryImageVersionsGetOptionalParams
   - uid: '@azure/arm-compute.GalleryList'
     name: GalleryList
   - uid: '@azure/arm-compute.GalleryOSDiskImage'
     name: GalleryOSDiskImage
+  - uid: '@azure/arm-compute.GalleryUpdate'
+    name: GalleryUpdate
   - uid: '@azure/arm-compute.GrantAccessData'
     name: GrantAccessData
   - uid: '@azure/arm-compute.HardwareProfile'
@@ -600,6 +800,8 @@ references:
     name: Image
   - uid: '@azure/arm-compute.ImageDataDisk'
     name: ImageDataDisk
+  - uid: '@azure/arm-compute.ImageDisk'
+    name: ImageDisk
   - uid: '@azure/arm-compute.ImageDiskReference'
     name: ImageDiskReference
   - uid: '@azure/arm-compute.ImageListResult'
@@ -652,10 +854,20 @@ references:
     name: OSDisk
   - uid: '@azure/arm-compute.OSDiskImage'
     name: OSDiskImage
+  - uid: '@azure/arm-compute.OSDiskImageEncryption'
+    name: OSDiskImageEncryption
   - uid: '@azure/arm-compute.OSProfile'
     name: OSProfile
   - uid: '@azure/arm-compute.Plan'
     name: Plan
+  - uid: '@azure/arm-compute.ProximityPlacementGroup'
+    name: ProximityPlacementGroup
+  - uid: '@azure/arm-compute.ProximityPlacementGroupListResult'
+    name: ProximityPlacementGroupListResult
+  - uid: '@azure/arm-compute.ProximityPlacementGroupUpdate'
+    name: ProximityPlacementGroupUpdate
+  - uid: '@azure/arm-compute.ProximityPlacementGroupsGetOptionalParams'
+    name: ProximityPlacementGroupsGetOptionalParams
   - uid: '@azure/arm-compute.PurchasePlan'
     name: PurchasePlan
   - uid: '@azure/arm-compute.RecommendedMachineConfiguration'
@@ -686,6 +898,10 @@ references:
     name: ResourceSkuRestrictionInfo
   - uid: '@azure/arm-compute.ResourceSkuRestrictions'
     name: ResourceSkuRestrictions
+  - uid: '@azure/arm-compute.ResourceSkuZoneDetails'
+    name: ResourceSkuZoneDetails
+  - uid: '@azure/arm-compute.ResourceSkusListOptionalParams'
+    name: ResourceSkusListOptionalParams
   - uid: '@azure/arm-compute.ResourceSkusResult'
     name: ResourceSkusResult
   - uid: '@azure/arm-compute.RollbackStatusInfo'
@@ -712,6 +928,12 @@ references:
     name: RunCommandParameterDefinition
   - uid: '@azure/arm-compute.RunCommandResult'
     name: RunCommandResult
+  - uid: '@azure/arm-compute.ScaleInPolicy'
+    name: ScaleInPolicy
+  - uid: '@azure/arm-compute.ScheduledEventsProfile'
+    name: ScheduledEventsProfile
+  - uid: '@azure/arm-compute.ShareInfoElement'
+    name: ShareInfoElement
   - uid: '@azure/arm-compute.Sku'
     name: Sku
   - uid: '@azure/arm-compute.Snapshot'
@@ -734,12 +956,18 @@ references:
     name: SubResource
   - uid: '@azure/arm-compute.SubResourceReadOnly'
     name: SubResourceReadOnly
+  - uid: '@azure/arm-compute.SubResourceWithColocationStatus'
+    name: SubResourceWithColocationStatus
   - uid: '@azure/arm-compute.TargetRegion'
     name: TargetRegion
+  - uid: '@azure/arm-compute.TerminateNotificationProfile'
+    name: TerminateNotificationProfile
   - uid: '@azure/arm-compute.ThrottledRequestsInput'
     name: ThrottledRequestsInput
   - uid: '@azure/arm-compute.UpdateResource'
     name: UpdateResource
+  - uid: '@azure/arm-compute.UpdateResourceDefinition'
+    name: UpdateResourceDefinition
   - uid: '@azure/arm-compute.UpgradeOperationHistoricalStatusInfo'
     name: UpgradeOperationHistoricalStatusInfo
   - uid: '@azure/arm-compute.UpgradeOperationHistoricalStatusInfoProperties'
@@ -752,6 +980,8 @@ references:
     name: Usage
   - uid: '@azure/arm-compute.UsageName'
     name: UsageName
+  - uid: '@azure/arm-compute.UserArtifactSource'
+    name: UserArtifactSource
   - uid: '@azure/arm-compute.VMScaleSetConvertToSinglePlacementGroupInput'
     name: VMScaleSetConvertToSinglePlacementGroupInput
   - uid: '@azure/arm-compute.VaultCertificate'
@@ -814,6 +1044,8 @@ references:
     name: VirtualMachineScaleSetExtensionListResult
   - uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionProfile'
     name: VirtualMachineScaleSetExtensionProfile
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionUpdate'
+    name: VirtualMachineScaleSetExtensionUpdate
   - uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionsGetOptionalParams'
     name: VirtualMachineScaleSetExtensionsGetOptionalParams
   - uid: '@azure/arm-compute.VirtualMachineScaleSetIPConfiguration'
@@ -883,6 +1115,10 @@ references:
     name: VirtualMachineScaleSetUpdateVMProfile
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVM'
     name: VirtualMachineScaleSetVM
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsGetOptionalParams'
+    name: VirtualMachineScaleSetVMExtensionsGetOptionalParams
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsListOptionalParams'
+    name: VirtualMachineScaleSetVMExtensionsListOptionalParams
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsSummary'
     name: VirtualMachineScaleSetVMExtensionsSummary
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMInstanceIDs'
@@ -905,6 +1141,8 @@ references:
     name: VirtualMachineScaleSetVMsBeginPowerOffOptionalParams
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMsBeginReimageOptionalParams'
     name: VirtualMachineScaleSetVMsBeginReimageOptionalParams
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMsGetOptionalParams'
+    name: VirtualMachineScaleSetVMsGetOptionalParams
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMsListOptionalParams'
     name: VirtualMachineScaleSetVMsListOptionalParams
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMsPowerOffOptionalParams'
@@ -958,6 +1196,8 @@ references:
     name: VirtualMachinesBeginReimageOptionalParams
   - uid: '@azure/arm-compute.VirtualMachinesGetOptionalParams'
     name: VirtualMachinesGetOptionalParams
+  - uid: '@azure/arm-compute.VirtualMachinesListAllOptionalParams'
+    name: VirtualMachinesListAllOptionalParams
   - uid: '@azure/arm-compute.VirtualMachinesPowerOffOptionalParams'
     name: VirtualMachinesPowerOffOptionalParams
   - uid: '@azure/arm-compute.VirtualMachinesReimageOptionalParams'
@@ -1012,12 +1252,62 @@ references:
     name: ContainerServicesListNextResponse
   - uid: '@azure/arm-compute.ContainerServicesListResponse'
     name: ContainerServicesListResponse
+  - uid: '@azure/arm-compute.DedicatedHostGroupsCreateOrUpdateResponse'
+    name: DedicatedHostGroupsCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.DedicatedHostGroupsGetResponse'
+    name: DedicatedHostGroupsGetResponse
+  - uid: '@azure/arm-compute.DedicatedHostGroupsListByResourceGroupNextResponse'
+    name: DedicatedHostGroupsListByResourceGroupNextResponse
+  - uid: '@azure/arm-compute.DedicatedHostGroupsListByResourceGroupResponse'
+    name: DedicatedHostGroupsListByResourceGroupResponse
+  - uid: '@azure/arm-compute.DedicatedHostGroupsListBySubscriptionNextResponse'
+    name: DedicatedHostGroupsListBySubscriptionNextResponse
+  - uid: '@azure/arm-compute.DedicatedHostGroupsListBySubscriptionResponse'
+    name: DedicatedHostGroupsListBySubscriptionResponse
+  - uid: '@azure/arm-compute.DedicatedHostGroupsUpdateResponse'
+    name: DedicatedHostGroupsUpdateResponse
+  - uid: '@azure/arm-compute.DedicatedHostLicenseTypes'
+    name: DedicatedHostLicenseTypes
+  - uid: '@azure/arm-compute.DedicatedHostsBeginCreateOrUpdateResponse'
+    name: DedicatedHostsBeginCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.DedicatedHostsBeginUpdateResponse'
+    name: DedicatedHostsBeginUpdateResponse
+  - uid: '@azure/arm-compute.DedicatedHostsCreateOrUpdateResponse'
+    name: DedicatedHostsCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.DedicatedHostsGetResponse'
+    name: DedicatedHostsGetResponse
+  - uid: '@azure/arm-compute.DedicatedHostsListByHostGroupNextResponse'
+    name: DedicatedHostsListByHostGroupNextResponse
+  - uid: '@azure/arm-compute.DedicatedHostsListByHostGroupResponse'
+    name: DedicatedHostsListByHostGroupResponse
+  - uid: '@azure/arm-compute.DedicatedHostsUpdateResponse'
+    name: DedicatedHostsUpdateResponse
   - uid: '@azure/arm-compute.DiffDiskOptions'
     name: DiffDiskOptions
   - uid: '@azure/arm-compute.DiskCreateOption'
     name: DiskCreateOption
   - uid: '@azure/arm-compute.DiskCreateOptionTypes'
     name: DiskCreateOptionTypes
+  - uid: '@azure/arm-compute.DiskEncryptionSetIdentityType'
+    name: DiskEncryptionSetIdentityType
+  - uid: '@azure/arm-compute.DiskEncryptionSetsBeginCreateOrUpdateResponse'
+    name: DiskEncryptionSetsBeginCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.DiskEncryptionSetsBeginUpdateResponse'
+    name: DiskEncryptionSetsBeginUpdateResponse
+  - uid: '@azure/arm-compute.DiskEncryptionSetsCreateOrUpdateResponse'
+    name: DiskEncryptionSetsCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.DiskEncryptionSetsGetResponse'
+    name: DiskEncryptionSetsGetResponse
+  - uid: '@azure/arm-compute.DiskEncryptionSetsListByResourceGroupNextResponse'
+    name: DiskEncryptionSetsListByResourceGroupNextResponse
+  - uid: '@azure/arm-compute.DiskEncryptionSetsListByResourceGroupResponse'
+    name: DiskEncryptionSetsListByResourceGroupResponse
+  - uid: '@azure/arm-compute.DiskEncryptionSetsListNextResponse'
+    name: DiskEncryptionSetsListNextResponse
+  - uid: '@azure/arm-compute.DiskEncryptionSetsListResponse'
+    name: DiskEncryptionSetsListResponse
+  - uid: '@azure/arm-compute.DiskEncryptionSetsUpdateResponse'
+    name: DiskEncryptionSetsUpdateResponse
   - uid: '@azure/arm-compute.DiskState'
     name: DiskState
   - uid: '@azure/arm-compute.DiskStorageAccountTypes'
@@ -1044,8 +1334,12 @@ references:
     name: DisksListResponse
   - uid: '@azure/arm-compute.DisksUpdateResponse'
     name: DisksUpdateResponse
+  - uid: '@azure/arm-compute.EncryptionType'
+    name: EncryptionType
   - uid: '@azure/arm-compute.GalleriesBeginCreateOrUpdateResponse'
     name: GalleriesBeginCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.GalleriesBeginUpdateResponse'
+    name: GalleriesBeginUpdateResponse
   - uid: '@azure/arm-compute.GalleriesCreateOrUpdateResponse'
     name: GalleriesCreateOrUpdateResponse
   - uid: '@azure/arm-compute.GalleriesGetResponse'
@@ -1058,8 +1352,42 @@ references:
     name: GalleriesListNextResponse
   - uid: '@azure/arm-compute.GalleriesListResponse'
     name: GalleriesListResponse
+  - uid: '@azure/arm-compute.GalleriesUpdateResponse'
+    name: GalleriesUpdateResponse
+  - uid: '@azure/arm-compute.GalleryApplicationVersionsBeginCreateOrUpdateResponse'
+    name: GalleryApplicationVersionsBeginCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.GalleryApplicationVersionsBeginUpdateResponse'
+    name: GalleryApplicationVersionsBeginUpdateResponse
+  - uid: '@azure/arm-compute.GalleryApplicationVersionsCreateOrUpdateResponse'
+    name: GalleryApplicationVersionsCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.GalleryApplicationVersionsGetResponse'
+    name: GalleryApplicationVersionsGetResponse
+  - uid: >-
+      @azure/arm-compute.GalleryApplicationVersionsListByGalleryApplicationNextResponse
+    name: GalleryApplicationVersionsListByGalleryApplicationNextResponse
+  - uid: >-
+      @azure/arm-compute.GalleryApplicationVersionsListByGalleryApplicationResponse
+    name: GalleryApplicationVersionsListByGalleryApplicationResponse
+  - uid: '@azure/arm-compute.GalleryApplicationVersionsUpdateResponse'
+    name: GalleryApplicationVersionsUpdateResponse
+  - uid: '@azure/arm-compute.GalleryApplicationsBeginCreateOrUpdateResponse'
+    name: GalleryApplicationsBeginCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.GalleryApplicationsBeginUpdateResponse'
+    name: GalleryApplicationsBeginUpdateResponse
+  - uid: '@azure/arm-compute.GalleryApplicationsCreateOrUpdateResponse'
+    name: GalleryApplicationsCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.GalleryApplicationsGetResponse'
+    name: GalleryApplicationsGetResponse
+  - uid: '@azure/arm-compute.GalleryApplicationsListByGalleryNextResponse'
+    name: GalleryApplicationsListByGalleryNextResponse
+  - uid: '@azure/arm-compute.GalleryApplicationsListByGalleryResponse'
+    name: GalleryApplicationsListByGalleryResponse
+  - uid: '@azure/arm-compute.GalleryApplicationsUpdateResponse'
+    name: GalleryApplicationsUpdateResponse
   - uid: '@azure/arm-compute.GalleryImageVersionsBeginCreateOrUpdateResponse'
     name: GalleryImageVersionsBeginCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.GalleryImageVersionsBeginUpdateResponse'
+    name: GalleryImageVersionsBeginUpdateResponse
   - uid: '@azure/arm-compute.GalleryImageVersionsCreateOrUpdateResponse'
     name: GalleryImageVersionsCreateOrUpdateResponse
   - uid: '@azure/arm-compute.GalleryImageVersionsGetResponse'
@@ -1068,8 +1396,12 @@ references:
     name: GalleryImageVersionsListByGalleryImageNextResponse
   - uid: '@azure/arm-compute.GalleryImageVersionsListByGalleryImageResponse'
     name: GalleryImageVersionsListByGalleryImageResponse
+  - uid: '@azure/arm-compute.GalleryImageVersionsUpdateResponse'
+    name: GalleryImageVersionsUpdateResponse
   - uid: '@azure/arm-compute.GalleryImagesBeginCreateOrUpdateResponse'
     name: GalleryImagesBeginCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.GalleryImagesBeginUpdateResponse'
+    name: GalleryImagesBeginUpdateResponse
   - uid: '@azure/arm-compute.GalleryImagesCreateOrUpdateResponse'
     name: GalleryImagesCreateOrUpdateResponse
   - uid: '@azure/arm-compute.GalleryImagesGetResponse'
@@ -1078,10 +1410,16 @@ references:
     name: GalleryImagesListByGalleryNextResponse
   - uid: '@azure/arm-compute.GalleryImagesListByGalleryResponse'
     name: GalleryImagesListByGalleryResponse
+  - uid: '@azure/arm-compute.GalleryImagesUpdateResponse'
+    name: GalleryImagesUpdateResponse
   - uid: '@azure/arm-compute.HostCaching'
     name: HostCaching
   - uid: '@azure/arm-compute.HyperVGeneration'
     name: HyperVGeneration
+  - uid: '@azure/arm-compute.HyperVGenerationType'
+    name: HyperVGenerationType
+  - uid: '@azure/arm-compute.HyperVGenerationTypes'
+    name: HyperVGenerationTypes
   - uid: '@azure/arm-compute.IPVersion'
     name: IPVersion
   - uid: '@azure/arm-compute.ImagesBeginCreateOrUpdateResponse'
@@ -1132,6 +1470,24 @@ references:
     name: ProvisioningState1
   - uid: '@azure/arm-compute.ProvisioningState2'
     name: ProvisioningState2
+  - uid: '@azure/arm-compute.ProvisioningState3'
+    name: ProvisioningState3
+  - uid: '@azure/arm-compute.ProximityPlacementGroupType'
+    name: ProximityPlacementGroupType
+  - uid: '@azure/arm-compute.ProximityPlacementGroupsCreateOrUpdateResponse'
+    name: ProximityPlacementGroupsCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.ProximityPlacementGroupsGetResponse'
+    name: ProximityPlacementGroupsGetResponse
+  - uid: '@azure/arm-compute.ProximityPlacementGroupsListByResourceGroupNextResponse'
+    name: ProximityPlacementGroupsListByResourceGroupNextResponse
+  - uid: '@azure/arm-compute.ProximityPlacementGroupsListByResourceGroupResponse'
+    name: ProximityPlacementGroupsListByResourceGroupResponse
+  - uid: '@azure/arm-compute.ProximityPlacementGroupsListBySubscriptionNextResponse'
+    name: ProximityPlacementGroupsListBySubscriptionNextResponse
+  - uid: '@azure/arm-compute.ProximityPlacementGroupsListBySubscriptionResponse'
+    name: ProximityPlacementGroupsListBySubscriptionResponse
+  - uid: '@azure/arm-compute.ProximityPlacementGroupsUpdateResponse'
+    name: ProximityPlacementGroupsUpdateResponse
   - uid: '@azure/arm-compute.ReplicationState'
     name: ReplicationState
   - uid: '@azure/arm-compute.ReplicationStatusTypes'
@@ -1235,6 +1591,8 @@ references:
   - uid: >-
       @azure/arm-compute.VirtualMachineScaleSetExtensionsBeginCreateOrUpdateResponse
     name: VirtualMachineScaleSetExtensionsBeginCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionsBeginUpdateResponse'
+    name: VirtualMachineScaleSetExtensionsBeginUpdateResponse
   - uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionsCreateOrUpdateResponse'
     name: VirtualMachineScaleSetExtensionsCreateOrUpdateResponse
   - uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionsGetResponse'
@@ -1243,10 +1601,28 @@ references:
     name: VirtualMachineScaleSetExtensionsListNextResponse
   - uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionsListResponse'
     name: VirtualMachineScaleSetExtensionsListResponse
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionsUpdateResponse'
+    name: VirtualMachineScaleSetExtensionsUpdateResponse
   - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgradesGetLatestResponse'
     name: VirtualMachineScaleSetRollingUpgradesGetLatestResponse
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetScaleInRules'
+    name: VirtualMachineScaleSetScaleInRules
   - uid: '@azure/arm-compute.VirtualMachineScaleSetSkuScaleType'
     name: VirtualMachineScaleSetSkuScaleType
+  - uid: >-
+      @azure/arm-compute.VirtualMachineScaleSetVMExtensionsBeginCreateOrUpdateResponse
+    name: VirtualMachineScaleSetVMExtensionsBeginCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsBeginUpdateResponse'
+    name: VirtualMachineScaleSetVMExtensionsBeginUpdateResponse
+  - uid: >-
+      @azure/arm-compute.VirtualMachineScaleSetVMExtensionsCreateOrUpdateResponse
+    name: VirtualMachineScaleSetVMExtensionsCreateOrUpdateResponse
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsGetResponse'
+    name: VirtualMachineScaleSetVMExtensionsGetResponse
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsListResponse'
+    name: VirtualMachineScaleSetVMExtensionsListResponse
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMExtensionsUpdateResponse'
+    name: VirtualMachineScaleSetVMExtensionsUpdateResponse
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMsBeginRunCommandResponse'
     name: VirtualMachineScaleSetVMsBeginRunCommandResponse
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMsBeginUpdateResponse'
@@ -1337,10 +1713,20 @@ references:
     name: AvailabilitySets
   - uid: '@azure/arm-compute.ContainerServices'
     name: ContainerServices
+  - uid: '@azure/arm-compute.DedicatedHostGroups'
+    name: DedicatedHostGroups
+  - uid: '@azure/arm-compute.DedicatedHosts'
+    name: DedicatedHosts
+  - uid: '@azure/arm-compute.DiskEncryptionSets'
+    name: DiskEncryptionSets
   - uid: '@azure/arm-compute.Disks'
     name: Disks
   - uid: '@azure/arm-compute.Galleries'
     name: Galleries
+  - uid: '@azure/arm-compute.GalleryApplicationVersions'
+    name: GalleryApplicationVersions
+  - uid: '@azure/arm-compute.GalleryApplications'
+    name: GalleryApplications
   - uid: '@azure/arm-compute.GalleryImageVersions'
     name: GalleryImageVersions
   - uid: '@azure/arm-compute.GalleryImages'
@@ -1351,6 +1737,8 @@ references:
     name: LogAnalytics
   - uid: '@azure/arm-compute.Operations'
     name: Operations
+  - uid: '@azure/arm-compute.ProximityPlacementGroups'
+    name: ProximityPlacementGroups
   - uid: '@azure/arm-compute.ResourceSkus'
     name: ResourceSkus
   - uid: '@azure/arm-compute.Snapshots'
@@ -1367,10 +1755,10 @@ references:
     name: VirtualMachineRunCommands
   - uid: '@azure/arm-compute.VirtualMachineScaleSetExtensions'
     name: VirtualMachineScaleSetExtensions
-  - uid: '@azure/arm-compute.VirtualMachineScaleSetOperations'
-    name: VirtualMachineScaleSetOperations
   - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades'
     name: VirtualMachineScaleSetRollingUpgrades
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMExtensions'
+    name: VirtualMachineScaleSetVMExtensions
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs'
     name: VirtualMachineScaleSetVMs
   - uid: '@azure/arm-compute.VirtualMachineScaleSets'

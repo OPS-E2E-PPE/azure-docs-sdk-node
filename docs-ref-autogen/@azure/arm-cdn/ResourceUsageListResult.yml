@@ -11,12 +11,13 @@ items:
       - '@azure/arm-cdn.ResourceUsageListResult.entries'
       - '@azure/arm-cdn.ResourceUsageListResult.every'
       - '@azure/arm-cdn.ResourceUsageListResult.fill'
-      - '@azure/arm-cdn.ResourceUsageListResult.filter_1'
       - '@azure/arm-cdn.ResourceUsageListResult.filter'
+      - '@azure/arm-cdn.ResourceUsageListResult.filter_1'
       - '@azure/arm-cdn.ResourceUsageListResult.find'
       - '@azure/arm-cdn.ResourceUsageListResult.find_1'
       - '@azure/arm-cdn.ResourceUsageListResult.findIndex'
       - '@azure/arm-cdn.ResourceUsageListResult.forEach'
+      - '@azure/arm-cdn.ResourceUsageListResult.includes'
       - '@azure/arm-cdn.ResourceUsageListResult.indexOf'
       - '@azure/arm-cdn.ResourceUsageListResult.join'
       - '@azure/arm-cdn.ResourceUsageListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.concat'
     name: 'concat(ConcatArray<ResourceUsage>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.every'
     name: >-
       every((value: ResourceUsage, index: number, array: ResourceUsage[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ResourceUsage, index: number, array:
-        ResourceUsage[]) => boolean, thisArg?: any)
+        ResourceUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ResourceUsage, index: number, array: ResourceUsage[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.fill'
     name: 'fill(ResourceUsage, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-cdn'
-  - uid: '@azure/arm-cdn.ResourceUsageListResult.filter_1'
-    name: >-
-      filter((value: ResourceUsage, index: number, array: ResourceUsage[]) =>
-      any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ResourceUsage, index: number, array:
-        ResourceUsage[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ResourceUsage, index: number, array: ResourceUsage[]) =>
-              any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-cdn.ResourceUsage[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.ResourceUsageListResult.filter_1'
+    name: >-
+      filter((value: ResourceUsage, index: number, array: ResourceUsage[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ResourceUsage, index: number, array:
+        ResourceUsage[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ResourceUsage, index: number, array: ResourceUsage[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-cdn.ResourceUsage[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.find_1'
     name: >-
       find((value: ResourceUsage, index: number, obj: ResourceUsage[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ResourceUsage, index: number, obj:
-        ResourceUsage[]) => boolean, thisArg?: any)
+        ResourceUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ResourceUsage, index: number, obj: ResourceUsage[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.findIndex'
     name: >-
       findIndex((value: ResourceUsage, index: number, obj: ResourceUsage[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ResourceUsage, index: number, obj:
-        ResourceUsage[]) => boolean, thisArg?: any)
+        ResourceUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ResourceUsage, index: number, obj: ResourceUsage[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.ResourceUsageListResult.includes'
+    name: 'includes(ResourceUsage, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ResourceUsage, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-cdn.ResourceUsage'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.indexOf'
     name: 'indexOf(ResourceUsage, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.lastIndexOf'
     name: 'lastIndexOf(ResourceUsage, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.map'
     name: >-
@@ -603,6 +647,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.nextLink'
     name: nextLink
@@ -618,6 +663,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.pop'
     name: pop()
@@ -632,6 +678,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.push'
     name: 'push(ResourceUsage[])'
@@ -651,6 +698,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.reduce'
     name: >-
@@ -682,6 +730,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.reduce_1'
     name: >-
@@ -692,10 +741,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ResourceUsage, currentValue:
@@ -715,6 +761,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.reduce_2'
     name: >-
@@ -753,6 +800,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.reduceRight'
     name: >-
@@ -785,6 +833,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.reduceRight_1'
     name: >-
@@ -795,11 +844,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ResourceUsage,
@@ -819,6 +864,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.reduceRight_2'
     name: >-
@@ -858,6 +904,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.reverse'
     name: reverse()
@@ -872,6 +919,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.shift'
     name: shift()
@@ -886,6 +934,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -911,11 +960,12 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.some'
     name: >-
       some((value: ResourceUsage, index: number, array: ResourceUsage[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -926,13 +976,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ResourceUsage, index: number, array:
-        ResourceUsage[]) => boolean, thisArg?: any)
+        ResourceUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ResourceUsage, index: number, array: ResourceUsage[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -948,6 +998,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.sort'
     name: 'sort(undefined | (a: ResourceUsage, b: ResourceUsage) => number)'
@@ -972,6 +1023,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.splice_1'
     name: 'splice(number, number, ResourceUsage[])'
@@ -1005,6 +1057,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1033,6 +1086,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.ResourceUsage[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.toLocaleString'
     name: toLocaleString()
@@ -1049,6 +1103,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.toString'
     name: toString()
@@ -1063,6 +1118,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.unshift'
     name: 'unshift(ResourceUsage[])'
@@ -1082,6 +1138,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ResourceUsageListResult.values'
     name: values()
@@ -1096,6 +1153,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-cdn.ResourceUsage>
+        description: ''
     package: '@azure/arm-cdn'
 references:
   - uid: Array<@azure/arm-cdn.ResourceUsage>

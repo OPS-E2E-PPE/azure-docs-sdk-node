@@ -6,7 +6,6 @@ items:
     children:
       - '@azure/arm-network.VpnSites.beginCreateOrUpdate'
       - '@azure/arm-network.VpnSites.beginDeleteMethod'
-      - '@azure/arm-network.VpnSites.beginUpdateTags'
       - '@azure/arm-network.VpnSites.createOrUpdate'
       - '@azure/arm-network.VpnSites.deleteMethod'
       - '@azure/arm-network.VpnSites.get'
@@ -25,6 +24,8 @@ items:
       - '@azure/arm-network.VpnSites.listNext_2'
       - '@azure/arm-network.VpnSites.listNext_1'
       - '@azure/arm-network.VpnSites.updateTags'
+      - '@azure/arm-network.VpnSites.updateTags_2'
+      - '@azure/arm-network.VpnSites.updateTags_1'
       - '@azure/arm-network.VpnSites.constructor'
     langs:
       - typeScript
@@ -65,6 +66,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -94,39 +96,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.VpnSites.beginUpdateTags'
-    name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Updates VpnSite tags.
-    syntax:
-      content: >-
-        function beginUpdateTags(resourceGroupName: string, vpnSiteName: string,
-        vpnSiteParameters: TagsObject, options?: msRest.RequestOptionsBase)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The resource group name of the VpnSite.
-        - id: vpnSiteName
-          type:
-            - string
-          description: The name of the VpnSite being updated.
-        - id: vpnSiteParameters
-          type:
-            - '@azure/arm-network.TagsObject'
-          description: Parameters supplied to update VpnSite tags.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.createOrUpdate'
     name: 'createOrUpdate(string, string, VpnSite, msRest.RequestOptionsBase)'
@@ -162,6 +132,7 @@ items:
       return:
         type:
           - Promise<Models.VpnSitesCreateOrUpdateResponse>
+        description: Promise<Models.VpnSitesCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -191,6 +162,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.get'
     name: 'get(string, string, msRest.RequestOptionsBase)'
@@ -220,6 +192,7 @@ items:
       return:
         type:
           - Promise<Models.VpnSitesGetResponse>
+        description: Promise<Models.VpnSitesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.get_2'
     name: 'get(string, string, RequestOptionsBase, ServiceCallback<VpnSite>)'
@@ -250,9 +223,6 @@ items:
             - ServiceCallback<@azure/arm-network.VpnSite>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnSitesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.get_1'
     name: 'get(string, string, ServiceCallback<VpnSite>)'
@@ -279,9 +249,6 @@ items:
             - ServiceCallback<@azure/arm-network.VpnSite>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnSitesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.list'
     name: list(msRest.RequestOptionsBase)
@@ -301,6 +268,7 @@ items:
       return:
         type:
           - Promise<Models.VpnSitesListResponse>
+        description: Promise<Models.VpnSitesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.list_2'
     name: 'list(RequestOptionsBase, ServiceCallback<ListVpnSitesResult>)'
@@ -323,9 +291,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnSitesResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnSitesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.list_1'
     name: list(ServiceCallback<ListVpnSitesResult>)
@@ -342,9 +307,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnSitesResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnSitesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.listByResourceGroup'
     name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
@@ -370,6 +332,7 @@ items:
       return:
         type:
           - Promise<Models.VpnSitesListByResourceGroupResponse>
+        description: Promise<Models.VpnSitesListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.listByResourceGroup_2'
     name: >-
@@ -398,9 +361,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnSitesResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnSitesListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.listByResourceGroup_1'
     name: 'listByResourceGroup(string, ServiceCallback<ListVpnSitesResult>)'
@@ -423,9 +383,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnSitesResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnSitesListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.listByResourceGroupNext'
     name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
@@ -451,6 +408,7 @@ items:
       return:
         type:
           - Promise<Models.VpnSitesListByResourceGroupNextResponse>
+        description: Promise<Models.VpnSitesListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.listByResourceGroupNext_2'
     name: >-
@@ -479,9 +437,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnSitesResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnSitesListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.listByResourceGroupNext_1'
     name: 'listByResourceGroupNext(string, ServiceCallback<ListVpnSitesResult>)'
@@ -504,9 +459,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnSitesResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnSitesListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -532,6 +484,7 @@ items:
       return:
         type:
           - Promise<Models.VpnSitesListNextResponse>
+        description: Promise<Models.VpnSitesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.listNext_2'
     name: 'listNext(string, RequestOptionsBase, ServiceCallback<ListVpnSitesResult>)'
@@ -558,9 +511,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnSitesResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnSitesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.listNext_1'
     name: 'listNext(string, ServiceCallback<ListVpnSitesResult>)'
@@ -583,9 +533,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnSitesResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnSitesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.updateTags'
     name: 'updateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
@@ -619,6 +566,74 @@ items:
       return:
         type:
           - Promise<Models.VpnSitesUpdateTagsResponse>
+        description: Promise<Models.VpnSitesUpdateTagsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VpnSites.updateTags_2'
+    name: >-
+      updateTags(string, string, TagsObject, RequestOptionsBase,
+      ServiceCallback<VpnSite>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, vpnSiteName: string,
+        vpnSiteParameters: TagsObject, options: RequestOptionsBase, callback:
+        ServiceCallback<VpnSite>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name of the VpnSite.
+        - id: vpnSiteName
+          type:
+            - string
+          description: The name of the VpnSite being updated.
+        - id: vpnSiteParameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update VpnSite tags.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VpnSite>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VpnSites.updateTags_1'
+    name: 'updateTags(string, string, TagsObject, ServiceCallback<VpnSite>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, vpnSiteName: string,
+        vpnSiteParameters: TagsObject, callback: ServiceCallback<VpnSite>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name of the VpnSite.
+        - id: vpnSiteName
+          type:
+            - string
+          description: The name of the VpnSite being updated.
+        - id: vpnSiteParameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update VpnSite tags.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VpnSite>
+          description: |
+            The callback
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnSites.constructor'
     name: VpnSites(NetworkManagementClientContext)
@@ -649,12 +664,6 @@ references:
       - name: VpnSite
         fullName: VpnSite
         uid: '@azure/arm-network.VpnSite'
-  - uid: '@azure/arm-network.TagsObject'
-    name: TagsObject
-    spec.typeScript:
-      - name: TagsObject
-        fullName: TagsObject
-        uid: '@azure/arm-network.TagsObject'
   - uid: ServiceCallback<@azure/arm-network.VpnSite>
     name: VpnSite>
     spec.typeScript:
@@ -675,3 +684,9 @@ references:
         uid: '@azure/arm-network.ListVpnSitesResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'

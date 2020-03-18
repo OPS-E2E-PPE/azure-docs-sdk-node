@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-compute.Galleries.beginCreateOrUpdate'
       - '@azure/arm-compute.Galleries.beginDeleteMethod'
+      - '@azure/arm-compute.Galleries.beginUpdate'
       - '@azure/arm-compute.Galleries.createOrUpdate'
       - '@azure/arm-compute.Galleries.deleteMethod'
       - '@azure/arm-compute.Galleries.constructor'
@@ -24,6 +25,7 @@ items:
       - '@azure/arm-compute.Galleries.listNext'
       - '@azure/arm-compute.Galleries.listNext_2'
       - '@azure/arm-compute.Galleries.listNext_1'
+      - '@azure/arm-compute.Galleries.update'
     langs:
       - typeScript
     type: class
@@ -68,6 +70,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -97,6 +100,46 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Galleries.beginUpdate'
+    name: 'beginUpdate(string, string, GalleryUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Update a Shared Image Gallery.
+    syntax:
+      content: >-
+        function beginUpdate(resourceGroupName: string, galleryName: string,
+        gallery: GalleryUpdate, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: galleryName
+          type:
+            - string
+          description: >-
+            The name of the Shared Image Gallery. The allowed characters are
+            alphabets
+
+            and numbers with dots and periods allowed in the middle. The maximum
+            length is 80 characters.
+        - id: gallery
+          type:
+            - '@azure/arm-compute.GalleryUpdate'
+          description: Parameters supplied to the update Shared Image Gallery operation.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.createOrUpdate'
     name: 'createOrUpdate(string, string, Gallery, msRest.RequestOptionsBase)'
@@ -137,6 +180,7 @@ items:
       return:
         type:
           - Promise<Models.GalleriesCreateOrUpdateResponse>
+        description: Promise<Models.GalleriesCreateOrUpdateResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -166,6 +210,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.constructor'
     name: Galleries(ComputeManagementClientContext)
@@ -211,6 +256,7 @@ items:
       return:
         type:
           - Promise<Models.GalleriesGetResponse>
+        description: Promise<Models.GalleriesGetResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.get_2'
     name: 'get(string, string, RequestOptionsBase, ServiceCallback<Gallery>)'
@@ -241,9 +287,6 @@ items:
             - ServiceCallback<@azure/arm-compute.Gallery>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.GalleriesGetResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.get_1'
     name: 'get(string, string, ServiceCallback<Gallery>)'
@@ -270,9 +313,6 @@ items:
             - ServiceCallback<@azure/arm-compute.Gallery>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.GalleriesGetResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.list'
     name: list(msRest.RequestOptionsBase)
@@ -292,6 +332,7 @@ items:
       return:
         type:
           - Promise<Models.GalleriesListResponse>
+        description: Promise<Models.GalleriesListResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.list_2'
     name: 'list(RequestOptionsBase, ServiceCallback<GalleryList>)'
@@ -314,9 +355,6 @@ items:
             - ServiceCallback<@azure/arm-compute.GalleryList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.GalleriesListResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.list_1'
     name: list(ServiceCallback<GalleryList>)
@@ -333,9 +371,6 @@ items:
             - ServiceCallback<@azure/arm-compute.GalleryList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.GalleriesListResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.listByResourceGroup'
     name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
@@ -361,6 +396,7 @@ items:
       return:
         type:
           - Promise<Models.GalleriesListByResourceGroupResponse>
+        description: Promise<Models.GalleriesListByResourceGroupResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.listByResourceGroup_2'
     name: >-
@@ -389,9 +425,6 @@ items:
             - ServiceCallback<@azure/arm-compute.GalleryList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.GalleriesListByResourceGroupResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.listByResourceGroup_1'
     name: 'listByResourceGroup(string, ServiceCallback<GalleryList>)'
@@ -414,9 +447,6 @@ items:
             - ServiceCallback<@azure/arm-compute.GalleryList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.GalleriesListByResourceGroupResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.listByResourceGroupNext'
     name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
@@ -442,6 +472,7 @@ items:
       return:
         type:
           - Promise<Models.GalleriesListByResourceGroupNextResponse>
+        description: Promise<Models.GalleriesListByResourceGroupNextResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.listByResourceGroupNext_2'
     name: >-
@@ -470,9 +501,6 @@ items:
             - ServiceCallback<@azure/arm-compute.GalleryList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.GalleriesListByResourceGroupNextResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.listByResourceGroupNext_1'
     name: 'listByResourceGroupNext(string, ServiceCallback<GalleryList>)'
@@ -495,9 +523,6 @@ items:
             - ServiceCallback<@azure/arm-compute.GalleryList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.GalleriesListByResourceGroupNextResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -523,6 +548,7 @@ items:
       return:
         type:
           - Promise<Models.GalleriesListNextResponse>
+        description: Promise<Models.GalleriesListNextResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.listNext_2'
     name: 'listNext(string, RequestOptionsBase, ServiceCallback<GalleryList>)'
@@ -549,9 +575,6 @@ items:
             - ServiceCallback<@azure/arm-compute.GalleryList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.GalleriesListNextResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.Galleries.listNext_1'
     name: 'listNext(string, ServiceCallback<GalleryList>)'
@@ -574,9 +597,45 @@ items:
             - ServiceCallback<@azure/arm-compute.GalleryList>
           description: |
             The callback
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Galleries.update'
+    name: 'update(string, string, GalleryUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Update a Shared Image Gallery.
+    syntax:
+      content: >-
+        function update(resourceGroupName: string, galleryName: string, gallery:
+        GalleryUpdate, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: galleryName
+          type:
+            - string
+          description: >-
+            The name of the Shared Image Gallery. The allowed characters are
+            alphabets
+
+            and numbers with dots and periods allowed in the middle. The maximum
+            length is 80 characters.
+        - id: gallery
+          type:
+            - '@azure/arm-compute.GalleryUpdate'
+          description: Parameters supplied to the update Shared Image Gallery operation.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.GalleriesListNextResponse>
+          - Promise<Models.GalleriesUpdateResponse>
+        description: Promise<Models.GalleriesUpdateResponse>
     package: '@azure/arm-compute'
 references:
   - uid: '@azure/arm-compute.ComputeManagementClientContext'
@@ -591,6 +650,12 @@ references:
       - name: Gallery
         fullName: Gallery
         uid: '@azure/arm-compute.Gallery'
+  - uid: '@azure/arm-compute.GalleryUpdate'
+    name: GalleryUpdate
+    spec.typeScript:
+      - name: GalleryUpdate
+        fullName: GalleryUpdate
+        uid: '@azure/arm-compute.GalleryUpdate'
   - uid: ServiceCallback<@azure/arm-compute.Gallery>
     name: Gallery>
     spec.typeScript:

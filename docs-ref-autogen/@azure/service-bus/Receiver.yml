@@ -12,6 +12,7 @@ items:
       - '@azure/service-bus.Receiver.receiveDeferredMessages'
       - '@azure/service-bus.Receiver.receiveMessages'
       - '@azure/service-bus.Receiver.receiveMode'
+      - '@azure/service-bus.Receiver.constructor'
       - '@azure/service-bus.Receiver.registerMessageHandler'
       - '@azure/service-bus.Receiver.renewMessageLock'
     langs:
@@ -48,6 +49,7 @@ items:
       return:
         type:
           - Promise<void>
+        description: ''
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Receiver.getMessageIterator'
     name: getMessageIterator()
@@ -55,7 +57,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >
+    summary: >-
       Gets an async iterator over messages from the receiver.
 
       Throws an error if there is another receive operation in progress on the
@@ -75,6 +77,7 @@ items:
       return:
         type:
           - AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+        description: ''
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Receiver.isClosed'
     name: isClosed
@@ -89,10 +92,11 @@ items:
 
       itself has been closed or the client that created it has been closed.
     syntax:
-      content: 'isClosed: boolean'
+      content: boolean isClosed
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Receiver.isReceivingMessages'
     name: isReceivingMessages()
@@ -111,6 +115,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Receiver.receiveDeferredMessage'
     name: receiveDeferredMessage(Long)
@@ -131,6 +136,10 @@ items:
       return:
         type:
           - Promise<@azure/service-bus.ServiceBusMessage | undefined>
+        description: |-
+          Promise<ServiceBusMessage | undefined>
+          - Returns `Message` identified by sequence number.
+          - Returns `undefined` if no such message is found.
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Receiver.receiveDeferredMessages'
     name: 'receiveDeferredMessages(Long[])'
@@ -153,6 +162,10 @@ items:
       return:
         type:
           - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+        description: |-
+          Promise<ServiceBusMessage[]>
+          - Returns a list of messages identified by the given sequenceNumbers.
+          - Returns an empty list if no messages are found.
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Receiver.receiveMessages'
     name: 'receiveMessages(number, undefined | number)'
@@ -175,29 +188,31 @@ items:
       property on the receiver.
     syntax:
       content: >-
-        function receiveMessages(maxMessageCount: number, idleTimeoutInSeconds?:
+        function receiveMessages(maxMessageCount: number, maxWaitTimeInSeconds?:
         undefined | number)
       parameters:
         - id: maxMessageCount
           type:
             - number
           description: The maximum number of messages to receive from Queue/Subscription.
-        - id: idleTimeoutInSeconds
+        - id: maxWaitTimeInSeconds
           type:
             - undefined | number
           description: >-
-            The maximum wait time in seconds for which the Receiver
+            The total wait time in seconds until which the receiver will attempt
+            to receive specified number of messages.
 
-            should wait to receive the first message. If no message is received
-            by this time,
-
-            the returned promise gets resolved to an empty array.
+            If this time elapses before the `maxMessageCount` is reached, then
+            messages collected till then will be returned to the user.
 
             - **Default**: `60` seconds.
           optional: true
       return:
         type:
           - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+        description: >-
+          Promise<ServiceBusMessage[]> A promise that resolves with an array of
+          Message objects.
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Receiver.receiveMode'
     name: receiveMode
@@ -208,10 +223,30 @@ items:
     type: property
     summary: Denotes receiveMode of this receiver.
     syntax:
-      content: 'receiveMode: ReceiveMode'
+      content: ReceiveMode receiveMode
       return:
         type:
           - '@azure/service-bus.ReceiveMode'
+        description: ''
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.constructor'
+    name: 'Receiver(ClientEntityContext, ReceiveMode)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new Receiver(context: ClientEntityContext, receiveMode: ReceiveMode)'
+      parameters:
+        - id: context
+          type:
+            - '@azure/service-bus.ClientEntityContext'
+          description: ''
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: ''
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Receiver.registerMessageHandler'
     name: 'registerMessageHandler(OnMessage, OnError, MessageHandlerOptions)'
@@ -300,8 +335,15 @@ items:
       return:
         type:
           - Promise<Date>
+        description: Promise<Date> - New lock token expiry date and time in UTC format.
     package: '@azure/service-bus'
 references:
+  - uid: '@azure/service-bus.ClientEntityContext'
+    name: ClientEntityContext
+    spec.typeScript:
+      - name: ClientEntityContext
+        fullName: ClientEntityContext
+        uid: '@azure/service-bus.ClientEntityContext'
   - uid: '@azure/service-bus.ReceiveMode'
     name: ReceiveMode
     spec.typeScript:

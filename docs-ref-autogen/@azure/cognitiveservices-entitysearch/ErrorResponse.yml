@@ -11,7 +11,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: The top-level response that represents a failed request.
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.ErrorResponse.contractualRules'
     name: contractualRules
@@ -20,7 +20,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A list of rules that you must adhere to if you display the item.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'contractualRules?: ContractualRulesContractualRuleUnion[]'
@@ -28,6 +32,7 @@ items:
         type:
           - >-
             @azure/cognitiveservices-entitysearch.ContractualRulesContractualRuleUnion[]
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.ErrorResponse.errors'
     name: errors
@@ -36,12 +41,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A list of errors that describe the reasons why the request failed.
     syntax:
       content: 'errors: ErrorModel[]'
       return:
         type:
           - '@azure/cognitiveservices-entitysearch.ErrorModel[]'
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.ErrorResponse.id'
     name: id
@@ -50,13 +56,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A String identifier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.ErrorResponse.webSearchUrl'
     name: webSearchUrl
@@ -65,13 +76,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The URL To Bing's search result for this item.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'webSearchUrl?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
 references:
   - uid: >-

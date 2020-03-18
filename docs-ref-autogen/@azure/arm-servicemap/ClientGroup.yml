@@ -13,7 +13,11 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      Represents a collection of clients of a resource. A client group can
+      represent the clients of a
+
+      port, process, or a machine.
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ClientGroup.clientsOf'
     name: clientsOf
@@ -22,12 +26,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Reference to the resource whose clients are represented by this group.
     syntax:
       content: 'clientsOf: ResourceReferenceUnion'
       return:
         type:
           - '@azure/arm-servicemap.ResourceReferenceUnion'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ClientGroup.etag'
     name: etag
@@ -36,13 +41,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource ETAG.
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ClientGroup.id'
     name: id
@@ -51,13 +57,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource identifier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ClientGroup.kind'
     name: kind
@@ -66,12 +77,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'kind: "clientGroup"'
       return:
         type:
           - '"clientGroup"'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ClientGroup.name'
     name: name
@@ -80,13 +92,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ClientGroup.type'
     name: type
@@ -95,13 +112,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource type.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
 references:
   - uid: '@azure/arm-servicemap.ResourceReferenceUnion'

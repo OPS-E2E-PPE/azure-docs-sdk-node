@@ -32,6 +32,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationStatus.customStatus
     name: customStatus
@@ -47,11 +48,12 @@ items:
       return:
         type:
           - unknown
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationStatus.constructor
     name: >-
       DurableOrchestrationStatus(string, string, Date, Date, unknown, unknown,
-      OrchestrationRuntimeStatus, unknown, Array<unknown>)
+      OrchestrationRuntimeStatus, unknown, unknown[] | undefined)
     children: []
     type: constructor
     langs:
@@ -62,7 +64,7 @@ items:
         new DurableOrchestrationStatus(name: string, instanceId: string,
         createdTime: Date, lastUpdatedTime: Date, input: unknown, output:
         unknown, runtimeStatus: OrchestrationRuntimeStatus, customStatus?:
-        unknown, history?: Array<unknown>)
+        unknown, history?: unknown[] | undefined)
       parameters:
         - id: name
           type:
@@ -99,7 +101,7 @@ items:
           optional: true
         - id: history
           type:
-            - Array<unknown>
+            - 'unknown[] | undefined'
           description: ''
           optional: true
     package: durable-functions
@@ -113,10 +115,11 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'history?: Array<unknown>'
+      content: 'history?: unknown[] | undefined'
       return:
         type:
-          - Array<unknown>
+          - 'unknown[] | undefined'
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationStatus.input
     name: input
@@ -131,6 +134,7 @@ items:
       return:
         type:
           - unknown
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationStatus.instanceId
     name: instanceId
@@ -145,6 +149,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationStatus.lastUpdatedTime
     name: lastUpdatedTime
@@ -159,6 +164,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationStatus.name
     name: name
@@ -173,6 +179,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationStatus.output
     name: output
@@ -187,6 +194,7 @@ items:
       return:
         type:
           - unknown
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationStatus.runtimeStatus
     name: runtimeStatus
@@ -201,6 +209,7 @@ items:
       return:
         type:
           - durable-functions.OrchestrationRuntimeStatus
+        description: ''
     package: durable-functions
 references:
   - uid: durable-functions.OrchestrationRuntimeStatus

@@ -11,12 +11,13 @@ items:
       - '@azure/arm-migrate.AssessmentResultList.entries'
       - '@azure/arm-migrate.AssessmentResultList.every'
       - '@azure/arm-migrate.AssessmentResultList.fill'
-      - '@azure/arm-migrate.AssessmentResultList.filter_1'
       - '@azure/arm-migrate.AssessmentResultList.filter'
+      - '@azure/arm-migrate.AssessmentResultList.filter_1'
       - '@azure/arm-migrate.AssessmentResultList.find'
       - '@azure/arm-migrate.AssessmentResultList.find_1'
       - '@azure/arm-migrate.AssessmentResultList.findIndex'
       - '@azure/arm-migrate.AssessmentResultList.forEach'
+      - '@azure/arm-migrate.AssessmentResultList.includes'
       - '@azure/arm-migrate.AssessmentResultList.indexOf'
       - '@azure/arm-migrate.AssessmentResultList.join'
       - '@azure/arm-migrate.AssessmentResultList.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.concat'
     name: 'concat(ConcatArray<Assessment>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.entries'
     name: entries()
@@ -157,10 +162,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.every'
     name: >-
-      every((value: Assessment, index: number, array: Assessment[]) => boolean,
+      every((value: Assessment, index: number, array: Assessment[]) => unknown,
       any)
     children: []
     type: method
@@ -170,11 +176,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Assessment, index: number, array:
-        Assessment[]) => boolean, thisArg?: any)
+        Assessment[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Assessment, index: number, array: Assessment[]) => boolean'
+            - '(value: Assessment, index: number, array: Assessment[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -190,6 +196,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.fill'
     name: 'fill(Assessment, undefined | number, undefined | number)'
@@ -230,41 +237,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-migrate'
-  - uid: '@azure/arm-migrate.AssessmentResultList.filter_1'
-    name: >-
-      filter((value: Assessment, index: number, array: Assessment[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Assessment, index: number, array:
-        Assessment[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Assessment, index: number, array: Assessment[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-migrate.Assessment[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.filter'
     name: >-
@@ -300,6 +273,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessmentResultList.filter_1'
+    name: >-
+      filter((value: Assessment, index: number, array: Assessment[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Assessment, index: number, array:
+        Assessment[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Assessment, index: number, array: Assessment[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-migrate.Assessment[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.find'
     name: >-
@@ -345,28 +355,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.find_1'
     name: >-
-      find((value: Assessment, index: number, obj: Assessment[]) => boolean,
+      find((value: Assessment, index: number, obj: Assessment[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Assessment, index: number, obj:
-        Assessment[]) => boolean, thisArg?: any)
+        Assessment[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Assessment, index: number, obj: Assessment[]) => boolean'
+            - '(value: Assessment, index: number, obj: Assessment[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -376,11 +383,12 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment | undefined'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.findIndex'
     name: >-
       findIndex((value: Assessment, index: number, obj: Assessment[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -393,11 +401,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Assessment, index: number, obj:
-        Assessment[]) => boolean, thisArg?: any)
+        Assessment[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Assessment, index: number, obj: Assessment[]) => boolean'
+            - '(value: Assessment, index: number, obj: Assessment[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -419,6 +427,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.forEach'
     name: >-
@@ -449,6 +458,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessmentResultList.includes'
+    name: 'includes(Assessment, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Assessment, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-migrate.Assessment'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.indexOf'
     name: 'indexOf(Assessment, undefined | number)'
     children: []
@@ -475,6 +514,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.join'
     name: join(undefined | string)
@@ -499,6 +539,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.keys'
     name: keys()
@@ -513,6 +554,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.lastIndexOf'
     name: 'lastIndexOf(Assessment, undefined | number)'
@@ -540,6 +582,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.length'
     name: length
@@ -556,6 +599,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.map'
     name: 'map((value: Assessment, index: number, array: Assessment[]) => U, any)'
@@ -588,6 +632,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.pop'
     name: pop()
@@ -602,6 +647,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment | undefined'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.push'
     name: 'push(Assessment[])'
@@ -621,6 +667,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.reduce'
     name: >-
@@ -651,6 +698,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.reduce_1'
     name: >-
@@ -660,10 +708,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Assessment, currentValue:
@@ -683,6 +728,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.reduce_2'
     name: >-
@@ -721,6 +767,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.reduceRight'
     name: >-
@@ -753,6 +800,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.reduceRight_1'
     name: >-
@@ -762,11 +810,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Assessment,
@@ -786,6 +830,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.reduceRight_2'
     name: >-
@@ -825,6 +870,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.reverse'
     name: reverse()
@@ -839,6 +885,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.shift'
     name: shift()
@@ -853,6 +900,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment | undefined'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -878,10 +926,11 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.some'
     name: >-
-      some((value: Assessment, index: number, array: Assessment[]) => boolean,
+      some((value: Assessment, index: number, array: Assessment[]) => unknown,
       any)
     children: []
     type: method
@@ -893,11 +942,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Assessment, index: number, array:
-        Assessment[]) => boolean, thisArg?: any)
+        Assessment[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Assessment, index: number, array: Assessment[]) => boolean'
+            - '(value: Assessment, index: number, array: Assessment[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -913,6 +962,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.sort'
     name: 'sort(undefined | (a: Assessment, b: Assessment) => number)'
@@ -937,6 +987,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.splice_1'
     name: 'splice(number, number, Assessment[])'
@@ -968,6 +1019,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.splice'
     name: 'splice(number, undefined | number)'
@@ -996,6 +1048,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.Assessment[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.toLocaleString'
     name: toLocaleString()
@@ -1012,6 +1065,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.toString'
     name: toString()
@@ -1026,6 +1080,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.unshift'
     name: 'unshift(Assessment[])'
@@ -1045,6 +1100,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessmentResultList.values'
     name: values()
@@ -1059,6 +1115,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-migrate.Assessment>
+        description: ''
     package: '@azure/arm-migrate'
 references:
   - uid: Array<@azure/arm-migrate.Assessment>

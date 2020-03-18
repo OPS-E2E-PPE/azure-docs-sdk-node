@@ -4,6 +4,7 @@ items:
     name: Utils
     fullName: Utils
     children:
+      - durable-functions.Utils.ensureNonNull
       - durable-functions.Utils.getHrMilliseconds
       - durable-functions.Utils.getInstancesOf
       - durable-functions.Utils.hasAllPropertiesOf
@@ -15,6 +16,31 @@ items:
       - typeScript
     type: class
     summary: ''
+    package: durable-functions
+  - uid: durable-functions.Utils.ensureNonNull
+    name: 'ensureNonNull(T | undefined, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        static function ensureNonNull<T>(argument: T | undefined, message:
+        string)
+      parameters:
+        - id: argument
+          type:
+            - T | undefined
+          description: ''
+        - id: message
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - T
+        description: ''
     package: durable-functions
   - uid: durable-functions.Utils.getHrMilliseconds
     name: 'getHrMilliseconds(number[])'
@@ -33,6 +59,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: durable-functions
   - uid: durable-functions.Utils.getInstancesOf
     name: 'getInstancesOf([key: string]: unknown, T)'
@@ -57,6 +84,7 @@ items:
       return:
         type:
           - 'T[]'
+        description: ''
     package: durable-functions
   - uid: durable-functions.Utils.hasAllPropertiesOf
     name: 'hasAllPropertiesOf(unknown, T)'
@@ -79,6 +107,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: durable-functions
   - uid: durable-functions.Utils.sleep
     name: sleep(number)
@@ -96,7 +125,8 @@ items:
           description: ''
       return:
         type:
-          - Promise<Timer>
+          - Promise<NodeJS.Timer>
+        description: ''
     package: durable-functions
   - uid: durable-functions.Utils.throwIfEmpty
     name: 'throwIfEmpty(unknown, string)'

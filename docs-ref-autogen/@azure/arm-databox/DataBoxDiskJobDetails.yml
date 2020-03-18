@@ -12,7 +12,7 @@ items:
       - '@azure/arm-databox.DataBoxDiskJobDetails.destinationAccountDetails'
       - '@azure/arm-databox.DataBoxDiskJobDetails.disksAndSizeDetails'
       - '@azure/arm-databox.DataBoxDiskJobDetails.errorDetails'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.expectedDataSizeInTeraBytes'
+      - '@azure/arm-databox.DataBoxDiskJobDetails.expectedDataSizeInTerabytes'
       - '@azure/arm-databox.DataBoxDiskJobDetails.jobDetailsType'
       - '@azure/arm-databox.DataBoxDiskJobDetails.jobStages'
       - '@azure/arm-databox.DataBoxDiskJobDetails.passkey'
@@ -24,7 +24,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: DataBox Disk Job Details.
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.chainOfCustodySasKey'
     name: chainOfCustodySasKey
@@ -33,13 +33,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Shared access key to download the chain of custody logs
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'chainOfCustodySasKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.contactDetails'
     name: contactDetails
@@ -48,12 +53,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Contact details for notification and shipping.
     syntax:
       content: 'contactDetails: ContactDetails'
       return:
         type:
           - '@azure/arm-databox.ContactDetails'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.copyLogDetails'
     name: copyLogDetails
@@ -62,13 +68,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      List of copy log details.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'copyLogDetails?: CopyLogDetailsUnion[]'
       return:
         type:
           - '@azure/arm-databox.CopyLogDetailsUnion[]'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.copyProgress'
     name: copyProgress
@@ -77,13 +88,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Copy progress per disk.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'copyProgress?: DataBoxDiskCopyProgress[]'
       return:
         type:
           - '@azure/arm-databox.DataBoxDiskCopyProgress[]'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.deliveryPackage'
     name: deliveryPackage
@@ -92,13 +108,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Delivery package shipping details.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'deliveryPackage?: PackageShippingDetails'
       return:
         type:
           - '@azure/arm-databox.PackageShippingDetails'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.destinationAccountDetails'
     name: destinationAccountDetails
@@ -107,12 +128,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Destination account details.
     syntax:
-      content: 'destinationAccountDetails: DestinationAccountDetails[]'
+      content: 'destinationAccountDetails: DestinationAccountDetailsUnion[]'
       return:
         type:
-          - '@azure/arm-databox.DestinationAccountDetails[]'
+          - '@azure/arm-databox.DestinationAccountDetailsUnion[]'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.disksAndSizeDetails'
     name: disksAndSizeDetails
@@ -121,13 +143,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Contains the map of disk serial number to the disk size being used for the
+      job. Is returned
+
+      only after the disks are shipped to the customer.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'disksAndSizeDetails?: undefined | [key: string]: number'
       return:
         type:
           - 'undefined | [key: string]: number'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.errorDetails'
     name: errorDetails
@@ -136,28 +166,36 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Error details for failure. This is optional.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'errorDetails?: JobErrorDetails[]'
       return:
         type:
           - '@azure/arm-databox.JobErrorDetails[]'
+        description: ''
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.expectedDataSizeInTeraBytes'
-    name: expectedDataSizeInTeraBytes
-    fullName: expectedDataSizeInTeraBytes
+  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.expectedDataSizeInTerabytes'
+    name: expectedDataSizeInTerabytes
+    fullName: expectedDataSizeInTerabytes
     children: []
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The expected size of the data, which needs to be transferred in this job,
+      in terabytes.
     optional: true
     syntax:
-      content: 'expectedDataSizeInTeraBytes?: undefined | number'
+      content: 'expectedDataSizeInTerabytes?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.jobDetailsType'
     name: jobDetailsType
@@ -166,12 +204,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'jobDetailsType: "DataBoxDisk"'
       return:
         type:
           - '"DataBoxDisk"'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.jobStages'
     name: jobStages
@@ -180,13 +219,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      List of stages that run in the job.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'jobStages?: JobStages[]'
       return:
         type:
           - '@azure/arm-databox.JobStages[]'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.passkey'
     name: passkey
@@ -195,13 +239,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: User entered passkey for DataBox Disk job.
     optional: true
     syntax:
       content: 'passkey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.preferences'
     name: preferences
@@ -210,13 +255,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Preferences for the order.
     optional: true
     syntax:
       content: 'preferences?: Preferences'
       return:
         type:
           - '@azure/arm-databox.Preferences'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.preferredDisks'
     name: preferredDisks
@@ -225,13 +271,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      User preference on what size disks are needed for the job. The map is from
+      the disk size in TB
+
+      to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will
+      be checked against
+
+      an int.
     optional: true
     syntax:
       content: 'preferredDisks?: undefined | [key: string]: number'
       return:
         type:
           - 'undefined | [key: string]: number'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.returnPackage'
     name: returnPackage
@@ -240,13 +294,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Return package shipping details.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'returnPackage?: PackageShippingDetails'
       return:
         type:
           - '@azure/arm-databox.PackageShippingDetails'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.reverseShipmentLabelSasKey'
     name: reverseShipmentLabelSasKey
@@ -255,13 +314,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Shared access key to download the return shipment label
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'reverseShipmentLabelSasKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.DataBoxDiskJobDetails.shippingAddress'
     name: shippingAddress
@@ -270,12 +334,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Shipping address of the customer.
     syntax:
       content: 'shippingAddress: ShippingAddress'
       return:
         type:
           - '@azure/arm-databox.ShippingAddress'
+        description: ''
     package: '@azure/arm-databox'
 references:
   - uid: '@azure/arm-databox.ContactDetails'
@@ -306,12 +371,12 @@ references:
       - name: PackageShippingDetails
         fullName: PackageShippingDetails
         uid: '@azure/arm-databox.PackageShippingDetails'
-  - uid: '@azure/arm-databox.DestinationAccountDetails[]'
-    name: 'DestinationAccountDetails[]'
+  - uid: '@azure/arm-databox.DestinationAccountDetailsUnion[]'
+    name: 'DestinationAccountDetailsUnion[]'
     spec.typeScript:
-      - name: DestinationAccountDetails
-        fullName: DestinationAccountDetails
-        uid: '@azure/arm-databox.DestinationAccountDetails'
+      - name: DestinationAccountDetailsUnion
+        fullName: DestinationAccountDetailsUnion
+        uid: '@azure/arm-databox.DestinationAccountDetailsUnion'
       - name: '[]'
         fullName: '[]'
   - uid: '@azure/arm-databox.JobErrorDetails[]'

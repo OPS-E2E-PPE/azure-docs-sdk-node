@@ -5,8 +5,8 @@ items:
     fullName: CosmosDBManagementClient
     children:
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.acceptLanguage'
-      - '@azure/arm-cosmosdb.CosmosDBManagementClient.apiVersion'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.beginLongRunningRequest'
+      - '@azure/arm-cosmosdb.CosmosDBManagementClient.cassandraResources'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.collection'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.collectionPartition'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.collectionPartitionRegion'
@@ -16,20 +16,27 @@ items:
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.database'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.databaseAccountRegion'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.databaseAccounts'
+      - '@azure/arm-cosmosdb.CosmosDBManagementClient.gremlinResources'
       - >-
         @azure/arm-cosmosdb.CosmosDBManagementClient.longRunningOperationRetryTimeout
+      - '@azure/arm-cosmosdb.CosmosDBManagementClient.mongoDBResources'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.operations'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.partitionKeyRangeId'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.partitionKeyRangeIdRegion'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.percentile'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.percentileSourceTarget'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.percentileTarget'
+      - '@azure/arm-cosmosdb.CosmosDBManagementClient.privateEndpointConnections'
+      - '@azure/arm-cosmosdb.CosmosDBManagementClient.privateLinkResources'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.restoreLROPoller'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.sendLongRunningRequest'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.sendLRORequest'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.sendOperationRequest'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.sendRequest'
+      - '@azure/arm-cosmosdb.CosmosDBManagementClient.sqlResources'
       - '@azure/arm-cosmosdb.CosmosDBManagementClient.subscriptionId'
+      - '@azure/arm-cosmosdb.CosmosDBManagementClient.subscriptionId1'
+      - '@azure/arm-cosmosdb.CosmosDBManagementClient.tableResources'
     langs:
       - typeScript
     type: class
@@ -50,21 +57,7 @@ items:
       return:
         type:
           - string
-    package: '@azure/arm-cosmosdb'
-  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.apiVersion'
-    name: apiVersion
-    fullName: apiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'apiVersion?: undefined | string'
-      return:
-        type:
-          - undefined | string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.beginLongRunningRequest'
     name: >-
@@ -98,6 +91,24 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: |-
+          The HttpLongRunningOperationResponse
+          that provides methods for interacting with the LRO.
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.cassandraResources'
+    name: cassandraResources
+    fullName: cassandraResources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'cassandraResources: CassandraResources'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.CassandraResources'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.collection'
     name: collection
@@ -112,6 +123,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Collection'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.collectionPartition'
     name: collectionPartition
@@ -126,6 +138,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.CollectionPartition'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.collectionPartitionRegion'
     name: collectionPartitionRegion
@@ -140,6 +153,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.CollectionPartitionRegion'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.collectionRegion'
     name: collectionRegion
@@ -154,10 +168,11 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.CollectionRegion'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.constructor'
     name: >-
-      CosmosDBManagementClient(ServiceClientCredentials, string,
+      CosmosDBManagementClient(ServiceClientCredentials, string, string,
       Models.CosmosDBManagementClientOptions)
     children: []
     type: constructor
@@ -167,7 +182,7 @@ items:
     syntax:
       content: >-
         new CosmosDBManagementClient(credentials: ServiceClientCredentials,
-        subscriptionId: string, options?:
+        subscriptionId: string, subscriptionId1: string, options?:
         Models.CosmosDBManagementClientOptions)
       parameters:
         - id: credentials
@@ -178,6 +193,10 @@ items:
           type:
             - string
           description: Azure subscription ID.
+        - id: subscriptionId1
+          type:
+            - string
+          description: The ID of the target subscription.
         - id: options
           type:
             - Models.CosmosDBManagementClientOptions
@@ -197,6 +216,7 @@ items:
       return:
         type:
           - ServiceClientCredentials
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.database'
     name: database
@@ -211,6 +231,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Database'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.databaseAccountRegion'
     name: databaseAccountRegion
@@ -225,6 +246,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.DatabaseAccountRegion'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.databaseAccounts'
     name: databaseAccounts
@@ -239,6 +261,22 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.DatabaseAccounts'
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.gremlinResources'
+    name: gremlinResources
+    fullName: gremlinResources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'gremlinResources: GremlinResources'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.GremlinResources'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: >-
       @azure/arm-cosmosdb.CosmosDBManagementClient.longRunningOperationRetryTimeout
@@ -257,6 +295,22 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.mongoDBResources'
+    name: mongoDBResources
+    fullName: mongoDBResources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'mongoDBResources: MongoDBResources'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.MongoDBResources'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.operations'
     name: operations
@@ -271,6 +325,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Operations'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.partitionKeyRangeId'
     name: partitionKeyRangeId
@@ -285,6 +340,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionKeyRangeId'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.partitionKeyRangeIdRegion'
     name: partitionKeyRangeIdRegion
@@ -299,6 +355,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionKeyRangeIdRegion'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.percentile'
     name: percentile
@@ -313,6 +370,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Percentile'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.percentileSourceTarget'
     name: percentileSourceTarget
@@ -327,6 +385,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PercentileSourceTarget'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.percentileTarget'
     name: percentileTarget
@@ -341,6 +400,37 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PercentileTarget'
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.privateEndpointConnections'
+    name: privateEndpointConnections
+    fullName: privateEndpointConnections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'privateEndpointConnections: PrivateEndpointConnections'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.PrivateEndpointConnections'
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.privateLinkResources'
+    name: privateLinkResources
+    fullName: privateLinkResources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'privateLinkResources: PrivateLinkResources'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.PrivateLinkResources'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.restoreLROPoller'
     name: restoreLROPoller(LROPollState)
@@ -363,6 +453,7 @@ items:
       return:
         type:
           - LROPoller
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.sendLongRunningRequest'
     name: >-
@@ -392,6 +483,9 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: >-
+          The HttpOperationResponse containing the final polling request,
+          response and the responseBody.
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.sendLRORequest'
     name: 'sendLRORequest(OperationArguments, OperationSpec, RequestOptionsBase)'
@@ -425,6 +519,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: >-
+          The LROPoller object that provides methods for interacting with the
+          LRO.
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.sendOperationRequest'
     name: >-
@@ -459,6 +556,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.sendRequest'
     name: sendRequest(RequestPrepareOptions | WebResource)
@@ -477,6 +575,22 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.sqlResources'
+    name: sqlResources
+    fullName: sqlResources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'sqlResources: SqlResources'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.SqlResources'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.subscriptionId'
     name: subscriptionId
@@ -491,6 +605,37 @@ items:
       return:
         type:
           - string
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.subscriptionId1'
+    name: subscriptionId1
+    fullName: subscriptionId1
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'subscriptionId1: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClient.tableResources'
+    name: tableResources
+    fullName: tableResources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'tableResources: TableResources'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.TableResources'
+        description: ''
     package: '@azure/arm-cosmosdb'
 references:
   - uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
@@ -499,6 +644,12 @@ references:
       - name: CosmosDBManagementClientContext
         fullName: CosmosDBManagementClientContext
         uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+  - uid: '@azure/arm-cosmosdb.CassandraResources'
+    name: CassandraResources
+    spec.typeScript:
+      - name: CassandraResources
+        fullName: CassandraResources
+        uid: '@azure/arm-cosmosdb.CassandraResources'
   - uid: '@azure/arm-cosmosdb.Collection'
     name: Collection
     spec.typeScript:
@@ -541,6 +692,18 @@ references:
       - name: DatabaseAccounts
         fullName: DatabaseAccounts
         uid: '@azure/arm-cosmosdb.DatabaseAccounts'
+  - uid: '@azure/arm-cosmosdb.GremlinResources'
+    name: GremlinResources
+    spec.typeScript:
+      - name: GremlinResources
+        fullName: GremlinResources
+        uid: '@azure/arm-cosmosdb.GremlinResources'
+  - uid: '@azure/arm-cosmosdb.MongoDBResources'
+    name: MongoDBResources
+    spec.typeScript:
+      - name: MongoDBResources
+        fullName: MongoDBResources
+        uid: '@azure/arm-cosmosdb.MongoDBResources'
   - uid: '@azure/arm-cosmosdb.Operations'
     name: Operations
     spec.typeScript:
@@ -577,3 +740,27 @@ references:
       - name: PercentileTarget
         fullName: PercentileTarget
         uid: '@azure/arm-cosmosdb.PercentileTarget'
+  - uid: '@azure/arm-cosmosdb.PrivateEndpointConnections'
+    name: PrivateEndpointConnections
+    spec.typeScript:
+      - name: PrivateEndpointConnections
+        fullName: PrivateEndpointConnections
+        uid: '@azure/arm-cosmosdb.PrivateEndpointConnections'
+  - uid: '@azure/arm-cosmosdb.PrivateLinkResources'
+    name: PrivateLinkResources
+    spec.typeScript:
+      - name: PrivateLinkResources
+        fullName: PrivateLinkResources
+        uid: '@azure/arm-cosmosdb.PrivateLinkResources'
+  - uid: '@azure/arm-cosmosdb.SqlResources'
+    name: SqlResources
+    spec.typeScript:
+      - name: SqlResources
+        fullName: SqlResources
+        uid: '@azure/arm-cosmosdb.SqlResources'
+  - uid: '@azure/arm-cosmosdb.TableResources'
+    name: TableResources
+    spec.typeScript:
+      - name: TableResources
+        fullName: TableResources
+        uid: '@azure/arm-cosmosdb.TableResources'

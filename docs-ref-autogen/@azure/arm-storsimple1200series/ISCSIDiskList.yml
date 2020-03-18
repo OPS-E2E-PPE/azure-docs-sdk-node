@@ -11,12 +11,13 @@ items:
       - '@azure/arm-storsimple1200series.ISCSIDiskList.entries'
       - '@azure/arm-storsimple1200series.ISCSIDiskList.every'
       - '@azure/arm-storsimple1200series.ISCSIDiskList.fill'
-      - '@azure/arm-storsimple1200series.ISCSIDiskList.filter_1'
       - '@azure/arm-storsimple1200series.ISCSIDiskList.filter'
+      - '@azure/arm-storsimple1200series.ISCSIDiskList.filter_1'
       - '@azure/arm-storsimple1200series.ISCSIDiskList.find'
       - '@azure/arm-storsimple1200series.ISCSIDiskList.find_1'
       - '@azure/arm-storsimple1200series.ISCSIDiskList.findIndex'
       - '@azure/arm-storsimple1200series.ISCSIDiskList.forEach'
+      - '@azure/arm-storsimple1200series.ISCSIDiskList.includes'
       - '@azure/arm-storsimple1200series.ISCSIDiskList.indexOf'
       - '@azure/arm-storsimple1200series.ISCSIDiskList.join'
       - '@azure/arm-storsimple1200series.ISCSIDiskList.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.concat'
     name: 'concat(ConcatArray<ISCSIDisk>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.entries'
     name: entries()
@@ -157,10 +162,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.every'
     name: >-
-      every((value: ISCSIDisk, index: number, array: ISCSIDisk[]) => boolean,
+      every((value: ISCSIDisk, index: number, array: ISCSIDisk[]) => unknown,
       any)
     children: []
     type: method
@@ -170,11 +176,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ISCSIDisk, index: number, array:
-        ISCSIDisk[]) => boolean, thisArg?: any)
+        ISCSIDisk[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: ISCSIDisk, index: number, array: ISCSIDisk[]) => boolean'
+            - '(value: ISCSIDisk, index: number, array: ISCSIDisk[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -190,6 +196,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.fill'
     name: 'fill(ISCSIDisk, undefined | number, undefined | number)'
@@ -230,39 +237,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-storsimple1200series'
-  - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.filter_1'
-    name: 'filter((value: ISCSIDisk, index: number, array: ISCSIDisk[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ISCSIDisk, index: number, array:
-        ISCSIDisk[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: ISCSIDisk, index: number, array: ISCSIDisk[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-storsimple1200series.ISCSIDisk[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.filter'
     name: >-
@@ -298,6 +273,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-storsimple1200series'
+  - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.filter_1'
+    name: >-
+      filter((value: ISCSIDisk, index: number, array: ISCSIDisk[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ISCSIDisk, index: number, array:
+        ISCSIDisk[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: ISCSIDisk, index: number, array: ISCSIDisk[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-storsimple1200series.ISCSIDisk[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.find'
     name: >-
@@ -343,26 +355,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.find_1'
-    name: 'find((value: ISCSIDisk, index: number, obj: ISCSIDisk[]) => boolean, any)'
+    name: 'find((value: ISCSIDisk, index: number, obj: ISCSIDisk[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ISCSIDisk, index: number, obj:
-        ISCSIDisk[]) => boolean, thisArg?: any)
+        ISCSIDisk[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: ISCSIDisk, index: number, obj: ISCSIDisk[]) => boolean'
+            - '(value: ISCSIDisk, index: number, obj: ISCSIDisk[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -372,10 +381,11 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk | undefined'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.findIndex'
     name: >-
-      findIndex((value: ISCSIDisk, index: number, obj: ISCSIDisk[]) => boolean,
+      findIndex((value: ISCSIDisk, index: number, obj: ISCSIDisk[]) => unknown,
       any)
     children: []
     type: method
@@ -389,11 +399,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ISCSIDisk, index: number, obj:
-        ISCSIDisk[]) => boolean, thisArg?: any)
+        ISCSIDisk[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: ISCSIDisk, index: number, obj: ISCSIDisk[]) => boolean'
+            - '(value: ISCSIDisk, index: number, obj: ISCSIDisk[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -415,6 +425,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.forEach'
     name: >-
@@ -445,6 +456,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-storsimple1200series'
+  - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.includes'
+    name: 'includes(ISCSIDisk, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ISCSIDisk, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-storsimple1200series.ISCSIDisk'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.indexOf'
     name: 'indexOf(ISCSIDisk, undefined | number)'
     children: []
@@ -471,6 +512,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.join'
     name: join(undefined | string)
@@ -495,6 +537,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.keys'
     name: keys()
@@ -509,6 +552,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.lastIndexOf'
     name: 'lastIndexOf(ISCSIDisk, undefined | number)'
@@ -536,6 +580,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.length'
     name: length
@@ -552,6 +597,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.map'
     name: 'map((value: ISCSIDisk, index: number, array: ISCSIDisk[]) => U, any)'
@@ -584,6 +630,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.pop'
     name: pop()
@@ -598,6 +645,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk | undefined'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.push'
     name: 'push(ISCSIDisk[])'
@@ -617,6 +665,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.reduce'
     name: >-
@@ -647,6 +696,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.reduce_1'
     name: >-
@@ -656,10 +706,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ISCSIDisk, currentValue:
@@ -679,6 +726,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.reduce_2'
     name: >-
@@ -717,6 +765,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.reduceRight'
     name: >-
@@ -749,6 +798,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.reduceRight_1'
     name: >-
@@ -758,11 +808,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ISCSIDisk,
@@ -782,6 +828,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.reduceRight_2'
     name: >-
@@ -821,6 +868,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.reverse'
     name: reverse()
@@ -835,6 +883,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.shift'
     name: shift()
@@ -849,6 +898,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk | undefined'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -874,10 +924,11 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.some'
     name: >-
-      some((value: ISCSIDisk, index: number, array: ISCSIDisk[]) => boolean,
+      some((value: ISCSIDisk, index: number, array: ISCSIDisk[]) => unknown,
       any)
     children: []
     type: method
@@ -889,11 +940,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ISCSIDisk, index: number, array:
-        ISCSIDisk[]) => boolean, thisArg?: any)
+        ISCSIDisk[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: ISCSIDisk, index: number, array: ISCSIDisk[]) => boolean'
+            - '(value: ISCSIDisk, index: number, array: ISCSIDisk[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -909,6 +960,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.sort'
     name: 'sort(undefined | (a: ISCSIDisk, b: ISCSIDisk) => number)'
@@ -933,6 +985,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.splice_1'
     name: 'splice(number, number, ISCSIDisk[])'
@@ -964,6 +1017,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.splice'
     name: 'splice(number, undefined | number)'
@@ -992,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.ISCSIDisk[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.toLocaleString'
     name: toLocaleString()
@@ -1008,6 +1063,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.toString'
     name: toString()
@@ -1022,6 +1078,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.unshift'
     name: 'unshift(ISCSIDisk[])'
@@ -1041,6 +1098,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.ISCSIDiskList.values'
     name: values()
@@ -1055,6 +1113,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-storsimple1200series.ISCSIDisk>
+        description: ''
     package: '@azure/arm-storsimple1200series'
 references:
   - uid: Array<@azure/arm-storsimple1200series.ISCSIDisk>

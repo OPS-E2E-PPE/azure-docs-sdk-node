@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: Regex Entity Extractor.
+    summary: Regular Expression Entity Extractor.
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.RegexEntityExtractor.id'
     name: id
@@ -30,6 +30,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.RegexEntityExtractor.name'
     name: name
@@ -45,6 +46,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.RegexEntityExtractor.readableType'
     name: readableType
@@ -54,21 +56,22 @@ items:
       - typeScript
     type: property
     summary: >-
-      Possible values include: 'Entity Extractor', 'Hierarchical Entity
-      Extractor', 'Hierarchical
+      Possible values include: 'Entity Extractor', 'Child Entity Extractor',
+      'Hierarchical Entity
 
-      Child Entity Extractor', 'Composite Entity Extractor', 'Closed List Entity
-      Extractor',
+      Extractor', 'Hierarchical Child Entity Extractor', 'Composite Entity
+      Extractor', 'List Entity
 
-      'Prebuilt Entity Extractor', 'Intent Classifier', 'Pattern.Any Entity
-      Extractor', 'Regex
+      Extractor', 'Prebuilt Entity Extractor', 'Intent Classifier', 'Pattern.Any
+      Entity Extractor',
 
-      Entity Extractor'
+      'Closed List Entity Extractor', 'Regex Entity Extractor'
     syntax:
-      content: 'readableType: ReadableType9'
+      content: 'readableType: ReadableType10'
       return:
         type:
-          - '@azure/cognitiveservices-luis-authoring.ReadableType9'
+          - '@azure/cognitiveservices-luis-authoring.ReadableType10'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.RegexEntityExtractor.regexPattern'
     name: regexPattern
@@ -77,13 +80,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The Regex entity pattern.
+    summary: The Regular Expression entity pattern.
     optional: true
     syntax:
       content: 'regexPattern?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.RegexEntityExtractor.roles'
     name: roles
@@ -99,6 +103,7 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.EntityRole[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.RegexEntityExtractor.typeId'
     name: typeId
@@ -114,14 +119,15 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
 references:
-  - uid: '@azure/cognitiveservices-luis-authoring.ReadableType9'
-    name: ReadableType9
+  - uid: '@azure/cognitiveservices-luis-authoring.ReadableType10'
+    name: ReadableType10
     spec.typeScript:
-      - name: ReadableType9
-        fullName: ReadableType9
-        uid: '@azure/cognitiveservices-luis-authoring.ReadableType9'
+      - name: ReadableType10
+        fullName: ReadableType10
+        uid: '@azure/cognitiveservices-luis-authoring.ReadableType10'
   - uid: '@azure/cognitiveservices-luis-authoring.EntityRole[]'
     name: 'EntityRole[]'
     spec.typeScript:

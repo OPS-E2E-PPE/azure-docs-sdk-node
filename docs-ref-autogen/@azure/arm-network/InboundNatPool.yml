@@ -16,6 +16,7 @@ items:
       - '@azure/arm-network.InboundNatPool.name'
       - '@azure/arm-network.InboundNatPool.protocol'
       - '@azure/arm-network.InboundNatPool.provisioningState'
+      - '@azure/arm-network.InboundNatPool.type'
     langs:
       - typeScript
     type: interface
@@ -40,6 +41,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.InboundNatPool.enableFloatingIP'
     name: enableFloatingIP
@@ -65,6 +67,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.InboundNatPool.enableTcpReset'
     name: enableTcpReset
@@ -84,6 +87,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.InboundNatPool.etag'
     name: etag
@@ -92,13 +96,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.InboundNatPool.frontendIPConfiguration'
     name: frontendIPConfiguration
@@ -114,6 +123,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.InboundNatPool.frontendPortRangeEnd'
     name: frontendPortRangeEnd
@@ -133,6 +143,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.InboundNatPool.frontendPortRangeStart'
     name: frontendPortRangeStart
@@ -152,6 +163,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.InboundNatPool.id'
     name: id
@@ -167,6 +179,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.InboundNatPool.idleTimeoutInMinutes'
     name: idleTimeoutInMinutes
@@ -187,6 +200,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.InboundNatPool.name'
     name: name
@@ -196,16 +210,17 @@ items:
       - typeScript
     type: property
     summary: >-
-      The name of the resource that is unique within a resource group. This name
-      can be used to
+      The name of the resource that is unique within the set of inbound NAT
+      pools used by the load
 
-      access the resource.
+      balancer. This name can be used to access the resource.
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.InboundNatPool.protocol'
     name: protocol
@@ -224,6 +239,7 @@ items:
       return:
         type:
           - '@azure/arm-network.TransportProtocol'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.InboundNatPool.provisioningState'
     name: provisioningState
@@ -233,16 +249,40 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets the provisioning state of the PublicIP resource. Possible values are:
-      'Updating',
+      The provisioning state of the inbound NAT pool resource. Possible values
+      include: 'Succeeded',
 
-      'Deleting', and 'Failed'.
+      'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
+      return:
+        type:
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Type of the resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -257,3 +297,9 @@ references:
       - name: TransportProtocol
         fullName: TransportProtocol
         uid: '@azure/arm-network.TransportProtocol'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

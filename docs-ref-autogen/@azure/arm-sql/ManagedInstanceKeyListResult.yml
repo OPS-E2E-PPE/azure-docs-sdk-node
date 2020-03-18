@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.ManagedInstanceKeyListResult.entries'
       - '@azure/arm-sql.ManagedInstanceKeyListResult.every'
       - '@azure/arm-sql.ManagedInstanceKeyListResult.fill'
-      - '@azure/arm-sql.ManagedInstanceKeyListResult.filter_1'
       - '@azure/arm-sql.ManagedInstanceKeyListResult.filter'
+      - '@azure/arm-sql.ManagedInstanceKeyListResult.filter_1'
       - '@azure/arm-sql.ManagedInstanceKeyListResult.find'
       - '@azure/arm-sql.ManagedInstanceKeyListResult.find_1'
       - '@azure/arm-sql.ManagedInstanceKeyListResult.findIndex'
       - '@azure/arm-sql.ManagedInstanceKeyListResult.forEach'
+      - '@azure/arm-sql.ManagedInstanceKeyListResult.includes'
       - '@azure/arm-sql.ManagedInstanceKeyListResult.indexOf'
       - '@azure/arm-sql.ManagedInstanceKeyListResult.join'
       - '@azure/arm-sql.ManagedInstanceKeyListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.concat'
     name: 'concat(ConcatArray<ManagedInstanceKey>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.every'
     name: >-
       every((value: ManagedInstanceKey, index: number, array:
-      ManagedInstanceKey[]) => boolean, any)
+      ManagedInstanceKey[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ManagedInstanceKey, index: number,
-        array: ManagedInstanceKey[]) => boolean, thisArg?: any)
+        array: ManagedInstanceKey[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ManagedInstanceKey, index: number, array:
-              ManagedInstanceKey[]) => boolean
+              ManagedInstanceKey[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.fill'
     name: 'fill(ManagedInstanceKey, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.filter_1'
-    name: >-
-      filter((value: ManagedInstanceKey, index: number, array:
-      ManagedInstanceKey[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ManagedInstanceKey, index: number,
-        array: ManagedInstanceKey[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ManagedInstanceKey, index: number, array:
-              ManagedInstanceKey[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.ManagedInstanceKey[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.filter_1'
+    name: >-
+      filter((value: ManagedInstanceKey, index: number, array:
+      ManagedInstanceKey[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ManagedInstanceKey, index: number,
+        array: ManagedInstanceKey[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ManagedInstanceKey, index: number, array:
+              ManagedInstanceKey[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.ManagedInstanceKey[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.find_1'
     name: >-
       find((value: ManagedInstanceKey, index: number, obj: ManagedInstanceKey[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ManagedInstanceKey, index: number, obj:
-        ManagedInstanceKey[]) => boolean, thisArg?: any)
+        ManagedInstanceKey[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ManagedInstanceKey, index: number, obj:
-              ManagedInstanceKey[]) => boolean
+              ManagedInstanceKey[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.findIndex'
     name: >-
       findIndex((value: ManagedInstanceKey, index: number, obj:
-      ManagedInstanceKey[]) => boolean, any)
+      ManagedInstanceKey[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ManagedInstanceKey, index: number,
-        obj: ManagedInstanceKey[]) => boolean, thisArg?: any)
+        obj: ManagedInstanceKey[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ManagedInstanceKey, index: number, obj:
-              ManagedInstanceKey[]) => boolean
+              ManagedInstanceKey[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.includes'
+    name: 'includes(ManagedInstanceKey, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ManagedInstanceKey, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.ManagedInstanceKey'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.indexOf'
     name: 'indexOf(ManagedInstanceKey, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.lastIndexOf'
     name: 'lastIndexOf(ManagedInstanceKey, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.push'
     name: 'push(ManagedInstanceKey[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.reduce'
     name: >-
@@ -690,6 +738,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.reduce_1'
     name: >-
@@ -700,10 +749,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ManagedInstanceKey,
@@ -725,6 +771,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.reduce_2'
     name: >-
@@ -763,6 +810,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.reduceRight'
     name: >-
@@ -797,6 +845,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.reduceRight_1'
     name: >-
@@ -807,11 +856,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ManagedInstanceKey,
@@ -833,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.reduceRight_2'
     name: >-
@@ -872,6 +918,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.reverse'
     name: reverse()
@@ -886,6 +933,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.shift'
     name: shift()
@@ -900,6 +948,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -925,11 +974,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.some'
     name: >-
       some((value: ManagedInstanceKey, index: number, array:
-      ManagedInstanceKey[]) => boolean, any)
+      ManagedInstanceKey[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -940,13 +990,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ManagedInstanceKey, index: number,
-        array: ManagedInstanceKey[]) => boolean, thisArg?: any)
+        array: ManagedInstanceKey[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ManagedInstanceKey, index: number, array:
-              ManagedInstanceKey[]) => boolean
+              ManagedInstanceKey[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -962,6 +1012,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.sort'
     name: 'sort(undefined | (a: ManagedInstanceKey, b: ManagedInstanceKey) => number)'
@@ -988,6 +1039,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.splice_1'
     name: 'splice(number, number, ManagedInstanceKey[])'
@@ -1021,6 +1073,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1049,6 +1102,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKey[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.toLocaleString'
     name: toLocaleString()
@@ -1065,6 +1119,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.toString'
     name: toString()
@@ -1079,6 +1134,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.unshift'
     name: 'unshift(ManagedInstanceKey[])'
@@ -1098,6 +1154,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedInstanceKeyListResult.values'
     name: values()
@@ -1112,6 +1169,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.ManagedInstanceKey>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.ManagedInstanceKey>

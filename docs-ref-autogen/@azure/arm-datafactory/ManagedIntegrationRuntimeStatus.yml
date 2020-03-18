@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Managed integration runtime status.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeStatus.createTime'
     name: createTime
@@ -23,13 +23,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The time at which the integration runtime was created, in ISO8601 format.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'createTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeStatus.dataFactoryName'
     name: dataFactoryName
@@ -38,13 +43,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The data factory name which the integration runtime belong to.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'dataFactoryName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeStatus.lastOperation'
     name: lastOperation
@@ -53,13 +63,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The last operation result that occurred on this integration runtime.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'lastOperation?: ManagedIntegrationRuntimeOperationResult'
       return:
         type:
           - '@azure/arm-datafactory.ManagedIntegrationRuntimeOperationResult'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeStatus.nodes'
     name: nodes
@@ -68,13 +83,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The list of nodes for managed integration runtime.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'nodes?: ManagedIntegrationRuntimeNode[]'
       return:
         type:
           - '@azure/arm-datafactory.ManagedIntegrationRuntimeNode[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeStatus.otherErrors'
     name: otherErrors
@@ -83,13 +103,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The errors that occurred on this integration runtime.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'otherErrors?: ManagedIntegrationRuntimeError[]'
       return:
         type:
           - '@azure/arm-datafactory.ManagedIntegrationRuntimeError[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeStatus.state'
     name: state
@@ -98,13 +123,22 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The state of integration runtime. Possible values include: 'Initial',
+      'Stopped', 'Started',
+
+      'Starting', 'Stopping', 'NeedRegistration', 'Online', 'Limited',
+      'Offline', 'AccessDenied'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'state?: IntegrationRuntimeState'
       return:
         type:
           - '@azure/arm-datafactory.IntegrationRuntimeState'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeStatus.type'
     name: type
@@ -113,12 +147,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Managed"'
       return:
         type:
           - '"Managed"'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeOperationResult'

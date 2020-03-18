@@ -5,11 +5,14 @@ items:
     fullName: BlobServiceProperties
     children:
       - '@azure/arm-storage.BlobServiceProperties.automaticSnapshotPolicyEnabled'
+      - '@azure/arm-storage.BlobServiceProperties.changeFeed'
       - '@azure/arm-storage.BlobServiceProperties.cors'
       - '@azure/arm-storage.BlobServiceProperties.defaultServiceVersion'
       - '@azure/arm-storage.BlobServiceProperties.deleteRetentionPolicy'
       - '@azure/arm-storage.BlobServiceProperties.id'
       - '@azure/arm-storage.BlobServiceProperties.name'
+      - '@azure/arm-storage.BlobServiceProperties.restorePolicy'
+      - '@azure/arm-storage.BlobServiceProperties.sku'
       - '@azure/arm-storage.BlobServiceProperties.type'
     langs:
       - typeScript
@@ -32,6 +35,23 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobServiceProperties.changeFeed'
+    name: changeFeed
+    fullName: changeFeed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The blob service properties for change feed events.
+    optional: true
+    syntax:
+      content: 'changeFeed?: ChangeFeed'
+      return:
+        type:
+          - '@azure/arm-storage.ChangeFeed'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobServiceProperties.cors'
     name: cors
@@ -54,6 +74,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.CorsRules'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobServiceProperties.defaultServiceVersion'
     name: defaultServiceVersion
@@ -76,6 +97,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobServiceProperties.deleteRetentionPolicy'
     name: deleteRetentionPolicy
@@ -84,13 +106,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The blob service properties for soft delete.
+    summary: The blob service properties for blob soft delete.
     optional: true
     syntax:
       content: 'deleteRetentionPolicy?: DeleteRetentionPolicy'
       return:
         type:
           - '@azure/arm-storage.DeleteRetentionPolicy'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobServiceProperties.id'
     name: id
@@ -112,6 +135,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobServiceProperties.name'
     name: name
@@ -131,6 +155,43 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobServiceProperties.restorePolicy'
+    name: restorePolicy
+    fullName: restorePolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The blob service properties for blob restore policy.
+    optional: true
+    syntax:
+      content: 'restorePolicy?: RestorePolicyProperties'
+      return:
+        type:
+          - '@azure/arm-storage.RestorePolicyProperties'
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobServiceProperties.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Sku name and tier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-storage.Sku'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobServiceProperties.type'
     name: type
@@ -152,6 +213,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storage'
 references:
   - uid: '@azure/arm-storage.Resource'
@@ -160,6 +222,12 @@ references:
       - name: Resource
         fullName: Resource
         uid: '@azure/arm-storage.Resource'
+  - uid: '@azure/arm-storage.ChangeFeed'
+    name: ChangeFeed
+    spec.typeScript:
+      - name: ChangeFeed
+        fullName: ChangeFeed
+        uid: '@azure/arm-storage.ChangeFeed'
   - uid: '@azure/arm-storage.CorsRules'
     name: CorsRules
     spec.typeScript:
@@ -172,3 +240,15 @@ references:
       - name: DeleteRetentionPolicy
         fullName: DeleteRetentionPolicy
         uid: '@azure/arm-storage.DeleteRetentionPolicy'
+  - uid: '@azure/arm-storage.RestorePolicyProperties'
+    name: RestorePolicyProperties
+    spec.typeScript:
+      - name: RestorePolicyProperties
+        fullName: RestorePolicyProperties
+        uid: '@azure/arm-storage.RestorePolicyProperties'
+  - uid: '@azure/arm-storage.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-storage.Sku'

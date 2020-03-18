@@ -11,12 +11,13 @@ items:
       - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.entries'
       - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.every'
       - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.fill'
-      - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.filter_1'
       - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.filter'
+      - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.filter_1'
       - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.find'
       - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.find_1'
       - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.findIndex'
       - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.forEach'
+      - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.includes'
       - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.indexOf'
       - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.join'
       - '@azure/arm-cosmosdb.MongoDBDatabaseListResult.keys'
@@ -47,7 +48,7 @@ items:
     type: interface
     summary: ''
     extends:
-      name: Array<@azure/arm-cosmosdb.MongoDBDatabase>
+      name: Array<@azure/arm-cosmosdb.MongoDBDatabaseGetResults>
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.Array'
     name: Array
@@ -62,25 +63,27 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.concat'
-    name: 'concat(ConcatArray<MongoDBDatabase>[])'
+    name: 'concat(ConcatArray<MongoDBDatabaseGetResults>[])'
     children: []
     type: method
     langs:
       - typeScript
     summary: Combines two or more arrays.
     syntax:
-      content: 'function concat(items: ConcatArray<MongoDBDatabase>[])'
+      content: 'function concat(items: ConcatArray<MongoDBDatabaseGetResults>[])'
       parameters:
         - id: items
           type:
-            - 'ConcatArray<@azure/arm-cosmosdb.MongoDBDatabase>[]'
+            - 'ConcatArray<@azure/arm-cosmosdb.MongoDBDatabaseGetResults>[]'
           description: |
             Additional items to add to the end of array1.
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase[]'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -99,7 +102,8 @@ items:
             Additional items to add to the end of array1.
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase[]'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.every'
     name: >-
-      every((value: MongoDBDatabase, index: number, array: MongoDBDatabase[]) =>
-      boolean, any)
+      every((value: MongoDBDatabaseGetResults, index: number, array:
+      MongoDBDatabaseGetResults[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -169,14 +175,14 @@ items:
     summary: Determines whether all the members of an array satisfy the specified test.
     syntax:
       content: >-
-        function every(callbackfn: (value: MongoDBDatabase, index: number,
-        array: MongoDBDatabase[]) => boolean, thisArg?: any)
+        function every(callbackfn: (value: MongoDBDatabaseGetResults, index:
+        number, array: MongoDBDatabaseGetResults[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (value: MongoDBDatabase, index: number, array: MongoDBDatabase[])
-              => boolean
+              (value: MongoDBDatabaseGetResults, index: number, array:
+              MongoDBDatabaseGetResults[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,9 +198,10 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.fill'
-    name: 'fill(MongoDBDatabase, undefined | number, undefined | number)'
+    name: 'fill(MongoDBDatabaseGetResults, undefined | number, undefined | number)'
     children: []
     type: method
     langs:
@@ -204,12 +211,12 @@ items:
       end with value
     syntax:
       content: >-
-        function fill(value: MongoDBDatabase, start?: undefined | number, end?:
-        undefined | number)
+        function fill(value: MongoDBDatabaseGetResults, start?: undefined |
+        number, end?: undefined | number)
       parameters:
         - id: value
           type:
-            - '@azure/arm-cosmosdb.MongoDBDatabase'
+            - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
           description: value to fill array section with
         - id: start
           type:
@@ -232,48 +239,12 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-cosmosdb'
-  - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.filter_1'
-    name: >-
-      filter((value: MongoDBDatabase, index: number, array: MongoDBDatabase[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: MongoDBDatabase, index: number,
-        array: MongoDBDatabase[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: MongoDBDatabase, index: number, array: MongoDBDatabase[])
-              => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.filter'
     name: >-
-      filter((value: MongoDBDatabase, index: number, array: MongoDBDatabase[])
-      => boolean, any)
+      filter((value: MongoDBDatabaseGetResults, index: number, array:
+      MongoDBDatabaseGetResults[]) => boolean, any)
     children: []
     type: method
     langs:
@@ -283,14 +254,14 @@ items:
       callback function.
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: MongoDBDatabase, index: number,
-        array: MongoDBDatabase[]) => boolean, thisArg?: any)
+        function filter<S>(callbackfn: (value: MongoDBDatabaseGetResults, index:
+        number, array: MongoDBDatabaseGetResults[]) => boolean, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (value: MongoDBDatabase, index: number, array: MongoDBDatabase[])
-              => boolean
+              (value: MongoDBDatabaseGetResults, index: number, array:
+              MongoDBDatabaseGetResults[]) => boolean
           description: >-
             A function that accepts up to three arguments. The filter method
             calls the callbackfn function one time for each element in the
@@ -306,11 +277,50 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.filter_1'
+    name: >-
+      filter((value: MongoDBDatabaseGetResults, index: number, array:
+      MongoDBDatabaseGetResults[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: MongoDBDatabaseGetResults, index:
+        number, array: MongoDBDatabaseGetResults[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: MongoDBDatabaseGetResults, index: number, array:
+              MongoDBDatabaseGetResults[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.find'
     name: >-
-      find((this: void, value: MongoDBDatabase, index: number, obj:
-      MongoDBDatabase[]) => boolean, any)
+      find((this: void, value: MongoDBDatabaseGetResults, index: number, obj:
+      MongoDBDatabaseGetResults[]) => boolean, any)
     children: []
     type: method
     langs:
@@ -322,14 +332,15 @@ items:
       otherwise.
     syntax:
       content: >-
-        function find<S>(predicate: (this: void, value: MongoDBDatabase, index:
-        number, obj: MongoDBDatabase[]) => boolean, thisArg?: any)
+        function find<S>(predicate: (this: void, value:
+        MongoDBDatabaseGetResults, index: number, obj:
+        MongoDBDatabaseGetResults[]) => boolean, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
-              (this: void, value: MongoDBDatabase, index: number, obj:
-              MongoDBDatabase[]) => boolean
+              (this: void, value: MongoDBDatabaseGetResults, index: number, obj:
+              MongoDBDatabaseGetResults[]) => boolean
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -351,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.find_1'
     name: >-
-      find((value: MongoDBDatabase, index: number, obj: MongoDBDatabase[]) =>
-      boolean, any)
+      find((value: MongoDBDatabaseGetResults, index: number, obj:
+      MongoDBDatabaseGetResults[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
-        function find(predicate: (value: MongoDBDatabase, index: number, obj:
-        MongoDBDatabase[]) => boolean, thisArg?: any)
+        function find(predicate: (value: MongoDBDatabaseGetResults, index:
+        number, obj: MongoDBDatabaseGetResults[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
-              (value: MongoDBDatabase, index: number, obj: MongoDBDatabase[]) =>
-              boolean
+              (value: MongoDBDatabaseGetResults, index: number, obj:
+              MongoDBDatabaseGetResults[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -383,12 +391,13 @@ items:
           optional: true
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase | undefined'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.findIndex'
     name: >-
-      findIndex((value: MongoDBDatabase, index: number, obj: MongoDBDatabase[])
-      => boolean, any)
+      findIndex((value: MongoDBDatabaseGetResults, index: number, obj:
+      MongoDBDatabaseGetResults[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -400,14 +409,14 @@ items:
       otherwise.
     syntax:
       content: >-
-        function findIndex(predicate: (value: MongoDBDatabase, index: number,
-        obj: MongoDBDatabase[]) => boolean, thisArg?: any)
+        function findIndex(predicate: (value: MongoDBDatabaseGetResults, index:
+        number, obj: MongoDBDatabaseGetResults[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
-              (value: MongoDBDatabase, index: number, obj: MongoDBDatabase[]) =>
-              boolean
+              (value: MongoDBDatabaseGetResults, index: number, obj:
+              MongoDBDatabaseGetResults[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -429,11 +438,12 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.forEach'
     name: >-
-      forEach((value: MongoDBDatabase, index: number, array: MongoDBDatabase[])
-      => void, any)
+      forEach((value: MongoDBDatabaseGetResults, index: number, array:
+      MongoDBDatabaseGetResults[]) => void, any)
     children: []
     type: method
     langs:
@@ -441,14 +451,14 @@ items:
     summary: Performs the specified action for each element in an array.
     syntax:
       content: >-
-        function forEach(callbackfn: (value: MongoDBDatabase, index: number,
-        array: MongoDBDatabase[]) => void, thisArg?: any)
+        function forEach(callbackfn: (value: MongoDBDatabaseGetResults, index:
+        number, array: MongoDBDatabaseGetResults[]) => void, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (value: MongoDBDatabase, index: number, array: MongoDBDatabase[])
-              => void
+              (value: MongoDBDatabaseGetResults, index: number, array:
+              MongoDBDatabaseGetResults[]) => void
           description: >-
             A function that accepts up to three arguments. forEach calls the
             callbackfn function one time for each element in the array.
@@ -461,8 +471,38 @@ items:
             value.
           optional: true
     package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.includes'
+    name: 'includes(MongoDBDatabaseGetResults, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: MongoDBDatabaseGetResults, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.indexOf'
-    name: 'indexOf(MongoDBDatabase, undefined | number)'
+    name: 'indexOf(MongoDBDatabaseGetResults, undefined | number)'
     children: []
     type: method
     langs:
@@ -470,12 +510,12 @@ items:
     summary: Returns the index of the first occurrence of a value in an array.
     syntax:
       content: >-
-        function indexOf(searchElement: MongoDBDatabase, fromIndex?: undefined |
-        number)
+        function indexOf(searchElement: MongoDBDatabaseGetResults, fromIndex?:
+        undefined | number)
       parameters:
         - id: searchElement
           type:
-            - '@azure/arm-cosmosdb.MongoDBDatabase'
+            - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
           description: The value to locate in the array.
         - id: fromIndex
           type:
@@ -487,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.join'
     name: join(undefined | string)
@@ -511,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.keys'
     name: keys()
@@ -525,9 +567,10 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.lastIndexOf'
-    name: 'lastIndexOf(MongoDBDatabase, undefined | number)'
+    name: 'lastIndexOf(MongoDBDatabaseGetResults, undefined | number)'
     children: []
     type: method
     langs:
@@ -535,12 +578,12 @@ items:
     summary: Returns the index of the last occurrence of a specified value in an array.
     syntax:
       content: >-
-        function lastIndexOf(searchElement: MongoDBDatabase, fromIndex?:
-        undefined | number)
+        function lastIndexOf(searchElement: MongoDBDatabaseGetResults,
+        fromIndex?: undefined | number)
       parameters:
         - id: searchElement
           type:
-            - '@azure/arm-cosmosdb.MongoDBDatabase'
+            - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
           description: The value to locate in the array.
         - id: fromIndex
           type:
@@ -552,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.length'
     name: length
@@ -568,11 +612,12 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.map'
     name: >-
-      map((value: MongoDBDatabase, index: number, array: MongoDBDatabase[]) =>
-      U, any)
+      map((value: MongoDBDatabaseGetResults, index: number, array:
+      MongoDBDatabaseGetResults[]) => U, any)
     children: []
     type: method
     langs:
@@ -582,14 +627,14 @@ items:
       an array that contains the results.
     syntax:
       content: >-
-        function map<U>(callbackfn: (value: MongoDBDatabase, index: number,
-        array: MongoDBDatabase[]) => U, thisArg?: any)
+        function map<U>(callbackfn: (value: MongoDBDatabaseGetResults, index:
+        number, array: MongoDBDatabaseGetResults[]) => U, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (value: MongoDBDatabase, index: number, array: MongoDBDatabase[])
-              => U
+              (value: MongoDBDatabaseGetResults, index: number, array:
+              MongoDBDatabaseGetResults[]) => U
           description: >-
             A function that accepts up to three arguments. The map method calls
             the callbackfn function one time for each element in the array.
@@ -604,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.pop'
     name: pop()
@@ -617,31 +663,34 @@ items:
       parameters: []
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase | undefined'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.push'
-    name: 'push(MongoDBDatabase[])'
+    name: 'push(MongoDBDatabaseGetResults[])'
     children: []
     type: method
     langs:
       - typeScript
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     syntax:
-      content: 'function push(items: MongoDBDatabase[])'
+      content: 'function push(items: MongoDBDatabaseGetResults[])'
       parameters:
         - id: items
           type:
-            - '@azure/arm-cosmosdb.MongoDBDatabase[]'
+            - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults[]'
           description: |
             New elements of the Array.
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.reduce'
     name: >-
-      reduce((previousValue: MongoDBDatabase, currentValue: MongoDBDatabase,
-      currentIndex: number, array: MongoDBDatabase[]) => MongoDBDatabase)
+      reduce((previousValue: MongoDBDatabaseGetResults, currentValue:
+      MongoDBDatabaseGetResults, currentIndex: number, array:
+      MongoDBDatabaseGetResults[]) => MongoDBDatabaseGetResults)
     children: []
     type: method
     langs:
@@ -652,60 +701,63 @@ items:
       is provided as an argument in the next call to the callback function.
     syntax:
       content: >-
-        function reduce(callbackfn: (previousValue: MongoDBDatabase,
-        currentValue: MongoDBDatabase, currentIndex: number, array:
-        MongoDBDatabase[]) => MongoDBDatabase)
+        function reduce(callbackfn: (previousValue: MongoDBDatabaseGetResults,
+        currentValue: MongoDBDatabaseGetResults, currentIndex: number, array:
+        MongoDBDatabaseGetResults[]) => MongoDBDatabaseGetResults)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: MongoDBDatabase, currentValue: MongoDBDatabase,
-              currentIndex: number, array: MongoDBDatabase[]) => MongoDBDatabase
+              (previousValue: MongoDBDatabaseGetResults, currentValue:
+              MongoDBDatabaseGetResults, currentIndex: number, array:
+              MongoDBDatabaseGetResults[]) => MongoDBDatabaseGetResults
           description: >-
             A function that accepts up to four arguments. The reduce method
             calls the callbackfn function one time for each element in the
             array.
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.reduce_1'
     name: >-
-      reduce((previousValue: MongoDBDatabase, currentValue: MongoDBDatabase,
-      currentIndex: number, array: MongoDBDatabase[]) => MongoDBDatabase,
-      MongoDBDatabase)
+      reduce((previousValue: MongoDBDatabaseGetResults, currentValue:
+      MongoDBDatabaseGetResults, currentIndex: number, array:
+      MongoDBDatabaseGetResults[]) => MongoDBDatabaseGetResults,
+      MongoDBDatabaseGetResults)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
-        function reduce(callbackfn: (previousValue: MongoDBDatabase,
-        currentValue: MongoDBDatabase, currentIndex: number, array:
-        MongoDBDatabase[]) => MongoDBDatabase, initialValue: MongoDBDatabase)
+        function reduce(callbackfn: (previousValue: MongoDBDatabaseGetResults,
+        currentValue: MongoDBDatabaseGetResults, currentIndex: number, array:
+        MongoDBDatabaseGetResults[]) => MongoDBDatabaseGetResults, initialValue:
+        MongoDBDatabaseGetResults)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: MongoDBDatabase, currentValue: MongoDBDatabase,
-              currentIndex: number, array: MongoDBDatabase[]) => MongoDBDatabase
+              (previousValue: MongoDBDatabaseGetResults, currentValue:
+              MongoDBDatabaseGetResults, currentIndex: number, array:
+              MongoDBDatabaseGetResults[]) => MongoDBDatabaseGetResults
           description: ''
         - id: initialValue
           type:
-            - '@azure/arm-cosmosdb.MongoDBDatabase'
+            - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
           description: ''
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.reduce_2'
     name: >-
-      reduce((previousValue: U, currentValue: MongoDBDatabase, currentIndex:
-      number, array: MongoDBDatabase[]) => U, U)
+      reduce((previousValue: U, currentValue: MongoDBDatabaseGetResults,
+      currentIndex: number, array: MongoDBDatabaseGetResults[]) => U, U)
     children: []
     type: method
     langs:
@@ -717,14 +769,14 @@ items:
     syntax:
       content: >-
         function reduce<U>(callbackfn: (previousValue: U, currentValue:
-        MongoDBDatabase, currentIndex: number, array: MongoDBDatabase[]) => U,
-        initialValue: U)
+        MongoDBDatabaseGetResults, currentIndex: number, array:
+        MongoDBDatabaseGetResults[]) => U, initialValue: U)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: U, currentValue: MongoDBDatabase, currentIndex:
-              number, array: MongoDBDatabase[]) => U
+              (previousValue: U, currentValue: MongoDBDatabaseGetResults,
+              currentIndex: number, array: MongoDBDatabaseGetResults[]) => U
           description: >-
             A function that accepts up to four arguments. The reduce method
             calls the callbackfn function one time for each element in the
@@ -739,12 +791,13 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.reduceRight'
     name: >-
-      reduceRight((previousValue: MongoDBDatabase, currentValue:
-      MongoDBDatabase, currentIndex: number, array: MongoDBDatabase[]) =>
-      MongoDBDatabase)
+      reduceRight((previousValue: MongoDBDatabaseGetResults, currentValue:
+      MongoDBDatabaseGetResults, currentIndex: number, array:
+      MongoDBDatabaseGetResults[]) => MongoDBDatabaseGetResults)
     children: []
     type: method
     langs:
@@ -756,61 +809,64 @@ items:
       callback function.
     syntax:
       content: >-
-        function reduceRight(callbackfn: (previousValue: MongoDBDatabase,
-        currentValue: MongoDBDatabase, currentIndex: number, array:
-        MongoDBDatabase[]) => MongoDBDatabase)
+        function reduceRight(callbackfn: (previousValue:
+        MongoDBDatabaseGetResults, currentValue: MongoDBDatabaseGetResults,
+        currentIndex: number, array: MongoDBDatabaseGetResults[]) =>
+        MongoDBDatabaseGetResults)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: MongoDBDatabase, currentValue: MongoDBDatabase,
-              currentIndex: number, array: MongoDBDatabase[]) => MongoDBDatabase
+              (previousValue: MongoDBDatabaseGetResults, currentValue:
+              MongoDBDatabaseGetResults, currentIndex: number, array:
+              MongoDBDatabaseGetResults[]) => MongoDBDatabaseGetResults
           description: >-
             A function that accepts up to four arguments. The reduceRight method
             calls the callbackfn function one time for each element in the
             array.
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.reduceRight_1'
     name: >-
-      reduceRight((previousValue: MongoDBDatabase, currentValue:
-      MongoDBDatabase, currentIndex: number, array: MongoDBDatabase[]) =>
-      MongoDBDatabase, MongoDBDatabase)
+      reduceRight((previousValue: MongoDBDatabaseGetResults, currentValue:
+      MongoDBDatabaseGetResults, currentIndex: number, array:
+      MongoDBDatabaseGetResults[]) => MongoDBDatabaseGetResults,
+      MongoDBDatabaseGetResults)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
-        function reduceRight(callbackfn: (previousValue: MongoDBDatabase,
-        currentValue: MongoDBDatabase, currentIndex: number, array:
-        MongoDBDatabase[]) => MongoDBDatabase, initialValue: MongoDBDatabase)
+        function reduceRight(callbackfn: (previousValue:
+        MongoDBDatabaseGetResults, currentValue: MongoDBDatabaseGetResults,
+        currentIndex: number, array: MongoDBDatabaseGetResults[]) =>
+        MongoDBDatabaseGetResults, initialValue: MongoDBDatabaseGetResults)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: MongoDBDatabase, currentValue: MongoDBDatabase,
-              currentIndex: number, array: MongoDBDatabase[]) => MongoDBDatabase
+              (previousValue: MongoDBDatabaseGetResults, currentValue:
+              MongoDBDatabaseGetResults, currentIndex: number, array:
+              MongoDBDatabaseGetResults[]) => MongoDBDatabaseGetResults
           description: ''
         - id: initialValue
           type:
-            - '@azure/arm-cosmosdb.MongoDBDatabase'
+            - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
           description: ''
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.reduceRight_2'
     name: >-
-      reduceRight((previousValue: U, currentValue: MongoDBDatabase,
-      currentIndex: number, array: MongoDBDatabase[]) => U, U)
+      reduceRight((previousValue: U, currentValue: MongoDBDatabaseGetResults,
+      currentIndex: number, array: MongoDBDatabaseGetResults[]) => U, U)
     children: []
     type: method
     langs:
@@ -823,14 +879,14 @@ items:
     syntax:
       content: >-
         function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
-        MongoDBDatabase, currentIndex: number, array: MongoDBDatabase[]) => U,
-        initialValue: U)
+        MongoDBDatabaseGetResults, currentIndex: number, array:
+        MongoDBDatabaseGetResults[]) => U, initialValue: U)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: U, currentValue: MongoDBDatabase, currentIndex:
-              number, array: MongoDBDatabase[]) => U
+              (previousValue: U, currentValue: MongoDBDatabaseGetResults,
+              currentIndex: number, array: MongoDBDatabaseGetResults[]) => U
           description: >-
             A function that accepts up to four arguments. The reduceRight method
             calls the callbackfn function one time for each element in the
@@ -845,6 +901,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.reverse'
     name: reverse()
@@ -858,7 +915,8 @@ items:
       parameters: []
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase[]'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.shift'
     name: shift()
@@ -872,7 +930,8 @@ items:
       parameters: []
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase | undefined'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -897,12 +956,13 @@ items:
           optional: true
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase[]'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.some'
     name: >-
-      some((value: MongoDBDatabase, index: number, array: MongoDBDatabase[]) =>
-      boolean, any)
+      some((value: MongoDBDatabaseGetResults, index: number, array:
+      MongoDBDatabaseGetResults[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -912,14 +972,14 @@ items:
       element of an array.
     syntax:
       content: >-
-        function some(callbackfn: (value: MongoDBDatabase, index: number, array:
-        MongoDBDatabase[]) => boolean, thisArg?: any)
+        function some(callbackfn: (value: MongoDBDatabaseGetResults, index:
+        number, array: MongoDBDatabaseGetResults[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (value: MongoDBDatabase, index: number, array: MongoDBDatabase[])
-              => boolean
+              (value: MongoDBDatabaseGetResults, index: number, array:
+              MongoDBDatabaseGetResults[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -935,9 +995,12 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.sort'
-    name: 'sort(undefined | (a: MongoDBDatabase, b: MongoDBDatabase) => number)'
+    name: >-
+      sort(undefined | (a: MongoDBDatabaseGetResults, b:
+      MongoDBDatabaseGetResults) => number)
     children: []
     type: method
     langs:
@@ -945,12 +1008,14 @@ items:
     summary: Sorts an array.
     syntax:
       content: >-
-        function sort(compareFn?: undefined | (a: MongoDBDatabase, b:
-        MongoDBDatabase) => number)
+        function sort(compareFn?: undefined | (a: MongoDBDatabaseGetResults, b:
+        MongoDBDatabaseGetResults) => number)
       parameters:
         - id: compareFn
           type:
-            - 'undefined | (a: MongoDBDatabase, b: MongoDBDatabase) => number'
+            - >-
+              undefined | (a: MongoDBDatabaseGetResults, b:
+              MongoDBDatabaseGetResults) => number
           description: >
             The name of the function used to determine the order of the
             elements. If omitted, the elements are sorted in ascending, ASCII
@@ -959,9 +1024,10 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.splice_1'
-    name: 'splice(number, number, MongoDBDatabase[])'
+    name: 'splice(number, number, MongoDBDatabaseGetResults[])'
     children: []
     type: method
     langs:
@@ -972,7 +1038,7 @@ items:
     syntax:
       content: >-
         function splice(start: number, deleteCount: number, items:
-        MongoDBDatabase[])
+        MongoDBDatabaseGetResults[])
       parameters:
         - id: start
           type:
@@ -986,12 +1052,13 @@ items:
           description: The number of elements to remove.
         - id: items
           type:
-            - '@azure/arm-cosmosdb.MongoDBDatabase[]'
+            - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase[]'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1019,7 +1086,8 @@ items:
           optional: true
       return:
         type:
-          - '@azure/arm-cosmosdb.MongoDBDatabase[]'
+          - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.toLocaleString'
     name: toLocaleString()
@@ -1036,6 +1104,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.toString'
     name: toString()
@@ -1050,25 +1119,27 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.unshift'
-    name: 'unshift(MongoDBDatabase[])'
+    name: 'unshift(MongoDBDatabaseGetResults[])'
     children: []
     type: method
     langs:
       - typeScript
     summary: Inserts new elements at the start of an array.
     syntax:
-      content: 'function unshift(items: MongoDBDatabase[])'
+      content: 'function unshift(items: MongoDBDatabaseGetResults[])'
       parameters:
         - id: items
           type:
-            - '@azure/arm-cosmosdb.MongoDBDatabase[]'
+            - '@azure/arm-cosmosdb.MongoDBDatabaseGetResults[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.MongoDBDatabaseListResult.values'
     name: values()
@@ -1082,58 +1153,59 @@ items:
       parameters: []
       return:
         type:
-          - IterableIterator<@azure/arm-cosmosdb.MongoDBDatabase>
+          - IterableIterator<@azure/arm-cosmosdb.MongoDBDatabaseGetResults>
+        description: ''
     package: '@azure/arm-cosmosdb'
 references:
-  - uid: Array<@azure/arm-cosmosdb.MongoDBDatabase>
-    name: MongoDBDatabase>
+  - uid: Array<@azure/arm-cosmosdb.MongoDBDatabaseGetResults>
+    name: MongoDBDatabaseGetResults>
     spec.typeScript:
       - name: Array<
         fullName: Array<
-      - name: MongoDBDatabase
-        fullName: MongoDBDatabase
-        uid: '@azure/arm-cosmosdb.MongoDBDatabase'
+      - name: MongoDBDatabaseGetResults
+        fullName: MongoDBDatabaseGetResults
+        uid: '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
       - name: '>'
         fullName: '>'
-  - uid: 'ConcatArray<@azure/arm-cosmosdb.MongoDBDatabase>[]'
-    name: 'MongoDBDatabase>[]'
+  - uid: 'ConcatArray<@azure/arm-cosmosdb.MongoDBDatabaseGetResults>[]'
+    name: 'MongoDBDatabaseGetResults>[]'
     spec.typeScript:
       - name: ConcatArray<
         fullName: ConcatArray<
-      - name: MongoDBDatabase
-        fullName: MongoDBDatabase
-        uid: '@azure/arm-cosmosdb.MongoDBDatabase'
+      - name: MongoDBDatabaseGetResults
+        fullName: MongoDBDatabaseGetResults
+        uid: '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
       - name: '>[]'
         fullName: '>[]'
-  - uid: '@azure/arm-cosmosdb.MongoDBDatabase[]'
-    name: 'MongoDBDatabase[]'
+  - uid: '@azure/arm-cosmosdb.MongoDBDatabaseGetResults[]'
+    name: 'MongoDBDatabaseGetResults[]'
     spec.typeScript:
-      - name: MongoDBDatabase
-        fullName: MongoDBDatabase
-        uid: '@azure/arm-cosmosdb.MongoDBDatabase'
+      - name: MongoDBDatabaseGetResults
+        fullName: MongoDBDatabaseGetResults
+        uid: '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
       - name: '[]'
         fullName: '[]'
-  - uid: '@azure/arm-cosmosdb.MongoDBDatabase'
-    name: MongoDBDatabase
+  - uid: '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
+    name: MongoDBDatabaseGetResults
     spec.typeScript:
-      - name: MongoDBDatabase
-        fullName: MongoDBDatabase
-        uid: '@azure/arm-cosmosdb.MongoDBDatabase'
-  - uid: '@azure/arm-cosmosdb.MongoDBDatabase | undefined'
-    name: MongoDBDatabase | undefined
+      - name: MongoDBDatabaseGetResults
+        fullName: MongoDBDatabaseGetResults
+        uid: '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
+  - uid: '@azure/arm-cosmosdb.MongoDBDatabaseGetResults | undefined'
+    name: MongoDBDatabaseGetResults | undefined
     spec.typeScript:
-      - name: MongoDBDatabase
-        fullName: MongoDBDatabase
-        uid: '@azure/arm-cosmosdb.MongoDBDatabase'
+      - name: MongoDBDatabaseGetResults
+        fullName: MongoDBDatabaseGetResults
+        uid: '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
       - name: ' | undefined'
         fullName: ' | undefined'
-  - uid: IterableIterator<@azure/arm-cosmosdb.MongoDBDatabase>
-    name: MongoDBDatabase>
+  - uid: IterableIterator<@azure/arm-cosmosdb.MongoDBDatabaseGetResults>
+    name: MongoDBDatabaseGetResults>
     spec.typeScript:
       - name: IterableIterator<
         fullName: IterableIterator<
-      - name: MongoDBDatabase
-        fullName: MongoDBDatabase
-        uid: '@azure/arm-cosmosdb.MongoDBDatabase'
+      - name: MongoDBDatabaseGetResults
+        fullName: MongoDBDatabaseGetResults
+        uid: '@azure/arm-cosmosdb.MongoDBDatabaseGetResults'
       - name: '>'
         fullName: '>'

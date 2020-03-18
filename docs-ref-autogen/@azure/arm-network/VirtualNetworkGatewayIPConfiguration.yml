@@ -27,13 +27,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayIPConfiguration.id'
     name: id
@@ -49,6 +54,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayIPConfiguration.name'
     name: name
@@ -68,6 +74,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.VirtualNetworkGatewayIPConfiguration.privateIPAllocationMethod
@@ -86,6 +93,7 @@ items:
       return:
         type:
           - '@azure/arm-network.IPAllocationMethod'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayIPConfiguration.provisioningState'
     name: provisioningState
@@ -95,19 +103,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the public IP resource. Possible values are:
-      'Updating', 'Deleting',
+      The provisioning state of the virtual network gateway IP configuration
+      resource. Possible
 
-      and 'Failed'.
+      values include: 'Succeeded', 'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayIPConfiguration.publicIPAddress'
     name: publicIPAddress
@@ -123,6 +132,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayIPConfiguration.subnet'
     name: subnet
@@ -138,6 +148,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -152,3 +163,9 @@ references:
       - name: IPAllocationMethod
         fullName: IPAllocationMethod
         uid: '@azure/arm-network.IPAllocationMethod'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

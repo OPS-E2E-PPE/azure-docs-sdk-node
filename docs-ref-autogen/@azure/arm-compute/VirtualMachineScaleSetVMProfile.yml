@@ -4,8 +4,7 @@ items:
     name: VirtualMachineScaleSetVMProfile
     fullName: VirtualMachineScaleSetVMProfile
     children:
-      - >-
-        @azure/arm-compute.VirtualMachineScaleSetVMProfile.additionalCapabilities
+      - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.billingProfile'
       - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.diagnosticsProfile'
       - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.evictionPolicy'
       - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.extensionProfile'
@@ -13,33 +12,33 @@ items:
       - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.networkProfile'
       - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.osProfile'
       - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.priority'
+      - >-
+        @azure/arm-compute.VirtualMachineScaleSetVMProfile.scheduledEventsProfile
       - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.storageProfile'
     langs:
       - typeScript
     type: interface
     summary: Describes a virtual machine scale set virtual machine profile.
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.additionalCapabilities'
-    name: additionalCapabilities
-    fullName: additionalCapabilities
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.billingProfile'
+    name: billingProfile
+    fullName: billingProfile
     children: []
     langs:
       - typeScript
     type: property
     summary: >-
-      Specifies additional capabilities enabled or disabled on the virtual
-      machine in the scale set.
+      Specifies the billing related details of a Azure Spot VMSS.
+      <br><br>Minimum api-version:
 
-      For instance: whether the virtual machine has the capability to support
-      attaching managed data
-
-      disks with UltraSSD_LRS storage account type.
+      2019-03-01.
     optional: true
     syntax:
-      content: 'additionalCapabilities?: AdditionalCapabilities'
+      content: 'billingProfile?: BillingProfile'
       return:
         type:
-          - '@azure/arm-compute.AdditionalCapabilities'
+          - '@azure/arm-compute.BillingProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.diagnosticsProfile'
     name: diagnosticsProfile
@@ -57,6 +56,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.DiagnosticsProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.evictionPolicy'
     name: evictionPolicy
@@ -66,19 +66,26 @@ items:
       - typeScript
     type: property
     summary: >-
-      Specifies the eviction policy for virtual machines in a low priority scale
-      set.
+      Specifies the eviction policy for the Azure Spot virtual machine and Azure
+      Spot scale set.
 
-      <br><br>Minimum api-version: 2017-10-30-preview. Possible values include:
-      'Deallocate',
+      <br><br>For Azure Spot virtual machines, the only supported value is
+      'Deallocate' and the
 
-      'Delete'
+      minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both
+      'Deallocate' and
+
+      'Delete' are supported and the minimum api-version is 2017-10-30-preview.
+      Possible values
+
+      include: 'Deallocate', 'Delete'
     optional: true
     syntax:
       content: 'evictionPolicy?: VirtualMachineEvictionPolicyTypes'
       return:
         type:
           - '@azure/arm-compute.VirtualMachineEvictionPolicyTypes'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.extensionProfile'
     name: extensionProfile
@@ -98,6 +105,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSetExtensionProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.licenseType'
     name: licenseType
@@ -131,6 +139,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.networkProfile'
     name: networkProfile
@@ -148,6 +157,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSetNetworkProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.osProfile'
     name: osProfile
@@ -165,6 +175,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSetOSProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.priority'
     name: priority
@@ -177,13 +188,30 @@ items:
       Specifies the priority for the virtual machines in the scale set.
       <br><br>Minimum api-version:
 
-      2017-10-30-preview. Possible values include: 'Regular', 'Low'
+      2017-10-30-preview. Possible values include: 'Regular', 'Low', 'Spot'
     optional: true
     syntax:
       content: 'priority?: VirtualMachinePriorityTypes'
       return:
         type:
           - '@azure/arm-compute.VirtualMachinePriorityTypes'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.scheduledEventsProfile'
+    name: scheduledEventsProfile
+    fullName: scheduledEventsProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specifies Scheduled Event related configurations.
+    optional: true
+    syntax:
+      content: 'scheduledEventsProfile?: ScheduledEventsProfile'
+      return:
+        type:
+          - '@azure/arm-compute.ScheduledEventsProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.storageProfile'
     name: storageProfile
@@ -199,14 +227,15 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSetStorageProfile'
+        description: ''
     package: '@azure/arm-compute'
 references:
-  - uid: '@azure/arm-compute.AdditionalCapabilities'
-    name: AdditionalCapabilities
+  - uid: '@azure/arm-compute.BillingProfile'
+    name: BillingProfile
     spec.typeScript:
-      - name: AdditionalCapabilities
-        fullName: AdditionalCapabilities
-        uid: '@azure/arm-compute.AdditionalCapabilities'
+      - name: BillingProfile
+        fullName: BillingProfile
+        uid: '@azure/arm-compute.BillingProfile'
   - uid: '@azure/arm-compute.DiagnosticsProfile'
     name: DiagnosticsProfile
     spec.typeScript:
@@ -243,6 +272,12 @@ references:
       - name: VirtualMachinePriorityTypes
         fullName: VirtualMachinePriorityTypes
         uid: '@azure/arm-compute.VirtualMachinePriorityTypes'
+  - uid: '@azure/arm-compute.ScheduledEventsProfile'
+    name: ScheduledEventsProfile
+    spec.typeScript:
+      - name: ScheduledEventsProfile
+        fullName: ScheduledEventsProfile
+        uid: '@azure/arm-compute.ScheduledEventsProfile'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetStorageProfile'
     name: VirtualMachineScaleSetStorageProfile
     spec.typeScript:

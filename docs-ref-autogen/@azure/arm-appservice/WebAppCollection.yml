@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.WebAppCollection.entries'
       - '@azure/arm-appservice.WebAppCollection.every'
       - '@azure/arm-appservice.WebAppCollection.fill'
-      - '@azure/arm-appservice.WebAppCollection.filter_1'
       - '@azure/arm-appservice.WebAppCollection.filter'
+      - '@azure/arm-appservice.WebAppCollection.filter_1'
       - '@azure/arm-appservice.WebAppCollection.find'
       - '@azure/arm-appservice.WebAppCollection.find_1'
       - '@azure/arm-appservice.WebAppCollection.findIndex'
       - '@azure/arm-appservice.WebAppCollection.forEach'
+      - '@azure/arm-appservice.WebAppCollection.includes'
       - '@azure/arm-appservice.WebAppCollection.indexOf'
       - '@azure/arm-appservice.WebAppCollection.join'
       - '@azure/arm-appservice.WebAppCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.concat'
     name: 'concat(ConcatArray<Site>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.every'
-    name: 'every((value: Site, index: number, array: Site[]) => boolean, any)'
+    name: 'every((value: Site, index: number, array: Site[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Site, index: number, array: Site[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Site, index: number, array: Site[]) => boolean'
+            - '(value: Site, index: number, array: Site[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.fill'
     name: 'fill(Site, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.WebAppCollection.filter_1'
-    name: 'filter((value: Site, index: number, array: Site[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Site, index: number, array: Site[])
-        => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Site, index: number, array: Site[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.Site[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.filter'
     name: 'filter((value: Site, index: number, array: Site[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.WebAppCollection.filter_1'
+    name: 'filter((value: Site, index: number, array: Site[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Site, index: number, array: Site[])
+        => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Site, index: number, array: Site[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.Site[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.find'
     name: >-
@@ -338,26 +348,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.find_1'
-    name: 'find((value: Site, index: number, obj: Site[]) => boolean, any)'
+    name: 'find((value: Site, index: number, obj: Site[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Site, index: number, obj: Site[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Site, index: number, obj: Site[]) => boolean'
+            - '(value: Site, index: number, obj: Site[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -367,9 +374,10 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.findIndex'
-    name: 'findIndex((value: Site, index: number, obj: Site[]) => boolean, any)'
+    name: 'findIndex((value: Site, index: number, obj: Site[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -382,11 +390,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Site, index: number, obj: Site[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Site, index: number, obj: Site[]) => boolean'
+            - '(value: Site, index: number, obj: Site[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -408,6 +416,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.forEach'
     name: 'forEach((value: Site, index: number, array: Site[]) => void, any)'
@@ -436,6 +445,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.WebAppCollection.includes'
+    name: 'includes(Site, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Site, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.Site'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.indexOf'
     name: 'indexOf(Site, undefined | number)'
     children: []
@@ -460,6 +497,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.join'
     name: join(undefined | string)
@@ -484,6 +522,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.keys'
     name: keys()
@@ -498,6 +537,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.lastIndexOf'
     name: 'lastIndexOf(Site, undefined | number)'
@@ -525,6 +565,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.length'
     name: length
@@ -541,6 +582,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.map'
     name: 'map((value: Site, index: number, array: Site[]) => U, any)'
@@ -573,6 +615,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.nextLink'
     name: nextLink
@@ -592,6 +635,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.pop'
     name: pop()
@@ -606,6 +650,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.push'
     name: 'push(Site[])'
@@ -625,6 +670,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.reduce'
     name: >-
@@ -655,6 +701,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.reduce_1'
     name: >-
@@ -664,10 +711,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Site, currentValue: Site,
@@ -686,6 +730,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.reduce_2'
     name: >-
@@ -723,6 +768,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.reduceRight'
     name: >-
@@ -754,6 +800,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.reduceRight_1'
     name: >-
@@ -763,11 +810,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Site, currentValue:
@@ -786,6 +829,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.reduceRight_2'
     name: >-
@@ -824,6 +868,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.reverse'
     name: reverse()
@@ -838,6 +883,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.shift'
     name: shift()
@@ -852,6 +898,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -877,9 +924,10 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.some'
-    name: 'some((value: Site, index: number, array: Site[]) => boolean, any)'
+    name: 'some((value: Site, index: number, array: Site[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -890,11 +938,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Site, index: number, array: Site[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Site, index: number, array: Site[]) => boolean'
+            - '(value: Site, index: number, array: Site[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -910,6 +958,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.sort'
     name: 'sort(undefined | (a: Site, b: Site) => number)'
@@ -932,6 +981,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.splice_1'
     name: 'splice(number, number, Site[])'
@@ -963,6 +1013,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -991,6 +1042,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Site[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.toLocaleString'
     name: toLocaleString()
@@ -1007,6 +1059,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.toString'
     name: toString()
@@ -1021,6 +1074,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.unshift'
     name: 'unshift(Site[])'
@@ -1040,6 +1094,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebAppCollection.values'
     name: values()
@@ -1054,6 +1109,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-appservice.Site>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.Site>

@@ -22,6 +22,7 @@ items:
       - '@azure/arm-network.VpnConnection.useLocalAzureIpAddress'
       - '@azure/arm-network.VpnConnection.usePolicyBasedTrafficSelectors'
       - '@azure/arm-network.VpnConnection.vpnConnectionProtocolType'
+      - '@azure/arm-network.VpnConnection.vpnLinkConnections'
     langs:
       - typeScript
     type: interface
@@ -43,6 +44,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.connectionStatus'
     name: connectionStatus
@@ -62,6 +64,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnectionStatus'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.egressBytesTransferred'
     name: egressBytesTransferred
@@ -81,6 +84,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.enableBgp'
     name: enableBgp
@@ -96,6 +100,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.enableInternetSecurity'
     name: enableInternetSecurity
@@ -111,6 +116,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.enableRateLimiting'
     name: enableRateLimiting
@@ -126,6 +132,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.etag'
     name: etag
@@ -135,8 +142,7 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets a unique read-only string that changes whenever the resource is
-      updated.
+      A unique read-only string that changes whenever the resource is updated.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -146,6 +152,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.id'
     name: id
@@ -161,6 +168,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.ingressBytesTransferred'
     name: ingressBytesTransferred
@@ -180,6 +188,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.ipsecPolicies'
     name: ipsecPolicies
@@ -195,6 +204,7 @@ items:
       return:
         type:
           - '@azure/arm-network.IpsecPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.name'
     name: name
@@ -214,6 +224,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.provisioningState'
     name: provisioningState
@@ -223,16 +234,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the resource. Possible values include:
-      'Succeeded', 'Updating',
+      The provisioning state of the VPN connection resource. Possible values
+      include: 'Succeeded',
 
-      'Deleting', 'Failed'
+      'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'provisioningState?: ProvisioningState'
       return:
         type:
           - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.remoteVpnSite'
     name: remoteVpnSite
@@ -248,6 +263,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.routingWeight'
     name: routingWeight
@@ -263,6 +279,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.sharedKey'
     name: sharedKey
@@ -278,6 +295,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.useLocalAzureIpAddress'
     name: useLocalAzureIpAddress
@@ -293,6 +311,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.usePolicyBasedTrafficSelectors'
     name: usePolicyBasedTrafficSelectors
@@ -308,6 +327,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnConnection.vpnConnectionProtocolType'
     name: vpnConnectionProtocolType
@@ -325,6 +345,23 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnectionProtocol'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VpnConnection.vpnLinkConnections'
+    name: vpnLinkConnections
+    fullName: vpnLinkConnections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of all vpn site link connections to the gateway.
+    optional: true
+    syntax:
+      content: 'vpnLinkConnections?: VpnSiteLinkConnection[]'
+      return:
+        type:
+          - '@azure/arm-network.VpnSiteLinkConnection[]'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -359,3 +396,11 @@ references:
       - name: VirtualNetworkGatewayConnectionProtocol
         fullName: VirtualNetworkGatewayConnectionProtocol
         uid: '@azure/arm-network.VirtualNetworkGatewayConnectionProtocol'
+  - uid: '@azure/arm-network.VpnSiteLinkConnection[]'
+    name: 'VpnSiteLinkConnection[]'
+    spec.typeScript:
+      - name: VpnSiteLinkConnection
+        fullName: VpnSiteLinkConnection
+        uid: '@azure/arm-network.VpnSiteLinkConnection'
+      - name: '[]'
+        fullName: '[]'

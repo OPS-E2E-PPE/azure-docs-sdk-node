@@ -11,12 +11,13 @@ items:
       - '@azure/arm-customerinsights.AuthorizationPolicyListResult.entries'
       - '@azure/arm-customerinsights.AuthorizationPolicyListResult.every'
       - '@azure/arm-customerinsights.AuthorizationPolicyListResult.fill'
-      - '@azure/arm-customerinsights.AuthorizationPolicyListResult.filter_1'
       - '@azure/arm-customerinsights.AuthorizationPolicyListResult.filter'
+      - '@azure/arm-customerinsights.AuthorizationPolicyListResult.filter_1'
       - '@azure/arm-customerinsights.AuthorizationPolicyListResult.find'
       - '@azure/arm-customerinsights.AuthorizationPolicyListResult.find_1'
       - '@azure/arm-customerinsights.AuthorizationPolicyListResult.findIndex'
       - '@azure/arm-customerinsights.AuthorizationPolicyListResult.forEach'
+      - '@azure/arm-customerinsights.AuthorizationPolicyListResult.includes'
       - '@azure/arm-customerinsights.AuthorizationPolicyListResult.indexOf'
       - '@azure/arm-customerinsights.AuthorizationPolicyListResult.join'
       - '@azure/arm-customerinsights.AuthorizationPolicyListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.concat'
     name: 'concat(ConcatArray<AuthorizationPolicyResourceFormat>[])'
@@ -83,6 +85,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -102,6 +105,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -145,6 +149,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.entries'
     name: entries()
@@ -159,11 +164,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.every'
     name: >-
       every((value: AuthorizationPolicyResourceFormat, index: number, array:
-      AuthorizationPolicyResourceFormat[]) => boolean, any)
+      AuthorizationPolicyResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -172,14 +178,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: AuthorizationPolicyResourceFormat,
-        index: number, array: AuthorizationPolicyResourceFormat[]) => boolean,
+        index: number, array: AuthorizationPolicyResourceFormat[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: AuthorizationPolicyResourceFormat, index: number, array:
-              AuthorizationPolicyResourceFormat[]) => boolean
+              AuthorizationPolicyResourceFormat[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -195,6 +201,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.fill'
     name: >-
@@ -237,44 +244,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-customerinsights'
-  - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.filter_1'
-    name: >-
-      filter((value: AuthorizationPolicyResourceFormat, index: number, array:
-      AuthorizationPolicyResourceFormat[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: AuthorizationPolicyResourceFormat,
-        index: number, array: AuthorizationPolicyResourceFormat[]) => any,
-        thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: AuthorizationPolicyResourceFormat, index: number, array:
-              AuthorizationPolicyResourceFormat[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.filter'
     name: >-
@@ -313,6 +283,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-customerinsights'
+  - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.filter_1'
+    name: >-
+      filter((value: AuthorizationPolicyResourceFormat, index: number, array:
+      AuthorizationPolicyResourceFormat[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: AuthorizationPolicyResourceFormat,
+        index: number, array: AuthorizationPolicyResourceFormat[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: AuthorizationPolicyResourceFormat, index: number, array:
+              AuthorizationPolicyResourceFormat[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.find'
     name: >-
@@ -359,31 +369,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.find_1'
     name: >-
       find((value: AuthorizationPolicyResourceFormat, index: number, obj:
-      AuthorizationPolicyResourceFormat[]) => boolean, any)
+      AuthorizationPolicyResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: AuthorizationPolicyResourceFormat,
-        index: number, obj: AuthorizationPolicyResourceFormat[]) => boolean,
+        index: number, obj: AuthorizationPolicyResourceFormat[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: AuthorizationPolicyResourceFormat, index: number, obj:
-              AuthorizationPolicyResourceFormat[]) => boolean
+              AuthorizationPolicyResourceFormat[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -395,11 +402,12 @@ items:
           - >-
             @azure/arm-customerinsights.AuthorizationPolicyResourceFormat |
             undefined
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.findIndex'
     name: >-
       findIndex((value: AuthorizationPolicyResourceFormat, index: number, obj:
-      AuthorizationPolicyResourceFormat[]) => boolean, any)
+      AuthorizationPolicyResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -412,14 +420,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: AuthorizationPolicyResourceFormat,
-        index: number, obj: AuthorizationPolicyResourceFormat[]) => boolean,
+        index: number, obj: AuthorizationPolicyResourceFormat[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: AuthorizationPolicyResourceFormat, index: number, obj:
-              AuthorizationPolicyResourceFormat[]) => boolean
+              AuthorizationPolicyResourceFormat[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -441,6 +449,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.forEach'
     name: >-
@@ -474,6 +483,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-customerinsights'
+  - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.includes'
+    name: 'includes(AuthorizationPolicyResourceFormat, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: AuthorizationPolicyResourceFormat,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.indexOf'
     name: 'indexOf(AuthorizationPolicyResourceFormat, undefined | number)'
     children: []
@@ -500,6 +539,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.join'
     name: join(undefined | string)
@@ -524,6 +564,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.keys'
     name: keys()
@@ -538,6 +579,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.lastIndexOf'
     name: 'lastIndexOf(AuthorizationPolicyResourceFormat, undefined | number)'
@@ -565,6 +607,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.length'
     name: length
@@ -581,6 +624,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.map'
     name: >-
@@ -618,6 +662,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.nextLink'
     name: nextLink
@@ -633,6 +678,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.pop'
     name: pop()
@@ -649,6 +695,7 @@ items:
           - >-
             @azure/arm-customerinsights.AuthorizationPolicyResourceFormat |
             undefined
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.push'
     name: 'push(AuthorizationPolicyResourceFormat[])'
@@ -668,6 +715,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.reduce'
     name: >-
@@ -704,6 +752,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.reduce_1'
     name: >-
@@ -715,10 +764,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -743,6 +789,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.reduce_2'
     name: >-
@@ -782,6 +829,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.reduceRight'
     name: >-
@@ -820,6 +868,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.reduceRight_1'
     name: >-
@@ -831,11 +880,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -860,6 +905,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.reduceRight_2'
     name: >-
@@ -901,6 +947,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.reverse'
     name: reverse()
@@ -915,6 +962,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.shift'
     name: shift()
@@ -931,6 +979,7 @@ items:
           - >-
             @azure/arm-customerinsights.AuthorizationPolicyResourceFormat |
             undefined
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -956,11 +1005,12 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.some'
     name: >-
       some((value: AuthorizationPolicyResourceFormat, index: number, array:
-      AuthorizationPolicyResourceFormat[]) => boolean, any)
+      AuthorizationPolicyResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -971,14 +1021,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: AuthorizationPolicyResourceFormat,
-        index: number, array: AuthorizationPolicyResourceFormat[]) => boolean,
+        index: number, array: AuthorizationPolicyResourceFormat[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: AuthorizationPolicyResourceFormat, index: number, array:
-              AuthorizationPolicyResourceFormat[]) => boolean
+              AuthorizationPolicyResourceFormat[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -994,6 +1044,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.sort'
     name: >-
@@ -1023,6 +1074,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.splice_1'
     name: 'splice(number, number, AuthorizationPolicyResourceFormat[])'
@@ -1056,6 +1108,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1084,6 +1137,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.AuthorizationPolicyResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.toLocaleString'
     name: toLocaleString()
@@ -1100,6 +1154,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.toString'
     name: toString()
@@ -1114,6 +1169,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.unshift'
     name: 'unshift(AuthorizationPolicyResourceFormat[])'
@@ -1133,6 +1189,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.AuthorizationPolicyListResult.values'
     name: values()
@@ -1148,6 +1205,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-customerinsights.AuthorizationPolicyResourceFormat>
+        description: ''
     package: '@azure/arm-customerinsights'
 references:
   - uid: Array<@azure/arm-customerinsights.AuthorizationPolicyResourceFormat>

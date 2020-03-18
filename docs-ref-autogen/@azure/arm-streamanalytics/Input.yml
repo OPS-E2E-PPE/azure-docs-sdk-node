@@ -11,7 +11,11 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      An input object, containing all information associated with the named
+      input. All inputs are
+
+      contained under a streaming job.
     extends:
       name: '@azure/arm-streamanalytics.SubResource'
     package: '@azure/arm-streamanalytics'
@@ -22,13 +26,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource Id
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.Input.name'
     name: name
@@ -37,13 +46,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource name
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.Input.properties'
     name: properties
@@ -52,13 +62,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The properties that are associated with an input. Required on PUT
+      (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'properties?: InputPropertiesUnion'
       return:
         type:
           - '@azure/arm-streamanalytics.InputPropertiesUnion'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.Input.type'
     name: type
@@ -67,13 +80,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource type
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
 references:
   - uid: '@azure/arm-streamanalytics.SubResource'

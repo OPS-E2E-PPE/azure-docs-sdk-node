@@ -11,12 +11,13 @@ items:
       - '@azure/arm-storage.UsageListResult.entries'
       - '@azure/arm-storage.UsageListResult.every'
       - '@azure/arm-storage.UsageListResult.fill'
-      - '@azure/arm-storage.UsageListResult.filter_1'
       - '@azure/arm-storage.UsageListResult.filter'
+      - '@azure/arm-storage.UsageListResult.filter_1'
       - '@azure/arm-storage.UsageListResult.find'
       - '@azure/arm-storage.UsageListResult.find_1'
       - '@azure/arm-storage.UsageListResult.findIndex'
       - '@azure/arm-storage.UsageListResult.forEach'
+      - '@azure/arm-storage.UsageListResult.includes'
       - '@azure/arm-storage.UsageListResult.indexOf'
       - '@azure/arm-storage.UsageListResult.join'
       - '@azure/arm-storage.UsageListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.concat'
     name: 'concat(ConcatArray<Usage>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage[]'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage[]'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.entries'
     name: entries()
@@ -157,9 +162,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.every'
-    name: 'every((value: Usage, index: number, array: Usage[]) => boolean, any)'
+    name: 'every((value: Usage, index: number, array: Usage[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -168,11 +174,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Usage, index: number, array: Usage[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Usage, index: number, array: Usage[]) => boolean'
+            - '(value: Usage, index: number, array: Usage[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -188,6 +194,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.fill'
     name: 'fill(Usage, undefined | number, undefined | number)'
@@ -228,39 +235,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.UsageListResult.filter_1'
-    name: 'filter((value: Usage, index: number, array: Usage[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Usage, index: number, array:
-        Usage[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Usage, index: number, array: Usage[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-storage.Usage[]'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.filter'
     name: 'filter((value: Usage, index: number, array: Usage[]) => boolean, any)'
@@ -294,6 +269,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.UsageListResult.filter_1'
+    name: 'filter((value: Usage, index: number, array: Usage[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Usage, index: number, array:
+        Usage[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Usage, index: number, array: Usage[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-storage.Usage[]'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.find'
     name: >-
@@ -337,26 +347,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.find_1'
-    name: 'find((value: Usage, index: number, obj: Usage[]) => boolean, any)'
+    name: 'find((value: Usage, index: number, obj: Usage[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Usage, index: number, obj: Usage[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Usage, index: number, obj: Usage[]) => boolean'
+            - '(value: Usage, index: number, obj: Usage[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -366,9 +373,10 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage | undefined'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.findIndex'
-    name: 'findIndex((value: Usage, index: number, obj: Usage[]) => boolean, any)'
+    name: 'findIndex((value: Usage, index: number, obj: Usage[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -381,11 +389,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Usage, index: number, obj:
-        Usage[]) => boolean, thisArg?: any)
+        Usage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Usage, index: number, obj: Usage[]) => boolean'
+            - '(value: Usage, index: number, obj: Usage[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -407,6 +415,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.forEach'
     name: 'forEach((value: Usage, index: number, array: Usage[]) => void, any)'
@@ -435,6 +444,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.UsageListResult.includes'
+    name: 'includes(Usage, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Usage, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-storage.Usage'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.indexOf'
     name: 'indexOf(Usage, undefined | number)'
     children: []
@@ -459,6 +496,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.join'
     name: join(undefined | string)
@@ -483,6 +521,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.keys'
     name: keys()
@@ -497,6 +536,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.lastIndexOf'
     name: 'lastIndexOf(Usage, undefined | number)'
@@ -524,6 +564,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.length'
     name: length
@@ -540,6 +581,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.map'
     name: 'map((value: Usage, index: number, array: Usage[]) => U, any)'
@@ -572,6 +614,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.pop'
     name: pop()
@@ -586,6 +629,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage | undefined'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.push'
     name: 'push(Usage[])'
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.reduce_2'
     name: >-
@@ -642,6 +687,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.reduce'
     name: >-
@@ -672,6 +718,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.reduce_1'
     name: >-
@@ -681,10 +728,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Usage, currentValue: Usage,
@@ -703,6 +747,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.reduceRight_2'
     name: >-
@@ -741,6 +786,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.reduceRight'
     name: >-
@@ -772,6 +818,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.reduceRight_1'
     name: >-
@@ -781,11 +828,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Usage, currentValue:
@@ -805,6 +848,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.reverse'
     name: reverse()
@@ -819,6 +863,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage[]'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.shift'
     name: shift()
@@ -833,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage | undefined'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -858,9 +904,10 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage[]'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.some'
-    name: 'some((value: Usage, index: number, array: Usage[]) => boolean, any)'
+    name: 'some((value: Usage, index: number, array: Usage[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -871,11 +918,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Usage, index: number, array: Usage[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Usage, index: number, array: Usage[]) => boolean'
+            - '(value: Usage, index: number, array: Usage[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -891,6 +938,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.sort'
     name: 'sort(undefined | (a: Usage, b: Usage) => number)'
@@ -913,6 +961,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.splice_1'
     name: 'splice(number, number, Usage[])'
@@ -944,6 +993,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage[]'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -972,6 +1022,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usage[]'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.toLocaleString'
     name: toLocaleString()
@@ -988,6 +1039,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.toString'
     name: toString()
@@ -1002,6 +1054,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.unshift'
     name: 'unshift(Usage[])'
@@ -1021,6 +1074,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.UsageListResult.values'
     name: values()
@@ -1035,6 +1089,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-storage.Usage>
+        description: ''
     package: '@azure/arm-storage'
 references:
   - uid: Array<@azure/arm-storage.Usage>

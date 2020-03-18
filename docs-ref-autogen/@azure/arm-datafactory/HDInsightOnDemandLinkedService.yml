@@ -40,16 +40,18 @@ items:
         @azure/arm-datafactory.HDInsightOnDemandLinkedService.servicePrincipalKey
       - '@azure/arm-datafactory.HDInsightOnDemandLinkedService.sparkVersion'
       - '@azure/arm-datafactory.HDInsightOnDemandLinkedService.stormConfiguration'
+      - '@azure/arm-datafactory.HDInsightOnDemandLinkedService.subnetName'
       - '@azure/arm-datafactory.HDInsightOnDemandLinkedService.tenant'
       - '@azure/arm-datafactory.HDInsightOnDemandLinkedService.timeToLive'
       - '@azure/arm-datafactory.HDInsightOnDemandLinkedService.type'
       - '@azure/arm-datafactory.HDInsightOnDemandLinkedService.version'
+      - '@azure/arm-datafactory.HDInsightOnDemandLinkedService.virtualNetworkId'
       - '@azure/arm-datafactory.HDInsightOnDemandLinkedService.yarnConfiguration'
       - '@azure/arm-datafactory.HDInsightOnDemandLinkedService.zookeeperNodeSize'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: HDInsight ondemand linked service.
     package: '@azure/arm-datafactory'
   - uid: >-
       @azure/arm-datafactory.HDInsightOnDemandLinkedService.additionalLinkedServiceNames
@@ -59,13 +61,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies additional storage accounts for the HDInsight linked service so
+      that the Data
+
+      Factory service can register them on your behalf.
     optional: true
     syntax:
       content: 'additionalLinkedServiceNames?: LinkedServiceReference[]'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.annotations'
     name: annotations
@@ -74,13 +81,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the linked service.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.clusterNamePrefix'
     name: clusterNamePrefix
@@ -89,13 +97,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The prefix of cluster name, postfix will be distinct with timestamp. Type:
+      string (or
+
+      Expression with resultType string).
     optional: true
     syntax:
       content: 'clusterNamePrefix?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.clusterPassword'
     name: clusterPassword
@@ -104,13 +117,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The password to access the cluster.
     optional: true
     syntax:
       content: 'clusterPassword?: SecretBaseUnion'
       return:
         type:
           - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.clusterResourceGroup'
     name: clusterResourceGroup
@@ -119,12 +133,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The resource group where the cluster belongs. Type: string (or Expression
+      with resultType
+
+      string).
     syntax:
       content: 'clusterResourceGroup: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.clusterSize'
     name: clusterSize
@@ -133,12 +152,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Number of worker/data nodes in the cluster. Suggestion value: 4. Type:
+      string (or Expression
+
+      with resultType string).
     syntax:
       content: 'clusterSize: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.clusterSshPassword'
     name: clusterSshPassword
@@ -147,13 +171,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The password to SSH remotely connect cluster’s node (for Linux).
     optional: true
     syntax:
       content: 'clusterSshPassword?: SecretBaseUnion'
       return:
         type:
           - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.clusterSshUserName'
     name: clusterSshUserName
@@ -162,13 +187,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The username to SSH remotely connect to cluster’s node (for Linux). Type:
+      string (or
+
+      Expression with resultType string).
     optional: true
     syntax:
       content: 'clusterSshUserName?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.clusterType'
     name: clusterType
@@ -177,13 +207,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'The cluster type. Type: string (or Expression with resultType string).'
     optional: true
     syntax:
       content: 'clusterType?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.clusterUserName'
     name: clusterUserName
@@ -192,13 +223,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The username to access the cluster. Type: string (or Expression with
+      resultType string).
     optional: true
     syntax:
       content: 'clusterUserName?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.connectVia'
     name: connectVia
@@ -207,13 +241,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The integration runtime reference.
     optional: true
     syntax:
       content: 'connectVia?: IntegrationRuntimeReference'
       return:
         type:
           - '@azure/arm-datafactory.IntegrationRuntimeReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.coreConfiguration'
     name: coreConfiguration
@@ -222,13 +257,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the core configuration parameters (as in core-site.xml) for the
+      HDInsight cluster to
+
+      be created.
     optional: true
     syntax:
       content: 'coreConfiguration?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.dataNodeSize'
     name: dataNodeSize
@@ -237,13 +277,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Specifies the size of the data node for the HDInsight cluster.
     optional: true
     syntax:
       content: 'dataNodeSize?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.description'
     name: description
@@ -252,13 +293,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.encryptedCredential'
     name: encryptedCredential
@@ -267,13 +309,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The encrypted credential used for authentication. Credentials are
+      encrypted using the
+
+      integration runtime credential manager. Type: string (or Expression with
+      resultType string).
     optional: true
     syntax:
       content: 'encryptedCredential?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.hBaseConfiguration'
     name: hBaseConfiguration
@@ -282,13 +330,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the HBase configuration parameters (hbase-site.xml) for the
+      HDInsight cluster.
     optional: true
     syntax:
       content: 'hBaseConfiguration?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: >-
       @azure/arm-datafactory.HDInsightOnDemandLinkedService.hcatalogLinkedServiceName
@@ -298,13 +349,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of Azure SQL linked service that point to the HCatalog database.
+      The on-demand
+
+      HDInsight cluster is created by using the Azure SQL database as the
+      metastore.
     optional: true
     syntax:
       content: 'hcatalogLinkedServiceName?: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.hdfsConfiguration'
     name: hdfsConfiguration
@@ -313,13 +370,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the HDFS configuration parameters (hdfs-site.xml) for the
+      HDInsight cluster.
     optional: true
     syntax:
       content: 'hdfsConfiguration?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.headNodeSize'
     name: headNodeSize
@@ -328,13 +388,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Specifies the size of the head node for the HDInsight cluster.
     optional: true
     syntax:
       content: 'headNodeSize?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.hiveConfiguration'
     name: hiveConfiguration
@@ -343,13 +404,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the hive configuration parameters (hive-site.xml) for the
+      HDInsight cluster.
     optional: true
     syntax:
       content: 'hiveConfiguration?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.hostSubscriptionId'
     name: hostSubscriptionId
@@ -358,12 +422,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The customer’s subscription to host the cluster. Type: string (or
+      Expression with resultType
+
+      string).
     syntax:
       content: 'hostSubscriptionId: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.linkedServiceName'
     name: linkedServiceName
@@ -372,12 +441,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Azure Storage linked service to be used by the on-demand cluster for
+      storing and processing
+
+      data.
     syntax:
       content: 'linkedServiceName: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: >-
       @azure/arm-datafactory.HDInsightOnDemandLinkedService.mapReduceConfiguration
@@ -387,13 +461,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the MapReduce configuration parameters (mapred-site.xml) for the
+      HDInsight cluster.
     optional: true
     syntax:
       content: 'mapReduceConfiguration?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.oozieConfiguration'
     name: oozieConfiguration
@@ -402,13 +479,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the Oozie configuration parameters (oozie-site.xml) for the
+      HDInsight cluster.
     optional: true
     syntax:
       content: 'oozieConfiguration?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.parameters'
     name: parameters
@@ -417,7 +497,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for linked service.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -426,6 +506,7 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.scriptActions'
     name: scriptActions
@@ -434,13 +515,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Custom script actions to run on HDI ondemand cluster once it's up. Please
+      refer to
+
+      https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
     optional: true
     syntax:
       content: 'scriptActions?: ScriptAction[]'
       return:
         type:
           - '@azure/arm-datafactory.ScriptAction[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.servicePrincipalId'
     name: servicePrincipalId
@@ -449,13 +535,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The service principal id for the hostSubscriptionId. Type: string (or
+      Expression with
+
+      resultType string).
     optional: true
     syntax:
       content: 'servicePrincipalId?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.servicePrincipalKey'
     name: servicePrincipalKey
@@ -464,13 +555,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The key for the service principal id.
     optional: true
     syntax:
       content: 'servicePrincipalKey?: SecretBaseUnion'
       return:
         type:
           - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.sparkVersion'
     name: sparkVersion
@@ -479,13 +571,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The version of spark if the cluster type is 'spark'. Type: string (or
+      Expression with
+
+      resultType string).
     optional: true
     syntax:
       content: 'sparkVersion?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.stormConfiguration'
     name: stormConfiguration
@@ -494,13 +591,36 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the Storm configuration parameters (storm-site.xml) for the
+      HDInsight cluster.
     optional: true
     syntax:
       content: 'stormConfiguration?: any'
       return:
         type:
           - any
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.subnetName'
+    name: subnetName
+    fullName: subnetName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The ARM resource ID for the subnet in the vNet. If virtualNetworkId was
+      specified, then this
+
+      property is required. Type: string (or Expression with resultType string).
+    optional: true
+    syntax:
+      content: 'subnetName?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.tenant'
     name: tenant
@@ -509,12 +629,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The Tenant id/name to which the service principal belongs. Type: string
+      (or Expression with
+
+      resultType string).
     syntax:
       content: 'tenant: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.timeToLive'
     name: timeToLive
@@ -523,12 +648,23 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The allowed idle time for the on-demand HDInsight cluster. Specifies how
+      long the on-demand
+
+      HDInsight cluster stays alive after completion of an activity run if there
+      are no other active
+
+      jobs in the cluster. The minimum value is 5 mins. Type: string (or
+      Expression with resultType
+
+      string).
     syntax:
       content: 'timeToLive: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.type'
     name: type
@@ -537,12 +673,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "HDInsightOnDemand"'
       return:
         type:
           - '"HDInsightOnDemand"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.version'
     name: version
@@ -551,12 +688,33 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Version of the HDInsight cluster.\_ Type: string (or Expression with resultType string)."
     syntax:
       content: 'version: any'
       return:
         type:
           - any
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.virtualNetworkId'
+    name: virtualNetworkId
+    fullName: virtualNetworkId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The ARM resource ID for the vNet to which the cluster should be joined
+      after creation. Type:
+
+      string (or Expression with resultType string).
+    optional: true
+    syntax:
+      content: 'virtualNetworkId?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.yarnConfiguration'
     name: yarnConfiguration
@@ -565,13 +723,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the Yarn configuration parameters (yarn-site.xml) for the
+      HDInsight cluster.
     optional: true
     syntax:
       content: 'yarnConfiguration?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightOnDemandLinkedService.zookeeperNodeSize'
     name: zookeeperNodeSize
@@ -580,13 +741,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Specifies the size of the Zoo Keeper node for the HDInsight cluster.
     optional: true
     syntax:
       content: 'zookeeperNodeSize?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.LinkedServiceReference[]'

@@ -18,7 +18,7 @@ items:
   - uid: durable-functions.DurableOrchestrationBindingInfo.constructor
     name: >-
       DurableOrchestrationBindingInfo(HistoryEvent[], unknown, string, boolean,
-      string)
+      string | undefined)
     children: []
     type: constructor
     langs:
@@ -28,7 +28,7 @@ items:
       content: >-
         new DurableOrchestrationBindingInfo(history?: HistoryEvent[], input?:
         unknown, instanceId?: string, isReplaying?: boolean, parentInstanceId?:
-        string)
+        string | undefined)
       parameters:
         - id: history
           type:
@@ -52,7 +52,7 @@ items:
           optional: true
         - id: parentInstanceId
           type:
-            - string
+            - string | undefined
           description: ''
           optional: true
     package: durable-functions
@@ -69,6 +69,7 @@ items:
       return:
         type:
           - 'durable-functions.HistoryEvent[]'
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationBindingInfo.input
     name: input
@@ -84,6 +85,7 @@ items:
       return:
         type:
           - unknown
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationBindingInfo.instanceId
     name: instanceId
@@ -93,12 +95,12 @@ items:
       - typeScript
     type: property
     summary: ''
-    optional: true
     syntax:
-      content: 'instanceId?: string'
+      content: 'instanceId: string'
       return:
         type:
           - string
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationBindingInfo.isReplaying
     name: isReplaying
@@ -108,12 +110,12 @@ items:
       - typeScript
     type: property
     summary: ''
-    optional: true
     syntax:
-      content: 'isReplaying?: boolean'
+      content: 'isReplaying: boolean'
       return:
         type:
           - boolean
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationBindingInfo.parentInstanceId
     name: parentInstanceId
@@ -125,10 +127,11 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'parentInstanceId?: string'
+      content: 'parentInstanceId?: string | undefined'
       return:
         type:
-          - string
+          - string | undefined
+        description: ''
     package: durable-functions
 references:
   - uid: 'durable-functions.HistoryEvent[]'

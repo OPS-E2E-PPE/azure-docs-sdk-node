@@ -46,6 +46,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.authorizations'
     name: authorizations
@@ -61,6 +62,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuitAuthorization[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.bandwidthInGbps'
     name: bandwidthInGbps
@@ -78,6 +80,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.circuitProvisioningState'
     name: circuitProvisioningState
@@ -86,13 +89,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The CircuitProvisioningState state of the resource.
+    summary: >-
+      The CircuitProvisioningState state of the resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'circuitProvisioningState?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.etag'
     name: etag
@@ -102,8 +110,7 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets a unique read-only string that changes whenever the resource is
-      updated.
+      A unique read-only string that changes whenever the resource is updated.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -113,6 +120,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.expressRoutePort'
     name: expressRoutePort
@@ -132,6 +140,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.gatewayManagerEtag'
     name: gatewayManagerEtag
@@ -147,6 +156,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.globalReachEnabled'
     name: globalReachEnabled
@@ -155,13 +165,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Flag denoting Global reach status.
+    summary: >-
+      Flag denoting Global reach status.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'globalReachEnabled?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.id'
     name: id
@@ -177,6 +192,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.location'
     name: location
@@ -192,6 +208,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.name'
     name: name
@@ -211,6 +228,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.peerings'
     name: peerings
@@ -226,6 +244,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuitPeering[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.provisioningState'
     name: provisioningState
@@ -235,16 +254,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets the provisioning state of the public IP resource. Possible values
-      are: 'Updating',
+      The provisioning state of the express route circuit resource. Possible
+      values include:
 
-      'Deleting', and 'Failed'.
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.serviceKey'
     name: serviceKey
@@ -253,13 +276,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The ServiceKey.
+    summary: >-
+      The ServiceKey.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'serviceKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.serviceProviderNotes'
     name: serviceProviderNotes
@@ -275,6 +303,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.serviceProviderProperties'
     name: serviceProviderProperties
@@ -290,6 +319,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuitServiceProviderProperties'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.serviceProviderProvisioningState'
     name: serviceProviderProvisioningState
@@ -303,12 +333,16 @@ items:
       values include:
 
       'NotProvisioned', 'Provisioning', 'Provisioned', 'Deprovisioning'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'serviceProviderProvisioningState?: ServiceProviderProvisioningState'
       return:
         type:
           - '@azure/arm-network.ServiceProviderProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.sku'
     name: sku
@@ -324,6 +358,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuitSku'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.stag'
     name: stag
@@ -343,6 +378,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.tags'
     name: tags
@@ -358,6 +394,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuit.type'
     name: type
@@ -377,6 +414,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -407,6 +445,12 @@ references:
         uid: '@azure/arm-network.ExpressRouteCircuitPeering'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.ExpressRouteCircuitServiceProviderProperties'
     name: ExpressRouteCircuitServiceProviderProperties
     spec.typeScript:

@@ -12,7 +12,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: The properties that are associated with an input containing stream data.
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.StreamInputProperties.datasource'
     name: datasource
@@ -21,13 +21,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Describes an input data source that contains stream data. Required on PUT
+      (CreateOrReplace)
+
+      requests.
     optional: true
     syntax:
       content: 'datasource?: StreamInputDataSourceUnion'
       return:
         type:
           - '@azure/arm-streamanalytics.StreamInputDataSourceUnion'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.StreamInputProperties.diagnostics'
     name: diagnostics
@@ -36,13 +41,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Describes conditions applicable to the Input, Output, or the job overall,
+      that warrant
+
+      customer attention.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'diagnostics?: Diagnostics'
       return:
         type:
           - '@azure/arm-streamanalytics.Diagnostics'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.StreamInputProperties.etag'
     name: etag
@@ -51,13 +64,24 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The current entity tag for the input. This is an opaque string. You can
+      use it to detect
+
+      whether the resource has changed between requests. You can also use it in
+      the If-Match or
+
+      If-None-Match headers for write operations for optimistic concurrency.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.StreamInputProperties.serialization'
     name: serialization
@@ -66,13 +90,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Describes how data from an input is serialized or how data is serialized
+      when written to an
+
+      output. Required on PUT (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'serialization?: SerializationUnion'
       return:
         type:
           - '@azure/arm-streamanalytics.SerializationUnion'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.StreamInputProperties.type'
     name: type
@@ -81,12 +110,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Stream"'
       return:
         type:
           - '"Stream"'
+        description: ''
     package: '@azure/arm-streamanalytics'
 references:
   - uid: '@azure/arm-streamanalytics.StreamInputDataSourceUnion'

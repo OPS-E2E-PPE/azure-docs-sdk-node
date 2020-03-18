@@ -11,12 +11,13 @@ items:
       - '@azure/arm-containerregistry.ScopeMapListResult.entries'
       - '@azure/arm-containerregistry.ScopeMapListResult.every'
       - '@azure/arm-containerregistry.ScopeMapListResult.fill'
-      - '@azure/arm-containerregistry.ScopeMapListResult.filter_1'
       - '@azure/arm-containerregistry.ScopeMapListResult.filter'
+      - '@azure/arm-containerregistry.ScopeMapListResult.filter_1'
       - '@azure/arm-containerregistry.ScopeMapListResult.find'
       - '@azure/arm-containerregistry.ScopeMapListResult.find_1'
       - '@azure/arm-containerregistry.ScopeMapListResult.findIndex'
       - '@azure/arm-containerregistry.ScopeMapListResult.forEach'
+      - '@azure/arm-containerregistry.ScopeMapListResult.includes'
       - '@azure/arm-containerregistry.ScopeMapListResult.indexOf'
       - '@azure/arm-containerregistry.ScopeMapListResult.join'
       - '@azure/arm-containerregistry.ScopeMapListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.concat'
     name: 'concat(ConcatArray<ScopeMap>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.every'
-    name: 'every((value: ScopeMap, index: number, array: ScopeMap[]) => boolean, any)'
+    name: 'every((value: ScopeMap, index: number, array: ScopeMap[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ScopeMap, index: number, array:
-        ScopeMap[]) => boolean, thisArg?: any)
+        ScopeMap[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: ScopeMap, index: number, array: ScopeMap[]) => boolean'
+            - '(value: ScopeMap, index: number, array: ScopeMap[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.fill'
     name: 'fill(ScopeMap, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.ScopeMapListResult.filter_1'
-    name: 'filter((value: ScopeMap, index: number, array: ScopeMap[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ScopeMap, index: number, array:
-        ScopeMap[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: ScopeMap, index: number, array: ScopeMap[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-containerregistry.ScopeMap[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.filter'
     name: >-
@@ -297,6 +272,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.ScopeMapListResult.filter_1'
+    name: >-
+      filter((value: ScopeMap, index: number, array: ScopeMap[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ScopeMap, index: number, array:
+        ScopeMap[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: ScopeMap, index: number, array: ScopeMap[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-containerregistry.ScopeMap[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.find'
     name: >-
@@ -342,26 +354,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.find_1'
-    name: 'find((value: ScopeMap, index: number, obj: ScopeMap[]) => boolean, any)'
+    name: 'find((value: ScopeMap, index: number, obj: ScopeMap[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ScopeMap, index: number, obj:
-        ScopeMap[]) => boolean, thisArg?: any)
+        ScopeMap[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: ScopeMap, index: number, obj: ScopeMap[]) => boolean'
+            - '(value: ScopeMap, index: number, obj: ScopeMap[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -371,10 +380,11 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap | undefined'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.findIndex'
     name: >-
-      findIndex((value: ScopeMap, index: number, obj: ScopeMap[]) => boolean,
+      findIndex((value: ScopeMap, index: number, obj: ScopeMap[]) => unknown,
       any)
     children: []
     type: method
@@ -388,11 +398,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ScopeMap, index: number, obj:
-        ScopeMap[]) => boolean, thisArg?: any)
+        ScopeMap[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: ScopeMap, index: number, obj: ScopeMap[]) => boolean'
+            - '(value: ScopeMap, index: number, obj: ScopeMap[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -414,6 +424,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.forEach'
     name: 'forEach((value: ScopeMap, index: number, array: ScopeMap[]) => void, any)'
@@ -442,6 +453,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.ScopeMapListResult.includes'
+    name: 'includes(ScopeMap, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ScopeMap, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-containerregistry.ScopeMap'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.indexOf'
     name: 'indexOf(ScopeMap, undefined | number)'
     children: []
@@ -468,6 +509,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.join'
     name: join(undefined | string)
@@ -492,6 +534,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.keys'
     name: keys()
@@ -506,6 +549,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.lastIndexOf'
     name: 'lastIndexOf(ScopeMap, undefined | number)'
@@ -533,6 +577,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.length'
     name: length
@@ -549,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.map'
     name: 'map((value: ScopeMap, index: number, array: ScopeMap[]) => U, any)'
@@ -581,6 +627,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.nextLink'
     name: nextLink
@@ -596,6 +643,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.pop'
     name: pop()
@@ -610,6 +658,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap | undefined'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.push'
     name: 'push(ScopeMap[])'
@@ -629,6 +678,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.reduce'
     name: >-
@@ -659,6 +709,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.reduce_1'
     name: >-
@@ -668,10 +719,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ScopeMap, currentValue:
@@ -691,6 +739,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.reduce_2'
     name: >-
@@ -729,6 +778,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.reduceRight'
     name: >-
@@ -760,6 +810,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.reduceRight_1'
     name: >-
@@ -769,11 +820,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ScopeMap, currentValue:
@@ -793,6 +840,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.reduceRight_2'
     name: >-
@@ -832,6 +880,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.reverse'
     name: reverse()
@@ -846,6 +895,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.shift'
     name: shift()
@@ -860,6 +910,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap | undefined'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -885,9 +936,10 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.some'
-    name: 'some((value: ScopeMap, index: number, array: ScopeMap[]) => boolean, any)'
+    name: 'some((value: ScopeMap, index: number, array: ScopeMap[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -898,11 +950,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ScopeMap, index: number, array:
-        ScopeMap[]) => boolean, thisArg?: any)
+        ScopeMap[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: ScopeMap, index: number, array: ScopeMap[]) => boolean'
+            - '(value: ScopeMap, index: number, array: ScopeMap[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -918,6 +970,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.sort'
     name: 'sort(undefined | (a: ScopeMap, b: ScopeMap) => number)'
@@ -942,6 +995,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.splice_1'
     name: 'splice(number, number, ScopeMap[])'
@@ -973,6 +1027,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1001,6 +1056,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.ScopeMap[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.toLocaleString'
     name: toLocaleString()
@@ -1017,6 +1073,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.toString'
     name: toString()
@@ -1031,6 +1088,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.unshift'
     name: 'unshift(ScopeMap[])'
@@ -1050,6 +1108,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ScopeMapListResult.values'
     name: values()
@@ -1064,6 +1123,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-containerregistry.ScopeMap>
+        description: ''
     package: '@azure/arm-containerregistry'
 references:
   - uid: Array<@azure/arm-containerregistry.ScopeMap>

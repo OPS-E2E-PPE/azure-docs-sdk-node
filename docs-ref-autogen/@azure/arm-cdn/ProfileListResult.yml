@@ -11,12 +11,13 @@ items:
       - '@azure/arm-cdn.ProfileListResult.entries'
       - '@azure/arm-cdn.ProfileListResult.every'
       - '@azure/arm-cdn.ProfileListResult.fill'
-      - '@azure/arm-cdn.ProfileListResult.filter_1'
       - '@azure/arm-cdn.ProfileListResult.filter'
+      - '@azure/arm-cdn.ProfileListResult.filter_1'
       - '@azure/arm-cdn.ProfileListResult.find'
       - '@azure/arm-cdn.ProfileListResult.find_1'
       - '@azure/arm-cdn.ProfileListResult.findIndex'
       - '@azure/arm-cdn.ProfileListResult.forEach'
+      - '@azure/arm-cdn.ProfileListResult.includes'
       - '@azure/arm-cdn.ProfileListResult.indexOf'
       - '@azure/arm-cdn.ProfileListResult.join'
       - '@azure/arm-cdn.ProfileListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.concat'
     name: 'concat(ConcatArray<Profile>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.every'
-    name: 'every((value: Profile, index: number, array: Profile[]) => boolean, any)'
+    name: 'every((value: Profile, index: number, array: Profile[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Profile, index: number, array:
-        Profile[]) => boolean, thisArg?: any)
+        Profile[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Profile, index: number, array: Profile[]) => boolean'
+            - '(value: Profile, index: number, array: Profile[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.fill'
     name: 'fill(Profile, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-cdn'
-  - uid: '@azure/arm-cdn.ProfileListResult.filter_1'
-    name: 'filter((value: Profile, index: number, array: Profile[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Profile, index: number, array:
-        Profile[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Profile, index: number, array: Profile[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-cdn.Profile[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.filter'
     name: 'filter((value: Profile, index: number, array: Profile[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.ProfileListResult.filter_1'
+    name: 'filter((value: Profile, index: number, array: Profile[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Profile, index: number, array:
+        Profile[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Profile, index: number, array: Profile[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-cdn.Profile[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.find'
     name: >-
@@ -340,26 +350,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.find_1'
-    name: 'find((value: Profile, index: number, obj: Profile[]) => boolean, any)'
+    name: 'find((value: Profile, index: number, obj: Profile[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Profile, index: number, obj: Profile[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Profile, index: number, obj: Profile[]) => boolean'
+            - '(value: Profile, index: number, obj: Profile[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -369,9 +376,10 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.findIndex'
-    name: 'findIndex((value: Profile, index: number, obj: Profile[]) => boolean, any)'
+    name: 'findIndex((value: Profile, index: number, obj: Profile[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -384,11 +392,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Profile, index: number, obj:
-        Profile[]) => boolean, thisArg?: any)
+        Profile[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Profile, index: number, obj: Profile[]) => boolean'
+            - '(value: Profile, index: number, obj: Profile[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -410,6 +418,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.forEach'
     name: 'forEach((value: Profile, index: number, array: Profile[]) => void, any)'
@@ -438,6 +447,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.ProfileListResult.includes'
+    name: 'includes(Profile, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Profile, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-cdn.Profile'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.indexOf'
     name: 'indexOf(Profile, undefined | number)'
     children: []
@@ -462,6 +501,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.join'
     name: join(undefined | string)
@@ -486,6 +526,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.keys'
     name: keys()
@@ -500,6 +541,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.lastIndexOf'
     name: 'lastIndexOf(Profile, undefined | number)'
@@ -527,6 +569,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.length'
     name: length
@@ -543,6 +586,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.map'
     name: 'map((value: Profile, index: number, array: Profile[]) => U, any)'
@@ -575,6 +619,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.nextLink'
     name: nextLink
@@ -590,6 +635,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.pop'
     name: pop()
@@ -604,6 +650,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.push'
     name: 'push(Profile[])'
@@ -623,6 +670,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.reduce'
     name: >-
@@ -653,6 +701,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.reduce_1'
     name: >-
@@ -662,10 +711,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Profile, currentValue:
@@ -685,6 +731,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.reduce_2'
     name: >-
@@ -722,6 +769,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.reduceRight'
     name: >-
@@ -753,6 +801,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.reduceRight_1'
     name: >-
@@ -762,11 +811,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Profile, currentValue:
@@ -786,6 +831,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.reduceRight_2'
     name: >-
@@ -824,6 +870,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.reverse'
     name: reverse()
@@ -838,6 +885,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.shift'
     name: shift()
@@ -852,6 +900,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -877,9 +926,10 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.some'
-    name: 'some((value: Profile, index: number, array: Profile[]) => boolean, any)'
+    name: 'some((value: Profile, index: number, array: Profile[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -890,11 +940,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Profile, index: number, array:
-        Profile[]) => boolean, thisArg?: any)
+        Profile[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Profile, index: number, array: Profile[]) => boolean'
+            - '(value: Profile, index: number, array: Profile[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -910,6 +960,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.sort'
     name: 'sort(undefined | (a: Profile, b: Profile) => number)'
@@ -934,6 +985,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.splice_1'
     name: 'splice(number, number, Profile[])'
@@ -965,6 +1017,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -993,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Profile[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.toLocaleString'
     name: toLocaleString()
@@ -1009,6 +1063,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.toString'
     name: toString()
@@ -1023,6 +1078,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.unshift'
     name: 'unshift(Profile[])'
@@ -1042,6 +1098,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.ProfileListResult.values'
     name: values()
@@ -1056,6 +1113,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-cdn.Profile>
+        description: ''
     package: '@azure/arm-cdn'
 references:
   - uid: Array<@azure/arm-cdn.Profile>

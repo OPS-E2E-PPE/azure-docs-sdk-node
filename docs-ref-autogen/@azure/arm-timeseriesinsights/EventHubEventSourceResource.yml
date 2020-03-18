@@ -26,7 +26,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: An event source that receives its data from an Azure EventHub.
     package: '@azure/arm-timeseriesinsights'
   - uid: >-
       @azure/arm-timeseriesinsights.EventHubEventSourceResource.consumerGroupName
@@ -36,12 +36,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the event hub's consumer group that holds the partitions from
+      which events will be
+
+      read.
     syntax:
       content: 'consumerGroupName: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.EventHubEventSourceResource.creationTime'
     name: creationTime
@@ -50,13 +55,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The time the resource was created.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'creationTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.EventHubEventSourceResource.eventHubName'
     name: eventHubName
@@ -65,12 +75,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The name of the event hub.
     syntax:
       content: 'eventHubName: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: >-
       @azure/arm-timeseriesinsights.EventHubEventSourceResource.eventSourceResourceId
@@ -80,12 +91,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The resource id of the event source in Azure Resource Manager.
     syntax:
       content: 'eventSourceResourceId: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.EventHubEventSourceResource.id'
     name: id
@@ -94,13 +106,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource Id
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.EventHubEventSourceResource.keyName'
     name: keyName
@@ -109,12 +126,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the SAS key that grants the Time Series Insights service
+      access to the event hub.
+
+      The shared access policies for this key must grant 'Listen' permissions to
+      the event hub.
     syntax:
       content: 'keyName: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.EventHubEventSourceResource.kind'
     name: kind
@@ -123,12 +146,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'kind: "Microsoft.EventHub"'
       return:
         type:
           - '"Microsoft.EventHub"'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.EventHubEventSourceResource.location'
     name: location
@@ -137,12 +161,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource location
     syntax:
       content: 'location: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.EventHubEventSourceResource.name'
     name: name
@@ -151,13 +176,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource name
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: >-
       @azure/arm-timeseriesinsights.EventHubEventSourceResource.provisioningState
@@ -167,13 +197,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Provisioning state of the resource. Possible values include: 'Accepted',
+      'Creating',
+
+      'Updating', 'Succeeded', 'Failed', 'Deleting'
     optional: true
     syntax:
       content: 'provisioningState?: ProvisioningState'
       return:
         type:
           - '@azure/arm-timeseriesinsights.ProvisioningState'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: >-
       @azure/arm-timeseriesinsights.EventHubEventSourceResource.serviceBusNamespace
@@ -183,12 +218,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The name of the service bus that contains the event hub.
     syntax:
       content: 'serviceBusNamespace: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.EventHubEventSourceResource.tags'
     name: tags
@@ -197,13 +233,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource tags
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: >-
       @azure/arm-timeseriesinsights.EventHubEventSourceResource.timestampPropertyName
@@ -213,13 +250,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The event property that will be used as the event source's timestamp. If a
+      value isn't
+
+      specified for timestampPropertyName, or if null or empty-string is
+      specified, the event
+
+      creation time will be used.
     optional: true
     syntax:
       content: 'timestampPropertyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.EventHubEventSourceResource.type'
     name: type
@@ -228,13 +273,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource type
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
 references:
   - uid: '@azure/arm-timeseriesinsights.ProvisioningState'

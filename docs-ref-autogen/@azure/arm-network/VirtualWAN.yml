@@ -12,12 +12,11 @@ items:
       - '@azure/arm-network.VirtualWAN.location'
       - '@azure/arm-network.VirtualWAN.name'
       - '@azure/arm-network.VirtualWAN.office365LocalBreakoutCategory'
-      - '@azure/arm-network.VirtualWAN.p2SVpnServerConfigurations'
       - '@azure/arm-network.VirtualWAN.provisioningState'
-      - '@azure/arm-network.VirtualWAN.securityProviderName'
       - '@azure/arm-network.VirtualWAN.tags'
       - '@azure/arm-network.VirtualWAN.type'
       - '@azure/arm-network.VirtualWAN.virtualHubs'
+      - '@azure/arm-network.VirtualWAN.virtualWANType'
       - '@azure/arm-network.VirtualWAN.vpnSites'
     langs:
       - typeScript
@@ -40,6 +39,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.allowVnetToVnetTraffic'
     name: allowVnetToVnetTraffic
@@ -55,6 +55,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.disableVpnEncryption'
     name: disableVpnEncryption
@@ -70,6 +71,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.etag'
     name: etag
@@ -79,8 +81,7 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets a unique read-only string that changes whenever the resource is
-      updated.
+      A unique read-only string that changes whenever the resource is updated.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -90,6 +91,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.id'
     name: id
@@ -105,6 +107,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.location'
     name: location
@@ -120,6 +123,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.name'
     name: name
@@ -139,6 +143,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.office365LocalBreakoutCategory'
     name: office365LocalBreakoutCategory
@@ -158,21 +163,7 @@ items:
       return:
         type:
           - '@azure/arm-network.OfficeTrafficCategory'
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.VirtualWAN.p2SVpnServerConfigurations'
-    name: p2SVpnServerConfigurations
-    fullName: p2SVpnServerConfigurations
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: List of all P2SVpnServerConfigurations associated with the virtual wan.
-    optional: true
-    syntax:
-      content: 'p2SVpnServerConfigurations?: P2SVpnServerConfiguration[]'
-      return:
-        type:
-          - '@azure/arm-network.P2SVpnServerConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.provisioningState'
     name: provisioningState
@@ -182,31 +173,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the resource. Possible values include:
-      'Succeeded', 'Updating',
+      The provisioning state of the virtual WAN resource. Possible values
+      include: 'Succeeded',
 
-      'Deleting', 'Failed'
+      'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'provisioningState?: ProvisioningState'
       return:
         type:
           - '@azure/arm-network.ProvisioningState'
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.VirtualWAN.securityProviderName'
-    name: securityProviderName
-    fullName: securityProviderName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The Security Provider name.
-    optional: true
-    syntax:
-      content: 'securityProviderName?: undefined | string'
-      return:
-        type:
-          - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.tags'
     name: tags
@@ -222,6 +202,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.type'
     name: type
@@ -241,6 +222,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.virtualHubs'
     name: virtualHubs
@@ -260,6 +242,23 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualWAN.virtualWANType'
+    name: virtualWANType
+    fullName: virtualWANType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The type of the VirtualWAN.
+    optional: true
+    syntax:
+      content: 'virtualWANType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualWAN.vpnSites'
     name: vpnSites
@@ -279,6 +278,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource[]'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -293,14 +293,6 @@ references:
       - name: OfficeTrafficCategory
         fullName: OfficeTrafficCategory
         uid: '@azure/arm-network.OfficeTrafficCategory'
-  - uid: '@azure/arm-network.P2SVpnServerConfiguration[]'
-    name: 'P2SVpnServerConfiguration[]'
-    spec.typeScript:
-      - name: P2SVpnServerConfiguration
-        fullName: P2SVpnServerConfiguration
-        uid: '@azure/arm-network.P2SVpnServerConfiguration'
-      - name: '[]'
-        fullName: '[]'
   - uid: '@azure/arm-network.ProvisioningState'
     name: ProvisioningState
     spec.typeScript:

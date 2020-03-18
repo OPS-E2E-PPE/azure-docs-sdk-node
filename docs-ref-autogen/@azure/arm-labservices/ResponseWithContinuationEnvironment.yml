@@ -11,12 +11,13 @@ items:
       - '@azure/arm-labservices.ResponseWithContinuationEnvironment.entries'
       - '@azure/arm-labservices.ResponseWithContinuationEnvironment.every'
       - '@azure/arm-labservices.ResponseWithContinuationEnvironment.fill'
-      - '@azure/arm-labservices.ResponseWithContinuationEnvironment.filter_1'
       - '@azure/arm-labservices.ResponseWithContinuationEnvironment.filter'
+      - '@azure/arm-labservices.ResponseWithContinuationEnvironment.filter_1'
       - '@azure/arm-labservices.ResponseWithContinuationEnvironment.find'
       - '@azure/arm-labservices.ResponseWithContinuationEnvironment.find_1'
       - '@azure/arm-labservices.ResponseWithContinuationEnvironment.findIndex'
       - '@azure/arm-labservices.ResponseWithContinuationEnvironment.forEach'
+      - '@azure/arm-labservices.ResponseWithContinuationEnvironment.includes'
       - '@azure/arm-labservices.ResponseWithContinuationEnvironment.indexOf'
       - '@azure/arm-labservices.ResponseWithContinuationEnvironment.join'
       - '@azure/arm-labservices.ResponseWithContinuationEnvironment.keys'
@@ -64,6 +65,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.concat'
     name: 'concat(ConcatArray<Environment>[])'
@@ -83,6 +85,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -102,6 +105,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -145,6 +149,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.entries'
     name: entries()
@@ -159,11 +164,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.every'
     name: >-
       every((value: Environment, index: number, array: Environment[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -172,13 +178,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Environment, index: number, array:
-        Environment[]) => boolean, thisArg?: any)
+        Environment[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: Environment, index: number, array: Environment[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -194,6 +200,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.fill'
     name: 'fill(Environment, undefined | number, undefined | number)'
@@ -234,41 +241,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-labservices'
-  - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.filter_1'
-    name: >-
-      filter((value: Environment, index: number, array: Environment[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Environment, index: number, array:
-        Environment[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Environment, index: number, array: Environment[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-labservices.Environment[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.filter'
     name: >-
@@ -306,6 +279,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.filter_1'
+    name: >-
+      filter((value: Environment, index: number, array: Environment[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Environment, index: number, array:
+        Environment[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: Environment, index: number, array: Environment[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-labservices.Environment[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.find'
     name: >-
@@ -351,28 +363,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.find_1'
     name: >-
-      find((value: Environment, index: number, obj: Environment[]) => boolean,
+      find((value: Environment, index: number, obj: Environment[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Environment, index: number, obj:
-        Environment[]) => boolean, thisArg?: any)
+        Environment[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Environment, index: number, obj: Environment[]) => boolean'
+            - '(value: Environment, index: number, obj: Environment[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -382,11 +391,12 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment | undefined'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.findIndex'
     name: >-
       findIndex((value: Environment, index: number, obj: Environment[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -399,11 +409,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Environment, index: number, obj:
-        Environment[]) => boolean, thisArg?: any)
+        Environment[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Environment, index: number, obj: Environment[]) => boolean'
+            - '(value: Environment, index: number, obj: Environment[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -425,6 +435,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.forEach'
     name: >-
@@ -455,6 +466,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.includes'
+    name: 'includes(Environment, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Environment, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-labservices.Environment'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.indexOf'
     name: 'indexOf(Environment, undefined | number)'
     children: []
@@ -481,6 +522,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.join'
     name: join(undefined | string)
@@ -505,6 +547,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.keys'
     name: keys()
@@ -519,6 +562,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.lastIndexOf'
     name: 'lastIndexOf(Environment, undefined | number)'
@@ -546,6 +590,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.length'
     name: length
@@ -562,6 +607,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.map'
     name: 'map((value: Environment, index: number, array: Environment[]) => U, any)'
@@ -594,6 +640,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.nextLink'
     name: nextLink
@@ -609,6 +656,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.pop'
     name: pop()
@@ -623,6 +671,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment | undefined'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.push'
     name: 'push(Environment[])'
@@ -642,6 +691,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduce'
     name: >-
@@ -672,6 +722,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduce_1'
     name: >-
@@ -681,10 +732,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Environment, currentValue:
@@ -704,6 +752,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduce_2'
     name: >-
@@ -742,6 +791,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduceRight'
     name: >-
@@ -774,6 +824,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduceRight_1'
     name: >-
@@ -783,11 +834,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Environment,
@@ -807,6 +854,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduceRight_2'
     name: >-
@@ -846,6 +894,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reverse'
     name: reverse()
@@ -860,6 +909,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.shift'
     name: shift()
@@ -874,6 +924,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment | undefined'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -899,10 +950,11 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.some'
     name: >-
-      some((value: Environment, index: number, array: Environment[]) => boolean,
+      some((value: Environment, index: number, array: Environment[]) => unknown,
       any)
     children: []
     type: method
@@ -914,13 +966,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Environment, index: number, array:
-        Environment[]) => boolean, thisArg?: any)
+        Environment[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: Environment, index: number, array: Environment[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -936,6 +988,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.sort'
     name: 'sort(undefined | (a: Environment, b: Environment) => number)'
@@ -960,6 +1013,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.splice_1'
     name: 'splice(number, number, Environment[])'
@@ -993,6 +1047,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.splice'
     name: 'splice(number, undefined | number)'
@@ -1021,6 +1076,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Environment[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.toLocaleString'
     name: toLocaleString()
@@ -1037,6 +1093,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.toString'
     name: toString()
@@ -1051,6 +1108,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.unshift'
     name: 'unshift(Environment[])'
@@ -1070,6 +1128,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.values'
     name: values()
@@ -1084,6 +1143,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-labservices.Environment>
+        description: ''
     package: '@azure/arm-labservices'
 references:
   - uid: Array<@azure/arm-labservices.Environment>

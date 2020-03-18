@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parameters supplied to the Update Environment operation.
     package: '@azure/arm-timeseriesinsights'
   - uid: >-
       @azure/arm-timeseriesinsights.EnvironmentUpdateParameters.dataRetentionTime
@@ -25,13 +25,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      ISO8601 timespan specifying the minimum number of days the environment's
+      events will be
+
+      available for query.
     optional: true
     syntax:
       content: 'dataRetentionTime?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: >-
       @azure/arm-timeseriesinsights.EnvironmentUpdateParameters.partitionKeyProperties
@@ -41,13 +46,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The list of event properties which will be used to partition data in the
+      environment.
     optional: true
     syntax:
       content: 'partitionKeyProperties?: PartitionKeyProperty[]'
       return:
         type:
           - '@azure/arm-timeseriesinsights.PartitionKeyProperty[]'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.EnvironmentUpdateParameters.sku'
     name: sku
@@ -56,13 +64,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The sku of the environment.
     optional: true
     syntax:
       content: 'sku?: Sku'
       return:
         type:
           - '@azure/arm-timeseriesinsights.Sku'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: >-
       @azure/arm-timeseriesinsights.EnvironmentUpdateParameters.storageLimitExceededBehavior
@@ -72,13 +81,27 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The behavior the Time Series Insights service should take when the
+      environment's capacity has
+
+      been exceeded. If "PauseIngress" is specified, new events will not be read
+      from the event
+
+      source. If "PurgeOldData" is specified, new events will continue to be
+      read and old events
+
+      will be deleted from the environment. The default behavior is
+      PurgeOldData. Possible values
+
+      include: 'PurgeOldData', 'PauseIngress'
     optional: true
     syntax:
       content: 'storageLimitExceededBehavior?: StorageLimitExceededBehavior'
       return:
         type:
           - '@azure/arm-timeseriesinsights.StorageLimitExceededBehavior'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.EnvironmentUpdateParameters.tags'
     name: tags
@@ -87,13 +110,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Key-value pairs of additional properties for the environment.
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
 references:
   - uid: '@azure/arm-timeseriesinsights.PartitionKeyProperty[]'

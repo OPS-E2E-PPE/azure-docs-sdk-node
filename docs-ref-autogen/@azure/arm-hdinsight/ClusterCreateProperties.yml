@@ -8,6 +8,8 @@ items:
       - '@azure/arm-hdinsight.ClusterCreateProperties.clusterVersion'
       - '@azure/arm-hdinsight.ClusterCreateProperties.computeProfile'
       - '@azure/arm-hdinsight.ClusterCreateProperties.diskEncryptionProperties'
+      - '@azure/arm-hdinsight.ClusterCreateProperties.kafkaRestProperties'
+      - '@azure/arm-hdinsight.ClusterCreateProperties.minSupportedTlsVersion'
       - '@azure/arm-hdinsight.ClusterCreateProperties.osType'
       - '@azure/arm-hdinsight.ClusterCreateProperties.securityProfile'
       - '@azure/arm-hdinsight.ClusterCreateProperties.storageProfile'
@@ -31,6 +33,7 @@ items:
       return:
         type:
           - '@azure/arm-hdinsight.ClusterDefinition'
+        description: ''
     package: '@azure/arm-hdinsight'
   - uid: '@azure/arm-hdinsight.ClusterCreateProperties.clusterVersion'
     name: clusterVersion
@@ -46,6 +49,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-hdinsight'
   - uid: '@azure/arm-hdinsight.ClusterCreateProperties.computeProfile'
     name: computeProfile
@@ -61,6 +65,7 @@ items:
       return:
         type:
           - '@azure/arm-hdinsight.ComputeProfile'
+        description: ''
     package: '@azure/arm-hdinsight'
   - uid: '@azure/arm-hdinsight.ClusterCreateProperties.diskEncryptionProperties'
     name: diskEncryptionProperties
@@ -76,6 +81,39 @@ items:
       return:
         type:
           - '@azure/arm-hdinsight.DiskEncryptionProperties'
+        description: ''
+    package: '@azure/arm-hdinsight'
+  - uid: '@azure/arm-hdinsight.ClusterCreateProperties.kafkaRestProperties'
+    name: kafkaRestProperties
+    fullName: kafkaRestProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The cluster kafka rest proxy configuration.
+    optional: true
+    syntax:
+      content: 'kafkaRestProperties?: KafkaRestProperties'
+      return:
+        type:
+          - '@azure/arm-hdinsight.KafkaRestProperties'
+        description: ''
+    package: '@azure/arm-hdinsight'
+  - uid: '@azure/arm-hdinsight.ClusterCreateProperties.minSupportedTlsVersion'
+    name: minSupportedTlsVersion
+    fullName: minSupportedTlsVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The minimal supported tls version.
+    optional: true
+    syntax:
+      content: 'minSupportedTlsVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
     package: '@azure/arm-hdinsight'
   - uid: '@azure/arm-hdinsight.ClusterCreateProperties.osType'
     name: osType
@@ -91,6 +129,7 @@ items:
       return:
         type:
           - '@azure/arm-hdinsight.OSType'
+        description: ''
     package: '@azure/arm-hdinsight'
   - uid: '@azure/arm-hdinsight.ClusterCreateProperties.securityProfile'
     name: securityProfile
@@ -106,6 +145,7 @@ items:
       return:
         type:
           - '@azure/arm-hdinsight.SecurityProfile'
+        description: ''
     package: '@azure/arm-hdinsight'
   - uid: '@azure/arm-hdinsight.ClusterCreateProperties.storageProfile'
     name: storageProfile
@@ -121,6 +161,7 @@ items:
       return:
         type:
           - '@azure/arm-hdinsight.StorageProfile'
+        description: ''
     package: '@azure/arm-hdinsight'
   - uid: '@azure/arm-hdinsight.ClusterCreateProperties.tier'
     name: tier
@@ -136,6 +177,7 @@ items:
       return:
         type:
           - '@azure/arm-hdinsight.Tier'
+        description: ''
     package: '@azure/arm-hdinsight'
 references:
   - uid: '@azure/arm-hdinsight.ClusterDefinition'
@@ -156,6 +198,12 @@ references:
       - name: DiskEncryptionProperties
         fullName: DiskEncryptionProperties
         uid: '@azure/arm-hdinsight.DiskEncryptionProperties'
+  - uid: '@azure/arm-hdinsight.KafkaRestProperties'
+    name: KafkaRestProperties
+    spec.typeScript:
+      - name: KafkaRestProperties
+        fullName: KafkaRestProperties
+        uid: '@azure/arm-hdinsight.KafkaRestProperties'
   - uid: '@azure/arm-hdinsight.OSType'
     name: OSType
     spec.typeScript:

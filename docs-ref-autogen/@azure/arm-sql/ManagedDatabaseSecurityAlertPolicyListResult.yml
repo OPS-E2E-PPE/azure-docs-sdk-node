@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.entries'
       - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.every'
       - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.fill'
-      - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.filter_1'
       - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.filter'
+      - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.filter_1'
       - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.find'
       - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.find_1'
       - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.findIndex'
       - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.forEach'
+      - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.includes'
       - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.indexOf'
       - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.join'
       - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.keys'
@@ -66,6 +67,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.concat'
     name: 'concat(ConcatArray<ManagedDatabaseSecurityAlertPolicy>[])'
@@ -87,6 +89,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -106,6 +109,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -149,6 +153,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.entries'
     name: entries()
@@ -163,11 +168,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.every'
     name: >-
       every((value: ManagedDatabaseSecurityAlertPolicy, index: number, array:
-      ManagedDatabaseSecurityAlertPolicy[]) => boolean, any)
+      ManagedDatabaseSecurityAlertPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -176,14 +182,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ManagedDatabaseSecurityAlertPolicy,
-        index: number, array: ManagedDatabaseSecurityAlertPolicy[]) => boolean,
+        index: number, array: ManagedDatabaseSecurityAlertPolicy[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ManagedDatabaseSecurityAlertPolicy, index: number, array:
-              ManagedDatabaseSecurityAlertPolicy[]) => boolean
+              ManagedDatabaseSecurityAlertPolicy[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -199,6 +205,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.fill'
     name: >-
@@ -241,44 +248,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.filter_1'
-    name: >-
-      filter((value: ManagedDatabaseSecurityAlertPolicy, index: number, array:
-      ManagedDatabaseSecurityAlertPolicy[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ManagedDatabaseSecurityAlertPolicy,
-        index: number, array: ManagedDatabaseSecurityAlertPolicy[]) => any,
-        thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ManagedDatabaseSecurityAlertPolicy, index: number, array:
-              ManagedDatabaseSecurityAlertPolicy[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.filter'
     name: >-
@@ -317,6 +287,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.filter_1'
+    name: >-
+      filter((value: ManagedDatabaseSecurityAlertPolicy, index: number, array:
+      ManagedDatabaseSecurityAlertPolicy[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ManagedDatabaseSecurityAlertPolicy,
+        index: number, array: ManagedDatabaseSecurityAlertPolicy[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ManagedDatabaseSecurityAlertPolicy, index: number, array:
+              ManagedDatabaseSecurityAlertPolicy[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.find'
     name: >-
@@ -363,31 +373,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.find_1'
     name: >-
       find((value: ManagedDatabaseSecurityAlertPolicy, index: number, obj:
-      ManagedDatabaseSecurityAlertPolicy[]) => boolean, any)
+      ManagedDatabaseSecurityAlertPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ManagedDatabaseSecurityAlertPolicy,
-        index: number, obj: ManagedDatabaseSecurityAlertPolicy[]) => boolean,
+        index: number, obj: ManagedDatabaseSecurityAlertPolicy[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ManagedDatabaseSecurityAlertPolicy, index: number, obj:
-              ManagedDatabaseSecurityAlertPolicy[]) => boolean
+              ManagedDatabaseSecurityAlertPolicy[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -397,11 +404,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.findIndex'
     name: >-
       findIndex((value: ManagedDatabaseSecurityAlertPolicy, index: number, obj:
-      ManagedDatabaseSecurityAlertPolicy[]) => boolean, any)
+      ManagedDatabaseSecurityAlertPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -415,13 +423,13 @@ items:
       content: >-
         function findIndex(predicate: (value:
         ManagedDatabaseSecurityAlertPolicy, index: number, obj:
-        ManagedDatabaseSecurityAlertPolicy[]) => boolean, thisArg?: any)
+        ManagedDatabaseSecurityAlertPolicy[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ManagedDatabaseSecurityAlertPolicy, index: number, obj:
-              ManagedDatabaseSecurityAlertPolicy[]) => boolean
+              ManagedDatabaseSecurityAlertPolicy[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -443,6 +451,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.forEach'
     name: >-
@@ -476,6 +485,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.includes'
+    name: 'includes(ManagedDatabaseSecurityAlertPolicy, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ManagedDatabaseSecurityAlertPolicy,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.indexOf'
     name: 'indexOf(ManagedDatabaseSecurityAlertPolicy, undefined | number)'
     children: []
@@ -502,6 +541,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.join'
     name: join(undefined | string)
@@ -526,6 +566,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.keys'
     name: keys()
@@ -540,6 +581,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.lastIndexOf'
     name: 'lastIndexOf(ManagedDatabaseSecurityAlertPolicy, undefined | number)'
@@ -567,6 +609,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.length'
     name: length
@@ -583,6 +626,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.map'
     name: >-
@@ -620,6 +664,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.nextLink'
     name: nextLink
@@ -639,6 +684,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.pop'
     name: pop()
@@ -653,6 +699,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.push'
     name: 'push(ManagedDatabaseSecurityAlertPolicy[])'
@@ -672,6 +719,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.reduce'
     name: >-
@@ -709,6 +757,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.reduce_1'
     name: >-
@@ -720,10 +769,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -748,6 +794,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.reduce_2'
     name: >-
@@ -788,6 +835,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.reduceRight'
     name: >-
@@ -826,6 +874,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.reduceRight_1'
     name: >-
@@ -837,11 +886,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -866,6 +911,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.reduceRight_2'
     name: >-
@@ -907,6 +953,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.reverse'
     name: reverse()
@@ -921,6 +968,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.shift'
     name: shift()
@@ -935,6 +983,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -960,11 +1009,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.some'
     name: >-
       some((value: ManagedDatabaseSecurityAlertPolicy, index: number, array:
-      ManagedDatabaseSecurityAlertPolicy[]) => boolean, any)
+      ManagedDatabaseSecurityAlertPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -975,14 +1025,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ManagedDatabaseSecurityAlertPolicy,
-        index: number, array: ManagedDatabaseSecurityAlertPolicy[]) => boolean,
+        index: number, array: ManagedDatabaseSecurityAlertPolicy[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ManagedDatabaseSecurityAlertPolicy, index: number, array:
-              ManagedDatabaseSecurityAlertPolicy[]) => boolean
+              ManagedDatabaseSecurityAlertPolicy[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -998,6 +1048,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.sort'
     name: >-
@@ -1027,6 +1078,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.splice_1'
     name: 'splice(number, number, ManagedDatabaseSecurityAlertPolicy[])'
@@ -1060,6 +1112,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1088,6 +1141,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.toLocaleString'
     name: toLocaleString()
@@ -1104,6 +1158,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.toString'
     name: toString()
@@ -1118,6 +1173,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.unshift'
     name: 'unshift(ManagedDatabaseSecurityAlertPolicy[])'
@@ -1137,6 +1193,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult.values'
     name: values()
@@ -1151,6 +1208,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy>

@@ -4,6 +4,7 @@ items:
     name: ReservationOrderResponse
     fullName: ReservationOrderResponse
     children:
+      - '@azure/arm-reservations.ReservationOrderResponse.billingPlan'
       - '@azure/arm-reservations.ReservationOrderResponse.createdDateTime'
       - '@azure/arm-reservations.ReservationOrderResponse.displayName'
       - '@azure/arm-reservations.ReservationOrderResponse.etag'
@@ -11,6 +12,7 @@ items:
       - '@azure/arm-reservations.ReservationOrderResponse.id'
       - '@azure/arm-reservations.ReservationOrderResponse.name'
       - '@azure/arm-reservations.ReservationOrderResponse.originalQuantity'
+      - '@azure/arm-reservations.ReservationOrderResponse.planInformation'
       - '@azure/arm-reservations.ReservationOrderResponse.provisioningState'
       - '@azure/arm-reservations.ReservationOrderResponse.requestDateTime'
       - '@azure/arm-reservations.ReservationOrderResponse.reservations'
@@ -22,6 +24,22 @@ items:
     summary: An interface representing ReservationOrderResponse.
     extends:
       name: BaseResource
+    package: '@azure/arm-reservations'
+  - uid: '@azure/arm-reservations.ReservationOrderResponse.billingPlan'
+    name: billingPlan
+    fullName: billingPlan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Possible values include: ''Upfront'', ''Monthly'''
+    optional: true
+    syntax:
+      content: 'billingPlan?: ReservationBillingPlan'
+      return:
+        type:
+          - '@azure/arm-reservations.ReservationBillingPlan'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.createdDateTime'
     name: createdDateTime
@@ -37,6 +55,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.displayName'
     name: displayName
@@ -52,6 +71,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.etag'
     name: etag
@@ -67,6 +87,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.expiryDate'
     name: expiryDate
@@ -82,6 +103,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.id'
     name: id
@@ -101,6 +123,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.name'
     name: name
@@ -120,6 +143,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.originalQuantity'
     name: originalQuantity
@@ -135,6 +159,23 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
+    package: '@azure/arm-reservations'
+  - uid: '@azure/arm-reservations.ReservationOrderResponse.planInformation'
+    name: planInformation
+    fullName: planInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'planInformation?: ReservationOrderBillingPlanInformation'
+      return:
+        type:
+          - '@azure/arm-reservations.ReservationOrderBillingPlanInformation'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.provisioningState'
     name: provisioningState
@@ -150,6 +191,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.requestDateTime'
     name: requestDateTime
@@ -167,6 +209,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.reservations'
     name: reservations
@@ -182,6 +225,7 @@ items:
       return:
         type:
           - '@azure/arm-reservations.ReservationResponse[]'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.term'
     name: term
@@ -197,6 +241,7 @@ items:
       return:
         type:
           - '@azure/arm-reservations.ReservationTerm'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrderResponse.type'
     name: type
@@ -216,8 +261,21 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-reservations'
 references:
+  - uid: '@azure/arm-reservations.ReservationBillingPlan'
+    name: ReservationBillingPlan
+    spec.typeScript:
+      - name: ReservationBillingPlan
+        fullName: ReservationBillingPlan
+        uid: '@azure/arm-reservations.ReservationBillingPlan'
+  - uid: '@azure/arm-reservations.ReservationOrderBillingPlanInformation'
+    name: ReservationOrderBillingPlanInformation
+    spec.typeScript:
+      - name: ReservationOrderBillingPlanInformation
+        fullName: ReservationOrderBillingPlanInformation
+        uid: '@azure/arm-reservations.ReservationOrderBillingPlanInformation'
   - uid: '@azure/arm-reservations.ReservationResponse[]'
     name: 'ReservationResponse[]'
     spec.typeScript:

@@ -11,12 +11,13 @@ items:
       - '@azure/arm-servicemap.MachineGroupCollection.entries'
       - '@azure/arm-servicemap.MachineGroupCollection.every'
       - '@azure/arm-servicemap.MachineGroupCollection.fill'
-      - '@azure/arm-servicemap.MachineGroupCollection.filter_1'
       - '@azure/arm-servicemap.MachineGroupCollection.filter'
+      - '@azure/arm-servicemap.MachineGroupCollection.filter_1'
       - '@azure/arm-servicemap.MachineGroupCollection.find'
       - '@azure/arm-servicemap.MachineGroupCollection.find_1'
       - '@azure/arm-servicemap.MachineGroupCollection.findIndex'
       - '@azure/arm-servicemap.MachineGroupCollection.forEach'
+      - '@azure/arm-servicemap.MachineGroupCollection.includes'
       - '@azure/arm-servicemap.MachineGroupCollection.indexOf'
       - '@azure/arm-servicemap.MachineGroupCollection.join'
       - '@azure/arm-servicemap.MachineGroupCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.concat'
     name: 'concat(ConcatArray<MachineGroup>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.every'
     name: >-
       every((value: MachineGroup, index: number, array: MachineGroup[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: MachineGroup, index: number, array:
-        MachineGroup[]) => boolean, thisArg?: any)
+        MachineGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: MachineGroup, index: number, array: MachineGroup[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.fill'
     name: 'fill(MachineGroup, undefined | number, undefined | number)'
@@ -233,41 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.MachineGroupCollection.filter_1'
-    name: >-
-      filter((value: MachineGroup, index: number, array: MachineGroup[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: MachineGroup, index: number, array:
-        MachineGroup[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: MachineGroup, index: number, array: MachineGroup[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-servicemap.MachineGroup[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.filter'
     name: >-
@@ -305,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-servicemap'
+  - uid: '@azure/arm-servicemap.MachineGroupCollection.filter_1'
+    name: >-
+      filter((value: MachineGroup, index: number, array: MachineGroup[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: MachineGroup, index: number, array:
+        MachineGroup[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: MachineGroup, index: number, array: MachineGroup[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-servicemap.MachineGroup[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.find'
     name: >-
@@ -350,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.find_1'
     name: >-
-      find((value: MachineGroup, index: number, obj: MachineGroup[]) => boolean,
+      find((value: MachineGroup, index: number, obj: MachineGroup[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: MachineGroup, index: number, obj:
-        MachineGroup[]) => boolean, thisArg?: any)
+        MachineGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: MachineGroup, index: number, obj: MachineGroup[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -383,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup | undefined'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.findIndex'
     name: >-
       findIndex((value: MachineGroup, index: number, obj: MachineGroup[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -400,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: MachineGroup, index: number, obj:
-        MachineGroup[]) => boolean, thisArg?: any)
+        MachineGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: MachineGroup, index: number, obj: MachineGroup[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -428,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.forEach'
     name: >-
@@ -460,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-servicemap'
+  - uid: '@azure/arm-servicemap.MachineGroupCollection.includes'
+    name: 'includes(MachineGroup, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: MachineGroup, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-servicemap.MachineGroup'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.indexOf'
     name: 'indexOf(MachineGroup, undefined | number)'
     children: []
@@ -486,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.join'
     name: join(undefined | string)
@@ -510,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.keys'
     name: keys()
@@ -524,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.lastIndexOf'
     name: 'lastIndexOf(MachineGroup, undefined | number)'
@@ -551,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.length'
     name: length
@@ -567,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.map'
     name: 'map((value: MachineGroup, index: number, array: MachineGroup[]) => U, any)'
@@ -599,6 +645,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.nextLink'
     name: nextLink
@@ -607,13 +654,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The URL to the next set of resources.
     optional: true
     syntax:
       content: 'nextLink?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.pop'
     name: pop()
@@ -628,6 +676,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup | undefined'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.push'
     name: 'push(MachineGroup[])'
@@ -647,6 +696,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.reduce'
     name: >-
@@ -678,6 +728,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.reduce_1'
     name: >-
@@ -688,10 +739,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: MachineGroup, currentValue:
@@ -711,6 +759,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.reduce_2'
     name: >-
@@ -749,6 +798,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.reduceRight'
     name: >-
@@ -781,6 +831,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.reduceRight_1'
     name: >-
@@ -791,11 +842,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: MachineGroup,
@@ -815,6 +862,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.reduceRight_2'
     name: >-
@@ -854,6 +902,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.reverse'
     name: reverse()
@@ -868,6 +917,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.shift'
     name: shift()
@@ -882,6 +932,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup | undefined'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -907,11 +958,12 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.some'
     name: >-
       some((value: MachineGroup, index: number, array: MachineGroup[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -922,13 +974,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: MachineGroup, index: number, array:
-        MachineGroup[]) => boolean, thisArg?: any)
+        MachineGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: MachineGroup, index: number, array: MachineGroup[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -944,6 +996,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.sort'
     name: 'sort(undefined | (a: MachineGroup, b: MachineGroup) => number)'
@@ -968,6 +1021,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.splice_1'
     name: 'splice(number, number, MachineGroup[])'
@@ -1001,6 +1055,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1029,6 +1084,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.MachineGroup[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.toLocaleString'
     name: toLocaleString()
@@ -1045,6 +1101,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.toString'
     name: toString()
@@ -1059,6 +1116,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.unshift'
     name: 'unshift(MachineGroup[])'
@@ -1078,6 +1136,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineGroupCollection.values'
     name: values()
@@ -1092,6 +1151,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-servicemap.MachineGroup>
+        description: ''
     package: '@azure/arm-servicemap'
 references:
   - uid: Array<@azure/arm-servicemap.MachineGroup>

@@ -26,13 +26,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The authorization key.
+    summary: >-
+      The authorization key.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'authorizationKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuitAuthorization.authorizationUseStatus'
     name: authorizationUseStatus
@@ -44,12 +49,16 @@ items:
     summary: >-
       The authorization use status. Possible values include: 'Available',
       'InUse'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'authorizationUseStatus?: AuthorizationUseStatus'
       return:
         type:
           - '@azure/arm-network.AuthorizationUseStatus'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuitAuthorization.etag'
     name: etag
@@ -69,6 +78,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuitAuthorization.id'
     name: id
@@ -84,6 +94,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuitAuthorization.name'
     name: name
@@ -93,8 +104,8 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets name of the resource that is unique within a resource group. This
-      name can be used to
+      The name of the resource that is unique within a resource group. This name
+      can be used to
 
       access the resource.
     optional: true
@@ -103,6 +114,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuitAuthorization.provisioningState'
     name: provisioningState
@@ -112,16 +124,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets the provisioning state of the public IP resource. Possible values
-      are: 'Updating',
+      The provisioning state of the authorization resource. Possible values
+      include: 'Succeeded',
 
-      'Deleting', and 'Failed'.
+      'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuitAuthorization.type'
     name: type
@@ -141,6 +157,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -155,3 +172,9 @@ references:
       - name: AuthorizationUseStatus
         fullName: AuthorizationUseStatus
         uid: '@azure/arm-network.AuthorizationUseStatus'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

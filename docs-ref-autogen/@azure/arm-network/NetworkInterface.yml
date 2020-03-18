@@ -44,6 +44,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceDnsSettings'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.enableAcceleratedNetworking'
     name: enableAcceleratedNetworking
@@ -59,6 +60,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.enableIPForwarding'
     name: enableIPForwarding
@@ -74,6 +76,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.etag'
     name: etag
@@ -82,13 +85,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.hostedWorkloads'
     name: hostedWorkloads
@@ -108,6 +116,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.id'
     name: id
@@ -123,6 +132,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.ipConfigurations'
     name: ipConfigurations
@@ -138,6 +148,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.location'
     name: location
@@ -153,6 +164,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.macAddress'
     name: macAddress
@@ -161,13 +173,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The MAC address of the network interface.
+    summary: >-
+      The MAC address of the network interface.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'macAddress?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.name'
     name: name
@@ -187,6 +204,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.networkSecurityGroup'
     name: networkSecurityGroup
@@ -202,6 +220,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkSecurityGroup'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.primary'
     name: primary
@@ -210,13 +229,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Gets whether this is a primary network interface on a virtual machine.
+    summary: >-
+      Whether this is a primary network interface on a virtual machine.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'primary?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.privateEndpoint'
     name: privateEndpoint
@@ -237,6 +261,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PrivateEndpoint'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.provisioningState'
     name: provisioningState
@@ -246,16 +271,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the public IP resource. Possible values are:
-      'Updating', 'Deleting',
+      The provisioning state of the network interface resource. Possible values
+      include:
 
-      and 'Failed'.
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.resourceGuid'
     name: resourceGuid
@@ -264,13 +293,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The resource GUID property of the network interface resource.
+    summary: >-
+      The resource GUID property of the network interface resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'resourceGuid?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.tags'
     name: tags
@@ -286,6 +320,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.tapConfigurations'
     name: tapConfigurations
@@ -294,13 +329,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A list of TapConfigurations of the network interface.
+    summary: >-
+      A list of TapConfigurations of the network interface.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'tapConfigurations?: NetworkInterfaceTapConfiguration[]'
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.type'
     name: type
@@ -320,6 +360,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.virtualMachine'
     name: virtualMachine
@@ -339,6 +380,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -373,6 +415,12 @@ references:
       - name: PrivateEndpoint
         fullName: PrivateEndpoint
         uid: '@azure/arm-network.PrivateEndpoint'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
     name: 'NetworkInterfaceTapConfiguration[]'
     spec.typeScript:

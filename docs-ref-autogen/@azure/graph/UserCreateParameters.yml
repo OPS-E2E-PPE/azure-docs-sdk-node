@@ -18,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Request parameters for creating a new work or school account user.
     extends:
       name: '@azure/graph.UserBase'
     package: '@azure/graph'
@@ -29,12 +29,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Whether the account is enabled.
     syntax:
       content: 'accountEnabled: boolean'
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserCreateParameters.displayName'
     name: displayName
@@ -43,12 +44,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The display name of the user.
     syntax:
       content: 'displayName: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserCreateParameters.givenName'
     name: givenName
@@ -57,13 +59,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The given name for the user.
     optional: true
     syntax:
       content: 'givenName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserCreateParameters.immutableId'
     name: immutableId
@@ -72,13 +75,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      This must be specified if you are using a federated domain for the user's
+      userPrincipalName
+
+      (UPN) property when creating a new user account. It is used to associate
+      an on-premises Active
+
+      Directory user account with their Azure AD user object.
     optional: true
     syntax:
       content: 'immutableId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserCreateParameters.mail'
     name: mail
@@ -87,13 +98,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The primary email address of the user.
     optional: true
     syntax:
       content: 'mail?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserCreateParameters.mailNickname'
     name: mailNickname
@@ -102,12 +114,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The mail alias for the user.
     syntax:
       content: 'mailNickname: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserCreateParameters.passwordProfile'
     name: passwordProfile
@@ -116,12 +129,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Password Profile
     syntax:
       content: 'passwordProfile: PasswordProfile'
       return:
         type:
           - '@azure/graph.PasswordProfile'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserCreateParameters.surname'
     name: surname
@@ -130,13 +144,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The user's surname (family name or last name).
     optional: true
     syntax:
       content: 'surname?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserCreateParameters.usageLocation'
     name: usageLocation
@@ -145,13 +160,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A two letter country code (ISO standard 3166). Required for users that
+      will be assigned
+
+      licenses due to legal requirement to check for availability of services in
+      countries. Examples
+
+      include: "US", "JP", and "GB".
     optional: true
     syntax:
       content: 'usageLocation?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserCreateParameters.userPrincipalName'
     name: userPrincipalName
@@ -160,12 +183,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The user principal name (someuser@contoso.com). It must contain one of the
+      verified domains
+
+      for the tenant.
     syntax:
       content: 'userPrincipalName: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserCreateParameters.userType'
     name: userType
@@ -174,13 +202,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A string value that can be used to classify user types in your directory,
+      such as 'Member' and
+
+      'Guest'. Possible values include: 'Member', 'Guest'
     optional: true
     syntax:
       content: 'userType?: UserType'
       return:
         type:
           - '@azure/graph.UserType'
+        description: ''
     package: '@azure/graph'
 references:
   - uid: '@azure/graph.UserBase'

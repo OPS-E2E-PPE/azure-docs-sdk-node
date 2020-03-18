@@ -6,6 +6,8 @@ items:
     children:
       - '@azure/servicefabric.StatelessServicePartitionInfo.healthState'
       - '@azure/servicefabric.StatelessServicePartitionInfo.instanceCount'
+      - '@azure/servicefabric.StatelessServicePartitionInfo.minInstanceCount'
+      - '@azure/servicefabric.StatelessServicePartitionInfo.minInstancePercentage'
       - '@azure/servicefabric.StatelessServicePartitionInfo.partitionInformation'
       - '@azure/servicefabric.StatelessServicePartitionInfo.partitionStatus'
       - '@azure/servicefabric.StatelessServicePartitionInfo.serviceKind'
@@ -35,6 +37,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.HealthState'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatelessServicePartitionInfo.instanceCount'
     name: instanceCount
@@ -50,6 +53,75 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServicePartitionInfo.minInstanceCount'
+    name: minInstanceCount
+    fullName: minInstanceCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      MinInstanceCount is the minimum number of instances that must be up to
+      meet the
+
+      EnsureAvailability safety check during operations like upgrade or
+      deactivate node.
+
+      The actual number that is used is max( MinInstanceCount, ceil(
+      MinInstancePercentage/100.0 *
+
+      InstanceCount) ).
+
+      Note, if InstanceCount is set to -1, during MinInstanceCount computation
+      -1 is first converted
+
+      into the number of nodes on which the instances are allowed to be placed
+      according to the
+
+      placement constraints on the service.
+    optional: true
+    syntax:
+      content: 'minInstanceCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServicePartitionInfo.minInstancePercentage'
+    name: minInstancePercentage
+    fullName: minInstancePercentage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      MinInstancePercentage is the minimum percentage of InstanceCount that must
+      be up to meet the
+
+      EnsureAvailability safety check during operations like upgrade or
+      deactivate node.
+
+      The actual number that is used is max( MinInstanceCount, ceil(
+      MinInstancePercentage/100.0 *
+
+      InstanceCount) ).
+
+      Note, if InstanceCount is set to -1, during MinInstancePercentage
+      computation, -1 is first
+
+      converted into the number of nodes on which the instances are allowed to
+      be placed according
+
+      to the placement constraints on the service.
+    optional: true
+    syntax:
+      content: 'minInstancePercentage?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatelessServicePartitionInfo.partitionInformation'
     name: partitionInformation
@@ -67,6 +139,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.PartitionInformationUnion'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatelessServicePartitionInfo.partitionStatus'
     name: partitionStatus
@@ -86,6 +159,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.ServicePartitionStatus'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatelessServicePartitionInfo.serviceKind'
     name: serviceKind
@@ -100,6 +174,7 @@ items:
       return:
         type:
           - '"Stateless"'
+        description: ''
     package: '@azure/servicefabric'
 references:
   - uid: '@azure/servicefabric.HealthState'

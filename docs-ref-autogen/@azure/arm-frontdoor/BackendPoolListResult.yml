@@ -11,12 +11,13 @@ items:
       - '@azure/arm-frontdoor.BackendPoolListResult.entries'
       - '@azure/arm-frontdoor.BackendPoolListResult.every'
       - '@azure/arm-frontdoor.BackendPoolListResult.fill'
-      - '@azure/arm-frontdoor.BackendPoolListResult.filter_1'
       - '@azure/arm-frontdoor.BackendPoolListResult.filter'
+      - '@azure/arm-frontdoor.BackendPoolListResult.filter_1'
       - '@azure/arm-frontdoor.BackendPoolListResult.find'
       - '@azure/arm-frontdoor.BackendPoolListResult.find_1'
       - '@azure/arm-frontdoor.BackendPoolListResult.findIndex'
       - '@azure/arm-frontdoor.BackendPoolListResult.forEach'
+      - '@azure/arm-frontdoor.BackendPoolListResult.includes'
       - '@azure/arm-frontdoor.BackendPoolListResult.indexOf'
       - '@azure/arm-frontdoor.BackendPoolListResult.join'
       - '@azure/arm-frontdoor.BackendPoolListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.concat'
     name: 'concat(ConcatArray<BackendPool>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.every'
     name: >-
       every((value: BackendPool, index: number, array: BackendPool[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: BackendPool, index: number, array:
-        BackendPool[]) => boolean, thisArg?: any)
+        BackendPool[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: BackendPool, index: number, array: BackendPool[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.fill'
     name: 'fill(BackendPool, undefined | number, undefined | number)'
@@ -233,41 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-frontdoor'
-  - uid: '@azure/arm-frontdoor.BackendPoolListResult.filter_1'
-    name: >-
-      filter((value: BackendPool, index: number, array: BackendPool[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: BackendPool, index: number, array:
-        BackendPool[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: BackendPool, index: number, array: BackendPool[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-frontdoor.BackendPool[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.filter'
     name: >-
@@ -305,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPoolListResult.filter_1'
+    name: >-
+      filter((value: BackendPool, index: number, array: BackendPool[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: BackendPool, index: number, array:
+        BackendPool[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: BackendPool, index: number, array: BackendPool[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-frontdoor.BackendPool[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.find'
     name: >-
@@ -350,28 +362,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.find_1'
     name: >-
-      find((value: BackendPool, index: number, obj: BackendPool[]) => boolean,
+      find((value: BackendPool, index: number, obj: BackendPool[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: BackendPool, index: number, obj:
-        BackendPool[]) => boolean, thisArg?: any)
+        BackendPool[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: BackendPool, index: number, obj: BackendPool[]) => boolean'
+            - '(value: BackendPool, index: number, obj: BackendPool[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -381,11 +390,12 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool | undefined'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.findIndex'
     name: >-
       findIndex((value: BackendPool, index: number, obj: BackendPool[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -398,11 +408,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: BackendPool, index: number, obj:
-        BackendPool[]) => boolean, thisArg?: any)
+        BackendPool[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: BackendPool, index: number, obj: BackendPool[]) => boolean'
+            - '(value: BackendPool, index: number, obj: BackendPool[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -424,6 +434,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.forEach'
     name: >-
@@ -454,6 +465,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPoolListResult.includes'
+    name: 'includes(BackendPool, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: BackendPool, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-frontdoor.BackendPool'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.indexOf'
     name: 'indexOf(BackendPool, undefined | number)'
     children: []
@@ -480,6 +521,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.join'
     name: join(undefined | string)
@@ -504,6 +546,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.keys'
     name: keys()
@@ -518,6 +561,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.lastIndexOf'
     name: 'lastIndexOf(BackendPool, undefined | number)'
@@ -545,6 +589,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.length'
     name: length
@@ -561,6 +606,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.map'
     name: 'map((value: BackendPool, index: number, array: BackendPool[]) => U, any)'
@@ -593,6 +639,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.nextLink'
     name: nextLink
@@ -608,6 +655,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.pop'
     name: pop()
@@ -622,6 +670,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool | undefined'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.push'
     name: 'push(BackendPool[])'
@@ -641,6 +690,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.reduce'
     name: >-
@@ -671,6 +721,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.reduce_1'
     name: >-
@@ -680,10 +731,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: BackendPool, currentValue:
@@ -703,6 +751,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.reduce_2'
     name: >-
@@ -741,6 +790,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.reduceRight'
     name: >-
@@ -773,6 +823,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.reduceRight_1'
     name: >-
@@ -782,11 +833,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: BackendPool,
@@ -806,6 +853,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.reduceRight_2'
     name: >-
@@ -845,6 +893,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.reverse'
     name: reverse()
@@ -859,6 +908,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.shift'
     name: shift()
@@ -873,6 +923,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool | undefined'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -898,10 +949,11 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.some'
     name: >-
-      some((value: BackendPool, index: number, array: BackendPool[]) => boolean,
+      some((value: BackendPool, index: number, array: BackendPool[]) => unknown,
       any)
     children: []
     type: method
@@ -913,13 +965,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: BackendPool, index: number, array:
-        BackendPool[]) => boolean, thisArg?: any)
+        BackendPool[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: BackendPool, index: number, array: BackendPool[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -935,6 +987,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.sort'
     name: 'sort(undefined | (a: BackendPool, b: BackendPool) => number)'
@@ -959,6 +1012,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.splice_1'
     name: 'splice(number, number, BackendPool[])'
@@ -992,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1020,6 +1075,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.BackendPool[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.toLocaleString'
     name: toLocaleString()
@@ -1036,6 +1092,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.toString'
     name: toString()
@@ -1050,6 +1107,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.unshift'
     name: 'unshift(BackendPool[])'
@@ -1069,6 +1127,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.BackendPoolListResult.values'
     name: values()
@@ -1083,6 +1142,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-frontdoor.BackendPool>
+        description: ''
     package: '@azure/arm-frontdoor'
 references:
   - uid: Array<@azure/arm-frontdoor.BackendPool>

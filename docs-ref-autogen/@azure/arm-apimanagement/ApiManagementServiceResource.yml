@@ -59,6 +59,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.AdditionalLocation[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.certificates'
     name: certificates
@@ -78,6 +79,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.CertificateConfiguration[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.createdAtUtc'
     name: createdAtUtc
@@ -100,6 +102,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.customProperties'
     name: customProperties
@@ -109,29 +112,75 @@ items:
       - typeScript
     type: property
     summary: >-
-      Custom properties of the API Management service. Setting
+      Custom properties of the API Management service.</br>Setting
 
       `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168`
       will disable the
 
-      cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).
-      Setting
+      cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and
+      1.2).</br>Setting
 
       `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11`
       can be used to disable
 
-      just TLS 1.1 and setting
+      just TLS 1.1.</br>Setting
 
       `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10`
       can be used to disable
 
-      TLS 1.0 on an API Management service.
+      TLS 1.0 on an API Management service.</br>Setting
+
+      `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11`
+      can be used to
+
+      disable just TLS 1.1 for communications with backends.</br>Setting
+
+      `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10`
+      can be used to
+
+      disable TLS 1.0 for communications with backends.</br>Setting
+
+      `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can
+      be used to enable
+
+      HTTP2 protocol on an API Management service.</br>Not specifying any of
+      these properties on
+
+      PATCH operation will reset omitted properties' values to their defaults.
+      For all the settings
+
+      except Http2 the default value is `True` if the service was created on or
+      before April 1st
+
+      2018 and `False` otherwise. Http2 setting's default value is
+      `False`.</br></br>You can disable
+
+      any of next ciphers by using settings
+
+      `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`:
+
+      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,
+      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,
+
+      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,
+
+      TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256,
+
+      TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA,
+      TLS_RSA_WITH_AES_128_CBC_SHA.
+
+      For example,
+
+      `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`.
+
+      The default value is `true` for them.
     optional: true
     syntax:
       content: 'customProperties?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: >-
       @azure/arm-apimanagement.ApiManagementServiceResource.enableClientCertificate
@@ -155,6 +204,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.etag'
     name: etag
@@ -174,6 +224,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.gatewayRegionalUrl'
     name: gatewayRegionalUrl
@@ -193,6 +244,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.gatewayUrl'
     name: gatewayUrl
@@ -212,6 +264,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: >-
       @azure/arm-apimanagement.ApiManagementServiceResource.hostnameConfigurations
@@ -228,6 +281,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.HostnameConfiguration[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.id'
     name: id
@@ -247,6 +301,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.identity'
     name: identity
@@ -262,6 +317,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceIdentity'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.location'
     name: location
@@ -276,6 +332,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.managementApiUrl'
     name: managementApiUrl
@@ -295,6 +352,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.name'
     name: name
@@ -314,6 +372,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: >-
       @azure/arm-apimanagement.ApiManagementServiceResource.notificationSenderEmail
@@ -330,6 +389,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.portalUrl'
     name: portalUrl
@@ -349,6 +409,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.privateIPAddresses'
     name: privateIPAddresses
@@ -374,6 +435,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.provisioningState'
     name: provisioningState
@@ -398,6 +460,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.publicIPAddresses'
     name: publicIPAddresses
@@ -420,6 +483,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.publisherEmail'
     name: publisherEmail
@@ -434,6 +498,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.publisherName'
     name: publisherName
@@ -448,6 +513,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.scmUrl'
     name: scmUrl
@@ -467,6 +533,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.sku'
     name: sku
@@ -481,6 +548,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceSkuProperties'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.tags'
     name: tags
@@ -496,6 +564,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: >-
       @azure/arm-apimanagement.ApiManagementServiceResource.targetProvisioningState
@@ -519,6 +588,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.type'
     name: type
@@ -539,6 +609,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: >-
       @azure/arm-apimanagement.ApiManagementServiceResource.virtualNetworkConfiguration
@@ -555,6 +626,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.VirtualNetworkConfiguration'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceResource.virtualNetworkType'
     name: virtualNetworkType
@@ -586,6 +658,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.VirtualNetworkType'
+        description: ''
     package: '@azure/arm-apimanagement'
 references:
   - uid: '@azure/arm-apimanagement.ApimResource'

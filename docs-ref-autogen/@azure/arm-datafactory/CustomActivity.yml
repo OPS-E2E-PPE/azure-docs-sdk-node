@@ -14,12 +14,13 @@ items:
       - '@azure/arm-datafactory.CustomActivity.policy'
       - '@azure/arm-datafactory.CustomActivity.referenceObjects'
       - '@azure/arm-datafactory.CustomActivity.resourceLinkedService'
+      - '@azure/arm-datafactory.CustomActivity.retentionTimeInDays'
       - '@azure/arm-datafactory.CustomActivity.type'
       - '@azure/arm-datafactory.CustomActivity.userProperties'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Custom activity type.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.command'
     name: command
@@ -28,12 +29,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Command for custom activity Type: string (or Expression with resultType
+      string).
     syntax:
       content: 'command: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.dependsOn'
     name: dependsOn
@@ -42,13 +46,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity depends on condition.
     optional: true
     syntax:
       content: 'dependsOn?: ActivityDependency[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityDependency[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.description'
     name: description
@@ -57,13 +62,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.extendedProperties'
     name: extendedProperties
@@ -72,13 +78,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      User defined property bag. There is no restriction on the keys or values
+      that can be used. The
+
+      user specified custom activity has the full responsibility to consume and
+      interpret the
+
+      content defined.
     optional: true
     syntax:
       content: 'extendedProperties?: undefined | [key: string]: any'
       return:
         type:
           - 'undefined | [key: string]: any'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.folderPath'
     name: folderPath
@@ -87,13 +101,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Folder path for resource files Type: string (or Expression with resultType
+      string).
     optional: true
     syntax:
       content: 'folderPath?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.linkedServiceName'
     name: linkedServiceName
@@ -102,13 +119,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     optional: true
     syntax:
       content: 'linkedServiceName?: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.name'
     name: name
@@ -117,12 +135,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity name.
     syntax:
       content: 'name: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.policy'
     name: policy
@@ -131,13 +150,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity policy.
     optional: true
     syntax:
       content: 'policy?: ActivityPolicy'
       return:
         type:
           - '@azure/arm-datafactory.ActivityPolicy'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.referenceObjects'
     name: referenceObjects
@@ -146,13 +166,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Reference objects
     optional: true
     syntax:
       content: 'referenceObjects?: CustomActivityReferenceObject'
       return:
         type:
           - '@azure/arm-datafactory.CustomActivityReferenceObject'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.resourceLinkedService'
     name: resourceLinkedService
@@ -161,13 +182,34 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource linked service reference.
     optional: true
     syntax:
       content: 'resourceLinkedService?: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.CustomActivity.retentionTimeInDays'
+    name: retentionTimeInDays
+    fullName: retentionTimeInDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The retention time for the files submitted for custom activity. Type:
+      double (or Expression
+
+      with resultType double).
+    optional: true
+    syntax:
+      content: 'retentionTimeInDays?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.type'
     name: type
@@ -176,12 +218,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Custom"'
       return:
         type:
           - '"Custom"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CustomActivity.userProperties'
     name: userProperties
@@ -190,13 +233,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity user properties.
     optional: true
     syntax:
       content: 'userProperties?: UserProperty[]'
       return:
         type:
           - '@azure/arm-datafactory.UserProperty[]'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.ActivityDependency[]'

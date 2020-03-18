@@ -13,7 +13,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: '@azure/arm-databox'
@@ -31,6 +31,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobsListOptionalParams.customHeaders'
     name: customHeaders
@@ -48,6 +49,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobsListOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -65,6 +67,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobsListOptionalParams.onUploadProgress'
     name: onUploadProgress
@@ -80,6 +83,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobsListOptionalParams.skipToken'
     name: skipToken
@@ -88,13 +92,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      $skipToken is supported on Get list of jobs, which provides the next page
+      in the list of jobs.
     optional: true
     syntax:
       content: 'skipToken?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobsListOptionalParams.timeout'
     name: timeout
@@ -112,4 +119,5 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-databox'

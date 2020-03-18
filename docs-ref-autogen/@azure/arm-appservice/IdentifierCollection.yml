@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.IdentifierCollection.entries'
       - '@azure/arm-appservice.IdentifierCollection.every'
       - '@azure/arm-appservice.IdentifierCollection.fill'
-      - '@azure/arm-appservice.IdentifierCollection.filter_1'
       - '@azure/arm-appservice.IdentifierCollection.filter'
+      - '@azure/arm-appservice.IdentifierCollection.filter_1'
       - '@azure/arm-appservice.IdentifierCollection.find'
       - '@azure/arm-appservice.IdentifierCollection.find_1'
       - '@azure/arm-appservice.IdentifierCollection.findIndex'
       - '@azure/arm-appservice.IdentifierCollection.forEach'
+      - '@azure/arm-appservice.IdentifierCollection.includes'
       - '@azure/arm-appservice.IdentifierCollection.indexOf'
       - '@azure/arm-appservice.IdentifierCollection.join'
       - '@azure/arm-appservice.IdentifierCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.concat'
     name: 'concat(ConcatArray<Identifier>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.entries'
     name: entries()
@@ -158,10 +163,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.every'
     name: >-
-      every((value: Identifier, index: number, array: Identifier[]) => boolean,
+      every((value: Identifier, index: number, array: Identifier[]) => unknown,
       any)
     children: []
     type: method
@@ -171,11 +177,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Identifier, index: number, array:
-        Identifier[]) => boolean, thisArg?: any)
+        Identifier[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Identifier, index: number, array: Identifier[]) => boolean'
+            - '(value: Identifier, index: number, array: Identifier[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -191,6 +197,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.fill'
     name: 'fill(Identifier, undefined | number, undefined | number)'
@@ -231,41 +238,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.IdentifierCollection.filter_1'
-    name: >-
-      filter((value: Identifier, index: number, array: Identifier[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Identifier, index: number, array:
-        Identifier[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Identifier, index: number, array: Identifier[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.Identifier[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.filter'
     name: >-
@@ -301,6 +274,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.IdentifierCollection.filter_1'
+    name: >-
+      filter((value: Identifier, index: number, array: Identifier[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Identifier, index: number, array:
+        Identifier[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Identifier, index: number, array: Identifier[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.Identifier[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.find'
     name: >-
@@ -346,28 +356,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.find_1'
     name: >-
-      find((value: Identifier, index: number, obj: Identifier[]) => boolean,
+      find((value: Identifier, index: number, obj: Identifier[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Identifier, index: number, obj:
-        Identifier[]) => boolean, thisArg?: any)
+        Identifier[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Identifier, index: number, obj: Identifier[]) => boolean'
+            - '(value: Identifier, index: number, obj: Identifier[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -377,11 +384,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.findIndex'
     name: >-
       findIndex((value: Identifier, index: number, obj: Identifier[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -394,11 +402,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Identifier, index: number, obj:
-        Identifier[]) => boolean, thisArg?: any)
+        Identifier[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Identifier, index: number, obj: Identifier[]) => boolean'
+            - '(value: Identifier, index: number, obj: Identifier[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -420,6 +428,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.forEach'
     name: >-
@@ -450,6 +459,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.IdentifierCollection.includes'
+    name: 'includes(Identifier, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Identifier, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.Identifier'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.indexOf'
     name: 'indexOf(Identifier, undefined | number)'
     children: []
@@ -476,6 +515,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.join'
     name: join(undefined | string)
@@ -500,6 +540,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.keys'
     name: keys()
@@ -514,6 +555,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.lastIndexOf'
     name: 'lastIndexOf(Identifier, undefined | number)'
@@ -541,6 +583,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.length'
     name: length
@@ -557,6 +600,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.map'
     name: 'map((value: Identifier, index: number, array: Identifier[]) => U, any)'
@@ -589,6 +633,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.nextLink'
     name: nextLink
@@ -608,6 +653,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.pop'
     name: pop()
@@ -622,6 +668,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.push'
     name: 'push(Identifier[])'
@@ -641,6 +688,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.reduce'
     name: >-
@@ -671,6 +719,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.reduce_1'
     name: >-
@@ -680,10 +729,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Identifier, currentValue:
@@ -703,6 +749,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.reduce_2'
     name: >-
@@ -741,6 +788,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.reduceRight'
     name: >-
@@ -773,6 +821,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.reduceRight_1'
     name: >-
@@ -782,11 +831,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Identifier,
@@ -806,6 +851,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.reduceRight_2'
     name: >-
@@ -845,6 +891,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.reverse'
     name: reverse()
@@ -859,6 +906,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.shift'
     name: shift()
@@ -873,6 +921,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -898,10 +947,11 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.some'
     name: >-
-      some((value: Identifier, index: number, array: Identifier[]) => boolean,
+      some((value: Identifier, index: number, array: Identifier[]) => unknown,
       any)
     children: []
     type: method
@@ -913,11 +963,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Identifier, index: number, array:
-        Identifier[]) => boolean, thisArg?: any)
+        Identifier[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Identifier, index: number, array: Identifier[]) => boolean'
+            - '(value: Identifier, index: number, array: Identifier[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -933,6 +983,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.sort'
     name: 'sort(undefined | (a: Identifier, b: Identifier) => number)'
@@ -957,6 +1008,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.splice_1'
     name: 'splice(number, number, Identifier[])'
@@ -988,6 +1040,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1016,6 +1069,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Identifier[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.toLocaleString'
     name: toLocaleString()
@@ -1032,6 +1086,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.toString'
     name: toString()
@@ -1046,6 +1101,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.unshift'
     name: 'unshift(Identifier[])'
@@ -1065,6 +1121,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.IdentifierCollection.values'
     name: values()
@@ -1079,6 +1136,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-appservice.Identifier>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.Identifier>

@@ -12,6 +12,7 @@ items:
       - '@azure/arm-network.ApplicationGatewayRequestRoutingRule.httpListener'
       - '@azure/arm-network.ApplicationGatewayRequestRoutingRule.id'
       - '@azure/arm-network.ApplicationGatewayRequestRoutingRule.name'
+      - '@azure/arm-network.ApplicationGatewayRequestRoutingRule.priority'
       - >-
         @azure/arm-network.ApplicationGatewayRequestRoutingRule.provisioningState
       - >-
@@ -41,6 +42,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayRequestRoutingRule.backendHttpSettings
@@ -57,6 +59,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRequestRoutingRule.etag'
     name: etag
@@ -65,13 +68,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRequestRoutingRule.httpListener'
     name: httpListener
@@ -87,6 +95,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRequestRoutingRule.id'
     name: id
@@ -102,6 +111,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRequestRoutingRule.name'
     name: name
@@ -119,6 +129,23 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayRequestRoutingRule.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Priority of the request routing rule.
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRequestRoutingRule.provisioningState'
     name: provisioningState
@@ -128,16 +155,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Provisioning state of the request routing rule resource. Possible values
-      are: 'Updating',
+      The provisioning state of the request routing rule resource. Possible
+      values include:
 
-      'Deleting', and 'Failed'.
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayRequestRoutingRule.redirectConfiguration
@@ -154,6 +185,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRequestRoutingRule.rewriteRuleSet'
     name: rewriteRuleSet
@@ -169,6 +201,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRequestRoutingRule.ruleType'
     name: ruleType
@@ -184,6 +217,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewayRequestRoutingRuleType'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRequestRoutingRule.type'
     name: type
@@ -192,13 +226,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Type of the resource.
+    summary: >-
+      Type of the resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRequestRoutingRule.urlPathMap'
     name: urlPathMap
@@ -214,6 +253,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -222,6 +262,12 @@ references:
       - name: SubResource
         fullName: SubResource
         uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.ApplicationGatewayRequestRoutingRuleType'
     name: ApplicationGatewayRequestRoutingRuleType
     spec.typeScript:

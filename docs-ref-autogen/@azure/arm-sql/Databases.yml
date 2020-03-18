@@ -8,6 +8,7 @@ items:
       - '@azure/arm-sql.Databases.beginCreateOrUpdate'
       - '@azure/arm-sql.Databases.beginDeleteMethod'
       - '@azure/arm-sql.Databases.beginExportMethod'
+      - '@azure/arm-sql.Databases.beginFailover'
       - '@azure/arm-sql.Databases.beginImportMethod'
       - '@azure/arm-sql.Databases.beginPause'
       - '@azure/arm-sql.Databases.beginResume'
@@ -18,6 +19,7 @@ items:
       - '@azure/arm-sql.Databases.constructor'
       - '@azure/arm-sql.Databases.deleteMethod'
       - '@azure/arm-sql.Databases.exportMethod'
+      - '@azure/arm-sql.Databases.failover'
       - '@azure/arm-sql.Databases.get'
       - '@azure/arm-sql.Databases.get_2'
       - '@azure/arm-sql.Databases.get_1'
@@ -97,6 +99,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.beginCreateOrUpdate'
     name: >-
@@ -139,6 +142,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
@@ -174,6 +178,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.beginExportMethod'
     name: >-
@@ -216,6 +221,46 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.beginFailover'
+    name: >-
+      beginFailover(string, string, string,
+      Models.DatabasesBeginFailoverOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Failovers a database.
+    syntax:
+      content: >-
+        function beginFailover(resourceGroupName: string, serverName: string,
+        databaseName: string, options?:
+        Models.DatabasesBeginFailoverOptionalParams)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |-
+            The name of the resource group that contains the resource. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+        - id: serverName
+          type:
+            - string
+          description: The name of the server.
+        - id: databaseName
+          type:
+            - string
+          description: The name of the database to failover.
+        - id: options
+          type:
+            - Models.DatabasesBeginFailoverOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.beginImportMethod'
     name: >-
@@ -253,6 +298,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.beginPause'
     name: 'beginPause(string, string, string, msRest.RequestOptionsBase)'
@@ -288,6 +334,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.beginResume'
     name: 'beginResume(string, string, string, msRest.RequestOptionsBase)'
@@ -323,6 +370,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.beginUpdate'
     name: >-
@@ -365,6 +413,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.beginUpgradeDataWarehouse'
     name: >-
@@ -403,6 +452,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.createImportOperation'
     name: >-
@@ -449,6 +499,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesCreateImportOperationResponse>
+        description: Promise<Models.DatabasesCreateImportOperationResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.createOrUpdate'
     name: >-
@@ -491,6 +542,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesCreateOrUpdateResponse>
+        description: Promise<Models.DatabasesCreateOrUpdateResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.constructor'
     name: Databases(SqlManagementClientContext)
@@ -542,6 +594,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.exportMethod'
     name: >-
@@ -584,6 +637,43 @@ items:
       return:
         type:
           - Promise<Models.DatabasesExportMethodResponse>
+        description: Promise<Models.DatabasesExportMethodResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.failover'
+    name: 'failover(string, string, string, Models.DatabasesFailoverOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Failovers a database.
+    syntax:
+      content: >-
+        function failover(resourceGroupName: string, serverName: string,
+        databaseName: string, options?: Models.DatabasesFailoverOptionalParams)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |-
+            The name of the resource group that contains the resource. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+        - id: serverName
+          type:
+            - string
+          description: The name of the server.
+        - id: databaseName
+          type:
+            - string
+          description: The name of the database to failover.
+        - id: options
+          type:
+            - Models.DatabasesFailoverOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.get'
     name: 'get(string, string, string, msRest.RequestOptionsBase)'
@@ -619,6 +709,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesGetResponse>
+        description: Promise<Models.DatabasesGetResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.get_2'
     name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Database>)'
@@ -656,9 +747,6 @@ items:
             - ServiceCallback<@azure/arm-sql.Database>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesGetResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.get_1'
     name: 'get(string, string, string, ServiceCallback<Database>)'
@@ -691,9 +779,6 @@ items:
             - ServiceCallback<@azure/arm-sql.Database>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesGetResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.importMethod'
     name: 'importMethod(string, string, ImportRequest, msRest.RequestOptionsBase)'
@@ -729,6 +814,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesImportMethodResponse>
+        description: Promise<Models.DatabasesImportMethodResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByElasticPool'
     name: 'listByElasticPool(string, string, string, msRest.RequestOptionsBase)'
@@ -764,6 +850,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesListByElasticPoolResponse>
+        description: Promise<Models.DatabasesListByElasticPoolResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByElasticPool_2'
     name: >-
@@ -803,9 +890,6 @@ items:
             - ServiceCallback<@azure/arm-sql.DatabaseListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListByElasticPoolResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByElasticPool_1'
     name: >-
@@ -841,9 +925,6 @@ items:
             - ServiceCallback<@azure/arm-sql.DatabaseListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListByElasticPoolResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByElasticPoolNext'
     name: 'listByElasticPoolNext(string, msRest.RequestOptionsBase)'
@@ -869,6 +950,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesListByElasticPoolNextResponse>
+        description: Promise<Models.DatabasesListByElasticPoolNextResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByElasticPoolNext_2'
     name: >-
@@ -897,9 +979,6 @@ items:
             - ServiceCallback<@azure/arm-sql.DatabaseListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListByElasticPoolNextResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByElasticPoolNext_1'
     name: 'listByElasticPoolNext(string, ServiceCallback<DatabaseListResult>)'
@@ -922,9 +1001,6 @@ items:
             - ServiceCallback<@azure/arm-sql.DatabaseListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListByElasticPoolNextResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByServer'
     name: 'listByServer(string, string, msRest.RequestOptionsBase)'
@@ -956,6 +1032,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesListByServerResponse>
+        description: Promise<Models.DatabasesListByServerResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByServer_2'
     name: >-
@@ -991,9 +1068,6 @@ items:
             - ServiceCallback<@azure/arm-sql.DatabaseListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListByServerResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByServer_1'
     name: 'listByServer(string, string, ServiceCallback<DatabaseListResult>)'
@@ -1022,9 +1096,6 @@ items:
             - ServiceCallback<@azure/arm-sql.DatabaseListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListByServerResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByServerNext'
     name: 'listByServerNext(string, msRest.RequestOptionsBase)'
@@ -1050,6 +1121,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesListByServerNextResponse>
+        description: Promise<Models.DatabasesListByServerNextResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByServerNext_2'
     name: >-
@@ -1078,9 +1150,6 @@ items:
             - ServiceCallback<@azure/arm-sql.DatabaseListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListByServerNextResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listByServerNext_1'
     name: 'listByServerNext(string, ServiceCallback<DatabaseListResult>)'
@@ -1103,9 +1172,6 @@ items:
             - ServiceCallback<@azure/arm-sql.DatabaseListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListByServerNextResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listMetricDefinitions'
     name: 'listMetricDefinitions(string, string, string, msRest.RequestOptionsBase)'
@@ -1141,6 +1207,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesListMetricDefinitionsResponse>
+        description: Promise<Models.DatabasesListMetricDefinitionsResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listMetricDefinitions_2'
     name: >-
@@ -1180,9 +1247,6 @@ items:
             - ServiceCallback<@azure/arm-sql.MetricDefinitionListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListMetricDefinitionsResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listMetricDefinitions_1'
     name: >-
@@ -1218,9 +1282,6 @@ items:
             - ServiceCallback<@azure/arm-sql.MetricDefinitionListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListMetricDefinitionsResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listMetrics'
     name: 'listMetrics(string, string, string, string, msRest.RequestOptionsBase)'
@@ -1263,6 +1324,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesListMetricsResponse>
+        description: Promise<Models.DatabasesListMetricsResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listMetrics_2'
     name: >-
@@ -1308,9 +1370,6 @@ items:
             - ServiceCallback<@azure/arm-sql.MetricListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListMetricsResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.listMetrics_1'
     name: >-
@@ -1352,9 +1411,6 @@ items:
             - ServiceCallback<@azure/arm-sql.MetricListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DatabasesListMetricsResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.pause'
     name: 'pause(string, string, string, msRest.RequestOptionsBase)'
@@ -1390,6 +1446,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesPauseResponse>
+        description: Promise<Models.DatabasesPauseResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.rename'
     name: >-
@@ -1432,6 +1489,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.rename_2'
     name: >-
@@ -1475,9 +1533,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.rename_1'
     name: >-
@@ -1517,9 +1572,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.resume'
     name: 'resume(string, string, string, msRest.RequestOptionsBase)'
@@ -1555,6 +1607,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesResumeResponse>
+        description: Promise<Models.DatabasesResumeResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.update'
     name: 'update(string, string, string, DatabaseUpdate, msRest.RequestOptionsBase)'
@@ -1595,6 +1648,7 @@ items:
       return:
         type:
           - Promise<Models.DatabasesUpdateResponse>
+        description: Promise<Models.DatabasesUpdateResponse>
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Databases.upgradeDataWarehouse'
     name: 'upgradeDataWarehouse(string, string, string, msRest.RequestOptionsBase)'
@@ -1630,6 +1684,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-sql'
 references:
   - uid: '@azure/arm-sql.SqlManagementClientContext'

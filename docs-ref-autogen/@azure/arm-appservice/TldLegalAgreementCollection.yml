@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.TldLegalAgreementCollection.entries'
       - '@azure/arm-appservice.TldLegalAgreementCollection.every'
       - '@azure/arm-appservice.TldLegalAgreementCollection.fill'
-      - '@azure/arm-appservice.TldLegalAgreementCollection.filter_1'
       - '@azure/arm-appservice.TldLegalAgreementCollection.filter'
+      - '@azure/arm-appservice.TldLegalAgreementCollection.filter_1'
       - '@azure/arm-appservice.TldLegalAgreementCollection.find'
       - '@azure/arm-appservice.TldLegalAgreementCollection.find_1'
       - '@azure/arm-appservice.TldLegalAgreementCollection.findIndex'
       - '@azure/arm-appservice.TldLegalAgreementCollection.forEach'
+      - '@azure/arm-appservice.TldLegalAgreementCollection.includes'
       - '@azure/arm-appservice.TldLegalAgreementCollection.indexOf'
       - '@azure/arm-appservice.TldLegalAgreementCollection.join'
       - '@azure/arm-appservice.TldLegalAgreementCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.concat'
     name: 'concat(ConcatArray<TldLegalAgreement>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.every'
     name: >-
       every((value: TldLegalAgreement, index: number, array:
-      TldLegalAgreement[]) => boolean, any)
+      TldLegalAgreement[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: TldLegalAgreement, index: number,
-        array: TldLegalAgreement[]) => boolean, thisArg?: any)
+        array: TldLegalAgreement[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: TldLegalAgreement, index: number, array:
-              TldLegalAgreement[]) => boolean
+              TldLegalAgreement[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.fill'
     name: 'fill(TldLegalAgreement, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.TldLegalAgreementCollection.filter_1'
-    name: >-
-      filter((value: TldLegalAgreement, index: number, array:
-      TldLegalAgreement[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: TldLegalAgreement, index: number,
-        array: TldLegalAgreement[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: TldLegalAgreement, index: number, array:
-              TldLegalAgreement[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.TldLegalAgreement[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.TldLegalAgreementCollection.filter_1'
+    name: >-
+      filter((value: TldLegalAgreement, index: number, array:
+      TldLegalAgreement[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: TldLegalAgreement, index: number,
+        array: TldLegalAgreement[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: TldLegalAgreement, index: number, array:
+              TldLegalAgreement[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.TldLegalAgreement[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.find_1'
     name: >-
       find((value: TldLegalAgreement, index: number, obj: TldLegalAgreement[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: TldLegalAgreement, index: number, obj:
-        TldLegalAgreement[]) => boolean, thisArg?: any)
+        TldLegalAgreement[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: TldLegalAgreement, index: number, obj:
-              TldLegalAgreement[]) => boolean
+              TldLegalAgreement[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.findIndex'
     name: >-
       findIndex((value: TldLegalAgreement, index: number, obj:
-      TldLegalAgreement[]) => boolean, any)
+      TldLegalAgreement[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: TldLegalAgreement, index: number,
-        obj: TldLegalAgreement[]) => boolean, thisArg?: any)
+        obj: TldLegalAgreement[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: TldLegalAgreement, index: number, obj:
-              TldLegalAgreement[]) => boolean
+              TldLegalAgreement[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.TldLegalAgreementCollection.includes'
+    name: 'includes(TldLegalAgreement, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: TldLegalAgreement, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.TldLegalAgreement'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.indexOf'
     name: 'indexOf(TldLegalAgreement, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.lastIndexOf'
     name: 'lastIndexOf(TldLegalAgreement, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.push'
     name: 'push(TldLegalAgreement[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.reduce'
     name: >-
@@ -689,6 +737,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.reduce_1'
     name: >-
@@ -699,10 +748,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: TldLegalAgreement,
@@ -724,6 +770,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.reduce_2'
     name: >-
@@ -762,6 +809,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.reduceRight'
     name: >-
@@ -796,6 +844,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.reduceRight_1'
     name: >-
@@ -806,11 +855,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: TldLegalAgreement,
@@ -832,6 +877,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.reduceRight_2'
     name: >-
@@ -871,6 +917,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.reverse'
     name: reverse()
@@ -885,6 +932,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.shift'
     name: shift()
@@ -899,6 +947,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -924,11 +973,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.some'
     name: >-
       some((value: TldLegalAgreement, index: number, array: TldLegalAgreement[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -939,13 +989,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: TldLegalAgreement, index: number,
-        array: TldLegalAgreement[]) => boolean, thisArg?: any)
+        array: TldLegalAgreement[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: TldLegalAgreement, index: number, array:
-              TldLegalAgreement[]) => boolean
+              TldLegalAgreement[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -961,6 +1011,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.sort'
     name: 'sort(undefined | (a: TldLegalAgreement, b: TldLegalAgreement) => number)'
@@ -985,6 +1036,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.splice_1'
     name: 'splice(number, number, TldLegalAgreement[])'
@@ -1018,6 +1070,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1046,6 +1099,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.TldLegalAgreement[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.toLocaleString'
     name: toLocaleString()
@@ -1062,6 +1116,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.toString'
     name: toString()
@@ -1076,6 +1131,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.unshift'
     name: 'unshift(TldLegalAgreement[])'
@@ -1095,6 +1151,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.TldLegalAgreementCollection.values'
     name: values()
@@ -1109,6 +1166,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-appservice.TldLegalAgreement>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.TldLegalAgreement>

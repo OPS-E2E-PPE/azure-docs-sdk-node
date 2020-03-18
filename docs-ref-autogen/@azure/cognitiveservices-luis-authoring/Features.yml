@@ -4,6 +4,12 @@ items:
     name: Features
     fullName: Features
     children:
+      - '@azure/cognitiveservices-luis-authoring.Features.addEntityFeature'
+      - '@azure/cognitiveservices-luis-authoring.Features.addEntityFeature_2'
+      - '@azure/cognitiveservices-luis-authoring.Features.addEntityFeature_1'
+      - '@azure/cognitiveservices-luis-authoring.Features.addIntentFeature'
+      - '@azure/cognitiveservices-luis-authoring.Features.addIntentFeature_2'
+      - '@azure/cognitiveservices-luis-authoring.Features.addIntentFeature_1'
       - '@azure/cognitiveservices-luis-authoring.Features.addPhraseList'
       - '@azure/cognitiveservices-luis-authoring.Features.addPhraseList_2'
       - '@azure/cognitiveservices-luis-authoring.Features.addPhraseList_1'
@@ -28,6 +34,252 @@ items:
     type: class
     summary: Class representing a Features.
     package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Features.addEntityFeature'
+    name: >-
+      addEntityFeature(string, string, string, ModelFeatureInformation,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Adds a new feature relation to be used by the entity in a version of the
+      application.
+    syntax:
+      content: >-
+        function addEntityFeature(appId: string, versionId: string, entityId:
+        string, featureRelationCreateObject: ModelFeatureInformation, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: The application ID.
+        - id: versionId
+          type:
+            - string
+          description: The version ID.
+        - id: entityId
+          type:
+            - string
+          description: The entity extractor ID.
+        - id: featureRelationCreateObject
+          type:
+            - '@azure/cognitiveservices-luis-authoring.ModelFeatureInformation'
+          description: A Feature relation information object.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FeaturesAddEntityFeatureResponse>
+        description: Promise<Models.FeaturesAddEntityFeatureResponse>
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Features.addEntityFeature_2'
+    name: >-
+      addEntityFeature(string, string, string, ModelFeatureInformation,
+      RequestOptionsBase, ServiceCallback<OperationStatus>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function addEntityFeature(appId: string, versionId: string, entityId:
+        string, featureRelationCreateObject: ModelFeatureInformation, options:
+        RequestOptionsBase, callback: ServiceCallback<OperationStatus>)
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: The application ID.
+        - id: versionId
+          type:
+            - string
+          description: The version ID.
+        - id: entityId
+          type:
+            - string
+          description: The entity extractor ID.
+        - id: featureRelationCreateObject
+          type:
+            - '@azure/cognitiveservices-luis-authoring.ModelFeatureInformation'
+          description: A Feature relation information object.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
+          description: |
+            The callback
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Features.addEntityFeature_1'
+    name: >-
+      addEntityFeature(string, string, string, ModelFeatureInformation,
+      ServiceCallback<OperationStatus>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function addEntityFeature(appId: string, versionId: string, entityId:
+        string, featureRelationCreateObject: ModelFeatureInformation, callback:
+        ServiceCallback<OperationStatus>)
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: The application ID.
+        - id: versionId
+          type:
+            - string
+          description: The version ID.
+        - id: entityId
+          type:
+            - string
+          description: The entity extractor ID.
+        - id: featureRelationCreateObject
+          type:
+            - '@azure/cognitiveservices-luis-authoring.ModelFeatureInformation'
+          description: A Feature relation information object.
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
+          description: |
+            The callback
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Features.addIntentFeature'
+    name: >-
+      addIntentFeature(string, string, string, ModelFeatureInformation,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Adds a new feature relation to be used by the intent in a version of the
+      application.
+    syntax:
+      content: >-
+        function addIntentFeature(appId: string, versionId: string, intentId:
+        string, featureRelationCreateObject: ModelFeatureInformation, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: The application ID.
+        - id: versionId
+          type:
+            - string
+          description: The version ID.
+        - id: intentId
+          type:
+            - string
+          description: The intent classifier ID.
+        - id: featureRelationCreateObject
+          type:
+            - '@azure/cognitiveservices-luis-authoring.ModelFeatureInformation'
+          description: A Feature relation information object.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FeaturesAddIntentFeatureResponse>
+        description: Promise<Models.FeaturesAddIntentFeatureResponse>
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Features.addIntentFeature_2'
+    name: >-
+      addIntentFeature(string, string, string, ModelFeatureInformation,
+      RequestOptionsBase, ServiceCallback<OperationStatus>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function addIntentFeature(appId: string, versionId: string, intentId:
+        string, featureRelationCreateObject: ModelFeatureInformation, options:
+        RequestOptionsBase, callback: ServiceCallback<OperationStatus>)
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: The application ID.
+        - id: versionId
+          type:
+            - string
+          description: The version ID.
+        - id: intentId
+          type:
+            - string
+          description: The intent classifier ID.
+        - id: featureRelationCreateObject
+          type:
+            - '@azure/cognitiveservices-luis-authoring.ModelFeatureInformation'
+          description: A Feature relation information object.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
+          description: |
+            The callback
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Features.addIntentFeature_1'
+    name: >-
+      addIntentFeature(string, string, string, ModelFeatureInformation,
+      ServiceCallback<OperationStatus>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function addIntentFeature(appId: string, versionId: string, intentId:
+        string, featureRelationCreateObject: ModelFeatureInformation, callback:
+        ServiceCallback<OperationStatus>)
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: The application ID.
+        - id: versionId
+          type:
+            - string
+          description: The version ID.
+        - id: intentId
+          type:
+            - string
+          description: The intent classifier ID.
+        - id: featureRelationCreateObject
+          type:
+            - '@azure/cognitiveservices-luis-authoring.ModelFeatureInformation'
+          description: A Feature relation information object.
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
+          description: |
+            The callback
+    package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.addPhraseList'
     name: >-
       addPhraseList(string, string, PhraselistCreateObject,
@@ -36,7 +288,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Creates a new phraselist feature.
+    summary: Creates a new phraselist feature in a version of the application.
     syntax:
       content: >-
         function addPhraseList(appId: string, versionId: string,
@@ -67,6 +319,7 @@ items:
       return:
         type:
           - Promise<Models.FeaturesAddPhraseListResponse>
+        description: Promise<Models.FeaturesAddPhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.addPhraseList_2'
     name: >-
@@ -108,9 +361,6 @@ items:
             - ServiceCallback<number>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesAddPhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.addPhraseList_1'
     name: >-
@@ -148,9 +398,6 @@ items:
             - ServiceCallback<number>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesAddPhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.deletePhraseList'
     name: 'deletePhraseList(string, string, number, msRest.RequestOptionsBase)'
@@ -158,7 +405,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Deletes a phraselist feature.
+    summary: Deletes a phraselist feature from a version of the application.
     syntax:
       content: >-
         function deletePhraseList(appId: string, versionId: string,
@@ -184,6 +431,7 @@ items:
       return:
         type:
           - Promise<Models.FeaturesDeletePhraseListResponse>
+        description: Promise<Models.FeaturesDeletePhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.deletePhraseList_2'
     name: >-
@@ -222,9 +470,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesDeletePhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.deletePhraseList_1'
     name: 'deletePhraseList(string, string, number, ServiceCallback<OperationStatus>)'
@@ -256,9 +501,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesDeletePhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.constructor'
     name: Features(LUISAuthoringClientContext)
@@ -282,7 +524,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Gets phraselist feature info.
+    summary: Gets phraselist feature info in a version of the application.
     syntax:
       content: >-
         function getPhraseList(appId: string, versionId: string, phraselistId:
@@ -308,6 +550,7 @@ items:
       return:
         type:
           - Promise<Models.FeaturesGetPhraseListResponse>
+        description: Promise<Models.FeaturesGetPhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.getPhraseList_2'
     name: >-
@@ -346,9 +589,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PhraseListFeatureInfo>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesGetPhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.getPhraseList_1'
     name: >-
@@ -382,9 +622,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PhraseListFeatureInfo>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesGetPhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.list_2'
     name: >-
@@ -419,9 +656,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.FeaturesResponseObject>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.list'
     name: 'list(string, string, Models.FeaturesListOptionalParams)'
@@ -429,7 +663,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Gets all the extraction features for the specified application version.
+    summary: >-
+      Gets all the extraction phraselist and pattern features in a version of
+      the application.
     syntax:
       content: >-
         function list(appId: string, versionId: string, options?:
@@ -451,6 +687,7 @@ items:
       return:
         type:
           - Promise<Models.FeaturesListResponse>
+        description: Promise<Models.FeaturesListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.list_1'
     name: 'list(string, string, ServiceCallback<FeaturesResponseObject>)'
@@ -478,9 +715,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.FeaturesResponseObject>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.listPhraseLists_2'
     name: >-
@@ -516,9 +750,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PhraseListFeatureInfo[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesListPhraseListsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.listPhraseLists'
     name: >-
@@ -528,7 +759,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Gets all the phraselist features.
+    summary: Gets all the phraselist features in a version of the application.
     syntax:
       content: >-
         function listPhraseLists(appId: string, versionId: string, options?:
@@ -550,6 +781,7 @@ items:
       return:
         type:
           - Promise<Models.FeaturesListPhraseListsResponse>
+        description: Promise<Models.FeaturesListPhraseListsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.listPhraseLists_1'
     name: 'listPhraseLists(string, string, ServiceCallback<PhraseListFeatureInfo[]>)'
@@ -577,9 +809,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PhraseListFeatureInfo[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesListPhraseListsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.updatePhraseList_2'
     name: >-
@@ -619,9 +848,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesUpdatePhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.updatePhraseList'
     name: >-
@@ -631,7 +857,11 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Updates the phrases, the state and the name of the phraselist feature.'
+    summary: >-
+      Updates the phrases, the state and the name of the phraselist feature in a
+      version of the
+
+      application.
     syntax:
       content: >-
         function updatePhraseList(appId: string, versionId: string,
@@ -658,6 +888,7 @@ items:
       return:
         type:
           - Promise<Models.FeaturesUpdatePhraseListResponse>
+        description: Promise<Models.FeaturesUpdatePhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Features.updatePhraseList_1'
     name: 'updatePhraseList(string, string, number, ServiceCallback<OperationStatus>)'
@@ -689,9 +920,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.FeaturesUpdatePhraseListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
 references:
   - uid: '@azure/cognitiveservices-luis-authoring.LUISAuthoringClientContext'
@@ -700,12 +928,12 @@ references:
       - name: LUISAuthoringClientContext
         fullName: LUISAuthoringClientContext
         uid: '@azure/cognitiveservices-luis-authoring.LUISAuthoringClientContext'
-  - uid: '@azure/cognitiveservices-luis-authoring.PhraselistCreateObject'
-    name: PhraselistCreateObject
+  - uid: '@azure/cognitiveservices-luis-authoring.ModelFeatureInformation'
+    name: ModelFeatureInformation
     spec.typeScript:
-      - name: PhraselistCreateObject
-        fullName: PhraselistCreateObject
-        uid: '@azure/cognitiveservices-luis-authoring.PhraselistCreateObject'
+      - name: ModelFeatureInformation
+        fullName: ModelFeatureInformation
+        uid: '@azure/cognitiveservices-luis-authoring.ModelFeatureInformation'
   - uid: ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
     name: OperationStatus>
     spec.typeScript:
@@ -716,6 +944,12 @@ references:
         uid: '@azure/cognitiveservices-luis-authoring.OperationStatus'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/cognitiveservices-luis-authoring.PhraselistCreateObject'
+    name: PhraselistCreateObject
+    spec.typeScript:
+      - name: PhraselistCreateObject
+        fullName: PhraselistCreateObject
+        uid: '@azure/cognitiveservices-luis-authoring.PhraselistCreateObject'
   - uid: >-
       ServiceCallback<@azure/cognitiveservices-luis-authoring.PhraseListFeatureInfo>
     name: PhraseListFeatureInfo>

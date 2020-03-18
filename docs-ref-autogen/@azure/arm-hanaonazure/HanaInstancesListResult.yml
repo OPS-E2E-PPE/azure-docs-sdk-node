@@ -11,12 +11,13 @@ items:
       - '@azure/arm-hanaonazure.HanaInstancesListResult.entries'
       - '@azure/arm-hanaonazure.HanaInstancesListResult.every'
       - '@azure/arm-hanaonazure.HanaInstancesListResult.fill'
-      - '@azure/arm-hanaonazure.HanaInstancesListResult.filter_1'
       - '@azure/arm-hanaonazure.HanaInstancesListResult.filter'
+      - '@azure/arm-hanaonazure.HanaInstancesListResult.filter_1'
       - '@azure/arm-hanaonazure.HanaInstancesListResult.find'
       - '@azure/arm-hanaonazure.HanaInstancesListResult.find_1'
       - '@azure/arm-hanaonazure.HanaInstancesListResult.findIndex'
       - '@azure/arm-hanaonazure.HanaInstancesListResult.forEach'
+      - '@azure/arm-hanaonazure.HanaInstancesListResult.includes'
       - '@azure/arm-hanaonazure.HanaInstancesListResult.indexOf'
       - '@azure/arm-hanaonazure.HanaInstancesListResult.join'
       - '@azure/arm-hanaonazure.HanaInstancesListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.concat'
     name: 'concat(ConcatArray<HanaInstance>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance[]'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance[]'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.every'
     name: >-
       every((value: HanaInstance, index: number, array: HanaInstance[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: HanaInstance, index: number, array:
-        HanaInstance[]) => boolean, thisArg?: any)
+        HanaInstance[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: HanaInstance, index: number, array: HanaInstance[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.fill'
     name: 'fill(HanaInstance, undefined | number, undefined | number)'
@@ -233,41 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-hanaonazure'
-  - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.filter_1'
-    name: >-
-      filter((value: HanaInstance, index: number, array: HanaInstance[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: HanaInstance, index: number, array:
-        HanaInstance[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: HanaInstance, index: number, array: HanaInstance[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-hanaonazure.HanaInstance[]'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.filter'
     name: >-
@@ -305,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.filter_1'
+    name: >-
+      filter((value: HanaInstance, index: number, array: HanaInstance[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: HanaInstance, index: number, array:
+        HanaInstance[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: HanaInstance, index: number, array: HanaInstance[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-hanaonazure.HanaInstance[]'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.find'
     name: >-
@@ -350,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.find_1'
     name: >-
-      find((value: HanaInstance, index: number, obj: HanaInstance[]) => boolean,
+      find((value: HanaInstance, index: number, obj: HanaInstance[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: HanaInstance, index: number, obj:
-        HanaInstance[]) => boolean, thisArg?: any)
+        HanaInstance[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: HanaInstance, index: number, obj: HanaInstance[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -383,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance | undefined'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.findIndex'
     name: >-
       findIndex((value: HanaInstance, index: number, obj: HanaInstance[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -400,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: HanaInstance, index: number, obj:
-        HanaInstance[]) => boolean, thisArg?: any)
+        HanaInstance[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: HanaInstance, index: number, obj: HanaInstance[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -428,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.forEach'
     name: >-
@@ -460,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.includes'
+    name: 'includes(HanaInstance, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: HanaInstance, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-hanaonazure.HanaInstance'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.indexOf'
     name: 'indexOf(HanaInstance, undefined | number)'
     children: []
@@ -486,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.join'
     name: join(undefined | string)
@@ -510,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.keys'
     name: keys()
@@ -524,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.lastIndexOf'
     name: 'lastIndexOf(HanaInstance, undefined | number)'
@@ -551,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.length'
     name: length
@@ -567,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.map'
     name: 'map((value: HanaInstance, index: number, array: HanaInstance[]) => U, any)'
@@ -599,6 +645,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.nextLink'
     name: nextLink
@@ -614,6 +661,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.pop'
     name: pop()
@@ -628,6 +676,7 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance | undefined'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.push'
     name: 'push(HanaInstance[])'
@@ -647,6 +696,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.reduce'
     name: >-
@@ -678,6 +728,7 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.reduce_1'
     name: >-
@@ -688,10 +739,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: HanaInstance, currentValue:
@@ -711,6 +759,7 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.reduce_2'
     name: >-
@@ -749,6 +798,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.reduceRight'
     name: >-
@@ -781,6 +831,7 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.reduceRight_1'
     name: >-
@@ -791,11 +842,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: HanaInstance,
@@ -815,6 +862,7 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.reduceRight_2'
     name: >-
@@ -854,6 +902,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.reverse'
     name: reverse()
@@ -868,6 +917,7 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance[]'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.shift'
     name: shift()
@@ -882,6 +932,7 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance | undefined'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -907,11 +958,12 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance[]'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.some'
     name: >-
       some((value: HanaInstance, index: number, array: HanaInstance[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -922,13 +974,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: HanaInstance, index: number, array:
-        HanaInstance[]) => boolean, thisArg?: any)
+        HanaInstance[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: HanaInstance, index: number, array: HanaInstance[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -944,6 +996,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.sort'
     name: 'sort(undefined | (a: HanaInstance, b: HanaInstance) => number)'
@@ -968,6 +1021,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.splice_1'
     name: 'splice(number, number, HanaInstance[])'
@@ -1001,6 +1055,7 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance[]'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1029,6 +1084,7 @@ items:
       return:
         type:
           - '@azure/arm-hanaonazure.HanaInstance[]'
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.toLocaleString'
     name: toLocaleString()
@@ -1045,6 +1101,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.toString'
     name: toString()
@@ -1059,6 +1116,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.unshift'
     name: 'unshift(HanaInstance[])'
@@ -1078,6 +1136,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstancesListResult.values'
     name: values()
@@ -1092,6 +1151,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-hanaonazure.HanaInstance>
+        description: ''
     package: '@azure/arm-hanaonazure'
 references:
   - uid: Array<@azure/arm-hanaonazure.HanaInstance>

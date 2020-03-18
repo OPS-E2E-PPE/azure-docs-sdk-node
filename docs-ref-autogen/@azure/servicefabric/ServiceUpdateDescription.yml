@@ -33,6 +33,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.ServiceCorrelationDescription[]'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceUpdateDescription.defaultMoveCost'
     name: defaultMoveCost
@@ -43,13 +44,16 @@ items:
     type: property
     summary: >-
       The move cost for the service. Possible values include: 'Zero', 'Low',
-      'Medium', 'High'
+      'Medium', 'High',
+
+      'VeryHigh'
     optional: true
     syntax:
       content: 'defaultMoveCost?: MoveCost'
       return:
         type:
           - '@azure/servicefabric.MoveCost'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceUpdateDescription.flags'
     name: flags
@@ -123,12 +127,31 @@ items:
 
       - ScalingPolicy - Indicates the ScalingPolicies property is set. The value
       is 1024.
+
+      - ServicePlacementTimeLimit - Indicates the ServicePlacementTimeLimit
+      property is set. The
+
+      value is 2048.
+
+      - MinInstanceCount - Indicates the MinInstanceCount property is set. The
+      value is 4096.
+
+      - MinInstancePercentage - Indicates the MinInstancePercentage property is
+      set. The value is
+
+      8192.
+
+      - InstanceCloseDelayDuration - Indicates the InstanceCloseDelayDuration
+      property is set. The
+
+      value is 16384.
     optional: true
     syntax:
       content: 'flags?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceUpdateDescription.loadMetrics'
     name: loadMetrics
@@ -144,6 +167,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.ServiceLoadMetricDescription[]'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceUpdateDescription.placementConstraints'
     name: placementConstraints
@@ -169,6 +193,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceUpdateDescription.scalingPolicies'
     name: scalingPolicies
@@ -184,6 +209,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.ScalingPolicyDescription[]'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceUpdateDescription.serviceKind'
     name: serviceKind
@@ -198,6 +224,7 @@ items:
       return:
         type:
           - '"ServiceUpdateDescription"'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceUpdateDescription.servicePlacementPolicies'
     name: servicePlacementPolicies
@@ -213,6 +240,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+        description: ''
     package: '@azure/servicefabric'
 references:
   - uid: '@azure/servicefabric.ServiceCorrelationDescription[]'

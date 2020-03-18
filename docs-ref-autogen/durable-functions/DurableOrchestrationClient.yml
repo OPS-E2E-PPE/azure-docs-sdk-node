@@ -13,7 +13,9 @@ items:
       - durable-functions.DurableOrchestrationClient.purgeInstanceHistory
       - durable-functions.DurableOrchestrationClient.purgeInstanceHistoryBy
       - durable-functions.DurableOrchestrationClient.raiseEvent
+      - durable-functions.DurableOrchestrationClient.readEntityState
       - durable-functions.DurableOrchestrationClient.rewind
+      - durable-functions.DurableOrchestrationClient.signalEntity
       - durable-functions.DurableOrchestrationClient.startNew
       - durable-functions.DurableOrchestrationClient.taskHubName
       - durable-functions.DurableOrchestrationClient.terminate
@@ -26,7 +28,7 @@ items:
     summary: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.createCheckStatusResponse
-    name: 'createCheckStatusResponse(IHttpRequest | HttpRequest, string)'
+    name: 'createCheckStatusResponse(IHttpRequest | HttpRequest | undefined, string)'
     children: []
     type: method
     langs:
@@ -34,12 +36,12 @@ items:
     summary: ''
     syntax:
       content: >-
-        function createCheckStatusResponse(request: IHttpRequest | HttpRequest,
-        instanceId: string)
+        function createCheckStatusResponse(request: IHttpRequest | HttpRequest |
+        undefined, instanceId: string)
       parameters:
         - id: request
           type:
-            - durable-functions.IHttpRequest | HttpRequest
+            - durable-functions.IHttpRequest | HttpRequest | undefined
           description: ''
         - id: instanceId
           type:
@@ -48,6 +50,7 @@ items:
       return:
         type:
           - durable-functions.IHttpResponse
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.createHttpManagementPayload
     name: createHttpManagementPayload(string)
@@ -66,6 +69,7 @@ items:
       return:
         type:
           - durable-functions.HttpManagementPayload
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.constructor
     name: DurableOrchestrationClient(OrchestrationClientInputData)
@@ -116,6 +120,7 @@ items:
       return:
         type:
           - Promise<durable-functions.DurableOrchestrationStatus>
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.getStatusAll
     name: getStatusAll()
@@ -130,9 +135,12 @@ items:
       return:
         type:
           - 'Promise<durable-functions.DurableOrchestrationStatus[]>'
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.getStatusBy
-    name: 'getStatusBy(Date, Date, OrchestrationRuntimeStatus[])'
+    name: >-
+      getStatusBy(Date | undefined, Date | undefined,
+      OrchestrationRuntimeStatus[])
     children: []
     type: method
     langs:
@@ -140,16 +148,16 @@ items:
     summary: ''
     syntax:
       content: >-
-        function getStatusBy(createdTimeFrom: Date, createdTimeTo: Date,
-        runtimeStatus: OrchestrationRuntimeStatus[])
+        function getStatusBy(createdTimeFrom: Date | undefined, createdTimeTo:
+        Date | undefined, runtimeStatus: OrchestrationRuntimeStatus[])
       parameters:
         - id: createdTimeFrom
           type:
-            - Date
+            - Date | undefined
           description: ''
         - id: createdTimeTo
           type:
-            - Date
+            - Date | undefined
           description: ''
         - id: runtimeStatus
           type:
@@ -158,6 +166,7 @@ items:
       return:
         type:
           - 'Promise<durable-functions.DurableOrchestrationStatus[]>'
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.purgeInstanceHistory
     name: purgeInstanceHistory(string)
@@ -176,6 +185,7 @@ items:
       return:
         type:
           - Promise<durable-functions.PurgeHistoryResult>
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.purgeInstanceHistoryBy
     name: 'purgeInstanceHistoryBy(Date, Date, OrchestrationRuntimeStatus[])'
@@ -206,6 +216,7 @@ items:
       return:
         type:
           - Promise<durable-functions.PurgeHistoryResult>
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.raiseEvent
     name: 'raiseEvent(string, string, unknown, string, string)'
@@ -244,16 +255,50 @@ items:
       return:
         type:
           - Promise<void>
+        description: ''
     package: durable-functions
-  - uid: durable-functions.DurableOrchestrationClient.rewind
-    name: 'rewind(string, string)'
+  - uid: durable-functions.DurableOrchestrationClient.readEntityState
+    name: 'readEntityState(EntityId, string, string)'
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function rewind(instanceId: string, reason: string)'
+      content: >-
+        function readEntityState<T>(entityId: EntityId, taskHubName?: string,
+        connectionName?: string)
+      parameters:
+        - id: entityId
+          type:
+            - durable-functions.EntityId
+          description: ''
+        - id: taskHubName
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: connectionName
+          type:
+            - string
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<durable-functions.EntityStateResponse<T>>
+        description: ''
+    package: durable-functions
+  - uid: durable-functions.DurableOrchestrationClient.rewind
+    name: 'rewind(string, string, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function rewind(instanceId: string, reason: string, taskHubName?:
+        string, connectionName?: string)
       parameters:
         - id: instanceId
           type:
@@ -263,9 +308,62 @@ items:
           type:
             - string
           description: ''
+        - id: taskHubName
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: connectionName
+          type:
+            - string
+          description: ''
+          optional: true
       return:
         type:
           - Promise<void>
+        description: ''
+    package: durable-functions
+  - uid: durable-functions.DurableOrchestrationClient.signalEntity
+    name: 'signalEntity(EntityId, string, unknown, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function signalEntity(entityId: EntityId, operationName?: string,
+        operationContent?: unknown, taskHubName?: string, connectionName?:
+        string)
+      parameters:
+        - id: entityId
+          type:
+            - durable-functions.EntityId
+          description: ''
+        - id: operationName
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: operationContent
+          type:
+            - unknown
+          description: ''
+          optional: true
+        - id: taskHubName
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: connectionName
+          type:
+            - string
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<void>
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.startNew
     name: 'startNew(string, string, unknown)'
@@ -296,6 +394,7 @@ items:
       return:
         type:
           - Promise<string>
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.taskHubName
     name: taskHubName
@@ -310,6 +409,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.terminate
     name: 'terminate(string, string)'
@@ -332,6 +432,7 @@ items:
       return:
         type:
           - Promise<void>
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationClient.uniqueWebhookOrigins
     name: uniqueWebhookOrigins
@@ -346,6 +447,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: durable-functions
   - uid: >-
       durable-functions.DurableOrchestrationClient.waitForCompletionOrCreateCheckStatusResponse
@@ -384,6 +486,7 @@ items:
       return:
         type:
           - Promise<durable-functions.IHttpResponse>
+        description: ''
     package: durable-functions
 references:
   - uid: durable-functions.OrchestrationClientInputData
@@ -392,14 +495,14 @@ references:
       - name: OrchestrationClientInputData
         fullName: OrchestrationClientInputData
         uid: durable-functions.OrchestrationClientInputData
-  - uid: durable-functions.IHttpRequest | HttpRequest
-    name: IHttpRequest | HttpRequest
+  - uid: durable-functions.IHttpRequest | HttpRequest | undefined
+    name: IHttpRequest | HttpRequest | undefined
     spec.typeScript:
       - name: IHttpRequest
         fullName: IHttpRequest
         uid: durable-functions.IHttpRequest
-      - name: ' | HttpRequest'
-        fullName: ' | HttpRequest'
+      - name: ' | HttpRequest | undefined'
+        fullName: ' | HttpRequest | undefined'
   - uid: durable-functions.IHttpResponse
     name: IHttpResponse
     spec.typeScript:
@@ -450,6 +553,22 @@ references:
         uid: durable-functions.PurgeHistoryResult
       - name: '>'
         fullName: '>'
+  - uid: durable-functions.EntityId
+    name: EntityId
+    spec.typeScript:
+      - name: EntityId
+        fullName: EntityId
+        uid: durable-functions.EntityId
+  - uid: Promise<durable-functions.EntityStateResponse<T>>
+    name: EntityStateResponse<T>>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: EntityStateResponse
+        fullName: EntityStateResponse
+        uid: durable-functions.EntityStateResponse
+      - name: <T>>
+        fullName: <T>>
   - uid: Promise<durable-functions.IHttpResponse>
     name: IHttpResponse>
     spec.typeScript:

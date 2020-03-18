@@ -11,12 +11,13 @@ items:
       - '@azure/arm-logic.WorkflowTriggerListResult.entries'
       - '@azure/arm-logic.WorkflowTriggerListResult.every'
       - '@azure/arm-logic.WorkflowTriggerListResult.fill'
-      - '@azure/arm-logic.WorkflowTriggerListResult.filter_1'
       - '@azure/arm-logic.WorkflowTriggerListResult.filter'
+      - '@azure/arm-logic.WorkflowTriggerListResult.filter_1'
       - '@azure/arm-logic.WorkflowTriggerListResult.find'
       - '@azure/arm-logic.WorkflowTriggerListResult.find_1'
       - '@azure/arm-logic.WorkflowTriggerListResult.findIndex'
       - '@azure/arm-logic.WorkflowTriggerListResult.forEach'
+      - '@azure/arm-logic.WorkflowTriggerListResult.includes'
       - '@azure/arm-logic.WorkflowTriggerListResult.indexOf'
       - '@azure/arm-logic.WorkflowTriggerListResult.join'
       - '@azure/arm-logic.WorkflowTriggerListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.concat'
     name: 'concat(ConcatArray<WorkflowTrigger>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.every'
     name: >-
       every((value: WorkflowTrigger, index: number, array: WorkflowTrigger[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: WorkflowTrigger, index: number,
-        array: WorkflowTrigger[]) => boolean, thisArg?: any)
+        array: WorkflowTrigger[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: WorkflowTrigger, index: number, array: WorkflowTrigger[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.fill'
     name: 'fill(WorkflowTrigger, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-logic'
-  - uid: '@azure/arm-logic.WorkflowTriggerListResult.filter_1'
-    name: >-
-      filter((value: WorkflowTrigger, index: number, array: WorkflowTrigger[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: WorkflowTrigger, index: number,
-        array: WorkflowTrigger[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: WorkflowTrigger, index: number, array: WorkflowTrigger[])
-              => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-logic.WorkflowTrigger[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-logic'
+  - uid: '@azure/arm-logic.WorkflowTriggerListResult.filter_1'
+    name: >-
+      filter((value: WorkflowTrigger, index: number, array: WorkflowTrigger[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: WorkflowTrigger, index: number,
+        array: WorkflowTrigger[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: WorkflowTrigger, index: number, array: WorkflowTrigger[])
+              => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-logic.WorkflowTrigger[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.find_1'
     name: >-
       find((value: WorkflowTrigger, index: number, obj: WorkflowTrigger[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: WorkflowTrigger, index: number, obj:
-        WorkflowTrigger[]) => boolean, thisArg?: any)
+        WorkflowTrigger[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: WorkflowTrigger, index: number, obj: WorkflowTrigger[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.findIndex'
     name: >-
       findIndex((value: WorkflowTrigger, index: number, obj: WorkflowTrigger[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: WorkflowTrigger, index: number,
-        obj: WorkflowTrigger[]) => boolean, thisArg?: any)
+        obj: WorkflowTrigger[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: WorkflowTrigger, index: number, obj: WorkflowTrigger[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-logic'
+  - uid: '@azure/arm-logic.WorkflowTriggerListResult.includes'
+    name: 'includes(WorkflowTrigger, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: WorkflowTrigger, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-logic.WorkflowTrigger'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.indexOf'
     name: 'indexOf(WorkflowTrigger, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.lastIndexOf'
     name: 'lastIndexOf(WorkflowTrigger, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.push'
     name: 'push(WorkflowTrigger[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.reduce_2'
     name: >-
@@ -691,6 +739,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.reduce'
     name: >-
@@ -722,6 +771,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.reduce_1'
     name: >-
@@ -732,10 +782,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: WorkflowTrigger,
@@ -755,6 +802,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.reduceRight_2'
     name: >-
@@ -794,6 +842,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.reduceRight'
     name: >-
@@ -827,6 +876,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.reduceRight_1'
     name: >-
@@ -837,11 +887,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: WorkflowTrigger,
@@ -861,6 +907,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.reverse'
     name: reverse()
@@ -875,6 +922,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.shift'
     name: shift()
@@ -889,6 +937,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -914,11 +963,12 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.some'
     name: >-
       some((value: WorkflowTrigger, index: number, array: WorkflowTrigger[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -929,13 +979,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: WorkflowTrigger, index: number, array:
-        WorkflowTrigger[]) => boolean, thisArg?: any)
+        WorkflowTrigger[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: WorkflowTrigger, index: number, array: WorkflowTrigger[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -951,6 +1001,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.sort'
     name: 'sort(undefined | (a: WorkflowTrigger, b: WorkflowTrigger) => number)'
@@ -975,6 +1026,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.splice_1'
     name: 'splice(number, number, WorkflowTrigger[])'
@@ -1008,6 +1060,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1036,6 +1089,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowTrigger[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.toLocaleString'
     name: toLocaleString()
@@ -1052,6 +1106,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.toString'
     name: toString()
@@ -1066,6 +1121,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.unshift'
     name: 'unshift(WorkflowTrigger[])'
@@ -1085,6 +1141,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowTriggerListResult.values'
     name: values()
@@ -1099,6 +1156,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-logic.WorkflowTrigger>
+        description: ''
     package: '@azure/arm-logic'
 references:
   - uid: Array<@azure/arm-logic.WorkflowTrigger>

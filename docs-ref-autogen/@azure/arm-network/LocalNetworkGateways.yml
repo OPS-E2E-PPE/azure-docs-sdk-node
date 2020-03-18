@@ -6,7 +6,6 @@ items:
     children:
       - '@azure/arm-network.LocalNetworkGateways.beginCreateOrUpdate'
       - '@azure/arm-network.LocalNetworkGateways.beginDeleteMethod'
-      - '@azure/arm-network.LocalNetworkGateways.beginUpdateTags'
       - '@azure/arm-network.LocalNetworkGateways.createOrUpdate'
       - '@azure/arm-network.LocalNetworkGateways.deleteMethod'
       - '@azure/arm-network.LocalNetworkGateways.get'
@@ -20,6 +19,8 @@ items:
       - '@azure/arm-network.LocalNetworkGateways.listNext_1'
       - '@azure/arm-network.LocalNetworkGateways.constructor'
       - '@azure/arm-network.LocalNetworkGateways.updateTags'
+      - '@azure/arm-network.LocalNetworkGateways.updateTags_2'
+      - '@azure/arm-network.LocalNetworkGateways.updateTags_1'
     langs:
       - typeScript
     type: class
@@ -64,6 +65,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -93,40 +95,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.LocalNetworkGateways.beginUpdateTags'
-    name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Updates a local network gateway tags.
-    syntax:
-      content: >-
-        function beginUpdateTags(resourceGroupName: string,
-        localNetworkGatewayName: string, parameters: TagsObject, options?:
-        msRest.RequestOptionsBase)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: localNetworkGatewayName
-          type:
-            - string
-          description: The name of the local network gateway.
-        - id: parameters
-          type:
-            - '@azure/arm-network.TagsObject'
-          description: Parameters supplied to update local network gateway tags.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.createOrUpdate'
     name: >-
@@ -167,6 +136,7 @@ items:
       return:
         type:
           - Promise<Models.LocalNetworkGatewaysCreateOrUpdateResponse>
+        description: Promise<Models.LocalNetworkGatewaysCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -196,6 +166,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.get'
     name: 'get(string, string, msRest.RequestOptionsBase)'
@@ -225,6 +196,7 @@ items:
       return:
         type:
           - Promise<Models.LocalNetworkGatewaysGetResponse>
+        description: Promise<Models.LocalNetworkGatewaysGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.get_2'
     name: >-
@@ -258,9 +230,6 @@ items:
             - ServiceCallback<@azure/arm-network.LocalNetworkGateway>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LocalNetworkGatewaysGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.get_1'
     name: 'get(string, string, ServiceCallback<LocalNetworkGateway>)'
@@ -287,9 +256,6 @@ items:
             - ServiceCallback<@azure/arm-network.LocalNetworkGateway>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LocalNetworkGatewaysGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.list'
     name: 'list(string, msRest.RequestOptionsBase)'
@@ -315,6 +281,7 @@ items:
       return:
         type:
           - Promise<Models.LocalNetworkGatewaysListResponse>
+        description: Promise<Models.LocalNetworkGatewaysListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.list_2'
     name: >-
@@ -343,9 +310,6 @@ items:
             - ServiceCallback<@azure/arm-network.LocalNetworkGatewayListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LocalNetworkGatewaysListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.list_1'
     name: 'list(string, ServiceCallback<LocalNetworkGatewayListResult>)'
@@ -368,9 +332,6 @@ items:
             - ServiceCallback<@azure/arm-network.LocalNetworkGatewayListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LocalNetworkGatewaysListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -396,6 +357,7 @@ items:
       return:
         type:
           - Promise<Models.LocalNetworkGatewaysListNextResponse>
+        description: Promise<Models.LocalNetworkGatewaysListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.listNext_2'
     name: >-
@@ -424,9 +386,6 @@ items:
             - ServiceCallback<@azure/arm-network.LocalNetworkGatewayListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LocalNetworkGatewaysListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.listNext_1'
     name: 'listNext(string, ServiceCallback<LocalNetworkGatewayListResult>)'
@@ -449,9 +408,6 @@ items:
             - ServiceCallback<@azure/arm-network.LocalNetworkGatewayListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LocalNetworkGatewaysListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LocalNetworkGateways.constructor'
     name: LocalNetworkGateways(NetworkManagementClientContext)
@@ -501,6 +457,77 @@ items:
       return:
         type:
           - Promise<Models.LocalNetworkGatewaysUpdateTagsResponse>
+        description: Promise<Models.LocalNetworkGatewaysUpdateTagsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LocalNetworkGateways.updateTags_2'
+    name: >-
+      updateTags(string, string, TagsObject, RequestOptionsBase,
+      ServiceCallback<LocalNetworkGateway>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, localNetworkGatewayName:
+        string, parameters: TagsObject, options: RequestOptionsBase, callback:
+        ServiceCallback<LocalNetworkGateway>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: localNetworkGatewayName
+          type:
+            - string
+          description: The name of the local network gateway.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update local network gateway tags.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.LocalNetworkGateway>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LocalNetworkGateways.updateTags_1'
+    name: >-
+      updateTags(string, string, TagsObject,
+      ServiceCallback<LocalNetworkGateway>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, localNetworkGatewayName:
+        string, parameters: TagsObject, callback:
+        ServiceCallback<LocalNetworkGateway>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: localNetworkGatewayName
+          type:
+            - string
+          description: The name of the local network gateway.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update local network gateway tags.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.LocalNetworkGateway>
+          description: |
+            The callback
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -515,12 +542,6 @@ references:
       - name: LocalNetworkGateway
         fullName: LocalNetworkGateway
         uid: '@azure/arm-network.LocalNetworkGateway'
-  - uid: '@azure/arm-network.TagsObject'
-    name: TagsObject
-    spec.typeScript:
-      - name: TagsObject
-        fullName: TagsObject
-        uid: '@azure/arm-network.TagsObject'
   - uid: ServiceCallback<@azure/arm-network.LocalNetworkGateway>
     name: LocalNetworkGateway>
     spec.typeScript:
@@ -541,3 +562,9 @@ references:
         uid: '@azure/arm-network.LocalNetworkGatewayListResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'

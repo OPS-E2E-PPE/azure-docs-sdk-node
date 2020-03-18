@@ -6,16 +6,19 @@ items:
     children:
       - '@azure/arm-datafactory.DrillTableDataset.annotations'
       - '@azure/arm-datafactory.DrillTableDataset.description'
+      - '@azure/arm-datafactory.DrillTableDataset.drillTableDatasetSchema'
       - '@azure/arm-datafactory.DrillTableDataset.folder'
       - '@azure/arm-datafactory.DrillTableDataset.linkedServiceName'
       - '@azure/arm-datafactory.DrillTableDataset.parameters'
+      - '@azure/arm-datafactory.DrillTableDataset.schema'
       - '@azure/arm-datafactory.DrillTableDataset.structure'
+      - '@azure/arm-datafactory.DrillTableDataset.table'
       - '@azure/arm-datafactory.DrillTableDataset.tableName'
       - '@azure/arm-datafactory.DrillTableDataset.type'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Drill server dataset.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DrillTableDataset.annotations'
     name: annotations
@@ -24,13 +27,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the Dataset.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DrillTableDataset.description'
     name: description
@@ -39,13 +43,32 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Dataset description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.DrillTableDataset.drillTableDatasetSchema'
+    name: drillTableDatasetSchema
+    fullName: drillTableDatasetSchema
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The schema name of the Drill. Type: string (or Expression with resultType
+      string).
+    optional: true
+    syntax:
+      content: 'drillTableDatasetSchema?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DrillTableDataset.folder'
     name: folder
@@ -54,13 +77,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The folder that this Dataset is in. If not specified, Dataset will appear
+      at the root level.
     optional: true
     syntax:
       content: 'folder?: DatasetFolder'
       return:
         type:
           - '@azure/arm-datafactory.DatasetFolder'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DrillTableDataset.linkedServiceName'
     name: linkedServiceName
@@ -69,12 +95,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     syntax:
       content: 'linkedServiceName: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DrillTableDataset.parameters'
     name: parameters
@@ -83,7 +110,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for dataset.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -92,6 +119,27 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.DrillTableDataset.schema'
+    name: schema
+    fullName: schema
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Columns that define the physical type schema of the dataset. Type: array
+      (or Expression with
+
+      resultType array), itemType: DatasetSchemaDataElement.
+    optional: true
+    syntax:
+      content: 'schema?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DrillTableDataset.structure'
     name: structure
@@ -100,13 +148,36 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Columns that define the structure of the dataset. Type: array (or
+      Expression with resultType
+
+      array), itemType: DatasetDataElement.
     optional: true
     syntax:
       content: 'structure?: any'
       return:
         type:
           - any
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.DrillTableDataset.table'
+    name: table
+    fullName: table
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The table name of the Drill. Type: string (or Expression with resultType
+      string).
+    optional: true
+    syntax:
+      content: 'table?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DrillTableDataset.tableName'
     name: tableName
@@ -115,13 +186,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      This property will be retired. Please consider using schema + table
+      properties instead.
     optional: true
     syntax:
       content: 'tableName?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DrillTableDataset.type'
     name: type
@@ -130,12 +204,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "DrillTable"'
       return:
         type:
           - '"DrillTable"'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.DatasetFolder'

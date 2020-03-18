@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.ExpressRoutePortsLocationListResult.entries'
       - '@azure/arm-network.ExpressRoutePortsLocationListResult.every'
       - '@azure/arm-network.ExpressRoutePortsLocationListResult.fill'
-      - '@azure/arm-network.ExpressRoutePortsLocationListResult.filter_1'
       - '@azure/arm-network.ExpressRoutePortsLocationListResult.filter'
+      - '@azure/arm-network.ExpressRoutePortsLocationListResult.filter_1'
       - '@azure/arm-network.ExpressRoutePortsLocationListResult.find'
       - '@azure/arm-network.ExpressRoutePortsLocationListResult.find_1'
       - '@azure/arm-network.ExpressRoutePortsLocationListResult.findIndex'
       - '@azure/arm-network.ExpressRoutePortsLocationListResult.forEach'
+      - '@azure/arm-network.ExpressRoutePortsLocationListResult.includes'
       - '@azure/arm-network.ExpressRoutePortsLocationListResult.indexOf'
       - '@azure/arm-network.ExpressRoutePortsLocationListResult.join'
       - '@azure/arm-network.ExpressRoutePortsLocationListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.concat'
     name: 'concat(ConcatArray<ExpressRoutePortsLocation>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.every'
     name: >-
       every((value: ExpressRoutePortsLocation, index: number, array:
-      ExpressRoutePortsLocation[]) => boolean, any)
+      ExpressRoutePortsLocation[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ExpressRoutePortsLocation, index:
-        number, array: ExpressRoutePortsLocation[]) => boolean, thisArg?: any)
+        number, array: ExpressRoutePortsLocation[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ExpressRoutePortsLocation, index: number, array:
-              ExpressRoutePortsLocation[]) => boolean
+              ExpressRoutePortsLocation[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.fill'
     name: 'fill(ExpressRoutePortsLocation, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.filter_1'
-    name: >-
-      filter((value: ExpressRoutePortsLocation, index: number, array:
-      ExpressRoutePortsLocation[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ExpressRoutePortsLocation, index:
-        number, array: ExpressRoutePortsLocation[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ExpressRoutePortsLocation, index: number, array:
-              ExpressRoutePortsLocation[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.ExpressRoutePortsLocation[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.filter_1'
+    name: >-
+      filter((value: ExpressRoutePortsLocation, index: number, array:
+      ExpressRoutePortsLocation[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ExpressRoutePortsLocation, index:
+        number, array: ExpressRoutePortsLocation[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ExpressRoutePortsLocation, index: number, array:
+              ExpressRoutePortsLocation[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.ExpressRoutePortsLocation[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.find'
     name: >-
@@ -353,30 +363,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.find_1'
     name: >-
       find((value: ExpressRoutePortsLocation, index: number, obj:
-      ExpressRoutePortsLocation[]) => boolean, any)
+      ExpressRoutePortsLocation[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ExpressRoutePortsLocation, index:
-        number, obj: ExpressRoutePortsLocation[]) => boolean, thisArg?: any)
+        number, obj: ExpressRoutePortsLocation[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ExpressRoutePortsLocation, index: number, obj:
-              ExpressRoutePortsLocation[]) => boolean
+              ExpressRoutePortsLocation[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -386,11 +393,12 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.findIndex'
     name: >-
       findIndex((value: ExpressRoutePortsLocation, index: number, obj:
-      ExpressRoutePortsLocation[]) => boolean, any)
+      ExpressRoutePortsLocation[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -403,13 +411,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ExpressRoutePortsLocation, index:
-        number, obj: ExpressRoutePortsLocation[]) => boolean, thisArg?: any)
+        number, obj: ExpressRoutePortsLocation[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ExpressRoutePortsLocation, index: number, obj:
-              ExpressRoutePortsLocation[]) => boolean
+              ExpressRoutePortsLocation[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -431,6 +439,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.forEach'
     name: >-
@@ -463,6 +472,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.includes'
+    name: 'includes(ExpressRoutePortsLocation, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ExpressRoutePortsLocation, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.ExpressRoutePortsLocation'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.indexOf'
     name: 'indexOf(ExpressRoutePortsLocation, undefined | number)'
     children: []
@@ -489,6 +528,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.join'
     name: join(undefined | string)
@@ -513,6 +553,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.keys'
     name: keys()
@@ -527,6 +568,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.lastIndexOf'
     name: 'lastIndexOf(ExpressRoutePortsLocation, undefined | number)'
@@ -554,6 +596,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.length'
     name: length
@@ -570,6 +613,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.map'
     name: >-
@@ -606,6 +650,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.nextLink'
     name: nextLink
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.pop'
     name: pop()
@@ -635,6 +681,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.push'
     name: 'push(ExpressRoutePortsLocation[])'
@@ -654,6 +701,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.reduce'
     name: >-
@@ -687,6 +735,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.reduce_1'
     name: >-
@@ -698,10 +747,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ExpressRoutePortsLocation,
@@ -723,6 +769,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.reduce_2'
     name: >-
@@ -761,6 +808,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.reduceRight'
     name: >-
@@ -796,6 +844,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.reduceRight_1'
     name: >-
@@ -807,11 +856,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -833,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.reduceRight_2'
     name: >-
@@ -872,6 +918,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.reverse'
     name: reverse()
@@ -886,6 +933,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.shift'
     name: shift()
@@ -900,6 +948,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -925,11 +974,12 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.some'
     name: >-
       some((value: ExpressRoutePortsLocation, index: number, array:
-      ExpressRoutePortsLocation[]) => boolean, any)
+      ExpressRoutePortsLocation[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -940,13 +990,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ExpressRoutePortsLocation, index:
-        number, array: ExpressRoutePortsLocation[]) => boolean, thisArg?: any)
+        number, array: ExpressRoutePortsLocation[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ExpressRoutePortsLocation, index: number, array:
-              ExpressRoutePortsLocation[]) => boolean
+              ExpressRoutePortsLocation[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -962,6 +1012,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.sort'
     name: >-
@@ -990,6 +1041,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.splice_1'
     name: 'splice(number, number, ExpressRoutePortsLocation[])'
@@ -1023,6 +1075,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1051,6 +1104,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocation[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.toLocaleString'
     name: toLocaleString()
@@ -1067,6 +1121,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.toString'
     name: toString()
@@ -1081,6 +1136,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.unshift'
     name: 'unshift(ExpressRoutePortsLocation[])'
@@ -1100,6 +1156,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocationListResult.values'
     name: values()
@@ -1114,6 +1171,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-network.ExpressRoutePortsLocation>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.ExpressRoutePortsLocation>

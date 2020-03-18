@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: IaaS VM workload-specific container.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMContainer.backupManagementType'
     name: backupManagementType
@@ -24,13 +24,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type of backup management for the container. Possible values include:
+      'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     optional: true
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMContainer.containerType'
     name: containerType
@@ -39,12 +47,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'containerType: "IaaSVMContainer"'
       return:
         type:
           - '"IaaSVMContainer"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMContainer.friendlyName'
     name: friendlyName
@@ -53,13 +62,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of the container.
     optional: true
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMContainer.healthStatus'
     name: healthStatus
@@ -68,13 +78,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Status of health of the container.
     optional: true
     syntax:
       content: 'healthStatus?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMContainer.registrationStatus'
     name: registrationStatus
@@ -83,13 +94,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Status of registration of the container with the Recovery Services Vault.
     optional: true
     syntax:
       content: 'registrationStatus?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMContainer.resourceGroup'
     name: resourceGroup
@@ -98,13 +110,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource group name of Recovery Services Vault.
     optional: true
     syntax:
       content: 'resourceGroup?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMContainer.virtualMachineId'
     name: virtualMachineId
@@ -113,13 +126,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Fully qualified ARM url of the virtual machine represented by this Azure
+      IaaS VM container.
     optional: true
     syntax:
       content: 'virtualMachineId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMContainer.virtualMachineVersion'
     name: virtualMachineVersion
@@ -128,13 +144,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether the container represents a Classic or an Azure Resource
+      Manager VM.
     optional: true
     syntax:
       content: 'virtualMachineVersion?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'

@@ -11,12 +11,13 @@ items:
       - '@azure/graph.ApplicationListResult.entries'
       - '@azure/graph.ApplicationListResult.every'
       - '@azure/graph.ApplicationListResult.fill'
-      - '@azure/graph.ApplicationListResult.filter_1'
       - '@azure/graph.ApplicationListResult.filter'
+      - '@azure/graph.ApplicationListResult.filter_1'
       - '@azure/graph.ApplicationListResult.find'
       - '@azure/graph.ApplicationListResult.find_1'
       - '@azure/graph.ApplicationListResult.findIndex'
       - '@azure/graph.ApplicationListResult.forEach'
+      - '@azure/graph.ApplicationListResult.includes'
       - '@azure/graph.ApplicationListResult.indexOf'
       - '@azure/graph.ApplicationListResult.join'
       - '@azure/graph.ApplicationListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.concat'
     name: 'concat(ConcatArray<Application>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/graph.Application[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/graph.Application[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.every'
     name: >-
       every((value: Application, index: number, array: Application[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Application, index: number, array:
-        Application[]) => boolean, thisArg?: any)
+        Application[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: Application, index: number, array: Application[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.fill'
     name: 'fill(Application, undefined | number, undefined | number)'
@@ -233,41 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/graph'
-  - uid: '@azure/graph.ApplicationListResult.filter_1'
-    name: >-
-      filter((value: Application, index: number, array: Application[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Application, index: number, array:
-        Application[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Application, index: number, array: Application[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/graph.Application[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.filter'
     name: >-
@@ -305,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/graph'
+  - uid: '@azure/graph.ApplicationListResult.filter_1'
+    name: >-
+      filter((value: Application, index: number, array: Application[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Application, index: number, array:
+        Application[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: Application, index: number, array: Application[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/graph.Application[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.find'
     name: >-
@@ -350,28 +362,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.find_1'
     name: >-
-      find((value: Application, index: number, obj: Application[]) => boolean,
+      find((value: Application, index: number, obj: Application[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Application, index: number, obj:
-        Application[]) => boolean, thisArg?: any)
+        Application[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Application, index: number, obj: Application[]) => boolean'
+            - '(value: Application, index: number, obj: Application[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -381,11 +390,12 @@ items:
       return:
         type:
           - '@azure/graph.Application | undefined'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.findIndex'
     name: >-
       findIndex((value: Application, index: number, obj: Application[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -398,11 +408,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Application, index: number, obj:
-        Application[]) => boolean, thisArg?: any)
+        Application[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Application, index: number, obj: Application[]) => boolean'
+            - '(value: Application, index: number, obj: Application[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -424,6 +434,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.forEach'
     name: >-
@@ -454,6 +465,36 @@ items:
             value.
           optional: true
     package: '@azure/graph'
+  - uid: '@azure/graph.ApplicationListResult.includes'
+    name: 'includes(Application, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Application, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/graph.Application'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.indexOf'
     name: 'indexOf(Application, undefined | number)'
     children: []
@@ -480,6 +521,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.join'
     name: join(undefined | string)
@@ -504,6 +546,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.keys'
     name: keys()
@@ -518,6 +561,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.lastIndexOf'
     name: 'lastIndexOf(Application, undefined | number)'
@@ -545,6 +589,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.length'
     name: length
@@ -561,6 +606,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.map'
     name: 'map((value: Application, index: number, array: Application[]) => U, any)'
@@ -593,6 +639,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.odatanextLink'
     name: odatanextLink
@@ -601,13 +648,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The URL to get the next set of results.
     optional: true
     syntax:
       content: 'odatanextLink?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.pop'
     name: pop()
@@ -622,6 +670,7 @@ items:
       return:
         type:
           - '@azure/graph.Application | undefined'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.push'
     name: 'push(Application[])'
@@ -641,6 +690,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.reduce'
     name: >-
@@ -671,6 +721,7 @@ items:
       return:
         type:
           - '@azure/graph.Application'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.reduce_1'
     name: >-
@@ -680,10 +731,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Application, currentValue:
@@ -703,6 +751,7 @@ items:
       return:
         type:
           - '@azure/graph.Application'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.reduce_2'
     name: >-
@@ -741,6 +790,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.reduceRight'
     name: >-
@@ -773,6 +823,7 @@ items:
       return:
         type:
           - '@azure/graph.Application'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.reduceRight_1'
     name: >-
@@ -782,11 +833,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Application,
@@ -806,6 +853,7 @@ items:
       return:
         type:
           - '@azure/graph.Application'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.reduceRight_2'
     name: >-
@@ -845,6 +893,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.reverse'
     name: reverse()
@@ -859,6 +908,7 @@ items:
       return:
         type:
           - '@azure/graph.Application[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.shift'
     name: shift()
@@ -873,6 +923,7 @@ items:
       return:
         type:
           - '@azure/graph.Application | undefined'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -898,10 +949,11 @@ items:
       return:
         type:
           - '@azure/graph.Application[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.some'
     name: >-
-      some((value: Application, index: number, array: Application[]) => boolean,
+      some((value: Application, index: number, array: Application[]) => unknown,
       any)
     children: []
     type: method
@@ -913,13 +965,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Application, index: number, array:
-        Application[]) => boolean, thisArg?: any)
+        Application[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: Application, index: number, array: Application[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -935,6 +987,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.sort'
     name: 'sort(undefined | (a: Application, b: Application) => number)'
@@ -959,6 +1012,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.splice_1'
     name: 'splice(number, number, Application[])'
@@ -992,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/graph.Application[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1020,6 +1075,7 @@ items:
       return:
         type:
           - '@azure/graph.Application[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.toLocaleString'
     name: toLocaleString()
@@ -1036,6 +1092,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.toString'
     name: toString()
@@ -1050,6 +1107,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.unshift'
     name: 'unshift(Application[])'
@@ -1069,6 +1127,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ApplicationListResult.values'
     name: values()
@@ -1083,6 +1142,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/graph.Application>
+        description: ''
     package: '@azure/graph'
 references:
   - uid: Array<@azure/graph.Application>

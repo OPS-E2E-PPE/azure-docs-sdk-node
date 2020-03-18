@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.WebJobCollection.entries'
       - '@azure/arm-appservice.WebJobCollection.every'
       - '@azure/arm-appservice.WebJobCollection.fill'
-      - '@azure/arm-appservice.WebJobCollection.filter_1'
       - '@azure/arm-appservice.WebJobCollection.filter'
+      - '@azure/arm-appservice.WebJobCollection.filter_1'
       - '@azure/arm-appservice.WebJobCollection.find'
       - '@azure/arm-appservice.WebJobCollection.find_1'
       - '@azure/arm-appservice.WebJobCollection.findIndex'
       - '@azure/arm-appservice.WebJobCollection.forEach'
+      - '@azure/arm-appservice.WebJobCollection.includes'
       - '@azure/arm-appservice.WebJobCollection.indexOf'
       - '@azure/arm-appservice.WebJobCollection.join'
       - '@azure/arm-appservice.WebJobCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.concat'
     name: 'concat(ConcatArray<WebJob>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.every'
-    name: 'every((value: WebJob, index: number, array: WebJob[]) => boolean, any)'
+    name: 'every((value: WebJob, index: number, array: WebJob[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: WebJob, index: number, array:
-        WebJob[]) => boolean, thisArg?: any)
+        WebJob[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: WebJob, index: number, array: WebJob[]) => boolean'
+            - '(value: WebJob, index: number, array: WebJob[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.fill'
     name: 'fill(WebJob, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.WebJobCollection.filter_1'
-    name: 'filter((value: WebJob, index: number, array: WebJob[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: WebJob, index: number, array:
-        WebJob[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: WebJob, index: number, array: WebJob[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.WebJob[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.filter'
     name: 'filter((value: WebJob, index: number, array: WebJob[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.WebJobCollection.filter_1'
+    name: 'filter((value: WebJob, index: number, array: WebJob[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: WebJob, index: number, array:
+        WebJob[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: WebJob, index: number, array: WebJob[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.WebJob[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.find'
     name: >-
@@ -340,26 +350,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.find_1'
-    name: 'find((value: WebJob, index: number, obj: WebJob[]) => boolean, any)'
+    name: 'find((value: WebJob, index: number, obj: WebJob[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: WebJob, index: number, obj: WebJob[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: WebJob, index: number, obj: WebJob[]) => boolean'
+            - '(value: WebJob, index: number, obj: WebJob[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -369,9 +376,10 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.findIndex'
-    name: 'findIndex((value: WebJob, index: number, obj: WebJob[]) => boolean, any)'
+    name: 'findIndex((value: WebJob, index: number, obj: WebJob[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -384,11 +392,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: WebJob, index: number, obj:
-        WebJob[]) => boolean, thisArg?: any)
+        WebJob[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: WebJob, index: number, obj: WebJob[]) => boolean'
+            - '(value: WebJob, index: number, obj: WebJob[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -410,6 +418,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.forEach'
     name: 'forEach((value: WebJob, index: number, array: WebJob[]) => void, any)'
@@ -438,6 +447,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.WebJobCollection.includes'
+    name: 'includes(WebJob, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: WebJob, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.WebJob'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.indexOf'
     name: 'indexOf(WebJob, undefined | number)'
     children: []
@@ -462,6 +499,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.join'
     name: join(undefined | string)
@@ -486,6 +524,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.keys'
     name: keys()
@@ -500,6 +539,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.lastIndexOf'
     name: 'lastIndexOf(WebJob, undefined | number)'
@@ -527,6 +567,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.length'
     name: length
@@ -543,6 +584,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.map'
     name: 'map((value: WebJob, index: number, array: WebJob[]) => U, any)'
@@ -575,6 +617,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.nextLink'
     name: nextLink
@@ -594,6 +637,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.pop'
     name: pop()
@@ -608,6 +652,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.push'
     name: 'push(WebJob[])'
@@ -627,6 +672,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.reduce_2'
     name: >-
@@ -664,6 +710,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.reduce'
     name: >-
@@ -694,6 +741,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.reduce_1'
     name: >-
@@ -703,10 +751,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: WebJob, currentValue:
@@ -726,6 +771,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.reduceRight_2'
     name: >-
@@ -764,6 +810,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.reduceRight'
     name: >-
@@ -795,6 +842,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.reduceRight_1'
     name: >-
@@ -804,11 +852,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: WebJob, currentValue:
@@ -828,6 +872,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.reverse'
     name: reverse()
@@ -842,6 +887,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.shift'
     name: shift()
@@ -856,6 +902,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -881,9 +928,10 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.some'
-    name: 'some((value: WebJob, index: number, array: WebJob[]) => boolean, any)'
+    name: 'some((value: WebJob, index: number, array: WebJob[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -894,11 +942,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: WebJob, index: number, array:
-        WebJob[]) => boolean, thisArg?: any)
+        WebJob[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: WebJob, index: number, array: WebJob[]) => boolean'
+            - '(value: WebJob, index: number, array: WebJob[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -914,6 +962,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.sort'
     name: 'sort(undefined | (a: WebJob, b: WebJob) => number)'
@@ -936,6 +985,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.splice_1'
     name: 'splice(number, number, WebJob[])'
@@ -967,6 +1017,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -995,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.WebJob[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.toLocaleString'
     name: toLocaleString()
@@ -1011,6 +1063,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.toString'
     name: toString()
@@ -1025,6 +1078,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.unshift'
     name: 'unshift(WebJob[])'
@@ -1044,6 +1098,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.WebJobCollection.values'
     name: values()
@@ -1058,6 +1113,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-appservice.WebJob>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.WebJob>

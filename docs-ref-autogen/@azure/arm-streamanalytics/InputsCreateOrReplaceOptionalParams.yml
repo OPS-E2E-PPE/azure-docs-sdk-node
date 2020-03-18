@@ -19,7 +19,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: '@azure/arm-streamanalytics'
@@ -37,6 +37,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.InputsCreateOrReplaceOptionalParams.customHeaders
@@ -55,6 +56,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.InputsCreateOrReplaceOptionalParams.ifMatch'
     name: ifMatch
@@ -63,13 +65,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The ETag of the input. Omit this value to always overwrite the current
+      input. Specify the
+
+      last-seen ETag value to prevent accidentally overwriting concurrent
+      changes.
     optional: true
     syntax:
       content: 'ifMatch?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.InputsCreateOrReplaceOptionalParams.ifNoneMatch'
     name: ifNoneMatch
@@ -78,13 +86,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Set to '*' to allow a new input to be created, but to prevent updating an
+      existing input.
+
+      Other values will result in a 412 Pre-condition Failed response.
     optional: true
     syntax:
       content: 'ifNoneMatch?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.InputsCreateOrReplaceOptionalParams.onDownloadProgress
@@ -103,6 +116,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.InputsCreateOrReplaceOptionalParams.onUploadProgress
@@ -119,6 +133,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.InputsCreateOrReplaceOptionalParams.timeout'
     name: timeout
@@ -136,4 +151,5 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-streamanalytics'

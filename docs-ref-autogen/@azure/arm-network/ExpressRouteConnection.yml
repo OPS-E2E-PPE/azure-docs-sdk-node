@@ -5,6 +5,7 @@ items:
     fullName: ExpressRouteConnection
     children:
       - '@azure/arm-network.ExpressRouteConnection.authorizationKey'
+      - '@azure/arm-network.ExpressRouteConnection.enableInternetSecurity'
       - '@azure/arm-network.ExpressRouteConnection.expressRouteCircuitPeering'
       - '@azure/arm-network.ExpressRouteConnection.id'
       - '@azure/arm-network.ExpressRouteConnection.name'
@@ -31,6 +32,23 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRouteConnection.enableInternetSecurity'
+    name: enableInternetSecurity
+    fullName: enableInternetSecurity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Enable internet security.
+    optional: true
+    syntax:
+      content: 'enableInternetSecurity?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteConnection.expressRouteCircuitPeering'
     name: expressRouteCircuitPeering
@@ -45,6 +63,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuitPeeringId'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteConnection.id'
     name: id
@@ -60,6 +79,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteConnection.name'
     name: name
@@ -74,6 +94,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteConnection.provisioningState'
     name: provisioningState
@@ -83,16 +104,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the resource. Possible values include:
-      'Succeeded', 'Updating',
+      The provisioning state of the express route connection resource. Possible
+      values include:
 
-      'Deleting', 'Failed'
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'provisioningState?: ProvisioningState'
       return:
         type:
           - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteConnection.routingWeight'
     name: routingWeight
@@ -108,6 +133,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'

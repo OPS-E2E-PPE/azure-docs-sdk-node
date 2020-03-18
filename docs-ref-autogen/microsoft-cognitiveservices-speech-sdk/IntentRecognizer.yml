@@ -14,6 +14,7 @@ items:
       - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.close
       - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.enableTelemetry
       - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.constructor
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.internalData
       - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.properties
       - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.recognized
       - >-
@@ -29,6 +30,8 @@ items:
         microsoft-cognitiveservices-speech-sdk.IntentRecognizer.speechStartDetected
       - >-
         microsoft-cognitiveservices-speech-sdk.IntentRecognizer.startContinuousRecognitionAsync
+      - >-
+        microsoft-cognitiveservices-speech-sdk.IntentRecognizer.startContinuousRecognitionAsyncImpl
       - >-
         microsoft-cognitiveservices-speech-sdk.IntentRecognizer.startKeywordRecognitionAsync
       - >-
@@ -128,15 +131,18 @@ items:
       - typeScript
     type: property
     summary: >-
+      Gets the authorization token used to communicate with the service.
+
       Gets/Sets the authorization token used to communicate with the service.
 
       Note: Please use a token derived from your LanguageUnderstanding
       subscription key for the Intent recognizer.
     syntax:
-      content: 'public authorizationToken: string'
+      content: string authorizationToken
       return:
         type:
           - string
+        description: Authorization token.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.canceled
     name: canceled
@@ -155,6 +161,7 @@ items:
           - >-
             (sender: IntentRecognizer, event:
             IntentRecognitionCanceledEventArgs) => void
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.close
     name: close()
@@ -209,6 +216,21 @@ items:
             An optional audio input config associated with the recognizer
           optional: true
     package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.internalData
+    name: internalData
+    fullName: internalData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: object internalData
+      return:
+        type:
+          - object
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.properties
     name: properties
     fullName: properties
@@ -220,10 +242,13 @@ items:
       The collection of properties and their values defined for this
       IntentRecognizer.
     syntax:
-      content: 'public properties: PropertyCollection'
+      content: PropertyCollection properties
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.PropertyCollection
+        description: |-
+          The collection of properties and their
+                   values defined for this IntentRecognizer.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.recognized
     name: recognized
@@ -242,6 +267,7 @@ items:
           - >-
             (sender: IntentRecognizer, event: IntentRecognitionEventArgs) =>
             void
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.recognizeOnceAsync
     name: >-
@@ -299,6 +325,7 @@ items:
           - >-
             (sender: IntentRecognizer, event: IntentRecognitionEventArgs) =>
             void
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.sessionStarted
     name: sessionStarted
@@ -315,6 +342,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: SessionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.sessionStopped
     name: sessionStopped
@@ -331,6 +359,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: SessionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.speechEndDetected
     name: speechEndDetected
@@ -347,6 +376,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.IntentRecognizer.speechRecognitionLanguage
@@ -358,10 +388,11 @@ items:
     type: property
     summary: Gets the spoken language of recognition.
     syntax:
-      content: 'public speechRecognitionLanguage: string'
+      content: string speechRecognitionLanguage
       return:
         type:
           - string
+        description: the spoken language of recognition.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.IntentRecognizer.speechStartDetected
@@ -379,6 +410,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.IntentRecognizer.startContinuousRecognitionAsync
@@ -407,6 +439,36 @@ items:
             - '(e: string) => void'
           description: |
             Callback invoked in case of an error.
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.IntentRecognizer.startContinuousRecognitionAsyncImpl
+    name: >-
+      startContinuousRecognitionAsyncImpl(RecognitionMode, () => void, (e:
+      string) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function startContinuousRecognitionAsyncImpl(recognitionMode:
+        RecognitionMode, cb?: () => void, err?: (e: string) => void)
+      parameters:
+        - id: recognitionMode
+          type:
+            - microsoft-cognitiveservices-speech-sdk.RecognitionMode
+          description: ''
+        - id: cb
+          type:
+            - () => void
+          description: ''
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: ''
           optional: true
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
@@ -514,10 +576,11 @@ items:
     type: property
     summary: This method returns the current state of the telemetry setting.
     syntax:
-      content: 'public static telemetryEnabled: boolean'
+      content: static boolean telemetryEnabled
       return:
         type:
           - boolean
+        description: 'true if the telemetry is enabled, false otherwise.'
     package: microsoft-cognitiveservices-speech-sdk
 references:
   - uid: microsoft-cognitiveservices-speech-sdk.Recognizer
@@ -550,6 +613,12 @@ references:
       - name: LanguageUnderstandingModel
         fullName: LanguageUnderstandingModel
         uid: microsoft-cognitiveservices-speech-sdk.LanguageUnderstandingModel
+  - uid: microsoft-cognitiveservices-speech-sdk.RecognitionMode
+    name: RecognitionMode
+    spec.typeScript:
+      - name: RecognitionMode
+        fullName: RecognitionMode
+        uid: microsoft-cognitiveservices-speech-sdk.RecognitionMode
   - uid: microsoft-cognitiveservices-speech-sdk.KeywordRecognitionModel
     name: KeywordRecognitionModel
     spec.typeScript:

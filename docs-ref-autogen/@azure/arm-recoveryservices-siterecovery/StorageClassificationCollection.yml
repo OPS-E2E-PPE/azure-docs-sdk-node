@@ -19,9 +19,9 @@ items:
       - >-
         @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.fill
       - >-
-        @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.filter_1
-      - >-
         @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.filter
+      - >-
+        @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.filter_1
       - >-
         @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.find
       - >-
@@ -30,6 +30,8 @@ items:
         @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.findIndex
       - >-
         @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.forEach
+      - >-
+        @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.includes
       - >-
         @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.indexOf
       - >-
@@ -103,6 +105,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.concat
@@ -124,6 +127,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.StorageClassification[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.concat_1
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.StorageClassification[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.copyWithin
@@ -188,6 +193,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.entries
@@ -203,12 +209,13 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.every
     name: >-
       every((value: StorageClassification, index: number, array:
-      StorageClassification[]) => boolean, any)
+      StorageClassification[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -217,13 +224,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: StorageClassification, index: number,
-        array: StorageClassification[]) => boolean, thisArg?: any)
+        array: StorageClassification[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: StorageClassification, index: number, array:
-              StorageClassification[]) => boolean
+              StorageClassification[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -239,6 +246,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.fill
@@ -280,44 +288,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-recoveryservices-siterecovery'
-  - uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.filter_1
-    name: >-
-      filter((value: StorageClassification, index: number, array:
-      StorageClassification[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: StorageClassification, index:
-        number, array: StorageClassification[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: StorageClassification, index: number, array:
-              StorageClassification[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-recoveryservices-siterecovery.StorageClassification[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.filter
@@ -356,6 +327,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-recoveryservices-siterecovery'
+  - uid: >-
+      @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.filter_1
+    name: >-
+      filter((value: StorageClassification, index: number, array:
+      StorageClassification[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: StorageClassification, index:
+        number, array: StorageClassification[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: StorageClassification, index: number, array:
+              StorageClassification[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-recoveryservices-siterecovery.StorageClassification[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.find
@@ -402,31 +413,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.find_1
     name: >-
       find((value: StorageClassification, index: number, obj:
-      StorageClassification[]) => boolean, any)
+      StorageClassification[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: StorageClassification, index: number,
-        obj: StorageClassification[]) => boolean, thisArg?: any)
+        obj: StorageClassification[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: StorageClassification, index: number, obj:
-              StorageClassification[]) => boolean
+              StorageClassification[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -438,12 +446,13 @@ items:
           - >-
             @azure/arm-recoveryservices-siterecovery.StorageClassification |
             undefined
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.findIndex
     name: >-
       findIndex((value: StorageClassification, index: number, obj:
-      StorageClassification[]) => boolean, any)
+      StorageClassification[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -456,13 +465,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: StorageClassification, index:
-        number, obj: StorageClassification[]) => boolean, thisArg?: any)
+        number, obj: StorageClassification[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: StorageClassification, index: number, obj:
-              StorageClassification[]) => boolean
+              StorageClassification[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -484,6 +493,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.forEach
@@ -518,6 +528,37 @@ items:
           optional: true
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
+      @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.includes
+    name: 'includes(StorageClassification, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: StorageClassification, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-recoveryservices-siterecovery.StorageClassification'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-recoveryservices-siterecovery'
+  - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.indexOf
     name: 'indexOf(StorageClassification, undefined | number)'
     children: []
@@ -544,6 +585,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.join
@@ -569,6 +611,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.keys
@@ -584,6 +627,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.lastIndexOf
@@ -612,6 +656,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.length
@@ -629,6 +674,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.map
@@ -666,6 +712,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.nextLink
@@ -682,6 +729,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.pop
@@ -699,6 +747,7 @@ items:
           - >-
             @azure/arm-recoveryservices-siterecovery.StorageClassification |
             undefined
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.push
@@ -719,6 +768,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.reduce
@@ -753,6 +803,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.StorageClassification'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.reduce_1
@@ -764,10 +815,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: StorageClassification,
@@ -789,6 +837,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.StorageClassification'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.reduce_2
@@ -828,6 +877,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.reduceRight
@@ -863,6 +913,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.StorageClassification'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.reduceRight_1
@@ -874,11 +925,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: StorageClassification,
@@ -900,6 +947,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.StorageClassification'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.reduceRight_2
@@ -940,6 +988,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.reverse
@@ -955,6 +1004,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.StorageClassification[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.shift
@@ -972,6 +1022,7 @@ items:
           - >-
             @azure/arm-recoveryservices-siterecovery.StorageClassification |
             undefined
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.slice
@@ -998,12 +1049,13 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.StorageClassification[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.some
     name: >-
       some((value: StorageClassification, index: number, array:
-      StorageClassification[]) => boolean, any)
+      StorageClassification[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -1014,13 +1066,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: StorageClassification, index: number,
-        array: StorageClassification[]) => boolean, thisArg?: any)
+        array: StorageClassification[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: StorageClassification, index: number, array:
-              StorageClassification[]) => boolean
+              StorageClassification[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -1036,6 +1088,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.sort
@@ -1065,6 +1118,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.splice_1
@@ -1099,6 +1153,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.StorageClassification[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.splice
@@ -1128,6 +1183,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.StorageClassification[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.toLocaleString
@@ -1145,6 +1201,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.toString
@@ -1160,6 +1217,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.unshift
@@ -1180,6 +1238,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.StorageClassificationCollection.values
@@ -1196,6 +1255,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-recoveryservices-siterecovery.StorageClassification>
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
 references:
   - uid: Array<@azure/arm-recoveryservices-siterecovery.StorageClassification>

@@ -36,6 +36,7 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.ChildEntity[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.ModelInfoResponse.customPrebuiltDomainName
@@ -52,6 +53,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.ModelInfoResponse.customPrebuiltModelName
@@ -68,6 +70,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.ModelInfoResponse.explicitList'
     name: explicitList
@@ -83,6 +86,7 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.ExplicitListItem[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.ModelInfoResponse.id'
     name: id
@@ -97,6 +101,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.ModelInfoResponse.name'
     name: name
@@ -112,6 +117,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.ModelInfoResponse.readableType'
     name: readableType
@@ -121,21 +127,22 @@ items:
       - typeScript
     type: property
     summary: >-
-      Possible values include: 'Entity Extractor', 'Hierarchical Entity
-      Extractor', 'Hierarchical
+      Possible values include: 'Entity Extractor', 'Child Entity Extractor',
+      'Hierarchical Entity
 
-      Child Entity Extractor', 'Composite Entity Extractor', 'Closed List Entity
-      Extractor',
+      Extractor', 'Hierarchical Child Entity Extractor', 'Composite Entity
+      Extractor', 'List Entity
 
-      'Prebuilt Entity Extractor', 'Intent Classifier', 'Pattern.Any Entity
-      Extractor', 'Regex
+      Extractor', 'Prebuilt Entity Extractor', 'Intent Classifier', 'Pattern.Any
+      Entity Extractor',
 
-      Entity Extractor'
+      'Closed List Entity Extractor', 'Regex Entity Extractor'
     syntax:
-      content: 'readableType: ReadableType1'
+      content: 'readableType: ReadableType2'
       return:
         type:
-          - '@azure/cognitiveservices-luis-authoring.ReadableType1'
+          - '@azure/cognitiveservices-luis-authoring.ReadableType2'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.ModelInfoResponse.regexPattern'
     name: regexPattern
@@ -144,13 +151,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The Regex entity pattern.
+    summary: The Regular Expression entity pattern.
     optional: true
     syntax:
       content: 'regexPattern?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.ModelInfoResponse.roles'
     name: roles
@@ -166,6 +174,7 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.EntityRole[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.ModelInfoResponse.subLists'
     name: subLists
@@ -174,13 +183,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: List of sub-lists.
+    summary: List of sublists.
     optional: true
     syntax:
       content: 'subLists?: SubClosedListResponse[]'
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.SubClosedListResponse[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.ModelInfoResponse.typeId'
     name: typeId
@@ -196,6 +206,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
 references:
   - uid: '@azure/cognitiveservices-luis-authoring.ChildEntity[]'
@@ -214,12 +225,12 @@ references:
         uid: '@azure/cognitiveservices-luis-authoring.ExplicitListItem'
       - name: '[]'
         fullName: '[]'
-  - uid: '@azure/cognitiveservices-luis-authoring.ReadableType1'
-    name: ReadableType1
+  - uid: '@azure/cognitiveservices-luis-authoring.ReadableType2'
+    name: ReadableType2
     spec.typeScript:
-      - name: ReadableType1
-        fullName: ReadableType1
-        uid: '@azure/cognitiveservices-luis-authoring.ReadableType1'
+      - name: ReadableType2
+        fullName: ReadableType2
+        uid: '@azure/cognitiveservices-luis-authoring.ReadableType2'
   - uid: '@azure/cognitiveservices-luis-authoring.EntityRole[]'
     name: 'EntityRole[]'
     spec.typeScript:

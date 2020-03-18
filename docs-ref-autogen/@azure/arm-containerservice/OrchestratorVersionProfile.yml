@@ -5,6 +5,7 @@ items:
     fullName: OrchestratorVersionProfile
     children:
       - '@azure/arm-containerservice.OrchestratorVersionProfile.default'
+      - '@azure/arm-containerservice.OrchestratorVersionProfile.isPreview'
       - '@azure/arm-containerservice.OrchestratorVersionProfile.orchestratorType'
       - >-
         @azure/arm-containerservice.OrchestratorVersionProfile.orchestratorVersion
@@ -22,11 +23,29 @@ items:
       - typeScript
     type: property
     summary: Installed by default if version is not specified.
+    optional: true
     syntax:
-      content: 'default: boolean'
+      content: 'default?: undefined | false | true'
       return:
         type:
-          - boolean
+          - undefined | false | true
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.OrchestratorVersionProfile.isPreview'
+    name: isPreview
+    fullName: isPreview
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether Kubernetes version is currently in preview.
+    optional: true
+    syntax:
+      content: 'isPreview?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.OrchestratorVersionProfile.orchestratorType'
     name: orchestratorType
@@ -41,6 +60,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.OrchestratorVersionProfile.orchestratorVersion'
     name: orchestratorVersion
@@ -55,6 +75,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.OrchestratorVersionProfile.upgrades'
     name: upgrades
@@ -64,11 +85,13 @@ items:
       - typeScript
     type: property
     summary: The list of available upgrade versions.
+    optional: true
     syntax:
-      content: 'upgrades: OrchestratorProfile[]'
+      content: 'upgrades?: OrchestratorProfile[]'
       return:
         type:
           - '@azure/arm-containerservice.OrchestratorProfile[]'
+        description: ''
     package: '@azure/arm-containerservice'
 references:
   - uid: '@azure/arm-containerservice.OrchestratorProfile[]'

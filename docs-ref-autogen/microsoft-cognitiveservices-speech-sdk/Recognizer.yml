@@ -7,10 +7,13 @@ items:
       - microsoft-cognitiveservices-speech-sdk.Recognizer.close
       - microsoft-cognitiveservices-speech-sdk.Recognizer.dispose
       - microsoft-cognitiveservices-speech-sdk.Recognizer.enableTelemetry
+      - microsoft-cognitiveservices-speech-sdk.Recognizer.internalData
       - microsoft-cognitiveservices-speech-sdk.Recognizer.sessionStarted
       - microsoft-cognitiveservices-speech-sdk.Recognizer.sessionStopped
       - microsoft-cognitiveservices-speech-sdk.Recognizer.speechEndDetected
       - microsoft-cognitiveservices-speech-sdk.Recognizer.speechStartDetected
+      - >-
+        microsoft-cognitiveservices-speech-sdk.Recognizer.startContinuousRecognitionAsyncImpl
       - microsoft-cognitiveservices-speech-sdk.Recognizer.telemetryEnabled
     langs:
       - typeScript
@@ -73,6 +76,21 @@ items:
             recognition errors are collected and sent to Microsoft.
             If set to false, no telemetry is sent to Microsoft.
     package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.Recognizer.internalData
+    name: internalData
+    fullName: internalData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: object internalData
+      return:
+        type:
+          - object
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.Recognizer.sessionStarted
     name: sessionStarted
     fullName: sessionStarted
@@ -88,6 +106,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: SessionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.Recognizer.sessionStopped
     name: sessionStopped
@@ -104,6 +123,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: SessionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.Recognizer.speechEndDetected
     name: speechEndDetected
@@ -120,6 +140,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.Recognizer.speechStartDetected
     name: speechStartDetected
@@ -136,6 +157,37 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.Recognizer.startContinuousRecognitionAsyncImpl
+    name: >-
+      startContinuousRecognitionAsyncImpl(RecognitionMode, () => void, (e:
+      string) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function startContinuousRecognitionAsyncImpl(recognitionMode:
+        RecognitionMode, cb?: () => void, err?: (e: string) => void)
+      parameters:
+        - id: recognitionMode
+          type:
+            - microsoft-cognitiveservices-speech-sdk.RecognitionMode
+          description: ''
+        - id: cb
+          type:
+            - () => void
+          description: ''
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: ''
+          optional: true
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.Recognizer.telemetryEnabled
     name: telemetryEnabled
@@ -146,8 +198,16 @@ items:
     type: property
     summary: This method returns the current state of the telemetry setting.
     syntax:
-      content: 'public static telemetryEnabled: boolean'
+      content: static boolean telemetryEnabled
       return:
         type:
           - boolean
+        description: 'true if the telemetry is enabled, false otherwise.'
     package: microsoft-cognitiveservices-speech-sdk
+references:
+  - uid: microsoft-cognitiveservices-speech-sdk.RecognitionMode
+    name: RecognitionMode
+    spec.typeScript:
+      - name: RecognitionMode
+        fullName: RecognitionMode
+        uid: microsoft-cognitiveservices-speech-sdk.RecognitionMode

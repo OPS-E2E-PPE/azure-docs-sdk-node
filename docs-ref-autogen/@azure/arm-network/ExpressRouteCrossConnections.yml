@@ -9,7 +9,6 @@ items:
       - '@azure/arm-network.ExpressRouteCrossConnections.beginListRoutesTable'
       - >-
         @azure/arm-network.ExpressRouteCrossConnections.beginListRoutesTableSummary
-      - '@azure/arm-network.ExpressRouteCrossConnections.beginUpdateTags'
       - '@azure/arm-network.ExpressRouteCrossConnections.createOrUpdate'
       - '@azure/arm-network.ExpressRouteCrossConnections.constructor'
       - '@azure/arm-network.ExpressRouteCrossConnections.get'
@@ -33,6 +32,8 @@ items:
       - '@azure/arm-network.ExpressRouteCrossConnections.listRoutesTable'
       - '@azure/arm-network.ExpressRouteCrossConnections.listRoutesTableSummary'
       - '@azure/arm-network.ExpressRouteCrossConnections.updateTags'
+      - '@azure/arm-network.ExpressRouteCrossConnections.updateTags_2'
+      - '@azure/arm-network.ExpressRouteCrossConnections.updateTags_1'
     langs:
       - typeScript
     type: class
@@ -75,6 +76,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.beginListArpTable'
     name: >-
@@ -119,6 +121,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.beginListRoutesTable'
     name: >-
@@ -163,6 +166,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ExpressRouteCrossConnections.beginListRoutesTableSummary
@@ -208,42 +212,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ExpressRouteCrossConnections.beginUpdateTags'
-    name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Updates an express route cross connection tags.
-    syntax:
-      content: >-
-        function beginUpdateTags(resourceGroupName: string, crossConnectionName:
-        string, crossConnectionParameters: TagsObject, options?:
-        msRest.RequestOptionsBase)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: crossConnectionName
-          type:
-            - string
-          description: The name of the cross connection.
-        - id: crossConnectionParameters
-          type:
-            - '@azure/arm-network.TagsObject'
-          description: |-
-            Parameters supplied to update express route cross connection
-            tags.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.createOrUpdate'
     name: >-
@@ -282,6 +251,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRouteCrossConnectionsCreateOrUpdateResponse>
+        description: Promise<Models.ExpressRouteCrossConnectionsCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.constructor'
     name: ExpressRouteCrossConnections(NetworkManagementClientContext)
@@ -329,6 +299,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRouteCrossConnectionsGetResponse>
+        description: Promise<Models.ExpressRouteCrossConnectionsGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.get_2'
     name: >-
@@ -364,9 +335,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRouteCrossConnection>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRouteCrossConnectionsGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.get_1'
     name: 'get(string, string, ServiceCallback<ExpressRouteCrossConnection>)'
@@ -395,9 +363,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRouteCrossConnection>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRouteCrossConnectionsGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.list'
     name: list(msRest.RequestOptionsBase)
@@ -417,6 +382,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRouteCrossConnectionsListResponse>
+        description: Promise<Models.ExpressRouteCrossConnectionsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.list_2'
     name: >-
@@ -442,9 +408,6 @@ items:
               ServiceCallback<@azure/arm-network.ExpressRouteCrossConnectionListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRouteCrossConnectionsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.list_1'
     name: list(ServiceCallback<ExpressRouteCrossConnectionListResult>)
@@ -464,9 +427,6 @@ items:
               ServiceCallback<@azure/arm-network.ExpressRouteCrossConnectionListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRouteCrossConnectionsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listArpTable'
     name: 'listArpTable(string, string, string, string, msRest.RequestOptionsBase)'
@@ -509,6 +469,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRouteCrossConnectionsListArpTableResponse>
+        description: Promise<Models.ExpressRouteCrossConnectionsListArpTableResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listByResourceGroup'
     name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
@@ -535,6 +496,8 @@ items:
         type:
           - >-
             Promise<Models.ExpressRouteCrossConnectionsListByResourceGroupResponse>
+        description: >-
+          Promise<Models.ExpressRouteCrossConnectionsListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listByResourceGroup_2'
     name: >-
@@ -565,10 +528,6 @@ items:
               ServiceCallback<@azure/arm-network.ExpressRouteCrossConnectionListResult>
           description: |
             The callback
-      return:
-        type:
-          - >-
-            Promise<Models.ExpressRouteCrossConnectionsListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listByResourceGroup_1'
     name: >-
@@ -594,10 +553,6 @@ items:
               ServiceCallback<@azure/arm-network.ExpressRouteCrossConnectionListResult>
           description: |
             The callback
-      return:
-        type:
-          - >-
-            Promise<Models.ExpressRouteCrossConnectionsListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listByResourceGroupNext'
     name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
@@ -624,6 +579,8 @@ items:
         type:
           - >-
             Promise<Models.ExpressRouteCrossConnectionsListByResourceGroupNextResponse>
+        description: >-
+          Promise<Models.ExpressRouteCrossConnectionsListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listByResourceGroupNext_2'
     name: >-
@@ -654,10 +611,6 @@ items:
               ServiceCallback<@azure/arm-network.ExpressRouteCrossConnectionListResult>
           description: |
             The callback
-      return:
-        type:
-          - >-
-            Promise<Models.ExpressRouteCrossConnectionsListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listByResourceGroupNext_1'
     name: >-
@@ -683,10 +636,6 @@ items:
               ServiceCallback<@azure/arm-network.ExpressRouteCrossConnectionListResult>
           description: |
             The callback
-      return:
-        type:
-          - >-
-            Promise<Models.ExpressRouteCrossConnectionsListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -712,6 +661,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRouteCrossConnectionsListNextResponse>
+        description: Promise<Models.ExpressRouteCrossConnectionsListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listNext_2'
     name: >-
@@ -741,9 +691,6 @@ items:
               ServiceCallback<@azure/arm-network.ExpressRouteCrossConnectionListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRouteCrossConnectionsListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listNext_1'
     name: 'listNext(string, ServiceCallback<ExpressRouteCrossConnectionListResult>)'
@@ -767,9 +714,6 @@ items:
               ServiceCallback<@azure/arm-network.ExpressRouteCrossConnectionListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRouteCrossConnectionsListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listRoutesTable'
     name: 'listRoutesTable(string, string, string, string, msRest.RequestOptionsBase)'
@@ -812,6 +756,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRouteCrossConnectionsListRoutesTableResponse>
+        description: Promise<Models.ExpressRouteCrossConnectionsListRoutesTableResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.listRoutesTableSummary'
     name: >-
@@ -857,6 +802,8 @@ items:
         type:
           - >-
             Promise<Models.ExpressRouteCrossConnectionsListRoutesTableSummaryResponse>
+        description: >-
+          Promise<Models.ExpressRouteCrossConnectionsListRoutesTableSummaryResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnections.updateTags'
     name: 'updateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
@@ -893,6 +840,82 @@ items:
       return:
         type:
           - Promise<Models.ExpressRouteCrossConnectionsUpdateTagsResponse>
+        description: Promise<Models.ExpressRouteCrossConnectionsUpdateTagsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRouteCrossConnections.updateTags_2'
+    name: >-
+      updateTags(string, string, TagsObject, RequestOptionsBase,
+      ServiceCallback<ExpressRouteCrossConnection>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, crossConnectionName:
+        string, crossConnectionParameters: TagsObject, options:
+        RequestOptionsBase, callback:
+        ServiceCallback<ExpressRouteCrossConnection>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: crossConnectionName
+          type:
+            - string
+          description: The name of the cross connection.
+        - id: crossConnectionParameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: |-
+            Parameters supplied to update express route cross connection
+            tags.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.ExpressRouteCrossConnection>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRouteCrossConnections.updateTags_1'
+    name: >-
+      updateTags(string, string, TagsObject,
+      ServiceCallback<ExpressRouteCrossConnection>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, crossConnectionName:
+        string, crossConnectionParameters: TagsObject, callback:
+        ServiceCallback<ExpressRouteCrossConnection>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: crossConnectionName
+          type:
+            - string
+          description: The name of the cross connection.
+        - id: crossConnectionParameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: |-
+            Parameters supplied to update express route cross connection
+            tags.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.ExpressRouteCrossConnection>
+          description: |
+            The callback
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -907,12 +930,6 @@ references:
       - name: ExpressRouteCrossConnection
         fullName: ExpressRouteCrossConnection
         uid: '@azure/arm-network.ExpressRouteCrossConnection'
-  - uid: '@azure/arm-network.TagsObject'
-    name: TagsObject
-    spec.typeScript:
-      - name: TagsObject
-        fullName: TagsObject
-        uid: '@azure/arm-network.TagsObject'
   - uid: ServiceCallback<@azure/arm-network.ExpressRouteCrossConnection>
     name: ExpressRouteCrossConnection>
     spec.typeScript:
@@ -933,3 +950,9 @@ references:
         uid: '@azure/arm-network.ExpressRouteCrossConnectionListResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'

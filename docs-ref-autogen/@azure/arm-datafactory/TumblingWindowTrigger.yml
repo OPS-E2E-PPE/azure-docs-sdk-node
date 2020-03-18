@@ -4,6 +4,7 @@ items:
     name: TumblingWindowTrigger
     fullName: TumblingWindowTrigger
     children:
+      - '@azure/arm-datafactory.TumblingWindowTrigger.annotations'
       - '@azure/arm-datafactory.TumblingWindowTrigger.delay'
       - '@azure/arm-datafactory.TumblingWindowTrigger.dependsOn'
       - '@azure/arm-datafactory.TumblingWindowTrigger.description'
@@ -19,7 +20,28 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      Trigger that schedules pipeline runs for all fixed time interval windows
+      from a start time
+
+      without gaps and also supports backfill scenarios (when start time is in
+      the past).
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.TumblingWindowTrigger.annotations'
+    name: annotations
+    fullName: annotations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of tags that can be used for describing the trigger.
+    optional: true
+    syntax:
+      content: 'annotations?: any[]'
+      return:
+        type:
+          - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.delay'
     name: delay
@@ -28,13 +50,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies how long the trigger waits past due time before triggering new
+      run. It doesn't alter
+
+      window start and end time. The default is 0. Type: string (or Expression
+      with resultType
+
+      string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
     optional: true
     syntax:
       content: 'delay?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.dependsOn'
     name: dependsOn
@@ -43,13 +73,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Triggers that this trigger depends on. Only tumbling window triggers are
+      supported.
     optional: true
     syntax:
       content: 'dependsOn?: DependencyReferenceUnion[]'
       return:
         type:
           - '@azure/arm-datafactory.DependencyReferenceUnion[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.description'
     name: description
@@ -58,13 +91,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Trigger description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.endTime'
     name: endTime
@@ -73,13 +107,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The end time for the time period for the trigger during which events are
+      fired for windows
+
+      that are ready. Only UTC time is currently supported.
     optional: true
     syntax:
       content: 'endTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.frequency'
     name: frequency
@@ -88,12 +127,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The frequency of the time windows. Possible values include: 'Minute',
+      'Hour'
     syntax:
       content: 'frequency: TumblingWindowFrequency'
       return:
         type:
           - '@azure/arm-datafactory.TumblingWindowFrequency'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.interval'
     name: interval
@@ -102,12 +144,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The interval of the time windows. The minimum interval allowed is 15
+      Minutes.
     syntax:
       content: 'interval: number'
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.maxConcurrency'
     name: maxConcurrency
@@ -116,12 +161,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The max number of parallel time windows (ready for execution) for which a
+      new run is
+
+      triggered.
     syntax:
       content: 'maxConcurrency: number'
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.pipelineProperty'
     name: pipelineProperty
@@ -130,12 +180,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Pipeline for which runs are created when an event is fired for trigger
+      window that is ready.
     syntax:
       content: 'pipelineProperty: TriggerPipelineReference'
       return:
         type:
           - '@azure/arm-datafactory.TriggerPipelineReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.retryPolicy'
     name: retryPolicy
@@ -144,13 +197,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Retry policy that will be applied for failed pipeline runs.
     optional: true
     syntax:
       content: 'retryPolicy?: RetryPolicy'
       return:
         type:
           - '@azure/arm-datafactory.RetryPolicy'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.runtimeState'
     name: runtimeState
@@ -159,13 +213,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Indicates if trigger is running or not. Updated when Start/Stop APIs are
+      called on the
+
+      Trigger. Possible values include: 'Started', 'Stopped', 'Disabled'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'runtimeState?: TriggerRuntimeState'
       return:
         type:
           - '@azure/arm-datafactory.TriggerRuntimeState'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.startTime'
     name: startTime
@@ -174,12 +236,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The start time for the time period for the trigger during which events are
+      fired for windows
+
+      that are ready. Only UTC time is currently supported.
     syntax:
       content: 'startTime: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.TumblingWindowTrigger.type'
     name: type
@@ -188,12 +255,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "TumblingWindowTrigger"'
       return:
         type:
           - '"TumblingWindowTrigger"'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.DependencyReferenceUnion[]'

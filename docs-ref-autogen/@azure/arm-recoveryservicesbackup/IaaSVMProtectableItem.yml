@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: IaaS VM workload-specific backup item.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.IaaSVMProtectableItem.backupManagementType
@@ -25,13 +25,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Type of backup management to backup an item.
     optional: true
     syntax:
       content: 'backupManagementType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMProtectableItem.friendlyName'
     name: friendlyName
@@ -40,13 +41,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of the backup item.
     optional: true
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.IaaSVMProtectableItem.protectableItemType
@@ -56,12 +58,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'protectableItemType: "IaaSVMProtectableItem"'
       return:
         type:
           - '"IaaSVMProtectableItem"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMProtectableItem.protectionState'
     name: protectionState
@@ -70,13 +73,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      State of the back up item. Possible values include: 'Invalid',
+      'NotProtected', 'Protecting',
+
+      'Protected', 'ProtectionFailed'
     optional: true
     syntax:
       content: 'protectionState?: ProtectionStatus'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMProtectableItem.virtualMachineId'
     name: virtualMachineId
@@ -85,13 +93,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Fully qualified ARM ID of the virtual machine.
     optional: true
     syntax:
       content: 'virtualMachineId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.IaaSVMProtectableItem.workloadType'
     name: workloadType
@@ -100,13 +109,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Type of workload for the backup management
     optional: true
     syntax:
       content: 'workloadType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.ProtectionStatus'

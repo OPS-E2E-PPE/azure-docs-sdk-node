@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cosmos.ContainerDefinition.conflictResolutionPolicy'
       - '@azure/cosmos.ContainerDefinition.defaultTtl'
+      - '@azure/cosmos.ContainerDefinition.geospatialConfig'
       - '@azure/cosmos.ContainerDefinition.id'
       - '@azure/cosmos.ContainerDefinition.indexingPolicy'
       - '@azure/cosmos.ContainerDefinition.partitionKey'
@@ -29,6 +30,7 @@ items:
       return:
         type:
           - '@azure/cosmos.ConflictResolutionPolicy'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ContainerDefinition.defaultTtl'
     name: defaultTtl
@@ -44,6 +46,25 @@ items:
       return:
         type:
           - number
+        description: ''
+    package: '@azure/cosmos'
+  - uid: '@azure/cosmos.ContainerDefinition.geospatialConfig'
+    name: geospatialConfig
+    fullName: geospatialConfig
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Geospatial configuration for a collection. Type is set to Geography by
+      default
+    optional: true
+    syntax:
+      content: 'geospatialConfig?: Object'
+      return:
+        type:
+          - Object
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ContainerDefinition.id'
     name: id
@@ -59,6 +80,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ContainerDefinition.indexingPolicy'
     name: indexingPolicy
@@ -74,6 +96,7 @@ items:
       return:
         type:
           - '@azure/cosmos.IndexingPolicy'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ContainerDefinition.partitionKey'
     name: partitionKey
@@ -82,13 +105,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: TODO
+    summary: The partition key for the container.
     optional: true
     syntax:
       content: 'partitionKey?: PartitionKeyDefinition'
       return:
         type:
           - '@azure/cosmos.PartitionKeyDefinition'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ContainerDefinition.uniqueKeyPolicy'
     name: uniqueKeyPolicy
@@ -97,13 +121,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Policy for additional keys that must be unique per partion key
+    summary: Policy for additional keys that must be unique per partition key
     optional: true
     syntax:
       content: 'uniqueKeyPolicy?: UniqueKeyPolicy'
       return:
         type:
           - '@azure/cosmos.UniqueKeyPolicy'
+        description: ''
     package: '@azure/cosmos'
 references:
   - uid: '@azure/cosmos.ConflictResolutionPolicy'

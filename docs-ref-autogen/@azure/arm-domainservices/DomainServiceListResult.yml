@@ -11,12 +11,13 @@ items:
       - '@azure/arm-domainservices.DomainServiceListResult.entries'
       - '@azure/arm-domainservices.DomainServiceListResult.every'
       - '@azure/arm-domainservices.DomainServiceListResult.fill'
-      - '@azure/arm-domainservices.DomainServiceListResult.filter_1'
       - '@azure/arm-domainservices.DomainServiceListResult.filter'
+      - '@azure/arm-domainservices.DomainServiceListResult.filter_1'
       - '@azure/arm-domainservices.DomainServiceListResult.find'
       - '@azure/arm-domainservices.DomainServiceListResult.find_1'
       - '@azure/arm-domainservices.DomainServiceListResult.findIndex'
       - '@azure/arm-domainservices.DomainServiceListResult.forEach'
+      - '@azure/arm-domainservices.DomainServiceListResult.includes'
       - '@azure/arm-domainservices.DomainServiceListResult.indexOf'
       - '@azure/arm-domainservices.DomainServiceListResult.join'
       - '@azure/arm-domainservices.DomainServiceListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.concat'
     name: 'concat(ConcatArray<DomainService>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService[]'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService[]'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.every'
     name: >-
       every((value: DomainService, index: number, array: DomainService[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: DomainService, index: number, array:
-        DomainService[]) => boolean, thisArg?: any)
+        DomainService[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: DomainService, index: number, array: DomainService[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.fill'
     name: 'fill(DomainService, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-domainservices'
-  - uid: '@azure/arm-domainservices.DomainServiceListResult.filter_1'
-    name: >-
-      filter((value: DomainService, index: number, array: DomainService[]) =>
-      any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: DomainService, index: number, array:
-        DomainService[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: DomainService, index: number, array: DomainService[]) =>
-              any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-domainservices.DomainService[]'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-domainservices'
+  - uid: '@azure/arm-domainservices.DomainServiceListResult.filter_1'
+    name: >-
+      filter((value: DomainService, index: number, array: DomainService[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: DomainService, index: number, array:
+        DomainService[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: DomainService, index: number, array: DomainService[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-domainservices.DomainService[]'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.find_1'
     name: >-
       find((value: DomainService, index: number, obj: DomainService[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: DomainService, index: number, obj:
-        DomainService[]) => boolean, thisArg?: any)
+        DomainService[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: DomainService, index: number, obj: DomainService[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService | undefined'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.findIndex'
     name: >-
       findIndex((value: DomainService, index: number, obj: DomainService[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: DomainService, index: number, obj:
-        DomainService[]) => boolean, thisArg?: any)
+        DomainService[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: DomainService, index: number, obj: DomainService[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-domainservices'
+  - uid: '@azure/arm-domainservices.DomainServiceListResult.includes'
+    name: 'includes(DomainService, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: DomainService, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-domainservices.DomainService'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.indexOf'
     name: 'indexOf(DomainService, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.lastIndexOf'
     name: 'lastIndexOf(DomainService, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.map'
     name: >-
@@ -603,6 +647,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.nextLink'
     name: nextLink
@@ -618,6 +663,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.pop'
     name: pop()
@@ -632,6 +678,7 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService | undefined'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.push'
     name: 'push(DomainService[])'
@@ -651,6 +698,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.reduce'
     name: >-
@@ -682,6 +730,7 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.reduce_1'
     name: >-
@@ -692,10 +741,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: DomainService, currentValue:
@@ -715,6 +761,7 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.reduce_2'
     name: >-
@@ -753,6 +800,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.reduceRight'
     name: >-
@@ -785,6 +833,7 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.reduceRight_1'
     name: >-
@@ -795,11 +844,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: DomainService,
@@ -819,6 +864,7 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.reduceRight_2'
     name: >-
@@ -858,6 +904,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.reverse'
     name: reverse()
@@ -872,6 +919,7 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService[]'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.shift'
     name: shift()
@@ -886,6 +934,7 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService | undefined'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -911,11 +960,12 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService[]'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.some'
     name: >-
       some((value: DomainService, index: number, array: DomainService[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -926,13 +976,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: DomainService, index: number, array:
-        DomainService[]) => boolean, thisArg?: any)
+        DomainService[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: DomainService, index: number, array: DomainService[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -948,6 +998,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.sort'
     name: 'sort(undefined | (a: DomainService, b: DomainService) => number)'
@@ -972,6 +1023,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.splice_1'
     name: 'splice(number, number, DomainService[])'
@@ -1005,6 +1057,7 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService[]'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1033,6 +1086,7 @@ items:
       return:
         type:
           - '@azure/arm-domainservices.DomainService[]'
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.toLocaleString'
     name: toLocaleString()
@@ -1049,6 +1103,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.toString'
     name: toString()
@@ -1063,6 +1118,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.unshift'
     name: 'unshift(DomainService[])'
@@ -1082,6 +1138,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-domainservices'
   - uid: '@azure/arm-domainservices.DomainServiceListResult.values'
     name: values()
@@ -1096,6 +1153,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-domainservices.DomainService>
+        description: ''
     package: '@azure/arm-domainservices'
 references:
   - uid: Array<@azure/arm-domainservices.DomainService>

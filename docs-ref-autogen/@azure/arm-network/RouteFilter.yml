@@ -29,8 +29,7 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets a unique read-only string that changes whenever the resource is
-      updated.
+      A unique read-only string that changes whenever the resource is updated.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -40,6 +39,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilter.id'
     name: id
@@ -55,6 +55,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilter.ipv6Peerings'
     name: ipv6Peerings
@@ -63,13 +64,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A collection of references to express route circuit ipv6 peerings.
+    summary: >-
+      A collection of references to express route circuit ipv6 peerings.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'ipv6Peerings?: ExpressRouteCircuitPeering[]'
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuitPeering[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilter.location'
     name: location
@@ -85,6 +91,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilter.name'
     name: name
@@ -104,6 +111,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilter.peerings'
     name: peerings
@@ -112,13 +120,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A collection of references to express route circuit peerings.
+    summary: >-
+      A collection of references to express route circuit peerings.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'peerings?: ExpressRouteCircuitPeering[]'
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuitPeering[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilter.provisioningState'
     name: provisioningState
@@ -128,19 +141,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the resource. Possible values are: 'Updating',
-      'Deleting',
+      The provisioning state of the route filter resource. Possible values
+      include: 'Succeeded',
 
-      'Succeeded' and 'Failed'.
+      'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilter.rules'
     name: rules
@@ -156,6 +170,7 @@ items:
       return:
         type:
           - '@azure/arm-network.RouteFilterRule[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilter.tags'
     name: tags
@@ -171,6 +186,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilter.type'
     name: type
@@ -190,6 +206,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -206,6 +223,12 @@ references:
         uid: '@azure/arm-network.ExpressRouteCircuitPeering'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.RouteFilterRule[]'
     name: 'RouteFilterRule[]'
     spec.typeScript:

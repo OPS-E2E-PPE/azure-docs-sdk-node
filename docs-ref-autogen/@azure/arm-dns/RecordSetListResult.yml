@@ -11,12 +11,13 @@ items:
       - '@azure/arm-dns.RecordSetListResult.entries'
       - '@azure/arm-dns.RecordSetListResult.every'
       - '@azure/arm-dns.RecordSetListResult.fill'
-      - '@azure/arm-dns.RecordSetListResult.filter_1'
       - '@azure/arm-dns.RecordSetListResult.filter'
+      - '@azure/arm-dns.RecordSetListResult.filter_1'
       - '@azure/arm-dns.RecordSetListResult.find'
       - '@azure/arm-dns.RecordSetListResult.find_1'
       - '@azure/arm-dns.RecordSetListResult.findIndex'
       - '@azure/arm-dns.RecordSetListResult.forEach'
+      - '@azure/arm-dns.RecordSetListResult.includes'
       - '@azure/arm-dns.RecordSetListResult.indexOf'
       - '@azure/arm-dns.RecordSetListResult.join'
       - '@azure/arm-dns.RecordSetListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.concat'
     name: 'concat(ConcatArray<RecordSet>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet[]'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet[]'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.entries'
     name: entries()
@@ -158,10 +163,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.every'
     name: >-
-      every((value: RecordSet, index: number, array: RecordSet[]) => boolean,
+      every((value: RecordSet, index: number, array: RecordSet[]) => unknown,
       any)
     children: []
     type: method
@@ -171,11 +177,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: RecordSet, index: number, array:
-        RecordSet[]) => boolean, thisArg?: any)
+        RecordSet[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: RecordSet, index: number, array: RecordSet[]) => boolean'
+            - '(value: RecordSet, index: number, array: RecordSet[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -191,6 +197,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.fill'
     name: 'fill(RecordSet, undefined | number, undefined | number)'
@@ -231,39 +238,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-dns'
-  - uid: '@azure/arm-dns.RecordSetListResult.filter_1'
-    name: 'filter((value: RecordSet, index: number, array: RecordSet[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: RecordSet, index: number, array:
-        RecordSet[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: RecordSet, index: number, array: RecordSet[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-dns.RecordSet[]'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.filter'
     name: >-
@@ -299,6 +274,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSetListResult.filter_1'
+    name: >-
+      filter((value: RecordSet, index: number, array: RecordSet[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: RecordSet, index: number, array:
+        RecordSet[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: RecordSet, index: number, array: RecordSet[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-dns.RecordSet[]'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.find'
     name: >-
@@ -344,26 +356,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.find_1'
-    name: 'find((value: RecordSet, index: number, obj: RecordSet[]) => boolean, any)'
+    name: 'find((value: RecordSet, index: number, obj: RecordSet[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: RecordSet, index: number, obj:
-        RecordSet[]) => boolean, thisArg?: any)
+        RecordSet[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: RecordSet, index: number, obj: RecordSet[]) => boolean'
+            - '(value: RecordSet, index: number, obj: RecordSet[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -373,10 +382,11 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet | undefined'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.findIndex'
     name: >-
-      findIndex((value: RecordSet, index: number, obj: RecordSet[]) => boolean,
+      findIndex((value: RecordSet, index: number, obj: RecordSet[]) => unknown,
       any)
     children: []
     type: method
@@ -390,11 +400,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: RecordSet, index: number, obj:
-        RecordSet[]) => boolean, thisArg?: any)
+        RecordSet[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: RecordSet, index: number, obj: RecordSet[]) => boolean'
+            - '(value: RecordSet, index: number, obj: RecordSet[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -416,6 +426,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.forEach'
     name: >-
@@ -446,6 +457,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSetListResult.includes'
+    name: 'includes(RecordSet, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: RecordSet, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.indexOf'
     name: 'indexOf(RecordSet, undefined | number)'
     children: []
@@ -472,6 +513,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.join'
     name: join(undefined | string)
@@ -496,6 +538,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.keys'
     name: keys()
@@ -510,6 +553,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.lastIndexOf'
     name: 'lastIndexOf(RecordSet, undefined | number)'
@@ -537,6 +581,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.length'
     name: length
@@ -553,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.map'
     name: 'map((value: RecordSet, index: number, array: RecordSet[]) => U, any)'
@@ -585,6 +631,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.nextLink'
     name: nextLink
@@ -600,6 +647,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.pop'
     name: pop()
@@ -614,6 +662,7 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet | undefined'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.push'
     name: 'push(RecordSet[])'
@@ -633,6 +682,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.reduce'
     name: >-
@@ -663,6 +713,7 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.reduce_1'
     name: >-
@@ -672,10 +723,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: RecordSet, currentValue:
@@ -695,6 +743,7 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.reduce_2'
     name: >-
@@ -733,6 +782,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.reduceRight'
     name: >-
@@ -765,6 +815,7 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.reduceRight_1'
     name: >-
@@ -774,11 +825,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: RecordSet,
@@ -798,6 +845,7 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.reduceRight_2'
     name: >-
@@ -837,6 +885,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.reverse'
     name: reverse()
@@ -851,6 +900,7 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet[]'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.shift'
     name: shift()
@@ -865,6 +915,7 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet | undefined'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -890,10 +941,11 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet[]'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.some'
     name: >-
-      some((value: RecordSet, index: number, array: RecordSet[]) => boolean,
+      some((value: RecordSet, index: number, array: RecordSet[]) => unknown,
       any)
     children: []
     type: method
@@ -905,11 +957,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: RecordSet, index: number, array:
-        RecordSet[]) => boolean, thisArg?: any)
+        RecordSet[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: RecordSet, index: number, array: RecordSet[]) => boolean'
+            - '(value: RecordSet, index: number, array: RecordSet[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -925,6 +977,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.sort'
     name: 'sort(undefined | (a: RecordSet, b: RecordSet) => number)'
@@ -949,6 +1002,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.splice_1'
     name: 'splice(number, number, RecordSet[])'
@@ -980,6 +1034,7 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet[]'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1008,6 +1063,7 @@ items:
       return:
         type:
           - '@azure/arm-dns.RecordSet[]'
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.toLocaleString'
     name: toLocaleString()
@@ -1024,6 +1080,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.toString'
     name: toString()
@@ -1038,6 +1095,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.unshift'
     name: 'unshift(RecordSet[])'
@@ -1057,6 +1115,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-dns'
   - uid: '@azure/arm-dns.RecordSetListResult.values'
     name: values()
@@ -1071,6 +1130,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-dns.RecordSet>
+        description: ''
     package: '@azure/arm-dns'
 references:
   - uid: Array<@azure/arm-dns.RecordSet>

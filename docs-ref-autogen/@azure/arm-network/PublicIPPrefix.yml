@@ -8,6 +8,7 @@ items:
       - '@azure/arm-network.PublicIPPrefix.id'
       - '@azure/arm-network.PublicIPPrefix.ipPrefix'
       - '@azure/arm-network.PublicIPPrefix.ipTags'
+      - '@azure/arm-network.PublicIPPrefix.loadBalancerFrontendIpConfiguration'
       - '@azure/arm-network.PublicIPPrefix.location'
       - '@azure/arm-network.PublicIPPrefix.name'
       - '@azure/arm-network.PublicIPPrefix.prefixLength'
@@ -33,13 +34,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.id'
     name: id
@@ -55,6 +61,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.ipPrefix'
     name: ipPrefix
@@ -63,13 +70,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The allocated Prefix.
+    summary: >-
+      The allocated Prefix.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'ipPrefix?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.ipTags'
     name: ipTags
@@ -85,6 +97,28 @@ items:
       return:
         type:
           - '@azure/arm-network.IpTag[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PublicIPPrefix.loadBalancerFrontendIpConfiguration'
+    name: loadBalancerFrontendIpConfiguration
+    fullName: loadBalancerFrontendIpConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The reference to load balancer frontend IP configuration associated with
+      the public IP prefix.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'loadBalancerFrontendIpConfiguration?: SubResource'
+      return:
+        type:
+          - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.location'
     name: location
@@ -100,6 +134,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.name'
     name: name
@@ -119,6 +154,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.prefixLength'
     name: prefixLength
@@ -134,6 +170,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.provisioningState'
     name: provisioningState
@@ -143,16 +180,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the Public IP prefix resource. Possible values
-      are: 'Updating',
+      The provisioning state of the public IP prefix resource. Possible values
+      include: 'Succeeded',
 
-      'Deleting', and 'Failed'.
+      'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.publicIPAddresses'
     name: publicIPAddresses
@@ -161,13 +202,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The list of all referenced PublicIPAddresses.
+    summary: >-
+      The list of all referenced PublicIPAddresses.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'publicIPAddresses?: ReferencedPublicIpAddress[]'
       return:
         type:
           - '@azure/arm-network.ReferencedPublicIpAddress[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.publicIPAddressVersion'
     name: publicIPAddressVersion
@@ -183,6 +229,7 @@ items:
       return:
         type:
           - '@azure/arm-network.IPVersion'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.resourceGuid'
     name: resourceGuid
@@ -191,13 +238,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The resource GUID property of the public IP prefix resource.
+    summary: >-
+      The resource GUID property of the public IP prefix resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'resourceGuid?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.sku'
     name: sku
@@ -213,6 +265,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PublicIPPrefixSku'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.tags'
     name: tags
@@ -228,6 +281,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.type'
     name: type
@@ -247,6 +301,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefix.zones'
     name: zones
@@ -264,6 +319,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -280,6 +336,18 @@ references:
         uid: '@azure/arm-network.IpTag'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-network.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.IPVersion'
     name: IPVersion
     spec.typeScript:

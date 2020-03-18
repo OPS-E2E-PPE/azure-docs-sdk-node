@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Base class for backup ProtectionIntent.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectionIntent.backupManagementType'
     name: backupManagementType
@@ -23,13 +23,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type of backup management for the backed up item. Possible values include:
+      'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     optional: true
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectionIntent.itemId'
     name: itemId
@@ -38,13 +46,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      ID of the item which is getting protected, In case of Azure Vm , it is
+      ProtectedItemId
     optional: true
     syntax:
       content: 'itemId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectionIntent.policyId'
     name: policyId
@@ -53,13 +64,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: ID of the backup policy with which this item is backed up.
     optional: true
     syntax:
       content: 'policyId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.ProtectionIntent.protectionIntentItemType
@@ -69,12 +81,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'protectionIntentItemType: "ProtectionIntent"'
       return:
         type:
           - '"ProtectionIntent"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectionIntent.protectionState'
     name: protectionState
@@ -83,13 +96,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Backup state of this backup item. Possible values include: 'Invalid',
+      'NotProtected',
+
+      'Protecting', 'Protected', 'ProtectionFailed'
     optional: true
     syntax:
       content: 'protectionState?: ProtectionStatus'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectionIntent.sourceResourceId'
     name: sourceResourceId
@@ -98,13 +116,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: ARM ID of the resource to be backed up.
     optional: true
     syntax:
       content: 'sourceResourceId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'

@@ -24,6 +24,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-iot-provisioning-service
   - uid: azure-iot-provisioning-service.X509CertificateWithInfo.info
     name: info
@@ -35,11 +36,13 @@ items:
     summary: |-
       This property is populated by the service from the information
       provided by the certificate property of this object.
+    optional: true
     syntax:
-      content: 'info: X509CertificateInfo'
+      content: 'info?: X509CertificateInfo'
       return:
         type:
           - azure-iot-provisioning-service.X509CertificateInfo
+        description: ''
     package: azure-iot-provisioning-service
 references:
   - uid: azure-iot-provisioning-service.X509CertificateInfo

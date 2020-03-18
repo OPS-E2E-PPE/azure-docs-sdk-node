@@ -27,7 +27,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Azure VM workload-specific workload item representing SAP HANA System.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSAPHanaSystemWorkloadItem.backupManagementType
@@ -37,13 +37,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Type of backup management to backup an item.
     optional: true
     syntax:
       content: 'backupManagementType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSAPHanaSystemWorkloadItem.friendlyName
@@ -53,13 +54,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of the backup item.
     optional: true
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSAPHanaSystemWorkloadItem.isAutoProtectable
@@ -69,13 +71,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Indicates if workload item is auto-protectable
     optional: true
     syntax:
       content: 'isAutoProtectable?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSAPHanaSystemWorkloadItem.parentName
@@ -85,13 +88,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Name for instance or AG
     optional: true
     syntax:
       content: 'parentName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSAPHanaSystemWorkloadItem.protectionState
@@ -101,13 +105,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      State of the back up item. Possible values include: 'Invalid',
+      'NotProtected', 'Protecting',
+
+      'Protected', 'ProtectionFailed'
     optional: true
     syntax:
       content: 'protectionState?: ProtectionStatus'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSAPHanaSystemWorkloadItem.serverName
@@ -117,13 +126,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Host/Cluster Name for instance or AG
     optional: true
     syntax:
       content: 'serverName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSAPHanaSystemWorkloadItem.subinquireditemcount
@@ -133,13 +143,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'For instance or AG, indicates number of DB''s present'
     optional: true
     syntax:
       content: 'subinquireditemcount?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSAPHanaSystemWorkloadItem.subWorkloadItemCount
@@ -149,13 +160,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'For instance or AG, indicates number of DB''s to be protected'
     optional: true
     syntax:
       content: 'subWorkloadItemCount?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSAPHanaSystemWorkloadItem.workloadItemType
@@ -165,12 +177,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'workloadItemType: "SAPHanaSystem"'
       return:
         type:
           - '"SAPHanaSystem"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSAPHanaSystemWorkloadItem.workloadType
@@ -180,13 +193,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Type of workload for the backup management
     optional: true
     syntax:
       content: 'workloadType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.ProtectionStatus'

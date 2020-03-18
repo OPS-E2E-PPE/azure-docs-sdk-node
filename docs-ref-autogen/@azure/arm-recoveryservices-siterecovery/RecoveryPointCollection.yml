@@ -13,14 +13,16 @@ items:
       - '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.entries'
       - '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.every'
       - '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.fill'
+      - '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.filter'
       - >-
         @azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.filter_1
-      - '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.filter'
       - '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.find'
       - '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.find_1'
       - >-
         @azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.findIndex
       - '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.forEach'
+      - >-
+        @azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.includes
       - '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.indexOf'
       - '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.join'
       - '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.keys'
@@ -77,6 +79,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.concat'
     name: 'concat(ConcatArray<RecoveryPoint>[])'
@@ -97,6 +100,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -116,6 +120,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.copyWithin
@@ -160,6 +165,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.entries'
     name: entries()
@@ -174,11 +180,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.every'
     name: >-
       every((value: RecoveryPoint, index: number, array: RecoveryPoint[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -187,13 +194,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: RecoveryPoint, index: number, array:
-        RecoveryPoint[]) => boolean, thisArg?: any)
+        RecoveryPoint[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: RecoveryPoint, index: number, array: RecoveryPoint[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -209,6 +216,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.fill'
     name: 'fill(RecoveryPoint, undefined | number, undefined | number)'
@@ -249,43 +257,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-recoveryservices-siterecovery'
-  - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.filter_1'
-    name: >-
-      filter((value: RecoveryPoint, index: number, array: RecoveryPoint[]) =>
-      any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: RecoveryPoint, index: number, array:
-        RecoveryPoint[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: RecoveryPoint, index: number, array: RecoveryPoint[]) =>
-              any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.filter'
     name: >-
@@ -323,6 +295,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-recoveryservices-siterecovery'
+  - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.filter_1'
+    name: >-
+      filter((value: RecoveryPoint, index: number, array: RecoveryPoint[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: RecoveryPoint, index: number, array:
+        RecoveryPoint[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: RecoveryPoint, index: number, array: RecoveryPoint[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.find'
     name: >-
@@ -368,30 +379,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.find_1'
     name: >-
       find((value: RecoveryPoint, index: number, obj: RecoveryPoint[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: RecoveryPoint, index: number, obj:
-        RecoveryPoint[]) => boolean, thisArg?: any)
+        RecoveryPoint[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: RecoveryPoint, index: number, obj: RecoveryPoint[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -401,11 +409,12 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint | undefined'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.findIndex'
     name: >-
       findIndex((value: RecoveryPoint, index: number, obj: RecoveryPoint[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -418,13 +427,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: RecoveryPoint, index: number, obj:
-        RecoveryPoint[]) => boolean, thisArg?: any)
+        RecoveryPoint[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: RecoveryPoint, index: number, obj: RecoveryPoint[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -446,6 +455,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.forEach'
     name: >-
@@ -478,6 +488,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-recoveryservices-siterecovery'
+  - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.includes'
+    name: 'includes(RecoveryPoint, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: RecoveryPoint, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.indexOf'
     name: 'indexOf(RecoveryPoint, undefined | number)'
     children: []
@@ -504,6 +544,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.join'
     name: join(undefined | string)
@@ -528,6 +569,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.keys'
     name: keys()
@@ -542,6 +584,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.lastIndexOf
@@ -570,6 +613,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.length'
     name: length
@@ -586,6 +630,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.map'
     name: >-
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.nextLink'
     name: nextLink
@@ -635,6 +681,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.pop'
     name: pop()
@@ -649,6 +696,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint | undefined'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.push'
     name: 'push(RecoveryPoint[])'
@@ -668,6 +716,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.reduce'
     name: >-
@@ -699,6 +748,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.reduce_1'
     name: >-
@@ -709,10 +759,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: RecoveryPoint, currentValue:
@@ -732,6 +779,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.reduce_2'
     name: >-
@@ -770,6 +818,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.reduceRight
@@ -803,6 +852,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.reduceRight_1
@@ -814,11 +864,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: RecoveryPoint,
@@ -838,6 +884,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.reduceRight_2
@@ -878,6 +925,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.reverse'
     name: reverse()
@@ -892,6 +940,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.shift'
     name: shift()
@@ -906,6 +955,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint | undefined'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -931,11 +981,12 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.some'
     name: >-
       some((value: RecoveryPoint, index: number, array: RecoveryPoint[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -946,13 +997,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: RecoveryPoint, index: number, array:
-        RecoveryPoint[]) => boolean, thisArg?: any)
+        RecoveryPoint[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: RecoveryPoint, index: number, array: RecoveryPoint[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -968,6 +1019,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.sort'
     name: 'sort(undefined | (a: RecoveryPoint, b: RecoveryPoint) => number)'
@@ -992,6 +1044,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.splice_1'
     name: 'splice(number, number, RecoveryPoint[])'
@@ -1025,6 +1078,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1053,6 +1107,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.RecoveryPoint[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.toLocaleString
@@ -1070,6 +1125,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.toString'
     name: toString()
@@ -1084,6 +1140,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.unshift'
     name: 'unshift(RecoveryPoint[])'
@@ -1103,6 +1160,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: '@azure/arm-recoveryservices-siterecovery.RecoveryPointCollection.values'
     name: values()
@@ -1118,6 +1176,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-recoveryservices-siterecovery.RecoveryPoint>
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
 references:
   - uid: Array<@azure/arm-recoveryservices-siterecovery.RecoveryPoint>

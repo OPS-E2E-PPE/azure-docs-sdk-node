@@ -10,7 +10,7 @@ items:
       - '@azure/arm-databox.JobDetails.deliveryPackage'
       - '@azure/arm-databox.JobDetails.destinationAccountDetails'
       - '@azure/arm-databox.JobDetails.errorDetails'
-      - '@azure/arm-databox.JobDetails.expectedDataSizeInTeraBytes'
+      - '@azure/arm-databox.JobDetails.expectedDataSizeInTerabytes'
       - '@azure/arm-databox.JobDetails.jobDetailsType'
       - '@azure/arm-databox.JobDetails.jobStages'
       - '@azure/arm-databox.JobDetails.preferences'
@@ -20,7 +20,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Job details.
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.chainOfCustodySasKey'
     name: chainOfCustodySasKey
@@ -29,13 +29,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Shared access key to download the chain of custody logs
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'chainOfCustodySasKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.contactDetails'
     name: contactDetails
@@ -44,12 +49,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Contact details for notification and shipping.
     syntax:
       content: 'contactDetails: ContactDetails'
       return:
         type:
           - '@azure/arm-databox.ContactDetails'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.copyLogDetails'
     name: copyLogDetails
@@ -58,13 +64,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      List of copy log details.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'copyLogDetails?: CopyLogDetailsUnion[]'
       return:
         type:
           - '@azure/arm-databox.CopyLogDetailsUnion[]'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.deliveryPackage'
     name: deliveryPackage
@@ -73,13 +84,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Delivery package shipping details.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'deliveryPackage?: PackageShippingDetails'
       return:
         type:
           - '@azure/arm-databox.PackageShippingDetails'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.destinationAccountDetails'
     name: destinationAccountDetails
@@ -88,12 +104,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Destination account details.
     syntax:
-      content: 'destinationAccountDetails: DestinationAccountDetails[]'
+      content: 'destinationAccountDetails: DestinationAccountDetailsUnion[]'
       return:
         type:
-          - '@azure/arm-databox.DestinationAccountDetails[]'
+          - '@azure/arm-databox.DestinationAccountDetailsUnion[]'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.errorDetails'
     name: errorDetails
@@ -102,28 +119,36 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Error details for failure. This is optional.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'errorDetails?: JobErrorDetails[]'
       return:
         type:
           - '@azure/arm-databox.JobErrorDetails[]'
+        description: ''
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.JobDetails.expectedDataSizeInTeraBytes'
-    name: expectedDataSizeInTeraBytes
-    fullName: expectedDataSizeInTeraBytes
+  - uid: '@azure/arm-databox.JobDetails.expectedDataSizeInTerabytes'
+    name: expectedDataSizeInTerabytes
+    fullName: expectedDataSizeInTerabytes
     children: []
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The expected size of the data, which needs to be transferred in this job,
+      in terabytes.
     optional: true
     syntax:
-      content: 'expectedDataSizeInTeraBytes?: undefined | number'
+      content: 'expectedDataSizeInTerabytes?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.jobDetailsType'
     name: jobDetailsType
@@ -132,12 +157,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'jobDetailsType: "JobDetails"'
       return:
         type:
           - '"JobDetails"'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.jobStages'
     name: jobStages
@@ -146,13 +172,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      List of stages that run in the job.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'jobStages?: JobStages[]'
       return:
         type:
           - '@azure/arm-databox.JobStages[]'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.preferences'
     name: preferences
@@ -161,13 +192,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Preferences for the order.
     optional: true
     syntax:
       content: 'preferences?: Preferences'
       return:
         type:
           - '@azure/arm-databox.Preferences'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.returnPackage'
     name: returnPackage
@@ -176,13 +208,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Return package shipping details.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'returnPackage?: PackageShippingDetails'
       return:
         type:
           - '@azure/arm-databox.PackageShippingDetails'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.reverseShipmentLabelSasKey'
     name: reverseShipmentLabelSasKey
@@ -191,13 +228,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Shared access key to download the return shipment label
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'reverseShipmentLabelSasKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobDetails.shippingAddress'
     name: shippingAddress
@@ -206,12 +248,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Shipping address of the customer.
     syntax:
       content: 'shippingAddress: ShippingAddress'
       return:
         type:
           - '@azure/arm-databox.ShippingAddress'
+        description: ''
     package: '@azure/arm-databox'
 references:
   - uid: '@azure/arm-databox.ContactDetails'
@@ -234,12 +277,12 @@ references:
       - name: PackageShippingDetails
         fullName: PackageShippingDetails
         uid: '@azure/arm-databox.PackageShippingDetails'
-  - uid: '@azure/arm-databox.DestinationAccountDetails[]'
-    name: 'DestinationAccountDetails[]'
+  - uid: '@azure/arm-databox.DestinationAccountDetailsUnion[]'
+    name: 'DestinationAccountDetailsUnion[]'
     spec.typeScript:
-      - name: DestinationAccountDetails
-        fullName: DestinationAccountDetails
-        uid: '@azure/arm-databox.DestinationAccountDetails'
+      - name: DestinationAccountDetailsUnion
+        fullName: DestinationAccountDetailsUnion
+        uid: '@azure/arm-databox.DestinationAccountDetailsUnion'
       - name: '[]'
         fullName: '[]'
   - uid: '@azure/arm-databox.JobErrorDetails[]'

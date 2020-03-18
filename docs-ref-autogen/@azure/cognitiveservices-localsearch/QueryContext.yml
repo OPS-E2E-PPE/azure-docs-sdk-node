@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Defines the query context that Bing used for the request.
     package: '@azure/cognitiveservices-localsearch'
   - uid: '@azure/cognitiveservices-localsearch.QueryContext.adultIntent'
     name: adultIntent
@@ -24,13 +24,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A Boolean value that indicates whether the specified query has adult
+      intent. The value is true
+
+      if the query has adult intent; otherwise, false.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'adultIntent?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/cognitiveservices-localsearch'
   - uid: '@azure/cognitiveservices-localsearch.QueryContext.alterationDisplayQuery'
     name: alterationDisplayQuery
@@ -39,13 +47,22 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      AlteredQuery that is formatted for display purpose. The query string in
+      the
+
+      AlterationDisplayQuery can be html-escaped and can contain
+      hit-highlighting characters
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'alterationDisplayQuery?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-localsearch'
   - uid: '@azure/cognitiveservices-localsearch.QueryContext.alterationOverrideQuery'
     name: alterationOverrideQuery
@@ -54,13 +71,27 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The query string to use to force Bing to use the original string. For
+      example, if the query
+
+      string is "saling downwind", the override query string will be "+saling
+      downwind". Remember to
+
+      encode the query string which results in "%2Bsaling+downwind". This field
+      is included only if
+
+      the original query string contains a spelling mistake.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'alterationOverrideQuery?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-localsearch'
   - uid: '@azure/cognitiveservices-localsearch.QueryContext.alteredQuery'
     name: alteredQuery
@@ -69,13 +100,27 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The query string used by Bing to perform the query. Bing uses the altered
+      query string if the
+
+      original query string contained spelling mistakes. For example, if the
+      query string is "saling
+
+      downwind", the altered query string will be "sailing downwind". This field
+      is included only if
+
+      the original query string contains a spelling mistake.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'alteredQuery?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-localsearch'
   - uid: '@azure/cognitiveservices-localsearch.QueryContext.askUserForLocation'
     name: askUserForLocation
@@ -84,13 +129,36 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A Boolean value that indicates whether Bing requires the user's location
+      to provide accurate
+
+      results. If you specified the user's location by using the
+      X-MSEdge-ClientIP and
+
+      X-Search-Location headers, you can ignore this field. For location aware
+      queries, such as
+
+      "today's weather" or "restaurants near me" that need the user's location
+      to provide accurate
+
+      results, this field is set to true. For location aware queries that
+      include the location (for
+
+      example, "Seattle weather"), this field is set to false. This field is
+      also set to false for
+
+      queries that are not location aware, such as "best sellers".
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'askUserForLocation?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/cognitiveservices-localsearch'
   - uid: '@azure/cognitiveservices-localsearch.QueryContext.isTransactional'
     name: isTransactional
@@ -99,13 +167,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'isTransactional?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/cognitiveservices-localsearch'
   - uid: '@azure/cognitiveservices-localsearch.QueryContext.originalQuery'
     name: originalQuery
@@ -114,10 +185,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The query string as specified in the request.
     syntax:
       content: 'originalQuery: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/cognitiveservices-localsearch'

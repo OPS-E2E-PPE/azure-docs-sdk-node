@@ -15,7 +15,14 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      This activity evaluates a boolean expression and executes either the
+      activities under the
+
+      ifTrueActivities property or the ifFalseActivities property depending on
+      the result of the
+
+      expression.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IfConditionActivity.dependsOn'
     name: dependsOn
@@ -24,13 +31,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity depends on condition.
     optional: true
     syntax:
       content: 'dependsOn?: ActivityDependency[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityDependency[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IfConditionActivity.description'
     name: description
@@ -39,13 +47,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IfConditionActivity.expression'
     name: expression
@@ -54,12 +63,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      An expression that would evaluate to Boolean. This is used to determine
+      the block of
+
+      activities (ifTrueActivities or ifFalseActivities) that will be executed.
     syntax:
       content: 'expression: Expression'
       return:
         type:
           - '@azure/arm-datafactory.Expression'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IfConditionActivity.ifFalseActivities'
     name: ifFalseActivities
@@ -68,13 +82,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      List of activities to execute if expression is evaluated to false. This is
+      an optional
+
+      property and if not provided, the activity will exit without any action.
     optional: true
     syntax:
       content: 'ifFalseActivities?: ActivityUnion[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityUnion[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IfConditionActivity.ifTrueActivities'
     name: ifTrueActivities
@@ -83,13 +102,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      List of activities to execute if expression is evaluated to true. This is
+      an optional property
+
+      and if not provided, the activity will exit without any action.
     optional: true
     syntax:
       content: 'ifTrueActivities?: ActivityUnion[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityUnion[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IfConditionActivity.name'
     name: name
@@ -98,12 +122,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity name.
     syntax:
       content: 'name: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IfConditionActivity.type'
     name: type
@@ -112,12 +137,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "IfCondition"'
       return:
         type:
           - '"IfCondition"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IfConditionActivity.userProperties'
     name: userProperties
@@ -126,13 +152,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity user properties.
     optional: true
     syntax:
       content: 'userProperties?: UserProperty[]'
       return:
         type:
           - '@azure/arm-datafactory.UserProperty[]'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.ActivityDependency[]'

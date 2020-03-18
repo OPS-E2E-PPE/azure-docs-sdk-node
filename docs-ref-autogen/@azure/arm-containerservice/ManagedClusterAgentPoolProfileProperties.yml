@@ -11,11 +11,17 @@ items:
       - >-
         @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.enableAutoScaling
       - >-
+        @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.enableNodePublicIP
+      - >-
         @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.maxCount
       - >-
         @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.maxPods
       - >-
         @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.minCount
+      - >-
+        @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.nodeLabels
+      - >-
+        @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.nodeTaints
       - >-
         @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.orchestratorVersion
       - >-
@@ -24,6 +30,14 @@ items:
         @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.osType
       - >-
         @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.provisioningState
+      - >-
+        @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.scaleSetEvictionPolicy
+      - >-
+        @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.scaleSetPriority
+      - >-
+        @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.spotMaxPrice
+      - >-
+        @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.tags
       - >-
         @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.type
       - >-
@@ -44,7 +58,7 @@ items:
       - typeScript
     type: property
     summary: >-
-      (PREVIEW) Availability zones for nodes. Must use VirtualMachineScaleSets
+      Availability zones for nodes. Must use VirtualMachineScaleSets
       AgentPoolType.
     optional: true
     syntax:
@@ -52,6 +66,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.count'
     name: count
@@ -70,6 +85,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.enableAutoScaling
@@ -86,6 +102,24 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.enableNodePublicIP
+    name: enableNodePublicIP
+    fullName: enableNodePublicIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Enable public IP for nodes
+    optional: true
+    syntax:
+      content: 'enableNodePublicIP?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.maxCount
@@ -102,6 +136,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.maxPods
@@ -118,6 +153,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.minCount
@@ -134,6 +170,43 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.nodeLabels
+    name: nodeLabels
+    fullName: nodeLabels
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Agent pool node labels to be persisted across all nodes in agent pool.
+    optional: true
+    syntax:
+      content: 'nodeLabels?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.nodeTaints
+    name: nodeTaints
+    fullName: nodeTaints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Taints added to new nodes during node pool create and scale. For example,
+      key=value:NoSchedule.
+    optional: true
+    syntax:
+      content: 'nodeTaints?: string[]'
+      return:
+        type:
+          - 'string[]'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.orchestratorVersion
@@ -150,6 +223,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.osDiskSizeGB
@@ -173,6 +247,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.osType
@@ -193,6 +268,7 @@ items:
       return:
         type:
           - '@azure/arm-containerservice.OSType'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.provisioningState
@@ -214,6 +290,95 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.scaleSetEvictionPolicy
+    name: scaleSetEvictionPolicy
+    fullName: scaleSetEvictionPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      ScaleSetEvictionPolicy to be used to specify eviction policy for Spot or
+      low priority virtual
+
+      machine scale set. Default to Delete. Possible values include: 'Delete',
+      'Deallocate'. Default
+
+      value: 'Delete'.
+    optional: true
+    syntax:
+      content: 'scaleSetEvictionPolicy?: ScaleSetEvictionPolicy'
+      return:
+        type:
+          - '@azure/arm-containerservice.ScaleSetEvictionPolicy'
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.scaleSetPriority
+    name: scaleSetPriority
+    fullName: scaleSetPriority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      ScaleSetPriority to be used to specify virtual machine scale set priority.
+      Default to regular.
+
+      Possible values include: 'Spot', 'Low', 'Regular'. Default value:
+      'Regular'.
+    optional: true
+    syntax:
+      content: 'scaleSetPriority?: ScaleSetPriority'
+      return:
+        type:
+          - '@azure/arm-containerservice.ScaleSetPriority'
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.spotMaxPrice
+    name: spotMaxPrice
+    fullName: spotMaxPrice
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      SpotMaxPrice to be used to specify the maximum price you are willing to
+      pay in US Dollars.
+
+      Possible values are any decimal value greater than zero or -1 which
+      indicates default price to
+
+      be up-to on-demand.
+    optional: true
+    syntax:
+      content: 'spotMaxPrice?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Agent pool tags to be persisted on the agent pool virtual machine scale
+      set.
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.type'
     name: type
@@ -231,6 +396,7 @@ items:
       return:
         type:
           - '@azure/arm-containerservice.AgentPoolType'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.vmSize
@@ -358,6 +524,7 @@ items:
       return:
         type:
           - '@azure/arm-containerservice.ContainerServiceVMSizeTypes'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.vnetSubnetID
@@ -374,6 +541,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-containerservice'
 references:
   - uid: '@azure/arm-containerservice.OSType'
@@ -382,6 +550,18 @@ references:
       - name: OSType
         fullName: OSType
         uid: '@azure/arm-containerservice.OSType'
+  - uid: '@azure/arm-containerservice.ScaleSetEvictionPolicy'
+    name: ScaleSetEvictionPolicy
+    spec.typeScript:
+      - name: ScaleSetEvictionPolicy
+        fullName: ScaleSetEvictionPolicy
+        uid: '@azure/arm-containerservice.ScaleSetEvictionPolicy'
+  - uid: '@azure/arm-containerservice.ScaleSetPriority'
+    name: ScaleSetPriority
+    spec.typeScript:
+      - name: ScaleSetPriority
+        fullName: ScaleSetPriority
+        uid: '@azure/arm-containerservice.ScaleSetPriority'
   - uid: '@azure/arm-containerservice.AgentPoolType'
     name: AgentPoolType
     spec.typeScript:

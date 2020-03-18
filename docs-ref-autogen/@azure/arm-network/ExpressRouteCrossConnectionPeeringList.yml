@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.entries'
       - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.every'
       - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.fill'
-      - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.filter_1'
       - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.filter'
+      - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.filter_1'
       - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.find'
       - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.find_1'
       - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.findIndex'
       - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.forEach'
+      - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.includes'
       - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.indexOf'
       - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.join'
       - '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.concat'
     name: 'concat(ConcatArray<ExpressRouteCrossConnectionPeering>[])'
@@ -85,6 +87,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -104,6 +107,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -147,6 +151,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.entries'
     name: entries()
@@ -161,11 +166,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.every'
     name: >-
       every((value: ExpressRouteCrossConnectionPeering, index: number, array:
-      ExpressRouteCrossConnectionPeering[]) => boolean, any)
+      ExpressRouteCrossConnectionPeering[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -174,14 +180,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ExpressRouteCrossConnectionPeering,
-        index: number, array: ExpressRouteCrossConnectionPeering[]) => boolean,
+        index: number, array: ExpressRouteCrossConnectionPeering[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ExpressRouteCrossConnectionPeering, index: number, array:
-              ExpressRouteCrossConnectionPeering[]) => boolean
+              ExpressRouteCrossConnectionPeering[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -197,6 +203,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.fill'
     name: >-
@@ -239,44 +246,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.filter_1'
-    name: >-
-      filter((value: ExpressRouteCrossConnectionPeering, index: number, array:
-      ExpressRouteCrossConnectionPeering[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ExpressRouteCrossConnectionPeering,
-        index: number, array: ExpressRouteCrossConnectionPeering[]) => any,
-        thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ExpressRouteCrossConnectionPeering, index: number, array:
-              ExpressRouteCrossConnectionPeering[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.ExpressRouteCrossConnectionPeering[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.filter'
     name: >-
@@ -315,6 +285,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.filter_1'
+    name: >-
+      filter((value: ExpressRouteCrossConnectionPeering, index: number, array:
+      ExpressRouteCrossConnectionPeering[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ExpressRouteCrossConnectionPeering,
+        index: number, array: ExpressRouteCrossConnectionPeering[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ExpressRouteCrossConnectionPeering, index: number, array:
+              ExpressRouteCrossConnectionPeering[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.ExpressRouteCrossConnectionPeering[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.find'
     name: >-
@@ -361,31 +371,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.find_1'
     name: >-
       find((value: ExpressRouteCrossConnectionPeering, index: number, obj:
-      ExpressRouteCrossConnectionPeering[]) => boolean, any)
+      ExpressRouteCrossConnectionPeering[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ExpressRouteCrossConnectionPeering,
-        index: number, obj: ExpressRouteCrossConnectionPeering[]) => boolean,
+        index: number, obj: ExpressRouteCrossConnectionPeering[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ExpressRouteCrossConnectionPeering, index: number, obj:
-              ExpressRouteCrossConnectionPeering[]) => boolean
+              ExpressRouteCrossConnectionPeering[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -395,11 +402,12 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.findIndex'
     name: >-
       findIndex((value: ExpressRouteCrossConnectionPeering, index: number, obj:
-      ExpressRouteCrossConnectionPeering[]) => boolean, any)
+      ExpressRouteCrossConnectionPeering[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -413,13 +421,13 @@ items:
       content: >-
         function findIndex(predicate: (value:
         ExpressRouteCrossConnectionPeering, index: number, obj:
-        ExpressRouteCrossConnectionPeering[]) => boolean, thisArg?: any)
+        ExpressRouteCrossConnectionPeering[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ExpressRouteCrossConnectionPeering, index: number, obj:
-              ExpressRouteCrossConnectionPeering[]) => boolean
+              ExpressRouteCrossConnectionPeering[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -441,6 +449,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.forEach'
     name: >-
@@ -474,6 +483,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.includes'
+    name: 'includes(ExpressRouteCrossConnectionPeering, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ExpressRouteCrossConnectionPeering,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.ExpressRouteCrossConnectionPeering'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.indexOf'
     name: 'indexOf(ExpressRouteCrossConnectionPeering, undefined | number)'
     children: []
@@ -500,6 +539,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.join'
     name: join(undefined | string)
@@ -524,6 +564,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.keys'
     name: keys()
@@ -538,6 +579,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.lastIndexOf'
     name: 'lastIndexOf(ExpressRouteCrossConnectionPeering, undefined | number)'
@@ -565,6 +607,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.length'
     name: length
@@ -581,6 +624,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.map'
     name: >-
@@ -618,6 +662,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.nextLink'
     name: nextLink
@@ -637,6 +682,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.pop'
     name: pop()
@@ -651,6 +697,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.push'
     name: 'push(ExpressRouteCrossConnectionPeering[])'
@@ -670,6 +717,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.reduce'
     name: >-
@@ -707,6 +755,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.reduce_1'
     name: >-
@@ -718,10 +767,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -746,6 +792,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.reduce_2'
     name: >-
@@ -786,6 +833,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.reduceRight'
     name: >-
@@ -824,6 +872,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.reduceRight_1'
     name: >-
@@ -835,11 +884,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -864,6 +909,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.reduceRight_2'
     name: >-
@@ -905,6 +951,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.reverse'
     name: reverse()
@@ -919,6 +966,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.shift'
     name: shift()
@@ -933,6 +981,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -958,11 +1007,12 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.some'
     name: >-
       some((value: ExpressRouteCrossConnectionPeering, index: number, array:
-      ExpressRouteCrossConnectionPeering[]) => boolean, any)
+      ExpressRouteCrossConnectionPeering[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -973,14 +1023,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ExpressRouteCrossConnectionPeering,
-        index: number, array: ExpressRouteCrossConnectionPeering[]) => boolean,
+        index: number, array: ExpressRouteCrossConnectionPeering[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ExpressRouteCrossConnectionPeering, index: number, array:
-              ExpressRouteCrossConnectionPeering[]) => boolean
+              ExpressRouteCrossConnectionPeering[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -996,6 +1046,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.sort'
     name: >-
@@ -1025,6 +1076,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.splice_1'
     name: 'splice(number, number, ExpressRouteCrossConnectionPeering[])'
@@ -1058,6 +1110,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.splice'
     name: 'splice(number, undefined | number)'
@@ -1086,6 +1139,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeering[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.toLocaleString'
     name: toLocaleString()
@@ -1102,6 +1156,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.toString'
     name: toString()
@@ -1116,6 +1171,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.unshift'
     name: 'unshift(ExpressRouteCrossConnectionPeering[])'
@@ -1135,6 +1191,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeeringList.values'
     name: values()
@@ -1150,6 +1207,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-network.ExpressRouteCrossConnectionPeering>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.ExpressRouteCrossConnectionPeering>

@@ -11,12 +11,13 @@ items:
       - '@azure/arm-containerregistry.RunListResult.entries'
       - '@azure/arm-containerregistry.RunListResult.every'
       - '@azure/arm-containerregistry.RunListResult.fill'
-      - '@azure/arm-containerregistry.RunListResult.filter_1'
       - '@azure/arm-containerregistry.RunListResult.filter'
+      - '@azure/arm-containerregistry.RunListResult.filter_1'
       - '@azure/arm-containerregistry.RunListResult.find'
       - '@azure/arm-containerregistry.RunListResult.find_1'
       - '@azure/arm-containerregistry.RunListResult.findIndex'
       - '@azure/arm-containerregistry.RunListResult.forEach'
+      - '@azure/arm-containerregistry.RunListResult.includes'
       - '@azure/arm-containerregistry.RunListResult.indexOf'
       - '@azure/arm-containerregistry.RunListResult.join'
       - '@azure/arm-containerregistry.RunListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.concat'
     name: 'concat(ConcatArray<Run>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.every'
-    name: 'every((value: Run, index: number, array: Run[]) => boolean, any)'
+    name: 'every((value: Run, index: number, array: Run[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Run, index: number, array: Run[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Run, index: number, array: Run[]) => boolean'
+            - '(value: Run, index: number, array: Run[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.fill'
     name: 'fill(Run, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.RunListResult.filter_1'
-    name: 'filter((value: Run, index: number, array: Run[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Run, index: number, array: Run[]) =>
-        any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Run, index: number, array: Run[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-containerregistry.Run[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.filter'
     name: 'filter((value: Run, index: number, array: Run[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.RunListResult.filter_1'
+    name: 'filter((value: Run, index: number, array: Run[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Run, index: number, array: Run[]) =>
+        unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Run, index: number, array: Run[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-containerregistry.Run[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.find'
     name: 'find((this: void, value: Run, index: number, obj: Run[]) => boolean, any)'
@@ -336,26 +346,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.find_1'
-    name: 'find((value: Run, index: number, obj: Run[]) => boolean, any)'
+    name: 'find((value: Run, index: number, obj: Run[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Run, index: number, obj: Run[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Run, index: number, obj: Run[]) => boolean'
+            - '(value: Run, index: number, obj: Run[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -365,9 +372,10 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run | undefined'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.findIndex'
-    name: 'findIndex((value: Run, index: number, obj: Run[]) => boolean, any)'
+    name: 'findIndex((value: Run, index: number, obj: Run[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -380,11 +388,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Run, index: number, obj: Run[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Run, index: number, obj: Run[]) => boolean'
+            - '(value: Run, index: number, obj: Run[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -406,6 +414,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.forEach'
     name: 'forEach((value: Run, index: number, array: Run[]) => void, any)'
@@ -434,6 +443,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.RunListResult.includes'
+    name: 'includes(Run, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Run, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-containerregistry.Run'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.indexOf'
     name: 'indexOf(Run, undefined | number)'
     children: []
@@ -458,6 +495,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.join'
     name: join(undefined | string)
@@ -482,6 +520,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.keys'
     name: keys()
@@ -496,6 +535,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.lastIndexOf'
     name: 'lastIndexOf(Run, undefined | number)'
@@ -521,6 +561,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.length'
     name: length
@@ -537,6 +578,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.map'
     name: 'map((value: Run, index: number, array: Run[]) => U, any)'
@@ -569,6 +611,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.nextLink'
     name: nextLink
@@ -584,6 +627,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.pop'
     name: pop()
@@ -598,6 +642,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run | undefined'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.push'
     name: 'push(Run[])'
@@ -617,6 +662,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.reduce'
     name: >-
@@ -647,6 +693,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.reduce_1'
     name: >-
@@ -656,10 +703,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Run, currentValue: Run,
@@ -678,6 +722,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.reduce_2'
     name: >-
@@ -715,6 +760,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.reduceRight'
     name: >-
@@ -746,6 +792,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.reduceRight_1'
     name: >-
@@ -755,11 +802,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Run, currentValue: Run,
@@ -778,6 +821,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.reduceRight_2'
     name: >-
@@ -816,6 +860,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.reverse'
     name: reverse()
@@ -830,6 +875,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.shift'
     name: shift()
@@ -844,6 +890,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run | undefined'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -869,9 +916,10 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.some'
-    name: 'some((value: Run, index: number, array: Run[]) => boolean, any)'
+    name: 'some((value: Run, index: number, array: Run[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -882,11 +930,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Run, index: number, array: Run[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Run, index: number, array: Run[]) => boolean'
+            - '(value: Run, index: number, array: Run[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -902,6 +950,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.sort'
     name: 'sort(undefined | (a: Run, b: Run) => number)'
@@ -924,6 +973,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.splice_1'
     name: 'splice(number, number, Run[])'
@@ -955,6 +1005,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -983,6 +1034,7 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Run[]'
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.toLocaleString'
     name: toLocaleString()
@@ -999,6 +1051,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.toString'
     name: toString()
@@ -1013,6 +1066,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.unshift'
     name: 'unshift(Run[])'
@@ -1032,6 +1086,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RunListResult.values'
     name: values()
@@ -1046,6 +1101,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-containerregistry.Run>
+        description: ''
     package: '@azure/arm-containerregistry'
 references:
   - uid: Array<@azure/arm-containerregistry.Run>

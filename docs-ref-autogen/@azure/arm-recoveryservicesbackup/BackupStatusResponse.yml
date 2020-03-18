@@ -13,10 +13,11 @@ items:
       - '@azure/arm-recoveryservicesbackup.BackupStatusResponse.protectionStatus'
       - >-
         @azure/arm-recoveryservicesbackup.BackupStatusResponse.registrationStatus
+      - '@azure/arm-recoveryservicesbackup.BackupStatusResponse.vaultId'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: BackupStatus response.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupStatusResponse.containerName'
     name: containerName
@@ -25,13 +26,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Specifies the product specific container name. E.g.
+      iaasvmcontainer;iaasvmcontainer;csname;vmname.
     optional: true
     syntax:
       content: 'containerName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupStatusResponse.errorCode'
     name: errorCode
@@ -40,13 +44,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: ErrorCode in case of intent failed
     optional: true
     syntax:
       content: 'errorCode?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupStatusResponse.errorMessage'
     name: errorMessage
@@ -55,13 +60,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: ErrorMessage in case of intent failed.
     optional: true
     syntax:
       content: 'errorMessage?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupStatusResponse.fabricName'
     name: fabricName
@@ -70,13 +76,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the fabric name - Azure or AD. Possible values include:
+      'Invalid', 'Azure'
     optional: true
     syntax:
       content: 'fabricName?: FabricName'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.FabricName'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupStatusResponse.policyName'
     name: policyName
@@ -85,13 +94,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Specifies the policy name which is used for protection
     optional: true
     syntax:
       content: 'policyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupStatusResponse.protectedItemName'
     name: protectedItemName
@@ -100,13 +110,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the product specific ds name. E.g.
+      vm;iaasvmcontainer;csname;vmname.
     optional: true
     syntax:
       content: 'protectedItemName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupStatusResponse.protectionStatus'
     name: protectionStatus
@@ -115,13 +128,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether the container is registered or not. Possible values
+      include: 'Invalid',
+
+      'NotProtected', 'Protecting', 'Protected', 'ProtectionFailed'
     optional: true
     syntax:
       content: 'protectionStatus?: ProtectionStatus'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupStatusResponse.registrationStatus'
     name: registrationStatus
@@ -130,13 +148,30 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Container registration status
     optional: true
     syntax:
       content: 'registrationStatus?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupStatusResponse.vaultId'
+    name: vaultId
+    fullName: vaultId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specifies the arm resource id of the vault
+    optional: true
+    syntax:
+      content: 'vaultId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.FabricName'

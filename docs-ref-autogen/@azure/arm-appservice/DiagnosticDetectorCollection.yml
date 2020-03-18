@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.DiagnosticDetectorCollection.entries'
       - '@azure/arm-appservice.DiagnosticDetectorCollection.every'
       - '@azure/arm-appservice.DiagnosticDetectorCollection.fill'
-      - '@azure/arm-appservice.DiagnosticDetectorCollection.filter_1'
       - '@azure/arm-appservice.DiagnosticDetectorCollection.filter'
+      - '@azure/arm-appservice.DiagnosticDetectorCollection.filter_1'
       - '@azure/arm-appservice.DiagnosticDetectorCollection.find'
       - '@azure/arm-appservice.DiagnosticDetectorCollection.find_1'
       - '@azure/arm-appservice.DiagnosticDetectorCollection.findIndex'
       - '@azure/arm-appservice.DiagnosticDetectorCollection.forEach'
+      - '@azure/arm-appservice.DiagnosticDetectorCollection.includes'
       - '@azure/arm-appservice.DiagnosticDetectorCollection.indexOf'
       - '@azure/arm-appservice.DiagnosticDetectorCollection.join'
       - '@azure/arm-appservice.DiagnosticDetectorCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.concat'
     name: 'concat(ConcatArray<DetectorDefinition>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.every'
     name: >-
       every((value: DetectorDefinition, index: number, array:
-      DetectorDefinition[]) => boolean, any)
+      DetectorDefinition[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: DetectorDefinition, index: number,
-        array: DetectorDefinition[]) => boolean, thisArg?: any)
+        array: DetectorDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: DetectorDefinition, index: number, array:
-              DetectorDefinition[]) => boolean
+              DetectorDefinition[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.fill'
     name: 'fill(DetectorDefinition, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.filter_1'
-    name: >-
-      filter((value: DetectorDefinition, index: number, array:
-      DetectorDefinition[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: DetectorDefinition, index: number,
-        array: DetectorDefinition[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: DetectorDefinition, index: number, array:
-              DetectorDefinition[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.DetectorDefinition[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.filter_1'
+    name: >-
+      filter((value: DetectorDefinition, index: number, array:
+      DetectorDefinition[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: DetectorDefinition, index: number,
+        array: DetectorDefinition[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: DetectorDefinition, index: number, array:
+              DetectorDefinition[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.DetectorDefinition[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.find_1'
     name: >-
       find((value: DetectorDefinition, index: number, obj: DetectorDefinition[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: DetectorDefinition, index: number, obj:
-        DetectorDefinition[]) => boolean, thisArg?: any)
+        DetectorDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: DetectorDefinition, index: number, obj:
-              DetectorDefinition[]) => boolean
+              DetectorDefinition[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.findIndex'
     name: >-
       findIndex((value: DetectorDefinition, index: number, obj:
-      DetectorDefinition[]) => boolean, any)
+      DetectorDefinition[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: DetectorDefinition, index: number,
-        obj: DetectorDefinition[]) => boolean, thisArg?: any)
+        obj: DetectorDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: DetectorDefinition, index: number, obj:
-              DetectorDefinition[]) => boolean
+              DetectorDefinition[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.includes'
+    name: 'includes(DetectorDefinition, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: DetectorDefinition, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.DetectorDefinition'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.indexOf'
     name: 'indexOf(DetectorDefinition, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.lastIndexOf'
     name: 'lastIndexOf(DetectorDefinition, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.push'
     name: 'push(DetectorDefinition[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.reduce'
     name: >-
@@ -690,6 +738,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.reduce_1'
     name: >-
@@ -700,10 +749,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: DetectorDefinition,
@@ -725,6 +771,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.reduce_2'
     name: >-
@@ -763,6 +810,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.reduceRight'
     name: >-
@@ -797,6 +845,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.reduceRight_1'
     name: >-
@@ -807,11 +856,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: DetectorDefinition,
@@ -833,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.reduceRight_2'
     name: >-
@@ -872,6 +918,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.reverse'
     name: reverse()
@@ -886,6 +933,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.shift'
     name: shift()
@@ -900,6 +948,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -925,11 +974,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.some'
     name: >-
       some((value: DetectorDefinition, index: number, array:
-      DetectorDefinition[]) => boolean, any)
+      DetectorDefinition[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -940,13 +990,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: DetectorDefinition, index: number,
-        array: DetectorDefinition[]) => boolean, thisArg?: any)
+        array: DetectorDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: DetectorDefinition, index: number, array:
-              DetectorDefinition[]) => boolean
+              DetectorDefinition[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -962,6 +1012,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.sort'
     name: 'sort(undefined | (a: DetectorDefinition, b: DetectorDefinition) => number)'
@@ -988,6 +1039,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.splice_1'
     name: 'splice(number, number, DetectorDefinition[])'
@@ -1021,6 +1073,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1049,6 +1102,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorDefinition[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.toLocaleString'
     name: toLocaleString()
@@ -1065,6 +1119,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.toString'
     name: toString()
@@ -1079,6 +1134,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.unshift'
     name: 'unshift(DetectorDefinition[])'
@@ -1098,6 +1154,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DiagnosticDetectorCollection.values'
     name: values()
@@ -1112,6 +1169,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-appservice.DetectorDefinition>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.DetectorDefinition>

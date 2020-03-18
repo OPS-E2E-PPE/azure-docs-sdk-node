@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.AppServiceEnvironmentCollection.entries'
       - '@azure/arm-appservice.AppServiceEnvironmentCollection.every'
       - '@azure/arm-appservice.AppServiceEnvironmentCollection.fill'
-      - '@azure/arm-appservice.AppServiceEnvironmentCollection.filter_1'
       - '@azure/arm-appservice.AppServiceEnvironmentCollection.filter'
+      - '@azure/arm-appservice.AppServiceEnvironmentCollection.filter_1'
       - '@azure/arm-appservice.AppServiceEnvironmentCollection.find'
       - '@azure/arm-appservice.AppServiceEnvironmentCollection.find_1'
       - '@azure/arm-appservice.AppServiceEnvironmentCollection.findIndex'
       - '@azure/arm-appservice.AppServiceEnvironmentCollection.forEach'
+      - '@azure/arm-appservice.AppServiceEnvironmentCollection.includes'
       - '@azure/arm-appservice.AppServiceEnvironmentCollection.indexOf'
       - '@azure/arm-appservice.AppServiceEnvironmentCollection.join'
       - '@azure/arm-appservice.AppServiceEnvironmentCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.concat'
     name: 'concat(ConcatArray<AppServiceEnvironmentResource>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.every'
     name: >-
       every((value: AppServiceEnvironmentResource, index: number, array:
-      AppServiceEnvironmentResource[]) => boolean, any)
+      AppServiceEnvironmentResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,14 +177,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: AppServiceEnvironmentResource, index:
-        number, array: AppServiceEnvironmentResource[]) => boolean, thisArg?:
+        number, array: AppServiceEnvironmentResource[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: AppServiceEnvironmentResource, index: number, array:
-              AppServiceEnvironmentResource[]) => boolean
+              AppServiceEnvironmentResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -194,6 +200,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.fill'
     name: >-
@@ -236,44 +243,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.filter_1'
-    name: >-
-      filter((value: AppServiceEnvironmentResource, index: number, array:
-      AppServiceEnvironmentResource[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: AppServiceEnvironmentResource,
-        index: number, array: AppServiceEnvironmentResource[]) => any, thisArg?:
-        any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: AppServiceEnvironmentResource, index: number, array:
-              AppServiceEnvironmentResource[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.AppServiceEnvironmentResource[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.filter'
     name: >-
@@ -312,6 +282,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.filter_1'
+    name: >-
+      filter((value: AppServiceEnvironmentResource, index: number, array:
+      AppServiceEnvironmentResource[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: AppServiceEnvironmentResource,
+        index: number, array: AppServiceEnvironmentResource[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: AppServiceEnvironmentResource, index: number, array:
+              AppServiceEnvironmentResource[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.AppServiceEnvironmentResource[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.find'
     name: >-
@@ -358,30 +368,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.find_1'
     name: >-
       find((value: AppServiceEnvironmentResource, index: number, obj:
-      AppServiceEnvironmentResource[]) => boolean, any)
+      AppServiceEnvironmentResource[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: AppServiceEnvironmentResource, index:
-        number, obj: AppServiceEnvironmentResource[]) => boolean, thisArg?: any)
+        number, obj: AppServiceEnvironmentResource[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: AppServiceEnvironmentResource, index: number, obj:
-              AppServiceEnvironmentResource[]) => boolean
+              AppServiceEnvironmentResource[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -391,11 +398,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.findIndex'
     name: >-
       findIndex((value: AppServiceEnvironmentResource, index: number, obj:
-      AppServiceEnvironmentResource[]) => boolean, any)
+      AppServiceEnvironmentResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -408,14 +416,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: AppServiceEnvironmentResource,
-        index: number, obj: AppServiceEnvironmentResource[]) => boolean,
+        index: number, obj: AppServiceEnvironmentResource[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: AppServiceEnvironmentResource, index: number, obj:
-              AppServiceEnvironmentResource[]) => boolean
+              AppServiceEnvironmentResource[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -437,6 +445,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.forEach'
     name: >-
@@ -470,6 +479,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.includes'
+    name: 'includes(AppServiceEnvironmentResource, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: AppServiceEnvironmentResource,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.AppServiceEnvironmentResource'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.indexOf'
     name: 'indexOf(AppServiceEnvironmentResource, undefined | number)'
     children: []
@@ -496,6 +535,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.join'
     name: join(undefined | string)
@@ -520,6 +560,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.keys'
     name: keys()
@@ -534,6 +575,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.lastIndexOf'
     name: 'lastIndexOf(AppServiceEnvironmentResource, undefined | number)'
@@ -561,6 +603,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.length'
     name: length
@@ -577,6 +620,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.map'
     name: >-
@@ -614,6 +658,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.nextLink'
     name: nextLink
@@ -633,6 +678,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.pop'
     name: pop()
@@ -647,6 +693,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.push'
     name: 'push(AppServiceEnvironmentResource[])'
@@ -666,6 +713,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.reduce'
     name: >-
@@ -700,6 +748,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.reduce_1'
     name: >-
@@ -711,10 +760,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -737,6 +783,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.reduce_2'
     name: >-
@@ -775,6 +822,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.reduceRight'
     name: >-
@@ -810,6 +858,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.reduceRight_1'
     name: >-
@@ -821,11 +870,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -848,6 +893,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.reduceRight_2'
     name: >-
@@ -888,6 +934,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.reverse'
     name: reverse()
@@ -902,6 +949,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.shift'
     name: shift()
@@ -916,6 +964,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -941,11 +990,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.some'
     name: >-
       some((value: AppServiceEnvironmentResource, index: number, array:
-      AppServiceEnvironmentResource[]) => boolean, any)
+      AppServiceEnvironmentResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -956,14 +1006,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: AppServiceEnvironmentResource, index:
-        number, array: AppServiceEnvironmentResource[]) => boolean, thisArg?:
+        number, array: AppServiceEnvironmentResource[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: AppServiceEnvironmentResource, index: number, array:
-              AppServiceEnvironmentResource[]) => boolean
+              AppServiceEnvironmentResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -979,6 +1029,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.sort'
     name: >-
@@ -1007,6 +1058,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.splice_1'
     name: 'splice(number, number, AppServiceEnvironmentResource[])'
@@ -1040,6 +1092,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1068,6 +1121,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.AppServiceEnvironmentResource[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.toLocaleString'
     name: toLocaleString()
@@ -1084,6 +1138,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.toString'
     name: toString()
@@ -1098,6 +1153,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.unshift'
     name: 'unshift(AppServiceEnvironmentResource[])'
@@ -1117,6 +1173,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.AppServiceEnvironmentCollection.values'
     name: values()
@@ -1132,6 +1189,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-appservice.AppServiceEnvironmentResource>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.AppServiceEnvironmentResource>

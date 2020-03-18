@@ -6,7 +6,6 @@ items:
     children:
       - '@azure/arm-network.LoadBalancers.beginCreateOrUpdate'
       - '@azure/arm-network.LoadBalancers.beginDeleteMethod'
-      - '@azure/arm-network.LoadBalancers.beginUpdateTags'
       - '@azure/arm-network.LoadBalancers.createOrUpdate'
       - '@azure/arm-network.LoadBalancers.deleteMethod'
       - '@azure/arm-network.LoadBalancers.get_2'
@@ -26,6 +25,8 @@ items:
       - '@azure/arm-network.LoadBalancers.listNext_1'
       - '@azure/arm-network.LoadBalancers.constructor'
       - '@azure/arm-network.LoadBalancers.updateTags'
+      - '@azure/arm-network.LoadBalancers.updateTags_2'
+      - '@azure/arm-network.LoadBalancers.updateTags_1'
     langs:
       - typeScript
     type: class
@@ -66,6 +67,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -95,39 +97,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.LoadBalancers.beginUpdateTags'
-    name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Updates a load balancer tags.
-    syntax:
-      content: >-
-        function beginUpdateTags(resourceGroupName: string, loadBalancerName:
-        string, parameters: TagsObject, options?: msRest.RequestOptionsBase)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: loadBalancerName
-          type:
-            - string
-          description: The name of the load balancer.
-        - id: parameters
-          type:
-            - '@azure/arm-network.TagsObject'
-          description: Parameters supplied to update load balancer tags.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.createOrUpdate'
     name: 'createOrUpdate(string, string, LoadBalancer, msRest.RequestOptionsBase)'
@@ -161,6 +131,7 @@ items:
       return:
         type:
           - Promise<Models.LoadBalancersCreateOrUpdateResponse>
+        description: Promise<Models.LoadBalancersCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -190,6 +161,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.get_2'
     name: >-
@@ -223,9 +195,6 @@ items:
             - ServiceCallback<@azure/arm-network.LoadBalancer>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LoadBalancersGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.get'
     name: 'get(string, string, Models.LoadBalancersGetOptionalParams)'
@@ -255,6 +224,7 @@ items:
       return:
         type:
           - Promise<Models.LoadBalancersGetResponse>
+        description: Promise<Models.LoadBalancersGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.get_1'
     name: 'get(string, string, ServiceCallback<LoadBalancer>)'
@@ -281,9 +251,6 @@ items:
             - ServiceCallback<@azure/arm-network.LoadBalancer>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LoadBalancersGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.list'
     name: 'list(string, msRest.RequestOptionsBase)'
@@ -309,6 +276,7 @@ items:
       return:
         type:
           - Promise<Models.LoadBalancersListResponse>
+        description: Promise<Models.LoadBalancersListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.list_2'
     name: 'list(string, RequestOptionsBase, ServiceCallback<LoadBalancerListResult>)'
@@ -335,9 +303,6 @@ items:
             - ServiceCallback<@azure/arm-network.LoadBalancerListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LoadBalancersListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.list_1'
     name: 'list(string, ServiceCallback<LoadBalancerListResult>)'
@@ -360,9 +325,6 @@ items:
             - ServiceCallback<@azure/arm-network.LoadBalancerListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LoadBalancersListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.listAll'
     name: listAll(msRest.RequestOptionsBase)
@@ -382,6 +344,7 @@ items:
       return:
         type:
           - Promise<Models.LoadBalancersListAllResponse>
+        description: Promise<Models.LoadBalancersListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.listAll_2'
     name: 'listAll(RequestOptionsBase, ServiceCallback<LoadBalancerListResult>)'
@@ -404,9 +367,6 @@ items:
             - ServiceCallback<@azure/arm-network.LoadBalancerListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LoadBalancersListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.listAll_1'
     name: listAll(ServiceCallback<LoadBalancerListResult>)
@@ -423,9 +383,6 @@ items:
             - ServiceCallback<@azure/arm-network.LoadBalancerListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LoadBalancersListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.listAllNext'
     name: 'listAllNext(string, msRest.RequestOptionsBase)'
@@ -451,6 +408,7 @@ items:
       return:
         type:
           - Promise<Models.LoadBalancersListAllNextResponse>
+        description: Promise<Models.LoadBalancersListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.listAllNext_2'
     name: >-
@@ -479,9 +437,6 @@ items:
             - ServiceCallback<@azure/arm-network.LoadBalancerListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LoadBalancersListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.listAllNext_1'
     name: 'listAllNext(string, ServiceCallback<LoadBalancerListResult>)'
@@ -504,9 +459,6 @@ items:
             - ServiceCallback<@azure/arm-network.LoadBalancerListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LoadBalancersListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -532,6 +484,7 @@ items:
       return:
         type:
           - Promise<Models.LoadBalancersListNextResponse>
+        description: Promise<Models.LoadBalancersListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.listNext_2'
     name: >-
@@ -560,9 +513,6 @@ items:
             - ServiceCallback<@azure/arm-network.LoadBalancerListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LoadBalancersListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.listNext_1'
     name: 'listNext(string, ServiceCallback<LoadBalancerListResult>)'
@@ -585,9 +535,6 @@ items:
             - ServiceCallback<@azure/arm-network.LoadBalancerListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.LoadBalancersListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancers.constructor'
     name: LoadBalancers(NetworkManagementClientContext)
@@ -637,6 +584,74 @@ items:
       return:
         type:
           - Promise<Models.LoadBalancersUpdateTagsResponse>
+        description: Promise<Models.LoadBalancersUpdateTagsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancers.updateTags_2'
+    name: >-
+      updateTags(string, string, TagsObject, RequestOptionsBase,
+      ServiceCallback<LoadBalancer>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, loadBalancerName: string,
+        parameters: TagsObject, options: RequestOptionsBase, callback:
+        ServiceCallback<LoadBalancer>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: loadBalancerName
+          type:
+            - string
+          description: The name of the load balancer.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update load balancer tags.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.LoadBalancer>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancers.updateTags_1'
+    name: 'updateTags(string, string, TagsObject, ServiceCallback<LoadBalancer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, loadBalancerName: string,
+        parameters: TagsObject, callback: ServiceCallback<LoadBalancer>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: loadBalancerName
+          type:
+            - string
+          description: The name of the load balancer.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update load balancer tags.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.LoadBalancer>
+          description: |
+            The callback
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -651,12 +666,6 @@ references:
       - name: LoadBalancer
         fullName: LoadBalancer
         uid: '@azure/arm-network.LoadBalancer'
-  - uid: '@azure/arm-network.TagsObject'
-    name: TagsObject
-    spec.typeScript:
-      - name: TagsObject
-        fullName: TagsObject
-        uid: '@azure/arm-network.TagsObject'
   - uid: ServiceCallback<@azure/arm-network.LoadBalancer>
     name: LoadBalancer>
     spec.typeScript:
@@ -683,3 +692,9 @@ references:
         uid: '@azure/arm-network.LoadBalancerListResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'

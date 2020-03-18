@@ -11,12 +11,13 @@ items:
       - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.entries'
       - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.every'
       - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.fill'
-      - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.filter_1'
       - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.filter'
+      - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.filter_1'
       - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.find'
       - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.find_1'
       - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.findIndex'
       - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.forEach'
+      - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.includes'
       - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.indexOf'
       - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.join'
       - '@azure/arm-labservices.ResponseWithContinuationGalleryImage.keys'
@@ -66,6 +67,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.concat'
     name: 'concat(ConcatArray<GalleryImage>[])'
@@ -85,6 +87,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -104,6 +107,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -147,6 +151,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.entries'
     name: entries()
@@ -161,11 +166,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.every'
     name: >-
       every((value: GalleryImage, index: number, array: GalleryImage[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -174,13 +180,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: GalleryImage, index: number, array:
-        GalleryImage[]) => boolean, thisArg?: any)
+        GalleryImage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: GalleryImage, index: number, array: GalleryImage[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -196,6 +202,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.fill'
     name: 'fill(GalleryImage, undefined | number, undefined | number)'
@@ -236,41 +243,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-labservices'
-  - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.filter_1'
-    name: >-
-      filter((value: GalleryImage, index: number, array: GalleryImage[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: GalleryImage, index: number, array:
-        GalleryImage[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: GalleryImage, index: number, array: GalleryImage[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-labservices.GalleryImage[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.filter'
     name: >-
@@ -308,6 +281,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.filter_1'
+    name: >-
+      filter((value: GalleryImage, index: number, array: GalleryImage[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: GalleryImage, index: number, array:
+        GalleryImage[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: GalleryImage, index: number, array: GalleryImage[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-labservices.GalleryImage[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.find'
     name: >-
@@ -353,30 +365,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.find_1'
     name: >-
-      find((value: GalleryImage, index: number, obj: GalleryImage[]) => boolean,
+      find((value: GalleryImage, index: number, obj: GalleryImage[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: GalleryImage, index: number, obj:
-        GalleryImage[]) => boolean, thisArg?: any)
+        GalleryImage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: GalleryImage, index: number, obj: GalleryImage[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -386,11 +395,12 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage | undefined'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.findIndex'
     name: >-
       findIndex((value: GalleryImage, index: number, obj: GalleryImage[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -403,13 +413,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: GalleryImage, index: number, obj:
-        GalleryImage[]) => boolean, thisArg?: any)
+        GalleryImage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: GalleryImage, index: number, obj: GalleryImage[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -431,6 +441,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.forEach'
     name: >-
@@ -463,6 +474,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.includes'
+    name: 'includes(GalleryImage, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: GalleryImage, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-labservices.GalleryImage'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.indexOf'
     name: 'indexOf(GalleryImage, undefined | number)'
     children: []
@@ -489,6 +530,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.join'
     name: join(undefined | string)
@@ -513,6 +555,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.keys'
     name: keys()
@@ -527,6 +570,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.lastIndexOf'
     name: 'lastIndexOf(GalleryImage, undefined | number)'
@@ -554,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.length'
     name: length
@@ -570,6 +615,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.map'
     name: 'map((value: GalleryImage, index: number, array: GalleryImage[]) => U, any)'
@@ -602,6 +648,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.nextLink'
     name: nextLink
@@ -617,6 +664,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.pop'
     name: pop()
@@ -631,6 +679,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage | undefined'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.push'
     name: 'push(GalleryImage[])'
@@ -650,6 +699,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.reduce'
     name: >-
@@ -681,6 +731,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.reduce_1'
     name: >-
@@ -691,10 +742,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: GalleryImage, currentValue:
@@ -714,6 +762,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.reduce_2'
     name: >-
@@ -752,6 +801,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.reduceRight'
     name: >-
@@ -784,6 +834,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.reduceRight_1'
     name: >-
@@ -794,11 +845,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: GalleryImage,
@@ -818,6 +865,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.reduceRight_2'
     name: >-
@@ -857,6 +905,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.reverse'
     name: reverse()
@@ -871,6 +920,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.shift'
     name: shift()
@@ -885,6 +935,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage | undefined'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -910,11 +961,12 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.some'
     name: >-
       some((value: GalleryImage, index: number, array: GalleryImage[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -925,13 +977,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: GalleryImage, index: number, array:
-        GalleryImage[]) => boolean, thisArg?: any)
+        GalleryImage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: GalleryImage, index: number, array: GalleryImage[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -947,6 +999,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.sort'
     name: 'sort(undefined | (a: GalleryImage, b: GalleryImage) => number)'
@@ -971,6 +1024,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.splice_1'
     name: 'splice(number, number, GalleryImage[])'
@@ -1004,6 +1058,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.splice'
     name: 'splice(number, undefined | number)'
@@ -1032,6 +1087,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.GalleryImage[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.toLocaleString'
     name: toLocaleString()
@@ -1048,6 +1104,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.toString'
     name: toString()
@@ -1062,6 +1119,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.unshift'
     name: 'unshift(GalleryImage[])'
@@ -1081,6 +1139,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationGalleryImage.values'
     name: values()
@@ -1095,6 +1154,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-labservices.GalleryImage>
+        description: ''
     package: '@azure/arm-labservices'
 references:
   - uid: Array<@azure/arm-labservices.GalleryImage>

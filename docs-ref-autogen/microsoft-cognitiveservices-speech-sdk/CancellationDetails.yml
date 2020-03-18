@@ -24,10 +24,11 @@ items:
       The error code in case of an unsuccessful recognition.
       Added in version 1.1.0.
     syntax:
-      content: 'ErrorCode: CancellationErrorCode'
+      content: CancellationErrorCode ErrorCode
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.CancellationErrorCode
+        description: An error code that represents the error reason.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.CancellationDetails.errorDetails
     name: errorDetails
@@ -40,10 +41,11 @@ items:
       In case of an unsuccessful recognition, provides details of the occurred
       error.
     syntax:
-      content: 'public errorDetails: string'
+      content: string errorDetails
       return:
         type:
           - string
+        description: A String that represents the error details.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.CancellationDetails.fromResult
     name: fromResult(RecognitionResult)
@@ -64,6 +66,7 @@ items:
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.CancellationDetails
+        description: The cancellation details object being created.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.CancellationDetails.reason
     name: reason
@@ -74,10 +77,11 @@ items:
     type: property
     summary: The reason the recognition was canceled.
     syntax:
-      content: 'public reason: CancellationReason'
+      content: CancellationReason reason
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.CancellationReason
+        description: Specifies the reason canceled.
     package: microsoft-cognitiveservices-speech-sdk
 references:
   - uid: microsoft-cognitiveservices-speech-sdk.CancellationErrorCode

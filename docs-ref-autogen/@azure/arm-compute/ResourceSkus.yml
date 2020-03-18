@@ -17,26 +17,27 @@ items:
     summary: Class representing a ResourceSkus.
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ResourceSkus.list'
-    name: list(msRest.RequestOptionsBase)
+    name: list(Models.ResourceSkusListOptionalParams)
     children: []
     type: method
     langs:
       - typeScript
     summary: Gets the list of Microsoft.Compute SKUs available for your Subscription.
     syntax:
-      content: 'function list(options?: msRest.RequestOptionsBase)'
+      content: 'function list(options?: Models.ResourceSkusListOptionalParams)'
       parameters:
         - id: options
           type:
-            - msRest.RequestOptionsBase
+            - Models.ResourceSkusListOptionalParams
           description: ''
           optional: true
       return:
         type:
           - Promise<Models.ResourceSkusListResponse>
+        description: Promise<Models.ResourceSkusListResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ResourceSkus.list_2'
-    name: 'list(RequestOptionsBase, ServiceCallback<ResourceSkusResult>)'
+    name: 'list(ResourceSkusListOptionalParams, ServiceCallback<ResourceSkusResult>)'
     children: []
     type: method
     langs:
@@ -44,21 +45,18 @@ items:
     summary: ''
     syntax:
       content: >-
-        function list(options: RequestOptionsBase, callback:
+        function list(options: ResourceSkusListOptionalParams, callback:
         ServiceCallback<ResourceSkusResult>)
       parameters:
         - id: options
           type:
-            - RequestOptionsBase
+            - '@azure/arm-compute.ResourceSkusListOptionalParams'
           description: The optional parameters
         - id: callback
           type:
             - ServiceCallback<@azure/arm-compute.ResourceSkusResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ResourceSkusListResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ResourceSkus.list_1'
     name: list(ServiceCallback<ResourceSkusResult>)
@@ -75,9 +73,6 @@ items:
             - ServiceCallback<@azure/arm-compute.ResourceSkusResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ResourceSkusListResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ResourceSkus.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -103,6 +98,7 @@ items:
       return:
         type:
           - Promise<Models.ResourceSkusListNextResponse>
+        description: Promise<Models.ResourceSkusListNextResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ResourceSkus.listNext_2'
     name: 'listNext(string, RequestOptionsBase, ServiceCallback<ResourceSkusResult>)'
@@ -129,9 +125,6 @@ items:
             - ServiceCallback<@azure/arm-compute.ResourceSkusResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ResourceSkusListNextResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ResourceSkus.listNext_1'
     name: 'listNext(string, ServiceCallback<ResourceSkusResult>)'
@@ -154,9 +147,6 @@ items:
             - ServiceCallback<@azure/arm-compute.ResourceSkusResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ResourceSkusListNextResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ResourceSkus.constructor'
     name: ResourceSkus(ComputeManagementClientContext)
@@ -191,3 +181,9 @@ references:
         uid: '@azure/arm-compute.ResourceSkusResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-compute.ResourceSkusListOptionalParams'
+    name: ResourceSkusListOptionalParams
+    spec.typeScript:
+      - name: ResourceSkusListOptionalParams
+        fullName: ResourceSkusListOptionalParams
+        uid: '@azure/arm-compute.ResourceSkusListOptionalParams'

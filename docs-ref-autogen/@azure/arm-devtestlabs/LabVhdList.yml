@@ -11,12 +11,13 @@ items:
       - '@azure/arm-devtestlabs.LabVhdList.entries'
       - '@azure/arm-devtestlabs.LabVhdList.every'
       - '@azure/arm-devtestlabs.LabVhdList.fill'
-      - '@azure/arm-devtestlabs.LabVhdList.filter_1'
       - '@azure/arm-devtestlabs.LabVhdList.filter'
+      - '@azure/arm-devtestlabs.LabVhdList.filter_1'
       - '@azure/arm-devtestlabs.LabVhdList.find'
       - '@azure/arm-devtestlabs.LabVhdList.find_1'
       - '@azure/arm-devtestlabs.LabVhdList.findIndex'
       - '@azure/arm-devtestlabs.LabVhdList.forEach'
+      - '@azure/arm-devtestlabs.LabVhdList.includes'
       - '@azure/arm-devtestlabs.LabVhdList.indexOf'
       - '@azure/arm-devtestlabs.LabVhdList.join'
       - '@azure/arm-devtestlabs.LabVhdList.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.concat'
     name: 'concat(ConcatArray<LabVhd>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.every'
-    name: 'every((value: LabVhd, index: number, array: LabVhd[]) => boolean, any)'
+    name: 'every((value: LabVhd, index: number, array: LabVhd[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: LabVhd, index: number, array:
-        LabVhd[]) => boolean, thisArg?: any)
+        LabVhd[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: LabVhd, index: number, array: LabVhd[]) => boolean'
+            - '(value: LabVhd, index: number, array: LabVhd[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.fill'
     name: 'fill(LabVhd, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-devtestlabs'
-  - uid: '@azure/arm-devtestlabs.LabVhdList.filter_1'
-    name: 'filter((value: LabVhd, index: number, array: LabVhd[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: LabVhd, index: number, array:
-        LabVhd[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: LabVhd, index: number, array: LabVhd[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-devtestlabs.LabVhd[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.filter'
     name: 'filter((value: LabVhd, index: number, array: LabVhd[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-devtestlabs'
+  - uid: '@azure/arm-devtestlabs.LabVhdList.filter_1'
+    name: 'filter((value: LabVhd, index: number, array: LabVhd[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: LabVhd, index: number, array:
+        LabVhd[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: LabVhd, index: number, array: LabVhd[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-devtestlabs.LabVhd[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.find'
     name: >-
@@ -340,26 +350,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.find_1'
-    name: 'find((value: LabVhd, index: number, obj: LabVhd[]) => boolean, any)'
+    name: 'find((value: LabVhd, index: number, obj: LabVhd[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: LabVhd, index: number, obj: LabVhd[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: LabVhd, index: number, obj: LabVhd[]) => boolean'
+            - '(value: LabVhd, index: number, obj: LabVhd[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -369,9 +376,10 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd | undefined'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.findIndex'
-    name: 'findIndex((value: LabVhd, index: number, obj: LabVhd[]) => boolean, any)'
+    name: 'findIndex((value: LabVhd, index: number, obj: LabVhd[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -384,11 +392,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: LabVhd, index: number, obj:
-        LabVhd[]) => boolean, thisArg?: any)
+        LabVhd[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: LabVhd, index: number, obj: LabVhd[]) => boolean'
+            - '(value: LabVhd, index: number, obj: LabVhd[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -410,6 +418,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.forEach'
     name: 'forEach((value: LabVhd, index: number, array: LabVhd[]) => void, any)'
@@ -438,6 +447,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-devtestlabs'
+  - uid: '@azure/arm-devtestlabs.LabVhdList.includes'
+    name: 'includes(LabVhd, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: LabVhd, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-devtestlabs.LabVhd'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.indexOf'
     name: 'indexOf(LabVhd, undefined | number)'
     children: []
@@ -462,6 +499,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.join'
     name: join(undefined | string)
@@ -486,6 +524,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.keys'
     name: keys()
@@ -500,6 +539,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.lastIndexOf'
     name: 'lastIndexOf(LabVhd, undefined | number)'
@@ -527,6 +567,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.length'
     name: length
@@ -543,6 +584,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.map'
     name: 'map((value: LabVhd, index: number, array: LabVhd[]) => U, any)'
@@ -575,6 +617,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.nextLink'
     name: nextLink
@@ -590,6 +633,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.pop'
     name: pop()
@@ -604,6 +648,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd | undefined'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.push'
     name: 'push(LabVhd[])'
@@ -623,6 +668,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.reduce'
     name: >-
@@ -653,6 +699,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.reduce_1'
     name: >-
@@ -662,10 +709,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: LabVhd, currentValue:
@@ -685,6 +729,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.reduce_2'
     name: >-
@@ -722,6 +767,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.reduceRight'
     name: >-
@@ -753,6 +799,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.reduceRight_1'
     name: >-
@@ -762,11 +809,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: LabVhd, currentValue:
@@ -786,6 +829,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.reduceRight_2'
     name: >-
@@ -824,6 +868,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.reverse'
     name: reverse()
@@ -838,6 +883,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.shift'
     name: shift()
@@ -852,6 +898,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd | undefined'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -877,9 +924,10 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.some'
-    name: 'some((value: LabVhd, index: number, array: LabVhd[]) => boolean, any)'
+    name: 'some((value: LabVhd, index: number, array: LabVhd[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -890,11 +938,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: LabVhd, index: number, array:
-        LabVhd[]) => boolean, thisArg?: any)
+        LabVhd[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: LabVhd, index: number, array: LabVhd[]) => boolean'
+            - '(value: LabVhd, index: number, array: LabVhd[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -910,6 +958,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.sort'
     name: 'sort(undefined | (a: LabVhd, b: LabVhd) => number)'
@@ -932,6 +981,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.splice_1'
     name: 'splice(number, number, LabVhd[])'
@@ -963,6 +1013,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.splice'
     name: 'splice(number, undefined | number)'
@@ -991,6 +1042,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVhd[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.toLocaleString'
     name: toLocaleString()
@@ -1007,6 +1059,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.toString'
     name: toString()
@@ -1021,6 +1074,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.unshift'
     name: 'unshift(LabVhd[])'
@@ -1040,6 +1094,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVhdList.values'
     name: values()
@@ -1054,6 +1109,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-devtestlabs.LabVhd>
+        description: ''
     package: '@azure/arm-devtestlabs'
 references:
   - uid: Array<@azure/arm-devtestlabs.LabVhd>

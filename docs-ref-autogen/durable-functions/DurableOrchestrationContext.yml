@@ -6,6 +6,8 @@ items:
     children:
       - durable-functions.DurableOrchestrationContext.callActivity
       - durable-functions.DurableOrchestrationContext.callActivityWithRetry
+      - durable-functions.DurableOrchestrationContext.callEntity
+      - durable-functions.DurableOrchestrationContext.callHttp
       - durable-functions.DurableOrchestrationContext.callSubOrchestrator
       - >-
         durable-functions.DurableOrchestrationContext.callSubOrchestratorWithRetry
@@ -47,6 +49,7 @@ items:
       return:
         type:
           - durable-functions.Task
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.callActivityWithRetry
     name: 'callActivityWithRetry(string, RetryOptions, unknown)'
@@ -76,6 +79,79 @@ items:
       return:
         type:
           - durable-functions.Task
+        description: ''
+    package: durable-functions
+  - uid: durable-functions.DurableOrchestrationContext.callEntity
+    name: 'callEntity(EntityId, string, unknown)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function callEntity(entityId: EntityId, operationName: string,
+        operationInput?: unknown)
+      parameters:
+        - id: entityId
+          type:
+            - durable-functions.EntityId
+          description: ''
+        - id: operationName
+          type:
+            - string
+          description: ''
+        - id: operationInput
+          type:
+            - unknown
+          description: ''
+          optional: true
+      return:
+        type:
+          - durable-functions.Task
+        description: ''
+    package: durable-functions
+  - uid: durable-functions.DurableOrchestrationContext.callHttp
+    name: >-
+      callHttp(string, string, string | object, [key: string]: string,
+      TokenSource)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function callHttp(method: string, uri: string, content?: string |
+        object, headers?: [key: string]: string, tokenSource?: TokenSource)
+      parameters:
+        - id: method
+          type:
+            - string
+          description: ''
+        - id: uri
+          type:
+            - string
+          description: ''
+        - id: content
+          type:
+            - string | object
+          description: ''
+          optional: true
+        - id: headers
+          type:
+            - '[key: string]: string'
+          description: ''
+          optional: true
+        - id: tokenSource
+          type:
+            - durable-functions.TokenSource
+          description: ''
+          optional: true
+      return:
+        type:
+          - durable-functions.Task
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.callSubOrchestrator
     name: 'callSubOrchestrator(string, unknown, string)'
@@ -106,6 +182,7 @@ items:
       return:
         type:
           - durable-functions.Task
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.callSubOrchestratorWithRetry
     name: 'callSubOrchestratorWithRetry(string, RetryOptions, unknown, string)'
@@ -140,6 +217,7 @@ items:
       return:
         type:
           - durable-functions.Task
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.continueAsNew
     name: continueAsNew(unknown)
@@ -158,6 +236,7 @@ items:
       return:
         type:
           - durable-functions.Task
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.createTimer
     name: createTimer(Date)
@@ -176,6 +255,7 @@ items:
       return:
         type:
           - durable-functions.TimerTask
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.currentUtcDateTime
     name: currentUtcDateTime
@@ -190,6 +270,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.getInput
     name: getInput()
@@ -204,6 +285,7 @@ items:
       return:
         type:
           - unknown
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.instanceId
     name: instanceId
@@ -218,6 +300,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.isReplaying
     name: isReplaying
@@ -232,6 +315,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.newGuid
     name: newGuid()
@@ -246,6 +330,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.parentInstanceId
     name: parentInstanceId
@@ -256,10 +341,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'parentInstanceId: string'
+      content: 'parentInstanceId: string | undefined'
       return:
         type:
-          - string
+          - string | undefined
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.setCustomStatus
     name: setCustomStatus(unknown)
@@ -289,6 +375,7 @@ items:
       return:
         type:
           - durable-functions.ITaskMethods
+        description: ''
     package: durable-functions
   - uid: durable-functions.DurableOrchestrationContext.waitForExternalEvent
     name: waitForExternalEvent(string)
@@ -307,6 +394,7 @@ items:
       return:
         type:
           - durable-functions.Task
+        description: ''
     package: durable-functions
 references:
   - uid: durable-functions.ITaskMethods
@@ -327,6 +415,18 @@ references:
       - name: RetryOptions
         fullName: RetryOptions
         uid: durable-functions.RetryOptions
+  - uid: durable-functions.EntityId
+    name: EntityId
+    spec.typeScript:
+      - name: EntityId
+        fullName: EntityId
+        uid: durable-functions.EntityId
+  - uid: durable-functions.TokenSource
+    name: TokenSource
+    spec.typeScript:
+      - name: TokenSource
+        fullName: TokenSource
+        uid: durable-functions.TokenSource
   - uid: durable-functions.TimerTask
     name: TimerTask
     spec.typeScript:

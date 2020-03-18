@@ -11,12 +11,13 @@ items:
       - '@azure/arm-commitmentplans.SkuListResult.entries'
       - '@azure/arm-commitmentplans.SkuListResult.every'
       - '@azure/arm-commitmentplans.SkuListResult.fill'
-      - '@azure/arm-commitmentplans.SkuListResult.filter_1'
       - '@azure/arm-commitmentplans.SkuListResult.filter'
+      - '@azure/arm-commitmentplans.SkuListResult.filter_1'
       - '@azure/arm-commitmentplans.SkuListResult.find'
       - '@azure/arm-commitmentplans.SkuListResult.find_1'
       - '@azure/arm-commitmentplans.SkuListResult.findIndex'
       - '@azure/arm-commitmentplans.SkuListResult.forEach'
+      - '@azure/arm-commitmentplans.SkuListResult.includes'
       - '@azure/arm-commitmentplans.SkuListResult.indexOf'
       - '@azure/arm-commitmentplans.SkuListResult.join'
       - '@azure/arm-commitmentplans.SkuListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.concat'
     name: 'concat(ConcatArray<CatalogSku>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku[]'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku[]'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.entries'
     name: entries()
@@ -157,10 +162,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.every'
     name: >-
-      every((value: CatalogSku, index: number, array: CatalogSku[]) => boolean,
+      every((value: CatalogSku, index: number, array: CatalogSku[]) => unknown,
       any)
     children: []
     type: method
@@ -170,11 +176,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: CatalogSku, index: number, array:
-        CatalogSku[]) => boolean, thisArg?: any)
+        CatalogSku[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: CatalogSku, index: number, array: CatalogSku[]) => boolean'
+            - '(value: CatalogSku, index: number, array: CatalogSku[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -190,6 +196,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.fill'
     name: 'fill(CatalogSku, undefined | number, undefined | number)'
@@ -230,41 +237,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-commitmentplans'
-  - uid: '@azure/arm-commitmentplans.SkuListResult.filter_1'
-    name: >-
-      filter((value: CatalogSku, index: number, array: CatalogSku[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: CatalogSku, index: number, array:
-        CatalogSku[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: CatalogSku, index: number, array: CatalogSku[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-commitmentplans.CatalogSku[]'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.filter'
     name: >-
@@ -300,6 +273,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-commitmentplans'
+  - uid: '@azure/arm-commitmentplans.SkuListResult.filter_1'
+    name: >-
+      filter((value: CatalogSku, index: number, array: CatalogSku[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: CatalogSku, index: number, array:
+        CatalogSku[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: CatalogSku, index: number, array: CatalogSku[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-commitmentplans.CatalogSku[]'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.find'
     name: >-
@@ -345,28 +355,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.find_1'
     name: >-
-      find((value: CatalogSku, index: number, obj: CatalogSku[]) => boolean,
+      find((value: CatalogSku, index: number, obj: CatalogSku[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: CatalogSku, index: number, obj:
-        CatalogSku[]) => boolean, thisArg?: any)
+        CatalogSku[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: CatalogSku, index: number, obj: CatalogSku[]) => boolean'
+            - '(value: CatalogSku, index: number, obj: CatalogSku[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -376,11 +383,12 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku | undefined'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.findIndex'
     name: >-
       findIndex((value: CatalogSku, index: number, obj: CatalogSku[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -393,11 +401,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: CatalogSku, index: number, obj:
-        CatalogSku[]) => boolean, thisArg?: any)
+        CatalogSku[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: CatalogSku, index: number, obj: CatalogSku[]) => boolean'
+            - '(value: CatalogSku, index: number, obj: CatalogSku[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -419,6 +427,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.forEach'
     name: >-
@@ -449,6 +458,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-commitmentplans'
+  - uid: '@azure/arm-commitmentplans.SkuListResult.includes'
+    name: 'includes(CatalogSku, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: CatalogSku, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-commitmentplans.CatalogSku'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.indexOf'
     name: 'indexOf(CatalogSku, undefined | number)'
     children: []
@@ -475,6 +514,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.join'
     name: join(undefined | string)
@@ -499,6 +539,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.keys'
     name: keys()
@@ -513,6 +554,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.lastIndexOf'
     name: 'lastIndexOf(CatalogSku, undefined | number)'
@@ -540,6 +582,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.length'
     name: length
@@ -556,6 +599,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.map'
     name: 'map((value: CatalogSku, index: number, array: CatalogSku[]) => U, any)'
@@ -588,6 +632,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.pop'
     name: pop()
@@ -602,6 +647,7 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku | undefined'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.push'
     name: 'push(CatalogSku[])'
@@ -621,6 +667,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.reduce'
     name: >-
@@ -651,6 +698,7 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.reduce_1'
     name: >-
@@ -660,10 +708,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: CatalogSku, currentValue:
@@ -683,6 +728,7 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.reduce_2'
     name: >-
@@ -721,6 +767,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.reduceRight'
     name: >-
@@ -753,6 +800,7 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.reduceRight_1'
     name: >-
@@ -762,11 +810,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: CatalogSku,
@@ -786,6 +830,7 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.reduceRight_2'
     name: >-
@@ -825,6 +870,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.reverse'
     name: reverse()
@@ -839,6 +885,7 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku[]'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.shift'
     name: shift()
@@ -853,6 +900,7 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku | undefined'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -878,10 +926,11 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku[]'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.some'
     name: >-
-      some((value: CatalogSku, index: number, array: CatalogSku[]) => boolean,
+      some((value: CatalogSku, index: number, array: CatalogSku[]) => unknown,
       any)
     children: []
     type: method
@@ -893,11 +942,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: CatalogSku, index: number, array:
-        CatalogSku[]) => boolean, thisArg?: any)
+        CatalogSku[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: CatalogSku, index: number, array: CatalogSku[]) => boolean'
+            - '(value: CatalogSku, index: number, array: CatalogSku[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -913,6 +962,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.sort'
     name: 'sort(undefined | (a: CatalogSku, b: CatalogSku) => number)'
@@ -937,6 +987,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.splice_1'
     name: 'splice(number, number, CatalogSku[])'
@@ -968,6 +1019,7 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku[]'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -996,6 +1048,7 @@ items:
       return:
         type:
           - '@azure/arm-commitmentplans.CatalogSku[]'
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.toLocaleString'
     name: toLocaleString()
@@ -1012,6 +1065,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.toString'
     name: toString()
@@ -1026,6 +1080,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.unshift'
     name: 'unshift(CatalogSku[])'
@@ -1045,6 +1100,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-commitmentplans'
   - uid: '@azure/arm-commitmentplans.SkuListResult.values'
     name: values()
@@ -1059,6 +1115,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-commitmentplans.CatalogSku>
+        description: ''
     package: '@azure/arm-commitmentplans'
 references:
   - uid: Array<@azure/arm-commitmentplans.CatalogSku>

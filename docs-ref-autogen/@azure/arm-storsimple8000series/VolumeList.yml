@@ -11,12 +11,13 @@ items:
       - '@azure/arm-storsimple8000series.VolumeList.entries'
       - '@azure/arm-storsimple8000series.VolumeList.every'
       - '@azure/arm-storsimple8000series.VolumeList.fill'
-      - '@azure/arm-storsimple8000series.VolumeList.filter_1'
       - '@azure/arm-storsimple8000series.VolumeList.filter'
+      - '@azure/arm-storsimple8000series.VolumeList.filter_1'
       - '@azure/arm-storsimple8000series.VolumeList.find'
       - '@azure/arm-storsimple8000series.VolumeList.find_1'
       - '@azure/arm-storsimple8000series.VolumeList.findIndex'
       - '@azure/arm-storsimple8000series.VolumeList.forEach'
+      - '@azure/arm-storsimple8000series.VolumeList.includes'
       - '@azure/arm-storsimple8000series.VolumeList.indexOf'
       - '@azure/arm-storsimple8000series.VolumeList.join'
       - '@azure/arm-storsimple8000series.VolumeList.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.concat'
     name: 'concat(ConcatArray<Volume>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.entries'
     name: entries()
@@ -157,9 +162,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.every'
-    name: 'every((value: Volume, index: number, array: Volume[]) => boolean, any)'
+    name: 'every((value: Volume, index: number, array: Volume[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -168,11 +174,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Volume, index: number, array:
-        Volume[]) => boolean, thisArg?: any)
+        Volume[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Volume, index: number, array: Volume[]) => boolean'
+            - '(value: Volume, index: number, array: Volume[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -188,6 +194,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.fill'
     name: 'fill(Volume, undefined | number, undefined | number)'
@@ -228,39 +235,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-storsimple8000series'
-  - uid: '@azure/arm-storsimple8000series.VolumeList.filter_1'
-    name: 'filter((value: Volume, index: number, array: Volume[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Volume, index: number, array:
-        Volume[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Volume, index: number, array: Volume[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-storsimple8000series.Volume[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.filter'
     name: 'filter((value: Volume, index: number, array: Volume[]) => boolean, any)'
@@ -294,6 +269,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-storsimple8000series'
+  - uid: '@azure/arm-storsimple8000series.VolumeList.filter_1'
+    name: 'filter((value: Volume, index: number, array: Volume[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Volume, index: number, array:
+        Volume[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Volume, index: number, array: Volume[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-storsimple8000series.Volume[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.find'
     name: >-
@@ -339,26 +349,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.find_1'
-    name: 'find((value: Volume, index: number, obj: Volume[]) => boolean, any)'
+    name: 'find((value: Volume, index: number, obj: Volume[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Volume, index: number, obj: Volume[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Volume, index: number, obj: Volume[]) => boolean'
+            - '(value: Volume, index: number, obj: Volume[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -368,9 +375,10 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume | undefined'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.findIndex'
-    name: 'findIndex((value: Volume, index: number, obj: Volume[]) => boolean, any)'
+    name: 'findIndex((value: Volume, index: number, obj: Volume[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -383,11 +391,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Volume, index: number, obj:
-        Volume[]) => boolean, thisArg?: any)
+        Volume[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Volume, index: number, obj: Volume[]) => boolean'
+            - '(value: Volume, index: number, obj: Volume[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -409,6 +417,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.forEach'
     name: 'forEach((value: Volume, index: number, array: Volume[]) => void, any)'
@@ -437,6 +446,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-storsimple8000series'
+  - uid: '@azure/arm-storsimple8000series.VolumeList.includes'
+    name: 'includes(Volume, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Volume, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-storsimple8000series.Volume'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.indexOf'
     name: 'indexOf(Volume, undefined | number)'
     children: []
@@ -461,6 +498,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.join'
     name: join(undefined | string)
@@ -485,6 +523,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.keys'
     name: keys()
@@ -499,6 +538,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.lastIndexOf'
     name: 'lastIndexOf(Volume, undefined | number)'
@@ -526,6 +566,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.length'
     name: length
@@ -542,6 +583,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.map'
     name: 'map((value: Volume, index: number, array: Volume[]) => U, any)'
@@ -574,6 +616,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.pop'
     name: pop()
@@ -588,6 +631,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume | undefined'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.push'
     name: 'push(Volume[])'
@@ -607,6 +651,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.reduce_2'
     name: >-
@@ -644,6 +689,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.reduce'
     name: >-
@@ -674,6 +720,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.reduce_1'
     name: >-
@@ -683,10 +730,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Volume, currentValue:
@@ -706,6 +750,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.reduceRight_2'
     name: >-
@@ -744,6 +789,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.reduceRight'
     name: >-
@@ -775,6 +821,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.reduceRight_1'
     name: >-
@@ -784,11 +831,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Volume, currentValue:
@@ -808,6 +851,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.reverse'
     name: reverse()
@@ -822,6 +866,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.shift'
     name: shift()
@@ -836,6 +881,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume | undefined'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -861,9 +907,10 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.some'
-    name: 'some((value: Volume, index: number, array: Volume[]) => boolean, any)'
+    name: 'some((value: Volume, index: number, array: Volume[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -874,11 +921,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Volume, index: number, array:
-        Volume[]) => boolean, thisArg?: any)
+        Volume[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Volume, index: number, array: Volume[]) => boolean'
+            - '(value: Volume, index: number, array: Volume[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -894,6 +941,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.sort'
     name: 'sort(undefined | (a: Volume, b: Volume) => number)'
@@ -916,6 +964,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.splice_1'
     name: 'splice(number, number, Volume[])'
@@ -947,6 +996,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.splice'
     name: 'splice(number, undefined | number)'
@@ -975,6 +1025,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.Volume[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.toLocaleString'
     name: toLocaleString()
@@ -991,6 +1042,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.toString'
     name: toString()
@@ -1005,6 +1057,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.unshift'
     name: 'unshift(Volume[])'
@@ -1024,6 +1077,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.VolumeList.values'
     name: values()
@@ -1038,6 +1092,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-storsimple8000series.Volume>
+        description: ''
     package: '@azure/arm-storsimple8000series'
 references:
   - uid: Array<@azure/arm-storsimple8000series.Volume>

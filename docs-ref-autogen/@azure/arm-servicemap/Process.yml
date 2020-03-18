@@ -25,7 +25,26 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      A process resource represents a process running on a machine. The process
+      may be actively
+
+      *monitored*, i.e., a Dependency Agent is running on its machine, or
+      *discovered*, i.e., its
+
+      existence was inferred by observing the data stream from monitored
+      machines. A process resource
+
+      represents a pool of actual operating system resources that share command
+      lines and metadata. As
+
+      the process pool evolves over time, prior versions of the process resource
+      are preserved and
+
+      available for access. A process is live during an interval of time, if
+      that process is executing
+
+      during (parts) of that interval
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.acceptorOf'
     name: acceptorOf
@@ -34,13 +53,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Present only for a discovered process acting as a server. References the
+      port on which the
+
+      discovered process is accepting.
     optional: true
     syntax:
       content: 'acceptorOf?: ResourceReferenceUnion'
       return:
         type:
           - '@azure/arm-servicemap.ResourceReferenceUnion'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.clientOf'
     name: clientOf
@@ -49,13 +73,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Present only for a discovered process acting as a client of a monitored
+      process/machine/port.
+
+      References the monitored process/machine/port that this process is a
+      client of.
     optional: true
     syntax:
       content: 'clientOf?: ResourceReferenceUnion'
       return:
         type:
           - '@azure/arm-servicemap.ResourceReferenceUnion'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.details'
     name: details
@@ -64,13 +94,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Process metadata (command line, product name, etc.).'
     optional: true
     syntax:
       content: 'details?: ProcessDetails'
       return:
         type:
           - '@azure/arm-servicemap.ProcessDetails'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.displayName'
     name: displayName
@@ -79,13 +110,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Name to use for display purposes
     optional: true
     syntax:
       content: 'displayName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.etag'
     name: etag
@@ -94,13 +126,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource ETAG.
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.executableName'
     name: executableName
@@ -109,13 +142,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The name of the process executable
     optional: true
     syntax:
       content: 'executableName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.group'
     name: group
@@ -124,13 +158,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the product or suite of the process. The group is determined
+      by its executable
+
+      name, command line, etc.
     optional: true
     syntax:
       content: 'group?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.hosting'
     name: hosting
@@ -139,13 +178,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Information about the hosting environment
     optional: true
     syntax:
       content: 'hosting?: ProcessHostingConfigurationUnion'
       return:
         type:
           - '@azure/arm-servicemap.ProcessHostingConfigurationUnion'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.id'
     name: id
@@ -154,13 +194,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource identifier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.kind'
     name: kind
@@ -169,12 +214,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'kind: "process"'
       return:
         type:
           - '"process"'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.machine'
     name: machine
@@ -183,13 +229,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Machine hosting this process.
     optional: true
     syntax:
       content: 'machine?: ResourceReferenceUnion'
       return:
         type:
           - '@azure/arm-servicemap.ResourceReferenceUnion'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.monitoringState'
     name: monitoringState
@@ -198,13 +245,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether the process is actively monitored or discovered.
+      Possible values include:
+
+      'monitored', 'discovered'
     optional: true
     syntax:
       content: 'monitoringState?: MonitoringState'
       return:
         type:
           - '@azure/arm-servicemap.MonitoringState'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.name'
     name: name
@@ -213,13 +265,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.role'
     name: role
@@ -228,13 +285,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The inferred role of this process based on its name, command line, etc.
+      Possible values
+
+      include: 'webServer', 'appServer', 'databaseServer', 'ldapServer',
+      'smbServer'
     optional: true
     syntax:
       content: 'role?: ProcessRole'
       return:
         type:
           - '@azure/arm-servicemap.ProcessRole'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.startTime'
     name: startTime
@@ -243,13 +306,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: UTC date and time when the process started
     optional: true
     syntax:
       content: 'startTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.timestamp'
     name: timestamp
@@ -258,13 +322,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: UTC date and time when this process resource was updated in the system
     optional: true
     syntax:
       content: 'timestamp?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.type'
     name: type
@@ -273,13 +338,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource type.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Process.user'
     name: user
@@ -288,13 +358,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Information about the account under which the process is executing.
     optional: true
     syntax:
       content: 'user?: ProcessUser'
       return:
         type:
           - '@azure/arm-servicemap.ProcessUser'
+        description: ''
     package: '@azure/arm-servicemap'
 references:
   - uid: '@azure/arm-servicemap.ResourceReferenceUnion'

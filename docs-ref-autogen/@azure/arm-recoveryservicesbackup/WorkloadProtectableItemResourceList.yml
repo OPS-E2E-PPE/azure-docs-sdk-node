@@ -19,9 +19,9 @@ items:
       - >-
         @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.fill
       - >-
-        @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.filter_1
-      - >-
         @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.filter
+      - >-
+        @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.filter_1
       - >-
         @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.find
       - >-
@@ -30,6 +30,8 @@ items:
         @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.findIndex
       - >-
         @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.forEach
+      - >-
+        @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.includes
       - >-
         @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.indexOf
       - >-
@@ -101,6 +103,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.concat
@@ -122,6 +125,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.concat_1
@@ -142,6 +146,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.copyWithin
@@ -186,6 +191,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.entries
@@ -201,12 +207,13 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.every
     name: >-
       every((value: WorkloadProtectableItemResource, index: number, array:
-      WorkloadProtectableItemResource[]) => boolean, any)
+      WorkloadProtectableItemResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -215,14 +222,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: WorkloadProtectableItemResource,
-        index: number, array: WorkloadProtectableItemResource[]) => boolean,
+        index: number, array: WorkloadProtectableItemResource[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: WorkloadProtectableItemResource, index: number, array:
-              WorkloadProtectableItemResource[]) => boolean
+              WorkloadProtectableItemResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -238,6 +245,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.fill'
     name: >-
@@ -280,45 +288,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
-      @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.filter_1
-    name: >-
-      filter((value: WorkloadProtectableItemResource, index: number, array:
-      WorkloadProtectableItemResource[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: WorkloadProtectableItemResource,
-        index: number, array: WorkloadProtectableItemResource[]) => any,
-        thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: WorkloadProtectableItemResource, index: number, array:
-              WorkloadProtectableItemResource[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.filter
@@ -358,6 +328,47 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: >-
+      @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.filter_1
+    name: >-
+      filter((value: WorkloadProtectableItemResource, index: number, array:
+      WorkloadProtectableItemResource[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: WorkloadProtectableItemResource,
+        index: number, array: WorkloadProtectableItemResource[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: WorkloadProtectableItemResource, index: number, array:
+              WorkloadProtectableItemResource[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.find'
     name: >-
@@ -404,32 +415,29 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.find_1
     name: >-
       find((value: WorkloadProtectableItemResource, index: number, obj:
-      WorkloadProtectableItemResource[]) => boolean, any)
+      WorkloadProtectableItemResource[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: WorkloadProtectableItemResource, index:
-        number, obj: WorkloadProtectableItemResource[]) => boolean, thisArg?:
+        number, obj: WorkloadProtectableItemResource[]) => unknown, thisArg?:
         any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: WorkloadProtectableItemResource, index: number, obj:
-              WorkloadProtectableItemResource[]) => boolean
+              WorkloadProtectableItemResource[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -441,12 +449,13 @@ items:
           - >-
             @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource |
             undefined
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.findIndex
     name: >-
       findIndex((value: WorkloadProtectableItemResource, index: number, obj:
-      WorkloadProtectableItemResource[]) => boolean, any)
+      WorkloadProtectableItemResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -459,14 +468,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: WorkloadProtectableItemResource,
-        index: number, obj: WorkloadProtectableItemResource[]) => boolean,
+        index: number, obj: WorkloadProtectableItemResource[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: WorkloadProtectableItemResource, index: number, obj:
-              WorkloadProtectableItemResource[]) => boolean
+              WorkloadProtectableItemResource[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -488,6 +497,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.forEach
@@ -523,6 +533,37 @@ items:
           optional: true
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
+      @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.includes
+    name: 'includes(WorkloadProtectableItemResource, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: WorkloadProtectableItemResource,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.indexOf
     name: 'indexOf(WorkloadProtectableItemResource, undefined | number)'
     children: []
@@ -549,6 +590,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.join'
     name: join(undefined | string)
@@ -573,6 +615,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.keys'
     name: keys()
@@ -587,6 +630,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.lastIndexOf
@@ -615,6 +659,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.length
@@ -632,6 +677,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.map'
     name: >-
@@ -669,6 +715,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.pop'
     name: pop()
@@ -685,6 +732,7 @@ items:
           - >-
             @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource |
             undefined
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.push'
     name: 'push(WorkloadProtectableItemResource[])'
@@ -705,6 +753,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.reduce_2
@@ -745,6 +794,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.reduce
@@ -781,6 +831,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.reduce_1
@@ -793,10 +844,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -820,6 +868,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.reduceRight_2
@@ -862,6 +911,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.reduceRight
@@ -899,6 +949,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.reduceRight_1
@@ -911,11 +962,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -939,6 +986,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.reverse
@@ -954,6 +1002,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.shift
@@ -971,6 +1020,7 @@ items:
           - >-
             @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource |
             undefined
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.slice
@@ -997,11 +1047,12 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.some'
     name: >-
       some((value: WorkloadProtectableItemResource, index: number, array:
-      WorkloadProtectableItemResource[]) => boolean, any)
+      WorkloadProtectableItemResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -1012,14 +1063,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: WorkloadProtectableItemResource,
-        index: number, array: WorkloadProtectableItemResource[]) => boolean,
+        index: number, array: WorkloadProtectableItemResource[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: WorkloadProtectableItemResource, index: number, array:
-              WorkloadProtectableItemResource[]) => boolean
+              WorkloadProtectableItemResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -1035,6 +1086,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.sort'
     name: >-
@@ -1064,6 +1116,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.splice_1
@@ -1099,6 +1152,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.splice
@@ -1128,6 +1182,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.toLocaleString
@@ -1145,6 +1200,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.toString
@@ -1160,6 +1216,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.unshift
@@ -1181,6 +1238,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItemResourceList.values
@@ -1197,6 +1255,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource>
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: Array<@azure/arm-recoveryservicesbackup.WorkloadProtectableItemResource>

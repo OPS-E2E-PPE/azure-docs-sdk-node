@@ -5,10 +5,13 @@ items:
     fullName: JobResource
     children:
       - '@azure/arm-databox.JobResource.cancellationReason'
+      - '@azure/arm-databox.JobResource.deliveryInfo'
+      - '@azure/arm-databox.JobResource.deliveryType'
       - '@azure/arm-databox.JobResource.details'
       - '@azure/arm-databox.JobResource.error'
       - '@azure/arm-databox.JobResource.id'
       - '@azure/arm-databox.JobResource.isCancellable'
+      - '@azure/arm-databox.JobResource.isCancellableWithoutFee'
       - '@azure/arm-databox.JobResource.isDeletable'
       - '@azure/arm-databox.JobResource.isShippingAddressEditable'
       - '@azure/arm-databox.JobResource.location'
@@ -21,7 +24,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Job Resource.
     extends:
       name: '@azure/arm-databox.Resource'
     package: '@azure/arm-databox'
@@ -32,13 +35,50 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Reason for cancellation.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'cancellationReason?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.JobResource.deliveryInfo'
+    name: deliveryInfo
+    fullName: deliveryInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Delivery Info of Job.
+    optional: true
+    syntax:
+      content: 'deliveryInfo?: JobDeliveryInfo'
+      return:
+        type:
+          - '@azure/arm-databox.JobDeliveryInfo'
+        description: ''
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.JobResource.deliveryType'
+    name: deliveryType
+    fullName: deliveryType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Delivery type of Job. Possible values include: ''NonScheduled'', ''Scheduled'''
+    optional: true
+    syntax:
+      content: 'deliveryType?: JobDeliveryType'
+      return:
+        type:
+          - '@azure/arm-databox.JobDeliveryType'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.details'
     name: details
@@ -47,13 +87,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Details of a job run. This field will only be sent for expand details
+      filter.
     optional: true
     syntax:
       content: 'details?: JobDetailsUnion'
       return:
         type:
           - '@azure/arm-databox.JobDetailsUnion'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.error'
     name: error
@@ -62,13 +105,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Top level error for the job.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'error?: ErrorModel'
       return:
         type:
           - '@azure/arm-databox.ErrorModel'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.id'
     name: id
@@ -77,13 +125,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Id of the object.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.isCancellable'
     name: isCancellable
@@ -92,13 +145,38 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Describes whether the job is cancellable or not.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'isCancellable?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.JobResource.isCancellableWithoutFee'
+    name: isCancellableWithoutFee
+    fullName: isCancellableWithoutFee
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Flag to indicate cancellation of scheduled job.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'isCancellableWithoutFee?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.isDeletable'
     name: isDeletable
@@ -107,13 +185,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Describes whether the job is deletable or not.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'isDeletable?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.isShippingAddressEditable'
     name: isShippingAddressEditable
@@ -122,13 +205,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Describes whether the shipping address is editable or not.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'isShippingAddressEditable?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.location'
     name: location
@@ -137,12 +225,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The location of the resource. This will be one of the supported and
+      registered Azure Regions
+
+      (e.g. West US, East US, Southeast Asia, etc.). The region of a resource
+      cannot be changed once
+
+      it is created, but if an identical region is specified on update the
+      request will succeed.
     syntax:
       content: 'location: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.name'
     name: name
@@ -151,13 +248,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Name of the object.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.sku'
     name: sku
@@ -166,12 +268,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The sku type.
     syntax:
       content: 'sku: Sku'
       return:
         type:
           - '@azure/arm-databox.Sku'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.startTime'
     name: startTime
@@ -180,13 +283,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Time at which the job was started in UTC ISO 8601 format.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'startTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.status'
     name: status
@@ -195,13 +303,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Name of the stage which is in progress. Possible values include:
+      'DeviceOrdered',
+
+      'DevicePrepared', 'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC',
+      'DataCopy', 'Completed',
+
+      'CompletedWithErrors', 'Cancelled', 'Failed_IssueReportedAtCustomer',
+
+      'Failed_IssueDetectedAtAzureDC', 'Aborted', 'CompletedWithWarnings',
+
+      'ReadyToDispatchFromAzureDC', 'ReadyToReceiveAtAzureDC'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'status?: StageName'
       return:
         type:
           - '@azure/arm-databox.StageName'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.tags'
     name: tags
@@ -210,13 +333,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The list of key value pairs that describe the resource. These tags can be
+      used in viewing and
+
+      grouping this resource (across resource groups).
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobResource.type'
     name: type
@@ -225,13 +353,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type of the object.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-databox'
 references:
   - uid: '@azure/arm-databox.Resource'
@@ -240,6 +373,18 @@ references:
       - name: Resource
         fullName: Resource
         uid: '@azure/arm-databox.Resource'
+  - uid: '@azure/arm-databox.JobDeliveryInfo'
+    name: JobDeliveryInfo
+    spec.typeScript:
+      - name: JobDeliveryInfo
+        fullName: JobDeliveryInfo
+        uid: '@azure/arm-databox.JobDeliveryInfo'
+  - uid: '@azure/arm-databox.JobDeliveryType'
+    name: JobDeliveryType
+    spec.typeScript:
+      - name: JobDeliveryType
+        fullName: JobDeliveryType
+        uid: '@azure/arm-databox.JobDeliveryType'
   - uid: '@azure/arm-databox.JobDetailsUnion'
     name: JobDetailsUnion
     spec.typeScript:

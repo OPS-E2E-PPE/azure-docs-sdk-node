@@ -10,7 +10,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: An interface representing Resource.
     extends:
       name: BaseResource
     package: '@azure/arm-deploymentmanager'
@@ -21,13 +21,20 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Fully qualified resource Id for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.Resource.name'
     name: name
@@ -36,13 +43,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the resource
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.Resource.type'
     name: type
@@ -51,11 +63,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The type of the resource. Ex- Microsoft.Compute/virtualMachines or
+
+      Microsoft.Storage/storageAccounts.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deploymentmanager'

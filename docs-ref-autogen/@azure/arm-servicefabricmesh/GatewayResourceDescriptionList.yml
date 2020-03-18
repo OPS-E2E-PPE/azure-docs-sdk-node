@@ -11,12 +11,13 @@ items:
       - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.entries'
       - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.every'
       - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.fill'
-      - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.filter_1'
       - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.filter'
+      - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.filter_1'
       - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.find'
       - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.find_1'
       - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.findIndex'
       - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.forEach'
+      - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.includes'
       - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.indexOf'
       - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.join'
       - '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.keys'
@@ -66,6 +67,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.concat'
     name: 'concat(ConcatArray<GatewayResourceDescription>[])'
@@ -86,6 +88,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -105,6 +108,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -148,6 +152,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.entries'
     name: entries()
@@ -162,11 +167,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.every'
     name: >-
       every((value: GatewayResourceDescription, index: number, array:
-      GatewayResourceDescription[]) => boolean, any)
+      GatewayResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -175,13 +181,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: GatewayResourceDescription, index:
-        number, array: GatewayResourceDescription[]) => boolean, thisArg?: any)
+        number, array: GatewayResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: GatewayResourceDescription, index: number, array:
-              GatewayResourceDescription[]) => boolean
+              GatewayResourceDescription[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -197,6 +203,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.fill'
     name: 'fill(GatewayResourceDescription, undefined | number, undefined | number)'
@@ -237,43 +244,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-servicefabricmesh'
-  - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.filter_1'
-    name: >-
-      filter((value: GatewayResourceDescription, index: number, array:
-      GatewayResourceDescription[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: GatewayResourceDescription, index:
-        number, array: GatewayResourceDescription[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: GatewayResourceDescription, index: number, array:
-              GatewayResourceDescription[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-servicefabricmesh.GatewayResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.filter'
     name: >-
@@ -312,6 +283,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-servicefabricmesh'
+  - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.filter_1'
+    name: >-
+      filter((value: GatewayResourceDescription, index: number, array:
+      GatewayResourceDescription[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: GatewayResourceDescription, index:
+        number, array: GatewayResourceDescription[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: GatewayResourceDescription, index: number, array:
+              GatewayResourceDescription[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-servicefabricmesh.GatewayResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.find'
     name: >-
@@ -358,30 +368,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.find_1'
     name: >-
       find((value: GatewayResourceDescription, index: number, obj:
-      GatewayResourceDescription[]) => boolean, any)
+      GatewayResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: GatewayResourceDescription, index:
-        number, obj: GatewayResourceDescription[]) => boolean, thisArg?: any)
+        number, obj: GatewayResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: GatewayResourceDescription, index: number, obj:
-              GatewayResourceDescription[]) => boolean
+              GatewayResourceDescription[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -391,11 +398,12 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription | undefined'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.findIndex'
     name: >-
       findIndex((value: GatewayResourceDescription, index: number, obj:
-      GatewayResourceDescription[]) => boolean, any)
+      GatewayResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -408,13 +416,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: GatewayResourceDescription, index:
-        number, obj: GatewayResourceDescription[]) => boolean, thisArg?: any)
+        number, obj: GatewayResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: GatewayResourceDescription, index: number, obj:
-              GatewayResourceDescription[]) => boolean
+              GatewayResourceDescription[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -436,6 +444,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.forEach'
     name: >-
@@ -468,6 +477,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-servicefabricmesh'
+  - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.includes'
+    name: 'includes(GatewayResourceDescription, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: GatewayResourceDescription, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-servicefabricmesh.GatewayResourceDescription'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.indexOf'
     name: 'indexOf(GatewayResourceDescription, undefined | number)'
     children: []
@@ -494,6 +533,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.join'
     name: join(undefined | string)
@@ -518,6 +558,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.keys'
     name: keys()
@@ -532,6 +573,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.lastIndexOf'
     name: 'lastIndexOf(GatewayResourceDescription, undefined | number)'
@@ -559,6 +601,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.length'
     name: length
@@ -575,6 +618,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.map'
     name: >-
@@ -611,6 +655,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.nextLink'
     name: nextLink
@@ -626,6 +671,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.pop'
     name: pop()
@@ -640,6 +686,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription | undefined'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.push'
     name: 'push(GatewayResourceDescription[])'
@@ -659,6 +706,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.reduce'
     name: >-
@@ -692,6 +740,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.reduce_1'
     name: >-
@@ -703,10 +752,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: GatewayResourceDescription,
@@ -728,6 +774,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.reduce_2'
     name: >-
@@ -766,6 +813,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.reduceRight'
     name: >-
@@ -801,6 +849,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.reduceRight_1'
     name: >-
@@ -812,11 +861,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -838,6 +883,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.reduceRight_2'
     name: >-
@@ -877,6 +923,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.reverse'
     name: reverse()
@@ -891,6 +938,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.shift'
     name: shift()
@@ -905,6 +953,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription | undefined'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -930,11 +979,12 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.some'
     name: >-
       some((value: GatewayResourceDescription, index: number, array:
-      GatewayResourceDescription[]) => boolean, any)
+      GatewayResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -945,13 +995,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: GatewayResourceDescription, index:
-        number, array: GatewayResourceDescription[]) => boolean, thisArg?: any)
+        number, array: GatewayResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: GatewayResourceDescription, index: number, array:
-              GatewayResourceDescription[]) => boolean
+              GatewayResourceDescription[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -967,6 +1017,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.sort'
     name: >-
@@ -995,6 +1046,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.splice_1'
     name: 'splice(number, number, GatewayResourceDescription[])'
@@ -1028,6 +1080,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.splice'
     name: 'splice(number, undefined | number)'
@@ -1056,6 +1109,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.GatewayResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.toLocaleString'
     name: toLocaleString()
@@ -1072,6 +1126,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.toString'
     name: toString()
@@ -1086,6 +1141,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.unshift'
     name: 'unshift(GatewayResourceDescription[])'
@@ -1105,6 +1161,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.GatewayResourceDescriptionList.values'
     name: values()
@@ -1120,6 +1177,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-servicefabricmesh.GatewayResourceDescription>
+        description: ''
     package: '@azure/arm-servicefabricmesh'
 references:
   - uid: Array<@azure/arm-servicefabricmesh.GatewayResourceDescription>

@@ -11,12 +11,13 @@ items:
       - '@azure/arm-compute.ComputeOperationListResult.entries'
       - '@azure/arm-compute.ComputeOperationListResult.every'
       - '@azure/arm-compute.ComputeOperationListResult.fill'
-      - '@azure/arm-compute.ComputeOperationListResult.filter_1'
       - '@azure/arm-compute.ComputeOperationListResult.filter'
+      - '@azure/arm-compute.ComputeOperationListResult.filter_1'
       - '@azure/arm-compute.ComputeOperationListResult.find'
       - '@azure/arm-compute.ComputeOperationListResult.find_1'
       - '@azure/arm-compute.ComputeOperationListResult.findIndex'
       - '@azure/arm-compute.ComputeOperationListResult.forEach'
+      - '@azure/arm-compute.ComputeOperationListResult.includes'
       - '@azure/arm-compute.ComputeOperationListResult.indexOf'
       - '@azure/arm-compute.ComputeOperationListResult.join'
       - '@azure/arm-compute.ComputeOperationListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.concat'
     name: 'concat(ConcatArray<ComputeOperationValue>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.every'
     name: >-
       every((value: ComputeOperationValue, index: number, array:
-      ComputeOperationValue[]) => boolean, any)
+      ComputeOperationValue[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -170,13 +176,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ComputeOperationValue, index: number,
-        array: ComputeOperationValue[]) => boolean, thisArg?: any)
+        array: ComputeOperationValue[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ComputeOperationValue, index: number, array:
-              ComputeOperationValue[]) => boolean
+              ComputeOperationValue[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.fill'
     name: 'fill(ComputeOperationValue, undefined | number, undefined | number)'
@@ -232,43 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.ComputeOperationListResult.filter_1'
-    name: >-
-      filter((value: ComputeOperationValue, index: number, array:
-      ComputeOperationValue[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ComputeOperationValue, index:
-        number, array: ComputeOperationValue[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ComputeOperationValue, index: number, array:
-              ComputeOperationValue[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-compute.ComputeOperationValue[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.filter'
     name: >-
@@ -306,6 +277,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ComputeOperationListResult.filter_1'
+    name: >-
+      filter((value: ComputeOperationValue, index: number, array:
+      ComputeOperationValue[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ComputeOperationValue, index:
+        number, array: ComputeOperationValue[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ComputeOperationValue, index: number, array:
+              ComputeOperationValue[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-compute.ComputeOperationValue[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.find'
     name: >-
@@ -351,30 +361,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.find_1'
     name: >-
       find((value: ComputeOperationValue, index: number, obj:
-      ComputeOperationValue[]) => boolean, any)
+      ComputeOperationValue[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ComputeOperationValue, index: number,
-        obj: ComputeOperationValue[]) => boolean, thisArg?: any)
+        obj: ComputeOperationValue[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ComputeOperationValue, index: number, obj:
-              ComputeOperationValue[]) => boolean
+              ComputeOperationValue[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -384,11 +391,12 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.findIndex'
     name: >-
       findIndex((value: ComputeOperationValue, index: number, obj:
-      ComputeOperationValue[]) => boolean, any)
+      ComputeOperationValue[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -401,13 +409,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ComputeOperationValue, index:
-        number, obj: ComputeOperationValue[]) => boolean, thisArg?: any)
+        number, obj: ComputeOperationValue[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ComputeOperationValue, index: number, obj:
-              ComputeOperationValue[]) => boolean
+              ComputeOperationValue[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -429,6 +437,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.forEach'
     name: >-
@@ -461,6 +470,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ComputeOperationListResult.includes'
+    name: 'includes(ComputeOperationValue, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ComputeOperationValue, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-compute.ComputeOperationValue'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.indexOf'
     name: 'indexOf(ComputeOperationValue, undefined | number)'
     children: []
@@ -487,6 +526,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.join'
     name: join(undefined | string)
@@ -511,6 +551,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.keys'
     name: keys()
@@ -525,6 +566,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.lastIndexOf'
     name: 'lastIndexOf(ComputeOperationValue, undefined | number)'
@@ -552,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.length'
     name: length
@@ -568,6 +611,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.map'
     name: >-
@@ -604,6 +648,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.pop'
     name: pop()
@@ -618,6 +663,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.push'
     name: 'push(ComputeOperationValue[])'
@@ -637,6 +683,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.reduce'
     name: >-
@@ -670,6 +717,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.reduce_1'
     name: >-
@@ -680,10 +728,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ComputeOperationValue,
@@ -705,6 +750,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.reduce_2'
     name: >-
@@ -743,6 +789,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.reduceRight'
     name: >-
@@ -777,6 +824,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.reduceRight_1'
     name: >-
@@ -787,11 +835,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ComputeOperationValue,
@@ -813,6 +857,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.reduceRight_2'
     name: >-
@@ -852,6 +897,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.reverse'
     name: reverse()
@@ -866,6 +912,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.shift'
     name: shift()
@@ -880,6 +927,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -905,11 +953,12 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.some'
     name: >-
       some((value: ComputeOperationValue, index: number, array:
-      ComputeOperationValue[]) => boolean, any)
+      ComputeOperationValue[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -920,13 +969,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ComputeOperationValue, index: number,
-        array: ComputeOperationValue[]) => boolean, thisArg?: any)
+        array: ComputeOperationValue[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ComputeOperationValue, index: number, array:
-              ComputeOperationValue[]) => boolean
+              ComputeOperationValue[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -942,6 +991,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.sort'
     name: >-
@@ -970,6 +1020,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.splice_1'
     name: 'splice(number, number, ComputeOperationValue[])'
@@ -1003,6 +1054,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1031,6 +1083,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ComputeOperationValue[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.toLocaleString'
     name: toLocaleString()
@@ -1047,6 +1100,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.toString'
     name: toString()
@@ -1061,6 +1115,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.unshift'
     name: 'unshift(ComputeOperationValue[])'
@@ -1080,6 +1135,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeOperationListResult.values'
     name: values()
@@ -1094,6 +1150,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-compute.ComputeOperationValue>
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: Array<@azure/arm-compute.ComputeOperationValue>

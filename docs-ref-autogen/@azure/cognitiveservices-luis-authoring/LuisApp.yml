@@ -9,11 +9,12 @@ items:
       - '@azure/cognitiveservices-luis-authoring.LuisApp.culture'
       - '@azure/cognitiveservices-luis-authoring.LuisApp.desc'
       - '@azure/cognitiveservices-luis-authoring.LuisApp.entities'
+      - '@azure/cognitiveservices-luis-authoring.LuisApp.hierarchicals'
       - '@azure/cognitiveservices-luis-authoring.LuisApp.intents'
-      - '@azure/cognitiveservices-luis-authoring.LuisApp.modelFeatures'
       - '@azure/cognitiveservices-luis-authoring.LuisApp.name'
       - '@azure/cognitiveservices-luis-authoring.LuisApp.patternAnyEntities'
       - '@azure/cognitiveservices-luis-authoring.LuisApp.patterns'
+      - '@azure/cognitiveservices-luis-authoring.LuisApp.phraselists'
       - '@azure/cognitiveservices-luis-authoring.LuisApp.prebuiltEntities'
       - '@azure/cognitiveservices-luis-authoring.LuisApp.regexEntities'
       - '@azure/cognitiveservices-luis-authoring.LuisApp.regexFeatures'
@@ -31,13 +32,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: List of closed lists.
+    summary: List of list entities.
     optional: true
     syntax:
       content: 'closedLists?: ClosedList[]'
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.ClosedList[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.composites'
     name: composites
@@ -53,6 +55,7 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.HierarchicalModel[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.culture'
     name: culture
@@ -68,6 +71,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.desc'
     name: desc
@@ -83,6 +87,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.entities'
     name: entities
@@ -98,6 +103,23 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.HierarchicalModel[]'
+        description: ''
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.hierarchicals'
+    name: hierarchicals
+    fullName: hierarchicals
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of hierarchical entities.
+    optional: true
+    syntax:
+      content: 'hierarchicals?: HierarchicalModel[]'
+      return:
+        type:
+          - '@azure/cognitiveservices-luis-authoring.HierarchicalModel[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.intents'
     name: intents
@@ -113,21 +135,7 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.HierarchicalModel[]'
-    package: '@azure/cognitiveservices-luis-authoring'
-  - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.modelFeatures'
-    name: modelFeatures
-    fullName: modelFeatures
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: List of model features.
-    optional: true
-    syntax:
-      content: 'modelFeatures?: JSONModelFeature[]'
-      return:
-        type:
-          - '@azure/cognitiveservices-luis-authoring.JSONModelFeature[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.name'
     name: name
@@ -143,6 +151,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.patternAnyEntities'
     name: patternAnyEntities
@@ -158,6 +167,7 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.PatternAny[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.patterns'
     name: patterns
@@ -173,6 +183,23 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.PatternRule[]'
+        description: ''
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.phraselists'
+    name: phraselists
+    fullName: phraselists
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of model features.
+    optional: true
+    syntax:
+      content: 'phraselists?: JSONModelFeature[]'
+      return:
+        type:
+          - '@azure/cognitiveservices-luis-authoring.JSONModelFeature[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.prebuiltEntities'
     name: prebuiltEntities
@@ -188,6 +215,7 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.PrebuiltEntity[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.regexEntities'
     name: regexEntities
@@ -203,6 +231,7 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.RegexEntity[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.regexFeatures'
     name: regexFeatures
@@ -218,6 +247,7 @@ items:
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.JSONRegexFeature[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.utterances'
     name: utterances
@@ -226,13 +256,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: List of sample utterances.
+    summary: List of example utterances.
     optional: true
     syntax:
       content: 'utterances?: JSONUtterance[]'
       return:
         type:
           - '@azure/cognitiveservices-luis-authoring.JSONUtterance[]'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.LuisApp.versionId'
     name: versionId
@@ -248,6 +279,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
 references:
   - uid: '@azure/cognitiveservices-luis-authoring.ClosedList[]'
@@ -266,14 +298,6 @@ references:
         uid: '@azure/cognitiveservices-luis-authoring.HierarchicalModel'
       - name: '[]'
         fullName: '[]'
-  - uid: '@azure/cognitiveservices-luis-authoring.JSONModelFeature[]'
-    name: 'JSONModelFeature[]'
-    spec.typeScript:
-      - name: JSONModelFeature
-        fullName: JSONModelFeature
-        uid: '@azure/cognitiveservices-luis-authoring.JSONModelFeature'
-      - name: '[]'
-        fullName: '[]'
   - uid: '@azure/cognitiveservices-luis-authoring.PatternAny[]'
     name: 'PatternAny[]'
     spec.typeScript:
@@ -288,6 +312,14 @@ references:
       - name: PatternRule
         fullName: PatternRule
         uid: '@azure/cognitiveservices-luis-authoring.PatternRule'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/cognitiveservices-luis-authoring.JSONModelFeature[]'
+    name: 'JSONModelFeature[]'
+    spec.typeScript:
+      - name: JSONModelFeature
+        fullName: JSONModelFeature
+        uid: '@azure/cognitiveservices-luis-authoring.JSONModelFeature'
       - name: '[]'
         fullName: '[]'
   - uid: '@azure/cognitiveservices-luis-authoring.PrebuiltEntity[]'

@@ -11,12 +11,13 @@ items:
       - '@azure/arm-frontdoor.HealthProbeSettingsListResult.entries'
       - '@azure/arm-frontdoor.HealthProbeSettingsListResult.every'
       - '@azure/arm-frontdoor.HealthProbeSettingsListResult.fill'
-      - '@azure/arm-frontdoor.HealthProbeSettingsListResult.filter_1'
       - '@azure/arm-frontdoor.HealthProbeSettingsListResult.filter'
+      - '@azure/arm-frontdoor.HealthProbeSettingsListResult.filter_1'
       - '@azure/arm-frontdoor.HealthProbeSettingsListResult.find'
       - '@azure/arm-frontdoor.HealthProbeSettingsListResult.find_1'
       - '@azure/arm-frontdoor.HealthProbeSettingsListResult.findIndex'
       - '@azure/arm-frontdoor.HealthProbeSettingsListResult.forEach'
+      - '@azure/arm-frontdoor.HealthProbeSettingsListResult.includes'
       - '@azure/arm-frontdoor.HealthProbeSettingsListResult.indexOf'
       - '@azure/arm-frontdoor.HealthProbeSettingsListResult.join'
       - '@azure/arm-frontdoor.HealthProbeSettingsListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.concat'
     name: 'concat(ConcatArray<HealthProbeSettingsModel>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.every'
     name: >-
       every((value: HealthProbeSettingsModel, index: number, array:
-      HealthProbeSettingsModel[]) => boolean, any)
+      HealthProbeSettingsModel[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: HealthProbeSettingsModel, index:
-        number, array: HealthProbeSettingsModel[]) => boolean, thisArg?: any)
+        number, array: HealthProbeSettingsModel[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: HealthProbeSettingsModel, index: number, array:
-              HealthProbeSettingsModel[]) => boolean
+              HealthProbeSettingsModel[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.fill'
     name: 'fill(HealthProbeSettingsModel, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-frontdoor'
-  - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.filter_1'
-    name: >-
-      filter((value: HealthProbeSettingsModel, index: number, array:
-      HealthProbeSettingsModel[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: HealthProbeSettingsModel, index:
-        number, array: HealthProbeSettingsModel[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: HealthProbeSettingsModel, index: number, array:
-              HealthProbeSettingsModel[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-frontdoor.HealthProbeSettingsModel[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.filter_1'
+    name: >-
+      filter((value: HealthProbeSettingsModel, index: number, array:
+      HealthProbeSettingsModel[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: HealthProbeSettingsModel, index:
+        number, array: HealthProbeSettingsModel[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: HealthProbeSettingsModel, index: number, array:
+              HealthProbeSettingsModel[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-frontdoor.HealthProbeSettingsModel[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.find'
     name: >-
@@ -353,30 +363,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.find_1'
     name: >-
       find((value: HealthProbeSettingsModel, index: number, obj:
-      HealthProbeSettingsModel[]) => boolean, any)
+      HealthProbeSettingsModel[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: HealthProbeSettingsModel, index:
-        number, obj: HealthProbeSettingsModel[]) => boolean, thisArg?: any)
+        number, obj: HealthProbeSettingsModel[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: HealthProbeSettingsModel, index: number, obj:
-              HealthProbeSettingsModel[]) => boolean
+              HealthProbeSettingsModel[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -386,11 +393,12 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel | undefined'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.findIndex'
     name: >-
       findIndex((value: HealthProbeSettingsModel, index: number, obj:
-      HealthProbeSettingsModel[]) => boolean, any)
+      HealthProbeSettingsModel[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -403,13 +411,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: HealthProbeSettingsModel, index:
-        number, obj: HealthProbeSettingsModel[]) => boolean, thisArg?: any)
+        number, obj: HealthProbeSettingsModel[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: HealthProbeSettingsModel, index: number, obj:
-              HealthProbeSettingsModel[]) => boolean
+              HealthProbeSettingsModel[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -431,6 +439,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.forEach'
     name: >-
@@ -463,6 +472,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.includes'
+    name: 'includes(HealthProbeSettingsModel, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: HealthProbeSettingsModel, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-frontdoor.HealthProbeSettingsModel'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.indexOf'
     name: 'indexOf(HealthProbeSettingsModel, undefined | number)'
     children: []
@@ -489,6 +528,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.join'
     name: join(undefined | string)
@@ -513,6 +553,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.keys'
     name: keys()
@@ -527,6 +568,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.lastIndexOf'
     name: 'lastIndexOf(HealthProbeSettingsModel, undefined | number)'
@@ -554,6 +596,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.length'
     name: length
@@ -570,6 +613,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.map'
     name: >-
@@ -606,6 +650,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.nextLink'
     name: nextLink
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.pop'
     name: pop()
@@ -635,6 +681,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel | undefined'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.push'
     name: 'push(HealthProbeSettingsModel[])'
@@ -654,6 +701,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.reduce'
     name: >-
@@ -687,6 +735,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.reduce_1'
     name: >-
@@ -698,10 +747,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: HealthProbeSettingsModel,
@@ -723,6 +769,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.reduce_2'
     name: >-
@@ -761,6 +808,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.reduceRight'
     name: >-
@@ -796,6 +844,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.reduceRight_1'
     name: >-
@@ -807,11 +856,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -833,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.reduceRight_2'
     name: >-
@@ -872,6 +918,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.reverse'
     name: reverse()
@@ -886,6 +933,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.shift'
     name: shift()
@@ -900,6 +948,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel | undefined'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -925,11 +974,12 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.some'
     name: >-
       some((value: HealthProbeSettingsModel, index: number, array:
-      HealthProbeSettingsModel[]) => boolean, any)
+      HealthProbeSettingsModel[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -940,13 +990,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: HealthProbeSettingsModel, index:
-        number, array: HealthProbeSettingsModel[]) => boolean, thisArg?: any)
+        number, array: HealthProbeSettingsModel[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: HealthProbeSettingsModel, index: number, array:
-              HealthProbeSettingsModel[]) => boolean
+              HealthProbeSettingsModel[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -962,6 +1012,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.sort'
     name: >-
@@ -990,6 +1041,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.splice_1'
     name: 'splice(number, number, HealthProbeSettingsModel[])'
@@ -1023,6 +1075,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1051,6 +1104,7 @@ items:
       return:
         type:
           - '@azure/arm-frontdoor.HealthProbeSettingsModel[]'
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.toLocaleString'
     name: toLocaleString()
@@ -1067,6 +1121,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.toString'
     name: toString()
@@ -1081,6 +1136,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.unshift'
     name: 'unshift(HealthProbeSettingsModel[])'
@@ -1100,6 +1156,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-frontdoor'
   - uid: '@azure/arm-frontdoor.HealthProbeSettingsListResult.values'
     name: values()
@@ -1114,6 +1171,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-frontdoor.HealthProbeSettingsModel>
+        description: ''
     package: '@azure/arm-frontdoor'
 references:
   - uid: Array<@azure/arm-frontdoor.HealthProbeSettingsModel>

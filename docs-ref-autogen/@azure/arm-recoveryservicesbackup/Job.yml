@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Defines workload agnostic properties for a job.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.Job.activityId'
     name: activityId
@@ -24,13 +24,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: ActivityId of job.
     optional: true
     syntax:
       content: 'activityId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.Job.backupManagementType'
     name: backupManagementType
@@ -39,13 +40,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Backup management type to execute the current job. Possible values
+      include: 'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     optional: true
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.Job.endTime'
     name: endTime
@@ -54,13 +63,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The end time.
     optional: true
     syntax:
       content: 'endTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.Job.entityFriendlyName'
     name: entityFriendlyName
@@ -69,13 +79,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of the entity on which the current job is executing.
     optional: true
     syntax:
       content: 'entityFriendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.Job.jobType'
     name: jobType
@@ -84,12 +95,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'jobType: "Job"'
       return:
         type:
           - '"Job"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.Job.operation'
     name: operation
@@ -98,13 +110,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The operation name.
     optional: true
     syntax:
       content: 'operation?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.Job.startTime'
     name: startTime
@@ -113,13 +126,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The start time.
     optional: true
     syntax:
       content: 'startTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.Job.status'
     name: status
@@ -128,13 +142,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Job status.
     optional: true
     syntax:
       content: 'status?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'

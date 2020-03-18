@@ -28,13 +28,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayIPConfiguration.id'
     name: id
@@ -50,6 +55,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayIPConfiguration.name'
     name: name
@@ -65,6 +71,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayIPConfiguration.provisioningState'
     name: provisioningState
@@ -74,16 +81,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Provisioning state of the application gateway subnet resource. Possible
-      values are:
+      The provisioning state of the application gateway IP configuration
+      resource. Possible values
 
-      'Updating', 'Deleting', and 'Failed'.
+      include: 'Succeeded', 'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayIPConfiguration.subnet'
     name: subnet
@@ -103,6 +114,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayIPConfiguration.type'
     name: type
@@ -111,13 +123,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Type of the resource.
+    summary: >-
+      Type of the resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -126,3 +143,9 @@ references:
       - name: SubResource
         fullName: SubResource
         uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

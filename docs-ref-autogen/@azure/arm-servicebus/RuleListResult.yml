@@ -11,12 +11,13 @@ items:
       - '@azure/arm-servicebus.RuleListResult.entries'
       - '@azure/arm-servicebus.RuleListResult.every'
       - '@azure/arm-servicebus.RuleListResult.fill'
-      - '@azure/arm-servicebus.RuleListResult.filter_1'
       - '@azure/arm-servicebus.RuleListResult.filter'
+      - '@azure/arm-servicebus.RuleListResult.filter_1'
       - '@azure/arm-servicebus.RuleListResult.find'
       - '@azure/arm-servicebus.RuleListResult.find_1'
       - '@azure/arm-servicebus.RuleListResult.findIndex'
       - '@azure/arm-servicebus.RuleListResult.forEach'
+      - '@azure/arm-servicebus.RuleListResult.includes'
       - '@azure/arm-servicebus.RuleListResult.indexOf'
       - '@azure/arm-servicebus.RuleListResult.join'
       - '@azure/arm-servicebus.RuleListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.concat'
     name: 'concat(ConcatArray<Rule>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule[]'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule[]'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.every'
-    name: 'every((value: Rule, index: number, array: Rule[]) => boolean, any)'
+    name: 'every((value: Rule, index: number, array: Rule[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Rule, index: number, array: Rule[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Rule, index: number, array: Rule[]) => boolean'
+            - '(value: Rule, index: number, array: Rule[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.fill'
     name: 'fill(Rule, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-servicebus'
-  - uid: '@azure/arm-servicebus.RuleListResult.filter_1'
-    name: 'filter((value: Rule, index: number, array: Rule[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Rule, index: number, array: Rule[])
-        => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Rule, index: number, array: Rule[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-servicebus.Rule[]'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.filter'
     name: 'filter((value: Rule, index: number, array: Rule[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.RuleListResult.filter_1'
+    name: 'filter((value: Rule, index: number, array: Rule[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Rule, index: number, array: Rule[])
+        => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Rule, index: number, array: Rule[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-servicebus.Rule[]'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.find'
     name: >-
@@ -338,26 +348,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.find_1'
-    name: 'find((value: Rule, index: number, obj: Rule[]) => boolean, any)'
+    name: 'find((value: Rule, index: number, obj: Rule[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Rule, index: number, obj: Rule[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Rule, index: number, obj: Rule[]) => boolean'
+            - '(value: Rule, index: number, obj: Rule[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -367,9 +374,10 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule | undefined'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.findIndex'
-    name: 'findIndex((value: Rule, index: number, obj: Rule[]) => boolean, any)'
+    name: 'findIndex((value: Rule, index: number, obj: Rule[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -382,11 +390,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Rule, index: number, obj: Rule[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Rule, index: number, obj: Rule[]) => boolean'
+            - '(value: Rule, index: number, obj: Rule[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -408,6 +416,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.forEach'
     name: 'forEach((value: Rule, index: number, array: Rule[]) => void, any)'
@@ -436,6 +445,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.RuleListResult.includes'
+    name: 'includes(Rule, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Rule, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-servicebus.Rule'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.indexOf'
     name: 'indexOf(Rule, undefined | number)'
     children: []
@@ -460,6 +497,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.join'
     name: join(undefined | string)
@@ -484,6 +522,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.keys'
     name: keys()
@@ -498,6 +537,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.lastIndexOf'
     name: 'lastIndexOf(Rule, undefined | number)'
@@ -525,6 +565,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.length'
     name: length
@@ -541,6 +582,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.map'
     name: 'map((value: Rule, index: number, array: Rule[]) => U, any)'
@@ -573,6 +615,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.nextLink'
     name: nextLink
@@ -590,6 +633,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.pop'
     name: pop()
@@ -604,6 +648,7 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule | undefined'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.push'
     name: 'push(Rule[])'
@@ -623,6 +668,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.reduce'
     name: >-
@@ -653,6 +699,7 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.reduce_1'
     name: >-
@@ -662,10 +709,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Rule, currentValue: Rule,
@@ -684,6 +728,7 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.reduce_2'
     name: >-
@@ -721,6 +766,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.reduceRight'
     name: >-
@@ -752,6 +798,7 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.reduceRight_1'
     name: >-
@@ -761,11 +808,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Rule, currentValue:
@@ -784,6 +827,7 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.reduceRight_2'
     name: >-
@@ -822,6 +866,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.reverse'
     name: reverse()
@@ -836,6 +881,7 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule[]'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.shift'
     name: shift()
@@ -850,6 +896,7 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule | undefined'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -875,9 +922,10 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule[]'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.some'
-    name: 'some((value: Rule, index: number, array: Rule[]) => boolean, any)'
+    name: 'some((value: Rule, index: number, array: Rule[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -888,11 +936,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Rule, index: number, array: Rule[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Rule, index: number, array: Rule[]) => boolean'
+            - '(value: Rule, index: number, array: Rule[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -908,6 +956,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.sort'
     name: 'sort(undefined | (a: Rule, b: Rule) => number)'
@@ -930,6 +979,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.splice_1'
     name: 'splice(number, number, Rule[])'
@@ -961,6 +1011,7 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule[]'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -989,6 +1040,7 @@ items:
       return:
         type:
           - '@azure/arm-servicebus.Rule[]'
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.toLocaleString'
     name: toLocaleString()
@@ -1005,6 +1057,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.toString'
     name: toString()
@@ -1019,6 +1072,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.unshift'
     name: 'unshift(Rule[])'
@@ -1038,6 +1092,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicebus'
   - uid: '@azure/arm-servicebus.RuleListResult.values'
     name: values()
@@ -1052,6 +1107,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-servicebus.Rule>
+        description: ''
     package: '@azure/arm-servicebus'
 references:
   - uid: Array<@azure/arm-servicebus.Rule>

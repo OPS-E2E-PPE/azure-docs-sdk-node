@@ -11,12 +11,13 @@ items:
       - '@azure/arm-servicemap.PortCollection.entries'
       - '@azure/arm-servicemap.PortCollection.every'
       - '@azure/arm-servicemap.PortCollection.fill'
-      - '@azure/arm-servicemap.PortCollection.filter_1'
       - '@azure/arm-servicemap.PortCollection.filter'
+      - '@azure/arm-servicemap.PortCollection.filter_1'
       - '@azure/arm-servicemap.PortCollection.find'
       - '@azure/arm-servicemap.PortCollection.find_1'
       - '@azure/arm-servicemap.PortCollection.findIndex'
       - '@azure/arm-servicemap.PortCollection.forEach'
+      - '@azure/arm-servicemap.PortCollection.includes'
       - '@azure/arm-servicemap.PortCollection.indexOf'
       - '@azure/arm-servicemap.PortCollection.join'
       - '@azure/arm-servicemap.PortCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.concat'
     name: 'concat(ConcatArray<Port>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.every'
-    name: 'every((value: Port, index: number, array: Port[]) => boolean, any)'
+    name: 'every((value: Port, index: number, array: Port[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Port, index: number, array: Port[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Port, index: number, array: Port[]) => boolean'
+            - '(value: Port, index: number, array: Port[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.fill'
     name: 'fill(Port, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.PortCollection.filter_1'
-    name: 'filter((value: Port, index: number, array: Port[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Port, index: number, array: Port[])
-        => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Port, index: number, array: Port[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-servicemap.Port[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.filter'
     name: 'filter((value: Port, index: number, array: Port[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-servicemap'
+  - uid: '@azure/arm-servicemap.PortCollection.filter_1'
+    name: 'filter((value: Port, index: number, array: Port[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Port, index: number, array: Port[])
+        => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Port, index: number, array: Port[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-servicemap.Port[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.find'
     name: >-
@@ -338,26 +348,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.find_1'
-    name: 'find((value: Port, index: number, obj: Port[]) => boolean, any)'
+    name: 'find((value: Port, index: number, obj: Port[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Port, index: number, obj: Port[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Port, index: number, obj: Port[]) => boolean'
+            - '(value: Port, index: number, obj: Port[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -367,9 +374,10 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port | undefined'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.findIndex'
-    name: 'findIndex((value: Port, index: number, obj: Port[]) => boolean, any)'
+    name: 'findIndex((value: Port, index: number, obj: Port[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -382,11 +390,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Port, index: number, obj: Port[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Port, index: number, obj: Port[]) => boolean'
+            - '(value: Port, index: number, obj: Port[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -408,6 +416,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.forEach'
     name: 'forEach((value: Port, index: number, array: Port[]) => void, any)'
@@ -436,6 +445,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-servicemap'
+  - uid: '@azure/arm-servicemap.PortCollection.includes'
+    name: 'includes(Port, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Port, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-servicemap.Port'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.indexOf'
     name: 'indexOf(Port, undefined | number)'
     children: []
@@ -460,6 +497,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.join'
     name: join(undefined | string)
@@ -484,6 +522,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.keys'
     name: keys()
@@ -498,6 +537,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.lastIndexOf'
     name: 'lastIndexOf(Port, undefined | number)'
@@ -525,6 +565,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.length'
     name: length
@@ -541,6 +582,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.map'
     name: 'map((value: Port, index: number, array: Port[]) => U, any)'
@@ -573,6 +615,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.nextLink'
     name: nextLink
@@ -581,13 +624,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The URL to the next set of resources.
     optional: true
     syntax:
       content: 'nextLink?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.pop'
     name: pop()
@@ -602,6 +646,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port | undefined'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.push'
     name: 'push(Port[])'
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.reduce'
     name: >-
@@ -651,6 +697,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.reduce_1'
     name: >-
@@ -660,10 +707,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Port, currentValue: Port,
@@ -682,6 +726,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.reduce_2'
     name: >-
@@ -719,6 +764,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.reduceRight'
     name: >-
@@ -750,6 +796,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.reduceRight_1'
     name: >-
@@ -759,11 +806,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Port, currentValue:
@@ -782,6 +825,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.reduceRight_2'
     name: >-
@@ -820,6 +864,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.reverse'
     name: reverse()
@@ -834,6 +879,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.shift'
     name: shift()
@@ -848,6 +894,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port | undefined'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -873,9 +920,10 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.some'
-    name: 'some((value: Port, index: number, array: Port[]) => boolean, any)'
+    name: 'some((value: Port, index: number, array: Port[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -886,11 +934,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Port, index: number, array: Port[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Port, index: number, array: Port[]) => boolean'
+            - '(value: Port, index: number, array: Port[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -906,6 +954,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.sort'
     name: 'sort(undefined | (a: Port, b: Port) => number)'
@@ -928,6 +977,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.splice_1'
     name: 'splice(number, number, Port[])'
@@ -959,6 +1009,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -987,6 +1038,7 @@ items:
       return:
         type:
           - '@azure/arm-servicemap.Port[]'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.toLocaleString'
     name: toLocaleString()
@@ -1003,6 +1055,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.toString'
     name: toString()
@@ -1017,6 +1070,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.unshift'
     name: 'unshift(Port[])'
@@ -1036,6 +1090,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.PortCollection.values'
     name: values()
@@ -1050,6 +1105,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-servicemap.Port>
+        description: ''
     package: '@azure/arm-servicemap'
 references:
   - uid: Array<@azure/arm-servicemap.Port>

@@ -11,7 +11,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: The query filters that can be used with the inquire container API.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.BMSContainersInquiryQueryObject.backupManagementType
@@ -21,13 +21,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Backup management type for this container. Possible values include:
+      'Invalid', 'AzureIaasVM',
+
+      'MAB', 'DPM', 'AzureBackupServer', 'AzureSql', 'AzureStorage',
+      'AzureWorkload',
+
+      'DefaultBackup'
     optional: true
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.BMSContainersInquiryQueryObject.workloadType
@@ -37,13 +45,22 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Workload type for this container. Possible values include: 'Invalid',
+      'VM', 'FileFolder',
+
+      'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM',
+      'SystemState', 'Client',
+
+      'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase',
+      'SAPAseDatabase'
     optional: true
     syntax:
       content: 'workloadType?: WorkloadType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'

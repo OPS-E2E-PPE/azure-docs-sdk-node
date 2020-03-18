@@ -17,7 +17,18 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      A port resource represents a server port on a machine. The port may be
+      actively *monitored*,
+
+      i.e., a Dependency Agent is running on its machine, or *discovered*, i.e.,
+      its existence was
+
+      inferred by observing the data stream from monitored machines. A port is
+      live during an interval
+
+      of time, if that port had associated activity during (parts) of that
+      interval.
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Port.displayName'
     name: displayName
@@ -26,13 +37,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Name to use for display purposes.
     optional: true
     syntax:
       content: 'displayName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Port.etag'
     name: etag
@@ -41,13 +53,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource ETAG.
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Port.id'
     name: id
@@ -56,13 +69,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource identifier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Port.ipAddress'
     name: ipAddress
@@ -71,13 +89,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      IP address associated with the port. At present only IPv4 addresses are
+      supported.
     optional: true
     syntax:
       content: 'ipAddress?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Port.kind'
     name: kind
@@ -86,12 +107,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'kind: "port"'
       return:
         type:
           - '"port"'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Port.machine'
     name: machine
@@ -100,13 +122,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Machine hosting this port.
     optional: true
     syntax:
       content: 'machine?: ResourceReferenceUnion'
       return:
         type:
           - '@azure/arm-servicemap.ResourceReferenceUnion'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Port.monitoringState'
     name: monitoringState
@@ -115,13 +138,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether the port is actively monitored or discovered. Possible
+      values include:
+
+      'monitored', 'discovered'
     optional: true
     syntax:
       content: 'monitoringState?: MonitoringState'
       return:
         type:
           - '@azure/arm-servicemap.MonitoringState'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Port.name'
     name: name
@@ -130,13 +158,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Port.portNumber'
     name: portNumber
@@ -145,13 +178,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Port number.
     optional: true
     syntax:
       content: 'portNumber?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Port.type'
     name: type
@@ -160,13 +194,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource type.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
 references:
   - uid: '@azure/arm-servicemap.ResourceReferenceUnion'

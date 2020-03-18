@@ -60,10 +60,11 @@ items:
           optional: true
       return:
         type:
-          - Promise<Models.ListManagementTermAddTermResponse>
+          - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementTerm.addTerm_2'
-    name: 'addTerm(string, string, string, RequestOptionsBase, ServiceCallback<any>)'
+    name: 'addTerm(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
     children: []
     type: method
     langs:
@@ -72,7 +73,7 @@ items:
     syntax:
       content: >-
         function addTerm(listId: string, term: string, language: string,
-        options: RequestOptionsBase, callback: ServiceCallback<any>)
+        options: RequestOptionsBase, callback: ServiceCallback<void>)
       parameters:
         - id: listId
           type:
@@ -92,15 +93,12 @@ items:
           description: The optional parameters
         - id: callback
           type:
-            - ServiceCallback<any>
+            - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementTermAddTermResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementTerm.addTerm_1'
-    name: 'addTerm(string, string, string, ServiceCallback<any>)'
+    name: 'addTerm(string, string, string, ServiceCallback<void>)'
     children: []
     type: method
     langs:
@@ -109,7 +107,7 @@ items:
     syntax:
       content: >-
         function addTerm(listId: string, term: string, language: string,
-        callback: ServiceCallback<any>)
+        callback: ServiceCallback<void>)
       parameters:
         - id: listId
           type:
@@ -125,12 +123,9 @@ items:
           description: Language of the terms.
         - id: callback
           type:
-            - ServiceCallback<any>
+            - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementTermAddTermResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementTerm.deleteAllTerms
@@ -161,6 +156,7 @@ items:
       return:
         type:
           - Promise<Models.ListManagementTermDeleteAllTermsResponse>
+        description: Promise<Models.ListManagementTermDeleteAllTermsResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementTerm.deleteAllTerms_2
@@ -194,9 +190,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementTermDeleteAllTermsResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementTerm.deleteAllTerms_1
@@ -224,9 +217,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementTermDeleteAllTermsResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementTerm.deleteTerm'
     name: 'deleteTerm(string, string, string, msRest.RequestOptionsBase)'
@@ -260,6 +250,7 @@ items:
       return:
         type:
           - Promise<Models.ListManagementTermDeleteTermResponse>
+        description: Promise<Models.ListManagementTermDeleteTermResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementTerm.deleteTerm_2'
     name: >-
@@ -296,9 +287,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementTermDeleteTermResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementTerm.deleteTerm_1'
     name: 'deleteTerm(string, string, string, ServiceCallback<string>)'
@@ -329,9 +317,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementTermDeleteTermResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementTerm.getAllTerms_2'
     name: >-
@@ -366,9 +351,6 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.Terms>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementTermGetAllTermsResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementTerm.getAllTerms'
     name: >-
@@ -400,6 +382,7 @@ items:
       return:
         type:
           - Promise<Models.ListManagementTermGetAllTermsResponse>
+        description: Promise<Models.ListManagementTermGetAllTermsResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementTerm.getAllTerms_1'
     name: 'getAllTerms(string, string, ServiceCallback<Terms>)'
@@ -426,9 +409,6 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.Terms>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementTermGetAllTermsResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementTerm.constructor'
     name: ListManagementTerm(ContentModeratorClientContext)

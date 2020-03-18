@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.HostNameBindingCollection.entries'
       - '@azure/arm-appservice.HostNameBindingCollection.every'
       - '@azure/arm-appservice.HostNameBindingCollection.fill'
-      - '@azure/arm-appservice.HostNameBindingCollection.filter_1'
       - '@azure/arm-appservice.HostNameBindingCollection.filter'
+      - '@azure/arm-appservice.HostNameBindingCollection.filter_1'
       - '@azure/arm-appservice.HostNameBindingCollection.find'
       - '@azure/arm-appservice.HostNameBindingCollection.find_1'
       - '@azure/arm-appservice.HostNameBindingCollection.findIndex'
       - '@azure/arm-appservice.HostNameBindingCollection.forEach'
+      - '@azure/arm-appservice.HostNameBindingCollection.includes'
       - '@azure/arm-appservice.HostNameBindingCollection.indexOf'
       - '@azure/arm-appservice.HostNameBindingCollection.join'
       - '@azure/arm-appservice.HostNameBindingCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.concat'
     name: 'concat(ConcatArray<HostNameBinding>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.every'
     name: >-
       every((value: HostNameBinding, index: number, array: HostNameBinding[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: HostNameBinding, index: number,
-        array: HostNameBinding[]) => boolean, thisArg?: any)
+        array: HostNameBinding[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: HostNameBinding, index: number, array: HostNameBinding[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.fill'
     name: 'fill(HostNameBinding, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.HostNameBindingCollection.filter_1'
-    name: >-
-      filter((value: HostNameBinding, index: number, array: HostNameBinding[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: HostNameBinding, index: number,
-        array: HostNameBinding[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: HostNameBinding, index: number, array: HostNameBinding[])
-              => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.HostNameBinding[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.HostNameBindingCollection.filter_1'
+    name: >-
+      filter((value: HostNameBinding, index: number, array: HostNameBinding[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: HostNameBinding, index: number,
+        array: HostNameBinding[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: HostNameBinding, index: number, array: HostNameBinding[])
+              => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.HostNameBinding[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.find_1'
     name: >-
       find((value: HostNameBinding, index: number, obj: HostNameBinding[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: HostNameBinding, index: number, obj:
-        HostNameBinding[]) => boolean, thisArg?: any)
+        HostNameBinding[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: HostNameBinding, index: number, obj: HostNameBinding[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.findIndex'
     name: >-
       findIndex((value: HostNameBinding, index: number, obj: HostNameBinding[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: HostNameBinding, index: number,
-        obj: HostNameBinding[]) => boolean, thisArg?: any)
+        obj: HostNameBinding[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: HostNameBinding, index: number, obj: HostNameBinding[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.HostNameBindingCollection.includes'
+    name: 'includes(HostNameBinding, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: HostNameBinding, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.HostNameBinding'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.indexOf'
     name: 'indexOf(HostNameBinding, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.lastIndexOf'
     name: 'lastIndexOf(HostNameBinding, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.push'
     name: 'push(HostNameBinding[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.reduce'
     name: >-
@@ -688,6 +736,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.reduce_1'
     name: >-
@@ -698,10 +747,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: HostNameBinding,
@@ -721,6 +767,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.reduce_2'
     name: >-
@@ -759,6 +806,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.reduceRight'
     name: >-
@@ -792,6 +840,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.reduceRight_1'
     name: >-
@@ -802,11 +851,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: HostNameBinding,
@@ -826,6 +871,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.reduceRight_2'
     name: >-
@@ -865,6 +911,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.reverse'
     name: reverse()
@@ -879,6 +926,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.shift'
     name: shift()
@@ -893,6 +941,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -918,11 +967,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.some'
     name: >-
       some((value: HostNameBinding, index: number, array: HostNameBinding[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -933,13 +983,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: HostNameBinding, index: number, array:
-        HostNameBinding[]) => boolean, thisArg?: any)
+        HostNameBinding[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: HostNameBinding, index: number, array: HostNameBinding[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -955,6 +1005,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.sort'
     name: 'sort(undefined | (a: HostNameBinding, b: HostNameBinding) => number)'
@@ -979,6 +1030,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.splice_1'
     name: 'splice(number, number, HostNameBinding[])'
@@ -1012,6 +1064,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1040,6 +1093,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.HostNameBinding[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.toLocaleString'
     name: toLocaleString()
@@ -1056,6 +1110,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.toString'
     name: toString()
@@ -1070,6 +1125,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.unshift'
     name: 'unshift(HostNameBinding[])'
@@ -1089,6 +1145,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.HostNameBindingCollection.values'
     name: values()
@@ -1103,6 +1160,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-appservice.HostNameBinding>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.HostNameBinding>

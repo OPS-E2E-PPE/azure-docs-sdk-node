@@ -7,6 +7,12 @@ items:
       - '@azure/arm-azurestack.Products.get'
       - '@azure/arm-azurestack.Products.get_2'
       - '@azure/arm-azurestack.Products.get_1'
+      - '@azure/arm-azurestack.Products.getProduct'
+      - '@azure/arm-azurestack.Products.getProduct_2'
+      - '@azure/arm-azurestack.Products.getProduct_1'
+      - '@azure/arm-azurestack.Products.getProducts'
+      - '@azure/arm-azurestack.Products.getProducts_2'
+      - '@azure/arm-azurestack.Products.getProducts_1'
       - '@azure/arm-azurestack.Products.list'
       - '@azure/arm-azurestack.Products.list_2'
       - '@azure/arm-azurestack.Products.list_1'
@@ -17,6 +23,9 @@ items:
       - '@azure/arm-azurestack.Products.listNext_2'
       - '@azure/arm-azurestack.Products.listNext_1'
       - '@azure/arm-azurestack.Products.constructor'
+      - '@azure/arm-azurestack.Products.uploadLog'
+      - '@azure/arm-azurestack.Products.uploadLog_2'
+      - '@azure/arm-azurestack.Products.uploadLog_1'
     langs:
       - typeScript
     type: class
@@ -54,6 +63,7 @@ items:
       return:
         type:
           - Promise<Models.ProductsGetResponse>
+        description: Promise<Models.ProductsGetResponse>
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.get_2'
     name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Product>)'
@@ -89,9 +99,6 @@ items:
             - ServiceCallback<@azure/arm-azurestack.Product>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ProductsGetResponse>
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.get_1'
     name: 'get(string, string, string, ServiceCallback<Product>)'
@@ -122,9 +129,195 @@ items:
             - ServiceCallback<@azure/arm-azurestack.Product>
           description: |
             The callback
+    package: '@azure/arm-azurestack'
+  - uid: '@azure/arm-azurestack.Products.getProduct'
+    name: 'getProduct(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the specified product.
+    syntax:
+      content: >-
+        function getProduct(resourceGroup: string, registrationName: string,
+        productName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroup
+          type:
+            - string
+          description: Name of the resource group.
+        - id: registrationName
+          type:
+            - string
+          description: Name of the Azure Stack registration.
+        - id: productName
+          type:
+            - string
+          description: Name of the product.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.ProductsGetResponse>
+          - Promise<Models.ProductsGetProductResponse>
+        description: Promise<Models.ProductsGetProductResponse>
+    package: '@azure/arm-azurestack'
+  - uid: '@azure/arm-azurestack.Products.getProduct_2'
+    name: >-
+      getProduct(string, string, string, RequestOptionsBase,
+      ServiceCallback<Product>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getProduct(resourceGroup: string, registrationName: string,
+        productName: string, options: RequestOptionsBase, callback:
+        ServiceCallback<Product>)
+      parameters:
+        - id: resourceGroup
+          type:
+            - string
+          description: Name of the resource group.
+        - id: registrationName
+          type:
+            - string
+          description: Name of the Azure Stack registration.
+        - id: productName
+          type:
+            - string
+          description: Name of the product.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-azurestack.Product>
+          description: |
+            The callback
+    package: '@azure/arm-azurestack'
+  - uid: '@azure/arm-azurestack.Products.getProduct_1'
+    name: 'getProduct(string, string, string, ServiceCallback<Product>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getProduct(resourceGroup: string, registrationName: string,
+        productName: string, callback: ServiceCallback<Product>)
+      parameters:
+        - id: resourceGroup
+          type:
+            - string
+          description: Name of the resource group.
+        - id: registrationName
+          type:
+            - string
+          description: Name of the Azure Stack registration.
+        - id: productName
+          type:
+            - string
+          description: Name of the product.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-azurestack.Product>
+          description: |
+            The callback
+    package: '@azure/arm-azurestack'
+  - uid: '@azure/arm-azurestack.Products.getProducts'
+    name: 'getProducts(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns a list of products.
+    syntax:
+      content: >-
+        function getProducts(resourceGroup: string, registrationName: string,
+        options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroup
+          type:
+            - string
+          description: Name of the resource group.
+        - id: registrationName
+          type:
+            - string
+          description: Name of the Azure Stack registration.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProductsGetProductsResponse>
+        description: Promise<Models.ProductsGetProductsResponse>
+    package: '@azure/arm-azurestack'
+  - uid: '@azure/arm-azurestack.Products.getProducts_2'
+    name: >-
+      getProducts(string, string, RequestOptionsBase,
+      ServiceCallback<ProductList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getProducts(resourceGroup: string, registrationName: string,
+        options: RequestOptionsBase, callback: ServiceCallback<ProductList>)
+      parameters:
+        - id: resourceGroup
+          type:
+            - string
+          description: Name of the resource group.
+        - id: registrationName
+          type:
+            - string
+          description: Name of the Azure Stack registration.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-azurestack.ProductList>
+          description: |
+            The callback
+    package: '@azure/arm-azurestack'
+  - uid: '@azure/arm-azurestack.Products.getProducts_1'
+    name: 'getProducts(string, string, ServiceCallback<ProductList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getProducts(resourceGroup: string, registrationName: string,
+        callback: ServiceCallback<ProductList>)
+      parameters:
+        - id: resourceGroup
+          type:
+            - string
+          description: Name of the resource group.
+        - id: registrationName
+          type:
+            - string
+          description: Name of the Azure Stack registration.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-azurestack.ProductList>
+          description: |
+            The callback
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.list'
     name: 'list(string, string, msRest.RequestOptionsBase)'
@@ -154,6 +347,7 @@ items:
       return:
         type:
           - Promise<Models.ProductsListResponse>
+        description: Promise<Models.ProductsListResponse>
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.list_2'
     name: 'list(string, string, RequestOptionsBase, ServiceCallback<ProductList>)'
@@ -184,9 +378,6 @@ items:
             - ServiceCallback<@azure/arm-azurestack.ProductList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ProductsListResponse>
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.list_1'
     name: 'list(string, string, ServiceCallback<ProductList>)'
@@ -213,9 +404,6 @@ items:
             - ServiceCallback<@azure/arm-azurestack.ProductList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ProductsListResponse>
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.listDetails'
     name: 'listDetails(string, string, string, msRest.RequestOptionsBase)'
@@ -249,6 +437,7 @@ items:
       return:
         type:
           - Promise<Models.ProductsListDetailsResponse>
+        description: Promise<Models.ProductsListDetailsResponse>
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.listDetails_2'
     name: >-
@@ -286,9 +475,6 @@ items:
             - ServiceCallback<@azure/arm-azurestack.ExtendedProduct>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ProductsListDetailsResponse>
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.listDetails_1'
     name: 'listDetails(string, string, string, ServiceCallback<ExtendedProduct>)'
@@ -319,9 +505,6 @@ items:
             - ServiceCallback<@azure/arm-azurestack.ExtendedProduct>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ProductsListDetailsResponse>
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -347,6 +530,7 @@ items:
       return:
         type:
           - Promise<Models.ProductsListNextResponse>
+        description: Promise<Models.ProductsListNextResponse>
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.listNext_2'
     name: 'listNext(string, RequestOptionsBase, ServiceCallback<ProductList>)'
@@ -373,9 +557,6 @@ items:
             - ServiceCallback<@azure/arm-azurestack.ProductList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ProductsListNextResponse>
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.listNext_1'
     name: 'listNext(string, ServiceCallback<ProductList>)'
@@ -398,9 +579,6 @@ items:
             - ServiceCallback<@azure/arm-azurestack.ProductList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ProductsListNextResponse>
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.Products.constructor'
     name: Products(AzureStackManagementClientContext)
@@ -417,6 +595,107 @@ items:
             - '@azure/arm-azurestack.AzureStackManagementClientContext'
           description: |
             Reference to the service client.
+    package: '@azure/arm-azurestack'
+  - uid: '@azure/arm-azurestack.Products.uploadLog'
+    name: 'uploadLog(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the specified product.
+    syntax:
+      content: >-
+        function uploadLog(resourceGroup: string, registrationName: string,
+        productName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroup
+          type:
+            - string
+          description: Name of the resource group.
+        - id: registrationName
+          type:
+            - string
+          description: Name of the Azure Stack registration.
+        - id: productName
+          type:
+            - string
+          description: Name of the product.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProductsUploadLogResponse>
+        description: Promise<Models.ProductsUploadLogResponse>
+    package: '@azure/arm-azurestack'
+  - uid: '@azure/arm-azurestack.Products.uploadLog_2'
+    name: >-
+      uploadLog(string, string, string, RequestOptionsBase,
+      ServiceCallback<ProductLog>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function uploadLog(resourceGroup: string, registrationName: string,
+        productName: string, options: RequestOptionsBase, callback:
+        ServiceCallback<ProductLog>)
+      parameters:
+        - id: resourceGroup
+          type:
+            - string
+          description: Name of the resource group.
+        - id: registrationName
+          type:
+            - string
+          description: Name of the Azure Stack registration.
+        - id: productName
+          type:
+            - string
+          description: Name of the product.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-azurestack.ProductLog>
+          description: |
+            The callback
+    package: '@azure/arm-azurestack'
+  - uid: '@azure/arm-azurestack.Products.uploadLog_1'
+    name: 'uploadLog(string, string, string, ServiceCallback<ProductLog>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function uploadLog(resourceGroup: string, registrationName: string,
+        productName: string, callback: ServiceCallback<ProductLog>)
+      parameters:
+        - id: resourceGroup
+          type:
+            - string
+          description: Name of the resource group.
+        - id: registrationName
+          type:
+            - string
+          description: Name of the Azure Stack registration.
+        - id: productName
+          type:
+            - string
+          description: Name of the product.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-azurestack.ProductLog>
+          description: |
+            The callback
     package: '@azure/arm-azurestack'
 references:
   - uid: '@azure/arm-azurestack.AzureStackManagementClientContext'
@@ -453,5 +732,15 @@ references:
       - name: ExtendedProduct
         fullName: ExtendedProduct
         uid: '@azure/arm-azurestack.ExtendedProduct'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-azurestack.ProductLog>
+    name: ProductLog>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ProductLog
+        fullName: ProductLog
+        uid: '@azure/arm-azurestack.ProductLog'
       - name: '>'
         fullName: '>'

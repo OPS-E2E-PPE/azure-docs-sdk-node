@@ -45,6 +45,7 @@ items:
       return:
         type:
           - any
+        description: A valid deserialized Javascript object
     package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.Serializer.isXML'
     name: isXML
@@ -56,10 +57,11 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'isXML?: boolean | undefined'
+      content: 'public isXML?: boolean'
       return:
         type:
-          - boolean | undefined
+          - boolean
+        description: ''
     package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.Serializer.modelMappers'
     name: modelMappers
@@ -70,10 +72,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'modelMappers: [key: string]: any'
+      content: 'public modelMappers: [key: string]: any'
       return:
         type:
           - '[key: string]: any'
+        description: ''
     package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.Serializer.serialize'
     name: 'serialize(Mapper, any, string)'
@@ -104,27 +107,25 @@ items:
       return:
         type:
           - any
+        description: A valid serialized Javascript object
     package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.Serializer.constructor'
-    name: 'Serializer([key: string]: any, boolean | undefined)'
+    name: 'Serializer([key: string]: any, boolean)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: >-
-        new Serializer(modelMappers?: [key: string]: any, isXML?: boolean |
-        undefined)
+      content: 'new Serializer(modelMappers: [key: string]: any, isXML?: boolean)'
       parameters:
         - id: modelMappers
           type:
             - '[key: string]: any'
           description: ''
-          optional: true
         - id: isXML
           type:
-            - boolean | undefined
+            - boolean
           description: ''
           optional: true
     package: '@azure/ms-rest-js'

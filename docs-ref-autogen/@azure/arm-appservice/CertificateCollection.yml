@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.CertificateCollection.entries'
       - '@azure/arm-appservice.CertificateCollection.every'
       - '@azure/arm-appservice.CertificateCollection.fill'
-      - '@azure/arm-appservice.CertificateCollection.filter_1'
       - '@azure/arm-appservice.CertificateCollection.filter'
+      - '@azure/arm-appservice.CertificateCollection.filter_1'
       - '@azure/arm-appservice.CertificateCollection.find'
       - '@azure/arm-appservice.CertificateCollection.find_1'
       - '@azure/arm-appservice.CertificateCollection.findIndex'
       - '@azure/arm-appservice.CertificateCollection.forEach'
+      - '@azure/arm-appservice.CertificateCollection.includes'
       - '@azure/arm-appservice.CertificateCollection.indexOf'
       - '@azure/arm-appservice.CertificateCollection.join'
       - '@azure/arm-appservice.CertificateCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.concat'
     name: 'concat(ConcatArray<Certificate>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.every'
     name: >-
       every((value: Certificate, index: number, array: Certificate[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Certificate, index: number, array:
-        Certificate[]) => boolean, thisArg?: any)
+        Certificate[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: Certificate, index: number, array: Certificate[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.fill'
     name: 'fill(Certificate, undefined | number, undefined | number)'
@@ -233,41 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.CertificateCollection.filter_1'
-    name: >-
-      filter((value: Certificate, index: number, array: Certificate[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Certificate, index: number, array:
-        Certificate[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Certificate, index: number, array: Certificate[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.Certificate[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.filter'
     name: >-
@@ -305,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.CertificateCollection.filter_1'
+    name: >-
+      filter((value: Certificate, index: number, array: Certificate[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Certificate, index: number, array:
+        Certificate[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: Certificate, index: number, array: Certificate[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.Certificate[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.find'
     name: >-
@@ -350,28 +362,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.find_1'
     name: >-
-      find((value: Certificate, index: number, obj: Certificate[]) => boolean,
+      find((value: Certificate, index: number, obj: Certificate[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Certificate, index: number, obj:
-        Certificate[]) => boolean, thisArg?: any)
+        Certificate[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Certificate, index: number, obj: Certificate[]) => boolean'
+            - '(value: Certificate, index: number, obj: Certificate[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -381,11 +390,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.findIndex'
     name: >-
       findIndex((value: Certificate, index: number, obj: Certificate[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -398,11 +408,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Certificate, index: number, obj:
-        Certificate[]) => boolean, thisArg?: any)
+        Certificate[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Certificate, index: number, obj: Certificate[]) => boolean'
+            - '(value: Certificate, index: number, obj: Certificate[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -424,6 +434,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.forEach'
     name: >-
@@ -454,6 +465,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.CertificateCollection.includes'
+    name: 'includes(Certificate, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Certificate, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.Certificate'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.indexOf'
     name: 'indexOf(Certificate, undefined | number)'
     children: []
@@ -480,6 +521,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.join'
     name: join(undefined | string)
@@ -504,6 +546,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.keys'
     name: keys()
@@ -518,6 +561,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.lastIndexOf'
     name: 'lastIndexOf(Certificate, undefined | number)'
@@ -545,6 +589,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.length'
     name: length
@@ -561,6 +606,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.map'
     name: 'map((value: Certificate, index: number, array: Certificate[]) => U, any)'
@@ -593,6 +639,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.nextLink'
     name: nextLink
@@ -612,6 +659,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.pop'
     name: pop()
@@ -626,6 +674,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.push'
     name: 'push(Certificate[])'
@@ -645,6 +694,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.reduce'
     name: >-
@@ -675,6 +725,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.reduce_1'
     name: >-
@@ -684,10 +735,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Certificate, currentValue:
@@ -707,6 +755,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.reduce_2'
     name: >-
@@ -745,6 +794,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.reduceRight'
     name: >-
@@ -777,6 +827,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.reduceRight_1'
     name: >-
@@ -786,11 +837,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Certificate,
@@ -810,6 +857,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.reduceRight_2'
     name: >-
@@ -849,6 +897,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.reverse'
     name: reverse()
@@ -863,6 +912,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.shift'
     name: shift()
@@ -877,6 +927,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -902,10 +953,11 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.some'
     name: >-
-      some((value: Certificate, index: number, array: Certificate[]) => boolean,
+      some((value: Certificate, index: number, array: Certificate[]) => unknown,
       any)
     children: []
     type: method
@@ -917,13 +969,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Certificate, index: number, array:
-        Certificate[]) => boolean, thisArg?: any)
+        Certificate[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: Certificate, index: number, array: Certificate[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -939,6 +991,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.sort'
     name: 'sort(undefined | (a: Certificate, b: Certificate) => number)'
@@ -963,6 +1016,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.splice_1'
     name: 'splice(number, number, Certificate[])'
@@ -996,6 +1050,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1024,6 +1079,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Certificate[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.toLocaleString'
     name: toLocaleString()
@@ -1040,6 +1096,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.toString'
     name: toString()
@@ -1054,6 +1111,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.unshift'
     name: 'unshift(Certificate[])'
@@ -1073,6 +1131,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.CertificateCollection.values'
     name: values()
@@ -1087,6 +1146,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-appservice.Certificate>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.Certificate>

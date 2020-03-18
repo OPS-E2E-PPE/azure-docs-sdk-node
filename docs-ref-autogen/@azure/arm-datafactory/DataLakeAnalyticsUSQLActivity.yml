@@ -21,7 +21,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Data Lake Analytics U-SQL activity.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.compilationMode'
     name: compilationMode
@@ -30,13 +30,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Compilation mode of U-SQL. Must be one of these values : Semantic, Full
+      and SingleBox. Type:
+
+      string (or Expression with resultType string).
     optional: true
     syntax:
       content: 'compilationMode?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.degreeOfParallelism'
     name: degreeOfParallelism
@@ -45,13 +50,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The maximum number of nodes simultaneously used to run the job. Default
+      value is 1. Type:
+
+      integer (or Expression with resultType integer), minimum: 1.
     optional: true
     syntax:
       content: 'degreeOfParallelism?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.dependsOn'
     name: dependsOn
@@ -60,13 +70,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity depends on condition.
     optional: true
     syntax:
       content: 'dependsOn?: ActivityDependency[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityDependency[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.description'
     name: description
@@ -75,13 +86,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.linkedServiceName'
     name: linkedServiceName
@@ -90,13 +102,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     optional: true
     syntax:
       content: 'linkedServiceName?: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.name'
     name: name
@@ -105,12 +118,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity name.
     syntax:
       content: 'name: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.parameters'
     name: parameters
@@ -119,13 +133,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for U-SQL job request.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: any'
       return:
         type:
           - 'undefined | [key: string]: any'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.policy'
     name: policy
@@ -134,13 +149,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity policy.
     optional: true
     syntax:
       content: 'policy?: ActivityPolicy'
       return:
         type:
           - '@azure/arm-datafactory.ActivityPolicy'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.priority'
     name: priority
@@ -149,13 +165,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Determines which jobs out of all that are queued should be selected to run
+      first. The lower
+
+      the number, the higher the priority. Default value is 1000. Type: integer
+      (or Expression with
+
+      resultType integer), minimum: 1.
     optional: true
     syntax:
       content: 'priority?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.runtimeVersion'
     name: runtimeVersion
@@ -164,13 +188,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Runtime version of the U-SQL engine to use. Type: string (or Expression
+      with resultType
+
+      string).
     optional: true
     syntax:
       content: 'runtimeVersion?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.scriptLinkedService'
     name: scriptLinkedService
@@ -179,12 +208,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Script linked service reference.
     syntax:
       content: 'scriptLinkedService: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.scriptPath'
     name: scriptPath
@@ -193,12 +223,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Case-sensitive path to folder that contains the U-SQL script. Type: string
+      (or Expression with
+
+      resultType string).
     syntax:
       content: 'scriptPath: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.type'
     name: type
@@ -207,12 +242,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "DataLakeAnalyticsU-SQL"'
       return:
         type:
           - '"DataLakeAnalyticsU-SQL"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DataLakeAnalyticsUSQLActivity.userProperties'
     name: userProperties
@@ -221,13 +257,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity user properties.
     optional: true
     syntax:
       content: 'userProperties?: UserProperty[]'
       return:
         type:
           - '@azure/arm-datafactory.UserProperty[]'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.ActivityDependency[]'

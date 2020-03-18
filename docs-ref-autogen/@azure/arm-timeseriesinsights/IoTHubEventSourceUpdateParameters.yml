@@ -14,7 +14,9 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      Parameters supplied to the Update Event Source operation to update an
+      IoTHub event source.
     extends:
       name: '@azure/arm-timeseriesinsights.EventSourceUpdateParameters'
     package: '@azure/arm-timeseriesinsights'
@@ -26,13 +28,24 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      An object that represents the local timestamp property. It contains the
+      format of local
+
+      timestamp that needs to be used and the corresponding timezone offset
+      information. If a value
+
+      isn't specified for localTimestamp, or if null, then the local timestamp
+      will not be ingressed
+
+      with the events.
     optional: true
     syntax:
       content: 'localTimestamp?: LocalTimestamp'
       return:
         type:
           - '@azure/arm-timeseriesinsights.LocalTimestamp'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceUpdateParameters.sharedAccessKey
@@ -42,13 +55,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The value of the shared access key that grants the Time Series Insights
+      service read access to
+
+      the iot hub. This property is not shown in event source responses.
     optional: true
     syntax:
       content: 'sharedAccessKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.IoTHubEventSourceUpdateParameters.tags'
     name: tags
@@ -57,13 +75,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Key-value pairs of additional properties for the event source.
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceUpdateParameters.timestampPropertyName
@@ -73,13 +92,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The event property that will be used as the event source's timestamp. If a
+      value isn't
+
+      specified for timestampPropertyName, or if null or empty-string is
+      specified, the event
+
+      creation time will be used.
     optional: true
     syntax:
       content: 'timestampPropertyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
 references:
   - uid: '@azure/arm-timeseriesinsights.EventSourceUpdateParameters'

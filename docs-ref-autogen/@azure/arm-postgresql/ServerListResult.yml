@@ -11,12 +11,13 @@ items:
       - '@azure/arm-postgresql.ServerListResult.entries'
       - '@azure/arm-postgresql.ServerListResult.every'
       - '@azure/arm-postgresql.ServerListResult.fill'
-      - '@azure/arm-postgresql.ServerListResult.filter_1'
       - '@azure/arm-postgresql.ServerListResult.filter'
+      - '@azure/arm-postgresql.ServerListResult.filter_1'
       - '@azure/arm-postgresql.ServerListResult.find'
       - '@azure/arm-postgresql.ServerListResult.find_1'
       - '@azure/arm-postgresql.ServerListResult.findIndex'
       - '@azure/arm-postgresql.ServerListResult.forEach'
+      - '@azure/arm-postgresql.ServerListResult.includes'
       - '@azure/arm-postgresql.ServerListResult.indexOf'
       - '@azure/arm-postgresql.ServerListResult.join'
       - '@azure/arm-postgresql.ServerListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.concat'
     name: 'concat(ConcatArray<Server>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server[]'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server[]'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.entries'
     name: entries()
@@ -157,9 +162,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.every'
-    name: 'every((value: Server, index: number, array: Server[]) => boolean, any)'
+    name: 'every((value: Server, index: number, array: Server[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -168,11 +174,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Server, index: number, array:
-        Server[]) => boolean, thisArg?: any)
+        Server[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Server, index: number, array: Server[]) => boolean'
+            - '(value: Server, index: number, array: Server[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -188,6 +194,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.fill'
     name: 'fill(Server, undefined | number, undefined | number)'
@@ -228,39 +235,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-postgresql'
-  - uid: '@azure/arm-postgresql.ServerListResult.filter_1'
-    name: 'filter((value: Server, index: number, array: Server[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Server, index: number, array:
-        Server[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Server, index: number, array: Server[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-postgresql.Server[]'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.filter'
     name: 'filter((value: Server, index: number, array: Server[]) => boolean, any)'
@@ -294,6 +269,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-postgresql'
+  - uid: '@azure/arm-postgresql.ServerListResult.filter_1'
+    name: 'filter((value: Server, index: number, array: Server[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Server, index: number, array:
+        Server[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Server, index: number, array: Server[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-postgresql.Server[]'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.find'
     name: >-
@@ -339,26 +349,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.find_1'
-    name: 'find((value: Server, index: number, obj: Server[]) => boolean, any)'
+    name: 'find((value: Server, index: number, obj: Server[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Server, index: number, obj: Server[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Server, index: number, obj: Server[]) => boolean'
+            - '(value: Server, index: number, obj: Server[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -368,9 +375,10 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server | undefined'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.findIndex'
-    name: 'findIndex((value: Server, index: number, obj: Server[]) => boolean, any)'
+    name: 'findIndex((value: Server, index: number, obj: Server[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -383,11 +391,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Server, index: number, obj:
-        Server[]) => boolean, thisArg?: any)
+        Server[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Server, index: number, obj: Server[]) => boolean'
+            - '(value: Server, index: number, obj: Server[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -409,6 +417,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.forEach'
     name: 'forEach((value: Server, index: number, array: Server[]) => void, any)'
@@ -437,6 +446,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-postgresql'
+  - uid: '@azure/arm-postgresql.ServerListResult.includes'
+    name: 'includes(Server, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Server, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-postgresql.Server'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.indexOf'
     name: 'indexOf(Server, undefined | number)'
     children: []
@@ -461,6 +498,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.join'
     name: join(undefined | string)
@@ -485,6 +523,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.keys'
     name: keys()
@@ -499,6 +538,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.lastIndexOf'
     name: 'lastIndexOf(Server, undefined | number)'
@@ -526,6 +566,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.length'
     name: length
@@ -542,6 +583,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.map'
     name: 'map((value: Server, index: number, array: Server[]) => U, any)'
@@ -574,6 +616,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.pop'
     name: pop()
@@ -588,6 +631,7 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server | undefined'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.push'
     name: 'push(Server[])'
@@ -607,6 +651,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.reduce'
     name: >-
@@ -637,6 +682,7 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.reduce_1'
     name: >-
@@ -646,10 +692,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Server, currentValue:
@@ -669,6 +712,7 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.reduce_2'
     name: >-
@@ -706,6 +750,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.reduceRight'
     name: >-
@@ -737,6 +782,7 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.reduceRight_1'
     name: >-
@@ -746,11 +792,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Server, currentValue:
@@ -770,6 +812,7 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.reduceRight_2'
     name: >-
@@ -808,6 +851,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.reverse'
     name: reverse()
@@ -822,6 +866,7 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server[]'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.shift'
     name: shift()
@@ -836,6 +881,7 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server | undefined'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -861,9 +907,10 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server[]'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.some'
-    name: 'some((value: Server, index: number, array: Server[]) => boolean, any)'
+    name: 'some((value: Server, index: number, array: Server[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -874,11 +921,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Server, index: number, array:
-        Server[]) => boolean, thisArg?: any)
+        Server[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Server, index: number, array: Server[]) => boolean'
+            - '(value: Server, index: number, array: Server[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -894,6 +941,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.sort'
     name: 'sort(undefined | (a: Server, b: Server) => number)'
@@ -916,6 +964,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.splice_1'
     name: 'splice(number, number, Server[])'
@@ -947,6 +996,7 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server[]'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -975,6 +1025,7 @@ items:
       return:
         type:
           - '@azure/arm-postgresql.Server[]'
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.toLocaleString'
     name: toLocaleString()
@@ -991,6 +1042,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.toString'
     name: toString()
@@ -1005,6 +1057,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.unshift'
     name: 'unshift(Server[])'
@@ -1024,6 +1077,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-postgresql'
   - uid: '@azure/arm-postgresql.ServerListResult.values'
     name: values()
@@ -1038,6 +1092,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-postgresql.Server>
+        description: ''
     package: '@azure/arm-postgresql'
 references:
   - uid: Array<@azure/arm-postgresql.Server>

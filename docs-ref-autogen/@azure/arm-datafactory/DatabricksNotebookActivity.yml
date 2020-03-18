@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: DatabricksNotebook activity.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatabricksNotebookActivity.baseParameters'
     name: baseParameters
@@ -26,13 +26,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Base parameters to be used for each run of this job.If the notebook takes
+      a parameter that is
+
+      not specified, the default value from the notebook will be used.
     optional: true
     syntax:
       content: 'baseParameters?: undefined | [key: string]: any'
       return:
         type:
           - 'undefined | [key: string]: any'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatabricksNotebookActivity.dependsOn'
     name: dependsOn
@@ -41,13 +46,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity depends on condition.
     optional: true
     syntax:
       content: 'dependsOn?: ActivityDependency[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityDependency[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatabricksNotebookActivity.description'
     name: description
@@ -56,13 +62,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatabricksNotebookActivity.libraries'
     name: libraries
@@ -71,13 +78,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A list of libraries to be installed on the cluster that will execute the
+      job.
     optional: true
     syntax:
       content: 'libraries?: [key: string]: any[]'
       return:
         type:
           - '[key: string]: any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatabricksNotebookActivity.linkedServiceName'
     name: linkedServiceName
@@ -86,13 +96,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     optional: true
     syntax:
       content: 'linkedServiceName?: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatabricksNotebookActivity.name'
     name: name
@@ -101,12 +112,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity name.
     syntax:
       content: 'name: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatabricksNotebookActivity.notebookPath'
     name: notebookPath
@@ -115,12 +127,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The absolute path of the notebook to be run in the Databricks Workspace.
+      This path must begin
+
+      with a slash. Type: string (or Expression with resultType string).
     syntax:
       content: 'notebookPath: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatabricksNotebookActivity.policy'
     name: policy
@@ -129,13 +146,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity policy.
     optional: true
     syntax:
       content: 'policy?: ActivityPolicy'
       return:
         type:
           - '@azure/arm-datafactory.ActivityPolicy'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatabricksNotebookActivity.type'
     name: type
@@ -144,12 +162,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "DatabricksNotebook"'
       return:
         type:
           - '"DatabricksNotebook"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatabricksNotebookActivity.userProperties'
     name: userProperties
@@ -158,13 +177,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity user properties.
     optional: true
     syntax:
       content: 'userProperties?: UserProperty[]'
       return:
         type:
           - '@azure/arm-datafactory.UserProperty[]'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.ActivityDependency[]'

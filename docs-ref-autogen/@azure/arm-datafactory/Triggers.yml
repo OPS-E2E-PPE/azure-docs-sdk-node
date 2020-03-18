@@ -6,6 +6,8 @@ items:
     children:
       - '@azure/arm-datafactory.Triggers.beginStart'
       - '@azure/arm-datafactory.Triggers.beginStop'
+      - '@azure/arm-datafactory.Triggers.beginSubscribeToEvents'
+      - '@azure/arm-datafactory.Triggers.beginUnsubscribeFromEvents'
       - '@azure/arm-datafactory.Triggers.createOrUpdate'
       - '@azure/arm-datafactory.Triggers.createOrUpdate_1'
       - '@azure/arm-datafactory.Triggers.createOrUpdate_2'
@@ -15,15 +17,23 @@ items:
       - '@azure/arm-datafactory.Triggers.get'
       - '@azure/arm-datafactory.Triggers.get_1'
       - '@azure/arm-datafactory.Triggers.get_2'
+      - '@azure/arm-datafactory.Triggers.getEventSubscriptionStatus'
+      - '@azure/arm-datafactory.Triggers.getEventSubscriptionStatus_2'
+      - '@azure/arm-datafactory.Triggers.getEventSubscriptionStatus_1'
       - '@azure/arm-datafactory.Triggers.listByFactory'
       - '@azure/arm-datafactory.Triggers.listByFactory_2'
       - '@azure/arm-datafactory.Triggers.listByFactory_1'
       - '@azure/arm-datafactory.Triggers.listByFactoryNext'
       - '@azure/arm-datafactory.Triggers.listByFactoryNext_2'
       - '@azure/arm-datafactory.Triggers.listByFactoryNext_1'
+      - '@azure/arm-datafactory.Triggers.queryByFactory'
+      - '@azure/arm-datafactory.Triggers.queryByFactory_2'
+      - '@azure/arm-datafactory.Triggers.queryByFactory_1'
       - '@azure/arm-datafactory.Triggers.start'
       - '@azure/arm-datafactory.Triggers.stop'
+      - '@azure/arm-datafactory.Triggers.subscribeToEvents'
       - '@azure/arm-datafactory.Triggers.constructor'
+      - '@azure/arm-datafactory.Triggers.unsubscribeFromEvents'
     langs:
       - typeScript
     type: class
@@ -61,6 +71,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.beginStop'
     name: 'beginStop(string, string, string, msRest.RequestOptionsBase)'
@@ -94,6 +105,78 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.Triggers.beginSubscribeToEvents'
+    name: 'beginSubscribeToEvents(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Subscribe event trigger to events.
+    syntax:
+      content: >-
+        function beginSubscribeToEvents(resourceGroupName: string, factoryName:
+        string, triggerName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: factoryName
+          type:
+            - string
+          description: The factory name.
+        - id: triggerName
+          type:
+            - string
+          description: The trigger name.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.Triggers.beginUnsubscribeFromEvents'
+    name: >-
+      beginUnsubscribeFromEvents(string, string, string,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Unsubscribe event trigger from events.
+    syntax:
+      content: >-
+        function beginUnsubscribeFromEvents(resourceGroupName: string,
+        factoryName: string, triggerName: string, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: factoryName
+          type:
+            - string
+          description: The factory name.
+        - id: triggerName
+          type:
+            - string
+          description: The trigger name.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.createOrUpdate'
     name: >-
@@ -134,6 +217,7 @@ items:
       return:
         type:
           - Promise<Models.TriggersCreateOrUpdateResponse>
+        description: Promise<Models.TriggersCreateOrUpdateResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.createOrUpdate_1'
     name: >-
@@ -171,9 +255,6 @@ items:
             - ServiceCallback<@azure/arm-datafactory.TriggerResource>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.TriggersCreateOrUpdateResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.createOrUpdate_2'
     name: >-
@@ -216,9 +297,6 @@ items:
             - ServiceCallback<@azure/arm-datafactory.TriggerResource>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.TriggersCreateOrUpdateResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.deleteMethod'
     name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
@@ -252,6 +330,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.deleteMethod_2'
     name: >-
@@ -289,9 +368,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.deleteMethod_1'
     name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
@@ -322,9 +398,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.get'
     name: 'get(string, string, string, Models.TriggersGetOptionalParams)'
@@ -358,6 +431,7 @@ items:
       return:
         type:
           - Promise<Models.TriggersGetResponse>
+        description: Promise<Models.TriggersGetResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.get_1'
     name: 'get(string, string, string, ServiceCallback<TriggerResource>)'
@@ -388,9 +462,6 @@ items:
             - ServiceCallback<@azure/arm-datafactory.TriggerResource>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.TriggersGetResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.get_2'
     name: >-
@@ -428,9 +499,115 @@ items:
             - ServiceCallback<@azure/arm-datafactory.TriggerResource>
           description: |
             The callback
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.Triggers.getEventSubscriptionStatus'
+    name: >-
+      getEventSubscriptionStatus(string, string, string,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get a trigger's event subscription status.
+    syntax:
+      content: >-
+        function getEventSubscriptionStatus(resourceGroupName: string,
+        factoryName: string, triggerName: string, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: factoryName
+          type:
+            - string
+          description: The factory name.
+        - id: triggerName
+          type:
+            - string
+          description: The trigger name.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.TriggersGetResponse>
+          - Promise<Models.TriggersGetEventSubscriptionStatusResponse>
+        description: Promise<Models.TriggersGetEventSubscriptionStatusResponse>
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.Triggers.getEventSubscriptionStatus_2'
+    name: >-
+      getEventSubscriptionStatus(string, string, string, RequestOptionsBase,
+      ServiceCallback<TriggerSubscriptionOperationStatus>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getEventSubscriptionStatus(resourceGroupName: string,
+        factoryName: string, triggerName: string, options: RequestOptionsBase,
+        callback: ServiceCallback<TriggerSubscriptionOperationStatus>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: factoryName
+          type:
+            - string
+          description: The factory name.
+        - id: triggerName
+          type:
+            - string
+          description: The trigger name.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-datafactory.TriggerSubscriptionOperationStatus>
+          description: |
+            The callback
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.Triggers.getEventSubscriptionStatus_1'
+    name: >-
+      getEventSubscriptionStatus(string, string, string,
+      ServiceCallback<TriggerSubscriptionOperationStatus>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getEventSubscriptionStatus(resourceGroupName: string,
+        factoryName: string, triggerName: string, callback:
+        ServiceCallback<TriggerSubscriptionOperationStatus>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: factoryName
+          type:
+            - string
+          description: The factory name.
+        - id: triggerName
+          type:
+            - string
+          description: The trigger name.
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-datafactory.TriggerSubscriptionOperationStatus>
+          description: |
+            The callback
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.listByFactory'
     name: 'listByFactory(string, string, msRest.RequestOptionsBase)'
@@ -460,6 +637,7 @@ items:
       return:
         type:
           - Promise<Models.TriggersListByFactoryResponse>
+        description: Promise<Models.TriggersListByFactoryResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.listByFactory_2'
     name: >-
@@ -493,9 +671,6 @@ items:
             - ServiceCallback<@azure/arm-datafactory.TriggerListResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.TriggersListByFactoryResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.listByFactory_1'
     name: 'listByFactory(string, string, ServiceCallback<TriggerListResponse>)'
@@ -522,9 +697,6 @@ items:
             - ServiceCallback<@azure/arm-datafactory.TriggerListResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.TriggersListByFactoryResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.listByFactoryNext'
     name: 'listByFactoryNext(string, msRest.RequestOptionsBase)'
@@ -550,6 +722,7 @@ items:
       return:
         type:
           - Promise<Models.TriggersListByFactoryNextResponse>
+        description: Promise<Models.TriggersListByFactoryNextResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.listByFactoryNext_2'
     name: >-
@@ -578,9 +751,6 @@ items:
             - ServiceCallback<@azure/arm-datafactory.TriggerListResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.TriggersListByFactoryNextResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.listByFactoryNext_1'
     name: 'listByFactoryNext(string, ServiceCallback<TriggerListResponse>)'
@@ -603,9 +773,113 @@ items:
             - ServiceCallback<@azure/arm-datafactory.TriggerListResponse>
           description: |
             The callback
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.Triggers.queryByFactory'
+    name: >-
+      queryByFactory(string, string, TriggerFilterParameters,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Query triggers.
+    syntax:
+      content: >-
+        function queryByFactory(resourceGroupName: string, factoryName: string,
+        filterParameters: TriggerFilterParameters, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: factoryName
+          type:
+            - string
+          description: The factory name.
+        - id: filterParameters
+          type:
+            - '@azure/arm-datafactory.TriggerFilterParameters'
+          description: Parameters to filter the triggers.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.TriggersListByFactoryNextResponse>
+          - Promise<Models.TriggersQueryByFactoryResponse>
+        description: Promise<Models.TriggersQueryByFactoryResponse>
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.Triggers.queryByFactory_2'
+    name: >-
+      queryByFactory(string, string, TriggerFilterParameters,
+      RequestOptionsBase, ServiceCallback<TriggerQueryResponse>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function queryByFactory(resourceGroupName: string, factoryName: string,
+        filterParameters: TriggerFilterParameters, options: RequestOptionsBase,
+        callback: ServiceCallback<TriggerQueryResponse>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: factoryName
+          type:
+            - string
+          description: The factory name.
+        - id: filterParameters
+          type:
+            - '@azure/arm-datafactory.TriggerFilterParameters'
+          description: Parameters to filter the triggers.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-datafactory.TriggerQueryResponse>
+          description: |
+            The callback
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.Triggers.queryByFactory_1'
+    name: >-
+      queryByFactory(string, string, TriggerFilterParameters,
+      ServiceCallback<TriggerQueryResponse>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function queryByFactory(resourceGroupName: string, factoryName: string,
+        filterParameters: TriggerFilterParameters, callback:
+        ServiceCallback<TriggerQueryResponse>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: factoryName
+          type:
+            - string
+          description: The factory name.
+        - id: filterParameters
+          type:
+            - '@azure/arm-datafactory.TriggerFilterParameters'
+          description: Parameters to filter the triggers.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-datafactory.TriggerQueryResponse>
+          description: |
+            The callback
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.start'
     name: 'start(string, string, string, msRest.RequestOptionsBase)'
@@ -639,6 +913,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.stop'
     name: 'stop(string, string, string, msRest.RequestOptionsBase)'
@@ -672,6 +947,41 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.Triggers.subscribeToEvents'
+    name: 'subscribeToEvents(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Subscribe event trigger to events.
+    syntax:
+      content: >-
+        function subscribeToEvents(resourceGroupName: string, factoryName:
+        string, triggerName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: factoryName
+          type:
+            - string
+          description: The factory name.
+        - id: triggerName
+          type:
+            - string
+          description: The trigger name.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TriggersSubscribeToEventsResponse>
+        description: Promise<Models.TriggersSubscribeToEventsResponse>
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.Triggers.constructor'
     name: Triggers(DataFactoryManagementClientContext)
@@ -688,6 +998,40 @@ items:
             - '@azure/arm-datafactory.DataFactoryManagementClientContext'
           description: |
             Reference to the service client.
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.Triggers.unsubscribeFromEvents'
+    name: 'unsubscribeFromEvents(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Unsubscribe event trigger from events.
+    syntax:
+      content: >-
+        function unsubscribeFromEvents(resourceGroupName: string, factoryName:
+        string, triggerName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: factoryName
+          type:
+            - string
+          description: The factory name.
+        - id: triggerName
+          type:
+            - string
+          description: The trigger name.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TriggersUnsubscribeFromEventsResponse>
+        description: Promise<Models.TriggersUnsubscribeFromEventsResponse>
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.DataFactoryManagementClientContext'
@@ -724,6 +1068,16 @@ references:
       - name: TriggersGetOptionalParams
         fullName: TriggersGetOptionalParams
         uid: '@azure/arm-datafactory.TriggersGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-datafactory.TriggerSubscriptionOperationStatus>
+    name: TriggerSubscriptionOperationStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: TriggerSubscriptionOperationStatus
+        fullName: TriggerSubscriptionOperationStatus
+        uid: '@azure/arm-datafactory.TriggerSubscriptionOperationStatus'
+      - name: '>'
+        fullName: '>'
   - uid: ServiceCallback<@azure/arm-datafactory.TriggerListResponse>
     name: TriggerListResponse>
     spec.typeScript:
@@ -732,5 +1086,21 @@ references:
       - name: TriggerListResponse
         fullName: TriggerListResponse
         uid: '@azure/arm-datafactory.TriggerListResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-datafactory.TriggerFilterParameters'
+    name: TriggerFilterParameters
+    spec.typeScript:
+      - name: TriggerFilterParameters
+        fullName: TriggerFilterParameters
+        uid: '@azure/arm-datafactory.TriggerFilterParameters'
+  - uid: ServiceCallback<@azure/arm-datafactory.TriggerQueryResponse>
+    name: TriggerQueryResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: TriggerQueryResponse
+        fullName: TriggerQueryResponse
+        uid: '@azure/arm-datafactory.TriggerQueryResponse'
       - name: '>'
         fullName: '>'

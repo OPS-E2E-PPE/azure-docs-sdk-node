@@ -12,15 +12,17 @@ items:
       - '@azure/arm-datafactory.HDInsightHiveActivity.linkedServiceName'
       - '@azure/arm-datafactory.HDInsightHiveActivity.name'
       - '@azure/arm-datafactory.HDInsightHiveActivity.policy'
+      - '@azure/arm-datafactory.HDInsightHiveActivity.queryTimeout'
       - '@azure/arm-datafactory.HDInsightHiveActivity.scriptLinkedService'
       - '@azure/arm-datafactory.HDInsightHiveActivity.scriptPath'
       - '@azure/arm-datafactory.HDInsightHiveActivity.storageLinkedServices'
       - '@azure/arm-datafactory.HDInsightHiveActivity.type'
       - '@azure/arm-datafactory.HDInsightHiveActivity.userProperties'
+      - '@azure/arm-datafactory.HDInsightHiveActivity.variables'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: HDInsight Hive activity type.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.argumentsProperty'
     name: argumentsProperty
@@ -29,13 +31,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: User specified arguments to HDInsightActivity.
     optional: true
     syntax:
       content: 'argumentsProperty?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.defines'
     name: defines
@@ -44,13 +47,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Allows user to specify defines for Hive job request.
     optional: true
     syntax:
       content: 'defines?: undefined | [key: string]: any'
       return:
         type:
           - 'undefined | [key: string]: any'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.dependsOn'
     name: dependsOn
@@ -59,13 +63,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity depends on condition.
     optional: true
     syntax:
       content: 'dependsOn?: ActivityDependency[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityDependency[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.description'
     name: description
@@ -74,13 +79,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.getDebugInfo'
     name: getDebugInfo
@@ -89,13 +95,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Debug info option. Possible values include: ''None'', ''Always'', ''Failure'''
     optional: true
     syntax:
       content: 'getDebugInfo?: HDInsightActivityDebugInfoOption'
       return:
         type:
           - '@azure/arm-datafactory.HDInsightActivityDebugInfoOption'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.linkedServiceName'
     name: linkedServiceName
@@ -104,13 +111,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     optional: true
     syntax:
       content: 'linkedServiceName?: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.name'
     name: name
@@ -119,12 +127,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity name.
     syntax:
       content: 'name: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.policy'
     name: policy
@@ -133,13 +142,34 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity policy.
     optional: true
     syntax:
       content: 'policy?: ActivityPolicy'
       return:
         type:
           - '@azure/arm-datafactory.ActivityPolicy'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.HDInsightHiveActivity.queryTimeout'
+    name: queryTimeout
+    fullName: queryTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Query timeout value (in minutes).  Effective when the HDInsight cluster is
+      with ESP
+
+      (Enterprise Security Package)
+    optional: true
+    syntax:
+      content: 'queryTimeout?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.scriptLinkedService'
     name: scriptLinkedService
@@ -148,13 +178,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Script linked service reference.
     optional: true
     syntax:
       content: 'scriptLinkedService?: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.scriptPath'
     name: scriptPath
@@ -163,13 +194,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Script path. Type: string (or Expression with resultType string).'
     optional: true
     syntax:
       content: 'scriptPath?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.storageLinkedServices'
     name: storageLinkedServices
@@ -178,13 +210,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Storage linked service references.
     optional: true
     syntax:
       content: 'storageLinkedServices?: LinkedServiceReference[]'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.type'
     name: type
@@ -193,12 +226,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "HDInsightHive"'
       return:
         type:
           - '"HDInsightHive"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HDInsightHiveActivity.userProperties'
     name: userProperties
@@ -207,13 +241,30 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity user properties.
     optional: true
     syntax:
       content: 'userProperties?: UserProperty[]'
       return:
         type:
           - '@azure/arm-datafactory.UserProperty[]'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.HDInsightHiveActivity.variables'
+    name: variables
+    fullName: variables
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: User specified arguments under hivevar namespace.
+    optional: true
+    syntax:
+      content: 'variables?: any[]'
+      return:
+        type:
+          - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.ActivityDependency[]'

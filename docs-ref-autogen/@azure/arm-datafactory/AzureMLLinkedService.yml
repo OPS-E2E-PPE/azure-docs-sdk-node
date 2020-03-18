@@ -19,7 +19,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Azure ML Studio Web Service linked service.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.annotations'
     name: annotations
@@ -28,13 +28,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the linked service.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.apiKey'
     name: apiKey
@@ -43,12 +44,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The API key for accessing the Azure ML model endpoint.
     syntax:
       content: 'apiKey: SecretBaseUnion'
       return:
         type:
           - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.connectVia'
     name: connectVia
@@ -57,13 +59,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The integration runtime reference.
     optional: true
     syntax:
       content: 'connectVia?: IntegrationRuntimeReference'
       return:
         type:
           - '@azure/arm-datafactory.IntegrationRuntimeReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.description'
     name: description
@@ -72,13 +75,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.encryptedCredential'
     name: encryptedCredential
@@ -87,13 +91,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The encrypted credential used for authentication. Credentials are
+      encrypted using the
+
+      integration runtime credential manager. Type: string (or Expression with
+      resultType string).
     optional: true
     syntax:
       content: 'encryptedCredential?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.mlEndpoint'
     name: mlEndpoint
@@ -102,12 +112,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The Batch Execution REST URL for an Azure ML Studio Web Service endpoint.
+      Type: string (or
+
+      Expression with resultType string).
     syntax:
       content: 'mlEndpoint: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.parameters'
     name: parameters
@@ -116,7 +131,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for linked service.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -125,6 +140,7 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.servicePrincipalId'
     name: servicePrincipalId
@@ -133,13 +149,20 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The ID of the service principal used to authenticate against the ARM-based
+
+      updateResourceEndpoint of an Azure ML Studio web service. Type: string (or
+      Expression with
+
+      resultType string).
     optional: true
     syntax:
       content: 'servicePrincipalId?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.servicePrincipalKey'
     name: servicePrincipalKey
@@ -148,13 +171,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The key of the service principal used to authenticate against the
+      ARM-based
+
+      updateResourceEndpoint of an Azure ML Studio web service.
     optional: true
     syntax:
       content: 'servicePrincipalKey?: SecretBaseUnion'
       return:
         type:
           - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.tenant'
     name: tenant
@@ -163,13 +191,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name or ID of the tenant to which the service principal belongs. Type:
+      string (or
+
+      Expression with resultType string).
     optional: true
     syntax:
       content: 'tenant?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.type'
     name: type
@@ -178,12 +211,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "AzureML"'
       return:
         type:
           - '"AzureML"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLLinkedService.updateResourceEndpoint'
     name: updateResourceEndpoint
@@ -192,13 +226,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The Update Resource REST URL for an Azure ML Studio Web Service endpoint.
+      Type: string (or
+
+      Expression with resultType string).
     optional: true
     syntax:
       content: 'updateResourceEndpoint?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.SecretBaseUnion'

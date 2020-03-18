@@ -11,12 +11,13 @@ items:
       - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.entries'
       - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.every'
       - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.fill'
-      - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.filter_1'
       - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.filter'
+      - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.filter_1'
       - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.find'
       - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.find_1'
       - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.findIndex'
       - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.forEach'
+      - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.includes'
       - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.indexOf'
       - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.join'
       - '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.concat'
     name: 'concat(ConcatArray<HybridRunbookWorkerGroup>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.every'
     name: >-
       every((value: HybridRunbookWorkerGroup, index: number, array:
-      HybridRunbookWorkerGroup[]) => boolean, any)
+      HybridRunbookWorkerGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: HybridRunbookWorkerGroup, index:
-        number, array: HybridRunbookWorkerGroup[]) => boolean, thisArg?: any)
+        number, array: HybridRunbookWorkerGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: HybridRunbookWorkerGroup, index: number, array:
-              HybridRunbookWorkerGroup[]) => boolean
+              HybridRunbookWorkerGroup[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.fill'
     name: 'fill(HybridRunbookWorkerGroup, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-automation'
-  - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.filter_1'
-    name: >-
-      filter((value: HybridRunbookWorkerGroup, index: number, array:
-      HybridRunbookWorkerGroup[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: HybridRunbookWorkerGroup, index:
-        number, array: HybridRunbookWorkerGroup[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: HybridRunbookWorkerGroup, index: number, array:
-              HybridRunbookWorkerGroup[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-automation.HybridRunbookWorkerGroup[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.filter_1'
+    name: >-
+      filter((value: HybridRunbookWorkerGroup, index: number, array:
+      HybridRunbookWorkerGroup[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: HybridRunbookWorkerGroup, index:
+        number, array: HybridRunbookWorkerGroup[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: HybridRunbookWorkerGroup, index: number, array:
+              HybridRunbookWorkerGroup[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-automation.HybridRunbookWorkerGroup[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.find'
     name: >-
@@ -353,30 +363,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.find_1'
     name: >-
       find((value: HybridRunbookWorkerGroup, index: number, obj:
-      HybridRunbookWorkerGroup[]) => boolean, any)
+      HybridRunbookWorkerGroup[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: HybridRunbookWorkerGroup, index:
-        number, obj: HybridRunbookWorkerGroup[]) => boolean, thisArg?: any)
+        number, obj: HybridRunbookWorkerGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: HybridRunbookWorkerGroup, index: number, obj:
-              HybridRunbookWorkerGroup[]) => boolean
+              HybridRunbookWorkerGroup[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -386,11 +393,12 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup | undefined'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.findIndex'
     name: >-
       findIndex((value: HybridRunbookWorkerGroup, index: number, obj:
-      HybridRunbookWorkerGroup[]) => boolean, any)
+      HybridRunbookWorkerGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -403,13 +411,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: HybridRunbookWorkerGroup, index:
-        number, obj: HybridRunbookWorkerGroup[]) => boolean, thisArg?: any)
+        number, obj: HybridRunbookWorkerGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: HybridRunbookWorkerGroup, index: number, obj:
-              HybridRunbookWorkerGroup[]) => boolean
+              HybridRunbookWorkerGroup[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -431,6 +439,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.forEach'
     name: >-
@@ -463,6 +472,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.includes'
+    name: 'includes(HybridRunbookWorkerGroup, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: HybridRunbookWorkerGroup, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-automation.HybridRunbookWorkerGroup'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.indexOf'
     name: 'indexOf(HybridRunbookWorkerGroup, undefined | number)'
     children: []
@@ -489,6 +528,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.join'
     name: join(undefined | string)
@@ -513,6 +553,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.keys'
     name: keys()
@@ -527,6 +568,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.lastIndexOf'
     name: 'lastIndexOf(HybridRunbookWorkerGroup, undefined | number)'
@@ -554,6 +596,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.length'
     name: length
@@ -570,6 +613,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.map'
     name: >-
@@ -606,6 +650,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.nextLink'
     name: nextLink
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.pop'
     name: pop()
@@ -635,6 +681,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup | undefined'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.push'
     name: 'push(HybridRunbookWorkerGroup[])'
@@ -654,6 +701,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.reduce'
     name: >-
@@ -687,6 +735,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.reduce_1'
     name: >-
@@ -698,10 +747,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: HybridRunbookWorkerGroup,
@@ -723,6 +769,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.reduce_2'
     name: >-
@@ -761,6 +808,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.reduceRight'
     name: >-
@@ -796,6 +844,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.reduceRight_1'
     name: >-
@@ -807,11 +856,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -833,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.reduceRight_2'
     name: >-
@@ -872,6 +918,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.reverse'
     name: reverse()
@@ -886,6 +933,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.shift'
     name: shift()
@@ -900,6 +948,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup | undefined'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -925,11 +974,12 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.some'
     name: >-
       some((value: HybridRunbookWorkerGroup, index: number, array:
-      HybridRunbookWorkerGroup[]) => boolean, any)
+      HybridRunbookWorkerGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -940,13 +990,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: HybridRunbookWorkerGroup, index:
-        number, array: HybridRunbookWorkerGroup[]) => boolean, thisArg?: any)
+        number, array: HybridRunbookWorkerGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: HybridRunbookWorkerGroup, index: number, array:
-              HybridRunbookWorkerGroup[]) => boolean
+              HybridRunbookWorkerGroup[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -962,6 +1012,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.sort'
     name: >-
@@ -990,6 +1041,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.splice_1'
     name: 'splice(number, number, HybridRunbookWorkerGroup[])'
@@ -1023,6 +1075,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1051,6 +1104,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.HybridRunbookWorkerGroup[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.toLocaleString'
     name: toLocaleString()
@@ -1067,6 +1121,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.toString'
     name: toString()
@@ -1081,6 +1136,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.unshift'
     name: 'unshift(HybridRunbookWorkerGroup[])'
@@ -1100,6 +1156,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.HybridRunbookWorkerGroupsListResult.values'
     name: values()
@@ -1114,6 +1171,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-automation.HybridRunbookWorkerGroup>
+        description: ''
     package: '@azure/arm-automation'
 references:
   - uid: Array<@azure/arm-automation.HybridRunbookWorkerGroup>

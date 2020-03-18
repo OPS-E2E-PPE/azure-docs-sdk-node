@@ -11,7 +11,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: PolyBase settings.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PolybaseSettings.rejectSampleValue'
     name: rejectSampleValue
@@ -20,13 +20,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Determines the number of rows to attempt to retrieve before the PolyBase
+      recalculates the
+
+      percentage of rejected rows. Type: integer (or Expression with resultType
+      integer), minimum:
+
+      0.
     optional: true
     syntax:
       content: 'rejectSampleValue?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PolybaseSettings.rejectType'
     name: rejectType
@@ -35,13 +43,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Reject type. Possible values include: ''value'', ''percentage'''
     optional: true
     syntax:
       content: 'rejectType?: PolybaseSettingsRejectType'
       return:
         type:
           - '@azure/arm-datafactory.PolybaseSettingsRejectType'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PolybaseSettings.rejectValue'
     name: rejectValue
@@ -50,13 +59,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the value or the percentage of rows that can be rejected before
+      the query fails.
+
+      Type: number (or Expression with resultType number), minimum: 0.
     optional: true
     syntax:
       content: 'rejectValue?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.PolybaseSettings.useTypeDefault'
     name: useTypeDefault
@@ -65,13 +79,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies how to handle missing values in delimited text files when
+      PolyBase retrieves data
+
+      from the text file. Type: boolean (or Expression with resultType boolean).
     optional: true
     syntax:
       content: 'useTypeDefault?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.PolybaseSettingsRejectType'

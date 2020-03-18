@@ -21,7 +21,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Azure storage specific job.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.actionsInfo'
     name: actionsInfo
@@ -30,13 +30,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Gets or sets the state/actions applicable on this job like cancel/retry.
     optional: true
     syntax:
       content: 'actionsInfo?: JobSupportedAction[]'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobSupportedAction[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.activityId'
     name: activityId
@@ -45,13 +46,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: ActivityId of job.
     optional: true
     syntax:
       content: 'activityId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.backupManagementType'
     name: backupManagementType
@@ -60,13 +62,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Backup management type to execute the current job. Possible values
+      include: 'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     optional: true
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.duration'
     name: duration
@@ -75,13 +85,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Time elapsed during the execution of this job.
     optional: true
     syntax:
       content: 'duration?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.endTime'
     name: endTime
@@ -90,13 +101,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The end time.
     optional: true
     syntax:
       content: 'endTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.entityFriendlyName'
     name: entityFriendlyName
@@ -105,13 +117,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of the entity on which the current job is executing.
     optional: true
     syntax:
       content: 'entityFriendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.errorDetails'
     name: errorDetails
@@ -120,13 +133,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Error details on execution of this job.
     optional: true
     syntax:
       content: 'errorDetails?: AzureStorageErrorInfo[]'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.AzureStorageErrorInfo[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.extendedInfo'
     name: extendedInfo
@@ -135,13 +149,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Additional information about the job.
     optional: true
     syntax:
       content: 'extendedInfo?: AzureStorageJobExtendedInfo'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.AzureStorageJobExtendedInfo'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.jobType'
     name: jobType
@@ -150,12 +165,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'jobType: "AzureStorageJob"'
       return:
         type:
           - '"AzureStorageJob"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.operation'
     name: operation
@@ -164,13 +180,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The operation name.
     optional: true
     syntax:
       content: 'operation?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.startTime'
     name: startTime
@@ -179,13 +196,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The start time.
     optional: true
     syntax:
       content: 'startTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.status'
     name: status
@@ -194,13 +212,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Job status.
     optional: true
     syntax:
       content: 'status?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.storageAccountName'
     name: storageAccountName
@@ -209,13 +228,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Specifies friendly name of the storage account.
     optional: true
     syntax:
       content: 'storageAccountName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureStorageJob.storageAccountVersion'
     name: storageAccountVersion
@@ -224,13 +244,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether the Storage account is a Classic or an Azure Resource
+      Manager Storage
+
+      account.
     optional: true
     syntax:
       content: 'storageAccountVersion?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.JobSupportedAction[]'

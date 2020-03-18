@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Describes a Service Bus Queue output data source.
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.propertyColumns'
     name: propertyColumns
@@ -26,13 +26,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A string array of the names of output columns to be attached to Service
+      Bus messages as custom
+
+      properties.
     optional: true
     syntax:
       content: 'propertyColumns?: string[]'
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.queueName'
     name: queueName
@@ -41,13 +46,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the Service Bus Queue. Required on PUT (CreateOrReplace)
+      requests.
     optional: true
     syntax:
       content: 'queueName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.serviceBusNamespace
@@ -57,13 +65,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The namespace that is associated with the desired Event Hub, Service Bus
+      Queue, Service Bus
+
+      Topic, etc. Required on PUT (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'serviceBusNamespace?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.sharedAccessPolicyKey
@@ -73,13 +86,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The shared access policy key for the specified shared access policy.
+      Required on PUT
+
+      (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'sharedAccessPolicyKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.sharedAccessPolicyName
@@ -89,13 +107,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The shared access policy name for the Event Hub, Service Bus Queue,
+      Service Bus Topic, etc.
+
+      Required on PUT (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'sharedAccessPolicyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.type'
     name: type
@@ -104,10 +127,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Microsoft.ServiceBus/Queue"'
       return:
         type:
           - '"Microsoft.ServiceBus/Queue"'
+        description: ''
     package: '@azure/arm-streamanalytics'

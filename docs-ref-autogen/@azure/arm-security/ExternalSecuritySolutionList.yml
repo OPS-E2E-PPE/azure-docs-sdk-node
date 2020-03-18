@@ -11,12 +11,13 @@ items:
       - '@azure/arm-security.ExternalSecuritySolutionList.entries'
       - '@azure/arm-security.ExternalSecuritySolutionList.every'
       - '@azure/arm-security.ExternalSecuritySolutionList.fill'
-      - '@azure/arm-security.ExternalSecuritySolutionList.filter_1'
       - '@azure/arm-security.ExternalSecuritySolutionList.filter'
+      - '@azure/arm-security.ExternalSecuritySolutionList.filter_1'
       - '@azure/arm-security.ExternalSecuritySolutionList.find'
       - '@azure/arm-security.ExternalSecuritySolutionList.find_1'
       - '@azure/arm-security.ExternalSecuritySolutionList.findIndex'
       - '@azure/arm-security.ExternalSecuritySolutionList.forEach'
+      - '@azure/arm-security.ExternalSecuritySolutionList.includes'
       - '@azure/arm-security.ExternalSecuritySolutionList.indexOf'
       - '@azure/arm-security.ExternalSecuritySolutionList.join'
       - '@azure/arm-security.ExternalSecuritySolutionList.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.concat'
     name: 'concat(ConcatArray<ExternalSecuritySolutionUnion>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.every'
     name: >-
       every((value: ExternalSecuritySolutionUnion, index: number, array:
-      ExternalSecuritySolutionUnion[]) => boolean, any)
+      ExternalSecuritySolutionUnion[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,14 +177,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ExternalSecuritySolutionUnion, index:
-        number, array: ExternalSecuritySolutionUnion[]) => boolean, thisArg?:
+        number, array: ExternalSecuritySolutionUnion[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ExternalSecuritySolutionUnion, index: number, array:
-              ExternalSecuritySolutionUnion[]) => boolean
+              ExternalSecuritySolutionUnion[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -194,6 +200,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.fill'
     name: >-
@@ -236,44 +243,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-security'
-  - uid: '@azure/arm-security.ExternalSecuritySolutionList.filter_1'
-    name: >-
-      filter((value: ExternalSecuritySolutionUnion, index: number, array:
-      ExternalSecuritySolutionUnion[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ExternalSecuritySolutionUnion,
-        index: number, array: ExternalSecuritySolutionUnion[]) => any, thisArg?:
-        any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ExternalSecuritySolutionUnion, index: number, array:
-              ExternalSecuritySolutionUnion[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-security.ExternalSecuritySolutionUnion[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.filter'
     name: >-
@@ -312,6 +282,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.ExternalSecuritySolutionList.filter_1'
+    name: >-
+      filter((value: ExternalSecuritySolutionUnion, index: number, array:
+      ExternalSecuritySolutionUnion[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ExternalSecuritySolutionUnion,
+        index: number, array: ExternalSecuritySolutionUnion[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ExternalSecuritySolutionUnion, index: number, array:
+              ExternalSecuritySolutionUnion[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-security.ExternalSecuritySolutionUnion[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.find'
     name: >-
@@ -358,30 +368,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.find_1'
     name: >-
       find((value: ExternalSecuritySolutionUnion, index: number, obj:
-      ExternalSecuritySolutionUnion[]) => boolean, any)
+      ExternalSecuritySolutionUnion[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ExternalSecuritySolutionUnion, index:
-        number, obj: ExternalSecuritySolutionUnion[]) => boolean, thisArg?: any)
+        number, obj: ExternalSecuritySolutionUnion[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ExternalSecuritySolutionUnion, index: number, obj:
-              ExternalSecuritySolutionUnion[]) => boolean
+              ExternalSecuritySolutionUnion[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -391,11 +398,12 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.findIndex'
     name: >-
       findIndex((value: ExternalSecuritySolutionUnion, index: number, obj:
-      ExternalSecuritySolutionUnion[]) => boolean, any)
+      ExternalSecuritySolutionUnion[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -408,14 +416,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ExternalSecuritySolutionUnion,
-        index: number, obj: ExternalSecuritySolutionUnion[]) => boolean,
+        index: number, obj: ExternalSecuritySolutionUnion[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ExternalSecuritySolutionUnion, index: number, obj:
-              ExternalSecuritySolutionUnion[]) => boolean
+              ExternalSecuritySolutionUnion[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -437,6 +445,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.forEach'
     name: >-
@@ -470,6 +479,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-security'
+  - uid: '@azure/arm-security.ExternalSecuritySolutionList.includes'
+    name: 'includes(ExternalSecuritySolutionUnion, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ExternalSecuritySolutionUnion,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-security.ExternalSecuritySolutionUnion'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.indexOf'
     name: 'indexOf(ExternalSecuritySolutionUnion, undefined | number)'
     children: []
@@ -496,6 +535,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.join'
     name: join(undefined | string)
@@ -520,6 +560,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.keys'
     name: keys()
@@ -534,6 +575,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.lastIndexOf'
     name: 'lastIndexOf(ExternalSecuritySolutionUnion, undefined | number)'
@@ -561,6 +603,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.length'
     name: length
@@ -577,6 +620,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.map'
     name: >-
@@ -614,6 +658,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.nextLink'
     name: nextLink
@@ -629,6 +674,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.pop'
     name: pop()
@@ -643,6 +689,7 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.push'
     name: 'push(ExternalSecuritySolutionUnion[])'
@@ -662,6 +709,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.reduce'
     name: >-
@@ -696,6 +744,7 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.reduce_1'
     name: >-
@@ -707,10 +756,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -733,6 +779,7 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.reduce_2'
     name: >-
@@ -771,6 +818,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.reduceRight'
     name: >-
@@ -806,6 +854,7 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.reduceRight_1'
     name: >-
@@ -817,11 +866,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -844,6 +889,7 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.reduceRight_2'
     name: >-
@@ -884,6 +930,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.reverse'
     name: reverse()
@@ -898,6 +945,7 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.shift'
     name: shift()
@@ -912,6 +960,7 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -937,11 +986,12 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.some'
     name: >-
       some((value: ExternalSecuritySolutionUnion, index: number, array:
-      ExternalSecuritySolutionUnion[]) => boolean, any)
+      ExternalSecuritySolutionUnion[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -952,14 +1002,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ExternalSecuritySolutionUnion, index:
-        number, array: ExternalSecuritySolutionUnion[]) => boolean, thisArg?:
+        number, array: ExternalSecuritySolutionUnion[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ExternalSecuritySolutionUnion, index: number, array:
-              ExternalSecuritySolutionUnion[]) => boolean
+              ExternalSecuritySolutionUnion[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -975,6 +1025,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.sort'
     name: >-
@@ -1003,6 +1054,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.splice_1'
     name: 'splice(number, number, ExternalSecuritySolutionUnion[])'
@@ -1036,6 +1088,7 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.splice'
     name: 'splice(number, undefined | number)'
@@ -1064,6 +1117,7 @@ items:
       return:
         type:
           - '@azure/arm-security.ExternalSecuritySolutionUnion[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.toLocaleString'
     name: toLocaleString()
@@ -1080,6 +1134,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.toString'
     name: toString()
@@ -1094,6 +1149,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.unshift'
     name: 'unshift(ExternalSecuritySolutionUnion[])'
@@ -1113,6 +1169,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.ExternalSecuritySolutionList.values'
     name: values()
@@ -1127,6 +1184,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-security.ExternalSecuritySolutionUnion>
+        description: ''
     package: '@azure/arm-security'
 references:
   - uid: Array<@azure/arm-security.ExternalSecuritySolutionUnion>

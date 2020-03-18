@@ -11,12 +11,13 @@ items:
       - '@azure/arm-security.DiscoveredSecuritySolutionList.entries'
       - '@azure/arm-security.DiscoveredSecuritySolutionList.every'
       - '@azure/arm-security.DiscoveredSecuritySolutionList.fill'
-      - '@azure/arm-security.DiscoveredSecuritySolutionList.filter_1'
       - '@azure/arm-security.DiscoveredSecuritySolutionList.filter'
+      - '@azure/arm-security.DiscoveredSecuritySolutionList.filter_1'
       - '@azure/arm-security.DiscoveredSecuritySolutionList.find'
       - '@azure/arm-security.DiscoveredSecuritySolutionList.find_1'
       - '@azure/arm-security.DiscoveredSecuritySolutionList.findIndex'
       - '@azure/arm-security.DiscoveredSecuritySolutionList.forEach'
+      - '@azure/arm-security.DiscoveredSecuritySolutionList.includes'
       - '@azure/arm-security.DiscoveredSecuritySolutionList.indexOf'
       - '@azure/arm-security.DiscoveredSecuritySolutionList.join'
       - '@azure/arm-security.DiscoveredSecuritySolutionList.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.concat'
     name: 'concat(ConcatArray<DiscoveredSecuritySolution>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.every'
     name: >-
       every((value: DiscoveredSecuritySolution, index: number, array:
-      DiscoveredSecuritySolution[]) => boolean, any)
+      DiscoveredSecuritySolution[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: DiscoveredSecuritySolution, index:
-        number, array: DiscoveredSecuritySolution[]) => boolean, thisArg?: any)
+        number, array: DiscoveredSecuritySolution[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: DiscoveredSecuritySolution, index: number, array:
-              DiscoveredSecuritySolution[]) => boolean
+              DiscoveredSecuritySolution[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.fill'
     name: 'fill(DiscoveredSecuritySolution, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-security'
-  - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.filter_1'
-    name: >-
-      filter((value: DiscoveredSecuritySolution, index: number, array:
-      DiscoveredSecuritySolution[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: DiscoveredSecuritySolution, index:
-        number, array: DiscoveredSecuritySolution[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: DiscoveredSecuritySolution, index: number, array:
-              DiscoveredSecuritySolution[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-security.DiscoveredSecuritySolution[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.filter'
     name: >-
@@ -308,6 +279,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.filter_1'
+    name: >-
+      filter((value: DiscoveredSecuritySolution, index: number, array:
+      DiscoveredSecuritySolution[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: DiscoveredSecuritySolution, index:
+        number, array: DiscoveredSecuritySolution[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: DiscoveredSecuritySolution, index: number, array:
+              DiscoveredSecuritySolution[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-security.DiscoveredSecuritySolution[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.find'
     name: >-
@@ -354,30 +364,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.find_1'
     name: >-
       find((value: DiscoveredSecuritySolution, index: number, obj:
-      DiscoveredSecuritySolution[]) => boolean, any)
+      DiscoveredSecuritySolution[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: DiscoveredSecuritySolution, index:
-        number, obj: DiscoveredSecuritySolution[]) => boolean, thisArg?: any)
+        number, obj: DiscoveredSecuritySolution[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: DiscoveredSecuritySolution, index: number, obj:
-              DiscoveredSecuritySolution[]) => boolean
+              DiscoveredSecuritySolution[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -387,11 +394,12 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.findIndex'
     name: >-
       findIndex((value: DiscoveredSecuritySolution, index: number, obj:
-      DiscoveredSecuritySolution[]) => boolean, any)
+      DiscoveredSecuritySolution[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -404,13 +412,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: DiscoveredSecuritySolution, index:
-        number, obj: DiscoveredSecuritySolution[]) => boolean, thisArg?: any)
+        number, obj: DiscoveredSecuritySolution[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: DiscoveredSecuritySolution, index: number, obj:
-              DiscoveredSecuritySolution[]) => boolean
+              DiscoveredSecuritySolution[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -432,6 +440,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.forEach'
     name: >-
@@ -464,6 +473,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-security'
+  - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.includes'
+    name: 'includes(DiscoveredSecuritySolution, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: DiscoveredSecuritySolution, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-security.DiscoveredSecuritySolution'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.indexOf'
     name: 'indexOf(DiscoveredSecuritySolution, undefined | number)'
     children: []
@@ -490,6 +529,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.join'
     name: join(undefined | string)
@@ -514,6 +554,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.keys'
     name: keys()
@@ -528,6 +569,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.lastIndexOf'
     name: 'lastIndexOf(DiscoveredSecuritySolution, undefined | number)'
@@ -555,6 +597,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.length'
     name: length
@@ -571,6 +614,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.map'
     name: >-
@@ -607,6 +651,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.nextLink'
     name: nextLink
@@ -622,6 +667,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.pop'
     name: pop()
@@ -636,6 +682,7 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.push'
     name: 'push(DiscoveredSecuritySolution[])'
@@ -655,6 +702,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.reduce'
     name: >-
@@ -688,6 +736,7 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.reduce_1'
     name: >-
@@ -699,10 +748,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: DiscoveredSecuritySolution,
@@ -724,6 +770,7 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.reduce_2'
     name: >-
@@ -762,6 +809,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.reduceRight'
     name: >-
@@ -797,6 +845,7 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.reduceRight_1'
     name: >-
@@ -808,11 +857,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -834,6 +879,7 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.reduceRight_2'
     name: >-
@@ -873,6 +919,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.reverse'
     name: reverse()
@@ -887,6 +934,7 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.shift'
     name: shift()
@@ -901,6 +949,7 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -926,11 +975,12 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.some'
     name: >-
       some((value: DiscoveredSecuritySolution, index: number, array:
-      DiscoveredSecuritySolution[]) => boolean, any)
+      DiscoveredSecuritySolution[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -941,13 +991,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: DiscoveredSecuritySolution, index:
-        number, array: DiscoveredSecuritySolution[]) => boolean, thisArg?: any)
+        number, array: DiscoveredSecuritySolution[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: DiscoveredSecuritySolution, index: number, array:
-              DiscoveredSecuritySolution[]) => boolean
+              DiscoveredSecuritySolution[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -963,6 +1013,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.sort'
     name: >-
@@ -991,6 +1042,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.splice_1'
     name: 'splice(number, number, DiscoveredSecuritySolution[])'
@@ -1024,6 +1076,7 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.splice'
     name: 'splice(number, undefined | number)'
@@ -1052,6 +1105,7 @@ items:
       return:
         type:
           - '@azure/arm-security.DiscoveredSecuritySolution[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.toLocaleString'
     name: toLocaleString()
@@ -1068,6 +1122,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.toString'
     name: toString()
@@ -1082,6 +1137,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.unshift'
     name: 'unshift(DiscoveredSecuritySolution[])'
@@ -1101,6 +1157,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.DiscoveredSecuritySolutionList.values'
     name: values()
@@ -1115,6 +1172,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-security.DiscoveredSecuritySolution>
+        description: ''
     package: '@azure/arm-security'
 references:
   - uid: Array<@azure/arm-security.DiscoveredSecuritySolution>

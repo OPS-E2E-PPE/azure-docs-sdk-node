@@ -6,7 +6,6 @@ items:
     children:
       - '@azure/arm-network.DdosProtectionPlans.beginCreateOrUpdate'
       - '@azure/arm-network.DdosProtectionPlans.beginDeleteMethod'
-      - '@azure/arm-network.DdosProtectionPlans.beginUpdateTags'
       - '@azure/arm-network.DdosProtectionPlans.createOrUpdate'
       - '@azure/arm-network.DdosProtectionPlans.constructor'
       - '@azure/arm-network.DdosProtectionPlans.deleteMethod'
@@ -26,6 +25,8 @@ items:
       - '@azure/arm-network.DdosProtectionPlans.listNext_2'
       - '@azure/arm-network.DdosProtectionPlans.listNext_1'
       - '@azure/arm-network.DdosProtectionPlans.updateTags'
+      - '@azure/arm-network.DdosProtectionPlans.updateTags_2'
+      - '@azure/arm-network.DdosProtectionPlans.updateTags_1'
     langs:
       - typeScript
     type: class
@@ -66,6 +67,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -95,42 +97,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.DdosProtectionPlans.beginUpdateTags'
-    name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Update a DDoS protection plan tags.
-    syntax:
-      content: >-
-        function beginUpdateTags(resourceGroupName: string,
-        ddosProtectionPlanName: string, parameters: TagsObject, options?:
-        msRest.RequestOptionsBase)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: ddosProtectionPlanName
-          type:
-            - string
-          description: The name of the DDoS protection plan.
-        - id: parameters
-          type:
-            - '@azure/arm-network.TagsObject'
-          description: >-
-            Parameters supplied to the update DDoS protection plan resource
-            tags.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.createOrUpdate'
     name: >-
@@ -167,6 +134,7 @@ items:
       return:
         type:
           - Promise<Models.DdosProtectionPlansCreateOrUpdateResponse>
+        description: Promise<Models.DdosProtectionPlansCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.constructor'
     name: DdosProtectionPlans(NetworkManagementClientContext)
@@ -212,6 +180,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.get'
     name: 'get(string, string, msRest.RequestOptionsBase)'
@@ -241,6 +210,7 @@ items:
       return:
         type:
           - Promise<Models.DdosProtectionPlansGetResponse>
+        description: Promise<Models.DdosProtectionPlansGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.get_2'
     name: >-
@@ -274,9 +244,6 @@ items:
             - ServiceCallback<@azure/arm-network.DdosProtectionPlan>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DdosProtectionPlansGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.get_1'
     name: 'get(string, string, ServiceCallback<DdosProtectionPlan>)'
@@ -303,9 +270,6 @@ items:
             - ServiceCallback<@azure/arm-network.DdosProtectionPlan>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DdosProtectionPlansGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.list'
     name: list(msRest.RequestOptionsBase)
@@ -325,6 +289,7 @@ items:
       return:
         type:
           - Promise<Models.DdosProtectionPlansListResponse>
+        description: Promise<Models.DdosProtectionPlansListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.list_2'
     name: 'list(RequestOptionsBase, ServiceCallback<DdosProtectionPlanListResult>)'
@@ -347,9 +312,6 @@ items:
             - ServiceCallback<@azure/arm-network.DdosProtectionPlanListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DdosProtectionPlansListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.list_1'
     name: list(ServiceCallback<DdosProtectionPlanListResult>)
@@ -366,9 +328,6 @@ items:
             - ServiceCallback<@azure/arm-network.DdosProtectionPlanListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DdosProtectionPlansListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.listByResourceGroup'
     name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
@@ -394,6 +353,7 @@ items:
       return:
         type:
           - Promise<Models.DdosProtectionPlansListByResourceGroupResponse>
+        description: Promise<Models.DdosProtectionPlansListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.listByResourceGroup_2'
     name: >-
@@ -423,9 +383,6 @@ items:
             - ServiceCallback<@azure/arm-network.DdosProtectionPlanListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DdosProtectionPlansListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.listByResourceGroup_1'
     name: 'listByResourceGroup(string, ServiceCallback<DdosProtectionPlanListResult>)'
@@ -448,9 +405,6 @@ items:
             - ServiceCallback<@azure/arm-network.DdosProtectionPlanListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DdosProtectionPlansListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.listByResourceGroupNext'
     name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
@@ -476,6 +430,7 @@ items:
       return:
         type:
           - Promise<Models.DdosProtectionPlansListByResourceGroupNextResponse>
+        description: Promise<Models.DdosProtectionPlansListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.listByResourceGroupNext_2'
     name: >-
@@ -505,9 +460,6 @@ items:
             - ServiceCallback<@azure/arm-network.DdosProtectionPlanListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DdosProtectionPlansListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.listByResourceGroupNext_1'
     name: >-
@@ -532,9 +484,6 @@ items:
             - ServiceCallback<@azure/arm-network.DdosProtectionPlanListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DdosProtectionPlansListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -560,6 +509,7 @@ items:
       return:
         type:
           - Promise<Models.DdosProtectionPlansListNextResponse>
+        description: Promise<Models.DdosProtectionPlansListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.listNext_2'
     name: >-
@@ -588,9 +538,6 @@ items:
             - ServiceCallback<@azure/arm-network.DdosProtectionPlanListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DdosProtectionPlansListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.listNext_1'
     name: 'listNext(string, ServiceCallback<DdosProtectionPlanListResult>)'
@@ -613,9 +560,6 @@ items:
             - ServiceCallback<@azure/arm-network.DdosProtectionPlanListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.DdosProtectionPlansListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosProtectionPlans.updateTags'
     name: 'updateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
@@ -651,6 +595,81 @@ items:
       return:
         type:
           - Promise<Models.DdosProtectionPlansUpdateTagsResponse>
+        description: Promise<Models.DdosProtectionPlansUpdateTagsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.DdosProtectionPlans.updateTags_2'
+    name: >-
+      updateTags(string, string, TagsObject, RequestOptionsBase,
+      ServiceCallback<DdosProtectionPlan>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, ddosProtectionPlanName:
+        string, parameters: TagsObject, options: RequestOptionsBase, callback:
+        ServiceCallback<DdosProtectionPlan>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: ddosProtectionPlanName
+          type:
+            - string
+          description: The name of the DDoS protection plan.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: >-
+            Parameters supplied to the update DDoS protection plan resource
+            tags.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.DdosProtectionPlan>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.DdosProtectionPlans.updateTags_1'
+    name: >-
+      updateTags(string, string, TagsObject,
+      ServiceCallback<DdosProtectionPlan>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, ddosProtectionPlanName:
+        string, parameters: TagsObject, callback:
+        ServiceCallback<DdosProtectionPlan>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: ddosProtectionPlanName
+          type:
+            - string
+          description: The name of the DDoS protection plan.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: >-
+            Parameters supplied to the update DDoS protection plan resource
+            tags.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.DdosProtectionPlan>
+          description: |
+            The callback
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -665,12 +684,6 @@ references:
       - name: DdosProtectionPlan
         fullName: DdosProtectionPlan
         uid: '@azure/arm-network.DdosProtectionPlan'
-  - uid: '@azure/arm-network.TagsObject'
-    name: TagsObject
-    spec.typeScript:
-      - name: TagsObject
-        fullName: TagsObject
-        uid: '@azure/arm-network.TagsObject'
   - uid: ServiceCallback<@azure/arm-network.DdosProtectionPlan>
     name: DdosProtectionPlan>
     spec.typeScript:
@@ -691,3 +704,9 @@ references:
         uid: '@azure/arm-network.DdosProtectionPlanListResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'

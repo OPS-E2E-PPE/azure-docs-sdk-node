@@ -11,12 +11,13 @@ items:
       - '@azure/arm-security.TopologyList.entries'
       - '@azure/arm-security.TopologyList.every'
       - '@azure/arm-security.TopologyList.fill'
-      - '@azure/arm-security.TopologyList.filter_1'
       - '@azure/arm-security.TopologyList.filter'
+      - '@azure/arm-security.TopologyList.filter_1'
       - '@azure/arm-security.TopologyList.find'
       - '@azure/arm-security.TopologyList.find_1'
       - '@azure/arm-security.TopologyList.findIndex'
       - '@azure/arm-security.TopologyList.forEach'
+      - '@azure/arm-security.TopologyList.includes'
       - '@azure/arm-security.TopologyList.indexOf'
       - '@azure/arm-security.TopologyList.join'
       - '@azure/arm-security.TopologyList.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.concat'
     name: 'concat(ConcatArray<TopologyResource>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.every'
     name: >-
       every((value: TopologyResource, index: number, array: TopologyResource[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: TopologyResource, index: number,
-        array: TopologyResource[]) => boolean, thisArg?: any)
+        array: TopologyResource[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: TopologyResource, index: number, array:
-              TopologyResource[]) => boolean
+              TopologyResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.fill'
     name: 'fill(TopologyResource, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-security'
-  - uid: '@azure/arm-security.TopologyList.filter_1'
-    name: >-
-      filter((value: TopologyResource, index: number, array: TopologyResource[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: TopologyResource, index: number,
-        array: TopologyResource[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: TopologyResource, index: number, array:
-              TopologyResource[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-security.TopologyResource[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.TopologyList.filter_1'
+    name: >-
+      filter((value: TopologyResource, index: number, array: TopologyResource[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: TopologyResource, index: number,
+        array: TopologyResource[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: TopologyResource, index: number, array:
+              TopologyResource[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-security.TopologyResource[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.find_1'
     name: >-
       find((value: TopologyResource, index: number, obj: TopologyResource[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: TopologyResource, index: number, obj:
-        TopologyResource[]) => boolean, thisArg?: any)
+        TopologyResource[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: TopologyResource, index: number, obj: TopologyResource[])
-              => boolean
+              => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.findIndex'
     name: >-
       findIndex((value: TopologyResource, index: number, obj:
-      TopologyResource[]) => boolean, any)
+      TopologyResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: TopologyResource, index: number,
-        obj: TopologyResource[]) => boolean, thisArg?: any)
+        obj: TopologyResource[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: TopologyResource, index: number, obj: TopologyResource[])
-              => boolean
+              => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-security'
+  - uid: '@azure/arm-security.TopologyList.includes'
+    name: 'includes(TopologyResource, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: TopologyResource, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-security.TopologyResource'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.indexOf'
     name: 'indexOf(TopologyResource, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.lastIndexOf'
     name: 'lastIndexOf(TopologyResource, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.push'
     name: 'push(TopologyResource[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.reduce'
     name: >-
@@ -685,6 +733,7 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.reduce_1'
     name: >-
@@ -695,10 +744,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: TopologyResource,
@@ -719,6 +765,7 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.reduce_2'
     name: >-
@@ -757,6 +804,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.reduceRight'
     name: >-
@@ -791,6 +839,7 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.reduceRight_1'
     name: >-
@@ -801,11 +850,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: TopologyResource,
@@ -826,6 +871,7 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.reduceRight_2'
     name: >-
@@ -865,6 +911,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.reverse'
     name: reverse()
@@ -879,6 +926,7 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.shift'
     name: shift()
@@ -893,6 +941,7 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -918,11 +967,12 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.some'
     name: >-
       some((value: TopologyResource, index: number, array: TopologyResource[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -933,13 +983,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: TopologyResource, index: number,
-        array: TopologyResource[]) => boolean, thisArg?: any)
+        array: TopologyResource[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: TopologyResource, index: number, array:
-              TopologyResource[]) => boolean
+              TopologyResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -955,6 +1005,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.sort'
     name: 'sort(undefined | (a: TopologyResource, b: TopologyResource) => number)'
@@ -979,6 +1030,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.splice_1'
     name: 'splice(number, number, TopologyResource[])'
@@ -1012,6 +1064,7 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.splice'
     name: 'splice(number, undefined | number)'
@@ -1040,6 +1093,7 @@ items:
       return:
         type:
           - '@azure/arm-security.TopologyResource[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.toLocaleString'
     name: toLocaleString()
@@ -1056,6 +1110,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.toString'
     name: toString()
@@ -1070,6 +1125,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.unshift'
     name: 'unshift(TopologyResource[])'
@@ -1089,6 +1145,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.TopologyList.values'
     name: values()
@@ -1103,6 +1160,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-security.TopologyResource>
+        description: ''
     package: '@azure/arm-security'
 references:
   - uid: Array<@azure/arm-security.TopologyResource>

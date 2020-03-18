@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Specifications of the Metrics for Azure Monitoring.
     package: '@azure/arm-signalr'
   - uid: '@azure/arm-signalr.MetricSpecification.aggregationType'
     name: aggregationType
@@ -24,13 +24,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Only provide one value for this field. Valid values: Average, Minimum,
+      Maximum, Total, Count.
     optional: true
     syntax:
       content: 'aggregationType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-signalr'
   - uid: '@azure/arm-signalr.MetricSpecification.category'
     name: category
@@ -39,13 +42,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the metric category that the metric belongs to. A metric can
+      only belong to a
+
+      single category.
     optional: true
     syntax:
       content: 'category?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-signalr'
   - uid: '@azure/arm-signalr.MetricSpecification.dimensions'
     name: dimensions
@@ -54,13 +62,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The dimensions of the metrics.
     optional: true
     syntax:
       content: 'dimensions?: Dimension[]'
       return:
         type:
           - '@azure/arm-signalr.Dimension[]'
+        description: ''
     package: '@azure/arm-signalr'
   - uid: '@azure/arm-signalr.MetricSpecification.displayDescription'
     name: displayDescription
@@ -69,13 +78,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Localized friendly description of the metric.
     optional: true
     syntax:
       content: 'displayDescription?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-signalr'
   - uid: '@azure/arm-signalr.MetricSpecification.displayName'
     name: displayName
@@ -84,13 +94,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Localized friendly display name of the metric.
     optional: true
     syntax:
       content: 'displayName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-signalr'
   - uid: '@azure/arm-signalr.MetricSpecification.fillGapWithZero'
     name: fillGapWithZero
@@ -99,13 +110,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Optional. If set to true, then zero will be returned for time duration
+      where no metric is
+
+      emitted/published.
+
+      Ex. a metric that returns the number of times a particular error code was
+      emitted. The error
+
+      code may not appear
+
+      often, instead of the RP publishing 0, Shoebox can auto fill in 0s for
+      time periods where
+
+      nothing was emitted.
     optional: true
     syntax:
       content: 'fillGapWithZero?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-signalr'
   - uid: '@azure/arm-signalr.MetricSpecification.name'
     name: name
@@ -114,13 +140,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Name of the metric.
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-signalr'
   - uid: '@azure/arm-signalr.MetricSpecification.unit'
     name: unit
@@ -129,13 +156,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The unit that makes sense for the metric.
     optional: true
     syntax:
       content: 'unit?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-signalr'
 references:
   - uid: '@azure/arm-signalr.Dimension[]'

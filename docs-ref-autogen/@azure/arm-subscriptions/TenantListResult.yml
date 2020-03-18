@@ -11,12 +11,13 @@ items:
       - '@azure/arm-subscriptions.TenantListResult.entries'
       - '@azure/arm-subscriptions.TenantListResult.every'
       - '@azure/arm-subscriptions.TenantListResult.fill'
-      - '@azure/arm-subscriptions.TenantListResult.filter_1'
       - '@azure/arm-subscriptions.TenantListResult.filter'
+      - '@azure/arm-subscriptions.TenantListResult.filter_1'
       - '@azure/arm-subscriptions.TenantListResult.find'
       - '@azure/arm-subscriptions.TenantListResult.find_1'
       - '@azure/arm-subscriptions.TenantListResult.findIndex'
       - '@azure/arm-subscriptions.TenantListResult.forEach'
+      - '@azure/arm-subscriptions.TenantListResult.includes'
       - '@azure/arm-subscriptions.TenantListResult.indexOf'
       - '@azure/arm-subscriptions.TenantListResult.join'
       - '@azure/arm-subscriptions.TenantListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.concat'
     name: 'concat(ConcatArray<TenantIdDescription>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription[]'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription[]'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.every'
     name: >-
       every((value: TenantIdDescription, index: number, array:
-      TenantIdDescription[]) => boolean, any)
+      TenantIdDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: TenantIdDescription, index: number,
-        array: TenantIdDescription[]) => boolean, thisArg?: any)
+        array: TenantIdDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: TenantIdDescription, index: number, array:
-              TenantIdDescription[]) => boolean
+              TenantIdDescription[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.fill'
     name: 'fill(TenantIdDescription, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-subscriptions'
-  - uid: '@azure/arm-subscriptions.TenantListResult.filter_1'
-    name: >-
-      filter((value: TenantIdDescription, index: number, array:
-      TenantIdDescription[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: TenantIdDescription, index: number,
-        array: TenantIdDescription[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: TenantIdDescription, index: number, array:
-              TenantIdDescription[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-subscriptions.TenantIdDescription[]'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.TenantListResult.filter_1'
+    name: >-
+      filter((value: TenantIdDescription, index: number, array:
+      TenantIdDescription[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: TenantIdDescription, index: number,
+        array: TenantIdDescription[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: TenantIdDescription, index: number, array:
+              TenantIdDescription[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-subscriptions.TenantIdDescription[]'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.find_1'
     name: >-
       find((value: TenantIdDescription, index: number, obj:
-      TenantIdDescription[]) => boolean, any)
+      TenantIdDescription[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: TenantIdDescription, index: number,
-        obj: TenantIdDescription[]) => boolean, thisArg?: any)
+        obj: TenantIdDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: TenantIdDescription, index: number, obj:
-              TenantIdDescription[]) => boolean
+              TenantIdDescription[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription | undefined'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.findIndex'
     name: >-
       findIndex((value: TenantIdDescription, index: number, obj:
-      TenantIdDescription[]) => boolean, any)
+      TenantIdDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: TenantIdDescription, index:
-        number, obj: TenantIdDescription[]) => boolean, thisArg?: any)
+        number, obj: TenantIdDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: TenantIdDescription, index: number, obj:
-              TenantIdDescription[]) => boolean
+              TenantIdDescription[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.TenantListResult.includes'
+    name: 'includes(TenantIdDescription, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: TenantIdDescription, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-subscriptions.TenantIdDescription'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.indexOf'
     name: 'indexOf(TenantIdDescription, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.lastIndexOf'
     name: 'lastIndexOf(TenantIdDescription, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.nextLink'
     name: nextLink
@@ -613,12 +658,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The URL to use for getting the next set of results.
     syntax:
       content: 'nextLink: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.pop'
     name: pop()
@@ -633,6 +679,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription | undefined'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.push'
     name: 'push(TenantIdDescription[])'
@@ -652,6 +699,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.reduce'
     name: >-
@@ -685,6 +733,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.reduce_1'
     name: >-
@@ -695,10 +744,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: TenantIdDescription,
@@ -720,6 +766,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.reduce_2'
     name: >-
@@ -758,6 +805,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.reduceRight'
     name: >-
@@ -792,6 +840,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.reduceRight_1'
     name: >-
@@ -802,11 +851,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: TenantIdDescription,
@@ -828,6 +873,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.reduceRight_2'
     name: >-
@@ -867,6 +913,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.reverse'
     name: reverse()
@@ -881,6 +928,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription[]'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.shift'
     name: shift()
@@ -895,6 +943,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription | undefined'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -920,11 +969,12 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription[]'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.some'
     name: >-
       some((value: TenantIdDescription, index: number, array:
-      TenantIdDescription[]) => boolean, any)
+      TenantIdDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -935,13 +985,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: TenantIdDescription, index: number,
-        array: TenantIdDescription[]) => boolean, thisArg?: any)
+        array: TenantIdDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: TenantIdDescription, index: number, array:
-              TenantIdDescription[]) => boolean
+              TenantIdDescription[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -957,6 +1007,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.sort'
     name: >-
@@ -985,6 +1036,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.splice_1'
     name: 'splice(number, number, TenantIdDescription[])'
@@ -1018,6 +1070,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription[]'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1046,6 +1099,7 @@ items:
       return:
         type:
           - '@azure/arm-subscriptions.TenantIdDescription[]'
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.toLocaleString'
     name: toLocaleString()
@@ -1062,6 +1116,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.toString'
     name: toString()
@@ -1076,6 +1131,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.unshift'
     name: 'unshift(TenantIdDescription[])'
@@ -1095,6 +1151,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.TenantListResult.values'
     name: values()
@@ -1109,6 +1166,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-subscriptions.TenantIdDescription>
+        description: ''
     package: '@azure/arm-subscriptions'
 references:
   - uid: Array<@azure/arm-subscriptions.TenantIdDescription>

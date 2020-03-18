@@ -11,12 +11,13 @@ items:
       - '@azure/arm-relay.WcfRelaysListResult.entries'
       - '@azure/arm-relay.WcfRelaysListResult.every'
       - '@azure/arm-relay.WcfRelaysListResult.fill'
-      - '@azure/arm-relay.WcfRelaysListResult.filter_1'
       - '@azure/arm-relay.WcfRelaysListResult.filter'
+      - '@azure/arm-relay.WcfRelaysListResult.filter_1'
       - '@azure/arm-relay.WcfRelaysListResult.find'
       - '@azure/arm-relay.WcfRelaysListResult.find_1'
       - '@azure/arm-relay.WcfRelaysListResult.findIndex'
       - '@azure/arm-relay.WcfRelaysListResult.forEach'
+      - '@azure/arm-relay.WcfRelaysListResult.includes'
       - '@azure/arm-relay.WcfRelaysListResult.indexOf'
       - '@azure/arm-relay.WcfRelaysListResult.join'
       - '@azure/arm-relay.WcfRelaysListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.concat'
     name: 'concat(ConcatArray<WcfRelay>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay[]'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay[]'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.every'
-    name: 'every((value: WcfRelay, index: number, array: WcfRelay[]) => boolean, any)'
+    name: 'every((value: WcfRelay, index: number, array: WcfRelay[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: WcfRelay, index: number, array:
-        WcfRelay[]) => boolean, thisArg?: any)
+        WcfRelay[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: WcfRelay, index: number, array: WcfRelay[]) => boolean'
+            - '(value: WcfRelay, index: number, array: WcfRelay[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.fill'
     name: 'fill(WcfRelay, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-relay'
-  - uid: '@azure/arm-relay.WcfRelaysListResult.filter_1'
-    name: 'filter((value: WcfRelay, index: number, array: WcfRelay[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: WcfRelay, index: number, array:
-        WcfRelay[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: WcfRelay, index: number, array: WcfRelay[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-relay.WcfRelay[]'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.filter'
     name: >-
@@ -297,6 +272,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-relay'
+  - uid: '@azure/arm-relay.WcfRelaysListResult.filter_1'
+    name: >-
+      filter((value: WcfRelay, index: number, array: WcfRelay[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: WcfRelay, index: number, array:
+        WcfRelay[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: WcfRelay, index: number, array: WcfRelay[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-relay.WcfRelay[]'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.find'
     name: >-
@@ -342,26 +354,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.find_1'
-    name: 'find((value: WcfRelay, index: number, obj: WcfRelay[]) => boolean, any)'
+    name: 'find((value: WcfRelay, index: number, obj: WcfRelay[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: WcfRelay, index: number, obj:
-        WcfRelay[]) => boolean, thisArg?: any)
+        WcfRelay[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: WcfRelay, index: number, obj: WcfRelay[]) => boolean'
+            - '(value: WcfRelay, index: number, obj: WcfRelay[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -371,10 +380,11 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay | undefined'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.findIndex'
     name: >-
-      findIndex((value: WcfRelay, index: number, obj: WcfRelay[]) => boolean,
+      findIndex((value: WcfRelay, index: number, obj: WcfRelay[]) => unknown,
       any)
     children: []
     type: method
@@ -388,11 +398,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: WcfRelay, index: number, obj:
-        WcfRelay[]) => boolean, thisArg?: any)
+        WcfRelay[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: WcfRelay, index: number, obj: WcfRelay[]) => boolean'
+            - '(value: WcfRelay, index: number, obj: WcfRelay[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -414,6 +424,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.forEach'
     name: 'forEach((value: WcfRelay, index: number, array: WcfRelay[]) => void, any)'
@@ -442,6 +453,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-relay'
+  - uid: '@azure/arm-relay.WcfRelaysListResult.includes'
+    name: 'includes(WcfRelay, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: WcfRelay, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-relay.WcfRelay'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.indexOf'
     name: 'indexOf(WcfRelay, undefined | number)'
     children: []
@@ -468,6 +509,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.join'
     name: join(undefined | string)
@@ -492,6 +534,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.keys'
     name: keys()
@@ -506,6 +549,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.lastIndexOf'
     name: 'lastIndexOf(WcfRelay, undefined | number)'
@@ -533,6 +577,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.length'
     name: length
@@ -549,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.map'
     name: 'map((value: WcfRelay, index: number, array: WcfRelay[]) => U, any)'
@@ -581,6 +627,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.nextLink'
     name: nextLink
@@ -596,6 +643,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.pop'
     name: pop()
@@ -610,6 +658,7 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay | undefined'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.push'
     name: 'push(WcfRelay[])'
@@ -629,6 +678,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.reduce_2'
     name: >-
@@ -667,6 +717,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.reduce'
     name: >-
@@ -697,6 +748,7 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.reduce_1'
     name: >-
@@ -706,10 +758,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: WcfRelay, currentValue:
@@ -729,6 +778,7 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.reduceRight_2'
     name: >-
@@ -768,6 +818,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.reduceRight'
     name: >-
@@ -799,6 +850,7 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.reduceRight_1'
     name: >-
@@ -808,11 +860,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: WcfRelay, currentValue:
@@ -832,6 +880,7 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.reverse'
     name: reverse()
@@ -846,6 +895,7 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay[]'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.shift'
     name: shift()
@@ -860,6 +910,7 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay | undefined'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -885,9 +936,10 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay[]'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.some'
-    name: 'some((value: WcfRelay, index: number, array: WcfRelay[]) => boolean, any)'
+    name: 'some((value: WcfRelay, index: number, array: WcfRelay[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -898,11 +950,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: WcfRelay, index: number, array:
-        WcfRelay[]) => boolean, thisArg?: any)
+        WcfRelay[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: WcfRelay, index: number, array: WcfRelay[]) => boolean'
+            - '(value: WcfRelay, index: number, array: WcfRelay[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -918,6 +970,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.sort'
     name: 'sort(undefined | (a: WcfRelay, b: WcfRelay) => number)'
@@ -942,6 +995,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.splice_1'
     name: 'splice(number, number, WcfRelay[])'
@@ -973,6 +1027,7 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay[]'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1001,6 +1056,7 @@ items:
       return:
         type:
           - '@azure/arm-relay.WcfRelay[]'
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.toLocaleString'
     name: toLocaleString()
@@ -1017,6 +1073,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.toString'
     name: toString()
@@ -1031,6 +1088,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.unshift'
     name: 'unshift(WcfRelay[])'
@@ -1050,6 +1108,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-relay'
   - uid: '@azure/arm-relay.WcfRelaysListResult.values'
     name: values()
@@ -1064,6 +1123,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-relay.WcfRelay>
+        description: ''
     package: '@azure/arm-relay'
 references:
   - uid: Array<@azure/arm-relay.WcfRelay>

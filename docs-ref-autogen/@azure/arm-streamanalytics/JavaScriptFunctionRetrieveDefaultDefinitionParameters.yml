@@ -14,7 +14,9 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      The parameters needed to retrieve the default function definition for a
+      JavaScript function.
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.JavaScriptFunctionRetrieveDefaultDefinitionParameters.bindingType
@@ -24,12 +26,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'bindingType: "Microsoft.StreamAnalytics/JavascriptUdf"'
       return:
         type:
           - '"Microsoft.StreamAnalytics/JavascriptUdf"'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.JavaScriptFunctionRetrieveDefaultDefinitionParameters.script
@@ -39,13 +42,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The JavaScript code containing a single function definition. For example:
+      'function (x, y) {
+
+      return x + y; }'.
     optional: true
     syntax:
       content: 'script?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.JavaScriptFunctionRetrieveDefaultDefinitionParameters.udfType
@@ -55,13 +63,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'The function type. Possible values include: ''Scalar'''
     optional: true
     syntax:
       content: 'udfType?: UdfType'
       return:
         type:
           - '@azure/arm-streamanalytics.UdfType'
+        description: ''
     package: '@azure/arm-streamanalytics'
 references:
   - uid: '@azure/arm-streamanalytics.UdfType'

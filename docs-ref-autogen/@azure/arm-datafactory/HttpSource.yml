@@ -5,13 +5,14 @@ items:
     fullName: HttpSource
     children:
       - '@azure/arm-datafactory.HttpSource.httpRequestTimeout'
+      - '@azure/arm-datafactory.HttpSource.maxConcurrentConnections'
       - '@azure/arm-datafactory.HttpSource.sourceRetryCount'
       - '@azure/arm-datafactory.HttpSource.sourceRetryWait'
       - '@azure/arm-datafactory.HttpSource.type'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: A copy activity source for an HTTP file.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpSource.httpRequestTimeout'
     name: httpRequestTimeout
@@ -20,13 +21,42 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the timeout for a HTTP client to get HTTP response from HTTP
+      server. The default
+
+      value is equivalent to System.Net.HttpWebRequest.Timeout. Type: string (or
+      Expression with
+
+      resultType string), pattern:
+      ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
     optional: true
     syntax:
       content: 'httpRequestTimeout?: any'
       return:
         type:
           - any
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.HttpSource.maxConcurrentConnections'
+    name: maxConcurrentConnections
+    fullName: maxConcurrentConnections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The maximum concurrent connection count for the source data store. Type:
+      integer (or
+
+      Expression with resultType integer).
+    optional: true
+    syntax:
+      content: 'maxConcurrentConnections?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpSource.sourceRetryCount'
     name: sourceRetryCount
@@ -35,13 +65,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Source retry count. Type: integer (or Expression with resultType integer).'
     optional: true
     syntax:
       content: 'sourceRetryCount?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpSource.sourceRetryWait'
     name: sourceRetryWait
@@ -50,13 +81,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Source retry wait. Type: string (or Expression with resultType string),
+      pattern:
+
+      ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
     optional: true
     syntax:
       content: 'sourceRetryWait?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpSource.type'
     name: type
@@ -65,10 +101,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "HttpSource"'
       return:
         type:
           - '"HttpSource"'
+        description: ''
     package: '@azure/arm-datafactory'

@@ -78,6 +78,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Client.ServiceReceiver.on
     name: 'on("message", (msg: Message) => void)'
@@ -100,6 +101,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Client.ServiceReceiver.on_2
     name: 'on(string, Function)'
@@ -122,6 +124,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Client.ServiceReceiver.reject
     name: 'reject(Message, Callback<MessageRejected>)'
@@ -144,12 +147,6 @@ items:
           optional: true
     package: azure-iothub
 references:
-  - uid: azure-iothub.Client
-    name: Client
-    spec.typeScript:
-      - name: Client
-        fullName: Client
-        uid: azure-iothub.Client
   - uid: Callback<azure-iothub.Client.ServiceReceiver>
     name: ServiceReceiver>
     spec.typeScript:
@@ -267,9 +264,15 @@ references:
         uid: azure-iothub.ResultWithIncomingMessage
       - name: <MessageEnqueued>>
         fullName: <MessageEnqueued>>
-  - uid: azure-iothub.Client.Client.TransportCtor
+  - uid: azure-iothub.Client.TransportCtor
     name: TransportCtor
     spec.typeScript:
       - name: TransportCtor
         fullName: TransportCtor
-        uid: azure-iothub.Client.Client.TransportCtor
+        uid: azure-iothub.Client.TransportCtor
+  - uid: azure-iothub.Client
+    name: Client
+    spec.typeScript:
+      - name: Client
+        fullName: Client
+        uid: azure-iothub.Client

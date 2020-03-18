@@ -13,6 +13,8 @@ items:
       - >-
         @azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds
       - >-
+        @azure/servicefabric.RollingUpgradeUpdateDescription.instanceCloseDelayDurationInSeconds
+      - >-
         @azure/servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds
       - '@azure/servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode'
       - >-
@@ -54,6 +56,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.FailureAction'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.forceRestart'
     name: forceRestart
@@ -73,6 +76,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds
@@ -99,6 +103,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds
@@ -125,6 +130,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds
@@ -148,6 +154,47 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/servicefabric'
+  - uid: >-
+      @azure/servicefabric.RollingUpgradeUpdateDescription.instanceCloseDelayDurationInSeconds
+    name: instanceCloseDelayDurationInSeconds
+    fullName: instanceCloseDelayDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Duration in seconds, to wait before a stateless instance is closed, to
+      allow the active
+
+      requests to drain gracefully. This would be effective when the instance is
+      closing during the
+
+      application/cluster
+
+      upgrade, only for those instances which have a non-zero delay duration
+      configured in the
+
+      service description. See InstanceCloseDelayDurationSeconds property in
+      $ref:
+
+      "#/definitions/StatelessServiceDescription.yaml" for details.
+
+      Note, the default value of InstanceCloseDelayDurationInSeconds is
+      4294967295, which indicates
+
+      that the behavior will entirely depend on the delay configured in the
+      stateless service
+
+      description.
+    optional: true
+    syntax:
+      content: 'instanceCloseDelayDurationInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds
@@ -177,6 +224,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode'
     name: rollingUpgradeMode
@@ -198,6 +246,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.UpgradeMode'
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds
@@ -221,6 +270,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds
@@ -244,6 +294,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/servicefabric'
 references:
   - uid: '@azure/servicefabric.FailureAction'

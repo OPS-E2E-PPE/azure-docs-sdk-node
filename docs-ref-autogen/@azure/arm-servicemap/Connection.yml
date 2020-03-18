@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: A network connection.
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Connection.destination'
     name: destination
@@ -26,12 +26,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Destination resource of the relationship.
     syntax:
       content: 'destination: ResourceReferenceUnion'
       return:
         type:
           - '@azure/arm-servicemap.ResourceReferenceUnion'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Connection.endTime'
     name: endTime
@@ -40,13 +41,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Relationship end time.
     optional: true
     syntax:
       content: 'endTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Connection.failureState'
     name: failureState
@@ -55,13 +57,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether there are only successful, failed or a mixture of both
+      connections
+
+      represented by this resource. Possible values include: 'ok', 'failed',
+      'mixed'
     optional: true
     syntax:
       content: 'failureState?: ConnectionFailureState'
       return:
         type:
           - '@azure/arm-servicemap.ConnectionFailureState'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Connection.id'
     name: id
@@ -70,13 +78,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource identifier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Connection.kind'
     name: kind
@@ -85,12 +98,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'kind: "rel:connection"'
       return:
         type:
           - '"rel:connection"'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Connection.name'
     name: name
@@ -99,13 +113,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Connection.serverPort'
     name: serverPort
@@ -114,13 +133,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Reference to the server port via which this connection has been
+      established.
     optional: true
     syntax:
       content: 'serverPort?: PortReference'
       return:
         type:
           - '@azure/arm-servicemap.PortReference'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Connection.source'
     name: source
@@ -129,12 +151,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Source resource of the relationship.
     syntax:
       content: 'source: ResourceReferenceUnion'
       return:
         type:
           - '@azure/arm-servicemap.ResourceReferenceUnion'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Connection.startTime'
     name: startTime
@@ -143,13 +166,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Relationship start time.
     optional: true
     syntax:
       content: 'startTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.Connection.type'
     name: type
@@ -158,13 +182,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource type.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
 references:
   - uid: '@azure/arm-servicemap.ResourceReferenceUnion'

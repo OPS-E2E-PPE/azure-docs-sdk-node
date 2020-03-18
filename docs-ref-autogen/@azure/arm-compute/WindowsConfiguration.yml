@@ -32,6 +32,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.AdditionalUnattendContent[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.WindowsConfiguration.enableAutomaticUpdates'
     name: enableAutomaticUpdates
@@ -40,13 +41,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Indicates whether virtual machine is enabled for automatic updates.
+    summary: >-
+      Indicates whether Automatic Updates is enabled for the Windows virtual
+      machine. Default value
+
+      is true. <br><br> For virtual machine scale sets, this property can be
+      updated and updates
+
+      will take effect on OS reprovisioning.
     optional: true
     syntax:
       content: 'enableAutomaticUpdates?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.WindowsConfiguration.provisionVMAgent'
     name: provisionVMAgent
@@ -72,6 +81,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.WindowsConfiguration.timeZone'
     name: timeZone
@@ -82,13 +92,22 @@ items:
     type: property
     summary: >-
       Specifies the time zone of the virtual machine. e.g. "Pacific Standard
-      Time"
+      Time". <br><br>
+
+      Possible values can be
+
+      [TimeZoneInfo.Id](https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id)
+
+      value from time zones returned by
+
+      [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.getsystemtimezones).
     optional: true
     syntax:
       content: 'timeZone?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.WindowsConfiguration.winRM'
     name: winRM
@@ -106,6 +125,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.WinRMConfiguration'
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: '@azure/arm-compute.AdditionalUnattendContent[]'

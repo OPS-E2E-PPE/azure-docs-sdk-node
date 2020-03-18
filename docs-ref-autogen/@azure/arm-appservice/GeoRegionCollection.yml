@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.GeoRegionCollection.entries'
       - '@azure/arm-appservice.GeoRegionCollection.every'
       - '@azure/arm-appservice.GeoRegionCollection.fill'
-      - '@azure/arm-appservice.GeoRegionCollection.filter_1'
       - '@azure/arm-appservice.GeoRegionCollection.filter'
+      - '@azure/arm-appservice.GeoRegionCollection.filter_1'
       - '@azure/arm-appservice.GeoRegionCollection.find'
       - '@azure/arm-appservice.GeoRegionCollection.find_1'
       - '@azure/arm-appservice.GeoRegionCollection.findIndex'
       - '@azure/arm-appservice.GeoRegionCollection.forEach'
+      - '@azure/arm-appservice.GeoRegionCollection.includes'
       - '@azure/arm-appservice.GeoRegionCollection.indexOf'
       - '@azure/arm-appservice.GeoRegionCollection.join'
       - '@azure/arm-appservice.GeoRegionCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.concat'
     name: 'concat(ConcatArray<GeoRegion>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.entries'
     name: entries()
@@ -158,10 +163,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.every'
     name: >-
-      every((value: GeoRegion, index: number, array: GeoRegion[]) => boolean,
+      every((value: GeoRegion, index: number, array: GeoRegion[]) => unknown,
       any)
     children: []
     type: method
@@ -171,11 +177,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: GeoRegion, index: number, array:
-        GeoRegion[]) => boolean, thisArg?: any)
+        GeoRegion[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: GeoRegion, index: number, array: GeoRegion[]) => boolean'
+            - '(value: GeoRegion, index: number, array: GeoRegion[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -191,6 +197,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.fill'
     name: 'fill(GeoRegion, undefined | number, undefined | number)'
@@ -231,39 +238,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.GeoRegionCollection.filter_1'
-    name: 'filter((value: GeoRegion, index: number, array: GeoRegion[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: GeoRegion, index: number, array:
-        GeoRegion[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: GeoRegion, index: number, array: GeoRegion[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.GeoRegion[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.filter'
     name: >-
@@ -299,6 +274,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.GeoRegionCollection.filter_1'
+    name: >-
+      filter((value: GeoRegion, index: number, array: GeoRegion[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: GeoRegion, index: number, array:
+        GeoRegion[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: GeoRegion, index: number, array: GeoRegion[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.GeoRegion[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.find'
     name: >-
@@ -344,26 +356,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.find_1'
-    name: 'find((value: GeoRegion, index: number, obj: GeoRegion[]) => boolean, any)'
+    name: 'find((value: GeoRegion, index: number, obj: GeoRegion[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: GeoRegion, index: number, obj:
-        GeoRegion[]) => boolean, thisArg?: any)
+        GeoRegion[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: GeoRegion, index: number, obj: GeoRegion[]) => boolean'
+            - '(value: GeoRegion, index: number, obj: GeoRegion[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -373,10 +382,11 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.findIndex'
     name: >-
-      findIndex((value: GeoRegion, index: number, obj: GeoRegion[]) => boolean,
+      findIndex((value: GeoRegion, index: number, obj: GeoRegion[]) => unknown,
       any)
     children: []
     type: method
@@ -390,11 +400,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: GeoRegion, index: number, obj:
-        GeoRegion[]) => boolean, thisArg?: any)
+        GeoRegion[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: GeoRegion, index: number, obj: GeoRegion[]) => boolean'
+            - '(value: GeoRegion, index: number, obj: GeoRegion[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -416,6 +426,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.forEach'
     name: >-
@@ -446,6 +457,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.GeoRegionCollection.includes'
+    name: 'includes(GeoRegion, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: GeoRegion, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.GeoRegion'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.indexOf'
     name: 'indexOf(GeoRegion, undefined | number)'
     children: []
@@ -472,6 +513,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.join'
     name: join(undefined | string)
@@ -496,6 +538,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.keys'
     name: keys()
@@ -510,6 +553,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.lastIndexOf'
     name: 'lastIndexOf(GeoRegion, undefined | number)'
@@ -537,6 +581,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.length'
     name: length
@@ -553,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.map'
     name: 'map((value: GeoRegion, index: number, array: GeoRegion[]) => U, any)'
@@ -585,6 +631,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.nextLink'
     name: nextLink
@@ -604,6 +651,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.pop'
     name: pop()
@@ -618,6 +666,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.push'
     name: 'push(GeoRegion[])'
@@ -637,6 +686,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.reduce'
     name: >-
@@ -667,6 +717,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.reduce_1'
     name: >-
@@ -676,10 +727,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: GeoRegion, currentValue:
@@ -699,6 +747,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.reduce_2'
     name: >-
@@ -737,6 +786,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.reduceRight'
     name: >-
@@ -769,6 +819,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.reduceRight_1'
     name: >-
@@ -778,11 +829,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: GeoRegion,
@@ -802,6 +849,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.reduceRight_2'
     name: >-
@@ -841,6 +889,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.reverse'
     name: reverse()
@@ -855,6 +904,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.shift'
     name: shift()
@@ -869,6 +919,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -894,10 +945,11 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.some'
     name: >-
-      some((value: GeoRegion, index: number, array: GeoRegion[]) => boolean,
+      some((value: GeoRegion, index: number, array: GeoRegion[]) => unknown,
       any)
     children: []
     type: method
@@ -909,11 +961,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: GeoRegion, index: number, array:
-        GeoRegion[]) => boolean, thisArg?: any)
+        GeoRegion[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: GeoRegion, index: number, array: GeoRegion[]) => boolean'
+            - '(value: GeoRegion, index: number, array: GeoRegion[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -929,6 +981,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.sort'
     name: 'sort(undefined | (a: GeoRegion, b: GeoRegion) => number)'
@@ -953,6 +1006,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.splice_1'
     name: 'splice(number, number, GeoRegion[])'
@@ -984,6 +1038,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1012,6 +1067,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.GeoRegion[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.toLocaleString'
     name: toLocaleString()
@@ -1028,6 +1084,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.toString'
     name: toString()
@@ -1042,6 +1099,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.unshift'
     name: 'unshift(GeoRegion[])'
@@ -1061,6 +1119,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.GeoRegionCollection.values'
     name: values()
@@ -1075,6 +1134,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-appservice.GeoRegion>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.GeoRegion>

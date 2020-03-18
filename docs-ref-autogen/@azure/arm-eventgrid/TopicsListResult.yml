@@ -11,12 +11,13 @@ items:
       - '@azure/arm-eventgrid.TopicsListResult.entries'
       - '@azure/arm-eventgrid.TopicsListResult.every'
       - '@azure/arm-eventgrid.TopicsListResult.fill'
-      - '@azure/arm-eventgrid.TopicsListResult.filter_1'
       - '@azure/arm-eventgrid.TopicsListResult.filter'
+      - '@azure/arm-eventgrid.TopicsListResult.filter_1'
       - '@azure/arm-eventgrid.TopicsListResult.find'
       - '@azure/arm-eventgrid.TopicsListResult.find_1'
       - '@azure/arm-eventgrid.TopicsListResult.findIndex'
       - '@azure/arm-eventgrid.TopicsListResult.forEach'
+      - '@azure/arm-eventgrid.TopicsListResult.includes'
       - '@azure/arm-eventgrid.TopicsListResult.indexOf'
       - '@azure/arm-eventgrid.TopicsListResult.join'
       - '@azure/arm-eventgrid.TopicsListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.concat'
     name: 'concat(ConcatArray<Topic>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.every'
-    name: 'every((value: Topic, index: number, array: Topic[]) => boolean, any)'
+    name: 'every((value: Topic, index: number, array: Topic[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Topic, index: number, array: Topic[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Topic, index: number, array: Topic[]) => boolean'
+            - '(value: Topic, index: number, array: Topic[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.fill'
     name: 'fill(Topic, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-eventgrid'
-  - uid: '@azure/arm-eventgrid.TopicsListResult.filter_1'
-    name: 'filter((value: Topic, index: number, array: Topic[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Topic, index: number, array:
-        Topic[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Topic, index: number, array: Topic[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-eventgrid.Topic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.filter'
     name: 'filter((value: Topic, index: number, array: Topic[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-eventgrid'
+  - uid: '@azure/arm-eventgrid.TopicsListResult.filter_1'
+    name: 'filter((value: Topic, index: number, array: Topic[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Topic, index: number, array:
+        Topic[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Topic, index: number, array: Topic[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-eventgrid.Topic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.find'
     name: >-
@@ -338,26 +348,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.find_1'
-    name: 'find((value: Topic, index: number, obj: Topic[]) => boolean, any)'
+    name: 'find((value: Topic, index: number, obj: Topic[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Topic, index: number, obj: Topic[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Topic, index: number, obj: Topic[]) => boolean'
+            - '(value: Topic, index: number, obj: Topic[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -367,9 +374,10 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic | undefined'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.findIndex'
-    name: 'findIndex((value: Topic, index: number, obj: Topic[]) => boolean, any)'
+    name: 'findIndex((value: Topic, index: number, obj: Topic[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -382,11 +390,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Topic, index: number, obj:
-        Topic[]) => boolean, thisArg?: any)
+        Topic[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Topic, index: number, obj: Topic[]) => boolean'
+            - '(value: Topic, index: number, obj: Topic[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -408,6 +416,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.forEach'
     name: 'forEach((value: Topic, index: number, array: Topic[]) => void, any)'
@@ -436,6 +445,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-eventgrid'
+  - uid: '@azure/arm-eventgrid.TopicsListResult.includes'
+    name: 'includes(Topic, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Topic, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-eventgrid.Topic'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.indexOf'
     name: 'indexOf(Topic, undefined | number)'
     children: []
@@ -460,6 +497,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.join'
     name: join(undefined | string)
@@ -484,6 +522,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.keys'
     name: keys()
@@ -498,6 +537,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.lastIndexOf'
     name: 'lastIndexOf(Topic, undefined | number)'
@@ -525,6 +565,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.length'
     name: length
@@ -541,6 +582,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.map'
     name: 'map((value: Topic, index: number, array: Topic[]) => U, any)'
@@ -573,6 +615,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.nextLink'
     name: nextLink
@@ -588,6 +631,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.pop'
     name: pop()
@@ -602,6 +646,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic | undefined'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.push'
     name: 'push(Topic[])'
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.reduce'
     name: >-
@@ -651,6 +697,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.reduce_1'
     name: >-
@@ -660,10 +707,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Topic, currentValue: Topic,
@@ -682,6 +726,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.reduce_2'
     name: >-
@@ -719,6 +764,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.reduceRight'
     name: >-
@@ -750,6 +796,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.reduceRight_1'
     name: >-
@@ -759,11 +806,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Topic, currentValue:
@@ -783,6 +826,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.reduceRight_2'
     name: >-
@@ -821,6 +865,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.reverse'
     name: reverse()
@@ -835,6 +880,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.shift'
     name: shift()
@@ -849,6 +895,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic | undefined'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -874,9 +921,10 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.some'
-    name: 'some((value: Topic, index: number, array: Topic[]) => boolean, any)'
+    name: 'some((value: Topic, index: number, array: Topic[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -887,11 +935,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Topic, index: number, array: Topic[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Topic, index: number, array: Topic[]) => boolean'
+            - '(value: Topic, index: number, array: Topic[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -907,6 +955,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.sort'
     name: 'sort(undefined | (a: Topic, b: Topic) => number)'
@@ -929,6 +978,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.splice_1'
     name: 'splice(number, number, Topic[])'
@@ -960,6 +1010,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -988,6 +1039,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.Topic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.toLocaleString'
     name: toLocaleString()
@@ -1004,6 +1056,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.toString'
     name: toString()
@@ -1018,6 +1071,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.unshift'
     name: 'unshift(Topic[])'
@@ -1037,6 +1091,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.TopicsListResult.values'
     name: values()
@@ -1051,6 +1106,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-eventgrid.Topic>
+        description: ''
     package: '@azure/arm-eventgrid'
 references:
   - uid: Array<@azure/arm-eventgrid.Topic>

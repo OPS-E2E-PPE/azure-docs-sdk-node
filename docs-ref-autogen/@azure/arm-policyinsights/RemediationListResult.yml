@@ -11,12 +11,13 @@ items:
       - '@azure/arm-policyinsights.RemediationListResult.entries'
       - '@azure/arm-policyinsights.RemediationListResult.every'
       - '@azure/arm-policyinsights.RemediationListResult.fill'
-      - '@azure/arm-policyinsights.RemediationListResult.filter_1'
       - '@azure/arm-policyinsights.RemediationListResult.filter'
+      - '@azure/arm-policyinsights.RemediationListResult.filter_1'
       - '@azure/arm-policyinsights.RemediationListResult.find'
       - '@azure/arm-policyinsights.RemediationListResult.find_1'
       - '@azure/arm-policyinsights.RemediationListResult.findIndex'
       - '@azure/arm-policyinsights.RemediationListResult.forEach'
+      - '@azure/arm-policyinsights.RemediationListResult.includes'
       - '@azure/arm-policyinsights.RemediationListResult.indexOf'
       - '@azure/arm-policyinsights.RemediationListResult.join'
       - '@azure/arm-policyinsights.RemediationListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.concat'
     name: 'concat(ConcatArray<Remediation>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.every'
     name: >-
       every((value: Remediation, index: number, array: Remediation[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Remediation, index: number, array:
-        Remediation[]) => boolean, thisArg?: any)
+        Remediation[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: Remediation, index: number, array: Remediation[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.fill'
     name: 'fill(Remediation, undefined | number, undefined | number)'
@@ -233,41 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-policyinsights'
-  - uid: '@azure/arm-policyinsights.RemediationListResult.filter_1'
-    name: >-
-      filter((value: Remediation, index: number, array: Remediation[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Remediation, index: number, array:
-        Remediation[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Remediation, index: number, array: Remediation[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-policyinsights.Remediation[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.filter'
     name: >-
@@ -305,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-policyinsights'
+  - uid: '@azure/arm-policyinsights.RemediationListResult.filter_1'
+    name: >-
+      filter((value: Remediation, index: number, array: Remediation[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Remediation, index: number, array:
+        Remediation[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: Remediation, index: number, array: Remediation[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-policyinsights.Remediation[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.find'
     name: >-
@@ -350,28 +362,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.find_1'
     name: >-
-      find((value: Remediation, index: number, obj: Remediation[]) => boolean,
+      find((value: Remediation, index: number, obj: Remediation[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Remediation, index: number, obj:
-        Remediation[]) => boolean, thisArg?: any)
+        Remediation[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Remediation, index: number, obj: Remediation[]) => boolean'
+            - '(value: Remediation, index: number, obj: Remediation[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -381,11 +390,12 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation | undefined'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.findIndex'
     name: >-
       findIndex((value: Remediation, index: number, obj: Remediation[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -398,11 +408,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Remediation, index: number, obj:
-        Remediation[]) => boolean, thisArg?: any)
+        Remediation[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Remediation, index: number, obj: Remediation[]) => boolean'
+            - '(value: Remediation, index: number, obj: Remediation[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -424,6 +434,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.forEach'
     name: >-
@@ -454,6 +465,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-policyinsights'
+  - uid: '@azure/arm-policyinsights.RemediationListResult.includes'
+    name: 'includes(Remediation, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Remediation, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-policyinsights.Remediation'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.indexOf'
     name: 'indexOf(Remediation, undefined | number)'
     children: []
@@ -480,6 +521,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.join'
     name: join(undefined | string)
@@ -504,6 +546,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.keys'
     name: keys()
@@ -518,6 +561,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.lastIndexOf'
     name: 'lastIndexOf(Remediation, undefined | number)'
@@ -545,6 +589,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.length'
     name: length
@@ -561,6 +606,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.map'
     name: 'map((value: Remediation, index: number, array: Remediation[]) => U, any)'
@@ -593,6 +639,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.nextLink'
     name: nextLink
@@ -612,6 +659,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.pop'
     name: pop()
@@ -626,6 +674,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation | undefined'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.push'
     name: 'push(Remediation[])'
@@ -645,6 +694,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.reduce'
     name: >-
@@ -675,6 +725,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.reduce_1'
     name: >-
@@ -684,10 +735,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Remediation, currentValue:
@@ -707,6 +755,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.reduce_2'
     name: >-
@@ -745,6 +794,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.reduceRight'
     name: >-
@@ -777,6 +827,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.reduceRight_1'
     name: >-
@@ -786,11 +837,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Remediation,
@@ -810,6 +857,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.reduceRight_2'
     name: >-
@@ -849,6 +897,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.reverse'
     name: reverse()
@@ -863,6 +912,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.shift'
     name: shift()
@@ -877,6 +927,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation | undefined'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -902,10 +953,11 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.some'
     name: >-
-      some((value: Remediation, index: number, array: Remediation[]) => boolean,
+      some((value: Remediation, index: number, array: Remediation[]) => unknown,
       any)
     children: []
     type: method
@@ -917,13 +969,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Remediation, index: number, array:
-        Remediation[]) => boolean, thisArg?: any)
+        Remediation[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: Remediation, index: number, array: Remediation[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -939,6 +991,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.sort'
     name: 'sort(undefined | (a: Remediation, b: Remediation) => number)'
@@ -963,6 +1016,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.splice_1'
     name: 'splice(number, number, Remediation[])'
@@ -996,6 +1050,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1024,6 +1079,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.Remediation[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.toLocaleString'
     name: toLocaleString()
@@ -1040,6 +1096,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.toString'
     name: toString()
@@ -1054,6 +1111,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.unshift'
     name: 'unshift(Remediation[])'
@@ -1073,6 +1131,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.RemediationListResult.values'
     name: values()
@@ -1087,6 +1146,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-policyinsights.Remediation>
+        description: ''
     package: '@azure/arm-policyinsights'
 references:
   - uid: Array<@azure/arm-policyinsights.Remediation>

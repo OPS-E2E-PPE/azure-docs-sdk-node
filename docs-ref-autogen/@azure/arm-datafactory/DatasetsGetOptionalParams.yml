@@ -13,7 +13,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: '@azure/arm-datafactory'
@@ -31,6 +31,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatasetsGetOptionalParams.customHeaders'
     name: customHeaders
@@ -48,6 +49,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatasetsGetOptionalParams.ifNoneMatch'
     name: ifNoneMatch
@@ -56,13 +58,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      ETag of the dataset entity. Should only be specified for get. If the ETag
+      matches the existing
+
+      entity tag, or if * was provided, then no content will be returned.
     optional: true
     syntax:
       content: 'ifNoneMatch?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatasetsGetOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -80,6 +87,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatasetsGetOptionalParams.onUploadProgress'
     name: onUploadProgress
@@ -95,6 +103,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DatasetsGetOptionalParams.timeout'
     name: timeout
@@ -112,4 +121,5 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-datafactory'

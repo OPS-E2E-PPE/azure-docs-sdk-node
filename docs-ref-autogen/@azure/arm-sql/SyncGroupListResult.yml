@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.SyncGroupListResult.entries'
       - '@azure/arm-sql.SyncGroupListResult.every'
       - '@azure/arm-sql.SyncGroupListResult.fill'
-      - '@azure/arm-sql.SyncGroupListResult.filter_1'
       - '@azure/arm-sql.SyncGroupListResult.filter'
+      - '@azure/arm-sql.SyncGroupListResult.filter_1'
       - '@azure/arm-sql.SyncGroupListResult.find'
       - '@azure/arm-sql.SyncGroupListResult.find_1'
       - '@azure/arm-sql.SyncGroupListResult.findIndex'
       - '@azure/arm-sql.SyncGroupListResult.forEach'
+      - '@azure/arm-sql.SyncGroupListResult.includes'
       - '@azure/arm-sql.SyncGroupListResult.indexOf'
       - '@azure/arm-sql.SyncGroupListResult.join'
       - '@azure/arm-sql.SyncGroupListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.concat'
     name: 'concat(ConcatArray<SyncGroup>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.entries'
     name: entries()
@@ -158,10 +163,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.every'
     name: >-
-      every((value: SyncGroup, index: number, array: SyncGroup[]) => boolean,
+      every((value: SyncGroup, index: number, array: SyncGroup[]) => unknown,
       any)
     children: []
     type: method
@@ -171,11 +177,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: SyncGroup, index: number, array:
-        SyncGroup[]) => boolean, thisArg?: any)
+        SyncGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: SyncGroup, index: number, array: SyncGroup[]) => boolean'
+            - '(value: SyncGroup, index: number, array: SyncGroup[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -191,6 +197,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.fill'
     name: 'fill(SyncGroup, undefined | number, undefined | number)'
@@ -231,39 +238,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.SyncGroupListResult.filter_1'
-    name: 'filter((value: SyncGroup, index: number, array: SyncGroup[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: SyncGroup, index: number, array:
-        SyncGroup[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: SyncGroup, index: number, array: SyncGroup[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.SyncGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.filter'
     name: >-
@@ -299,6 +274,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncGroupListResult.filter_1'
+    name: >-
+      filter((value: SyncGroup, index: number, array: SyncGroup[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: SyncGroup, index: number, array:
+        SyncGroup[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: SyncGroup, index: number, array: SyncGroup[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.SyncGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.find'
     name: >-
@@ -344,26 +356,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.find_1'
-    name: 'find((value: SyncGroup, index: number, obj: SyncGroup[]) => boolean, any)'
+    name: 'find((value: SyncGroup, index: number, obj: SyncGroup[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SyncGroup, index: number, obj:
-        SyncGroup[]) => boolean, thisArg?: any)
+        SyncGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: SyncGroup, index: number, obj: SyncGroup[]) => boolean'
+            - '(value: SyncGroup, index: number, obj: SyncGroup[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -373,10 +382,11 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.findIndex'
     name: >-
-      findIndex((value: SyncGroup, index: number, obj: SyncGroup[]) => boolean,
+      findIndex((value: SyncGroup, index: number, obj: SyncGroup[]) => unknown,
       any)
     children: []
     type: method
@@ -390,11 +400,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: SyncGroup, index: number, obj:
-        SyncGroup[]) => boolean, thisArg?: any)
+        SyncGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: SyncGroup, index: number, obj: SyncGroup[]) => boolean'
+            - '(value: SyncGroup, index: number, obj: SyncGroup[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -416,6 +426,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.forEach'
     name: >-
@@ -446,6 +457,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncGroupListResult.includes'
+    name: 'includes(SyncGroup, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SyncGroup, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.SyncGroup'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.indexOf'
     name: 'indexOf(SyncGroup, undefined | number)'
     children: []
@@ -472,6 +513,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.join'
     name: join(undefined | string)
@@ -496,6 +538,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.keys'
     name: keys()
@@ -510,6 +553,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.lastIndexOf'
     name: 'lastIndexOf(SyncGroup, undefined | number)'
@@ -537,6 +581,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.length'
     name: length
@@ -553,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.map'
     name: 'map((value: SyncGroup, index: number, array: SyncGroup[]) => U, any)'
@@ -585,6 +631,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.nextLink'
     name: nextLink
@@ -604,6 +651,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.pop'
     name: pop()
@@ -618,6 +666,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.push'
     name: 'push(SyncGroup[])'
@@ -637,6 +686,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.reduce'
     name: >-
@@ -667,6 +717,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.reduce_1'
     name: >-
@@ -676,10 +727,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: SyncGroup, currentValue:
@@ -699,6 +747,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.reduce_2'
     name: >-
@@ -737,6 +786,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.reduceRight'
     name: >-
@@ -769,6 +819,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.reduceRight_1'
     name: >-
@@ -778,11 +829,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: SyncGroup,
@@ -802,6 +849,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.reduceRight_2'
     name: >-
@@ -841,6 +889,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.reverse'
     name: reverse()
@@ -855,6 +904,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.shift'
     name: shift()
@@ -869,6 +919,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -894,10 +945,11 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.some'
     name: >-
-      some((value: SyncGroup, index: number, array: SyncGroup[]) => boolean,
+      some((value: SyncGroup, index: number, array: SyncGroup[]) => unknown,
       any)
     children: []
     type: method
@@ -909,11 +961,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: SyncGroup, index: number, array:
-        SyncGroup[]) => boolean, thisArg?: any)
+        SyncGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: SyncGroup, index: number, array: SyncGroup[]) => boolean'
+            - '(value: SyncGroup, index: number, array: SyncGroup[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -929,6 +981,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.sort'
     name: 'sort(undefined | (a: SyncGroup, b: SyncGroup) => number)'
@@ -953,6 +1006,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.splice_1'
     name: 'splice(number, number, SyncGroup[])'
@@ -984,6 +1038,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1012,6 +1067,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.toLocaleString'
     name: toLocaleString()
@@ -1028,6 +1084,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.toString'
     name: toString()
@@ -1042,6 +1099,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.unshift'
     name: 'unshift(SyncGroup[])'
@@ -1061,6 +1119,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupListResult.values'
     name: values()
@@ -1075,6 +1134,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.SyncGroup>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.SyncGroup>

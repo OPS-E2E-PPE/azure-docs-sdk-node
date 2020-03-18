@@ -11,12 +11,13 @@ items:
       - '@azure/arm-batch.ListPoolsResult.entries'
       - '@azure/arm-batch.ListPoolsResult.every'
       - '@azure/arm-batch.ListPoolsResult.fill'
-      - '@azure/arm-batch.ListPoolsResult.filter_1'
       - '@azure/arm-batch.ListPoolsResult.filter'
+      - '@azure/arm-batch.ListPoolsResult.filter_1'
       - '@azure/arm-batch.ListPoolsResult.find'
       - '@azure/arm-batch.ListPoolsResult.find_1'
       - '@azure/arm-batch.ListPoolsResult.findIndex'
       - '@azure/arm-batch.ListPoolsResult.forEach'
+      - '@azure/arm-batch.ListPoolsResult.includes'
       - '@azure/arm-batch.ListPoolsResult.indexOf'
       - '@azure/arm-batch.ListPoolsResult.join'
       - '@azure/arm-batch.ListPoolsResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.concat'
     name: 'concat(ConcatArray<Pool>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool[]'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool[]'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.every'
-    name: 'every((value: Pool, index: number, array: Pool[]) => boolean, any)'
+    name: 'every((value: Pool, index: number, array: Pool[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Pool, index: number, array: Pool[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Pool, index: number, array: Pool[]) => boolean'
+            - '(value: Pool, index: number, array: Pool[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.fill'
     name: 'fill(Pool, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-batch'
-  - uid: '@azure/arm-batch.ListPoolsResult.filter_1'
-    name: 'filter((value: Pool, index: number, array: Pool[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Pool, index: number, array: Pool[])
-        => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Pool, index: number, array: Pool[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-batch.Pool[]'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.filter'
     name: 'filter((value: Pool, index: number, array: Pool[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.ListPoolsResult.filter_1'
+    name: 'filter((value: Pool, index: number, array: Pool[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Pool, index: number, array: Pool[])
+        => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Pool, index: number, array: Pool[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-batch.Pool[]'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.find'
     name: >-
@@ -338,26 +348,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.find_1'
-    name: 'find((value: Pool, index: number, obj: Pool[]) => boolean, any)'
+    name: 'find((value: Pool, index: number, obj: Pool[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Pool, index: number, obj: Pool[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Pool, index: number, obj: Pool[]) => boolean'
+            - '(value: Pool, index: number, obj: Pool[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -367,9 +374,10 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool | undefined'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.findIndex'
-    name: 'findIndex((value: Pool, index: number, obj: Pool[]) => boolean, any)'
+    name: 'findIndex((value: Pool, index: number, obj: Pool[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -382,11 +390,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Pool, index: number, obj: Pool[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Pool, index: number, obj: Pool[]) => boolean'
+            - '(value: Pool, index: number, obj: Pool[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -408,6 +416,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.forEach'
     name: 'forEach((value: Pool, index: number, array: Pool[]) => void, any)'
@@ -436,6 +445,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.ListPoolsResult.includes'
+    name: 'includes(Pool, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Pool, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-batch.Pool'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.indexOf'
     name: 'indexOf(Pool, undefined | number)'
     children: []
@@ -460,6 +497,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.join'
     name: join(undefined | string)
@@ -484,6 +522,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.keys'
     name: keys()
@@ -498,6 +537,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.lastIndexOf'
     name: 'lastIndexOf(Pool, undefined | number)'
@@ -525,6 +565,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.length'
     name: length
@@ -541,6 +582,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.map'
     name: 'map((value: Pool, index: number, array: Pool[]) => U, any)'
@@ -573,6 +615,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.nextLink'
     name: nextLink
@@ -588,6 +631,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.pop'
     name: pop()
@@ -602,6 +646,7 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool | undefined'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.push'
     name: 'push(Pool[])'
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.reduce'
     name: >-
@@ -651,6 +697,7 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.reduce_1'
     name: >-
@@ -660,10 +707,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Pool, currentValue: Pool,
@@ -682,6 +726,7 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.reduce_2'
     name: >-
@@ -719,6 +764,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.reduceRight'
     name: >-
@@ -750,6 +796,7 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.reduceRight_1'
     name: >-
@@ -759,11 +806,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Pool, currentValue:
@@ -782,6 +825,7 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.reduceRight_2'
     name: >-
@@ -820,6 +864,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.reverse'
     name: reverse()
@@ -834,6 +879,7 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool[]'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.shift'
     name: shift()
@@ -848,6 +894,7 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool | undefined'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -873,9 +920,10 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool[]'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.some'
-    name: 'some((value: Pool, index: number, array: Pool[]) => boolean, any)'
+    name: 'some((value: Pool, index: number, array: Pool[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -886,11 +934,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Pool, index: number, array: Pool[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Pool, index: number, array: Pool[]) => boolean'
+            - '(value: Pool, index: number, array: Pool[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -906,6 +954,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.sort'
     name: 'sort(undefined | (a: Pool, b: Pool) => number)'
@@ -928,6 +977,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.splice_1'
     name: 'splice(number, number, Pool[])'
@@ -959,6 +1009,7 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool[]'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.splice'
     name: 'splice(number, undefined | number)'
@@ -987,6 +1038,7 @@ items:
       return:
         type:
           - '@azure/arm-batch.Pool[]'
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.toLocaleString'
     name: toLocaleString()
@@ -1003,6 +1055,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.toString'
     name: toString()
@@ -1017,6 +1070,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.unshift'
     name: 'unshift(Pool[])'
@@ -1036,6 +1090,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-batch'
   - uid: '@azure/arm-batch.ListPoolsResult.values'
     name: values()
@@ -1050,6 +1105,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-batch.Pool>
+        description: ''
     package: '@azure/arm-batch'
 references:
   - uid: Array<@azure/arm-batch.Pool>

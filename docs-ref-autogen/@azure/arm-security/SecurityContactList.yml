@@ -11,12 +11,13 @@ items:
       - '@azure/arm-security.SecurityContactList.entries'
       - '@azure/arm-security.SecurityContactList.every'
       - '@azure/arm-security.SecurityContactList.fill'
-      - '@azure/arm-security.SecurityContactList.filter_1'
       - '@azure/arm-security.SecurityContactList.filter'
+      - '@azure/arm-security.SecurityContactList.filter_1'
       - '@azure/arm-security.SecurityContactList.find'
       - '@azure/arm-security.SecurityContactList.find_1'
       - '@azure/arm-security.SecurityContactList.findIndex'
       - '@azure/arm-security.SecurityContactList.forEach'
+      - '@azure/arm-security.SecurityContactList.includes'
       - '@azure/arm-security.SecurityContactList.indexOf'
       - '@azure/arm-security.SecurityContactList.join'
       - '@azure/arm-security.SecurityContactList.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.concat'
     name: 'concat(ConcatArray<SecurityContact>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.every'
     name: >-
       every((value: SecurityContact, index: number, array: SecurityContact[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: SecurityContact, index: number,
-        array: SecurityContact[]) => boolean, thisArg?: any)
+        array: SecurityContact[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SecurityContact, index: number, array: SecurityContact[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.fill'
     name: 'fill(SecurityContact, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-security'
-  - uid: '@azure/arm-security.SecurityContactList.filter_1'
-    name: >-
-      filter((value: SecurityContact, index: number, array: SecurityContact[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: SecurityContact, index: number,
-        array: SecurityContact[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: SecurityContact, index: number, array: SecurityContact[])
-              => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-security.SecurityContact[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.SecurityContactList.filter_1'
+    name: >-
+      filter((value: SecurityContact, index: number, array: SecurityContact[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: SecurityContact, index: number,
+        array: SecurityContact[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: SecurityContact, index: number, array: SecurityContact[])
+              => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-security.SecurityContact[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.find_1'
     name: >-
       find((value: SecurityContact, index: number, obj: SecurityContact[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SecurityContact, index: number, obj:
-        SecurityContact[]) => boolean, thisArg?: any)
+        SecurityContact[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SecurityContact, index: number, obj: SecurityContact[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.findIndex'
     name: >-
       findIndex((value: SecurityContact, index: number, obj: SecurityContact[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: SecurityContact, index: number,
-        obj: SecurityContact[]) => boolean, thisArg?: any)
+        obj: SecurityContact[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SecurityContact, index: number, obj: SecurityContact[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-security'
+  - uid: '@azure/arm-security.SecurityContactList.includes'
+    name: 'includes(SecurityContact, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SecurityContact, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-security.SecurityContact'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.indexOf'
     name: 'indexOf(SecurityContact, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.lastIndexOf'
     name: 'lastIndexOf(SecurityContact, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.push'
     name: 'push(SecurityContact[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.reduce'
     name: >-
@@ -684,6 +732,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.reduce_1'
     name: >-
@@ -694,10 +743,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: SecurityContact,
@@ -717,6 +763,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.reduce_2'
     name: >-
@@ -755,6 +802,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.reduceRight'
     name: >-
@@ -788,6 +836,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.reduceRight_1'
     name: >-
@@ -798,11 +847,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: SecurityContact,
@@ -822,6 +867,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.reduceRight_2'
     name: >-
@@ -861,6 +907,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.reverse'
     name: reverse()
@@ -875,6 +922,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.shift'
     name: shift()
@@ -889,6 +937,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -914,11 +963,12 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.some'
     name: >-
       some((value: SecurityContact, index: number, array: SecurityContact[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -929,13 +979,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: SecurityContact, index: number, array:
-        SecurityContact[]) => boolean, thisArg?: any)
+        SecurityContact[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SecurityContact, index: number, array: SecurityContact[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -951,6 +1001,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.sort'
     name: 'sort(undefined | (a: SecurityContact, b: SecurityContact) => number)'
@@ -975,6 +1026,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.splice_1'
     name: 'splice(number, number, SecurityContact[])'
@@ -1008,6 +1060,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.splice'
     name: 'splice(number, undefined | number)'
@@ -1036,6 +1089,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityContact[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.toLocaleString'
     name: toLocaleString()
@@ -1052,6 +1106,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.toString'
     name: toString()
@@ -1066,6 +1121,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.unshift'
     name: 'unshift(SecurityContact[])'
@@ -1085,6 +1141,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityContactList.values'
     name: values()
@@ -1099,6 +1156,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-security.SecurityContact>
+        description: ''
     package: '@azure/arm-security'
 references:
   - uid: Array<@azure/arm-security.SecurityContact>

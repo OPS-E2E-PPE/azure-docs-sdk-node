@@ -7,9 +7,12 @@ items:
       - '@azure/arm-network.WebApplicationFirewallPolicy.applicationGateways'
       - '@azure/arm-network.WebApplicationFirewallPolicy.customRules'
       - '@azure/arm-network.WebApplicationFirewallPolicy.etag'
+      - '@azure/arm-network.WebApplicationFirewallPolicy.httpListeners'
       - '@azure/arm-network.WebApplicationFirewallPolicy.id'
       - '@azure/arm-network.WebApplicationFirewallPolicy.location'
+      - '@azure/arm-network.WebApplicationFirewallPolicy.managedRules'
       - '@azure/arm-network.WebApplicationFirewallPolicy.name'
+      - '@azure/arm-network.WebApplicationFirewallPolicy.pathBasedRules'
       - '@azure/arm-network.WebApplicationFirewallPolicy.policySettings'
       - '@azure/arm-network.WebApplicationFirewallPolicy.provisioningState'
       - '@azure/arm-network.WebApplicationFirewallPolicy.resourceState'
@@ -40,6 +43,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateway[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicy.customRules'
     name: customRules
@@ -55,6 +59,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallCustomRule[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicy.etag'
     name: etag
@@ -64,14 +69,37 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets a unique read-only string that changes whenever the resource is
-      updated.
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.WebApplicationFirewallPolicy.httpListeners'
+    name: httpListeners
+    fullName: httpListeners
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A collection of references to application gateway http listeners.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'httpListeners?: SubResource[]'
+      return:
+        type:
+          - '@azure/arm-network.SubResource[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicy.id'
     name: id
@@ -87,6 +115,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicy.location'
     name: location
@@ -102,6 +131,22 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.WebApplicationFirewallPolicy.managedRules'
+    name: managedRules
+    fullName: managedRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Describes the managedRules structure.
+    syntax:
+      content: 'managedRules: ManagedRulesDefinition'
+      return:
+        type:
+          - '@azure/arm-network.ManagedRulesDefinition'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicy.name'
     name: name
@@ -121,6 +166,27 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.WebApplicationFirewallPolicy.pathBasedRules'
+    name: pathBasedRules
+    fullName: pathBasedRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A collection of references to application gateway path rules.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'pathBasedRules?: SubResource[]'
+      return:
+        type:
+          - '@azure/arm-network.SubResource[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicy.policySettings'
     name: policySettings
@@ -136,6 +202,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PolicySettings'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicy.provisioningState'
     name: provisioningState
@@ -145,16 +212,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Provisioning state of the WebApplicationFirewallPolicy.
+      The provisioning state of the web application firewall policy resource.
+      Possible values
+
+      include: 'Succeeded', 'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicy.resourceState'
     name: resourceState
@@ -177,6 +248,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicyResourceState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicy.tags'
     name: tags
@@ -192,6 +264,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicy.type'
     name: type
@@ -211,6 +284,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -235,12 +309,32 @@ references:
         uid: '@azure/arm-network.WebApplicationFirewallCustomRule'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-network.SubResource[]'
+    name: 'SubResource[]'
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-network.ManagedRulesDefinition'
+    name: ManagedRulesDefinition
+    spec.typeScript:
+      - name: ManagedRulesDefinition
+        fullName: ManagedRulesDefinition
+        uid: '@azure/arm-network.ManagedRulesDefinition'
   - uid: '@azure/arm-network.PolicySettings'
     name: PolicySettings
     spec.typeScript:
       - name: PolicySettings
         fullName: PolicySettings
         uid: '@azure/arm-network.PolicySettings'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyResourceState'
     name: WebApplicationFirewallPolicyResourceState
     spec.typeScript:

@@ -13,7 +13,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: AzureWorkload workload-specific backup request.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadBackupRequest.backupType'
     name: backupType
@@ -22,13 +22,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type of backup, viz. Full, Differential, Log or CopyOnlyFull. Possible
+      values include:
+
+      'Invalid', 'Full', 'Differential', 'Log', 'CopyOnlyFull'
     optional: true
     syntax:
       content: 'backupType?: BackupType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadBackupRequest.enableCompression
@@ -38,13 +43,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Bool for Compression setting
     optional: true
     syntax:
       content: 'enableCompression?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadBackupRequest.objectType'
     name: objectType
@@ -53,12 +59,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'objectType: "AzureWorkloadBackupRequest"'
       return:
         type:
           - '"AzureWorkloadBackupRequest"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadBackupRequest.recoveryPointExpiryTimeInUTC
@@ -68,13 +75,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Backup copy will expire after the time specified (UTC).
     optional: true
     syntax:
       content: 'recoveryPointExpiryTimeInUTC?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.BackupType'

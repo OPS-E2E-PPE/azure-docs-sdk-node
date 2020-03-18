@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.entries'
       - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.every'
       - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.fill'
-      - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.filter_1'
       - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.filter'
+      - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.filter_1'
       - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.find'
       - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.find_1'
       - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.findIndex'
       - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.forEach'
+      - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.includes'
       - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.indexOf'
       - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.join'
       - '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.keys'
@@ -68,6 +69,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.concat'
     name: 'concat(ConcatArray<SiteConfigurationSnapshotInfo>[])'
@@ -87,6 +89,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -106,6 +109,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -149,6 +153,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.entries'
     name: entries()
@@ -163,11 +168,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.every'
     name: >-
       every((value: SiteConfigurationSnapshotInfo, index: number, array:
-      SiteConfigurationSnapshotInfo[]) => boolean, any)
+      SiteConfigurationSnapshotInfo[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -176,14 +182,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: SiteConfigurationSnapshotInfo, index:
-        number, array: SiteConfigurationSnapshotInfo[]) => boolean, thisArg?:
+        number, array: SiteConfigurationSnapshotInfo[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SiteConfigurationSnapshotInfo, index: number, array:
-              SiteConfigurationSnapshotInfo[]) => boolean
+              SiteConfigurationSnapshotInfo[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -199,6 +205,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.fill'
     name: >-
@@ -241,44 +248,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.filter_1'
-    name: >-
-      filter((value: SiteConfigurationSnapshotInfo, index: number, array:
-      SiteConfigurationSnapshotInfo[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: SiteConfigurationSnapshotInfo,
-        index: number, array: SiteConfigurationSnapshotInfo[]) => any, thisArg?:
-        any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: SiteConfigurationSnapshotInfo, index: number, array:
-              SiteConfigurationSnapshotInfo[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.SiteConfigurationSnapshotInfo[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.filter'
     name: >-
@@ -317,6 +287,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.filter_1'
+    name: >-
+      filter((value: SiteConfigurationSnapshotInfo, index: number, array:
+      SiteConfigurationSnapshotInfo[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: SiteConfigurationSnapshotInfo,
+        index: number, array: SiteConfigurationSnapshotInfo[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: SiteConfigurationSnapshotInfo, index: number, array:
+              SiteConfigurationSnapshotInfo[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.SiteConfigurationSnapshotInfo[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.find'
     name: >-
@@ -363,30 +373,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.find_1'
     name: >-
       find((value: SiteConfigurationSnapshotInfo, index: number, obj:
-      SiteConfigurationSnapshotInfo[]) => boolean, any)
+      SiteConfigurationSnapshotInfo[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SiteConfigurationSnapshotInfo, index:
-        number, obj: SiteConfigurationSnapshotInfo[]) => boolean, thisArg?: any)
+        number, obj: SiteConfigurationSnapshotInfo[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SiteConfigurationSnapshotInfo, index: number, obj:
-              SiteConfigurationSnapshotInfo[]) => boolean
+              SiteConfigurationSnapshotInfo[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -396,11 +403,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.findIndex'
     name: >-
       findIndex((value: SiteConfigurationSnapshotInfo, index: number, obj:
-      SiteConfigurationSnapshotInfo[]) => boolean, any)
+      SiteConfigurationSnapshotInfo[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -413,14 +421,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: SiteConfigurationSnapshotInfo,
-        index: number, obj: SiteConfigurationSnapshotInfo[]) => boolean,
+        index: number, obj: SiteConfigurationSnapshotInfo[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SiteConfigurationSnapshotInfo, index: number, obj:
-              SiteConfigurationSnapshotInfo[]) => boolean
+              SiteConfigurationSnapshotInfo[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -442,6 +450,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.forEach'
     name: >-
@@ -475,6 +484,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.includes'
+    name: 'includes(SiteConfigurationSnapshotInfo, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SiteConfigurationSnapshotInfo,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.SiteConfigurationSnapshotInfo'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.indexOf'
     name: 'indexOf(SiteConfigurationSnapshotInfo, undefined | number)'
     children: []
@@ -501,6 +540,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.join'
     name: join(undefined | string)
@@ -525,6 +565,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.keys'
     name: keys()
@@ -539,6 +580,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.lastIndexOf'
     name: 'lastIndexOf(SiteConfigurationSnapshotInfo, undefined | number)'
@@ -566,6 +608,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.length'
     name: length
@@ -582,6 +625,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.map'
     name: >-
@@ -619,6 +663,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.nextLink'
     name: nextLink
@@ -638,6 +683,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.pop'
     name: pop()
@@ -652,6 +698,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.push'
     name: 'push(SiteConfigurationSnapshotInfo[])'
@@ -671,6 +718,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.reduce'
     name: >-
@@ -705,6 +753,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.reduce_1'
     name: >-
@@ -716,10 +765,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -742,6 +788,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.reduce_2'
     name: >-
@@ -780,6 +827,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.reduceRight'
     name: >-
@@ -815,6 +863,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: >-
       @azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.reduceRight_1
@@ -827,11 +876,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -854,6 +899,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: >-
       @azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.reduceRight_2
@@ -895,6 +941,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.reverse'
     name: reverse()
@@ -909,6 +956,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.shift'
     name: shift()
@@ -923,6 +971,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -948,11 +997,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.some'
     name: >-
       some((value: SiteConfigurationSnapshotInfo, index: number, array:
-      SiteConfigurationSnapshotInfo[]) => boolean, any)
+      SiteConfigurationSnapshotInfo[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -963,14 +1013,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: SiteConfigurationSnapshotInfo, index:
-        number, array: SiteConfigurationSnapshotInfo[]) => boolean, thisArg?:
+        number, array: SiteConfigurationSnapshotInfo[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SiteConfigurationSnapshotInfo, index: number, array:
-              SiteConfigurationSnapshotInfo[]) => boolean
+              SiteConfigurationSnapshotInfo[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -986,6 +1036,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.sort'
     name: >-
@@ -1014,6 +1065,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.splice_1'
     name: 'splice(number, number, SiteConfigurationSnapshotInfo[])'
@@ -1047,6 +1099,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1075,6 +1128,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.SiteConfigurationSnapshotInfo[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: >-
       @azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.toLocaleString
@@ -1092,6 +1146,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.toString'
     name: toString()
@@ -1106,6 +1161,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.unshift'
     name: 'unshift(SiteConfigurationSnapshotInfo[])'
@@ -1125,6 +1181,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.SiteConfigurationSnapshotInfoCollection.values'
     name: values()
@@ -1140,6 +1197,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-appservice.SiteConfigurationSnapshotInfo>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.SiteConfigurationSnapshotInfo>

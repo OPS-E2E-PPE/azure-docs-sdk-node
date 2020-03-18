@@ -4,6 +4,7 @@ items:
     name: VirtualMachineScaleSetUpdateVMProfile
     fullName: VirtualMachineScaleSetUpdateVMProfile
     children:
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.billingProfile'
       - >-
         @azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.diagnosticsProfile
       - >-
@@ -11,11 +12,33 @@ items:
       - '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.licenseType'
       - '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.networkProfile'
       - '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.osProfile'
+      - >-
+        @azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.scheduledEventsProfile
       - '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.storageProfile'
     langs:
       - typeScript
     type: interface
     summary: Describes a virtual machine scale set virtual machine profile.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.billingProfile'
+    name: billingProfile
+    fullName: billingProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies the billing related details of a Azure Spot VMSS.
+      <br><br>Minimum api-version:
+
+      2019-03-01.
+    optional: true
+    syntax:
+      content: 'billingProfile?: BillingProfile'
+      return:
+        type:
+          - '@azure/arm-compute.BillingProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: >-
       @azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.diagnosticsProfile
@@ -32,6 +55,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.DiagnosticsProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.extensionProfile'
     name: extensionProfile
@@ -47,6 +71,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSetExtensionProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.licenseType'
     name: licenseType
@@ -62,6 +87,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.networkProfile'
     name: networkProfile
@@ -77,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSetUpdateNetworkProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.osProfile'
     name: osProfile
@@ -92,6 +119,24 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSProfile'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: >-
+      @azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.scheduledEventsProfile
+    name: scheduledEventsProfile
+    fullName: scheduledEventsProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specifies Scheduled Event related configurations.
+    optional: true
+    syntax:
+      content: 'scheduledEventsProfile?: ScheduledEventsProfile'
+      return:
+        type:
+          - '@azure/arm-compute.ScheduledEventsProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateVMProfile.storageProfile'
     name: storageProfile
@@ -107,8 +152,15 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSetUpdateStorageProfile'
+        description: ''
     package: '@azure/arm-compute'
 references:
+  - uid: '@azure/arm-compute.BillingProfile'
+    name: BillingProfile
+    spec.typeScript:
+      - name: BillingProfile
+        fullName: BillingProfile
+        uid: '@azure/arm-compute.BillingProfile'
   - uid: '@azure/arm-compute.DiagnosticsProfile'
     name: DiagnosticsProfile
     spec.typeScript:
@@ -133,6 +185,12 @@ references:
       - name: VirtualMachineScaleSetUpdateOSProfile
         fullName: VirtualMachineScaleSetUpdateOSProfile
         uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSProfile'
+  - uid: '@azure/arm-compute.ScheduledEventsProfile'
+    name: ScheduledEventsProfile
+    spec.typeScript:
+      - name: ScheduledEventsProfile
+        fullName: ScheduledEventsProfile
+        uid: '@azure/arm-compute.ScheduledEventsProfile'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateStorageProfile'
     name: VirtualMachineScaleSetUpdateStorageProfile
     spec.typeScript:

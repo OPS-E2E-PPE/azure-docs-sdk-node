@@ -11,12 +11,13 @@ items:
       - '@azure/arm-apimanagement.ApiManagementServiceListResult.entries'
       - '@azure/arm-apimanagement.ApiManagementServiceListResult.every'
       - '@azure/arm-apimanagement.ApiManagementServiceListResult.fill'
-      - '@azure/arm-apimanagement.ApiManagementServiceListResult.filter_1'
       - '@azure/arm-apimanagement.ApiManagementServiceListResult.filter'
+      - '@azure/arm-apimanagement.ApiManagementServiceListResult.filter_1'
       - '@azure/arm-apimanagement.ApiManagementServiceListResult.find'
       - '@azure/arm-apimanagement.ApiManagementServiceListResult.find_1'
       - '@azure/arm-apimanagement.ApiManagementServiceListResult.findIndex'
       - '@azure/arm-apimanagement.ApiManagementServiceListResult.forEach'
+      - '@azure/arm-apimanagement.ApiManagementServiceListResult.includes'
       - '@azure/arm-apimanagement.ApiManagementServiceListResult.indexOf'
       - '@azure/arm-apimanagement.ApiManagementServiceListResult.join'
       - '@azure/arm-apimanagement.ApiManagementServiceListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.concat'
     name: 'concat(ConcatArray<ApiManagementServiceResource>[])'
@@ -83,6 +85,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -102,6 +105,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -145,6 +149,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.entries'
     name: entries()
@@ -159,11 +164,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.every'
     name: >-
       every((value: ApiManagementServiceResource, index: number, array:
-      ApiManagementServiceResource[]) => boolean, any)
+      ApiManagementServiceResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -172,14 +178,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ApiManagementServiceResource, index:
-        number, array: ApiManagementServiceResource[]) => boolean, thisArg?:
+        number, array: ApiManagementServiceResource[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ApiManagementServiceResource, index: number, array:
-              ApiManagementServiceResource[]) => boolean
+              ApiManagementServiceResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -195,6 +201,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.fill'
     name: 'fill(ApiManagementServiceResource, undefined | number, undefined | number)'
@@ -235,43 +242,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.filter_1'
-    name: >-
-      filter((value: ApiManagementServiceResource, index: number, array:
-      ApiManagementServiceResource[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ApiManagementServiceResource, index:
-        number, array: ApiManagementServiceResource[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ApiManagementServiceResource, index: number, array:
-              ApiManagementServiceResource[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-apimanagement.ApiManagementServiceResource[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.filter'
     name: >-
@@ -310,6 +281,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.filter_1'
+    name: >-
+      filter((value: ApiManagementServiceResource, index: number, array:
+      ApiManagementServiceResource[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ApiManagementServiceResource, index:
+        number, array: ApiManagementServiceResource[]) => unknown, thisArg?:
+        any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ApiManagementServiceResource, index: number, array:
+              ApiManagementServiceResource[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-apimanagement.ApiManagementServiceResource[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.find'
     name: >-
@@ -356,30 +367,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.find_1'
     name: >-
       find((value: ApiManagementServiceResource, index: number, obj:
-      ApiManagementServiceResource[]) => boolean, any)
+      ApiManagementServiceResource[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ApiManagementServiceResource, index:
-        number, obj: ApiManagementServiceResource[]) => boolean, thisArg?: any)
+        number, obj: ApiManagementServiceResource[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ApiManagementServiceResource, index: number, obj:
-              ApiManagementServiceResource[]) => boolean
+              ApiManagementServiceResource[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -389,11 +397,12 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource | undefined'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.findIndex'
     name: >-
       findIndex((value: ApiManagementServiceResource, index: number, obj:
-      ApiManagementServiceResource[]) => boolean, any)
+      ApiManagementServiceResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -406,14 +415,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ApiManagementServiceResource,
-        index: number, obj: ApiManagementServiceResource[]) => boolean,
+        index: number, obj: ApiManagementServiceResource[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ApiManagementServiceResource, index: number, obj:
-              ApiManagementServiceResource[]) => boolean
+              ApiManagementServiceResource[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -435,6 +444,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.forEach'
     name: >-
@@ -468,6 +478,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.includes'
+    name: 'includes(ApiManagementServiceResource, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ApiManagementServiceResource,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceResource'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.indexOf'
     name: 'indexOf(ApiManagementServiceResource, undefined | number)'
     children: []
@@ -494,6 +534,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.join'
     name: join(undefined | string)
@@ -518,6 +559,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.keys'
     name: keys()
@@ -532,6 +574,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.lastIndexOf'
     name: 'lastIndexOf(ApiManagementServiceResource, undefined | number)'
@@ -559,6 +602,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.length'
     name: length
@@ -575,6 +619,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.map'
     name: >-
@@ -611,6 +656,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.nextLink'
     name: nextLink
@@ -630,6 +676,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.pop'
     name: pop()
@@ -644,6 +691,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource | undefined'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.push'
     name: 'push(ApiManagementServiceResource[])'
@@ -663,6 +711,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.reduce'
     name: >-
@@ -697,6 +746,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.reduce_1'
     name: >-
@@ -708,10 +758,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -734,6 +781,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.reduce_2'
     name: >-
@@ -772,6 +820,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.reduceRight'
     name: >-
@@ -807,6 +856,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.reduceRight_1'
     name: >-
@@ -818,11 +868,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -845,6 +891,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.reduceRight_2'
     name: >-
@@ -884,6 +931,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.reverse'
     name: reverse()
@@ -898,6 +946,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.shift'
     name: shift()
@@ -912,6 +961,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource | undefined'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -937,11 +987,12 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.some'
     name: >-
       some((value: ApiManagementServiceResource, index: number, array:
-      ApiManagementServiceResource[]) => boolean, any)
+      ApiManagementServiceResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -952,14 +1003,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ApiManagementServiceResource, index:
-        number, array: ApiManagementServiceResource[]) => boolean, thisArg?:
+        number, array: ApiManagementServiceResource[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ApiManagementServiceResource, index: number, array:
-              ApiManagementServiceResource[]) => boolean
+              ApiManagementServiceResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -975,6 +1026,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.sort'
     name: >-
@@ -1003,6 +1055,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.splice_1'
     name: 'splice(number, number, ApiManagementServiceResource[])'
@@ -1036,6 +1089,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1064,6 +1118,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.ApiManagementServiceResource[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.toLocaleString'
     name: toLocaleString()
@@ -1080,6 +1135,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.toString'
     name: toString()
@@ -1094,6 +1150,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.unshift'
     name: 'unshift(ApiManagementServiceResource[])'
@@ -1113,6 +1170,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.ApiManagementServiceListResult.values'
     name: values()
@@ -1128,6 +1186,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-apimanagement.ApiManagementServiceResource>
+        description: ''
     package: '@azure/arm-apimanagement'
 references:
   - uid: Array<@azure/arm-apimanagement.ApiManagementServiceResource>

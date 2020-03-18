@@ -39,6 +39,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosCustomPolicy.id'
     name: id
@@ -54,6 +55,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosCustomPolicy.location'
     name: location
@@ -69,6 +71,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosCustomPolicy.name'
     name: name
@@ -88,6 +91,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosCustomPolicy.protocolCustomSettings'
     name: protocolCustomSettings
@@ -103,6 +107,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ProtocolCustomSettingsFormat[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosCustomPolicy.provisioningState'
     name: provisioningState
@@ -113,18 +118,19 @@ items:
     type: property
     summary: >-
       The provisioning state of the DDoS custom policy resource. Possible values
-      are: 'Succeeded',
+      include:
 
-      'Updating', 'Deleting', and 'Failed'.
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosCustomPolicy.publicIPAddresses'
     name: publicIPAddresses
@@ -147,6 +153,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosCustomPolicy.resourceGuid'
     name: resourceGuid
@@ -172,6 +179,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosCustomPolicy.tags'
     name: tags
@@ -187,6 +195,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.DdosCustomPolicy.type'
     name: type
@@ -206,6 +215,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -222,6 +232,12 @@ references:
         uid: '@azure/arm-network.ProtocolCustomSettingsFormat'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.SubResource[]'
     name: 'SubResource[]'
     spec.typeScript:

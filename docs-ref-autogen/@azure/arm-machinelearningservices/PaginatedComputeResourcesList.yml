@@ -13,14 +13,16 @@ items:
       - '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.entries'
       - '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.every'
       - '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.fill'
+      - '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.filter'
       - >-
         @azure/arm-machinelearningservices.PaginatedComputeResourcesList.filter_1
-      - '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.filter'
       - '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.find'
       - '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.find_1'
       - >-
         @azure/arm-machinelearningservices.PaginatedComputeResourcesList.findIndex
       - '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.forEach'
+      - >-
+        @azure/arm-machinelearningservices.PaginatedComputeResourcesList.includes
       - '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.indexOf'
       - '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.join'
       - '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.keys'
@@ -77,6 +79,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.concat'
     name: 'concat(ConcatArray<ComputeResource>[])'
@@ -96,6 +99,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource[]'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -115,6 +119,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource[]'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: >-
       @azure/arm-machinelearningservices.PaginatedComputeResourcesList.copyWithin
@@ -159,6 +164,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.entries'
     name: entries()
@@ -173,11 +179,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.every'
     name: >-
       every((value: ComputeResource, index: number, array: ComputeResource[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -186,13 +193,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ComputeResource, index: number,
-        array: ComputeResource[]) => boolean, thisArg?: any)
+        array: ComputeResource[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ComputeResource, index: number, array: ComputeResource[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -208,6 +215,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.fill'
     name: 'fill(ComputeResource, undefined | number, undefined | number)'
@@ -248,43 +256,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-machinelearningservices'
-  - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.filter_1'
-    name: >-
-      filter((value: ComputeResource, index: number, array: ComputeResource[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ComputeResource, index: number,
-        array: ComputeResource[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ComputeResource, index: number, array: ComputeResource[])
-              => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-machinelearningservices.ComputeResource[]'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.filter'
     name: >-
@@ -322,6 +294,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.filter_1'
+    name: >-
+      filter((value: ComputeResource, index: number, array: ComputeResource[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ComputeResource, index: number,
+        array: ComputeResource[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ComputeResource, index: number, array: ComputeResource[])
+              => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.ComputeResource[]'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.find'
     name: >-
@@ -367,30 +378,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.find_1'
     name: >-
       find((value: ComputeResource, index: number, obj: ComputeResource[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ComputeResource, index: number, obj:
-        ComputeResource[]) => boolean, thisArg?: any)
+        ComputeResource[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ComputeResource, index: number, obj: ComputeResource[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -400,11 +408,12 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource | undefined'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.findIndex'
     name: >-
       findIndex((value: ComputeResource, index: number, obj: ComputeResource[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -417,13 +426,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ComputeResource, index: number,
-        obj: ComputeResource[]) => boolean, thisArg?: any)
+        obj: ComputeResource[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ComputeResource, index: number, obj: ComputeResource[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -445,6 +454,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.forEach'
     name: >-
@@ -477,6 +487,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.includes'
+    name: 'includes(ComputeResource, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ComputeResource, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-machinelearningservices.ComputeResource'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.indexOf'
     name: 'indexOf(ComputeResource, undefined | number)'
     children: []
@@ -503,6 +543,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.join'
     name: join(undefined | string)
@@ -527,6 +568,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.keys'
     name: keys()
@@ -541,6 +583,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: >-
       @azure/arm-machinelearningservices.PaginatedComputeResourcesList.lastIndexOf
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.length'
     name: length
@@ -585,6 +629,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.map'
     name: >-
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.nextLink'
     name: nextLink
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.pop'
     name: pop()
@@ -652,6 +699,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource | undefined'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.push'
     name: 'push(ComputeResource[])'
@@ -671,6 +719,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.reduce'
     name: >-
@@ -702,6 +751,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.reduce_1'
     name: >-
@@ -712,10 +762,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ComputeResource,
@@ -735,6 +782,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.reduce_2'
     name: >-
@@ -773,6 +821,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: >-
       @azure/arm-machinelearningservices.PaginatedComputeResourcesList.reduceRight
@@ -807,6 +856,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: >-
       @azure/arm-machinelearningservices.PaginatedComputeResourcesList.reduceRight_1
@@ -818,11 +868,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ComputeResource,
@@ -842,6 +888,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: >-
       @azure/arm-machinelearningservices.PaginatedComputeResourcesList.reduceRight_2
@@ -882,6 +929,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.reverse'
     name: reverse()
@@ -896,6 +944,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource[]'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.shift'
     name: shift()
@@ -910,6 +959,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource | undefined'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -935,11 +985,12 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource[]'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.some'
     name: >-
       some((value: ComputeResource, index: number, array: ComputeResource[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -950,13 +1001,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ComputeResource, index: number, array:
-        ComputeResource[]) => boolean, thisArg?: any)
+        ComputeResource[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ComputeResource, index: number, array: ComputeResource[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -972,6 +1023,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.sort'
     name: 'sort(undefined | (a: ComputeResource, b: ComputeResource) => number)'
@@ -996,6 +1048,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.splice_1'
     name: 'splice(number, number, ComputeResource[])'
@@ -1029,6 +1082,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource[]'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.splice'
     name: 'splice(number, undefined | number)'
@@ -1057,6 +1111,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningservices.ComputeResource[]'
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: >-
       @azure/arm-machinelearningservices.PaginatedComputeResourcesList.toLocaleString
@@ -1074,6 +1129,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.toString'
     name: toString()
@@ -1088,6 +1144,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.unshift'
     name: 'unshift(ComputeResource[])'
@@ -1107,6 +1164,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.PaginatedComputeResourcesList.values'
     name: values()
@@ -1121,6 +1179,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-machinelearningservices.ComputeResource>
+        description: ''
     package: '@azure/arm-machinelearningservices'
 references:
   - uid: Array<@azure/arm-machinelearningservices.ComputeResource>

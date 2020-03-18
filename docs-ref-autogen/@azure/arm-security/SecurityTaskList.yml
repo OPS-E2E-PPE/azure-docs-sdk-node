@@ -11,12 +11,13 @@ items:
       - '@azure/arm-security.SecurityTaskList.entries'
       - '@azure/arm-security.SecurityTaskList.every'
       - '@azure/arm-security.SecurityTaskList.fill'
-      - '@azure/arm-security.SecurityTaskList.filter_1'
       - '@azure/arm-security.SecurityTaskList.filter'
+      - '@azure/arm-security.SecurityTaskList.filter_1'
       - '@azure/arm-security.SecurityTaskList.find'
       - '@azure/arm-security.SecurityTaskList.find_1'
       - '@azure/arm-security.SecurityTaskList.findIndex'
       - '@azure/arm-security.SecurityTaskList.forEach'
+      - '@azure/arm-security.SecurityTaskList.includes'
       - '@azure/arm-security.SecurityTaskList.indexOf'
       - '@azure/arm-security.SecurityTaskList.join'
       - '@azure/arm-security.SecurityTaskList.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.concat'
     name: 'concat(ConcatArray<SecurityTask>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.every'
     name: >-
       every((value: SecurityTask, index: number, array: SecurityTask[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: SecurityTask, index: number, array:
-        SecurityTask[]) => boolean, thisArg?: any)
+        SecurityTask[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SecurityTask, index: number, array: SecurityTask[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.fill'
     name: 'fill(SecurityTask, undefined | number, undefined | number)'
@@ -233,41 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-security'
-  - uid: '@azure/arm-security.SecurityTaskList.filter_1'
-    name: >-
-      filter((value: SecurityTask, index: number, array: SecurityTask[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: SecurityTask, index: number, array:
-        SecurityTask[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: SecurityTask, index: number, array: SecurityTask[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-security.SecurityTask[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.filter'
     name: >-
@@ -305,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.SecurityTaskList.filter_1'
+    name: >-
+      filter((value: SecurityTask, index: number, array: SecurityTask[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: SecurityTask, index: number, array:
+        SecurityTask[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: SecurityTask, index: number, array: SecurityTask[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-security.SecurityTask[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.find'
     name: >-
@@ -350,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.find_1'
     name: >-
-      find((value: SecurityTask, index: number, obj: SecurityTask[]) => boolean,
+      find((value: SecurityTask, index: number, obj: SecurityTask[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SecurityTask, index: number, obj:
-        SecurityTask[]) => boolean, thisArg?: any)
+        SecurityTask[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SecurityTask, index: number, obj: SecurityTask[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -383,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.findIndex'
     name: >-
       findIndex((value: SecurityTask, index: number, obj: SecurityTask[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -400,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: SecurityTask, index: number, obj:
-        SecurityTask[]) => boolean, thisArg?: any)
+        SecurityTask[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SecurityTask, index: number, obj: SecurityTask[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -428,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.forEach'
     name: >-
@@ -460,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-security'
+  - uid: '@azure/arm-security.SecurityTaskList.includes'
+    name: 'includes(SecurityTask, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SecurityTask, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-security.SecurityTask'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.indexOf'
     name: 'indexOf(SecurityTask, undefined | number)'
     children: []
@@ -486,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.join'
     name: join(undefined | string)
@@ -510,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.keys'
     name: keys()
@@ -524,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.lastIndexOf'
     name: 'lastIndexOf(SecurityTask, undefined | number)'
@@ -551,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.length'
     name: length
@@ -567,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.map'
     name: 'map((value: SecurityTask, index: number, array: SecurityTask[]) => U, any)'
@@ -599,6 +645,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.nextLink'
     name: nextLink
@@ -614,6 +661,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.pop'
     name: pop()
@@ -628,6 +676,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.push'
     name: 'push(SecurityTask[])'
@@ -647,6 +696,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.reduce'
     name: >-
@@ -678,6 +728,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.reduce_1'
     name: >-
@@ -688,10 +739,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: SecurityTask, currentValue:
@@ -711,6 +759,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.reduce_2'
     name: >-
@@ -749,6 +798,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.reduceRight'
     name: >-
@@ -781,6 +831,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.reduceRight_1'
     name: >-
@@ -791,11 +842,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: SecurityTask,
@@ -815,6 +862,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.reduceRight_2'
     name: >-
@@ -854,6 +902,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.reverse'
     name: reverse()
@@ -868,6 +917,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.shift'
     name: shift()
@@ -882,6 +932,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask | undefined'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -907,11 +958,12 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.some'
     name: >-
       some((value: SecurityTask, index: number, array: SecurityTask[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -922,13 +974,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: SecurityTask, index: number, array:
-        SecurityTask[]) => boolean, thisArg?: any)
+        SecurityTask[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SecurityTask, index: number, array: SecurityTask[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -944,6 +996,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.sort'
     name: 'sort(undefined | (a: SecurityTask, b: SecurityTask) => number)'
@@ -968,6 +1021,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.splice_1'
     name: 'splice(number, number, SecurityTask[])'
@@ -1001,6 +1055,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.splice'
     name: 'splice(number, undefined | number)'
@@ -1029,6 +1084,7 @@ items:
       return:
         type:
           - '@azure/arm-security.SecurityTask[]'
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.toLocaleString'
     name: toLocaleString()
@@ -1045,6 +1101,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.toString'
     name: toString()
@@ -1059,6 +1116,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.unshift'
     name: 'unshift(SecurityTask[])'
@@ -1078,6 +1136,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-security'
   - uid: '@azure/arm-security.SecurityTaskList.values'
     name: values()
@@ -1092,6 +1151,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-security.SecurityTask>
+        description: ''
     package: '@azure/arm-security'
 references:
   - uid: Array<@azure/arm-security.SecurityTask>

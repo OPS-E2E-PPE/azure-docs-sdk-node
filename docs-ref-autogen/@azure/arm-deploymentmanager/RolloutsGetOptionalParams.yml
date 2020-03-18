@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: '@azure/arm-deploymentmanager'
@@ -32,6 +32,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.RolloutsGetOptionalParams.customHeaders'
     name: customHeaders
@@ -49,6 +50,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.RolloutsGetOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -66,6 +68,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.RolloutsGetOptionalParams.onUploadProgress'
     name: onUploadProgress
@@ -81,6 +84,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.RolloutsGetOptionalParams.retryAttempt'
     name: retryAttempt
@@ -89,13 +93,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Rollout retry attempt ordinal to get the result of. If not specified,
+      result of the latest
+
+      attempt will be returned.
     optional: true
     syntax:
       content: 'retryAttempt?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.RolloutsGetOptionalParams.timeout'
     name: timeout
@@ -113,4 +122,5 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-deploymentmanager'

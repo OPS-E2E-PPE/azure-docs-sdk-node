@@ -8,11 +8,15 @@ items:
         @azure/arm-recoveryservicesbackup.ExportJobsOperationResultInfo.blobSasKey
       - '@azure/arm-recoveryservicesbackup.ExportJobsOperationResultInfo.blobUrl'
       - >-
+        @azure/arm-recoveryservicesbackup.ExportJobsOperationResultInfo.excelFileBlobSasKey
+      - >-
+        @azure/arm-recoveryservicesbackup.ExportJobsOperationResultInfo.excelFileBlobUrl
+      - >-
         @azure/arm-recoveryservicesbackup.ExportJobsOperationResultInfo.objectType
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: This class is used to send blob details after exporting jobs.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ExportJobsOperationResultInfo.blobSasKey'
     name: blobSasKey
@@ -21,13 +25,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: SAS key to access the blob. It expires in 15 mins.
     optional: true
     syntax:
       content: 'blobSasKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ExportJobsOperationResultInfo.blobUrl'
     name: blobUrl
@@ -36,13 +41,50 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      URL of the blob into which the serialized string of list of jobs is
+      exported.
     optional: true
     syntax:
       content: 'blobUrl?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: >-
+      @azure/arm-recoveryservicesbackup.ExportJobsOperationResultInfo.excelFileBlobSasKey
+    name: excelFileBlobSasKey
+    fullName: excelFileBlobSasKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: SAS key to access the blob. It expires in 15 mins.
+    optional: true
+    syntax:
+      content: 'excelFileBlobSasKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: >-
+      @azure/arm-recoveryservicesbackup.ExportJobsOperationResultInfo.excelFileBlobUrl
+    name: excelFileBlobUrl
+    fullName: excelFileBlobUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: URL of the blob into which the ExcelFile is uploaded.
+    optional: true
+    syntax:
+      content: 'excelFileBlobUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ExportJobsOperationResultInfo.objectType'
     name: objectType
@@ -51,10 +93,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'objectType: "ExportJobsOperationResultInfo"'
       return:
         type:
           - '"ExportJobsOperationResultInfo"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'

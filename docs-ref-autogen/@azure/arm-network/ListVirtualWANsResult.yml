@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.ListVirtualWANsResult.entries'
       - '@azure/arm-network.ListVirtualWANsResult.every'
       - '@azure/arm-network.ListVirtualWANsResult.fill'
-      - '@azure/arm-network.ListVirtualWANsResult.filter_1'
       - '@azure/arm-network.ListVirtualWANsResult.filter'
+      - '@azure/arm-network.ListVirtualWANsResult.filter_1'
       - '@azure/arm-network.ListVirtualWANsResult.find'
       - '@azure/arm-network.ListVirtualWANsResult.find_1'
       - '@azure/arm-network.ListVirtualWANsResult.findIndex'
       - '@azure/arm-network.ListVirtualWANsResult.forEach'
+      - '@azure/arm-network.ListVirtualWANsResult.includes'
       - '@azure/arm-network.ListVirtualWANsResult.indexOf'
       - '@azure/arm-network.ListVirtualWANsResult.join'
       - '@azure/arm-network.ListVirtualWANsResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.concat'
     name: 'concat(ConcatArray<VirtualWAN>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.entries'
     name: entries()
@@ -158,10 +163,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.every'
     name: >-
-      every((value: VirtualWAN, index: number, array: VirtualWAN[]) => boolean,
+      every((value: VirtualWAN, index: number, array: VirtualWAN[]) => unknown,
       any)
     children: []
     type: method
@@ -171,11 +177,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: VirtualWAN, index: number, array:
-        VirtualWAN[]) => boolean, thisArg?: any)
+        VirtualWAN[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: VirtualWAN, index: number, array: VirtualWAN[]) => boolean'
+            - '(value: VirtualWAN, index: number, array: VirtualWAN[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -191,6 +197,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.fill'
     name: 'fill(VirtualWAN, undefined | number, undefined | number)'
@@ -231,41 +238,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ListVirtualWANsResult.filter_1'
-    name: >-
-      filter((value: VirtualWAN, index: number, array: VirtualWAN[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: VirtualWAN, index: number, array:
-        VirtualWAN[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: VirtualWAN, index: number, array: VirtualWAN[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.VirtualWAN[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.filter'
     name: >-
@@ -301,6 +274,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ListVirtualWANsResult.filter_1'
+    name: >-
+      filter((value: VirtualWAN, index: number, array: VirtualWAN[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: VirtualWAN, index: number, array:
+        VirtualWAN[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: VirtualWAN, index: number, array: VirtualWAN[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.VirtualWAN[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.find'
     name: >-
@@ -346,28 +356,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.find_1'
     name: >-
-      find((value: VirtualWAN, index: number, obj: VirtualWAN[]) => boolean,
+      find((value: VirtualWAN, index: number, obj: VirtualWAN[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: VirtualWAN, index: number, obj:
-        VirtualWAN[]) => boolean, thisArg?: any)
+        VirtualWAN[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: VirtualWAN, index: number, obj: VirtualWAN[]) => boolean'
+            - '(value: VirtualWAN, index: number, obj: VirtualWAN[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -377,11 +384,12 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.findIndex'
     name: >-
       findIndex((value: VirtualWAN, index: number, obj: VirtualWAN[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -394,11 +402,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: VirtualWAN, index: number, obj:
-        VirtualWAN[]) => boolean, thisArg?: any)
+        VirtualWAN[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: VirtualWAN, index: number, obj: VirtualWAN[]) => boolean'
+            - '(value: VirtualWAN, index: number, obj: VirtualWAN[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -420,6 +428,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.forEach'
     name: >-
@@ -450,6 +459,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ListVirtualWANsResult.includes'
+    name: 'includes(VirtualWAN, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: VirtualWAN, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.VirtualWAN'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.indexOf'
     name: 'indexOf(VirtualWAN, undefined | number)'
     children: []
@@ -476,6 +515,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.join'
     name: join(undefined | string)
@@ -500,6 +540,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.keys'
     name: keys()
@@ -514,6 +555,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.lastIndexOf'
     name: 'lastIndexOf(VirtualWAN, undefined | number)'
@@ -541,6 +583,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.length'
     name: length
@@ -557,6 +600,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.map'
     name: 'map((value: VirtualWAN, index: number, array: VirtualWAN[]) => U, any)'
@@ -589,6 +633,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.nextLink'
     name: nextLink
@@ -604,6 +649,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.pop'
     name: pop()
@@ -618,6 +664,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.push'
     name: 'push(VirtualWAN[])'
@@ -637,6 +684,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.reduce_2'
     name: >-
@@ -675,6 +723,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.reduce'
     name: >-
@@ -705,6 +754,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.reduce_1'
     name: >-
@@ -714,10 +764,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: VirtualWAN, currentValue:
@@ -737,6 +784,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.reduceRight_2'
     name: >-
@@ -776,6 +824,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.reduceRight'
     name: >-
@@ -808,6 +857,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.reduceRight_1'
     name: >-
@@ -817,11 +867,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: VirtualWAN,
@@ -841,6 +887,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.reverse'
     name: reverse()
@@ -855,6 +902,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.shift'
     name: shift()
@@ -869,6 +917,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -894,10 +943,11 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.some'
     name: >-
-      some((value: VirtualWAN, index: number, array: VirtualWAN[]) => boolean,
+      some((value: VirtualWAN, index: number, array: VirtualWAN[]) => unknown,
       any)
     children: []
     type: method
@@ -909,11 +959,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: VirtualWAN, index: number, array:
-        VirtualWAN[]) => boolean, thisArg?: any)
+        VirtualWAN[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: VirtualWAN, index: number, array: VirtualWAN[]) => boolean'
+            - '(value: VirtualWAN, index: number, array: VirtualWAN[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -929,6 +979,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.sort'
     name: 'sort(undefined | (a: VirtualWAN, b: VirtualWAN) => number)'
@@ -953,6 +1004,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.splice_1'
     name: 'splice(number, number, VirtualWAN[])'
@@ -984,6 +1036,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1012,6 +1065,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWAN[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.toLocaleString'
     name: toLocaleString()
@@ -1028,6 +1082,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.toString'
     name: toString()
@@ -1042,6 +1097,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.unshift'
     name: 'unshift(VirtualWAN[])'
@@ -1061,6 +1117,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVirtualWANsResult.values'
     name: values()
@@ -1075,6 +1132,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-network.VirtualWAN>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.VirtualWAN>

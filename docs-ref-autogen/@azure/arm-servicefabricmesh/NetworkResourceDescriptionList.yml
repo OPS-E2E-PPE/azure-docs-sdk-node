@@ -11,12 +11,13 @@ items:
       - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.entries'
       - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.every'
       - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.fill'
-      - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.filter_1'
       - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.filter'
+      - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.filter_1'
       - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.find'
       - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.find_1'
       - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.findIndex'
       - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.forEach'
+      - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.includes'
       - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.indexOf'
       - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.join'
       - '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.keys'
@@ -66,6 +67,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.concat'
     name: 'concat(ConcatArray<NetworkResourceDescription>[])'
@@ -86,6 +88,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -105,6 +108,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -148,6 +152,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.entries'
     name: entries()
@@ -162,11 +167,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.every'
     name: >-
       every((value: NetworkResourceDescription, index: number, array:
-      NetworkResourceDescription[]) => boolean, any)
+      NetworkResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -175,13 +181,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: NetworkResourceDescription, index:
-        number, array: NetworkResourceDescription[]) => boolean, thisArg?: any)
+        number, array: NetworkResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: NetworkResourceDescription, index: number, array:
-              NetworkResourceDescription[]) => boolean
+              NetworkResourceDescription[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -197,6 +203,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.fill'
     name: 'fill(NetworkResourceDescription, undefined | number, undefined | number)'
@@ -237,43 +244,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-servicefabricmesh'
-  - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.filter_1'
-    name: >-
-      filter((value: NetworkResourceDescription, index: number, array:
-      NetworkResourceDescription[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: NetworkResourceDescription, index:
-        number, array: NetworkResourceDescription[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: NetworkResourceDescription, index: number, array:
-              NetworkResourceDescription[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-servicefabricmesh.NetworkResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.filter'
     name: >-
@@ -312,6 +283,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-servicefabricmesh'
+  - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.filter_1'
+    name: >-
+      filter((value: NetworkResourceDescription, index: number, array:
+      NetworkResourceDescription[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: NetworkResourceDescription, index:
+        number, array: NetworkResourceDescription[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: NetworkResourceDescription, index: number, array:
+              NetworkResourceDescription[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-servicefabricmesh.NetworkResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.find'
     name: >-
@@ -358,30 +368,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.find_1'
     name: >-
       find((value: NetworkResourceDescription, index: number, obj:
-      NetworkResourceDescription[]) => boolean, any)
+      NetworkResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: NetworkResourceDescription, index:
-        number, obj: NetworkResourceDescription[]) => boolean, thisArg?: any)
+        number, obj: NetworkResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: NetworkResourceDescription, index: number, obj:
-              NetworkResourceDescription[]) => boolean
+              NetworkResourceDescription[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -391,11 +398,12 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription | undefined'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.findIndex'
     name: >-
       findIndex((value: NetworkResourceDescription, index: number, obj:
-      NetworkResourceDescription[]) => boolean, any)
+      NetworkResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -408,13 +416,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: NetworkResourceDescription, index:
-        number, obj: NetworkResourceDescription[]) => boolean, thisArg?: any)
+        number, obj: NetworkResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: NetworkResourceDescription, index: number, obj:
-              NetworkResourceDescription[]) => boolean
+              NetworkResourceDescription[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -436,6 +444,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.forEach'
     name: >-
@@ -468,6 +477,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-servicefabricmesh'
+  - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.includes'
+    name: 'includes(NetworkResourceDescription, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: NetworkResourceDescription, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-servicefabricmesh.NetworkResourceDescription'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.indexOf'
     name: 'indexOf(NetworkResourceDescription, undefined | number)'
     children: []
@@ -494,6 +533,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.join'
     name: join(undefined | string)
@@ -518,6 +558,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.keys'
     name: keys()
@@ -532,6 +573,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.lastIndexOf'
     name: 'lastIndexOf(NetworkResourceDescription, undefined | number)'
@@ -559,6 +601,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.length'
     name: length
@@ -575,6 +618,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.map'
     name: >-
@@ -611,6 +655,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.nextLink'
     name: nextLink
@@ -626,6 +671,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.pop'
     name: pop()
@@ -640,6 +686,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription | undefined'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.push'
     name: 'push(NetworkResourceDescription[])'
@@ -659,6 +706,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.reduce'
     name: >-
@@ -692,6 +740,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.reduce_1'
     name: >-
@@ -703,10 +752,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: NetworkResourceDescription,
@@ -728,6 +774,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.reduce_2'
     name: >-
@@ -766,6 +813,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.reduceRight'
     name: >-
@@ -801,6 +849,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.reduceRight_1'
     name: >-
@@ -812,11 +861,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -838,6 +883,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.reduceRight_2'
     name: >-
@@ -877,6 +923,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.reverse'
     name: reverse()
@@ -891,6 +938,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.shift'
     name: shift()
@@ -905,6 +953,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription | undefined'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -930,11 +979,12 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.some'
     name: >-
       some((value: NetworkResourceDescription, index: number, array:
-      NetworkResourceDescription[]) => boolean, any)
+      NetworkResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -945,13 +995,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: NetworkResourceDescription, index:
-        number, array: NetworkResourceDescription[]) => boolean, thisArg?: any)
+        number, array: NetworkResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: NetworkResourceDescription, index: number, array:
-              NetworkResourceDescription[]) => boolean
+              NetworkResourceDescription[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -967,6 +1017,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.sort'
     name: >-
@@ -995,6 +1046,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.splice_1'
     name: 'splice(number, number, NetworkResourceDescription[])'
@@ -1028,6 +1080,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.splice'
     name: 'splice(number, undefined | number)'
@@ -1056,6 +1109,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.NetworkResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.toLocaleString'
     name: toLocaleString()
@@ -1072,6 +1126,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.toString'
     name: toString()
@@ -1086,6 +1141,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.unshift'
     name: 'unshift(NetworkResourceDescription[])'
@@ -1105,6 +1161,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.NetworkResourceDescriptionList.values'
     name: values()
@@ -1120,6 +1177,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-servicefabricmesh.NetworkResourceDescription>
+        description: ''
     package: '@azure/arm-servicefabricmesh'
 references:
   - uid: Array<@azure/arm-servicefabricmesh.NetworkResourceDescription>

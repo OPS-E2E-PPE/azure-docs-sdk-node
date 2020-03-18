@@ -52,6 +52,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.calculate'
     name: 'calculate(PurchaseRequest, msRest.RequestOptionsBase)'
@@ -77,6 +78,7 @@ items:
       return:
         type:
           - Promise<Models.ReservationOrderCalculateResponse>
+        description: Promise<Models.ReservationOrderCalculateResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.calculate_2'
     name: >-
@@ -105,9 +107,6 @@ items:
             - ServiceCallback<@azure/arm-reservations.CalculatePriceResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ReservationOrderCalculateResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.calculate_1'
     name: 'calculate(PurchaseRequest, ServiceCallback<CalculatePriceResponse>)'
@@ -130,12 +129,9 @@ items:
             - ServiceCallback<@azure/arm-reservations.CalculatePriceResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ReservationOrderCalculateResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.get'
-    name: 'get(string, msRest.RequestOptionsBase)'
+    name: 'get(string, Models.ReservationOrderGetOptionalParams)'
     children: []
     type: method
     langs:
@@ -144,7 +140,7 @@ items:
     syntax:
       content: >-
         function get(reservationOrderId: string, options?:
-        msRest.RequestOptionsBase)
+        Models.ReservationOrderGetOptionalParams)
       parameters:
         - id: reservationOrderId
           type:
@@ -152,15 +148,18 @@ items:
           description: Order Id of the reservation
         - id: options
           type:
-            - msRest.RequestOptionsBase
+            - Models.ReservationOrderGetOptionalParams
           description: ''
           optional: true
       return:
         type:
           - Promise<Models.ReservationOrderGetResponse>
+        description: Promise<Models.ReservationOrderGetResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.get_2'
-    name: 'get(string, RequestOptionsBase, ServiceCallback<ReservationOrderResponse>)'
+    name: >-
+      get(string, ReservationOrderGetOptionalParams,
+      ServiceCallback<ReservationOrderResponse>)
     children: []
     type: method
     langs:
@@ -168,8 +167,9 @@ items:
     summary: ''
     syntax:
       content: >-
-        function get(reservationOrderId: string, options: RequestOptionsBase,
-        callback: ServiceCallback<ReservationOrderResponse>)
+        function get(reservationOrderId: string, options:
+        ReservationOrderGetOptionalParams, callback:
+        ServiceCallback<ReservationOrderResponse>)
       parameters:
         - id: reservationOrderId
           type:
@@ -177,16 +177,13 @@ items:
           description: Order Id of the reservation
         - id: options
           type:
-            - RequestOptionsBase
+            - '@azure/arm-reservations.ReservationOrderGetOptionalParams'
           description: The optional parameters
         - id: callback
           type:
             - ServiceCallback<@azure/arm-reservations.ReservationOrderResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ReservationOrderGetResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.get_1'
     name: 'get(string, ServiceCallback<ReservationOrderResponse>)'
@@ -209,9 +206,6 @@ items:
             - ServiceCallback<@azure/arm-reservations.ReservationOrderResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ReservationOrderGetResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.list'
     name: list(msRest.RequestOptionsBase)
@@ -233,6 +227,7 @@ items:
       return:
         type:
           - Promise<Models.ReservationOrderListResponse>
+        description: Promise<Models.ReservationOrderListResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.list_2'
     name: 'list(RequestOptionsBase, ServiceCallback<ReservationOrderList>)'
@@ -255,9 +250,6 @@ items:
             - ServiceCallback<@azure/arm-reservations.ReservationOrderList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ReservationOrderListResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.list_1'
     name: list(ServiceCallback<ReservationOrderList>)
@@ -274,9 +266,6 @@ items:
             - ServiceCallback<@azure/arm-reservations.ReservationOrderList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ReservationOrderListResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -304,6 +293,7 @@ items:
       return:
         type:
           - Promise<Models.ReservationOrderListNextResponse>
+        description: Promise<Models.ReservationOrderListNextResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.listNext_2'
     name: >-
@@ -332,9 +322,6 @@ items:
             - ServiceCallback<@azure/arm-reservations.ReservationOrderList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ReservationOrderListNextResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.listNext_1'
     name: 'listNext(string, ServiceCallback<ReservationOrderList>)'
@@ -357,9 +344,6 @@ items:
             - ServiceCallback<@azure/arm-reservations.ReservationOrderList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ReservationOrderListNextResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.purchase'
     name: 'purchase(string, PurchaseRequest, msRest.RequestOptionsBase)'
@@ -389,6 +373,7 @@ items:
       return:
         type:
           - Promise<Models.ReservationOrderPurchaseResponse>
+        description: Promise<Models.ReservationOrderPurchaseResponse>
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.ReservationOrder.constructor'
     name: ReservationOrder(AzureReservationAPIContext)
@@ -439,6 +424,12 @@ references:
         uid: '@azure/arm-reservations.ReservationOrderResponse'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-reservations.ReservationOrderGetOptionalParams'
+    name: ReservationOrderGetOptionalParams
+    spec.typeScript:
+      - name: ReservationOrderGetOptionalParams
+        fullName: ReservationOrderGetOptionalParams
+        uid: '@azure/arm-reservations.ReservationOrderGetOptionalParams'
   - uid: ServiceCallback<@azure/arm-reservations.ReservationOrderList>
     name: ReservationOrderList>
     spec.typeScript:

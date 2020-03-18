@@ -21,6 +21,9 @@ items:
       - '@azure/arm-network.ConnectionMonitors.query'
       - '@azure/arm-network.ConnectionMonitors.start'
       - '@azure/arm-network.ConnectionMonitors.stop'
+      - '@azure/arm-network.ConnectionMonitors.updateTags'
+      - '@azure/arm-network.ConnectionMonitors.updateTags_2'
+      - '@azure/arm-network.ConnectionMonitors.updateTags_1'
     langs:
       - typeScript
     type: class
@@ -65,6 +68,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
@@ -99,6 +103,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.beginQuery'
     name: 'beginQuery(string, string, string, msRest.RequestOptionsBase)'
@@ -133,6 +138,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.beginStart'
     name: 'beginStart(string, string, string, msRest.RequestOptionsBase)'
@@ -167,6 +173,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.beginStop'
     name: 'beginStop(string, string, string, msRest.RequestOptionsBase)'
@@ -201,6 +208,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.constructor'
     name: ConnectionMonitors(NetworkManagementClientContext)
@@ -257,6 +265,7 @@ items:
       return:
         type:
           - Promise<Models.ConnectionMonitorsCreateOrUpdateResponse>
+        description: Promise<Models.ConnectionMonitorsCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.deleteMethod'
     name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
@@ -291,6 +300,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.get'
     name: 'get(string, string, string, msRest.RequestOptionsBase)'
@@ -324,6 +334,7 @@ items:
       return:
         type:
           - Promise<Models.ConnectionMonitorsGetResponse>
+        description: Promise<Models.ConnectionMonitorsGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.get_2'
     name: >-
@@ -361,9 +372,6 @@ items:
             - ServiceCallback<@azure/arm-network.ConnectionMonitorResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ConnectionMonitorsGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.get_1'
     name: 'get(string, string, string, ServiceCallback<ConnectionMonitorResult>)'
@@ -395,9 +403,6 @@ items:
             - ServiceCallback<@azure/arm-network.ConnectionMonitorResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ConnectionMonitorsGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.list'
     name: 'list(string, string, msRest.RequestOptionsBase)'
@@ -427,6 +432,7 @@ items:
       return:
         type:
           - Promise<Models.ConnectionMonitorsListResponse>
+        description: Promise<Models.ConnectionMonitorsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.list_2'
     name: >-
@@ -460,9 +466,6 @@ items:
             - ServiceCallback<@azure/arm-network.ConnectionMonitorListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ConnectionMonitorsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.list_1'
     name: 'list(string, string, ServiceCallback<ConnectionMonitorListResult>)'
@@ -489,9 +492,6 @@ items:
             - ServiceCallback<@azure/arm-network.ConnectionMonitorListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ConnectionMonitorsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.query'
     name: 'query(string, string, string, msRest.RequestOptionsBase)'
@@ -525,6 +525,7 @@ items:
       return:
         type:
           - Promise<Models.ConnectionMonitorsQueryResponse>
+        description: Promise<Models.ConnectionMonitorsQueryResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.start'
     name: 'start(string, string, string, msRest.RequestOptionsBase)'
@@ -558,6 +559,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ConnectionMonitors.stop'
     name: 'stop(string, string, string, msRest.RequestOptionsBase)'
@@ -591,6 +593,124 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ConnectionMonitors.updateTags'
+    name: 'updateTags(string, string, string, TagsObject, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Update tags of the specified connection monitor.
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, networkWatcherName:
+        string, connectionMonitorName: string, parameters: TagsObject, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: networkWatcherName
+          type:
+            - string
+          description: The name of the network watcher.
+        - id: connectionMonitorName
+          type:
+            - string
+          description: The name of the connection monitor.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update connection monitor tags.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ConnectionMonitorsUpdateTagsResponse>
+        description: Promise<Models.ConnectionMonitorsUpdateTagsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ConnectionMonitors.updateTags_2'
+    name: >-
+      updateTags(string, string, string, TagsObject, RequestOptionsBase,
+      ServiceCallback<ConnectionMonitorResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, networkWatcherName:
+        string, connectionMonitorName: string, parameters: TagsObject, options:
+        RequestOptionsBase, callback: ServiceCallback<ConnectionMonitorResult>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: networkWatcherName
+          type:
+            - string
+          description: The name of the network watcher.
+        - id: connectionMonitorName
+          type:
+            - string
+          description: The name of the connection monitor.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update connection monitor tags.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.ConnectionMonitorResult>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ConnectionMonitors.updateTags_1'
+    name: >-
+      updateTags(string, string, string, TagsObject,
+      ServiceCallback<ConnectionMonitorResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, networkWatcherName:
+        string, connectionMonitorName: string, parameters: TagsObject, callback:
+        ServiceCallback<ConnectionMonitorResult>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: networkWatcherName
+          type:
+            - string
+          description: The name of the network watcher.
+        - id: connectionMonitorName
+          type:
+            - string
+          description: The name of the connection monitor.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update connection monitor tags.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.ConnectionMonitorResult>
+          description: |
+            The callback
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -625,3 +745,9 @@ references:
         uid: '@azure/arm-network.ConnectionMonitorListResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'

@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.RouteListResult.entries'
       - '@azure/arm-network.RouteListResult.every'
       - '@azure/arm-network.RouteListResult.fill'
-      - '@azure/arm-network.RouteListResult.filter_1'
       - '@azure/arm-network.RouteListResult.filter'
+      - '@azure/arm-network.RouteListResult.filter_1'
       - '@azure/arm-network.RouteListResult.find'
       - '@azure/arm-network.RouteListResult.find_1'
       - '@azure/arm-network.RouteListResult.findIndex'
       - '@azure/arm-network.RouteListResult.forEach'
+      - '@azure/arm-network.RouteListResult.includes'
       - '@azure/arm-network.RouteListResult.indexOf'
       - '@azure/arm-network.RouteListResult.join'
       - '@azure/arm-network.RouteListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.concat'
     name: 'concat(ConcatArray<Route>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Route[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Route[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.every'
-    name: 'every((value: Route, index: number, array: Route[]) => boolean, any)'
+    name: 'every((value: Route, index: number, array: Route[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Route, index: number, array: Route[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Route, index: number, array: Route[]) => boolean'
+            - '(value: Route, index: number, array: Route[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.fill'
     name: 'fill(Route, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.RouteListResult.filter_1'
-    name: 'filter((value: Route, index: number, array: Route[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Route, index: number, array:
-        Route[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Route, index: number, array: Route[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.Route[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.filter'
     name: 'filter((value: Route, index: number, array: Route[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.RouteListResult.filter_1'
+    name: 'filter((value: Route, index: number, array: Route[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Route, index: number, array:
+        Route[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Route, index: number, array: Route[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.Route[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.find'
     name: >-
@@ -338,26 +348,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.find_1'
-    name: 'find((value: Route, index: number, obj: Route[]) => boolean, any)'
+    name: 'find((value: Route, index: number, obj: Route[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Route, index: number, obj: Route[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Route, index: number, obj: Route[]) => boolean'
+            - '(value: Route, index: number, obj: Route[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -367,9 +374,10 @@ items:
       return:
         type:
           - '@azure/arm-network.Route | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.findIndex'
-    name: 'findIndex((value: Route, index: number, obj: Route[]) => boolean, any)'
+    name: 'findIndex((value: Route, index: number, obj: Route[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -382,11 +390,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Route, index: number, obj:
-        Route[]) => boolean, thisArg?: any)
+        Route[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Route, index: number, obj: Route[]) => boolean'
+            - '(value: Route, index: number, obj: Route[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -408,6 +416,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.forEach'
     name: 'forEach((value: Route, index: number, array: Route[]) => void, any)'
@@ -436,6 +445,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.RouteListResult.includes'
+    name: 'includes(Route, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Route, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.Route'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.indexOf'
     name: 'indexOf(Route, undefined | number)'
     children: []
@@ -460,6 +497,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.join'
     name: join(undefined | string)
@@ -484,6 +522,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.keys'
     name: keys()
@@ -498,6 +537,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.lastIndexOf'
     name: 'lastIndexOf(Route, undefined | number)'
@@ -525,6 +565,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.length'
     name: length
@@ -541,6 +582,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.map'
     name: 'map((value: Route, index: number, array: Route[]) => U, any)'
@@ -573,6 +615,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.nextLink'
     name: nextLink
@@ -588,6 +631,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.pop'
     name: pop()
@@ -602,6 +646,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Route | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.push'
     name: 'push(Route[])'
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.reduce'
     name: >-
@@ -651,6 +697,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Route'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.reduce_1'
     name: >-
@@ -660,10 +707,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Route, currentValue: Route,
@@ -682,6 +726,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Route'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.reduce_2'
     name: >-
@@ -719,6 +764,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.reduceRight'
     name: >-
@@ -750,6 +796,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Route'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.reduceRight_1'
     name: >-
@@ -759,11 +806,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Route, currentValue:
@@ -783,6 +826,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Route'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.reduceRight_2'
     name: >-
@@ -821,6 +865,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.reverse'
     name: reverse()
@@ -835,6 +880,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Route[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.shift'
     name: shift()
@@ -849,6 +895,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Route | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -874,9 +921,10 @@ items:
       return:
         type:
           - '@azure/arm-network.Route[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.some'
-    name: 'some((value: Route, index: number, array: Route[]) => boolean, any)'
+    name: 'some((value: Route, index: number, array: Route[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -887,11 +935,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Route, index: number, array: Route[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Route, index: number, array: Route[]) => boolean'
+            - '(value: Route, index: number, array: Route[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -907,6 +955,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.sort'
     name: 'sort(undefined | (a: Route, b: Route) => number)'
@@ -929,6 +978,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.splice_1'
     name: 'splice(number, number, Route[])'
@@ -960,6 +1010,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Route[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -988,6 +1039,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Route[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.toLocaleString'
     name: toLocaleString()
@@ -1004,6 +1056,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.toString'
     name: toString()
@@ -1018,6 +1071,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.unshift'
     name: 'unshift(Route[])'
@@ -1037,6 +1091,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteListResult.values'
     name: values()
@@ -1051,6 +1106,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-network.Route>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.Route>

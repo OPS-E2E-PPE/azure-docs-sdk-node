@@ -12,7 +12,14 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      A WebLinkedService that uses client certificate based authentication to
+      communicate with an HTTP
+
+      endpoint. This scheme follows mutual authentication; the server must also
+      provide valid
+
+      credentials to the client.
     package: '@azure/arm-datafactory'
   - uid: >-
       @azure/arm-datafactory.WebClientCertificateAuthentication.authenticationType
@@ -22,12 +29,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'authenticationType: "ClientCertificate"'
       return:
         type:
           - '"ClientCertificate"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebClientCertificateAuthentication.password'
     name: password
@@ -36,12 +44,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Password for the PFX file.
     syntax:
       content: 'password: SecretBaseUnion'
       return:
         type:
           - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebClientCertificateAuthentication.pfx'
     name: pfx
@@ -50,12 +59,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Base64-encoded contents of a PFX file.
     syntax:
       content: 'pfx: SecretBaseUnion'
       return:
         type:
           - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebClientCertificateAuthentication.url'
     name: url
@@ -64,12 +74,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The URL of the web service endpoint, e.g. http://www.microsoft.com . Type:
+      string (or
+
+      Expression with resultType string).
     syntax:
       content: 'url: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.SecretBaseUnion'

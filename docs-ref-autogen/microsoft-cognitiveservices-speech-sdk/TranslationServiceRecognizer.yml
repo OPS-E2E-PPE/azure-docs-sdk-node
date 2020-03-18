@@ -5,13 +5,23 @@ items:
     fullName: TranslationServiceRecognizer
     children:
       - >-
+        microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.activityTemplate
+      - >-
+        microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.agentConfig
+      - >-
         microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.audioSource
       - >-
         microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.connect
       - >-
+        microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.connectAsync
+      - >-
         microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.connectionEvents
       - >-
+        microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.conversationTranslatorToken
+      - >-
         microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.disconnect
+      - >-
+        microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.disconnectAsync
       - >-
         microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.dispose
       - >-
@@ -22,6 +32,10 @@ items:
         microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.recognitionMode
       - >-
         microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.recognize
+      - >-
+        microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.sendMessage
+      - >-
+        microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.serviceEvents
       - >-
         microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.speechContext
       - >-
@@ -40,6 +54,38 @@ items:
       name: microsoft-cognitiveservices-speech-sdk.ServiceRecognizerBase
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
+      microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.activityTemplate
+    name: activityTemplate
+    fullName: activityTemplate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string activityTemplate
+      return:
+        type:
+          - string
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.agentConfig
+    name: agentConfig
+    fullName: agentConfig
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: AgentConfig agentConfig
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.AgentConfig
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.audioSource
     name: audioSource
     fullName: audioSource
@@ -49,10 +95,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'audioSource: IAudioSource'
+      content: IAudioSource audioSource
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.IAudioSource
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.connect
@@ -67,6 +114,28 @@ items:
       parameters: []
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
+      microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.connectAsync
+    name: 'connectAsync(Callback, Callback)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function connectAsync(cb?: Callback, err?: Callback)'
+      parameters:
+        - id: cb
+          type:
+            - microsoft-cognitiveservices-speech-sdk.Callback
+          description: ''
+          optional: true
+        - id: err
+          type:
+            - microsoft-cognitiveservices-speech-sdk.Callback
+          description: ''
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.connectionEvents
     name: connectionEvents
     fullName: connectionEvents
@@ -76,11 +145,28 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'connectionEvents: EventSource<ConnectionEvent>'
+      content: EventSource<ConnectionEvent> connectionEvents
       return:
         type:
           - >-
             microsoft-cognitiveservices-speech-sdk.EventSource<microsoft-cognitiveservices-speech-sdk.ConnectionEvent>
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.conversationTranslatorToken
+    name: conversationTranslatorToken
+    fullName: conversationTranslatorToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: any conversationTranslatorToken
+      return:
+        type:
+          - any
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.disconnect
@@ -93,6 +179,28 @@ items:
     syntax:
       content: function disconnect()
       parameters: []
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.disconnectAsync
+    name: 'disconnectAsync(Callback, Callback)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disconnectAsync(cb?: Callback, err?: Callback)'
+      parameters:
+        - id: cb
+          type:
+            - microsoft-cognitiveservices-speech-sdk.Callback
+          description: ''
+          optional: true
+        - id: err
+          type:
+            - microsoft-cognitiveservices-speech-sdk.Callback
+          description: ''
+          optional: true
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.dispose
@@ -121,10 +229,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'dynamicGrammar: DynamicGrammarBuilder'
+      content: DynamicGrammarBuilder dynamicGrammar
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.DynamicGrammarBuilder
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.isDisposed
@@ -140,6 +249,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.recognitionMode
@@ -151,10 +261,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'recognitionMode: RecognitionMode'
+      content: RecognitionMode recognitionMode
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.RecognitionMode
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.recognize
@@ -186,6 +297,40 @@ items:
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.Promise<boolean>
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.sendMessage
+    name: sendMessage(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function sendMessage(message: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.serviceEvents
+    name: serviceEvents
+    fullName: serviceEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: EventSource<ServiceEvent> serviceEvents
+      return:
+        type:
+          - >-
+            microsoft-cognitiveservices-speech-sdk.EventSource<microsoft-cognitiveservices-speech-sdk.ServiceEvent>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.speechContext
@@ -197,10 +342,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'speechContext: SpeechContext'
+      content: SpeechContext speechContext
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.SpeechContext
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.stopRecognizing
@@ -213,6 +359,10 @@ items:
     syntax:
       content: function stopRecognizing()
       parameters: []
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.Promise<boolean>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.telemetryData
@@ -228,6 +378,7 @@ items:
       return:
         type:
           - '(json: string) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.telemetryDataEnabled
@@ -243,6 +394,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer.constructor
@@ -319,6 +471,12 @@ references:
       - name: TranslationRecognizer
         fullName: TranslationRecognizer
         uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer
+  - uid: microsoft-cognitiveservices-speech-sdk.AgentConfig
+    name: AgentConfig
+    spec.typeScript:
+      - name: AgentConfig
+        fullName: AgentConfig
+        uid: microsoft-cognitiveservices-speech-sdk.AgentConfig
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.EventSource<microsoft-cognitiveservices-speech-sdk.ConnectionEvent>
     name: ConnectionEvent>
@@ -345,12 +503,32 @@ references:
       - name: RecognitionMode
         fullName: RecognitionMode
         uid: microsoft-cognitiveservices-speech-sdk.RecognitionMode
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.EventSource<microsoft-cognitiveservices-speech-sdk.ServiceEvent>
+    name: ServiceEvent>
+    spec.typeScript:
+      - name: EventSource
+        fullName: EventSource
+        uid: microsoft-cognitiveservices-speech-sdk.EventSource
+      - name: <
+        fullName: <
+      - name: ServiceEvent
+        fullName: ServiceEvent
+        uid: microsoft-cognitiveservices-speech-sdk.ServiceEvent
+      - name: '>'
+        fullName: '>'
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechContext
     name: SpeechContext
     spec.typeScript:
       - name: SpeechContext
         fullName: SpeechContext
         uid: microsoft-cognitiveservices-speech-sdk.SpeechContext
+  - uid: microsoft-cognitiveservices-speech-sdk.Callback
+    name: Callback
+    spec.typeScript:
+      - name: Callback
+        fullName: Callback
+        uid: microsoft-cognitiveservices-speech-sdk.Callback
   - uid: microsoft-cognitiveservices-speech-sdk.Promise<boolean>
     name: Promise<boolean>
     spec.typeScript:

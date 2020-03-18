@@ -7,6 +7,8 @@ items:
       - >-
         @azure/servicefabric.ApplicationUpgradeDescription.applicationHealthPolicy
       - '@azure/servicefabric.ApplicationUpgradeDescription.forceRestart'
+      - >-
+        @azure/servicefabric.ApplicationUpgradeDescription.instanceCloseDelayDurationInSeconds
       - '@azure/servicefabric.ApplicationUpgradeDescription.monitoringPolicy'
       - '@azure/servicefabric.ApplicationUpgradeDescription.name'
       - '@azure/servicefabric.ApplicationUpgradeDescription.parameters'
@@ -59,6 +61,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.ApplicationHealthPolicy'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ApplicationUpgradeDescription.forceRestart'
     name: forceRestart
@@ -78,6 +81,47 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
+    package: '@azure/servicefabric'
+  - uid: >-
+      @azure/servicefabric.ApplicationUpgradeDescription.instanceCloseDelayDurationInSeconds
+    name: instanceCloseDelayDurationInSeconds
+    fullName: instanceCloseDelayDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Duration in seconds, to wait before a stateless instance is closed, to
+      allow the active
+
+      requests to drain gracefully. This would be effective when the instance is
+      closing during the
+
+      application/cluster
+
+      upgrade, only for those instances which have a non-zero delay duration
+      configured in the
+
+      service description. See InstanceCloseDelayDurationSeconds property in
+      $ref:
+
+      "#/definitions/StatelessServiceDescription.yaml" for details.
+
+      Note, the default value of InstanceCloseDelayDurationInSeconds is
+      4294967295, which indicates
+
+      that the behavior will entirely depend on the delay configured in the
+      stateless service
+
+      description.
+    optional: true
+    syntax:
+      content: 'instanceCloseDelayDurationInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ApplicationUpgradeDescription.monitoringPolicy'
     name: monitoringPolicy
@@ -93,6 +137,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.MonitoringPolicyDescription'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ApplicationUpgradeDescription.name'
     name: name
@@ -107,6 +152,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ApplicationUpgradeDescription.parameters'
     name: parameters
@@ -126,6 +172,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.ApplicationParameter[]'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ApplicationUpgradeDescription.rollingUpgradeMode'
     name: rollingUpgradeMode
@@ -148,6 +195,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.UpgradeMode'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ApplicationUpgradeDescription.sortOrder'
     name: sortOrder
@@ -169,6 +217,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.UpgradeSortOrder'
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.ApplicationUpgradeDescription.targetApplicationTypeVersion
@@ -188,6 +237,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ApplicationUpgradeDescription.upgradeKind'
     name: upgradeKind
@@ -206,6 +256,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.UpgradeKind'
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.ApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds
@@ -235,6 +286,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/servicefabric'
 references:
   - uid: '@azure/servicefabric.ApplicationHealthPolicy'

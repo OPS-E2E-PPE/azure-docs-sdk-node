@@ -12,6 +12,7 @@ items:
       - '@azure/service-bus.Sender.scheduleMessages'
       - '@azure/service-bus.Sender.send'
       - '@azure/service-bus.Sender.sendBatch'
+      - '@azure/service-bus.Sender.constructor'
     langs:
       - typeScript
     type: class
@@ -45,6 +46,7 @@ items:
       return:
         type:
           - Promise<void>
+        description: Promise<void>
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Sender.cancelScheduledMessages'
     name: 'cancelScheduledMessages(Long[])'
@@ -65,6 +67,7 @@ items:
       return:
         type:
           - Promise<void>
+        description: Promise<void>
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Sender.close'
     name: close()
@@ -85,6 +88,7 @@ items:
       return:
         type:
           - Promise<void>
+        description: ''
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Sender.isClosed'
     name: isClosed
@@ -97,10 +101,11 @@ items:
       Returns `true` if either the sender or the client that created it has been
       closed
     syntax:
-      content: 'isClosed: boolean'
+      content: boolean isClosed
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Sender.scheduleMessage'
     name: 'scheduleMessage(Date, SendableMessageInfo)'
@@ -108,9 +113,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
+    summary: >
       Schedules given message to appear on Service Bus Queue/Subscription at a
       later time.
+
+      Please note that you need to explicitly encode the message body if you
+      intend to receive the message using a tool or library other than this
+      library.
+
+      For example:
+       1. Import DefaultDataTransformer and instantiate.
+           ```js
+             const dt = new DefaultDataTransformer();
+           ```
+       2. Use the `encode` method on the transformer to encode the message body before calling the scheduleMessage() method
+           ```js
+             message.body = dt.encode(message.body);
+           ```
     syntax:
       content: >-
         function scheduleMessage(scheduledEnqueueTimeUtc: Date, message:
@@ -127,6 +146,17 @@ items:
       return:
         type:
           - Promise<Long>
+        description: >-
+          Promise<Long> - The sequence number of the message that was scheduled.
+
+          You will need the sequence number if you intend to cancel the
+          scheduling of the message.
+
+          Save the `Long` type as-is in your application without converting to
+          number. Since JavaScript
+
+          only supports 53 bit numbers, converting the `Long` to number will
+          cause loss in precision.
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Sender.scheduleMessages'
     name: 'scheduleMessages(Date, SendableMessageInfo[])'
@@ -134,9 +164,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
+    summary: >
       Schedules given messages to appear on Service Bus Queue/Subscription at a
       later time.
+
+      Please note that you need to explicitly encode the message body if you
+      intend to receive the message using a tool or library other than this
+      library.
+
+      For example:
+       1. Import DefaultDataTransformer and instantiate.
+           ```js
+             const dt = new DefaultDataTransformer();
+           ```
+       2. Use the `encode` method on the transformer to encode the message body before calling the scheduleMessage() method
+           ```js
+             message.body = dt.encode(message.body);
+           ```
     syntax:
       content: >-
         function scheduleMessages(scheduledEnqueueTimeUtc: Date, messages:
@@ -153,6 +197,18 @@ items:
       return:
         type:
           - 'Promise<Long[]>'
+        description: >-
+          Promise<Long[]> - The sequence numbers of messages that were
+          scheduled.
+
+          You will need the sequence number if you intend to cancel the
+          scheduling of the messages.
+
+          Save the `Long` type as-is in your application without converting to
+          number. Since JavaScript
+
+          only supports 53 bit numbers, converting the `Long` to number will
+          cause loss in precision.
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Sender.send'
     name: send(SendableMessageInfo)
@@ -178,6 +234,7 @@ items:
       return:
         type:
           - Promise<void>
+        description: Promise<void>
     package: '@azure/service-bus'
   - uid: '@azure/service-bus.Sender.sendBatch'
     name: 'sendBatch(SendableMessageInfo[])'
@@ -214,8 +271,30 @@ items:
       return:
         type:
           - Promise<void>
+        description: Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.constructor'
+    name: Sender(ClientEntityContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new Sender(context: ClientEntityContext)'
+      parameters:
+        - id: context
+          type:
+            - '@azure/service-bus.ClientEntityContext'
+          description: ''
     package: '@azure/service-bus'
 references:
+  - uid: '@azure/service-bus.ClientEntityContext'
+    name: ClientEntityContext
+    spec.typeScript:
+      - name: ClientEntityContext
+        fullName: ClientEntityContext
+        uid: '@azure/service-bus.ClientEntityContext'
   - uid: '@azure/service-bus.SendableMessageInfo'
     name: SendableMessageInfo
     spec.typeScript:

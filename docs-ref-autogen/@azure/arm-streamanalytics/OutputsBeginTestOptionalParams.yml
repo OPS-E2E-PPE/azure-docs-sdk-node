@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: '@azure/arm-streamanalytics'
@@ -33,6 +33,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.OutputsBeginTestOptionalParams.customHeaders'
     name: customHeaders
@@ -50,6 +51,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.OutputsBeginTestOptionalParams.onDownloadProgress
@@ -68,6 +70,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.OutputsBeginTestOptionalParams.onUploadProgress'
     name: onUploadProgress
@@ -83,6 +86,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.OutputsBeginTestOptionalParams.output'
     name: output
@@ -91,13 +95,27 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      If the output specified does not already exist, this parameter must
+      contain the full output
+
+      definition intended to be tested. If the output specified already exists,
+      this parameter can
+
+      be left null to test the existing output as is or if specified, the
+      properties specified will
+
+      overwrite the corresponding properties in the existing output (exactly
+      like a PATCH operation)
+
+      and the resulting output will be tested.
     optional: true
     syntax:
       content: 'output?: Output'
       return:
         type:
           - '@azure/arm-streamanalytics.Output'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.OutputsBeginTestOptionalParams.timeout'
     name: timeout
@@ -115,6 +133,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-streamanalytics'
 references:
   - uid: '@azure/arm-streamanalytics.Output'

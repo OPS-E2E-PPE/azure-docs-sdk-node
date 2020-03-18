@@ -9,7 +9,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Notification preference for a job stage.
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.NotificationPreference.sendNotification'
     name: sendNotification
@@ -18,12 +18,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Notification is required or not.
     syntax:
       content: 'sendNotification: boolean'
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.NotificationPreference.stageName'
     name: stageName
@@ -32,12 +33,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Name of the stage. Possible values include: 'DevicePrepared',
+      'Dispatched', 'Delivered',
+
+      'PickedUp', 'AtAzureDC', 'DataCopy'
     syntax:
       content: 'stageName: NotificationStageName'
       return:
         type:
           - '@azure/arm-databox.NotificationStageName'
+        description: ''
     package: '@azure/arm-databox'
 references:
   - uid: '@azure/arm-databox.NotificationStageName'

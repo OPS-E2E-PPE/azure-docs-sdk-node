@@ -19,7 +19,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: '@azure/arm-datafactory'
@@ -38,6 +38,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: >-
       @azure/arm-datafactory.IntegrationRuntimesCreateOrUpdateOptionalParams.customHeaders
@@ -56,6 +57,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: >-
       @azure/arm-datafactory.IntegrationRuntimesCreateOrUpdateOptionalParams.ifMatch
@@ -65,13 +67,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      ETag of the integration runtime entity. Should only be specified for
+      update, for which it
+
+      should match existing entity or can be * for unconditional update.
     optional: true
     syntax:
       content: 'ifMatch?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: >-
       @azure/arm-datafactory.IntegrationRuntimesCreateOrUpdateOptionalParams.onDownloadProgress
@@ -90,6 +97,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: >-
       @azure/arm-datafactory.IntegrationRuntimesCreateOrUpdateOptionalParams.onUploadProgress
@@ -106,6 +114,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: >-
       @azure/arm-datafactory.IntegrationRuntimesCreateOrUpdateOptionalParams.timeout
@@ -124,4 +133,5 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-datafactory'

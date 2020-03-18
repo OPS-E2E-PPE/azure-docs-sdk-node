@@ -11,12 +11,13 @@ items:
       - '@azure/batch.ComputeNodeListResult.entries'
       - '@azure/batch.ComputeNodeListResult.every'
       - '@azure/batch.ComputeNodeListResult.fill'
-      - '@azure/batch.ComputeNodeListResult.filter_1'
       - '@azure/batch.ComputeNodeListResult.filter'
+      - '@azure/batch.ComputeNodeListResult.filter_1'
       - '@azure/batch.ComputeNodeListResult.find'
       - '@azure/batch.ComputeNodeListResult.find_1'
       - '@azure/batch.ComputeNodeListResult.findIndex'
       - '@azure/batch.ComputeNodeListResult.forEach'
+      - '@azure/batch.ComputeNodeListResult.includes'
       - '@azure/batch.ComputeNodeListResult.indexOf'
       - '@azure/batch.ComputeNodeListResult.join'
       - '@azure/batch.ComputeNodeListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.concat'
     name: 'concat(ConcatArray<ComputeNode>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.every'
     name: >-
       every((value: ComputeNode, index: number, array: ComputeNode[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ComputeNode, index: number, array:
-        ComputeNode[]) => boolean, thisArg?: any)
+        ComputeNode[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ComputeNode, index: number, array: ComputeNode[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.fill'
     name: 'fill(ComputeNode, undefined | number, undefined | number)'
@@ -233,41 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/batch'
-  - uid: '@azure/batch.ComputeNodeListResult.filter_1'
-    name: >-
-      filter((value: ComputeNode, index: number, array: ComputeNode[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ComputeNode, index: number, array:
-        ComputeNode[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: ComputeNode, index: number, array: ComputeNode[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/batch.ComputeNode[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.filter'
     name: >-
@@ -305,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeListResult.filter_1'
+    name: >-
+      filter((value: ComputeNode, index: number, array: ComputeNode[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ComputeNode, index: number, array:
+        ComputeNode[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ComputeNode, index: number, array: ComputeNode[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/batch.ComputeNode[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.find'
     name: >-
@@ -350,28 +362,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.find_1'
     name: >-
-      find((value: ComputeNode, index: number, obj: ComputeNode[]) => boolean,
+      find((value: ComputeNode, index: number, obj: ComputeNode[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ComputeNode, index: number, obj:
-        ComputeNode[]) => boolean, thisArg?: any)
+        ComputeNode[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: ComputeNode, index: number, obj: ComputeNode[]) => boolean'
+            - '(value: ComputeNode, index: number, obj: ComputeNode[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -381,11 +390,12 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode | undefined'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.findIndex'
     name: >-
       findIndex((value: ComputeNode, index: number, obj: ComputeNode[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -398,11 +408,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ComputeNode, index: number, obj:
-        ComputeNode[]) => boolean, thisArg?: any)
+        ComputeNode[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: ComputeNode, index: number, obj: ComputeNode[]) => boolean'
+            - '(value: ComputeNode, index: number, obj: ComputeNode[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -424,6 +434,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.forEach'
     name: >-
@@ -454,6 +465,36 @@ items:
             value.
           optional: true
     package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeListResult.includes'
+    name: 'includes(ComputeNode, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ComputeNode, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/batch.ComputeNode'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.indexOf'
     name: 'indexOf(ComputeNode, undefined | number)'
     children: []
@@ -480,6 +521,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.join'
     name: join(undefined | string)
@@ -504,6 +546,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.keys'
     name: keys()
@@ -518,6 +561,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.lastIndexOf'
     name: 'lastIndexOf(ComputeNode, undefined | number)'
@@ -545,6 +589,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.length'
     name: length
@@ -561,6 +606,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.map'
     name: 'map((value: ComputeNode, index: number, array: ComputeNode[]) => U, any)'
@@ -593,6 +639,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.odatanextLink'
     name: odatanextLink
@@ -608,6 +655,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.pop'
     name: pop()
@@ -622,6 +670,7 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode | undefined'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.push'
     name: 'push(ComputeNode[])'
@@ -641,6 +690,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.reduce'
     name: >-
@@ -671,6 +721,7 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.reduce_1'
     name: >-
@@ -680,10 +731,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ComputeNode, currentValue:
@@ -703,6 +751,7 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.reduce_2'
     name: >-
@@ -741,6 +790,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.reduceRight'
     name: >-
@@ -773,6 +823,7 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.reduceRight_1'
     name: >-
@@ -782,11 +833,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ComputeNode,
@@ -806,6 +853,7 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.reduceRight_2'
     name: >-
@@ -845,6 +893,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.reverse'
     name: reverse()
@@ -859,6 +908,7 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.shift'
     name: shift()
@@ -873,6 +923,7 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode | undefined'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -898,10 +949,11 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.some'
     name: >-
-      some((value: ComputeNode, index: number, array: ComputeNode[]) => boolean,
+      some((value: ComputeNode, index: number, array: ComputeNode[]) => unknown,
       any)
     children: []
     type: method
@@ -913,13 +965,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ComputeNode, index: number, array:
-        ComputeNode[]) => boolean, thisArg?: any)
+        ComputeNode[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ComputeNode, index: number, array: ComputeNode[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -935,6 +987,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.sort'
     name: 'sort(undefined | (a: ComputeNode, b: ComputeNode) => number)'
@@ -959,6 +1012,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.splice_1'
     name: 'splice(number, number, ComputeNode[])'
@@ -992,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1020,6 +1075,7 @@ items:
       return:
         type:
           - '@azure/batch.ComputeNode[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.toLocaleString'
     name: toLocaleString()
@@ -1036,6 +1092,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.toString'
     name: toString()
@@ -1050,6 +1107,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.unshift'
     name: 'unshift(ComputeNode[])'
@@ -1069,6 +1127,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.ComputeNodeListResult.values'
     name: values()
@@ -1083,6 +1142,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/batch.ComputeNode>
+        description: ''
     package: '@azure/batch'
 references:
   - uid: Array<@azure/batch.ComputeNode>

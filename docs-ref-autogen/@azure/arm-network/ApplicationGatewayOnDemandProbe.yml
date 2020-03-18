@@ -4,9 +4,8 @@ items:
     name: ApplicationGatewayOnDemandProbe
     fullName: ApplicationGatewayOnDemandProbe
     children:
-      - >-
-        @azure/arm-network.ApplicationGatewayOnDemandProbe.backendHttpSettingName
-      - '@azure/arm-network.ApplicationGatewayOnDemandProbe.backendPoolName'
+      - '@azure/arm-network.ApplicationGatewayOnDemandProbe.backendAddressPool'
+      - '@azure/arm-network.ApplicationGatewayOnDemandProbe.backendHttpSettings'
       - '@azure/arm-network.ApplicationGatewayOnDemandProbe.host'
       - '@azure/arm-network.ApplicationGatewayOnDemandProbe.match'
       - '@azure/arm-network.ApplicationGatewayOnDemandProbe.path'
@@ -19,39 +18,41 @@ items:
     type: interface
     summary: Details of on demand test probe request.
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ApplicationGatewayOnDemandProbe.backendHttpSettingName'
-    name: backendHttpSettingName
-    fullName: backendHttpSettingName
+  - uid: '@azure/arm-network.ApplicationGatewayOnDemandProbe.backendAddressPool'
+    name: backendAddressPool
+    fullName: backendAddressPool
     children: []
     langs:
       - typeScript
     type: property
     summary: >-
-      Name of backend http setting of application gateway to be used for test
-      probe.
+      Reference of backend pool of application gateway to which probe request
+      will be sent.
     optional: true
     syntax:
-      content: 'backendHttpSettingName?: undefined | string'
+      content: 'backendAddressPool?: SubResource'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ApplicationGatewayOnDemandProbe.backendPoolName'
-    name: backendPoolName
-    fullName: backendPoolName
+  - uid: '@azure/arm-network.ApplicationGatewayOnDemandProbe.backendHttpSettings'
+    name: backendHttpSettings
+    fullName: backendHttpSettings
     children: []
     langs:
       - typeScript
     type: property
     summary: >-
-      Name of backend pool of application gateway to which probe request will be
-      sent.
+      Reference of backend http setting of application gateway to be used for
+      test probe.
     optional: true
     syntax:
-      content: 'backendPoolName?: undefined | string'
+      content: 'backendHttpSettings?: SubResource'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayOnDemandProbe.host'
     name: host
@@ -67,6 +68,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayOnDemandProbe.match'
     name: match
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewayProbeHealthResponseMatch'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayOnDemandProbe.path'
     name: path
@@ -99,6 +102,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayOnDemandProbe.pickHostNameFromBackendHttpSettings
@@ -119,6 +123,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayOnDemandProbe.protocol'
     name: protocol
@@ -134,6 +139,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewayProtocol'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayOnDemandProbe.timeout'
     name: timeout
@@ -153,8 +159,15 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
 references:
+  - uid: '@azure/arm-network.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
   - uid: '@azure/arm-network.ApplicationGatewayProbeHealthResponseMatch'
     name: ApplicationGatewayProbeHealthResponseMatch
     spec.typeScript:

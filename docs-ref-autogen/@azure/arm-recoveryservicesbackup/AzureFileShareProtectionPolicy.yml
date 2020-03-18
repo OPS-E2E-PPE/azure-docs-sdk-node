@@ -19,7 +19,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: AzureStorage backup policy.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.backupManagementType
@@ -29,12 +29,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'backupManagementType: "AzureStorage"'
       return:
         type:
           - '"AzureStorage"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.protectedItemsCount
@@ -44,13 +45,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Number of items associated with this policy.
     optional: true
     syntax:
       content: 'protectedItemsCount?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.retentionPolicy
@@ -60,13 +62,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Retention policy with the details on backup copy retention ranges.
     optional: true
     syntax:
       content: 'retentionPolicy?: RetentionPolicyUnion'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.RetentionPolicyUnion'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.schedulePolicy
@@ -76,13 +79,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Backup schedule specified as part of backup policy.
     optional: true
     syntax:
       content: 'schedulePolicy?: SchedulePolicyUnion'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.SchedulePolicyUnion'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.timeZone'
     name: timeZone
@@ -91,13 +95,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      TimeZone optional input as string. For example: TimeZone = "Pacific
+      Standard Time".
     optional: true
     syntax:
       content: 'timeZone?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.workLoadType
@@ -107,13 +114,24 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type of workload for the backup management. Possible values include:
+      'Invalid', 'VM',
+
+      'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM',
+      'SystemState',
+
+      'Client', 'GenericDataSource', 'SQLDataBase', 'AzureFileShare',
+      'SAPHanaDatabase',
+
+      'SAPAseDatabase'
     optional: true
     syntax:
       content: 'workLoadType?: WorkloadType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.RetentionPolicyUnion'

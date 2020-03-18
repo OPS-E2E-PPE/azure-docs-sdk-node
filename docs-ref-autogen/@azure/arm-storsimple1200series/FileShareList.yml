@@ -11,12 +11,13 @@ items:
       - '@azure/arm-storsimple1200series.FileShareList.entries'
       - '@azure/arm-storsimple1200series.FileShareList.every'
       - '@azure/arm-storsimple1200series.FileShareList.fill'
-      - '@azure/arm-storsimple1200series.FileShareList.filter_1'
       - '@azure/arm-storsimple1200series.FileShareList.filter'
+      - '@azure/arm-storsimple1200series.FileShareList.filter_1'
       - '@azure/arm-storsimple1200series.FileShareList.find'
       - '@azure/arm-storsimple1200series.FileShareList.find_1'
       - '@azure/arm-storsimple1200series.FileShareList.findIndex'
       - '@azure/arm-storsimple1200series.FileShareList.forEach'
+      - '@azure/arm-storsimple1200series.FileShareList.includes'
       - '@azure/arm-storsimple1200series.FileShareList.indexOf'
       - '@azure/arm-storsimple1200series.FileShareList.join'
       - '@azure/arm-storsimple1200series.FileShareList.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.concat'
     name: 'concat(ConcatArray<FileShare>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.entries'
     name: entries()
@@ -157,10 +162,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.every'
     name: >-
-      every((value: FileShare, index: number, array: FileShare[]) => boolean,
+      every((value: FileShare, index: number, array: FileShare[]) => unknown,
       any)
     children: []
     type: method
@@ -170,11 +176,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: FileShare, index: number, array:
-        FileShare[]) => boolean, thisArg?: any)
+        FileShare[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: FileShare, index: number, array: FileShare[]) => boolean'
+            - '(value: FileShare, index: number, array: FileShare[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -190,6 +196,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.fill'
     name: 'fill(FileShare, undefined | number, undefined | number)'
@@ -230,39 +237,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-storsimple1200series'
-  - uid: '@azure/arm-storsimple1200series.FileShareList.filter_1'
-    name: 'filter((value: FileShare, index: number, array: FileShare[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: FileShare, index: number, array:
-        FileShare[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: FileShare, index: number, array: FileShare[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-storsimple1200series.FileShare[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.filter'
     name: >-
@@ -298,6 +273,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-storsimple1200series'
+  - uid: '@azure/arm-storsimple1200series.FileShareList.filter_1'
+    name: >-
+      filter((value: FileShare, index: number, array: FileShare[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: FileShare, index: number, array:
+        FileShare[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: FileShare, index: number, array: FileShare[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-storsimple1200series.FileShare[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.find'
     name: >-
@@ -343,26 +355,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.find_1'
-    name: 'find((value: FileShare, index: number, obj: FileShare[]) => boolean, any)'
+    name: 'find((value: FileShare, index: number, obj: FileShare[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: FileShare, index: number, obj:
-        FileShare[]) => boolean, thisArg?: any)
+        FileShare[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: FileShare, index: number, obj: FileShare[]) => boolean'
+            - '(value: FileShare, index: number, obj: FileShare[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -372,10 +381,11 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare | undefined'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.findIndex'
     name: >-
-      findIndex((value: FileShare, index: number, obj: FileShare[]) => boolean,
+      findIndex((value: FileShare, index: number, obj: FileShare[]) => unknown,
       any)
     children: []
     type: method
@@ -389,11 +399,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: FileShare, index: number, obj:
-        FileShare[]) => boolean, thisArg?: any)
+        FileShare[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: FileShare, index: number, obj: FileShare[]) => boolean'
+            - '(value: FileShare, index: number, obj: FileShare[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -415,6 +425,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.forEach'
     name: >-
@@ -445,6 +456,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-storsimple1200series'
+  - uid: '@azure/arm-storsimple1200series.FileShareList.includes'
+    name: 'includes(FileShare, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: FileShare, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-storsimple1200series.FileShare'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.indexOf'
     name: 'indexOf(FileShare, undefined | number)'
     children: []
@@ -471,6 +512,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.join'
     name: join(undefined | string)
@@ -495,6 +537,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.keys'
     name: keys()
@@ -509,6 +552,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.lastIndexOf'
     name: 'lastIndexOf(FileShare, undefined | number)'
@@ -536,6 +580,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.length'
     name: length
@@ -552,6 +597,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.map'
     name: 'map((value: FileShare, index: number, array: FileShare[]) => U, any)'
@@ -584,6 +630,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.pop'
     name: pop()
@@ -598,6 +645,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare | undefined'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.push'
     name: 'push(FileShare[])'
@@ -617,6 +665,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.reduce'
     name: >-
@@ -647,6 +696,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.reduce_1'
     name: >-
@@ -656,10 +706,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: FileShare, currentValue:
@@ -679,6 +726,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.reduce_2'
     name: >-
@@ -717,6 +765,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.reduceRight'
     name: >-
@@ -749,6 +798,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.reduceRight_1'
     name: >-
@@ -758,11 +808,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: FileShare,
@@ -782,6 +828,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.reduceRight_2'
     name: >-
@@ -821,6 +868,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.reverse'
     name: reverse()
@@ -835,6 +883,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.shift'
     name: shift()
@@ -849,6 +898,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare | undefined'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -874,10 +924,11 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.some'
     name: >-
-      some((value: FileShare, index: number, array: FileShare[]) => boolean,
+      some((value: FileShare, index: number, array: FileShare[]) => unknown,
       any)
     children: []
     type: method
@@ -889,11 +940,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: FileShare, index: number, array:
-        FileShare[]) => boolean, thisArg?: any)
+        FileShare[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: FileShare, index: number, array: FileShare[]) => boolean'
+            - '(value: FileShare, index: number, array: FileShare[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -909,6 +960,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.sort'
     name: 'sort(undefined | (a: FileShare, b: FileShare) => number)'
@@ -933,6 +985,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.splice_1'
     name: 'splice(number, number, FileShare[])'
@@ -964,6 +1017,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.splice'
     name: 'splice(number, undefined | number)'
@@ -992,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple1200series.FileShare[]'
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.toLocaleString'
     name: toLocaleString()
@@ -1008,6 +1063,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.toString'
     name: toString()
@@ -1022,6 +1078,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.unshift'
     name: 'unshift(FileShare[])'
@@ -1041,6 +1098,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple1200series'
   - uid: '@azure/arm-storsimple1200series.FileShareList.values'
     name: values()
@@ -1055,6 +1113,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-storsimple1200series.FileShare>
+        description: ''
     package: '@azure/arm-storsimple1200series'
 references:
   - uid: Array<@azure/arm-storsimple1200series.FileShare>

@@ -15,12 +15,13 @@ items:
       - '@azure/arm-datafactory.HttpDataset.relativeUrl'
       - '@azure/arm-datafactory.HttpDataset.requestBody'
       - '@azure/arm-datafactory.HttpDataset.requestMethod'
+      - '@azure/arm-datafactory.HttpDataset.schema'
       - '@azure/arm-datafactory.HttpDataset.structure'
       - '@azure/arm-datafactory.HttpDataset.type'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: A file in an HTTP web server.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.additionalHeaders'
     name: additionalHeaders
@@ -29,13 +30,23 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The headers for the HTTP Request. e.g.
+      request-header-name-1:request-header-value-1
+
+      ...
+
+      request-header-name-n:request-header-value-n Type: string (or Expression
+      with resultType
+
+      string).
     optional: true
     syntax:
       content: 'additionalHeaders?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.annotations'
     name: annotations
@@ -44,13 +55,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the Dataset.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.compression'
     name: compression
@@ -59,13 +71,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The data compression method used on files.
     optional: true
     syntax:
       content: 'compression?: DatasetCompressionUnion'
       return:
         type:
           - '@azure/arm-datafactory.DatasetCompressionUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.description'
     name: description
@@ -74,13 +87,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Dataset description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.folder'
     name: folder
@@ -89,13 +103,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The folder that this Dataset is in. If not specified, Dataset will appear
+      at the root level.
     optional: true
     syntax:
       content: 'folder?: DatasetFolder'
       return:
         type:
           - '@azure/arm-datafactory.DatasetFolder'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.format'
     name: format
@@ -104,13 +121,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The format of files.
     optional: true
     syntax:
       content: 'format?: DatasetStorageFormatUnion'
       return:
         type:
           - '@azure/arm-datafactory.DatasetStorageFormatUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.linkedServiceName'
     name: linkedServiceName
@@ -119,12 +137,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     syntax:
       content: 'linkedServiceName: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.parameters'
     name: parameters
@@ -133,7 +152,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for dataset.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -142,6 +161,7 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.relativeUrl'
     name: relativeUrl
@@ -150,13 +170,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The relative URL based on the URL in the HttpLinkedService refers to an
+      HTTP file Type: string
+
+      (or Expression with resultType string).
     optional: true
     syntax:
       content: 'relativeUrl?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.requestBody'
     name: requestBody
@@ -165,13 +190,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The body for the HTTP request. Type: string (or Expression with resultType
+      string).
     optional: true
     syntax:
       content: 'requestBody?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.requestMethod'
     name: requestMethod
@@ -180,13 +208,36 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The HTTP method for the HTTP request. Type: string (or Expression with
+      resultType string).
     optional: true
     syntax:
       content: 'requestMethod?: any'
       return:
         type:
           - any
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.HttpDataset.schema'
+    name: schema
+    fullName: schema
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Columns that define the physical type schema of the dataset. Type: array
+      (or Expression with
+
+      resultType array), itemType: DatasetSchemaDataElement.
+    optional: true
+    syntax:
+      content: 'schema?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.structure'
     name: structure
@@ -195,13 +246,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Columns that define the structure of the dataset. Type: array (or
+      Expression with resultType
+
+      array), itemType: DatasetDataElement.
     optional: true
     syntax:
       content: 'structure?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.HttpDataset.type'
     name: type
@@ -210,12 +266,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "HttpFile"'
       return:
         type:
           - '"HttpFile"'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.DatasetCompressionUnion'

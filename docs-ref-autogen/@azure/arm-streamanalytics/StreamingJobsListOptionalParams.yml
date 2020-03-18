@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: '@azure/arm-streamanalytics'
@@ -33,6 +33,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.StreamingJobsListOptionalParams.customHeaders'
     name: customHeaders
@@ -50,6 +51,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.StreamingJobsListOptionalParams.expand'
     name: expand
@@ -58,13 +60,24 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The $expand OData query parameter. This is a comma-separated list of
+      additional streaming job
+
+      properties to include in the response, beyond the default set returned
+      when this parameter is
+
+      absent. The default set is all streaming job properties other than
+      'inputs', 'transformation',
+
+      'outputs', and 'functions'.
     optional: true
     syntax:
       content: 'expand?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.StreamingJobsListOptionalParams.onDownloadProgress
@@ -83,6 +96,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.StreamingJobsListOptionalParams.onUploadProgress
@@ -99,6 +113,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.StreamingJobsListOptionalParams.timeout'
     name: timeout
@@ -116,4 +131,5 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-streamanalytics'

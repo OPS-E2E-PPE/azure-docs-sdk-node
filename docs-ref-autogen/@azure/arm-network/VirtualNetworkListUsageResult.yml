@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.VirtualNetworkListUsageResult.entries'
       - '@azure/arm-network.VirtualNetworkListUsageResult.every'
       - '@azure/arm-network.VirtualNetworkListUsageResult.fill'
-      - '@azure/arm-network.VirtualNetworkListUsageResult.filter_1'
       - '@azure/arm-network.VirtualNetworkListUsageResult.filter'
+      - '@azure/arm-network.VirtualNetworkListUsageResult.filter_1'
       - '@azure/arm-network.VirtualNetworkListUsageResult.find'
       - '@azure/arm-network.VirtualNetworkListUsageResult.find_1'
       - '@azure/arm-network.VirtualNetworkListUsageResult.findIndex'
       - '@azure/arm-network.VirtualNetworkListUsageResult.forEach'
+      - '@azure/arm-network.VirtualNetworkListUsageResult.includes'
       - '@azure/arm-network.VirtualNetworkListUsageResult.indexOf'
       - '@azure/arm-network.VirtualNetworkListUsageResult.join'
       - '@azure/arm-network.VirtualNetworkListUsageResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.concat'
     name: 'concat(ConcatArray<VirtualNetworkUsage>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.every'
     name: >-
       every((value: VirtualNetworkUsage, index: number, array:
-      VirtualNetworkUsage[]) => boolean, any)
+      VirtualNetworkUsage[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: VirtualNetworkUsage, index: number,
-        array: VirtualNetworkUsage[]) => boolean, thisArg?: any)
+        array: VirtualNetworkUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VirtualNetworkUsage, index: number, array:
-              VirtualNetworkUsage[]) => boolean
+              VirtualNetworkUsage[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.fill'
     name: 'fill(VirtualNetworkUsage, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.VirtualNetworkListUsageResult.filter_1'
-    name: >-
-      filter((value: VirtualNetworkUsage, index: number, array:
-      VirtualNetworkUsage[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: VirtualNetworkUsage, index: number,
-        array: VirtualNetworkUsage[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: VirtualNetworkUsage, index: number, array:
-              VirtualNetworkUsage[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.VirtualNetworkUsage[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkListUsageResult.filter_1'
+    name: >-
+      filter((value: VirtualNetworkUsage, index: number, array:
+      VirtualNetworkUsage[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: VirtualNetworkUsage, index: number,
+        array: VirtualNetworkUsage[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: VirtualNetworkUsage, index: number, array:
+              VirtualNetworkUsage[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.VirtualNetworkUsage[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.find_1'
     name: >-
       find((value: VirtualNetworkUsage, index: number, obj:
-      VirtualNetworkUsage[]) => boolean, any)
+      VirtualNetworkUsage[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: VirtualNetworkUsage, index: number,
-        obj: VirtualNetworkUsage[]) => boolean, thisArg?: any)
+        obj: VirtualNetworkUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VirtualNetworkUsage, index: number, obj:
-              VirtualNetworkUsage[]) => boolean
+              VirtualNetworkUsage[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.findIndex'
     name: >-
       findIndex((value: VirtualNetworkUsage, index: number, obj:
-      VirtualNetworkUsage[]) => boolean, any)
+      VirtualNetworkUsage[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: VirtualNetworkUsage, index:
-        number, obj: VirtualNetworkUsage[]) => boolean, thisArg?: any)
+        number, obj: VirtualNetworkUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VirtualNetworkUsage, index: number, obj:
-              VirtualNetworkUsage[]) => boolean
+              VirtualNetworkUsage[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkListUsageResult.includes'
+    name: 'includes(VirtualNetworkUsage, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: VirtualNetworkUsage, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.VirtualNetworkUsage'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.indexOf'
     name: 'indexOf(VirtualNetworkUsage, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.lastIndexOf'
     name: 'lastIndexOf(VirtualNetworkUsage, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.push'
     name: 'push(VirtualNetworkUsage[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.reduce_2'
     name: >-
@@ -691,6 +739,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.reduce'
     name: >-
@@ -724,6 +773,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.reduce_1'
     name: >-
@@ -734,10 +784,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: VirtualNetworkUsage,
@@ -759,6 +806,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.reduceRight_2'
     name: >-
@@ -798,6 +846,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.reduceRight'
     name: >-
@@ -832,6 +881,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.reduceRight_1'
     name: >-
@@ -842,11 +892,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: VirtualNetworkUsage,
@@ -868,6 +914,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.reverse'
     name: reverse()
@@ -882,6 +929,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.shift'
     name: shift()
@@ -896,6 +944,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -921,11 +970,12 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.some'
     name: >-
       some((value: VirtualNetworkUsage, index: number, array:
-      VirtualNetworkUsage[]) => boolean, any)
+      VirtualNetworkUsage[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -936,13 +986,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: VirtualNetworkUsage, index: number,
-        array: VirtualNetworkUsage[]) => boolean, thisArg?: any)
+        array: VirtualNetworkUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VirtualNetworkUsage, index: number, array:
-              VirtualNetworkUsage[]) => boolean
+              VirtualNetworkUsage[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -958,6 +1008,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.sort'
     name: >-
@@ -986,6 +1037,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.splice_1'
     name: 'splice(number, number, VirtualNetworkUsage[])'
@@ -1019,6 +1071,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1047,6 +1100,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkUsage[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.toLocaleString'
     name: toLocaleString()
@@ -1063,6 +1117,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.toString'
     name: toString()
@@ -1077,6 +1132,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.unshift'
     name: 'unshift(VirtualNetworkUsage[])'
@@ -1096,6 +1152,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkListUsageResult.values'
     name: values()
@@ -1110,6 +1167,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-network.VirtualNetworkUsage>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.VirtualNetworkUsage>

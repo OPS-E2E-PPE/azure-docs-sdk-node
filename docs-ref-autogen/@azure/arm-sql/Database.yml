@@ -4,6 +4,7 @@ items:
     name: Database
     fullName: Database
     children:
+      - '@azure/arm-sql.Database.autoPauseDelay'
       - '@azure/arm-sql.Database.catalogCollation'
       - '@azure/arm-sql.Database.collation'
       - '@azure/arm-sql.Database.createMode'
@@ -23,13 +24,17 @@ items:
       - '@azure/arm-sql.Database.managedBy'
       - '@azure/arm-sql.Database.maxLogSizeBytes'
       - '@azure/arm-sql.Database.maxSizeBytes'
+      - '@azure/arm-sql.Database.minCapacity'
       - '@azure/arm-sql.Database.name'
+      - '@azure/arm-sql.Database.pausedDate'
+      - '@azure/arm-sql.Database.readReplicaCount'
       - '@azure/arm-sql.Database.readScale'
       - '@azure/arm-sql.Database.recoverableDatabaseId'
       - '@azure/arm-sql.Database.recoveryServicesRecoveryPointId'
       - '@azure/arm-sql.Database.requestedServiceObjectiveName'
       - '@azure/arm-sql.Database.restorableDroppedDatabaseId'
       - '@azure/arm-sql.Database.restorePointInTime'
+      - '@azure/arm-sql.Database.resumedDate'
       - '@azure/arm-sql.Database.sampleName'
       - '@azure/arm-sql.Database.sku'
       - '@azure/arm-sql.Database.sourceDatabaseDeletionDate'
@@ -44,6 +49,26 @@ items:
     summary: A database resource.
     extends:
       name: '@azure/arm-sql.TrackedResource'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.autoPauseDelay'
+    name: autoPauseDelay
+    fullName: autoPauseDelay
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Time in minutes after which database is automatically paused. A value of
+      -1 means that
+
+      automatic pause is disabled
+    optional: true
+    syntax:
+      content: 'autoPauseDelay?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.catalogCollation'
     name: catalogCollation
@@ -63,6 +88,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.CatalogCollationType'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.collation'
     name: collation
@@ -78,6 +104,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.createMode'
     name: createMode
@@ -160,6 +187,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.CreateMode'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.creationDate'
     name: creationDate
@@ -179,6 +207,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.currentServiceObjectiveName'
     name: currentServiceObjectiveName
@@ -198,6 +227,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.currentSku'
     name: currentSku
@@ -217,6 +247,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.Sku'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.databaseId'
     name: databaseId
@@ -236,6 +267,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.defaultSecondaryLocation'
     name: defaultSecondaryLocation
@@ -255,6 +287,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.earliestRestoreDate'
     name: earliestRestoreDate
@@ -277,6 +310,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.elasticPoolId'
     name: elasticPoolId
@@ -292,6 +326,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.failoverGroupId'
     name: failoverGroupId
@@ -311,6 +346,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.id'
     name: id
@@ -330,6 +366,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.kind'
     name: kind
@@ -349,6 +386,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.licenseType'
     name: licenseType
@@ -368,6 +406,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DatabaseLicenseType'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.location'
     name: location
@@ -382,6 +421,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.longTermRetentionBackupResourceId'
     name: longTermRetentionBackupResourceId
@@ -401,6 +441,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.managedBy'
     name: managedBy
@@ -420,6 +461,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.maxLogSizeBytes'
     name: maxLogSizeBytes
@@ -439,6 +481,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.maxSizeBytes'
     name: maxSizeBytes
@@ -454,6 +497,23 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.minCapacity'
+    name: minCapacity
+    fullName: minCapacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Minimal capacity that database will always have allocated, if not paused'
+    optional: true
+    syntax:
+      content: 'minCapacity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.name'
     name: name
@@ -473,6 +533,53 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.pausedDate'
+    name: pausedDate
+    fullName: pausedDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The date when database was paused by user configuration or action (ISO8601
+      format). Null if
+
+      the database is ready.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'pausedDate?: Date'
+      return:
+        type:
+          - Date
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.readReplicaCount'
+    name: readReplicaCount
+    fullName: readReplicaCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The number of readonly secondary replicas associated with the database to
+      which readonly
+
+      application intent connections may be routed. This property is only
+      settable for Hyperscale
+
+      edition databases.
+    optional: true
+    syntax:
+      content: 'readReplicaCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.readScale'
     name: readScale
@@ -482,19 +589,21 @@ items:
       - typeScript
     type: property
     summary: >-
-      The state of read-only routing. If enabled, connections that have
-      application intent set to
+      If enabled, connections that have application intent set to readonly in
+      their connection
 
-      readonly in their connection string may be routed to a readonly secondary
-      replica in the same
+      string may be routed to a readonly secondary replica. This property is
+      only settable for
 
-      region. Possible values include: 'Enabled', 'Disabled'
+      Premium and Business Critical databases. Possible values include:
+      'Enabled', 'Disabled'
     optional: true
     syntax:
       content: 'readScale?: DatabaseReadScale'
       return:
         type:
           - '@azure/arm-sql.DatabaseReadScale'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.recoverableDatabaseId'
     name: recoverableDatabaseId
@@ -514,6 +623,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.recoveryServicesRecoveryPointId'
     name: recoveryServicesRecoveryPointId
@@ -533,6 +643,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.requestedServiceObjectiveName'
     name: requestedServiceObjectiveName
@@ -552,6 +663,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.restorableDroppedDatabaseId'
     name: restorableDroppedDatabaseId
@@ -571,6 +683,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.restorePointInTime'
     name: restorePointInTime
@@ -590,6 +703,30 @@ items:
       return:
         type:
           - Date
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Database.resumedDate'
+    name: resumedDate
+    fullName: resumedDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The date when database was resumed by user action or database login
+      (ISO8601 format). Null if
+
+      the database is paused.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'resumedDate?: Date'
+      return:
+        type:
+          - Date
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.sampleName'
     name: sampleName
@@ -609,6 +746,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SampleName'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.sku'
     name: sku
@@ -617,13 +755,38 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The name and tier of the SKU.
+    summary: >
+      The database SKU.
+
+      The list of SKUs may vary by region and support offer. To determine the
+      SKUs (including the
+
+      SKU name, tier/edition, family, and capacity) that are available to your
+      subscription in an
+
+      Azure region, use the `Capabilities_ListByLocation` REST API or one of the
+      following commands:
+
+
+      ```azurecli
+
+      az sql db list-editions -l <location> -o table
+
+      ````
+
+
+      ```powershell
+
+      Get-AzSqlServerServiceObjective -Location <location>
+
+      ````
     optional: true
     syntax:
       content: 'sku?: Sku'
       return:
         type:
           - '@azure/arm-sql.Sku'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.sourceDatabaseDeletionDate'
     name: sourceDatabaseDeletionDate
@@ -639,6 +802,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.sourceDatabaseId'
     name: sourceDatabaseId
@@ -658,6 +822,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.status'
     name: status
@@ -676,7 +841,8 @@ items:
       'Copying', 'Creating', 'Inaccessible', 'OfflineSecondary', 'Pausing',
       'Paused', 'Resuming',
 
-      'Scaling'
+      'Scaling', 'OfflineChangingDwPerformanceTiers',
+      'OnlineChangingDwPerformanceTiers', 'Disabled'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -686,6 +852,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DatabaseStatus'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.tags'
     name: tags
@@ -701,6 +868,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.type'
     name: type
@@ -720,6 +888,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.Database.zoneRedundant'
     name: zoneRedundant
@@ -739,6 +908,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: '@azure/arm-sql.TrackedResource'

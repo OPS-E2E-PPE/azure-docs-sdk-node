@@ -12,7 +12,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Filters to list items that can be backed up.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BMSPOQueryObject.backupManagementType'
     name: backupManagementType
@@ -21,13 +21,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Backup management type. Possible values include: 'Invalid', 'AzureIaasVM',
+      'MAB', 'DPM',
+
+      'AzureBackupServer', 'AzureSql', 'AzureStorage', 'AzureWorkload',
+      'DefaultBackup'
     optional: true
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BMSPOQueryObject.containerName'
     name: containerName
@@ -36,13 +42,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Full name of the container whose Protectable Objects should be returned.
     optional: true
     syntax:
       content: 'containerName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BMSPOQueryObject.friendlyName'
     name: friendlyName
@@ -51,13 +58,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name.
     optional: true
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BMSPOQueryObject.status'
     name: status
@@ -66,13 +74,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Backup status query parameter.
     optional: true
     syntax:
       content: 'status?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BMSPOQueryObject.workloadType'
     name: workloadType
@@ -81,13 +90,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Workload type. Possible values include: 'Invalid', 'VM', 'FileFolder',
+      'AzureSqlDb', 'SQLDB',
+
+      'Exchange', 'Sharepoint', 'VMwareVM', 'SystemState', 'Client',
+      'GenericDataSource',
+
+      'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase', 'SAPAseDatabase'
     optional: true
     syntax:
       content: 'workloadType?: WorkloadType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'

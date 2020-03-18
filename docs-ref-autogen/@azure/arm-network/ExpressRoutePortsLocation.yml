@@ -38,6 +38,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocation.availableBandwidths'
     name: availableBandwidths
@@ -53,6 +54,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocationBandwidths[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocation.contact'
     name: contact
@@ -72,6 +74,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocation.id'
     name: id
@@ -87,6 +90,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocation.location'
     name: location
@@ -102,6 +106,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocation.name'
     name: name
@@ -121,6 +126,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocation.provisioningState'
     name: provisioningState
@@ -130,19 +136,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the ExpressRoutePortLocation resource. Possible
-      values are:
+      The provisioning state of the express route port location resource.
+      Possible values include:
 
-      'Succeeded', 'Updating', 'Deleting', and 'Failed'.
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocation.tags'
     name: tags
@@ -158,6 +165,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePortsLocation.type'
     name: type
@@ -177,6 +185,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -193,3 +202,9 @@ references:
         uid: '@azure/arm-network.ExpressRoutePortsLocationBandwidths'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

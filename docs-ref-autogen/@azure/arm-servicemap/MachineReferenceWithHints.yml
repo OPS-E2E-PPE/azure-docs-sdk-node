@@ -13,7 +13,9 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      A machine reference with a hint of the machine's name and operating
+      system.
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineReferenceWithHints.displayNameHint'
     name: displayNameHint
@@ -22,13 +24,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Last known display name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'displayNameHint?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineReferenceWithHints.id'
     name: id
@@ -37,12 +44,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource URI.
     syntax:
       content: 'id: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineReferenceWithHints.kind'
     name: kind
@@ -51,12 +59,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'kind: "ref:machinewithhints"'
       return:
         type:
           - '"ref:machinewithhints"'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineReferenceWithHints.name'
     name: name
@@ -65,13 +74,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineReferenceWithHints.osFamilyHint'
     name: osFamilyHint
@@ -80,13 +94,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Last known operating system family. Possible values include: 'unknown',
+      'windows', 'linux',
+
+      'solaris', 'aix'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'osFamilyHint?: OperatingSystemFamily'
       return:
         type:
           - '@azure/arm-servicemap.OperatingSystemFamily'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachineReferenceWithHints.type'
     name: type
@@ -95,13 +117,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource type qualifier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
 references:
   - uid: '@azure/arm-servicemap.OperatingSystemFamily'

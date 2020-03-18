@@ -30,6 +30,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-policy'
   - uid: '@azure/arm-policy.Identity.tenantId'
     name: tenantId
@@ -49,6 +50,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-policy'
   - uid: '@azure/arm-policy.Identity.type'
     name: type
@@ -57,13 +59,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: 'The identity type. Possible values include: ''SystemAssigned'', ''None'''
+    summary: >-
+      The identity type. This is the only required field when adding a system
+      assigned identity to a
+
+      resource. Possible values include: 'SystemAssigned', 'None'
     optional: true
     syntax:
       content: 'type?: ResourceIdentityType'
       return:
         type:
           - '@azure/arm-policy.ResourceIdentityType'
+        description: ''
     package: '@azure/arm-policy'
 references:
   - uid: '@azure/arm-policy.ResourceIdentityType'

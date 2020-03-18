@@ -35,6 +35,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/arm-storage'
   - uid: >-
       @azure/arm-storage.StorageAccountsGetPropertiesOptionalParams.customHeaders
@@ -53,6 +54,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams.expand'
     name: expand
@@ -66,15 +68,17 @@ items:
       default, data is not
 
       included when fetching properties. Currently we only support
-      geoReplicationStats. Possible
+      geoReplicationStats and
 
-      values include: 'geoReplicationStats'
+      blobRestoreStatus. Possible values include: 'geoReplicationStats',
+      'blobRestoreStatus'
     optional: true
     syntax:
       content: 'expand?: StorageAccountExpand'
       return:
         type:
           - '@azure/arm-storage.StorageAccountExpand'
+        description: ''
     package: '@azure/arm-storage'
   - uid: >-
       @azure/arm-storage.StorageAccountsGetPropertiesOptionalParams.onDownloadProgress
@@ -93,6 +97,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-storage'
   - uid: >-
       @azure/arm-storage.StorageAccountsGetPropertiesOptionalParams.onUploadProgress
@@ -109,6 +114,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams.timeout'
     name: timeout
@@ -126,6 +132,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-storage'
 references:
   - uid: '@azure/arm-storage.StorageAccountExpand'

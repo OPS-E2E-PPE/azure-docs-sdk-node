@@ -11,12 +11,13 @@ items:
       - '@azure/arm-cosmosdb.UsagesResult.entries'
       - '@azure/arm-cosmosdb.UsagesResult.every'
       - '@azure/arm-cosmosdb.UsagesResult.fill'
-      - '@azure/arm-cosmosdb.UsagesResult.filter_1'
       - '@azure/arm-cosmosdb.UsagesResult.filter'
+      - '@azure/arm-cosmosdb.UsagesResult.filter_1'
       - '@azure/arm-cosmosdb.UsagesResult.find'
       - '@azure/arm-cosmosdb.UsagesResult.find_1'
       - '@azure/arm-cosmosdb.UsagesResult.findIndex'
       - '@azure/arm-cosmosdb.UsagesResult.forEach'
+      - '@azure/arm-cosmosdb.UsagesResult.includes'
       - '@azure/arm-cosmosdb.UsagesResult.indexOf'
       - '@azure/arm-cosmosdb.UsagesResult.join'
       - '@azure/arm-cosmosdb.UsagesResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.concat'
     name: 'concat(ConcatArray<Usage>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.entries'
     name: entries()
@@ -157,9 +162,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.every'
-    name: 'every((value: Usage, index: number, array: Usage[]) => boolean, any)'
+    name: 'every((value: Usage, index: number, array: Usage[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -168,11 +174,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Usage, index: number, array: Usage[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Usage, index: number, array: Usage[]) => boolean'
+            - '(value: Usage, index: number, array: Usage[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -188,6 +194,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.fill'
     name: 'fill(Usage, undefined | number, undefined | number)'
@@ -228,39 +235,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-cosmosdb'
-  - uid: '@azure/arm-cosmosdb.UsagesResult.filter_1'
-    name: 'filter((value: Usage, index: number, array: Usage[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Usage, index: number, array:
-        Usage[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Usage, index: number, array: Usage[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-cosmosdb.Usage[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.filter'
     name: 'filter((value: Usage, index: number, array: Usage[]) => boolean, any)'
@@ -294,6 +269,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.UsagesResult.filter_1'
+    name: 'filter((value: Usage, index: number, array: Usage[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Usage, index: number, array:
+        Usage[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Usage, index: number, array: Usage[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-cosmosdb.Usage[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.find'
     name: >-
@@ -337,26 +347,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.find_1'
-    name: 'find((value: Usage, index: number, obj: Usage[]) => boolean, any)'
+    name: 'find((value: Usage, index: number, obj: Usage[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Usage, index: number, obj: Usage[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Usage, index: number, obj: Usage[]) => boolean'
+            - '(value: Usage, index: number, obj: Usage[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -366,9 +373,10 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.findIndex'
-    name: 'findIndex((value: Usage, index: number, obj: Usage[]) => boolean, any)'
+    name: 'findIndex((value: Usage, index: number, obj: Usage[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -381,11 +389,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Usage, index: number, obj:
-        Usage[]) => boolean, thisArg?: any)
+        Usage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Usage, index: number, obj: Usage[]) => boolean'
+            - '(value: Usage, index: number, obj: Usage[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -407,6 +415,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.forEach'
     name: 'forEach((value: Usage, index: number, array: Usage[]) => void, any)'
@@ -435,6 +444,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.UsagesResult.includes'
+    name: 'includes(Usage, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Usage, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-cosmosdb.Usage'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.indexOf'
     name: 'indexOf(Usage, undefined | number)'
     children: []
@@ -459,6 +496,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.join'
     name: join(undefined | string)
@@ -483,6 +521,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.keys'
     name: keys()
@@ -497,6 +536,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.lastIndexOf'
     name: 'lastIndexOf(Usage, undefined | number)'
@@ -524,6 +564,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.length'
     name: length
@@ -540,6 +581,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.map'
     name: 'map((value: Usage, index: number, array: Usage[]) => U, any)'
@@ -572,6 +614,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.pop'
     name: pop()
@@ -586,6 +629,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.push'
     name: 'push(Usage[])'
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.reduce_2'
     name: >-
@@ -642,6 +687,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.reduce'
     name: >-
@@ -672,6 +718,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.reduce_1'
     name: >-
@@ -681,10 +728,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Usage, currentValue: Usage,
@@ -703,6 +747,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.reduceRight_2'
     name: >-
@@ -741,6 +786,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.reduceRight'
     name: >-
@@ -772,6 +818,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.reduceRight_1'
     name: >-
@@ -781,11 +828,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Usage, currentValue:
@@ -805,6 +848,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.reverse'
     name: reverse()
@@ -819,6 +863,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.shift'
     name: shift()
@@ -833,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -858,9 +904,10 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.some'
-    name: 'some((value: Usage, index: number, array: Usage[]) => boolean, any)'
+    name: 'some((value: Usage, index: number, array: Usage[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -871,11 +918,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Usage, index: number, array: Usage[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Usage, index: number, array: Usage[]) => boolean'
+            - '(value: Usage, index: number, array: Usage[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -891,6 +938,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.sort'
     name: 'sort(undefined | (a: Usage, b: Usage) => number)'
@@ -913,6 +961,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.splice_1'
     name: 'splice(number, number, Usage[])'
@@ -944,6 +993,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.splice'
     name: 'splice(number, undefined | number)'
@@ -972,6 +1022,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Usage[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.toLocaleString'
     name: toLocaleString()
@@ -988,6 +1039,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.toString'
     name: toString()
@@ -1002,6 +1054,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.unshift'
     name: 'unshift(Usage[])'
@@ -1021,6 +1074,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.UsagesResult.values'
     name: values()
@@ -1035,6 +1089,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-cosmosdb.Usage>
+        description: ''
     package: '@azure/arm-cosmosdb'
 references:
   - uid: Array<@azure/arm-cosmosdb.Usage>

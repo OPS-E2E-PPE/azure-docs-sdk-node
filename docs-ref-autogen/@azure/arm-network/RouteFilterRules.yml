@@ -6,7 +6,6 @@ items:
     children:
       - '@azure/arm-network.RouteFilterRules.beginCreateOrUpdate'
       - '@azure/arm-network.RouteFilterRules.beginDeleteMethod'
-      - '@azure/arm-network.RouteFilterRules.beginUpdate'
       - '@azure/arm-network.RouteFilterRules.createOrUpdate'
       - '@azure/arm-network.RouteFilterRules.deleteMethod'
       - '@azure/arm-network.RouteFilterRules.get'
@@ -19,7 +18,6 @@ items:
       - '@azure/arm-network.RouteFilterRules.listByRouteFilterNext_2'
       - '@azure/arm-network.RouteFilterRules.listByRouteFilterNext_1'
       - '@azure/arm-network.RouteFilterRules.constructor'
-      - '@azure/arm-network.RouteFilterRules.update'
     langs:
       - typeScript
     type: class
@@ -66,6 +64,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
@@ -99,46 +98,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.RouteFilterRules.beginUpdate'
-    name: >-
-      beginUpdate(string, string, string, PatchRouteFilterRule,
-      msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Updates a route in the specified route filter.
-    syntax:
-      content: >-
-        function beginUpdate(resourceGroupName: string, routeFilterName: string,
-        ruleName: string, routeFilterRuleParameters: PatchRouteFilterRule,
-        options?: msRest.RequestOptionsBase)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: routeFilterName
-          type:
-            - string
-          description: The name of the route filter.
-        - id: ruleName
-          type:
-            - string
-          description: The name of the route filter rule.
-        - id: routeFilterRuleParameters
-          type:
-            - '@azure/arm-network.PatchRouteFilterRule'
-          description: Parameters supplied to the update route filter rule operation.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.createOrUpdate'
     name: >-
@@ -181,6 +141,7 @@ items:
       return:
         type:
           - Promise<Models.RouteFilterRulesCreateOrUpdateResponse>
+        description: Promise<Models.RouteFilterRulesCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.deleteMethod'
     name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
@@ -214,6 +175,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.get'
     name: 'get(string, string, string, msRest.RequestOptionsBase)'
@@ -247,6 +209,7 @@ items:
       return:
         type:
           - Promise<Models.RouteFilterRulesGetResponse>
+        description: Promise<Models.RouteFilterRulesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.get_2'
     name: >-
@@ -284,9 +247,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteFilterRule>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteFilterRulesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.get_1'
     name: 'get(string, string, string, ServiceCallback<RouteFilterRule>)'
@@ -317,9 +277,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteFilterRule>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteFilterRulesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.listByRouteFilter'
     name: 'listByRouteFilter(string, string, msRest.RequestOptionsBase)'
@@ -349,6 +306,7 @@ items:
       return:
         type:
           - Promise<Models.RouteFilterRulesListByRouteFilterResponse>
+        description: Promise<Models.RouteFilterRulesListByRouteFilterResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.listByRouteFilter_2'
     name: >-
@@ -382,9 +340,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteFilterRuleListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteFilterRulesListByRouteFilterResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.listByRouteFilter_1'
     name: >-
@@ -413,9 +368,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteFilterRuleListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteFilterRulesListByRouteFilterResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.listByRouteFilterNext'
     name: 'listByRouteFilterNext(string, msRest.RequestOptionsBase)'
@@ -441,6 +393,7 @@ items:
       return:
         type:
           - Promise<Models.RouteFilterRulesListByRouteFilterNextResponse>
+        description: Promise<Models.RouteFilterRulesListByRouteFilterNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.listByRouteFilterNext_2'
     name: >-
@@ -470,9 +423,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteFilterRuleListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteFilterRulesListByRouteFilterNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.listByRouteFilterNext_1'
     name: 'listByRouteFilterNext(string, ServiceCallback<RouteFilterRuleListResult>)'
@@ -495,9 +445,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteFilterRuleListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteFilterRulesListByRouteFilterNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilterRules.constructor'
     name: RouteFilterRules(NetworkManagementClientContext)
@@ -515,46 +462,6 @@ items:
           description: |
             Reference to the service client.
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.RouteFilterRules.update'
-    name: >-
-      update(string, string, string, PatchRouteFilterRule,
-      msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Updates a route in the specified route filter.
-    syntax:
-      content: >-
-        function update(resourceGroupName: string, routeFilterName: string,
-        ruleName: string, routeFilterRuleParameters: PatchRouteFilterRule,
-        options?: msRest.RequestOptionsBase)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: routeFilterName
-          type:
-            - string
-          description: The name of the route filter.
-        - id: ruleName
-          type:
-            - string
-          description: The name of the route filter rule.
-        - id: routeFilterRuleParameters
-          type:
-            - '@azure/arm-network.PatchRouteFilterRule'
-          description: Parameters supplied to the update route filter rule operation.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<Models.RouteFilterRulesUpdateResponse>
-    package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
     name: NetworkManagementClientContext
@@ -568,12 +475,6 @@ references:
       - name: RouteFilterRule
         fullName: RouteFilterRule
         uid: '@azure/arm-network.RouteFilterRule'
-  - uid: '@azure/arm-network.PatchRouteFilterRule'
-    name: PatchRouteFilterRule
-    spec.typeScript:
-      - name: PatchRouteFilterRule
-        fullName: PatchRouteFilterRule
-        uid: '@azure/arm-network.PatchRouteFilterRule'
   - uid: ServiceCallback<@azure/arm-network.RouteFilterRule>
     name: RouteFilterRule>
     spec.typeScript:

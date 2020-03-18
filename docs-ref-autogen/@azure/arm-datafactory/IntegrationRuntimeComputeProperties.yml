@@ -4,6 +4,8 @@ items:
     name: IntegrationRuntimeComputeProperties
     fullName: IntegrationRuntimeComputeProperties
     children:
+      - >-
+        @azure/arm-datafactory.IntegrationRuntimeComputeProperties.dataFlowProperties
       - '@azure/arm-datafactory.IntegrationRuntimeComputeProperties.location'
       - >-
         @azure/arm-datafactory.IntegrationRuntimeComputeProperties.maxParallelExecutionsPerNode
@@ -14,7 +16,24 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: The compute resource properties for managed integration runtime.
+    package: '@azure/arm-datafactory'
+  - uid: >-
+      @azure/arm-datafactory.IntegrationRuntimeComputeProperties.dataFlowProperties
+    name: dataFlowProperties
+    fullName: dataFlowProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Data flow properties for managed integration runtime.
+    optional: true
+    syntax:
+      content: 'dataFlowProperties?: IntegrationRuntimeDataFlowProperties'
+      return:
+        type:
+          - '@azure/arm-datafactory.IntegrationRuntimeDataFlowProperties'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IntegrationRuntimeComputeProperties.location'
     name: location
@@ -23,13 +42,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The location for managed integration runtime. The supported regions could
+      be found on
+
+      https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
     optional: true
     syntax:
       content: 'location?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: >-
       @azure/arm-datafactory.IntegrationRuntimeComputeProperties.maxParallelExecutionsPerNode
@@ -39,13 +63,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Maximum parallel executions count per node for managed integration
+      runtime.
     optional: true
     syntax:
       content: 'maxParallelExecutionsPerNode?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IntegrationRuntimeComputeProperties.nodeSize'
     name: nodeSize
@@ -54,13 +81,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The node size requirement to managed integration runtime.
     optional: true
     syntax:
       content: 'nodeSize?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IntegrationRuntimeComputeProperties.numberOfNodes'
     name: numberOfNodes
@@ -69,13 +97,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The required number of nodes for managed integration runtime.
     optional: true
     syntax:
       content: 'numberOfNodes?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.IntegrationRuntimeComputeProperties.vNetProperties'
     name: vNetProperties
@@ -84,15 +113,22 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: VNet properties for managed integration runtime.
     optional: true
     syntax:
       content: 'vNetProperties?: IntegrationRuntimeVNetProperties'
       return:
         type:
           - '@azure/arm-datafactory.IntegrationRuntimeVNetProperties'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
+  - uid: '@azure/arm-datafactory.IntegrationRuntimeDataFlowProperties'
+    name: IntegrationRuntimeDataFlowProperties
+    spec.typeScript:
+      - name: IntegrationRuntimeDataFlowProperties
+        fullName: IntegrationRuntimeDataFlowProperties
+        uid: '@azure/arm-datafactory.IntegrationRuntimeDataFlowProperties'
   - uid: '@azure/arm-datafactory.IntegrationRuntimeVNetProperties'
     name: IntegrationRuntimeVNetProperties
     spec.typeScript:

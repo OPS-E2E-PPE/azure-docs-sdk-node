@@ -41,6 +41,7 @@ items:
       return:
         type:
           - '@azure/arm-network.BackendAddressPool[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.etag'
     name: etag
@@ -49,13 +50,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.frontendIPConfigurations'
     name: frontendIPConfigurations
@@ -71,6 +77,7 @@ items:
       return:
         type:
           - '@azure/arm-network.FrontendIPConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.id'
     name: id
@@ -86,6 +93,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.inboundNatPools'
     name: inboundNatPools
@@ -120,6 +128,7 @@ items:
       return:
         type:
           - '@azure/arm-network.InboundNatPool[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.inboundNatRules'
     name: inboundNatRules
@@ -148,6 +157,7 @@ items:
       return:
         type:
           - '@azure/arm-network.InboundNatRule[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.loadBalancingRules'
     name: loadBalancingRules
@@ -165,6 +175,7 @@ items:
       return:
         type:
           - '@azure/arm-network.LoadBalancingRule[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.location'
     name: location
@@ -180,6 +191,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.name'
     name: name
@@ -199,6 +211,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.outboundRules'
     name: outboundRules
@@ -214,6 +227,7 @@ items:
       return:
         type:
           - '@azure/arm-network.OutboundRule[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.probes'
     name: probes
@@ -229,6 +243,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Probe[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.provisioningState'
     name: provisioningState
@@ -238,16 +253,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets the provisioning state of the PublicIP resource. Possible values are:
-      'Updating',
+      The provisioning state of the load balancer resource. Possible values
+      include: 'Succeeded',
 
-      'Deleting', and 'Failed'.
+      'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.resourceGuid'
     name: resourceGuid
@@ -256,13 +275,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The resource GUID property of the load balancer resource.
+    summary: >-
+      The resource GUID property of the load balancer resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'resourceGuid?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.sku'
     name: sku
@@ -278,6 +302,7 @@ items:
       return:
         type:
           - '@azure/arm-network.LoadBalancerSku'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.tags'
     name: tags
@@ -293,6 +318,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.LoadBalancer.type'
     name: type
@@ -312,6 +338,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -376,6 +403,12 @@ references:
         uid: '@azure/arm-network.Probe'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.LoadBalancerSku'
     name: LoadBalancerSku
     spec.typeScript:

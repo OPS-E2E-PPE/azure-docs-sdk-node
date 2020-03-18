@@ -11,12 +11,13 @@ items:
       - '@azure/arm-automation.JobListResultV2.entries'
       - '@azure/arm-automation.JobListResultV2.every'
       - '@azure/arm-automation.JobListResultV2.fill'
-      - '@azure/arm-automation.JobListResultV2.filter_1'
       - '@azure/arm-automation.JobListResultV2.filter'
+      - '@azure/arm-automation.JobListResultV2.filter_1'
       - '@azure/arm-automation.JobListResultV2.find'
       - '@azure/arm-automation.JobListResultV2.find_1'
       - '@azure/arm-automation.JobListResultV2.findIndex'
       - '@azure/arm-automation.JobListResultV2.forEach'
+      - '@azure/arm-automation.JobListResultV2.includes'
       - '@azure/arm-automation.JobListResultV2.indexOf'
       - '@azure/arm-automation.JobListResultV2.join'
       - '@azure/arm-automation.JobListResultV2.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.concat'
     name: 'concat(ConcatArray<JobCollectionItem>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.every'
     name: >-
       every((value: JobCollectionItem, index: number, array:
-      JobCollectionItem[]) => boolean, any)
+      JobCollectionItem[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: JobCollectionItem, index: number,
-        array: JobCollectionItem[]) => boolean, thisArg?: any)
+        array: JobCollectionItem[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: JobCollectionItem, index: number, array:
-              JobCollectionItem[]) => boolean
+              JobCollectionItem[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.fill'
     name: 'fill(JobCollectionItem, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-automation'
-  - uid: '@azure/arm-automation.JobListResultV2.filter_1'
-    name: >-
-      filter((value: JobCollectionItem, index: number, array:
-      JobCollectionItem[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: JobCollectionItem, index: number,
-        array: JobCollectionItem[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: JobCollectionItem, index: number, array:
-              JobCollectionItem[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-automation.JobCollectionItem[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobListResultV2.filter_1'
+    name: >-
+      filter((value: JobCollectionItem, index: number, array:
+      JobCollectionItem[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: JobCollectionItem, index: number,
+        array: JobCollectionItem[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: JobCollectionItem, index: number, array:
+              JobCollectionItem[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-automation.JobCollectionItem[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.find_1'
     name: >-
       find((value: JobCollectionItem, index: number, obj: JobCollectionItem[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: JobCollectionItem, index: number, obj:
-        JobCollectionItem[]) => boolean, thisArg?: any)
+        JobCollectionItem[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: JobCollectionItem, index: number, obj:
-              JobCollectionItem[]) => boolean
+              JobCollectionItem[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem | undefined'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.findIndex'
     name: >-
       findIndex((value: JobCollectionItem, index: number, obj:
-      JobCollectionItem[]) => boolean, any)
+      JobCollectionItem[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: JobCollectionItem, index: number,
-        obj: JobCollectionItem[]) => boolean, thisArg?: any)
+        obj: JobCollectionItem[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: JobCollectionItem, index: number, obj:
-              JobCollectionItem[]) => boolean
+              JobCollectionItem[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobListResultV2.includes'
+    name: 'includes(JobCollectionItem, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: JobCollectionItem, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-automation.JobCollectionItem'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.indexOf'
     name: 'indexOf(JobCollectionItem, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.lastIndexOf'
     name: 'lastIndexOf(JobCollectionItem, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem | undefined'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.push'
     name: 'push(JobCollectionItem[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.reduce'
     name: >-
@@ -685,6 +733,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.reduce_1'
     name: >-
@@ -695,10 +744,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: JobCollectionItem,
@@ -720,6 +766,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.reduce_2'
     name: >-
@@ -758,6 +805,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.reduceRight'
     name: >-
@@ -792,6 +840,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.reduceRight_1'
     name: >-
@@ -802,11 +851,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: JobCollectionItem,
@@ -828,6 +873,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.reduceRight_2'
     name: >-
@@ -867,6 +913,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.reverse'
     name: reverse()
@@ -881,6 +928,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.shift'
     name: shift()
@@ -895,6 +943,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem | undefined'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -920,11 +969,12 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.some'
     name: >-
       some((value: JobCollectionItem, index: number, array: JobCollectionItem[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -935,13 +985,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: JobCollectionItem, index: number,
-        array: JobCollectionItem[]) => boolean, thisArg?: any)
+        array: JobCollectionItem[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: JobCollectionItem, index: number, array:
-              JobCollectionItem[]) => boolean
+              JobCollectionItem[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -957,6 +1007,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.sort'
     name: 'sort(undefined | (a: JobCollectionItem, b: JobCollectionItem) => number)'
@@ -981,6 +1032,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.splice_1'
     name: 'splice(number, number, JobCollectionItem[])'
@@ -1014,6 +1066,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.splice'
     name: 'splice(number, undefined | number)'
@@ -1042,6 +1095,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.JobCollectionItem[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.toLocaleString'
     name: toLocaleString()
@@ -1058,6 +1112,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.toString'
     name: toString()
@@ -1072,6 +1127,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.unshift'
     name: 'unshift(JobCollectionItem[])'
@@ -1091,6 +1147,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.JobListResultV2.values'
     name: values()
@@ -1105,6 +1162,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-automation.JobCollectionItem>
+        description: ''
     package: '@azure/arm-automation'
 references:
   - uid: Array<@azure/arm-automation.JobCollectionItem>

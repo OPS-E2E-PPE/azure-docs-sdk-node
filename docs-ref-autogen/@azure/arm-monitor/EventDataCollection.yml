@@ -11,12 +11,13 @@ items:
       - '@azure/arm-monitor.EventDataCollection.entries'
       - '@azure/arm-monitor.EventDataCollection.every'
       - '@azure/arm-monitor.EventDataCollection.fill'
-      - '@azure/arm-monitor.EventDataCollection.filter_1'
       - '@azure/arm-monitor.EventDataCollection.filter'
+      - '@azure/arm-monitor.EventDataCollection.filter_1'
       - '@azure/arm-monitor.EventDataCollection.find'
       - '@azure/arm-monitor.EventDataCollection.find_1'
       - '@azure/arm-monitor.EventDataCollection.findIndex'
       - '@azure/arm-monitor.EventDataCollection.forEach'
+      - '@azure/arm-monitor.EventDataCollection.includes'
       - '@azure/arm-monitor.EventDataCollection.indexOf'
       - '@azure/arm-monitor.EventDataCollection.join'
       - '@azure/arm-monitor.EventDataCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.concat'
     name: 'concat(ConcatArray<EventData>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.entries'
     name: entries()
@@ -158,10 +163,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.every'
     name: >-
-      every((value: EventData, index: number, array: EventData[]) => boolean,
+      every((value: EventData, index: number, array: EventData[]) => unknown,
       any)
     children: []
     type: method
@@ -171,11 +177,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: EventData, index: number, array:
-        EventData[]) => boolean, thisArg?: any)
+        EventData[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: EventData, index: number, array: EventData[]) => boolean'
+            - '(value: EventData, index: number, array: EventData[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -191,6 +197,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.fill'
     name: 'fill(EventData, undefined | number, undefined | number)'
@@ -231,39 +238,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-monitor'
-  - uid: '@azure/arm-monitor.EventDataCollection.filter_1'
-    name: 'filter((value: EventData, index: number, array: EventData[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: EventData, index: number, array:
-        EventData[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: EventData, index: number, array: EventData[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-monitor.EventData[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.filter'
     name: >-
@@ -299,6 +274,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventDataCollection.filter_1'
+    name: >-
+      filter((value: EventData, index: number, array: EventData[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: EventData, index: number, array:
+        EventData[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: EventData, index: number, array: EventData[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-monitor.EventData[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.find'
     name: >-
@@ -344,26 +356,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.find_1'
-    name: 'find((value: EventData, index: number, obj: EventData[]) => boolean, any)'
+    name: 'find((value: EventData, index: number, obj: EventData[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: EventData, index: number, obj:
-        EventData[]) => boolean, thisArg?: any)
+        EventData[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: EventData, index: number, obj: EventData[]) => boolean'
+            - '(value: EventData, index: number, obj: EventData[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -373,10 +382,11 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData | undefined'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.findIndex'
     name: >-
-      findIndex((value: EventData, index: number, obj: EventData[]) => boolean,
+      findIndex((value: EventData, index: number, obj: EventData[]) => unknown,
       any)
     children: []
     type: method
@@ -390,11 +400,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: EventData, index: number, obj:
-        EventData[]) => boolean, thisArg?: any)
+        EventData[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: EventData, index: number, obj: EventData[]) => boolean'
+            - '(value: EventData, index: number, obj: EventData[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -416,6 +426,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.forEach'
     name: >-
@@ -446,6 +457,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventDataCollection.includes'
+    name: 'includes(EventData, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: EventData, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-monitor.EventData'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.indexOf'
     name: 'indexOf(EventData, undefined | number)'
     children: []
@@ -472,6 +513,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.join'
     name: join(undefined | string)
@@ -496,6 +538,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.keys'
     name: keys()
@@ -510,6 +553,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.lastIndexOf'
     name: 'lastIndexOf(EventData, undefined | number)'
@@ -537,6 +581,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.length'
     name: length
@@ -553,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.map'
     name: 'map((value: EventData, index: number, array: EventData[]) => U, any)'
@@ -585,6 +631,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.nextLink'
     name: nextLink
@@ -600,6 +647,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.pop'
     name: pop()
@@ -614,6 +662,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData | undefined'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.push'
     name: 'push(EventData[])'
@@ -633,6 +682,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.reduce'
     name: >-
@@ -663,6 +713,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.reduce_1'
     name: >-
@@ -672,10 +723,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: EventData, currentValue:
@@ -695,6 +743,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.reduce_2'
     name: >-
@@ -733,6 +782,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.reduceRight'
     name: >-
@@ -765,6 +815,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.reduceRight_1'
     name: >-
@@ -774,11 +825,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: EventData,
@@ -798,6 +845,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.reduceRight_2'
     name: >-
@@ -837,6 +885,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.reverse'
     name: reverse()
@@ -851,6 +900,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.shift'
     name: shift()
@@ -865,6 +915,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData | undefined'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -890,10 +941,11 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.some'
     name: >-
-      some((value: EventData, index: number, array: EventData[]) => boolean,
+      some((value: EventData, index: number, array: EventData[]) => unknown,
       any)
     children: []
     type: method
@@ -905,11 +957,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: EventData, index: number, array:
-        EventData[]) => boolean, thisArg?: any)
+        EventData[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: EventData, index: number, array: EventData[]) => boolean'
+            - '(value: EventData, index: number, array: EventData[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -925,6 +977,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.sort'
     name: 'sort(undefined | (a: EventData, b: EventData) => number)'
@@ -949,6 +1002,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.splice_1'
     name: 'splice(number, number, EventData[])'
@@ -980,6 +1034,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1008,6 +1063,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.EventData[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.toLocaleString'
     name: toLocaleString()
@@ -1024,6 +1080,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.toString'
     name: toString()
@@ -1038,6 +1095,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.unshift'
     name: 'unshift(EventData[])'
@@ -1057,6 +1115,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventDataCollection.values'
     name: values()
@@ -1071,6 +1130,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-monitor.EventData>
+        description: ''
     package: '@azure/arm-monitor'
 references:
   - uid: Array<@azure/arm-monitor.EventData>

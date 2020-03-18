@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.ApplicationSecurityGroupListResult.entries'
       - '@azure/arm-network.ApplicationSecurityGroupListResult.every'
       - '@azure/arm-network.ApplicationSecurityGroupListResult.fill'
-      - '@azure/arm-network.ApplicationSecurityGroupListResult.filter_1'
       - '@azure/arm-network.ApplicationSecurityGroupListResult.filter'
+      - '@azure/arm-network.ApplicationSecurityGroupListResult.filter_1'
       - '@azure/arm-network.ApplicationSecurityGroupListResult.find'
       - '@azure/arm-network.ApplicationSecurityGroupListResult.find_1'
       - '@azure/arm-network.ApplicationSecurityGroupListResult.findIndex'
       - '@azure/arm-network.ApplicationSecurityGroupListResult.forEach'
+      - '@azure/arm-network.ApplicationSecurityGroupListResult.includes'
       - '@azure/arm-network.ApplicationSecurityGroupListResult.indexOf'
       - '@azure/arm-network.ApplicationSecurityGroupListResult.join'
       - '@azure/arm-network.ApplicationSecurityGroupListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.concat'
     name: 'concat(ConcatArray<ApplicationSecurityGroup>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.every'
     name: >-
       every((value: ApplicationSecurityGroup, index: number, array:
-      ApplicationSecurityGroup[]) => boolean, any)
+      ApplicationSecurityGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ApplicationSecurityGroup, index:
-        number, array: ApplicationSecurityGroup[]) => boolean, thisArg?: any)
+        number, array: ApplicationSecurityGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ApplicationSecurityGroup, index: number, array:
-              ApplicationSecurityGroup[]) => boolean
+              ApplicationSecurityGroup[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.fill'
     name: 'fill(ApplicationSecurityGroup, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.filter_1'
-    name: >-
-      filter((value: ApplicationSecurityGroup, index: number, array:
-      ApplicationSecurityGroup[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ApplicationSecurityGroup, index:
-        number, array: ApplicationSecurityGroup[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ApplicationSecurityGroup, index: number, array:
-              ApplicationSecurityGroup[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.ApplicationSecurityGroup[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.filter_1'
+    name: >-
+      filter((value: ApplicationSecurityGroup, index: number, array:
+      ApplicationSecurityGroup[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ApplicationSecurityGroup, index:
+        number, array: ApplicationSecurityGroup[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ApplicationSecurityGroup, index: number, array:
+              ApplicationSecurityGroup[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.ApplicationSecurityGroup[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.find'
     name: >-
@@ -353,30 +363,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.find_1'
     name: >-
       find((value: ApplicationSecurityGroup, index: number, obj:
-      ApplicationSecurityGroup[]) => boolean, any)
+      ApplicationSecurityGroup[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ApplicationSecurityGroup, index:
-        number, obj: ApplicationSecurityGroup[]) => boolean, thisArg?: any)
+        number, obj: ApplicationSecurityGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ApplicationSecurityGroup, index: number, obj:
-              ApplicationSecurityGroup[]) => boolean
+              ApplicationSecurityGroup[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -386,11 +393,12 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.findIndex'
     name: >-
       findIndex((value: ApplicationSecurityGroup, index: number, obj:
-      ApplicationSecurityGroup[]) => boolean, any)
+      ApplicationSecurityGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -403,13 +411,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ApplicationSecurityGroup, index:
-        number, obj: ApplicationSecurityGroup[]) => boolean, thisArg?: any)
+        number, obj: ApplicationSecurityGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ApplicationSecurityGroup, index: number, obj:
-              ApplicationSecurityGroup[]) => boolean
+              ApplicationSecurityGroup[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -431,6 +439,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.forEach'
     name: >-
@@ -463,6 +472,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.includes'
+    name: 'includes(ApplicationSecurityGroup, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ApplicationSecurityGroup, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.ApplicationSecurityGroup'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.indexOf'
     name: 'indexOf(ApplicationSecurityGroup, undefined | number)'
     children: []
@@ -489,6 +528,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.join'
     name: join(undefined | string)
@@ -513,6 +553,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.keys'
     name: keys()
@@ -527,6 +568,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.lastIndexOf'
     name: 'lastIndexOf(ApplicationSecurityGroup, undefined | number)'
@@ -554,6 +596,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.length'
     name: length
@@ -570,6 +613,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.map'
     name: >-
@@ -606,6 +650,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.nextLink'
     name: nextLink
@@ -625,6 +670,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.pop'
     name: pop()
@@ -639,6 +685,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.push'
     name: 'push(ApplicationSecurityGroup[])'
@@ -658,6 +705,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.reduce'
     name: >-
@@ -691,6 +739,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.reduce_1'
     name: >-
@@ -702,10 +751,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ApplicationSecurityGroup,
@@ -727,6 +773,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.reduce_2'
     name: >-
@@ -765,6 +812,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.reduceRight'
     name: >-
@@ -800,6 +848,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.reduceRight_1'
     name: >-
@@ -811,11 +860,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -837,6 +882,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.reduceRight_2'
     name: >-
@@ -876,6 +922,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.reverse'
     name: reverse()
@@ -890,6 +937,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.shift'
     name: shift()
@@ -904,6 +952,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -929,11 +978,12 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.some'
     name: >-
       some((value: ApplicationSecurityGroup, index: number, array:
-      ApplicationSecurityGroup[]) => boolean, any)
+      ApplicationSecurityGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -944,13 +994,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ApplicationSecurityGroup, index:
-        number, array: ApplicationSecurityGroup[]) => boolean, thisArg?: any)
+        number, array: ApplicationSecurityGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ApplicationSecurityGroup, index: number, array:
-              ApplicationSecurityGroup[]) => boolean
+              ApplicationSecurityGroup[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -966,6 +1016,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.sort'
     name: >-
@@ -994,6 +1045,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.splice_1'
     name: 'splice(number, number, ApplicationSecurityGroup[])'
@@ -1027,6 +1079,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1055,6 +1108,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroup[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.toLocaleString'
     name: toLocaleString()
@@ -1071,6 +1125,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.toString'
     name: toString()
@@ -1085,6 +1140,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.unshift'
     name: 'unshift(ApplicationSecurityGroup[])'
@@ -1104,6 +1160,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroupListResult.values'
     name: values()
@@ -1118,6 +1175,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-network.ApplicationSecurityGroup>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.ApplicationSecurityGroup>

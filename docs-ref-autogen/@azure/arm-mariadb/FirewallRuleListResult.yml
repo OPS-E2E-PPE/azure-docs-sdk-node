@@ -11,12 +11,13 @@ items:
       - '@azure/arm-mariadb.FirewallRuleListResult.entries'
       - '@azure/arm-mariadb.FirewallRuleListResult.every'
       - '@azure/arm-mariadb.FirewallRuleListResult.fill'
-      - '@azure/arm-mariadb.FirewallRuleListResult.filter_1'
       - '@azure/arm-mariadb.FirewallRuleListResult.filter'
+      - '@azure/arm-mariadb.FirewallRuleListResult.filter_1'
       - '@azure/arm-mariadb.FirewallRuleListResult.find'
       - '@azure/arm-mariadb.FirewallRuleListResult.find_1'
       - '@azure/arm-mariadb.FirewallRuleListResult.findIndex'
       - '@azure/arm-mariadb.FirewallRuleListResult.forEach'
+      - '@azure/arm-mariadb.FirewallRuleListResult.includes'
       - '@azure/arm-mariadb.FirewallRuleListResult.indexOf'
       - '@azure/arm-mariadb.FirewallRuleListResult.join'
       - '@azure/arm-mariadb.FirewallRuleListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.concat'
     name: 'concat(ConcatArray<FirewallRule>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule[]'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule[]'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.every'
     name: >-
       every((value: FirewallRule, index: number, array: FirewallRule[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -170,13 +176,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: FirewallRule, index: number, array:
-        FirewallRule[]) => boolean, thisArg?: any)
+        FirewallRule[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: FirewallRule, index: number, array: FirewallRule[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.fill'
     name: 'fill(FirewallRule, undefined | number, undefined | number)'
@@ -232,41 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-mariadb'
-  - uid: '@azure/arm-mariadb.FirewallRuleListResult.filter_1'
-    name: >-
-      filter((value: FirewallRule, index: number, array: FirewallRule[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: FirewallRule, index: number, array:
-        FirewallRule[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: FirewallRule, index: number, array: FirewallRule[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-mariadb.FirewallRule[]'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.filter'
     name: >-
@@ -304,6 +277,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-mariadb'
+  - uid: '@azure/arm-mariadb.FirewallRuleListResult.filter_1'
+    name: >-
+      filter((value: FirewallRule, index: number, array: FirewallRule[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: FirewallRule, index: number, array:
+        FirewallRule[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: FirewallRule, index: number, array: FirewallRule[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-mariadb.FirewallRule[]'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.find'
     name: >-
@@ -349,30 +361,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.find_1'
     name: >-
-      find((value: FirewallRule, index: number, obj: FirewallRule[]) => boolean,
+      find((value: FirewallRule, index: number, obj: FirewallRule[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: FirewallRule, index: number, obj:
-        FirewallRule[]) => boolean, thisArg?: any)
+        FirewallRule[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: FirewallRule, index: number, obj: FirewallRule[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -382,11 +391,12 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule | undefined'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.findIndex'
     name: >-
       findIndex((value: FirewallRule, index: number, obj: FirewallRule[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -399,13 +409,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: FirewallRule, index: number, obj:
-        FirewallRule[]) => boolean, thisArg?: any)
+        FirewallRule[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: FirewallRule, index: number, obj: FirewallRule[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -427,6 +437,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.forEach'
     name: >-
@@ -459,6 +470,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-mariadb'
+  - uid: '@azure/arm-mariadb.FirewallRuleListResult.includes'
+    name: 'includes(FirewallRule, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: FirewallRule, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-mariadb.FirewallRule'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.indexOf'
     name: 'indexOf(FirewallRule, undefined | number)'
     children: []
@@ -485,6 +526,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.join'
     name: join(undefined | string)
@@ -509,6 +551,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.keys'
     name: keys()
@@ -523,6 +566,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.lastIndexOf'
     name: 'lastIndexOf(FirewallRule, undefined | number)'
@@ -550,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.length'
     name: length
@@ -566,6 +611,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.map'
     name: 'map((value: FirewallRule, index: number, array: FirewallRule[]) => U, any)'
@@ -598,6 +644,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.pop'
     name: pop()
@@ -612,6 +659,7 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule | undefined'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.push'
     name: 'push(FirewallRule[])'
@@ -631,6 +679,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.reduce'
     name: >-
@@ -662,6 +711,7 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.reduce_1'
     name: >-
@@ -672,10 +722,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: FirewallRule, currentValue:
@@ -695,6 +742,7 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.reduce_2'
     name: >-
@@ -733,6 +781,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.reduceRight'
     name: >-
@@ -765,6 +814,7 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.reduceRight_1'
     name: >-
@@ -775,11 +825,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: FirewallRule,
@@ -799,6 +845,7 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.reduceRight_2'
     name: >-
@@ -838,6 +885,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.reverse'
     name: reverse()
@@ -852,6 +900,7 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule[]'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.shift'
     name: shift()
@@ -866,6 +915,7 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule | undefined'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -891,11 +941,12 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule[]'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.some'
     name: >-
       some((value: FirewallRule, index: number, array: FirewallRule[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -906,13 +957,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: FirewallRule, index: number, array:
-        FirewallRule[]) => boolean, thisArg?: any)
+        FirewallRule[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: FirewallRule, index: number, array: FirewallRule[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -928,6 +979,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.sort'
     name: 'sort(undefined | (a: FirewallRule, b: FirewallRule) => number)'
@@ -952,6 +1004,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.splice_1'
     name: 'splice(number, number, FirewallRule[])'
@@ -985,6 +1038,7 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule[]'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1013,6 +1067,7 @@ items:
       return:
         type:
           - '@azure/arm-mariadb.FirewallRule[]'
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.toLocaleString'
     name: toLocaleString()
@@ -1029,6 +1084,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.toString'
     name: toString()
@@ -1043,6 +1099,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.unshift'
     name: 'unshift(FirewallRule[])'
@@ -1062,6 +1119,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mariadb'
   - uid: '@azure/arm-mariadb.FirewallRuleListResult.values'
     name: values()
@@ -1076,6 +1134,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-mariadb.FirewallRule>
+        description: ''
     package: '@azure/arm-mariadb'
 references:
   - uid: Array<@azure/arm-mariadb.FirewallRule>

@@ -20,7 +20,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Azure storage specific job.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.actionsInfo'
     name: actionsInfo
@@ -29,13 +29,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Gets or sets the state/actions applicable on this job like cancel/retry.
     optional: true
     syntax:
       content: 'actionsInfo?: JobSupportedAction[]'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobSupportedAction[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.activityId'
     name: activityId
@@ -44,13 +45,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: ActivityId of job.
     optional: true
     syntax:
       content: 'activityId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.backupManagementType'
     name: backupManagementType
@@ -59,13 +61,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Backup management type to execute the current job. Possible values
+      include: 'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     optional: true
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.duration'
     name: duration
@@ -74,13 +84,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Time elapsed during the execution of this job.
     optional: true
     syntax:
       content: 'duration?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.endTime'
     name: endTime
@@ -89,13 +100,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The end time.
     optional: true
     syntax:
       content: 'endTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.entityFriendlyName'
     name: entityFriendlyName
@@ -104,13 +116,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of the entity on which the current job is executing.
     optional: true
     syntax:
       content: 'entityFriendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.errorDetails'
     name: errorDetails
@@ -119,13 +132,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Error details on execution of this job.
     optional: true
     syntax:
       content: 'errorDetails?: AzureWorkloadErrorInfo[]'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.AzureWorkloadErrorInfo[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.extendedInfo'
     name: extendedInfo
@@ -134,13 +148,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Additional information about the job.
     optional: true
     syntax:
       content: 'extendedInfo?: AzureWorkloadJobExtendedInfo'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.AzureWorkloadJobExtendedInfo'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.jobType'
     name: jobType
@@ -149,12 +164,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'jobType: "AzureWorkloadJob"'
       return:
         type:
           - '"AzureWorkloadJob"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.operation'
     name: operation
@@ -163,13 +179,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The operation name.
     optional: true
     syntax:
       content: 'operation?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.startTime'
     name: startTime
@@ -178,13 +195,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The start time.
     optional: true
     syntax:
       content: 'startTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.status'
     name: status
@@ -193,13 +211,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Job status.
     optional: true
     syntax:
       content: 'status?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadJob.workloadType'
     name: workloadType
@@ -208,13 +227,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Workload type of the job
     optional: true
     syntax:
       content: 'workloadType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.JobSupportedAction[]'

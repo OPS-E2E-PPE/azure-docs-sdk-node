@@ -11,12 +11,13 @@ items:
       - '@azure/arm-logic.WorkflowRunActionListResult.entries'
       - '@azure/arm-logic.WorkflowRunActionListResult.every'
       - '@azure/arm-logic.WorkflowRunActionListResult.fill'
-      - '@azure/arm-logic.WorkflowRunActionListResult.filter_1'
       - '@azure/arm-logic.WorkflowRunActionListResult.filter'
+      - '@azure/arm-logic.WorkflowRunActionListResult.filter_1'
       - '@azure/arm-logic.WorkflowRunActionListResult.find'
       - '@azure/arm-logic.WorkflowRunActionListResult.find_1'
       - '@azure/arm-logic.WorkflowRunActionListResult.findIndex'
       - '@azure/arm-logic.WorkflowRunActionListResult.forEach'
+      - '@azure/arm-logic.WorkflowRunActionListResult.includes'
       - '@azure/arm-logic.WorkflowRunActionListResult.indexOf'
       - '@azure/arm-logic.WorkflowRunActionListResult.join'
       - '@azure/arm-logic.WorkflowRunActionListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.concat'
     name: 'concat(ConcatArray<WorkflowRunAction>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.every'
     name: >-
       every((value: WorkflowRunAction, index: number, array:
-      WorkflowRunAction[]) => boolean, any)
+      WorkflowRunAction[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: WorkflowRunAction, index: number,
-        array: WorkflowRunAction[]) => boolean, thisArg?: any)
+        array: WorkflowRunAction[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: WorkflowRunAction, index: number, array:
-              WorkflowRunAction[]) => boolean
+              WorkflowRunAction[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.fill'
     name: 'fill(WorkflowRunAction, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-logic'
-  - uid: '@azure/arm-logic.WorkflowRunActionListResult.filter_1'
-    name: >-
-      filter((value: WorkflowRunAction, index: number, array:
-      WorkflowRunAction[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: WorkflowRunAction, index: number,
-        array: WorkflowRunAction[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: WorkflowRunAction, index: number, array:
-              WorkflowRunAction[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-logic.WorkflowRunAction[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-logic'
+  - uid: '@azure/arm-logic.WorkflowRunActionListResult.filter_1'
+    name: >-
+      filter((value: WorkflowRunAction, index: number, array:
+      WorkflowRunAction[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: WorkflowRunAction, index: number,
+        array: WorkflowRunAction[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: WorkflowRunAction, index: number, array:
+              WorkflowRunAction[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-logic.WorkflowRunAction[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.find_1'
     name: >-
       find((value: WorkflowRunAction, index: number, obj: WorkflowRunAction[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: WorkflowRunAction, index: number, obj:
-        WorkflowRunAction[]) => boolean, thisArg?: any)
+        WorkflowRunAction[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: WorkflowRunAction, index: number, obj:
-              WorkflowRunAction[]) => boolean
+              WorkflowRunAction[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.findIndex'
     name: >-
       findIndex((value: WorkflowRunAction, index: number, obj:
-      WorkflowRunAction[]) => boolean, any)
+      WorkflowRunAction[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: WorkflowRunAction, index: number,
-        obj: WorkflowRunAction[]) => boolean, thisArg?: any)
+        obj: WorkflowRunAction[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: WorkflowRunAction, index: number, obj:
-              WorkflowRunAction[]) => boolean
+              WorkflowRunAction[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-logic'
+  - uid: '@azure/arm-logic.WorkflowRunActionListResult.includes'
+    name: 'includes(WorkflowRunAction, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: WorkflowRunAction, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-logic.WorkflowRunAction'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.indexOf'
     name: 'indexOf(WorkflowRunAction, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.lastIndexOf'
     name: 'lastIndexOf(WorkflowRunAction, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.push'
     name: 'push(WorkflowRunAction[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.reduce_2'
     name: >-
@@ -691,6 +739,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.reduce'
     name: >-
@@ -723,6 +772,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.reduce_1'
     name: >-
@@ -733,10 +783,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: WorkflowRunAction,
@@ -758,6 +805,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.reduceRight_2'
     name: >-
@@ -797,6 +845,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.reduceRight'
     name: >-
@@ -831,6 +880,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.reduceRight_1'
     name: >-
@@ -841,11 +891,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: WorkflowRunAction,
@@ -867,6 +913,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.reverse'
     name: reverse()
@@ -881,6 +928,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.shift'
     name: shift()
@@ -895,6 +943,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -920,11 +969,12 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.some'
     name: >-
       some((value: WorkflowRunAction, index: number, array: WorkflowRunAction[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -935,13 +985,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: WorkflowRunAction, index: number,
-        array: WorkflowRunAction[]) => boolean, thisArg?: any)
+        array: WorkflowRunAction[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: WorkflowRunAction, index: number, array:
-              WorkflowRunAction[]) => boolean
+              WorkflowRunAction[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -957,6 +1007,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.sort'
     name: 'sort(undefined | (a: WorkflowRunAction, b: WorkflowRunAction) => number)'
@@ -981,6 +1032,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.splice_1'
     name: 'splice(number, number, WorkflowRunAction[])'
@@ -1014,6 +1066,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1042,6 +1095,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.WorkflowRunAction[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.toLocaleString'
     name: toLocaleString()
@@ -1058,6 +1112,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.toString'
     name: toString()
@@ -1072,6 +1127,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.unshift'
     name: 'unshift(WorkflowRunAction[])'
@@ -1091,6 +1147,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.WorkflowRunActionListResult.values'
     name: values()
@@ -1105,6 +1162,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-logic.WorkflowRunAction>
+        description: ''
     package: '@azure/arm-logic'
 references:
   - uid: Array<@azure/arm-logic.WorkflowRunAction>

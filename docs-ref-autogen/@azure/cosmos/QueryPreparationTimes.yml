@@ -38,6 +38,7 @@ items:
       return:
         type:
           - '@azure/cosmos.QueryPreparationTimes'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryPreparationTimes.createFromArray'
     name: 'createFromArray(QueryPreparationTimes[])'
@@ -60,6 +61,7 @@ items:
       return:
         type:
           - '@azure/cosmos.QueryPreparationTimes'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryPreparationTimes.createFromDelimitedString'
     name: createFromDelimitedString(string)
@@ -80,6 +82,7 @@ items:
       return:
         type:
           - '@azure/cosmos.QueryPreparationTimes'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryPreparationTimes.logicalPlanBuildTime'
     name: logicalPlanBuildTime
@@ -90,10 +93,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'logicalPlanBuildTime: TimeSpan'
+      content: 'public logicalPlanBuildTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryPreparationTimes.physicalPlanBuildTime'
     name: physicalPlanBuildTime
@@ -104,10 +108,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'physicalPlanBuildTime: TimeSpan'
+      content: 'public physicalPlanBuildTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryPreparationTimes.queryCompilationTime'
     name: queryCompilationTime
@@ -118,10 +123,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'queryCompilationTime: TimeSpan'
+      content: 'public queryCompilationTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryPreparationTimes.queryOptimizationTime'
     name: queryOptimizationTime
@@ -132,10 +138,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'queryOptimizationTime: TimeSpan'
+      content: 'public queryOptimizationTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryPreparationTimes.constructor'
     name: 'QueryPreparationTimes(TimeSpan, TimeSpan, TimeSpan, TimeSpan)'
@@ -180,6 +187,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryPreparationTimes.zero'
     name: zero
@@ -190,10 +198,17 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'static zero: QueryPreparationTimes'
+      content: |-
+        public static zero: QueryPreparationTimes = new QueryPreparationTimes(
+            TimeSpan.zero,
+            TimeSpan.zero,
+            TimeSpan.zero,
+            TimeSpan.zero
+          )
       return:
         type:
           - '@azure/cosmos.QueryPreparationTimes'
+        description: ''
     package: '@azure/cosmos'
 references:
   - uid: '@azure/cosmos.QueryPreparationTimes'

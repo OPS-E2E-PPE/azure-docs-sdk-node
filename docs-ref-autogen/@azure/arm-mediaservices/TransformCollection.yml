@@ -11,12 +11,13 @@ items:
       - '@azure/arm-mediaservices.TransformCollection.entries'
       - '@azure/arm-mediaservices.TransformCollection.every'
       - '@azure/arm-mediaservices.TransformCollection.fill'
-      - '@azure/arm-mediaservices.TransformCollection.filter_1'
       - '@azure/arm-mediaservices.TransformCollection.filter'
+      - '@azure/arm-mediaservices.TransformCollection.filter_1'
       - '@azure/arm-mediaservices.TransformCollection.find'
       - '@azure/arm-mediaservices.TransformCollection.find_1'
       - '@azure/arm-mediaservices.TransformCollection.findIndex'
       - '@azure/arm-mediaservices.TransformCollection.forEach'
+      - '@azure/arm-mediaservices.TransformCollection.includes'
       - '@azure/arm-mediaservices.TransformCollection.indexOf'
       - '@azure/arm-mediaservices.TransformCollection.join'
       - '@azure/arm-mediaservices.TransformCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.concat'
     name: 'concat(ConcatArray<Transform>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.entries'
     name: entries()
@@ -158,10 +163,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.every'
     name: >-
-      every((value: Transform, index: number, array: Transform[]) => boolean,
+      every((value: Transform, index: number, array: Transform[]) => unknown,
       any)
     children: []
     type: method
@@ -171,11 +177,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Transform, index: number, array:
-        Transform[]) => boolean, thisArg?: any)
+        Transform[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Transform, index: number, array: Transform[]) => boolean'
+            - '(value: Transform, index: number, array: Transform[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -191,6 +197,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.fill'
     name: 'fill(Transform, undefined | number, undefined | number)'
@@ -231,39 +238,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-mediaservices'
-  - uid: '@azure/arm-mediaservices.TransformCollection.filter_1'
-    name: 'filter((value: Transform, index: number, array: Transform[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Transform, index: number, array:
-        Transform[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Transform, index: number, array: Transform[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-mediaservices.Transform[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.filter'
     name: >-
@@ -299,6 +274,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransformCollection.filter_1'
+    name: >-
+      filter((value: Transform, index: number, array: Transform[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Transform, index: number, array:
+        Transform[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Transform, index: number, array: Transform[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-mediaservices.Transform[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.find'
     name: >-
@@ -344,26 +356,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.find_1'
-    name: 'find((value: Transform, index: number, obj: Transform[]) => boolean, any)'
+    name: 'find((value: Transform, index: number, obj: Transform[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Transform, index: number, obj:
-        Transform[]) => boolean, thisArg?: any)
+        Transform[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Transform, index: number, obj: Transform[]) => boolean'
+            - '(value: Transform, index: number, obj: Transform[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -373,10 +382,11 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.findIndex'
     name: >-
-      findIndex((value: Transform, index: number, obj: Transform[]) => boolean,
+      findIndex((value: Transform, index: number, obj: Transform[]) => unknown,
       any)
     children: []
     type: method
@@ -390,11 +400,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Transform, index: number, obj:
-        Transform[]) => boolean, thisArg?: any)
+        Transform[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Transform, index: number, obj: Transform[]) => boolean'
+            - '(value: Transform, index: number, obj: Transform[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -416,6 +426,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.forEach'
     name: >-
@@ -446,6 +457,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransformCollection.includes'
+    name: 'includes(Transform, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Transform, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-mediaservices.Transform'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.indexOf'
     name: 'indexOf(Transform, undefined | number)'
     children: []
@@ -472,6 +513,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.join'
     name: join(undefined | string)
@@ -496,6 +538,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.keys'
     name: keys()
@@ -510,6 +553,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.lastIndexOf'
     name: 'lastIndexOf(Transform, undefined | number)'
@@ -537,6 +581,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.length'
     name: length
@@ -553,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.map'
     name: 'map((value: Transform, index: number, array: Transform[]) => U, any)'
@@ -585,6 +631,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.odatanextLink'
     name: odatanextLink
@@ -604,6 +651,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.pop'
     name: pop()
@@ -618,6 +666,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.push'
     name: 'push(Transform[])'
@@ -637,6 +686,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.reduce'
     name: >-
@@ -667,6 +717,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.reduce_1'
     name: >-
@@ -676,10 +727,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Transform, currentValue:
@@ -699,6 +747,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.reduce_2'
     name: >-
@@ -737,6 +786,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.reduceRight'
     name: >-
@@ -769,6 +819,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.reduceRight_1'
     name: >-
@@ -778,11 +829,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Transform,
@@ -802,6 +849,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.reduceRight_2'
     name: >-
@@ -841,6 +889,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.reverse'
     name: reverse()
@@ -855,6 +904,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.shift'
     name: shift()
@@ -869,6 +919,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -894,10 +945,11 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.some'
     name: >-
-      some((value: Transform, index: number, array: Transform[]) => boolean,
+      some((value: Transform, index: number, array: Transform[]) => unknown,
       any)
     children: []
     type: method
@@ -909,11 +961,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Transform, index: number, array:
-        Transform[]) => boolean, thisArg?: any)
+        Transform[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Transform, index: number, array: Transform[]) => boolean'
+            - '(value: Transform, index: number, array: Transform[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -929,6 +981,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.sort'
     name: 'sort(undefined | (a: Transform, b: Transform) => number)'
@@ -953,6 +1006,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.splice_1'
     name: 'splice(number, number, Transform[])'
@@ -984,6 +1038,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1012,6 +1067,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.Transform[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.toLocaleString'
     name: toLocaleString()
@@ -1028,6 +1084,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.toString'
     name: toString()
@@ -1042,6 +1099,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.unshift'
     name: 'unshift(Transform[])'
@@ -1061,6 +1119,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.TransformCollection.values'
     name: values()
@@ -1075,6 +1134,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-mediaservices.Transform>
+        description: ''
     package: '@azure/arm-mediaservices'
 references:
   - uid: Array<@azure/arm-mediaservices.Transform>

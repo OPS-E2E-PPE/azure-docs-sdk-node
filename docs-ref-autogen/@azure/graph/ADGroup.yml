@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Active Directory group information.
     package: '@azure/graph'
   - uid: '@azure/graph.ADGroup.deletionTimestamp'
     name: deletionTimestamp
@@ -24,13 +24,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The time at which the directory object was deleted.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'deletionTimestamp?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ADGroup.displayName'
     name: displayName
@@ -39,13 +44,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The display name of the group.
     optional: true
     syntax:
       content: 'displayName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ADGroup.mail'
     name: mail
@@ -54,13 +60,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The primary email address of the group.
     optional: true
     syntax:
       content: 'mail?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ADGroup.mailEnabled'
     name: mailEnabled
@@ -69,13 +76,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Whether the group is mail-enabled. Must be false. This is because only
+      pure security groups
+
+      can be created using the Graph API.
     optional: true
     syntax:
       content: 'mailEnabled?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ADGroup.mailNickname'
     name: mailNickname
@@ -84,13 +96,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The mail alias for the group.
     optional: true
     syntax:
       content: 'mailNickname?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ADGroup.objectId'
     name: objectId
@@ -99,13 +112,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The object ID.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'objectId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ADGroup.objectType'
     name: objectType
@@ -114,12 +132,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'objectType: "Group"'
       return:
         type:
           - '"Group"'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.ADGroup.securityEnabled'
     name: securityEnabled
@@ -128,11 +147,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Whether the group is security-enable.
     optional: true
     syntax:
       content: 'securityEnabled?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/graph'

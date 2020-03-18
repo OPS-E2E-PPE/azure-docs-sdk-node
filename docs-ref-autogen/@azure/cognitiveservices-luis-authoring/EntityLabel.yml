@@ -6,6 +6,8 @@ items:
     children:
       - '@azure/cognitiveservices-luis-authoring.EntityLabel.endTokenIndex'
       - '@azure/cognitiveservices-luis-authoring.EntityLabel.entityName'
+      - '@azure/cognitiveservices-luis-authoring.EntityLabel.role'
+      - '@azure/cognitiveservices-luis-authoring.EntityLabel.roleId'
       - '@azure/cognitiveservices-luis-authoring.EntityLabel.startTokenIndex'
     langs:
       - typeScript
@@ -27,6 +29,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.EntityLabel.entityName'
     name: entityName
@@ -41,6 +44,39 @@ items:
       return:
         type:
           - string
+        description: ''
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.EntityLabel.role'
+    name: role
+    fullName: role
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The role of the predicted entity.
+    optional: true
+    syntax:
+      content: 'role?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.EntityLabel.roleId'
+    name: roleId
+    fullName: roleId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The role id for the predicted entity.
+    optional: true
+    syntax:
+      content: 'roleId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.EntityLabel.startTokenIndex'
     name: startTokenIndex
@@ -55,4 +91,5 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'

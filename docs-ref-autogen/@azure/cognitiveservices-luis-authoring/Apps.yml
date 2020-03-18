@@ -104,15 +104,15 @@ items:
           type:
             - '@azure/cognitiveservices-luis-authoring.ApplicationCreateObject'
           description: >-
-            A model containing Name, Description (optional), Culture, Usage
+            An application containing Name, Description (optional), Culture,
 
-            Scenario (optional), Domain (optional) and initial version ID
-            (optional) of the application.
+            Usage Scenario (optional), Domain (optional) and initial version ID
+            (optional) of the
 
-            Default value for the version ID is 0.1. Note: the culture cannot be
-            changed after the app is
+            application. Default value for the version ID is "0.1". Note: the
+            culture cannot be changed
 
-            created.
+            after the app is created.
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -121,6 +121,7 @@ items:
       return:
         type:
           - Promise<Models.AppsAddResponse>
+        description: Promise<Models.AppsAddResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.add_2'
     name: 'add(ApplicationCreateObject, RequestOptionsBase, ServiceCallback<string>)'
@@ -138,15 +139,15 @@ items:
           type:
             - '@azure/cognitiveservices-luis-authoring.ApplicationCreateObject'
           description: >-
-            A model containing Name, Description (optional), Culture, Usage
+            An application containing Name, Description (optional), Culture,
 
-            Scenario (optional), Domain (optional) and initial version ID
-            (optional) of the application.
+            Usage Scenario (optional), Domain (optional) and initial version ID
+            (optional) of the
 
-            Default value for the version ID is 0.1. Note: the culture cannot be
-            changed after the app is
+            application. Default value for the version ID is "0.1". Note: the
+            culture cannot be changed
 
-            created.
+            after the app is created.
         - id: options
           type:
             - RequestOptionsBase
@@ -156,9 +157,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsAddResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.add_1'
     name: 'add(ApplicationCreateObject, ServiceCallback<string>)'
@@ -176,23 +174,20 @@ items:
           type:
             - '@azure/cognitiveservices-luis-authoring.ApplicationCreateObject'
           description: >-
-            A model containing Name, Description (optional), Culture, Usage
+            An application containing Name, Description (optional), Culture,
 
-            Scenario (optional), Domain (optional) and initial version ID
-            (optional) of the application.
+            Usage Scenario (optional), Domain (optional) and initial version ID
+            (optional) of the
 
-            Default value for the version ID is 0.1. Note: the culture cannot be
-            changed after the app is
+            application. Default value for the version ID is "0.1". Note: the
+            culture cannot be changed
 
-            created.
+            after the app is created.
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsAddResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.addCustomPrebuiltDomain'
     name: >-
@@ -202,7 +197,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adds a prebuilt domain along with its models as a new application.
+    summary: >-
+      Adds a prebuilt domain along with its intent and entity models as a new
+      application.
     syntax:
       content: >-
         function addCustomPrebuiltDomain(prebuiltDomainCreateObject:
@@ -222,6 +219,7 @@ items:
       return:
         type:
           - Promise<Models.AppsAddCustomPrebuiltDomainResponse>
+        description: Promise<Models.AppsAddCustomPrebuiltDomainResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.addCustomPrebuiltDomain_2'
     name: >-
@@ -253,9 +251,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsAddCustomPrebuiltDomainResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.addCustomPrebuiltDomain_1'
     name: >-
@@ -282,9 +277,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsAddCustomPrebuiltDomainResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.constructor'
     name: Apps(LUISAuthoringClientContext)
@@ -332,9 +324,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsDeleteMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.deleteMethod'
     name: 'deleteMethod(string, Models.AppsDeleteMethodOptionalParams)'
@@ -360,6 +349,7 @@ items:
       return:
         type:
           - Promise<Models.AppsDeleteMethodResponse>
+        description: Promise<Models.AppsDeleteMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.deleteMethod_1'
     name: 'deleteMethod(string, ServiceCallback<OperationStatus>)'
@@ -383,9 +373,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsDeleteMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.downloadQueryLogs'
     name: 'downloadQueryLogs(string, msRest.RequestOptionsBase)'
@@ -393,7 +380,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Gets the query logs of the past month for the application.
+    summary: Gets the logs of the past month's endpoint queries for the application.
     syntax:
       content: >-
         function downloadQueryLogs(appId: string, options?:
@@ -411,6 +398,7 @@ items:
       return:
         type:
           - Promise<Models.AppsDownloadQueryLogsResponse>
+        description: Promise<Models.AppsDownloadQueryLogsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.downloadQueryLogs_2'
     name: 'downloadQueryLogs(string, RequestOptionsBase, ServiceCallback<void>)'
@@ -437,9 +425,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsDownloadQueryLogsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.downloadQueryLogs_1'
     name: 'downloadQueryLogs(string, ServiceCallback<void>)'
@@ -462,9 +447,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsDownloadQueryLogsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.get'
     name: 'get(string, msRest.RequestOptionsBase)'
@@ -488,6 +470,7 @@ items:
       return:
         type:
           - Promise<Models.AppsGetResponse>
+        description: Promise<Models.AppsGetResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.get_2'
     name: 'get(string, RequestOptionsBase, ServiceCallback<ApplicationInfoResponse>)'
@@ -515,9 +498,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.ApplicationInfoResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsGetResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.get_1'
     name: 'get(string, ServiceCallback<ApplicationInfoResponse>)'
@@ -541,9 +521,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.ApplicationInfoResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsGetResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.getPublishSettings'
     name: 'getPublishSettings(string, msRest.RequestOptionsBase)'
@@ -551,7 +528,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Get the application publish settings.
+    summary: Get the application publish settings including 'UseAllTrainingData'.
     syntax:
       content: >-
         function getPublishSettings(appId: string, options?:
@@ -569,6 +546,7 @@ items:
       return:
         type:
           - Promise<Models.AppsGetPublishSettingsResponse>
+        description: Promise<Models.AppsGetPublishSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.getPublishSettings_2'
     name: >-
@@ -598,9 +576,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PublishSettings>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsGetPublishSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.getPublishSettings_1'
     name: 'getPublishSettings(string, ServiceCallback<PublishSettings>)'
@@ -624,9 +599,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PublishSettings>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsGetPublishSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.getSettings'
     name: 'getSettings(string, msRest.RequestOptionsBase)'
@@ -634,7 +606,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Get the application settings.
+    summary: Get the application settings including 'UseAllTrainingData'.
     syntax:
       content: 'function getSettings(appId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -650,6 +622,7 @@ items:
       return:
         type:
           - Promise<Models.AppsGetSettingsResponse>
+        description: Promise<Models.AppsGetSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.getSettings_2'
     name: >-
@@ -679,9 +652,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.ApplicationSettings>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsGetSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.getSettings_1'
     name: 'getSettings(string, ServiceCallback<ApplicationSettings>)'
@@ -705,9 +675,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.ApplicationSettings>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsGetSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.importMethod_2'
     name: >-
@@ -737,9 +704,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsImportMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.importMethod'
     name: 'importMethod(LuisApp, Models.AppsImportMethodOptionalParams)'
@@ -748,10 +712,8 @@ items:
     langs:
       - typeScript
     summary: >-
-      Imports an application to LUIS, the application's structure should be
-      included in the request
-
-      body.
+      Imports an application to LUIS, the application's structure is included in
+      the request body.
     syntax:
       content: >-
         function importMethod(luisApp: LuisApp, options?:
@@ -769,6 +731,7 @@ items:
       return:
         type:
           - Promise<Models.AppsImportMethodResponse>
+        description: Promise<Models.AppsImportMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.importMethod_1'
     name: 'importMethod(LuisApp, ServiceCallback<string>)'
@@ -791,9 +754,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsImportMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.list_2'
     name: 'list(AppsListOptionalParams, ServiceCallback<ApplicationInfoResponse[]>)'
@@ -817,9 +777,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.ApplicationInfoResponse[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.list'
     name: list(Models.AppsListOptionalParams)
@@ -827,7 +784,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Lists all of the user applications.
+    summary: Lists all of the user's applications.
     syntax:
       content: 'function list(options?: Models.AppsListOptionalParams)'
       parameters:
@@ -839,6 +796,7 @@ items:
       return:
         type:
           - Promise<Models.AppsListResponse>
+        description: Promise<Models.AppsListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.list_1'
     name: 'list(ServiceCallback<ApplicationInfoResponse[]>)'
@@ -856,9 +814,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.ApplicationInfoResponse[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.listAvailableCustomPrebuiltDomains
@@ -881,6 +836,7 @@ items:
       return:
         type:
           - Promise<Models.AppsListAvailableCustomPrebuiltDomainsResponse>
+        description: Promise<Models.AppsListAvailableCustomPrebuiltDomainsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.listAvailableCustomPrebuiltDomains_2
@@ -907,9 +863,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PrebuiltDomain[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListAvailableCustomPrebuiltDomainsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.listAvailableCustomPrebuiltDomains_1
@@ -930,9 +883,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PrebuiltDomain[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListAvailableCustomPrebuiltDomainsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.listAvailableCustomPrebuiltDomainsForCulture
@@ -943,7 +893,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Gets all the available custom prebuilt domains for a specific culture.
+    summary: Gets all the available prebuilt domains for a specific culture.
     syntax:
       content: >-
         function listAvailableCustomPrebuiltDomainsForCulture(culture: string,
@@ -962,6 +912,8 @@ items:
         type:
           - >-
             Promise<Models.AppsListAvailableCustomPrebuiltDomainsForCultureResponse>
+        description: >-
+          Promise<Models.AppsListAvailableCustomPrebuiltDomainsForCultureResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.listAvailableCustomPrebuiltDomainsForCulture_2
@@ -993,10 +945,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PrebuiltDomain[]>
           description: |
             The callback
-      return:
-        type:
-          - >-
-            Promise<Models.AppsListAvailableCustomPrebuiltDomainsForCultureResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.listAvailableCustomPrebuiltDomainsForCulture_1
@@ -1023,10 +971,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PrebuiltDomain[]>
           description: |
             The callback
-      return:
-        type:
-          - >-
-            Promise<Models.AppsListAvailableCustomPrebuiltDomainsForCultureResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listCortanaEndpoints'
     name: listCortanaEndpoints(msRest.RequestOptionsBase)
@@ -1046,6 +990,7 @@ items:
       return:
         type:
           - Promise<Models.AppsListCortanaEndpointsResponse>
+        description: Promise<Models.AppsListCortanaEndpointsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listCortanaEndpoints_2'
     name: >-
@@ -1071,9 +1016,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PersonalAssistantsResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListCortanaEndpointsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listCortanaEndpoints_1'
     name: listCortanaEndpoints(ServiceCallback<PersonalAssistantsResponse>)
@@ -1093,9 +1035,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.PersonalAssistantsResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListCortanaEndpointsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listDomains'
     name: listDomains(msRest.RequestOptionsBase)
@@ -1115,6 +1054,7 @@ items:
       return:
         type:
           - Promise<Models.AppsListDomainsResponse>
+        description: Promise<Models.AppsListDomainsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listDomains_2'
     name: 'listDomains(RequestOptionsBase, ServiceCallback<string[]>)'
@@ -1137,9 +1077,6 @@ items:
             - 'ServiceCallback<string[]>'
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListDomainsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listDomains_1'
     name: 'listDomains(ServiceCallback<string[]>)'
@@ -1156,9 +1093,6 @@ items:
             - 'ServiceCallback<string[]>'
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListDomainsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listEndpoints'
     name: 'listEndpoints(string, msRest.RequestOptionsBase)'
@@ -1184,6 +1118,7 @@ items:
       return:
         type:
           - Promise<Models.AppsListEndpointsResponse>
+        description: Promise<Models.AppsListEndpointsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listEndpoints_2'
     name: >-
@@ -1212,9 +1147,6 @@ items:
             - 'ServiceCallback<[key: string]: string>'
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListEndpointsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listEndpoints_1'
     name: 'listEndpoints(string, ServiceCallback<[key: string]: string>)'
@@ -1237,9 +1169,6 @@ items:
             - 'ServiceCallback<[key: string]: string>'
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListEndpointsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listSupportedCultures'
     name: listSupportedCultures(msRest.RequestOptionsBase)
@@ -1247,7 +1176,11 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Gets the supported application cultures.
+    summary: >-
+      Gets a list of supported cultures. Cultures are equivalent to the written
+      language and locale.
+
+      For example,"en-us" represents the U.S. variation of English.
     syntax:
       content: 'function listSupportedCultures(options?: msRest.RequestOptionsBase)'
       parameters:
@@ -1259,6 +1192,7 @@ items:
       return:
         type:
           - Promise<Models.AppsListSupportedCulturesResponse>
+        description: Promise<Models.AppsListSupportedCulturesResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listSupportedCultures_2'
     name: >-
@@ -1284,9 +1218,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.AvailableCulture[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListSupportedCulturesResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listSupportedCultures_1'
     name: 'listSupportedCultures(ServiceCallback<AvailableCulture[]>)'
@@ -1306,9 +1237,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.AvailableCulture[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListSupportedCulturesResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listUsageScenarios'
     name: listUsageScenarios(msRest.RequestOptionsBase)
@@ -1328,6 +1256,7 @@ items:
       return:
         type:
           - Promise<Models.AppsListUsageScenariosResponse>
+        description: Promise<Models.AppsListUsageScenariosResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listUsageScenarios_2'
     name: 'listUsageScenarios(RequestOptionsBase, ServiceCallback<string[]>)'
@@ -1350,9 +1279,6 @@ items:
             - 'ServiceCallback<string[]>'
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListUsageScenariosResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.listUsageScenarios_1'
     name: 'listUsageScenarios(ServiceCallback<string[]>)'
@@ -1369,9 +1295,6 @@ items:
             - 'ServiceCallback<string[]>'
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsListUsageScenariosResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.packagePublishedApplicationAsGzip
@@ -1382,7 +1305,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Packages published LUIS application as GZip.
+    summary: >-
+      Packages a published LUIS application as a GZip file to be used in the
+      LUIS container.
     syntax:
       content: >-
         function packagePublishedApplicationAsGzip(appId: string, slotName:
@@ -1404,6 +1329,7 @@ items:
       return:
         type:
           - Promise<Models.AppsPackagePublishedApplicationAsGzipResponse>
+        description: Promise<Models.AppsPackagePublishedApplicationAsGzipResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.packagePublishedApplicationAsGzip_2
@@ -1437,9 +1363,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsPackagePublishedApplicationAsGzipResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.packagePublishedApplicationAsGzip_1
@@ -1467,9 +1390,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsPackagePublishedApplicationAsGzipResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.packageTrainedApplicationAsGzip
@@ -1478,7 +1398,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Packages trained LUIS application as GZip.
+    summary: >-
+      Packages trained LUIS application as GZip file to be used in the LUIS
+      container.
     syntax:
       content: >-
         function packageTrainedApplicationAsGzip(appId: string, versionId:
@@ -1500,6 +1422,7 @@ items:
       return:
         type:
           - Promise<Models.AppsPackageTrainedApplicationAsGzipResponse>
+        description: Promise<Models.AppsPackageTrainedApplicationAsGzipResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.packageTrainedApplicationAsGzip_2
@@ -1533,9 +1456,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsPackageTrainedApplicationAsGzipResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.Apps.packageTrainedApplicationAsGzip_1
@@ -1563,9 +1483,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsPackageTrainedApplicationAsGzipResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.publish'
     name: 'publish(string, ApplicationPublishObject, msRest.RequestOptionsBase)'
@@ -1597,6 +1514,7 @@ items:
       return:
         type:
           - Promise<Models.AppsPublishResponse>
+        description: Promise<Models.AppsPublishResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.publish_2'
     name: >-
@@ -1633,9 +1551,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.ProductionOrStagingEndpointInfo>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsPublishResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.publish_1'
     name: >-
@@ -1668,9 +1583,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.ProductionOrStagingEndpointInfo>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsPublishResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.update'
     name: 'update(string, ApplicationUpdateObject, msRest.RequestOptionsBase)'
@@ -1700,6 +1612,7 @@ items:
       return:
         type:
           - Promise<Models.AppsUpdateResponse>
+        description: Promise<Models.AppsUpdateResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.update_2'
     name: >-
@@ -1734,9 +1647,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsUpdateResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.update_1'
     name: 'update(string, ApplicationUpdateObject, ServiceCallback<OperationStatus>)'
@@ -1764,9 +1674,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsUpdateResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.updatePublishSettings'
     name: >-
@@ -1776,7 +1683,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Updates the application publish settings.
+    summary: Updates the application publish settings including 'UseAllTrainingData'.
     syntax:
       content: >-
         function updatePublishSettings(appId: string,
@@ -1799,6 +1706,7 @@ items:
       return:
         type:
           - Promise<Models.AppsUpdatePublishSettingsResponse>
+        description: Promise<Models.AppsUpdatePublishSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.updatePublishSettings_2'
     name: >-
@@ -1833,9 +1741,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsUpdatePublishSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.updatePublishSettings_1'
     name: >-
@@ -1866,9 +1771,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsUpdatePublishSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.updateSettings'
     name: >-
@@ -1878,7 +1780,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Updates the application settings.
+    summary: Updates the application settings including 'UseAllTrainingData'.
     syntax:
       content: >-
         function updateSettings(appId: string, applicationSettingUpdateObject:
@@ -1901,6 +1803,7 @@ items:
       return:
         type:
           - Promise<Models.AppsUpdateSettingsResponse>
+        description: Promise<Models.AppsUpdateSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.updateSettings_2'
     name: >-
@@ -1936,9 +1839,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsUpdateSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Apps.updateSettings_1'
     name: >-
@@ -1970,9 +1870,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.AppsUpdateSettingsResponse>
     package: '@azure/cognitiveservices-luis-authoring'
 references:
   - uid: '@azure/cognitiveservices-luis-authoring.LUISAuthoringClientContext'

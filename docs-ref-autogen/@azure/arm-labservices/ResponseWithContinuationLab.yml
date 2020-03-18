@@ -11,12 +11,13 @@ items:
       - '@azure/arm-labservices.ResponseWithContinuationLab.entries'
       - '@azure/arm-labservices.ResponseWithContinuationLab.every'
       - '@azure/arm-labservices.ResponseWithContinuationLab.fill'
-      - '@azure/arm-labservices.ResponseWithContinuationLab.filter_1'
       - '@azure/arm-labservices.ResponseWithContinuationLab.filter'
+      - '@azure/arm-labservices.ResponseWithContinuationLab.filter_1'
       - '@azure/arm-labservices.ResponseWithContinuationLab.find'
       - '@azure/arm-labservices.ResponseWithContinuationLab.find_1'
       - '@azure/arm-labservices.ResponseWithContinuationLab.findIndex'
       - '@azure/arm-labservices.ResponseWithContinuationLab.forEach'
+      - '@azure/arm-labservices.ResponseWithContinuationLab.includes'
       - '@azure/arm-labservices.ResponseWithContinuationLab.indexOf'
       - '@azure/arm-labservices.ResponseWithContinuationLab.join'
       - '@azure/arm-labservices.ResponseWithContinuationLab.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.concat'
     name: 'concat(ConcatArray<Lab>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.every'
-    name: 'every((value: Lab, index: number, array: Lab[]) => boolean, any)'
+    name: 'every((value: Lab, index: number, array: Lab[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Lab, index: number, array: Lab[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Lab, index: number, array: Lab[]) => boolean'
+            - '(value: Lab, index: number, array: Lab[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.fill'
     name: 'fill(Lab, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-labservices'
-  - uid: '@azure/arm-labservices.ResponseWithContinuationLab.filter_1'
-    name: 'filter((value: Lab, index: number, array: Lab[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Lab, index: number, array: Lab[]) =>
-        any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Lab, index: number, array: Lab[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-labservices.Lab[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.filter'
     name: 'filter((value: Lab, index: number, array: Lab[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.ResponseWithContinuationLab.filter_1'
+    name: 'filter((value: Lab, index: number, array: Lab[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Lab, index: number, array: Lab[]) =>
+        unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Lab, index: number, array: Lab[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-labservices.Lab[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.find'
     name: 'find((this: void, value: Lab, index: number, obj: Lab[]) => boolean, any)'
@@ -336,26 +346,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.find_1'
-    name: 'find((value: Lab, index: number, obj: Lab[]) => boolean, any)'
+    name: 'find((value: Lab, index: number, obj: Lab[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Lab, index: number, obj: Lab[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Lab, index: number, obj: Lab[]) => boolean'
+            - '(value: Lab, index: number, obj: Lab[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -365,9 +372,10 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab | undefined'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.findIndex'
-    name: 'findIndex((value: Lab, index: number, obj: Lab[]) => boolean, any)'
+    name: 'findIndex((value: Lab, index: number, obj: Lab[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -380,11 +388,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Lab, index: number, obj: Lab[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Lab, index: number, obj: Lab[]) => boolean'
+            - '(value: Lab, index: number, obj: Lab[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -406,6 +414,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.forEach'
     name: 'forEach((value: Lab, index: number, array: Lab[]) => void, any)'
@@ -434,6 +443,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.ResponseWithContinuationLab.includes'
+    name: 'includes(Lab, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Lab, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-labservices.Lab'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.indexOf'
     name: 'indexOf(Lab, undefined | number)'
     children: []
@@ -458,6 +495,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.join'
     name: join(undefined | string)
@@ -482,6 +520,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.keys'
     name: keys()
@@ -496,6 +535,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.lastIndexOf'
     name: 'lastIndexOf(Lab, undefined | number)'
@@ -521,6 +561,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.length'
     name: length
@@ -537,6 +578,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.map'
     name: 'map((value: Lab, index: number, array: Lab[]) => U, any)'
@@ -569,6 +611,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.nextLink'
     name: nextLink
@@ -584,6 +627,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.pop'
     name: pop()
@@ -598,6 +642,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab | undefined'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.push'
     name: 'push(Lab[])'
@@ -617,6 +662,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.reduce'
     name: >-
@@ -647,6 +693,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.reduce_1'
     name: >-
@@ -656,10 +703,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Lab, currentValue: Lab,
@@ -678,6 +722,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.reduce_2'
     name: >-
@@ -715,6 +760,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.reduceRight'
     name: >-
@@ -746,6 +792,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.reduceRight_1'
     name: >-
@@ -755,11 +802,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Lab, currentValue: Lab,
@@ -778,6 +821,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.reduceRight_2'
     name: >-
@@ -816,6 +860,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.reverse'
     name: reverse()
@@ -830,6 +875,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.shift'
     name: shift()
@@ -844,6 +890,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab | undefined'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -869,9 +916,10 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.some'
-    name: 'some((value: Lab, index: number, array: Lab[]) => boolean, any)'
+    name: 'some((value: Lab, index: number, array: Lab[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -882,11 +930,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Lab, index: number, array: Lab[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Lab, index: number, array: Lab[]) => boolean'
+            - '(value: Lab, index: number, array: Lab[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -902,6 +950,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.sort'
     name: 'sort(undefined | (a: Lab, b: Lab) => number)'
@@ -924,6 +973,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.splice_1'
     name: 'splice(number, number, Lab[])'
@@ -955,6 +1005,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.splice'
     name: 'splice(number, undefined | number)'
@@ -983,6 +1034,7 @@ items:
       return:
         type:
           - '@azure/arm-labservices.Lab[]'
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.toLocaleString'
     name: toLocaleString()
@@ -999,6 +1051,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.toString'
     name: toString()
@@ -1013,6 +1066,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.unshift'
     name: 'unshift(Lab[])'
@@ -1032,6 +1086,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-labservices'
   - uid: '@azure/arm-labservices.ResponseWithContinuationLab.values'
     name: values()
@@ -1046,6 +1101,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-labservices.Lab>
+        description: ''
     package: '@azure/arm-labservices'
 references:
   - uid: Array<@azure/arm-labservices.Lab>

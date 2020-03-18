@@ -50,6 +50,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.etag'
     name: etag
@@ -69,6 +70,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.gatewayManagerEtag'
     name: gatewayManagerEtag
@@ -84,6 +86,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.id'
     name: id
@@ -99,6 +102,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.ipv6PeeringConfig'
     name: ipv6PeeringConfig
@@ -114,6 +118,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Ipv6ExpressRouteCircuitPeeringConfig'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.lastModifiedBy'
     name: lastModifiedBy
@@ -122,13 +127,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Gets whether the provider or the customer last modified the peering.
+    summary: >-
+      Who was the last to modify the peering.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'lastModifiedBy?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ExpressRouteCrossConnectionPeering.microsoftPeeringConfig
@@ -145,6 +155,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuitPeeringConfig'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.name'
     name: name
@@ -154,8 +165,8 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets name of the resource that is unique within a resource group. This
-      name can be used to
+      The name of the resource that is unique within a resource group. This name
+      can be used to
 
       access the resource.
     optional: true
@@ -164,6 +175,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.peerASN'
     name: peerASN
@@ -179,6 +191,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.peeringType'
     name: peeringType
@@ -198,6 +211,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePeeringType'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.primaryAzurePort'
     name: primaryAzurePort
@@ -217,6 +231,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ExpressRouteCrossConnectionPeering.primaryPeerAddressPrefix
@@ -233,6 +248,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.provisioningState'
     name: provisioningState
@@ -242,19 +258,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets the provisioning state of the public IP resource. Possible values
-      are: 'Updating',
+      The provisioning state of the express route cross connection peering
+      resource. Possible values
 
-      'Deleting', and 'Failed'.
+      include: 'Succeeded', 'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.secondaryAzurePort'
     name: secondaryAzurePort
@@ -274,6 +291,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ExpressRouteCrossConnectionPeering.secondaryPeerAddressPrefix
@@ -290,6 +308,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.sharedKey'
     name: sharedKey
@@ -305,6 +324,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.state'
     name: state
@@ -320,6 +340,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePeeringState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCrossConnectionPeering.vlanId'
     name: vlanId
@@ -335,6 +356,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -361,6 +383,12 @@ references:
       - name: ExpressRoutePeeringType
         fullName: ExpressRoutePeeringType
         uid: '@azure/arm-network.ExpressRoutePeeringType'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.ExpressRoutePeeringState'
     name: ExpressRoutePeeringState
     spec.typeScript:

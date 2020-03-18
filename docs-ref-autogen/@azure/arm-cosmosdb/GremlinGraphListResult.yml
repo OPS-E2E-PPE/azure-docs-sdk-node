@@ -11,12 +11,13 @@ items:
       - '@azure/arm-cosmosdb.GremlinGraphListResult.entries'
       - '@azure/arm-cosmosdb.GremlinGraphListResult.every'
       - '@azure/arm-cosmosdb.GremlinGraphListResult.fill'
-      - '@azure/arm-cosmosdb.GremlinGraphListResult.filter_1'
       - '@azure/arm-cosmosdb.GremlinGraphListResult.filter'
+      - '@azure/arm-cosmosdb.GremlinGraphListResult.filter_1'
       - '@azure/arm-cosmosdb.GremlinGraphListResult.find'
       - '@azure/arm-cosmosdb.GremlinGraphListResult.find_1'
       - '@azure/arm-cosmosdb.GremlinGraphListResult.findIndex'
       - '@azure/arm-cosmosdb.GremlinGraphListResult.forEach'
+      - '@azure/arm-cosmosdb.GremlinGraphListResult.includes'
       - '@azure/arm-cosmosdb.GremlinGraphListResult.indexOf'
       - '@azure/arm-cosmosdb.GremlinGraphListResult.join'
       - '@azure/arm-cosmosdb.GremlinGraphListResult.keys'
@@ -47,7 +48,7 @@ items:
     type: interface
     summary: ''
     extends:
-      name: Array<@azure/arm-cosmosdb.GremlinGraph>
+      name: Array<@azure/arm-cosmosdb.GremlinGraphGetResults>
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.Array'
     name: Array
@@ -62,25 +63,27 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.concat'
-    name: 'concat(ConcatArray<GremlinGraph>[])'
+    name: 'concat(ConcatArray<GremlinGraphGetResults>[])'
     children: []
     type: method
     langs:
       - typeScript
     summary: Combines two or more arrays.
     syntax:
-      content: 'function concat(items: ConcatArray<GremlinGraph>[])'
+      content: 'function concat(items: ConcatArray<GremlinGraphGetResults>[])'
       parameters:
         - id: items
           type:
-            - 'ConcatArray<@azure/arm-cosmosdb.GremlinGraph>[]'
+            - 'ConcatArray<@azure/arm-cosmosdb.GremlinGraphGetResults>[]'
           description: |
             Additional items to add to the end of array1.
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph[]'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -99,7 +102,8 @@ items:
             Additional items to add to the end of array1.
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph[]'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.every'
     name: >-
-      every((value: GremlinGraph, index: number, array: GremlinGraph[]) =>
-      boolean, any)
+      every((value: GremlinGraphGetResults, index: number, array:
+      GremlinGraphGetResults[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -169,14 +175,14 @@ items:
     summary: Determines whether all the members of an array satisfy the specified test.
     syntax:
       content: >-
-        function every(callbackfn: (value: GremlinGraph, index: number, array:
-        GremlinGraph[]) => boolean, thisArg?: any)
+        function every(callbackfn: (value: GremlinGraphGetResults, index:
+        number, array: GremlinGraphGetResults[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (value: GremlinGraph, index: number, array: GremlinGraph[]) =>
-              boolean
+              (value: GremlinGraphGetResults, index: number, array:
+              GremlinGraphGetResults[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,9 +198,10 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.fill'
-    name: 'fill(GremlinGraph, undefined | number, undefined | number)'
+    name: 'fill(GremlinGraphGetResults, undefined | number, undefined | number)'
     children: []
     type: method
     langs:
@@ -204,12 +211,12 @@ items:
       end with value
     syntax:
       content: >-
-        function fill(value: GremlinGraph, start?: undefined | number, end?:
-        undefined | number)
+        function fill(value: GremlinGraphGetResults, start?: undefined | number,
+        end?: undefined | number)
       parameters:
         - id: value
           type:
-            - '@azure/arm-cosmosdb.GremlinGraph'
+            - '@azure/arm-cosmosdb.GremlinGraphGetResults'
           description: value to fill array section with
         - id: start
           type:
@@ -232,46 +239,12 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-cosmosdb'
-  - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.filter_1'
-    name: >-
-      filter((value: GremlinGraph, index: number, array: GremlinGraph[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: GremlinGraph, index: number, array:
-        GremlinGraph[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: GremlinGraph, index: number, array: GremlinGraph[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-cosmosdb.GremlinGraph[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.filter'
     name: >-
-      filter((value: GremlinGraph, index: number, array: GremlinGraph[]) =>
-      boolean, any)
+      filter((value: GremlinGraphGetResults, index: number, array:
+      GremlinGraphGetResults[]) => boolean, any)
     children: []
     type: method
     langs:
@@ -281,14 +254,14 @@ items:
       callback function.
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: GremlinGraph, index: number,
-        array: GremlinGraph[]) => boolean, thisArg?: any)
+        function filter<S>(callbackfn: (value: GremlinGraphGetResults, index:
+        number, array: GremlinGraphGetResults[]) => boolean, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (value: GremlinGraph, index: number, array: GremlinGraph[]) =>
-              boolean
+              (value: GremlinGraphGetResults, index: number, array:
+              GremlinGraphGetResults[]) => boolean
           description: >-
             A function that accepts up to three arguments. The filter method
             calls the callbackfn function one time for each element in the
@@ -304,11 +277,50 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.filter_1'
+    name: >-
+      filter((value: GremlinGraphGetResults, index: number, array:
+      GremlinGraphGetResults[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: GremlinGraphGetResults, index:
+        number, array: GremlinGraphGetResults[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: GremlinGraphGetResults, index: number, array:
+              GremlinGraphGetResults[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.find'
     name: >-
-      find((this: void, value: GremlinGraph, index: number, obj: GremlinGraph[])
-      => boolean, any)
+      find((this: void, value: GremlinGraphGetResults, index: number, obj:
+      GremlinGraphGetResults[]) => boolean, any)
     children: []
     type: method
     langs:
@@ -320,14 +332,14 @@ items:
       otherwise.
     syntax:
       content: >-
-        function find<S>(predicate: (this: void, value: GremlinGraph, index:
-        number, obj: GremlinGraph[]) => boolean, thisArg?: any)
+        function find<S>(predicate: (this: void, value: GremlinGraphGetResults,
+        index: number, obj: GremlinGraphGetResults[]) => boolean, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
-              (this: void, value: GremlinGraph, index: number, obj:
-              GremlinGraph[]) => boolean
+              (this: void, value: GremlinGraphGetResults, index: number, obj:
+              GremlinGraphGetResults[]) => boolean
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -349,30 +361,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.find_1'
     name: >-
-      find((value: GremlinGraph, index: number, obj: GremlinGraph[]) => boolean,
-      any)
+      find((value: GremlinGraphGetResults, index: number, obj:
+      GremlinGraphGetResults[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
-        function find(predicate: (value: GremlinGraph, index: number, obj:
-        GremlinGraph[]) => boolean, thisArg?: any)
+        function find(predicate: (value: GremlinGraphGetResults, index: number,
+        obj: GremlinGraphGetResults[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
-              (value: GremlinGraph, index: number, obj: GremlinGraph[]) =>
-              boolean
+              (value: GremlinGraphGetResults, index: number, obj:
+              GremlinGraphGetResults[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -381,12 +390,13 @@ items:
           optional: true
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph | undefined'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.findIndex'
     name: >-
-      findIndex((value: GremlinGraph, index: number, obj: GremlinGraph[]) =>
-      boolean, any)
+      findIndex((value: GremlinGraphGetResults, index: number, obj:
+      GremlinGraphGetResults[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -398,14 +408,14 @@ items:
       otherwise.
     syntax:
       content: >-
-        function findIndex(predicate: (value: GremlinGraph, index: number, obj:
-        GremlinGraph[]) => boolean, thisArg?: any)
+        function findIndex(predicate: (value: GremlinGraphGetResults, index:
+        number, obj: GremlinGraphGetResults[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
-              (value: GremlinGraph, index: number, obj: GremlinGraph[]) =>
-              boolean
+              (value: GremlinGraphGetResults, index: number, obj:
+              GremlinGraphGetResults[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -427,11 +437,12 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.forEach'
     name: >-
-      forEach((value: GremlinGraph, index: number, array: GremlinGraph[]) =>
-      void, any)
+      forEach((value: GremlinGraphGetResults, index: number, array:
+      GremlinGraphGetResults[]) => void, any)
     children: []
     type: method
     langs:
@@ -439,14 +450,14 @@ items:
     summary: Performs the specified action for each element in an array.
     syntax:
       content: >-
-        function forEach(callbackfn: (value: GremlinGraph, index: number, array:
-        GremlinGraph[]) => void, thisArg?: any)
+        function forEach(callbackfn: (value: GremlinGraphGetResults, index:
+        number, array: GremlinGraphGetResults[]) => void, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (value: GremlinGraph, index: number, array: GremlinGraph[]) =>
-              void
+              (value: GremlinGraphGetResults, index: number, array:
+              GremlinGraphGetResults[]) => void
           description: >-
             A function that accepts up to three arguments. forEach calls the
             callbackfn function one time for each element in the array.
@@ -459,8 +470,38 @@ items:
             value.
           optional: true
     package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.includes'
+    name: 'includes(GremlinGraphGetResults, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: GremlinGraphGetResults, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-cosmosdb.GremlinGraphGetResults'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.indexOf'
-    name: 'indexOf(GremlinGraph, undefined | number)'
+    name: 'indexOf(GremlinGraphGetResults, undefined | number)'
     children: []
     type: method
     langs:
@@ -468,12 +509,12 @@ items:
     summary: Returns the index of the first occurrence of a value in an array.
     syntax:
       content: >-
-        function indexOf(searchElement: GremlinGraph, fromIndex?: undefined |
-        number)
+        function indexOf(searchElement: GremlinGraphGetResults, fromIndex?:
+        undefined | number)
       parameters:
         - id: searchElement
           type:
-            - '@azure/arm-cosmosdb.GremlinGraph'
+            - '@azure/arm-cosmosdb.GremlinGraphGetResults'
           description: The value to locate in the array.
         - id: fromIndex
           type:
@@ -485,6 +526,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.join'
     name: join(undefined | string)
@@ -509,6 +551,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.keys'
     name: keys()
@@ -523,9 +566,10 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.lastIndexOf'
-    name: 'lastIndexOf(GremlinGraph, undefined | number)'
+    name: 'lastIndexOf(GremlinGraphGetResults, undefined | number)'
     children: []
     type: method
     langs:
@@ -533,12 +577,12 @@ items:
     summary: Returns the index of the last occurrence of a specified value in an array.
     syntax:
       content: >-
-        function lastIndexOf(searchElement: GremlinGraph, fromIndex?: undefined
-        | number)
+        function lastIndexOf(searchElement: GremlinGraphGetResults, fromIndex?:
+        undefined | number)
       parameters:
         - id: searchElement
           type:
-            - '@azure/arm-cosmosdb.GremlinGraph'
+            - '@azure/arm-cosmosdb.GremlinGraphGetResults'
           description: The value to locate in the array.
         - id: fromIndex
           type:
@@ -550,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.length'
     name: length
@@ -566,9 +611,12 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.map'
-    name: 'map((value: GremlinGraph, index: number, array: GremlinGraph[]) => U, any)'
+    name: >-
+      map((value: GremlinGraphGetResults, index: number, array:
+      GremlinGraphGetResults[]) => U, any)
     children: []
     type: method
     langs:
@@ -578,12 +626,14 @@ items:
       an array that contains the results.
     syntax:
       content: >-
-        function map<U>(callbackfn: (value: GremlinGraph, index: number, array:
-        GremlinGraph[]) => U, thisArg?: any)
+        function map<U>(callbackfn: (value: GremlinGraphGetResults, index:
+        number, array: GremlinGraphGetResults[]) => U, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: GremlinGraph, index: number, array: GremlinGraph[]) => U'
+            - >-
+              (value: GremlinGraphGetResults, index: number, array:
+              GremlinGraphGetResults[]) => U
           description: >-
             A function that accepts up to three arguments. The map method calls
             the callbackfn function one time for each element in the array.
@@ -598,6 +648,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.pop'
     name: pop()
@@ -611,31 +662,34 @@ items:
       parameters: []
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph | undefined'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.push'
-    name: 'push(GremlinGraph[])'
+    name: 'push(GremlinGraphGetResults[])'
     children: []
     type: method
     langs:
       - typeScript
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     syntax:
-      content: 'function push(items: GremlinGraph[])'
+      content: 'function push(items: GremlinGraphGetResults[])'
       parameters:
         - id: items
           type:
-            - '@azure/arm-cosmosdb.GremlinGraph[]'
+            - '@azure/arm-cosmosdb.GremlinGraphGetResults[]'
           description: |
             New elements of the Array.
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.reduce'
     name: >-
-      reduce((previousValue: GremlinGraph, currentValue: GremlinGraph,
-      currentIndex: number, array: GremlinGraph[]) => GremlinGraph)
+      reduce((previousValue: GremlinGraphGetResults, currentValue:
+      GremlinGraphGetResults, currentIndex: number, array:
+      GremlinGraphGetResults[]) => GremlinGraphGetResults)
     children: []
     type: method
     langs:
@@ -646,60 +700,63 @@ items:
       is provided as an argument in the next call to the callback function.
     syntax:
       content: >-
-        function reduce(callbackfn: (previousValue: GremlinGraph, currentValue:
-        GremlinGraph, currentIndex: number, array: GremlinGraph[]) =>
-        GremlinGraph)
+        function reduce(callbackfn: (previousValue: GremlinGraphGetResults,
+        currentValue: GremlinGraphGetResults, currentIndex: number, array:
+        GremlinGraphGetResults[]) => GremlinGraphGetResults)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: GremlinGraph, currentValue: GremlinGraph,
-              currentIndex: number, array: GremlinGraph[]) => GremlinGraph
+              (previousValue: GremlinGraphGetResults, currentValue:
+              GremlinGraphGetResults, currentIndex: number, array:
+              GremlinGraphGetResults[]) => GremlinGraphGetResults
           description: >-
             A function that accepts up to four arguments. The reduce method
             calls the callbackfn function one time for each element in the
             array.
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.reduce_1'
     name: >-
-      reduce((previousValue: GremlinGraph, currentValue: GremlinGraph,
-      currentIndex: number, array: GremlinGraph[]) => GremlinGraph,
-      GremlinGraph)
+      reduce((previousValue: GremlinGraphGetResults, currentValue:
+      GremlinGraphGetResults, currentIndex: number, array:
+      GremlinGraphGetResults[]) => GremlinGraphGetResults,
+      GremlinGraphGetResults)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
-        function reduce(callbackfn: (previousValue: GremlinGraph, currentValue:
-        GremlinGraph, currentIndex: number, array: GremlinGraph[]) =>
-        GremlinGraph, initialValue: GremlinGraph)
+        function reduce(callbackfn: (previousValue: GremlinGraphGetResults,
+        currentValue: GremlinGraphGetResults, currentIndex: number, array:
+        GremlinGraphGetResults[]) => GremlinGraphGetResults, initialValue:
+        GremlinGraphGetResults)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: GremlinGraph, currentValue: GremlinGraph,
-              currentIndex: number, array: GremlinGraph[]) => GremlinGraph
+              (previousValue: GremlinGraphGetResults, currentValue:
+              GremlinGraphGetResults, currentIndex: number, array:
+              GremlinGraphGetResults[]) => GremlinGraphGetResults
           description: ''
         - id: initialValue
           type:
-            - '@azure/arm-cosmosdb.GremlinGraph'
+            - '@azure/arm-cosmosdb.GremlinGraphGetResults'
           description: ''
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.reduce_2'
     name: >-
-      reduce((previousValue: U, currentValue: GremlinGraph, currentIndex:
-      number, array: GremlinGraph[]) => U, U)
+      reduce((previousValue: U, currentValue: GremlinGraphGetResults,
+      currentIndex: number, array: GremlinGraphGetResults[]) => U, U)
     children: []
     type: method
     langs:
@@ -711,14 +768,14 @@ items:
     syntax:
       content: >-
         function reduce<U>(callbackfn: (previousValue: U, currentValue:
-        GremlinGraph, currentIndex: number, array: GremlinGraph[]) => U,
-        initialValue: U)
+        GremlinGraphGetResults, currentIndex: number, array:
+        GremlinGraphGetResults[]) => U, initialValue: U)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: U, currentValue: GremlinGraph, currentIndex:
-              number, array: GremlinGraph[]) => U
+              (previousValue: U, currentValue: GremlinGraphGetResults,
+              currentIndex: number, array: GremlinGraphGetResults[]) => U
           description: >-
             A function that accepts up to four arguments. The reduce method
             calls the callbackfn function one time for each element in the
@@ -733,11 +790,13 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.reduceRight'
     name: >-
-      reduceRight((previousValue: GremlinGraph, currentValue: GremlinGraph,
-      currentIndex: number, array: GremlinGraph[]) => GremlinGraph)
+      reduceRight((previousValue: GremlinGraphGetResults, currentValue:
+      GremlinGraphGetResults, currentIndex: number, array:
+      GremlinGraphGetResults[]) => GremlinGraphGetResults)
     children: []
     type: method
     langs:
@@ -749,61 +808,63 @@ items:
       callback function.
     syntax:
       content: >-
-        function reduceRight(callbackfn: (previousValue: GremlinGraph,
-        currentValue: GremlinGraph, currentIndex: number, array: GremlinGraph[])
-        => GremlinGraph)
+        function reduceRight(callbackfn: (previousValue: GremlinGraphGetResults,
+        currentValue: GremlinGraphGetResults, currentIndex: number, array:
+        GremlinGraphGetResults[]) => GremlinGraphGetResults)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: GremlinGraph, currentValue: GremlinGraph,
-              currentIndex: number, array: GremlinGraph[]) => GremlinGraph
+              (previousValue: GremlinGraphGetResults, currentValue:
+              GremlinGraphGetResults, currentIndex: number, array:
+              GremlinGraphGetResults[]) => GremlinGraphGetResults
           description: >-
             A function that accepts up to four arguments. The reduceRight method
             calls the callbackfn function one time for each element in the
             array.
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.reduceRight_1'
     name: >-
-      reduceRight((previousValue: GremlinGraph, currentValue: GremlinGraph,
-      currentIndex: number, array: GremlinGraph[]) => GremlinGraph,
-      GremlinGraph)
+      reduceRight((previousValue: GremlinGraphGetResults, currentValue:
+      GremlinGraphGetResults, currentIndex: number, array:
+      GremlinGraphGetResults[]) => GremlinGraphGetResults,
+      GremlinGraphGetResults)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
-        function reduceRight(callbackfn: (previousValue: GremlinGraph,
-        currentValue: GremlinGraph, currentIndex: number, array: GremlinGraph[])
-        => GremlinGraph, initialValue: GremlinGraph)
+        function reduceRight(callbackfn: (previousValue: GremlinGraphGetResults,
+        currentValue: GremlinGraphGetResults, currentIndex: number, array:
+        GremlinGraphGetResults[]) => GremlinGraphGetResults, initialValue:
+        GremlinGraphGetResults)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: GremlinGraph, currentValue: GremlinGraph,
-              currentIndex: number, array: GremlinGraph[]) => GremlinGraph
+              (previousValue: GremlinGraphGetResults, currentValue:
+              GremlinGraphGetResults, currentIndex: number, array:
+              GremlinGraphGetResults[]) => GremlinGraphGetResults
           description: ''
         - id: initialValue
           type:
-            - '@azure/arm-cosmosdb.GremlinGraph'
+            - '@azure/arm-cosmosdb.GremlinGraphGetResults'
           description: ''
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.reduceRight_2'
     name: >-
-      reduceRight((previousValue: U, currentValue: GremlinGraph, currentIndex:
-      number, array: GremlinGraph[]) => U, U)
+      reduceRight((previousValue: U, currentValue: GremlinGraphGetResults,
+      currentIndex: number, array: GremlinGraphGetResults[]) => U, U)
     children: []
     type: method
     langs:
@@ -816,14 +877,14 @@ items:
     syntax:
       content: >-
         function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
-        GremlinGraph, currentIndex: number, array: GremlinGraph[]) => U,
-        initialValue: U)
+        GremlinGraphGetResults, currentIndex: number, array:
+        GremlinGraphGetResults[]) => U, initialValue: U)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (previousValue: U, currentValue: GremlinGraph, currentIndex:
-              number, array: GremlinGraph[]) => U
+              (previousValue: U, currentValue: GremlinGraphGetResults,
+              currentIndex: number, array: GremlinGraphGetResults[]) => U
           description: >-
             A function that accepts up to four arguments. The reduceRight method
             calls the callbackfn function one time for each element in the
@@ -838,6 +899,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.reverse'
     name: reverse()
@@ -851,7 +913,8 @@ items:
       parameters: []
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph[]'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.shift'
     name: shift()
@@ -865,7 +928,8 @@ items:
       parameters: []
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph | undefined'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -890,12 +954,13 @@ items:
           optional: true
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph[]'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.some'
     name: >-
-      some((value: GremlinGraph, index: number, array: GremlinGraph[]) =>
-      boolean, any)
+      some((value: GremlinGraphGetResults, index: number, array:
+      GremlinGraphGetResults[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -905,14 +970,14 @@ items:
       element of an array.
     syntax:
       content: >-
-        function some(callbackfn: (value: GremlinGraph, index: number, array:
-        GremlinGraph[]) => boolean, thisArg?: any)
+        function some(callbackfn: (value: GremlinGraphGetResults, index: number,
+        array: GremlinGraphGetResults[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
-              (value: GremlinGraph, index: number, array: GremlinGraph[]) =>
-              boolean
+              (value: GremlinGraphGetResults, index: number, array:
+              GremlinGraphGetResults[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -928,9 +993,12 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.sort'
-    name: 'sort(undefined | (a: GremlinGraph, b: GremlinGraph) => number)'
+    name: >-
+      sort(undefined | (a: GremlinGraphGetResults, b: GremlinGraphGetResults) =>
+      number)
     children: []
     type: method
     langs:
@@ -938,12 +1006,14 @@ items:
     summary: Sorts an array.
     syntax:
       content: >-
-        function sort(compareFn?: undefined | (a: GremlinGraph, b: GremlinGraph)
-        => number)
+        function sort(compareFn?: undefined | (a: GremlinGraphGetResults, b:
+        GremlinGraphGetResults) => number)
       parameters:
         - id: compareFn
           type:
-            - 'undefined | (a: GremlinGraph, b: GremlinGraph) => number'
+            - >-
+              undefined | (a: GremlinGraphGetResults, b: GremlinGraphGetResults)
+              => number
           description: >
             The name of the function used to determine the order of the
             elements. If omitted, the elements are sorted in ascending, ASCII
@@ -952,9 +1022,10 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.splice_1'
-    name: 'splice(number, number, GremlinGraph[])'
+    name: 'splice(number, number, GremlinGraphGetResults[])'
     children: []
     type: method
     langs:
@@ -965,7 +1036,7 @@ items:
     syntax:
       content: >-
         function splice(start: number, deleteCount: number, items:
-        GremlinGraph[])
+        GremlinGraphGetResults[])
       parameters:
         - id: start
           type:
@@ -979,12 +1050,13 @@ items:
           description: The number of elements to remove.
         - id: items
           type:
-            - '@azure/arm-cosmosdb.GremlinGraph[]'
+            - '@azure/arm-cosmosdb.GremlinGraphGetResults[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph[]'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1012,7 +1084,8 @@ items:
           optional: true
       return:
         type:
-          - '@azure/arm-cosmosdb.GremlinGraph[]'
+          - '@azure/arm-cosmosdb.GremlinGraphGetResults[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.toLocaleString'
     name: toLocaleString()
@@ -1029,6 +1102,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.toString'
     name: toString()
@@ -1043,25 +1117,27 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.unshift'
-    name: 'unshift(GremlinGraph[])'
+    name: 'unshift(GremlinGraphGetResults[])'
     children: []
     type: method
     langs:
       - typeScript
     summary: Inserts new elements at the start of an array.
     syntax:
-      content: 'function unshift(items: GremlinGraph[])'
+      content: 'function unshift(items: GremlinGraphGetResults[])'
       parameters:
         - id: items
           type:
-            - '@azure/arm-cosmosdb.GremlinGraph[]'
+            - '@azure/arm-cosmosdb.GremlinGraphGetResults[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.GremlinGraphListResult.values'
     name: values()
@@ -1075,58 +1151,59 @@ items:
       parameters: []
       return:
         type:
-          - IterableIterator<@azure/arm-cosmosdb.GremlinGraph>
+          - IterableIterator<@azure/arm-cosmosdb.GremlinGraphGetResults>
+        description: ''
     package: '@azure/arm-cosmosdb'
 references:
-  - uid: Array<@azure/arm-cosmosdb.GremlinGraph>
-    name: GremlinGraph>
+  - uid: Array<@azure/arm-cosmosdb.GremlinGraphGetResults>
+    name: GremlinGraphGetResults>
     spec.typeScript:
       - name: Array<
         fullName: Array<
-      - name: GremlinGraph
-        fullName: GremlinGraph
-        uid: '@azure/arm-cosmosdb.GremlinGraph'
+      - name: GremlinGraphGetResults
+        fullName: GremlinGraphGetResults
+        uid: '@azure/arm-cosmosdb.GremlinGraphGetResults'
       - name: '>'
         fullName: '>'
-  - uid: 'ConcatArray<@azure/arm-cosmosdb.GremlinGraph>[]'
-    name: 'GremlinGraph>[]'
+  - uid: 'ConcatArray<@azure/arm-cosmosdb.GremlinGraphGetResults>[]'
+    name: 'GremlinGraphGetResults>[]'
     spec.typeScript:
       - name: ConcatArray<
         fullName: ConcatArray<
-      - name: GremlinGraph
-        fullName: GremlinGraph
-        uid: '@azure/arm-cosmosdb.GremlinGraph'
+      - name: GremlinGraphGetResults
+        fullName: GremlinGraphGetResults
+        uid: '@azure/arm-cosmosdb.GremlinGraphGetResults'
       - name: '>[]'
         fullName: '>[]'
-  - uid: '@azure/arm-cosmosdb.GremlinGraph[]'
-    name: 'GremlinGraph[]'
+  - uid: '@azure/arm-cosmosdb.GremlinGraphGetResults[]'
+    name: 'GremlinGraphGetResults[]'
     spec.typeScript:
-      - name: GremlinGraph
-        fullName: GremlinGraph
-        uid: '@azure/arm-cosmosdb.GremlinGraph'
+      - name: GremlinGraphGetResults
+        fullName: GremlinGraphGetResults
+        uid: '@azure/arm-cosmosdb.GremlinGraphGetResults'
       - name: '[]'
         fullName: '[]'
-  - uid: '@azure/arm-cosmosdb.GremlinGraph'
-    name: GremlinGraph
+  - uid: '@azure/arm-cosmosdb.GremlinGraphGetResults'
+    name: GremlinGraphGetResults
     spec.typeScript:
-      - name: GremlinGraph
-        fullName: GremlinGraph
-        uid: '@azure/arm-cosmosdb.GremlinGraph'
-  - uid: '@azure/arm-cosmosdb.GremlinGraph | undefined'
-    name: GremlinGraph | undefined
+      - name: GremlinGraphGetResults
+        fullName: GremlinGraphGetResults
+        uid: '@azure/arm-cosmosdb.GremlinGraphGetResults'
+  - uid: '@azure/arm-cosmosdb.GremlinGraphGetResults | undefined'
+    name: GremlinGraphGetResults | undefined
     spec.typeScript:
-      - name: GremlinGraph
-        fullName: GremlinGraph
-        uid: '@azure/arm-cosmosdb.GremlinGraph'
+      - name: GremlinGraphGetResults
+        fullName: GremlinGraphGetResults
+        uid: '@azure/arm-cosmosdb.GremlinGraphGetResults'
       - name: ' | undefined'
         fullName: ' | undefined'
-  - uid: IterableIterator<@azure/arm-cosmosdb.GremlinGraph>
-    name: GremlinGraph>
+  - uid: IterableIterator<@azure/arm-cosmosdb.GremlinGraphGetResults>
+    name: GremlinGraphGetResults>
     spec.typeScript:
       - name: IterableIterator<
         fullName: IterableIterator<
-      - name: GremlinGraph
-        fullName: GremlinGraph
-        uid: '@azure/arm-cosmosdb.GremlinGraph'
+      - name: GremlinGraphGetResults
+        fullName: GremlinGraphGetResults
+        uid: '@azure/arm-cosmosdb.GremlinGraphGetResults'
       - name: '>'
         fullName: '>'

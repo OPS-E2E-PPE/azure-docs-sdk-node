@@ -20,9 +20,9 @@ items:
       - >-
         @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.fill
       - >-
-        @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.filter_1
-      - >-
         @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.filter
+      - >-
+        @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.filter_1
       - >-
         @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.find
       - >-
@@ -31,6 +31,8 @@ items:
         @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.findIndex
       - >-
         @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.forEach
+      - >-
+        @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.includes
       - >-
         @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.indexOf
       - >-
@@ -104,6 +106,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.concat
@@ -125,6 +128,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.concat_1
@@ -145,6 +149,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.copyWithin
@@ -189,6 +194,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.entries
@@ -204,12 +210,13 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.every
     name: >-
       every((value: ReplicationProtectedItem, index: number, array:
-      ReplicationProtectedItem[]) => boolean, any)
+      ReplicationProtectedItem[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -218,13 +225,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ReplicationProtectedItem, index:
-        number, array: ReplicationProtectedItem[]) => boolean, thisArg?: any)
+        number, array: ReplicationProtectedItem[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ReplicationProtectedItem, index: number, array:
-              ReplicationProtectedItem[]) => boolean
+              ReplicationProtectedItem[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -240,6 +247,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.fill
@@ -281,44 +289,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-recoveryservices-siterecovery'
-  - uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.filter_1
-    name: >-
-      filter((value: ReplicationProtectedItem, index: number, array:
-      ReplicationProtectedItem[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ReplicationProtectedItem, index:
-        number, array: ReplicationProtectedItem[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ReplicationProtectedItem, index: number, array:
-              ReplicationProtectedItem[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.filter
@@ -357,6 +328,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-recoveryservices-siterecovery'
+  - uid: >-
+      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.filter_1
+    name: >-
+      filter((value: ReplicationProtectedItem, index: number, array:
+      ReplicationProtectedItem[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ReplicationProtectedItem, index:
+        number, array: ReplicationProtectedItem[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ReplicationProtectedItem, index: number, array:
+              ReplicationProtectedItem[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.find
@@ -404,31 +415,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.find_1
     name: >-
       find((value: ReplicationProtectedItem, index: number, obj:
-      ReplicationProtectedItem[]) => boolean, any)
+      ReplicationProtectedItem[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ReplicationProtectedItem, index:
-        number, obj: ReplicationProtectedItem[]) => boolean, thisArg?: any)
+        number, obj: ReplicationProtectedItem[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ReplicationProtectedItem, index: number, obj:
-              ReplicationProtectedItem[]) => boolean
+              ReplicationProtectedItem[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -440,12 +448,13 @@ items:
           - >-
             @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem |
             undefined
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.findIndex
     name: >-
       findIndex((value: ReplicationProtectedItem, index: number, obj:
-      ReplicationProtectedItem[]) => boolean, any)
+      ReplicationProtectedItem[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -458,13 +467,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ReplicationProtectedItem, index:
-        number, obj: ReplicationProtectedItem[]) => boolean, thisArg?: any)
+        number, obj: ReplicationProtectedItem[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ReplicationProtectedItem, index: number, obj:
-              ReplicationProtectedItem[]) => boolean
+              ReplicationProtectedItem[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -486,6 +495,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.forEach
@@ -520,6 +530,37 @@ items:
           optional: true
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
+      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.includes
+    name: 'includes(ReplicationProtectedItem, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ReplicationProtectedItem, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-recoveryservices-siterecovery'
+  - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.indexOf
     name: 'indexOf(ReplicationProtectedItem, undefined | number)'
     children: []
@@ -546,6 +587,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.join
@@ -571,6 +613,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.keys
@@ -586,6 +629,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.lastIndexOf
@@ -614,6 +658,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.length
@@ -631,6 +676,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.map
@@ -668,6 +714,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.nextLink
@@ -684,6 +731,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.pop
@@ -701,6 +749,7 @@ items:
           - >-
             @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem |
             undefined
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.push
@@ -722,6 +771,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduce
@@ -756,6 +806,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduce_1
@@ -768,10 +819,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ReplicationProtectedItem,
@@ -793,6 +841,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduce_2
@@ -832,6 +881,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduceRight
@@ -868,6 +918,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduceRight_1
@@ -880,11 +931,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -906,6 +953,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduceRight_2
@@ -946,6 +994,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reverse
@@ -961,6 +1010,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.shift
@@ -978,6 +1028,7 @@ items:
           - >-
             @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem |
             undefined
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.slice
@@ -1004,12 +1055,13 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.some
     name: >-
       some((value: ReplicationProtectedItem, index: number, array:
-      ReplicationProtectedItem[]) => boolean, any)
+      ReplicationProtectedItem[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -1020,13 +1072,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ReplicationProtectedItem, index:
-        number, array: ReplicationProtectedItem[]) => boolean, thisArg?: any)
+        number, array: ReplicationProtectedItem[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ReplicationProtectedItem, index: number, array:
-              ReplicationProtectedItem[]) => boolean
+              ReplicationProtectedItem[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -1042,6 +1094,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.sort
@@ -1071,6 +1124,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.splice_1
@@ -1106,6 +1160,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.splice
@@ -1135,6 +1190,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem[]'
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.toLocaleString
@@ -1152,6 +1208,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.toString
@@ -1167,6 +1224,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.unshift
@@ -1188,6 +1246,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
   - uid: >-
       @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.values
@@ -1204,6 +1263,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem>
+        description: ''
     package: '@azure/arm-recoveryservices-siterecovery'
 references:
   - uid: Array<@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem>

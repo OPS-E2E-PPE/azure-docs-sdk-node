@@ -32,13 +32,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.id'
     name: id
@@ -54,6 +59,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.idleTimeoutInMinutes'
     name: idleTimeoutInMinutes
@@ -69,6 +75,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.location'
     name: location
@@ -84,6 +91,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.name'
     name: name
@@ -103,6 +111,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.provisioningState'
     name: provisioningState
@@ -112,16 +121,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the NatGateway resource. Possible values are:
-      'Updating',
+      The provisioning state of the NAT gateway resource. Possible values
+      include: 'Succeeded',
 
-      'Deleting', and 'Failed'.
+      'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.publicIpAddresses'
     name: publicIpAddresses
@@ -137,6 +150,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.publicIpPrefixes'
     name: publicIpPrefixes
@@ -152,6 +166,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.resourceGuid'
     name: resourceGuid
@@ -160,13 +175,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The resource GUID property of the nat gateway resource.
+    summary: >-
+      The resource GUID property of the NAT gateway resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'resourceGuid?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.sku'
     name: sku
@@ -182,6 +202,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NatGatewaySku'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.subnets'
     name: subnets
@@ -201,6 +222,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.tags'
     name: tags
@@ -216,6 +238,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.type'
     name: type
@@ -235,6 +258,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NatGateway.zones'
     name: zones
@@ -252,6 +276,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -260,6 +285,12 @@ references:
       - name: Resource
         fullName: Resource
         uid: '@azure/arm-network.Resource'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.SubResource[]'
     name: 'SubResource[]'
     spec.typeScript:

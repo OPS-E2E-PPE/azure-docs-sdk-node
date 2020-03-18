@@ -22,7 +22,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: '@azure/cognitiveservices-contentmoderator'
@@ -41,6 +41,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModerationOCRUrlInputOptionalParams.cacheImage
@@ -50,13 +51,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Whether to retain the submitted image for future use; defaults to false if
+      omitted.
     optional: true
     syntax:
       content: 'cacheImage?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModerationOCRUrlInputOptionalParams.customHeaders
@@ -75,6 +79,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModerationOCRUrlInputOptionalParams.enhanced
@@ -84,13 +89,23 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      When set to True, the image goes through additional processing to come
+      with additional
+
+      candidates.
+
+      image/tiff is not supported when enhanced is set to true
+
+
+      Note: This impacts the response time. Default value: false.
     optional: true
     syntax:
       content: 'enhanced?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModerationOCRUrlInputOptionalParams.onDownloadProgress
@@ -109,6 +124,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModerationOCRUrlInputOptionalParams.onUploadProgress
@@ -125,6 +141,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModerationOCRUrlInputOptionalParams.timeout
@@ -143,4 +160,5 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/cognitiveservices-contentmoderator'

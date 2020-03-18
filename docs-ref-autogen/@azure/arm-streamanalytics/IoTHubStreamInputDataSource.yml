@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Describes an IoT Hub input data source that contains stream data.
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.IoTHubStreamInputDataSource.consumerGroupName'
     name: consumerGroupName
@@ -24,13 +24,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of an IoT Hub Consumer Group that should be used to read events
+      from the IoT Hub. If
+
+      not specified, the input uses the Iot Hub’s default consumer group.
     optional: true
     syntax:
       content: 'consumerGroupName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.IoTHubStreamInputDataSource.endpoint'
     name: endpoint
@@ -39,13 +44,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The IoT Hub endpoint to connect to (ie. messages/events,
+      messages/operationsMonitoringEvents,
+
+      etc.).
     optional: true
     syntax:
       content: 'endpoint?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.IoTHubStreamInputDataSource.iotHubNamespace'
     name: iotHubNamespace
@@ -54,13 +64,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace)
+      requests.
     optional: true
     syntax:
       content: 'iotHubNamespace?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.IoTHubStreamInputDataSource.sharedAccessPolicyKey
@@ -70,13 +83,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The shared access policy key for the specified shared access policy.
+      Required on PUT
+
+      (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'sharedAccessPolicyKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.IoTHubStreamInputDataSource.sharedAccessPolicyName
@@ -86,13 +104,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The shared access policy name for the IoT Hub. This policy must contain at
+      least the Service
+
+      connect permission. Required on PUT (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'sharedAccessPolicyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.IoTHubStreamInputDataSource.type'
     name: type
@@ -101,10 +124,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Microsoft.Devices/IotHubs"'
       return:
         type:
           - '"Microsoft.Devices/IotHubs"'
+        description: ''
     package: '@azure/arm-streamanalytics'

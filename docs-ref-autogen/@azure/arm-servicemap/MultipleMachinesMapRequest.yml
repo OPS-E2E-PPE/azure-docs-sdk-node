@@ -11,7 +11,9 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      Provides a base class for describing map requests for a collection of
+      machines
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MultipleMachinesMapRequest.endTime'
     name: endTime
@@ -20,13 +22,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Map interval end time.
     optional: true
     syntax:
       content: 'endTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MultipleMachinesMapRequest.filterProcesses'
     name: filterProcesses
@@ -35,13 +38,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      If true, only processes between specified machines will be included. Any
+      connections in or out
+
+      of those processes will be included.
     optional: true
     syntax:
       content: 'filterProcesses?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MultipleMachinesMapRequest.kind'
     name: kind
@@ -50,12 +58,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'kind: "MultipleMachinesMapRequest"'
       return:
         type:
           - '"MultipleMachinesMapRequest"'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MultipleMachinesMapRequest.startTime'
     name: startTime
@@ -64,11 +73,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Map interval start time.
     optional: true
     syntax:
       content: 'startTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-servicemap'

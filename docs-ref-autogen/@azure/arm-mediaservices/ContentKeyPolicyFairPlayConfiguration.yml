@@ -11,6 +11,8 @@ items:
         @azure/arm-mediaservices.ContentKeyPolicyFairPlayConfiguration.fairPlayPfxPassword
       - '@azure/arm-mediaservices.ContentKeyPolicyFairPlayConfiguration.odatatype'
       - >-
+        @azure/arm-mediaservices.ContentKeyPolicyFairPlayConfiguration.offlineRentalConfiguration
+      - >-
         @azure/arm-mediaservices.ContentKeyPolicyFairPlayConfiguration.rentalAndLeaseKeyType
       - >-
         @azure/arm-mediaservices.ContentKeyPolicyFairPlayConfiguration.rentalDuration
@@ -32,6 +34,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.ContentKeyPolicyFairPlayConfiguration.fairPlayPfx'
     name: fairPlayPfx
@@ -50,6 +53,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: >-
       @azure/arm-mediaservices.ContentKeyPolicyFairPlayConfiguration.fairPlayPfxPassword
@@ -65,6 +69,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.ContentKeyPolicyFairPlayConfiguration.odatatype'
     name: odatatype
@@ -79,6 +84,27 @@ items:
       return:
         type:
           - '"#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration"'
+        description: ''
+    package: '@azure/arm-mediaservices'
+  - uid: >-
+      @azure/arm-mediaservices.ContentKeyPolicyFairPlayConfiguration.offlineRentalConfiguration
+    name: offlineRentalConfiguration
+    fullName: offlineRentalConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Offline rental policy
+    optional: true
+    syntax:
+      content: >-
+        offlineRentalConfiguration?:
+        ContentKeyPolicyFairPlayOfflineRentalConfiguration
+      return:
+        type:
+          - >-
+            @azure/arm-mediaservices.ContentKeyPolicyFairPlayOfflineRentalConfiguration
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: >-
       @azure/arm-mediaservices.ContentKeyPolicyFairPlayConfiguration.rentalAndLeaseKeyType
@@ -90,7 +116,7 @@ items:
     type: property
     summary: >-
       The rental and lease key type. Possible values include: 'Unknown',
-      'Undefined',
+      'Undefined', 'DualExpiry',
 
       'PersistentUnlimited', 'PersistentLimited'
     syntax:
@@ -99,6 +125,7 @@ items:
         type:
           - >-
             @azure/arm-mediaservices.ContentKeyPolicyFairPlayRentalAndLeaseKeyType
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: >-
       @azure/arm-mediaservices.ContentKeyPolicyFairPlayConfiguration.rentalDuration
@@ -114,8 +141,17 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
 references:
+  - uid: >-
+      @azure/arm-mediaservices.ContentKeyPolicyFairPlayOfflineRentalConfiguration
+    name: ContentKeyPolicyFairPlayOfflineRentalConfiguration
+    spec.typeScript:
+      - name: ContentKeyPolicyFairPlayOfflineRentalConfiguration
+        fullName: ContentKeyPolicyFairPlayOfflineRentalConfiguration
+        uid: >-
+          @azure/arm-mediaservices.ContentKeyPolicyFairPlayOfflineRentalConfiguration
   - uid: '@azure/arm-mediaservices.ContentKeyPolicyFairPlayRentalAndLeaseKeyType'
     name: ContentKeyPolicyFairPlayRentalAndLeaseKeyType
     spec.typeScript:

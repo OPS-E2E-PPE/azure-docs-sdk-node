@@ -19,13 +19,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The capacity.
+    summary: >-
+      The capacity.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'capacity?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewaySku.name'
     name: name
@@ -38,16 +43,17 @@ items:
       Gateway SKU name. Possible values include: 'Basic', 'HighPerformance',
       'Standard',
 
-      'UltraPerformance', 'VpnGw1', 'VpnGw2', 'VpnGw3', 'VpnGw1AZ', 'VpnGw2AZ',
-      'VpnGw3AZ',
+      'UltraPerformance', 'VpnGw1', 'VpnGw2', 'VpnGw3', 'VpnGw4', 'VpnGw5',
+      'VpnGw1AZ', 'VpnGw2AZ',
 
-      'ErGw1AZ', 'ErGw2AZ', 'ErGw3AZ'
+      'VpnGw3AZ', 'VpnGw4AZ', 'VpnGw5AZ', 'ErGw1AZ', 'ErGw2AZ', 'ErGw3AZ'
     optional: true
     syntax:
       content: 'name?: VirtualNetworkGatewaySkuName'
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewaySkuName'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewaySku.tier'
     name: tier
@@ -60,16 +66,17 @@ items:
       Gateway SKU tier. Possible values include: 'Basic', 'HighPerformance',
       'Standard',
 
-      'UltraPerformance', 'VpnGw1', 'VpnGw2', 'VpnGw3', 'VpnGw1AZ', 'VpnGw2AZ',
-      'VpnGw3AZ',
+      'UltraPerformance', 'VpnGw1', 'VpnGw2', 'VpnGw3', 'VpnGw4', 'VpnGw5',
+      'VpnGw1AZ', 'VpnGw2AZ',
 
-      'ErGw1AZ', 'ErGw2AZ', 'ErGw3AZ'
+      'VpnGw3AZ', 'VpnGw4AZ', 'VpnGw5AZ', 'ErGw1AZ', 'ErGw2AZ', 'ErGw3AZ'
     optional: true
     syntax:
       content: 'tier?: VirtualNetworkGatewaySkuTier'
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewaySkuTier'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.VirtualNetworkGatewaySkuName'

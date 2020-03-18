@@ -22,7 +22,9 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      The base backup engine class. All workload specific backup engines derive
+      from this class.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.azureBackupAgentVersion'
     name: azureBackupAgentVersion
@@ -31,13 +33,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Backup agent version
     optional: true
     syntax:
       content: 'azureBackupAgentVersion?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.backupEngineId'
     name: backupEngineId
@@ -46,13 +49,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: ID of the backup engine.
     optional: true
     syntax:
       content: 'backupEngineId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.backupEngineState'
     name: backupEngineState
@@ -61,13 +65,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Status of the backup engine with the Recovery Services Vault. =
+      {Active/Deleting/DeleteFailed}
     optional: true
     syntax:
       content: 'backupEngineState?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.backupEngineType'
     name: backupEngineType
@@ -76,12 +83,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'backupEngineType: "BackupEngineBase"'
       return:
         type:
           - '"BackupEngineBase"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.backupManagementType'
     name: backupManagementType
@@ -90,13 +98,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type of backup management for the backup engine. Possible values include:
+      'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     optional: true
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.canReRegister'
     name: canReRegister
@@ -105,13 +121,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Flag indicating if the backup engine be registered, once already
+      registered.
     optional: true
     syntax:
       content: 'canReRegister?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.dpmVersion'
     name: dpmVersion
@@ -120,13 +139,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Backup engine version
     optional: true
     syntax:
       content: 'dpmVersion?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.extendedInfo'
     name: extendedInfo
@@ -135,13 +155,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Extended info of the backupengine
     optional: true
     syntax:
       content: 'extendedInfo?: BackupEngineExtendedInfo'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupEngineExtendedInfo'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.friendlyName'
     name: friendlyName
@@ -150,13 +171,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of the backup engine.
     optional: true
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.healthStatus'
     name: healthStatus
@@ -165,13 +187,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Backup status of the backup engine.
     optional: true
     syntax:
       content: 'healthStatus?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.BackupEngineBase.isAzureBackupAgentUpgradeAvailable
@@ -181,13 +204,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: To check if backup agent upgrade available
     optional: true
     syntax:
       content: 'isAzureBackupAgentUpgradeAvailable?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.isDpmUpgradeAvailable'
     name: isDpmUpgradeAvailable
@@ -196,13 +220,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: To check if backup engine upgrade available
     optional: true
     syntax:
       content: 'isDpmUpgradeAvailable?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupEngineBase.registrationStatus'
     name: registrationStatus
@@ -211,13 +236,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Registration status of the backup engine with the Recovery Services Vault.
     optional: true
     syntax:
       content: 'registrationStatus?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'

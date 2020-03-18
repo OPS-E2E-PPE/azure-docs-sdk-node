@@ -11,12 +11,13 @@ items:
       - '@azure/arm-mysql.LogFileListResult.entries'
       - '@azure/arm-mysql.LogFileListResult.every'
       - '@azure/arm-mysql.LogFileListResult.fill'
-      - '@azure/arm-mysql.LogFileListResult.filter_1'
       - '@azure/arm-mysql.LogFileListResult.filter'
+      - '@azure/arm-mysql.LogFileListResult.filter_1'
       - '@azure/arm-mysql.LogFileListResult.find'
       - '@azure/arm-mysql.LogFileListResult.find_1'
       - '@azure/arm-mysql.LogFileListResult.findIndex'
       - '@azure/arm-mysql.LogFileListResult.forEach'
+      - '@azure/arm-mysql.LogFileListResult.includes'
       - '@azure/arm-mysql.LogFileListResult.indexOf'
       - '@azure/arm-mysql.LogFileListResult.join'
       - '@azure/arm-mysql.LogFileListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.concat'
     name: 'concat(ConcatArray<LogFile>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.entries'
     name: entries()
@@ -157,9 +162,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.every'
-    name: 'every((value: LogFile, index: number, array: LogFile[]) => boolean, any)'
+    name: 'every((value: LogFile, index: number, array: LogFile[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -168,11 +174,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: LogFile, index: number, array:
-        LogFile[]) => boolean, thisArg?: any)
+        LogFile[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: LogFile, index: number, array: LogFile[]) => boolean'
+            - '(value: LogFile, index: number, array: LogFile[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -188,6 +194,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.fill'
     name: 'fill(LogFile, undefined | number, undefined | number)'
@@ -228,39 +235,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-mysql'
-  - uid: '@azure/arm-mysql.LogFileListResult.filter_1'
-    name: 'filter((value: LogFile, index: number, array: LogFile[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: LogFile, index: number, array:
-        LogFile[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: LogFile, index: number, array: LogFile[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-mysql.LogFile[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.filter'
     name: 'filter((value: LogFile, index: number, array: LogFile[]) => boolean, any)'
@@ -294,6 +269,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.LogFileListResult.filter_1'
+    name: 'filter((value: LogFile, index: number, array: LogFile[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: LogFile, index: number, array:
+        LogFile[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: LogFile, index: number, array: LogFile[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-mysql.LogFile[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.find'
     name: >-
@@ -339,26 +349,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.find_1'
-    name: 'find((value: LogFile, index: number, obj: LogFile[]) => boolean, any)'
+    name: 'find((value: LogFile, index: number, obj: LogFile[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: LogFile, index: number, obj: LogFile[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: LogFile, index: number, obj: LogFile[]) => boolean'
+            - '(value: LogFile, index: number, obj: LogFile[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -368,9 +375,10 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile | undefined'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.findIndex'
-    name: 'findIndex((value: LogFile, index: number, obj: LogFile[]) => boolean, any)'
+    name: 'findIndex((value: LogFile, index: number, obj: LogFile[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -383,11 +391,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: LogFile, index: number, obj:
-        LogFile[]) => boolean, thisArg?: any)
+        LogFile[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: LogFile, index: number, obj: LogFile[]) => boolean'
+            - '(value: LogFile, index: number, obj: LogFile[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -409,6 +417,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.forEach'
     name: 'forEach((value: LogFile, index: number, array: LogFile[]) => void, any)'
@@ -437,6 +446,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.LogFileListResult.includes'
+    name: 'includes(LogFile, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: LogFile, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-mysql.LogFile'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.indexOf'
     name: 'indexOf(LogFile, undefined | number)'
     children: []
@@ -461,6 +500,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.join'
     name: join(undefined | string)
@@ -485,6 +525,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.keys'
     name: keys()
@@ -499,6 +540,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.lastIndexOf'
     name: 'lastIndexOf(LogFile, undefined | number)'
@@ -526,6 +568,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.length'
     name: length
@@ -542,6 +585,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.map'
     name: 'map((value: LogFile, index: number, array: LogFile[]) => U, any)'
@@ -574,6 +618,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.pop'
     name: pop()
@@ -588,6 +633,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile | undefined'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.push'
     name: 'push(LogFile[])'
@@ -607,6 +653,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.reduce'
     name: >-
@@ -637,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.reduce_1'
     name: >-
@@ -646,10 +694,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: LogFile, currentValue:
@@ -669,6 +714,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.reduce_2'
     name: >-
@@ -706,6 +752,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.reduceRight'
     name: >-
@@ -737,6 +784,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.reduceRight_1'
     name: >-
@@ -746,11 +794,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: LogFile, currentValue:
@@ -770,6 +814,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.reduceRight_2'
     name: >-
@@ -808,6 +853,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.reverse'
     name: reverse()
@@ -822,6 +868,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.shift'
     name: shift()
@@ -836,6 +883,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile | undefined'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -861,9 +909,10 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.some'
-    name: 'some((value: LogFile, index: number, array: LogFile[]) => boolean, any)'
+    name: 'some((value: LogFile, index: number, array: LogFile[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -874,11 +923,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: LogFile, index: number, array:
-        LogFile[]) => boolean, thisArg?: any)
+        LogFile[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: LogFile, index: number, array: LogFile[]) => boolean'
+            - '(value: LogFile, index: number, array: LogFile[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -894,6 +943,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.sort'
     name: 'sort(undefined | (a: LogFile, b: LogFile) => number)'
@@ -918,6 +968,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.splice_1'
     name: 'splice(number, number, LogFile[])'
@@ -949,6 +1000,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -977,6 +1029,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.LogFile[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.toLocaleString'
     name: toLocaleString()
@@ -993,6 +1046,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.toString'
     name: toString()
@@ -1007,6 +1061,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.unshift'
     name: 'unshift(LogFile[])'
@@ -1026,6 +1081,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.LogFileListResult.values'
     name: values()
@@ -1040,6 +1096,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-mysql.LogFile>
+        description: ''
     package: '@azure/arm-mysql'
 references:
   - uid: Array<@azure/arm-mysql.LogFile>

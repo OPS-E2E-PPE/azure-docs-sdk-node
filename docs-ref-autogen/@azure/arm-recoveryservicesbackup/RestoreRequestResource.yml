@@ -14,7 +14,9 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      Base class for restore request. Workload-specific restore requests are
+      derived from this class.
     extends:
       name: '@azure/arm-recoveryservicesbackup.Resource'
     package: '@azure/arm-recoveryservicesbackup'
@@ -25,13 +27,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Optional ETag.
     optional: true
     syntax:
       content: 'eTag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.RestoreRequestResource.id'
     name: id
@@ -40,13 +43,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource Id represents the complete path to the resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.RestoreRequestResource.location'
     name: location
@@ -55,13 +63,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource location.
     optional: true
     syntax:
       content: 'location?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.RestoreRequestResource.name'
     name: name
@@ -70,13 +79,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource name associated with the resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.RestoreRequestResource.properties'
     name: properties
@@ -85,13 +99,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: RestoreRequestResource properties
     optional: true
     syntax:
       content: 'properties?: RestoreRequestUnion'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.RestoreRequestUnion'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.RestoreRequestResource.tags'
     name: tags
@@ -100,13 +115,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource tags.
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.RestoreRequestResource.type'
     name: type
@@ -115,13 +131,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource type represents the complete path of the form
+      Namespace/ResourceType/ResourceType/...
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.Resource'

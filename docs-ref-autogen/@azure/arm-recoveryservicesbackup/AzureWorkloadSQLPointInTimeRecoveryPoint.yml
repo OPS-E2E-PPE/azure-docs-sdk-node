@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Recovery point specific to PointInTime
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.extendedInfo
@@ -27,7 +27,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Extended Info that provides data directory details. Will be populated in
+      two cases:
+
+      When a specific recovery point is accessed using GetRecoveryPoint
+
+      Or when ListRecoveryPoints is called for Log RP only with ExtendedInfo
+      query filter
     optional: true
     syntax:
       content: 'extendedInfo?: AzureWorkloadSQLRecoveryPointExtendedInfo'
@@ -35,6 +42,7 @@ items:
         type:
           - >-
             @azure/arm-recoveryservicesbackup.AzureWorkloadSQLRecoveryPointExtendedInfo
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.objectType
@@ -44,12 +52,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'objectType: "AzureWorkloadSQLPointInTimeRecoveryPoint"'
       return:
         type:
           - '"AzureWorkloadSQLPointInTimeRecoveryPoint"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.recoveryPointTimeInUTC
@@ -59,13 +68,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      UTC time at which recovery point was created
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'recoveryPointTimeInUTC?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.timeRanges
@@ -75,13 +89,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of log ranges
     optional: true
     syntax:
       content: 'timeRanges?: PointInTimeRange[]'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.PointInTimeRange[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.type
@@ -91,13 +106,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type of restore point. Possible values include: 'Invalid', 'Full', 'Log',
+      'Differential'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: RestorePointType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.RestorePointType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: >-

@@ -6,6 +6,8 @@ items:
     children:
       - '@azure/arm-network.VirtualNetworkGateways.beginCreateOrUpdate'
       - '@azure/arm-network.VirtualNetworkGateways.beginDeleteMethod'
+      - '@azure/arm-network.VirtualNetworkGateways.beginGeneratevpnclientpackage'
+      - '@azure/arm-network.VirtualNetworkGateways.beginGenerateVpnProfile'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetAdvertisedRoutes'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetBgpPeerStatus'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetLearnedRoutes'
@@ -18,15 +20,13 @@ items:
       - '@azure/arm-network.VirtualNetworkGateways.beginResetVpnClientSharedKey'
       - >-
         @azure/arm-network.VirtualNetworkGateways.beginSetVpnclientIpsecParameters
+      - '@azure/arm-network.VirtualNetworkGateways.beginStartPacketCapture'
+      - '@azure/arm-network.VirtualNetworkGateways.beginStopPacketCapture'
       - '@azure/arm-network.VirtualNetworkGateways.beginUpdateTags'
       - '@azure/arm-network.VirtualNetworkGateways.createOrUpdate'
       - '@azure/arm-network.VirtualNetworkGateways.deleteMethod'
       - '@azure/arm-network.VirtualNetworkGateways.generatevpnclientpackage'
-      - '@azure/arm-network.VirtualNetworkGateways.generatevpnclientpackage_2'
-      - '@azure/arm-network.VirtualNetworkGateways.generatevpnclientpackage_1'
       - '@azure/arm-network.VirtualNetworkGateways.generateVpnProfile'
-      - '@azure/arm-network.VirtualNetworkGateways.generateVpnProfile_2'
-      - '@azure/arm-network.VirtualNetworkGateways.generateVpnProfile_1'
       - '@azure/arm-network.VirtualNetworkGateways.get'
       - '@azure/arm-network.VirtualNetworkGateways.get_2'
       - '@azure/arm-network.VirtualNetworkGateways.get_1'
@@ -51,6 +51,8 @@ items:
       - '@azure/arm-network.VirtualNetworkGateways.reset'
       - '@azure/arm-network.VirtualNetworkGateways.resetVpnClientSharedKey'
       - '@azure/arm-network.VirtualNetworkGateways.setVpnclientIpsecParameters'
+      - '@azure/arm-network.VirtualNetworkGateways.startPacketCapture'
+      - '@azure/arm-network.VirtualNetworkGateways.stopPacketCapture'
       - '@azure/arm-network.VirtualNetworkGateways.supportedVpnDevices'
       - '@azure/arm-network.VirtualNetworkGateways.supportedVpnDevices_2'
       - '@azure/arm-network.VirtualNetworkGateways.supportedVpnDevices_1'
@@ -103,6 +105,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -132,6 +135,97 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.beginGeneratevpnclientpackage'
+    name: >-
+      beginGeneratevpnclientpackage(string, string, VpnClientParameters,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Generates VPN client package for P2S client of the virtual network gateway
+      in the specified
+
+      resource group.
+    syntax:
+      content: >-
+        function beginGeneratevpnclientpackage(resourceGroupName: string,
+        virtualNetworkGatewayName: string, parameters: VpnClientParameters,
+        options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: The name of the virtual network gateway.
+        - id: parameters
+          type:
+            - '@azure/arm-network.VpnClientParameters'
+          description: >-
+            Parameters supplied to the generate virtual network gateway VPN
+            client package
+
+            operation.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.beginGenerateVpnProfile'
+    name: >-
+      beginGenerateVpnProfile(string, string, VpnClientParameters,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Generates VPN profile for P2S client of the virtual network gateway in the
+      specified resource
+
+      group. Used for IKEV2 and radius based authentication.
+    syntax:
+      content: >-
+        function beginGenerateVpnProfile(resourceGroupName: string,
+        virtualNetworkGatewayName: string, parameters: VpnClientParameters,
+        options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: The name of the virtual network gateway.
+        - id: parameters
+          type:
+            - '@azure/arm-network.VpnClientParameters'
+          description: >-
+            Parameters supplied to the generate virtual network gateway VPN
+            client package
+
+            operation.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginGetAdvertisedRoutes'
     name: >-
@@ -172,6 +266,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginGetBgpPeerStatus'
     name: >-
@@ -204,6 +299,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginGetLearnedRoutes'
     name: 'beginGetLearnedRoutes(string, string, msRest.RequestOptionsBase)'
@@ -237,6 +333,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.VirtualNetworkGateways.beginGetVpnclientConnectionHealth
@@ -273,6 +370,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientIpsecParameters'
     name: >-
@@ -311,6 +409,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginGetVpnProfilePackageUrl'
     name: 'beginGetVpnProfilePackageUrl(string, string, msRest.RequestOptionsBase)'
@@ -345,6 +444,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginReset'
     name: >-
@@ -379,6 +479,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginResetVpnClientSharedKey'
     name: 'beginResetVpnClientSharedKey(string, string, msRest.RequestOptionsBase)'
@@ -410,6 +511,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginSetVpnclientIpsecParameters'
     name: >-
@@ -455,6 +557,85 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.beginStartPacketCapture'
+    name: >-
+      beginStartPacketCapture(string, string,
+      Models.VirtualNetworkGatewaysBeginStartPacketCaptureOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Starts packet capture on virtual network gateway in the specified resource
+      group.
+    syntax:
+      content: >-
+        function beginStartPacketCapture(resourceGroupName: string,
+        virtualNetworkGatewayName: string, options?:
+        Models.VirtualNetworkGatewaysBeginStartPacketCaptureOptionalParams)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: The name of the virtual network gateway.
+        - id: options
+          type:
+            - Models.VirtualNetworkGatewaysBeginStartPacketCaptureOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.beginStopPacketCapture'
+    name: >-
+      beginStopPacketCapture(string, string, VpnPacketCaptureStopParameters,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Stops packet capture on virtual network gateway in the specified resource
+      group.
+    syntax:
+      content: >-
+        function beginStopPacketCapture(resourceGroupName: string,
+        virtualNetworkGatewayName: string, parameters:
+        VpnPacketCaptureStopParameters, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: The name of the virtual network gateway.
+        - id: parameters
+          type:
+            - '@azure/arm-network.VpnPacketCaptureStopParameters'
+          description: >-
+            Virtual network gateway packet capture parameters supplied to stop
+            packet
+
+            capture on gateway.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginUpdateTags'
     name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
@@ -489,6 +670,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.createOrUpdate'
     name: >-
@@ -529,6 +711,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysCreateOrUpdateResponse>
+        description: Promise<Models.VirtualNetworkGatewaysCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -558,6 +741,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.generatevpnclientpackage'
     name: >-
@@ -603,92 +787,7 @@ items:
         type:
           - >-
             Promise<Models.VirtualNetworkGatewaysGeneratevpnclientpackageResponse>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.VirtualNetworkGateways.generatevpnclientpackage_2'
-    name: >-
-      generatevpnclientpackage(string, string, VpnClientParameters,
-      RequestOptionsBase, ServiceCallback<string>)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function generatevpnclientpackage(resourceGroupName: string,
-        virtualNetworkGatewayName: string, parameters: VpnClientParameters,
-        options: RequestOptionsBase, callback: ServiceCallback<string>)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: virtualNetworkGatewayName
-          type:
-            - string
-          description: The name of the virtual network gateway.
-        - id: parameters
-          type:
-            - '@azure/arm-network.VpnClientParameters'
-          description: >-
-            Parameters supplied to the generate virtual network gateway VPN
-            client package
-
-            operation.
-        - id: options
-          type:
-            - RequestOptionsBase
-          description: The optional parameters
-        - id: callback
-          type:
-            - ServiceCallback<string>
-          description: |
-            The callback
-      return:
-        type:
-          - >-
-            Promise<Models.VirtualNetworkGatewaysGeneratevpnclientpackageResponse>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.VirtualNetworkGateways.generatevpnclientpackage_1'
-    name: >-
-      generatevpnclientpackage(string, string, VpnClientParameters,
-      ServiceCallback<string>)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function generatevpnclientpackage(resourceGroupName: string,
-        virtualNetworkGatewayName: string, parameters: VpnClientParameters,
-        callback: ServiceCallback<string>)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: virtualNetworkGatewayName
-          type:
-            - string
-          description: The name of the virtual network gateway.
-        - id: parameters
-          type:
-            - '@azure/arm-network.VpnClientParameters'
-          description: >-
-            Parameters supplied to the generate virtual network gateway VPN
-            client package
-
-            operation.
-        - id: callback
-          type:
-            - ServiceCallback<string>
-          description: |
-            The callback
-      return:
-        type:
-          - >-
-            Promise<Models.VirtualNetworkGatewaysGeneratevpnclientpackageResponse>
+        description: Promise<Models.VirtualNetworkGatewaysGeneratevpnclientpackageResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.generateVpnProfile'
     name: >-
@@ -733,90 +832,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGenerateVpnProfileResponse>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.VirtualNetworkGateways.generateVpnProfile_2'
-    name: >-
-      generateVpnProfile(string, string, VpnClientParameters,
-      RequestOptionsBase, ServiceCallback<string>)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function generateVpnProfile(resourceGroupName: string,
-        virtualNetworkGatewayName: string, parameters: VpnClientParameters,
-        options: RequestOptionsBase, callback: ServiceCallback<string>)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: virtualNetworkGatewayName
-          type:
-            - string
-          description: The name of the virtual network gateway.
-        - id: parameters
-          type:
-            - '@azure/arm-network.VpnClientParameters'
-          description: >-
-            Parameters supplied to the generate virtual network gateway VPN
-            client package
-
-            operation.
-        - id: options
-          type:
-            - RequestOptionsBase
-          description: The optional parameters
-        - id: callback
-          type:
-            - ServiceCallback<string>
-          description: |
-            The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysGenerateVpnProfileResponse>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.VirtualNetworkGateways.generateVpnProfile_1'
-    name: >-
-      generateVpnProfile(string, string, VpnClientParameters,
-      ServiceCallback<string>)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function generateVpnProfile(resourceGroupName: string,
-        virtualNetworkGatewayName: string, parameters: VpnClientParameters,
-        callback: ServiceCallback<string>)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: virtualNetworkGatewayName
-          type:
-            - string
-          description: The name of the virtual network gateway.
-        - id: parameters
-          type:
-            - '@azure/arm-network.VpnClientParameters'
-          description: >-
-            Parameters supplied to the generate virtual network gateway VPN
-            client package
-
-            operation.
-        - id: callback
-          type:
-            - ServiceCallback<string>
-          description: |
-            The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysGenerateVpnProfileResponse>
+        description: Promise<Models.VirtualNetworkGatewaysGenerateVpnProfileResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.get'
     name: 'get(string, string, msRest.RequestOptionsBase)'
@@ -846,6 +862,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetResponse>
+        description: Promise<Models.VirtualNetworkGatewaysGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.get_2'
     name: >-
@@ -879,9 +896,6 @@ items:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGateway>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.get_1'
     name: 'get(string, string, ServiceCallback<VirtualNetworkGateway>)'
@@ -908,9 +922,6 @@ items:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGateway>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.getAdvertisedRoutes'
     name: 'getAdvertisedRoutes(string, string, string, msRest.RequestOptionsBase)'
@@ -949,6 +960,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetAdvertisedRoutesResponse>
+        description: Promise<Models.VirtualNetworkGatewaysGetAdvertisedRoutesResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.getBgpPeerStatus'
     name: >-
@@ -981,6 +993,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetBgpPeerStatusResponse>
+        description: Promise<Models.VirtualNetworkGatewaysGetBgpPeerStatusResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.getLearnedRoutes'
     name: 'getLearnedRoutes(string, string, msRest.RequestOptionsBase)'
@@ -1014,6 +1027,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetLearnedRoutesResponse>
+        description: Promise<Models.VirtualNetworkGatewaysGetLearnedRoutesResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.getVpnclientConnectionHealth'
     name: 'getVpnclientConnectionHealth(string, string, msRest.RequestOptionsBase)'
@@ -1048,6 +1062,8 @@ items:
         type:
           - >-
             Promise<Models.VirtualNetworkGatewaysGetVpnclientConnectionHealthResponse>
+        description: >-
+          Promise<Models.VirtualNetworkGatewaysGetVpnclientConnectionHealthResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.getVpnclientIpsecParameters'
     name: 'getVpnclientIpsecParameters(string, string, msRest.RequestOptionsBase)'
@@ -1085,6 +1101,8 @@ items:
         type:
           - >-
             Promise<Models.VirtualNetworkGatewaysGetVpnclientIpsecParametersResponse>
+        description: >-
+          Promise<Models.VirtualNetworkGatewaysGetVpnclientIpsecParametersResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.getVpnProfilePackageUrl'
     name: 'getVpnProfilePackageUrl(string, string, msRest.RequestOptionsBase)'
@@ -1120,6 +1138,7 @@ items:
         type:
           - >-
             Promise<Models.VirtualNetworkGatewaysGetVpnProfilePackageUrlResponse>
+        description: Promise<Models.VirtualNetworkGatewaysGetVpnProfilePackageUrlResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.list'
     name: 'list(string, msRest.RequestOptionsBase)'
@@ -1145,6 +1164,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListResponse>
+        description: Promise<Models.VirtualNetworkGatewaysListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.list_2'
     name: >-
@@ -1174,9 +1194,6 @@ items:
               ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.list_1'
     name: 'list(string, ServiceCallback<VirtualNetworkGatewayListResult>)'
@@ -1200,9 +1217,6 @@ items:
               ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.listConnections'
     name: 'listConnections(string, string, msRest.RequestOptionsBase)'
@@ -1232,6 +1246,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListConnectionsResponse>
+        description: Promise<Models.VirtualNetworkGatewaysListConnectionsResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.listConnections_2'
     name: >-
@@ -1266,9 +1281,6 @@ items:
               ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysListConnectionsResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.listConnections_1'
     name: >-
@@ -1299,9 +1311,6 @@ items:
               ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysListConnectionsResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.listConnectionsNext'
     name: 'listConnectionsNext(string, msRest.RequestOptionsBase)'
@@ -1327,6 +1336,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListConnectionsNextResponse>
+        description: Promise<Models.VirtualNetworkGatewaysListConnectionsNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.listConnectionsNext_2'
     name: >-
@@ -1357,9 +1367,6 @@ items:
               ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysListConnectionsNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.listConnectionsNext_1'
     name: >-
@@ -1385,9 +1392,6 @@ items:
               ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysListConnectionsNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -1413,6 +1417,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListNextResponse>
+        description: Promise<Models.VirtualNetworkGatewaysListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.listNext_2'
     name: >-
@@ -1442,9 +1447,6 @@ items:
               ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.listNext_1'
     name: 'listNext(string, ServiceCallback<VirtualNetworkGatewayListResult>)'
@@ -1468,9 +1470,6 @@ items:
               ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.reset'
     name: 'reset(string, string, Models.VirtualNetworkGatewaysResetOptionalParams)'
@@ -1502,6 +1501,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysResetResponse>
+        description: Promise<Models.VirtualNetworkGatewaysResetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.resetVpnClientSharedKey'
     name: 'resetVpnClientSharedKey(string, string, msRest.RequestOptionsBase)'
@@ -1533,6 +1533,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.setVpnclientIpsecParameters'
     name: >-
@@ -1579,6 +1580,86 @@ items:
         type:
           - >-
             Promise<Models.VirtualNetworkGatewaysSetVpnclientIpsecParametersResponse>
+        description: >-
+          Promise<Models.VirtualNetworkGatewaysSetVpnclientIpsecParametersResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.startPacketCapture'
+    name: >-
+      startPacketCapture(string, string,
+      Models.VirtualNetworkGatewaysStartPacketCaptureOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Starts packet capture on virtual network gateway in the specified resource
+      group.
+    syntax:
+      content: >-
+        function startPacketCapture(resourceGroupName: string,
+        virtualNetworkGatewayName: string, options?:
+        Models.VirtualNetworkGatewaysStartPacketCaptureOptionalParams)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: The name of the virtual network gateway.
+        - id: options
+          type:
+            - Models.VirtualNetworkGatewaysStartPacketCaptureOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworkGatewaysStartPacketCaptureResponse>
+        description: Promise<Models.VirtualNetworkGatewaysStartPacketCaptureResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.stopPacketCapture'
+    name: >-
+      stopPacketCapture(string, string, VpnPacketCaptureStopParameters,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Stops packet capture on virtual network gateway in the specified resource
+      group.
+    syntax:
+      content: >-
+        function stopPacketCapture(resourceGroupName: string,
+        virtualNetworkGatewayName: string, parameters:
+        VpnPacketCaptureStopParameters, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: The name of the virtual network gateway.
+        - id: parameters
+          type:
+            - '@azure/arm-network.VpnPacketCaptureStopParameters'
+          description: >-
+            Virtual network gateway packet capture parameters supplied to stop
+            packet
+
+            capture on gateway.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworkGatewaysStopPacketCaptureResponse>
+        description: Promise<Models.VirtualNetworkGatewaysStopPacketCaptureResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.supportedVpnDevices'
     name: 'supportedVpnDevices(string, string, msRest.RequestOptionsBase)'
@@ -1608,6 +1689,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysSupportedVpnDevicesResponse>
+        description: Promise<Models.VirtualNetworkGatewaysSupportedVpnDevicesResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.supportedVpnDevices_2'
     name: >-
@@ -1641,9 +1723,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysSupportedVpnDevicesResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.supportedVpnDevices_1'
     name: 'supportedVpnDevices(string, string, ServiceCallback<string>)'
@@ -1670,9 +1749,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualNetworkGatewaysSupportedVpnDevicesResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.updateTags'
     name: 'updateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
@@ -1707,6 +1783,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysUpdateTagsResponse>
+        description: Promise<Models.VirtualNetworkGatewaysUpdateTagsResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.constructor'
     name: VirtualNetworkGateways(NetworkManagementClientContext)
@@ -1762,6 +1839,8 @@ items:
         type:
           - >-
             Promise<Models.VirtualNetworkGatewaysVpnDeviceConfigurationScriptResponse>
+        description: >-
+          Promise<Models.VirtualNetworkGatewaysVpnDeviceConfigurationScriptResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.vpnDeviceConfigurationScript_2'
     name: >-
@@ -1802,10 +1881,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - >-
-            Promise<Models.VirtualNetworkGatewaysVpnDeviceConfigurationScriptResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.vpnDeviceConfigurationScript_1'
     name: >-
@@ -1841,10 +1916,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - >-
-            Promise<Models.VirtualNetworkGatewaysVpnDeviceConfigurationScriptResponse>
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -1859,24 +1930,30 @@ references:
       - name: VirtualNetworkGateway
         fullName: VirtualNetworkGateway
         uid: '@azure/arm-network.VirtualNetworkGateway'
-  - uid: '@azure/arm-network.VpnClientIPsecParameters'
-    name: VpnClientIPsecParameters
-    spec.typeScript:
-      - name: VpnClientIPsecParameters
-        fullName: VpnClientIPsecParameters
-        uid: '@azure/arm-network.VpnClientIPsecParameters'
-  - uid: '@azure/arm-network.TagsObject'
-    name: TagsObject
-    spec.typeScript:
-      - name: TagsObject
-        fullName: TagsObject
-        uid: '@azure/arm-network.TagsObject'
   - uid: '@azure/arm-network.VpnClientParameters'
     name: VpnClientParameters
     spec.typeScript:
       - name: VpnClientParameters
         fullName: VpnClientParameters
         uid: '@azure/arm-network.VpnClientParameters'
+  - uid: '@azure/arm-network.VpnClientIPsecParameters'
+    name: VpnClientIPsecParameters
+    spec.typeScript:
+      - name: VpnClientIPsecParameters
+        fullName: VpnClientIPsecParameters
+        uid: '@azure/arm-network.VpnClientIPsecParameters'
+  - uid: '@azure/arm-network.VpnPacketCaptureStopParameters'
+    name: VpnPacketCaptureStopParameters
+    spec.typeScript:
+      - name: VpnPacketCaptureStopParameters
+        fullName: VpnPacketCaptureStopParameters
+        uid: '@azure/arm-network.VpnPacketCaptureStopParameters'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'
   - uid: ServiceCallback<@azure/arm-network.VirtualNetworkGateway>
     name: VirtualNetworkGateway>
     spec.typeScript:

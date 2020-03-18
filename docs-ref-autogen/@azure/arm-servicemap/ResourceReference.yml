@@ -11,7 +11,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Represents a reference to another resource.
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ResourceReference.id'
     name: id
@@ -20,12 +20,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource URI.
     syntax:
       content: 'id: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ResourceReference.kind'
     name: kind
@@ -34,12 +35,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'kind: "ResourceReference"'
       return:
         type:
           - '"ResourceReference"'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ResourceReference.name'
     name: name
@@ -48,13 +50,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ResourceReference.type'
     name: type
@@ -63,11 +70,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource type qualifier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'

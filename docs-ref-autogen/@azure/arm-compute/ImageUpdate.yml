@@ -4,6 +4,7 @@ items:
     name: ImageUpdate
     fullName: ImageUpdate
     children:
+      - '@azure/arm-compute.ImageUpdate.hyperVGeneration'
       - '@azure/arm-compute.ImageUpdate.provisioningState'
       - '@azure/arm-compute.ImageUpdate.sourceVirtualMachine'
       - '@azure/arm-compute.ImageUpdate.storageProfile'
@@ -14,6 +15,26 @@ items:
     summary: The source user image virtual hard disk. Only tags may be updated.
     extends:
       name: '@azure/arm-compute.UpdateResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageUpdate.hyperVGeneration'
+    name: hyperVGeneration
+    fullName: hyperVGeneration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets the HyperVGenerationType of the VirtualMachine created from the
+      image. Possible values
+
+      include: 'V1', 'V2'
+    optional: true
+    syntax:
+      content: 'hyperVGeneration?: HyperVGenerationTypes'
+      return:
+        type:
+          - '@azure/arm-compute.HyperVGenerationTypes'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageUpdate.provisioningState'
     name: provisioningState
@@ -33,6 +54,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageUpdate.sourceVirtualMachine'
     name: sourceVirtualMachine
@@ -48,6 +70,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.SubResource'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageUpdate.storageProfile'
     name: storageProfile
@@ -63,6 +86,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ImageStorageProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageUpdate.tags'
     name: tags
@@ -78,6 +102,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: '@azure/arm-compute.UpdateResource'
@@ -86,6 +111,12 @@ references:
       - name: UpdateResource
         fullName: UpdateResource
         uid: '@azure/arm-compute.UpdateResource'
+  - uid: '@azure/arm-compute.HyperVGenerationTypes'
+    name: HyperVGenerationTypes
+    spec.typeScript:
+      - name: HyperVGenerationTypes
+        fullName: HyperVGenerationTypes
+        uid: '@azure/arm-compute.HyperVGenerationTypes'
   - uid: '@azure/arm-compute.SubResource'
     name: SubResource
     spec.typeScript:

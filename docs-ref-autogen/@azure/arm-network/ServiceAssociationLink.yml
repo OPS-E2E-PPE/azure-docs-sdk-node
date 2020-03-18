@@ -34,6 +34,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.etag'
     name: etag
@@ -53,6 +54,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.id'
     name: id
@@ -68,6 +70,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.link'
     name: link
@@ -83,6 +86,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.linkedResourceType'
     name: linkedResourceType
@@ -98,6 +102,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.locations'
     name: locations
@@ -113,6 +118,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.name'
     name: name
@@ -132,6 +138,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.provisioningState'
     name: provisioningState
@@ -141,16 +148,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Provisioning state of the ServiceAssociationLink resource.
+      The provisioning state of the service association link resource. Possible
+      values include:
+
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.type'
     name: type
@@ -159,13 +170,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Resource type.
+    summary: >-
+      Resource type.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -174,3 +190,9 @@ references:
       - name: SubResource
         fullName: SubResource
         uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

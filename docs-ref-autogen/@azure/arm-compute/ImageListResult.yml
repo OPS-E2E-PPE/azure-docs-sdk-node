@@ -11,12 +11,13 @@ items:
       - '@azure/arm-compute.ImageListResult.entries'
       - '@azure/arm-compute.ImageListResult.every'
       - '@azure/arm-compute.ImageListResult.fill'
-      - '@azure/arm-compute.ImageListResult.filter_1'
       - '@azure/arm-compute.ImageListResult.filter'
+      - '@azure/arm-compute.ImageListResult.filter_1'
       - '@azure/arm-compute.ImageListResult.find'
       - '@azure/arm-compute.ImageListResult.find_1'
       - '@azure/arm-compute.ImageListResult.findIndex'
       - '@azure/arm-compute.ImageListResult.forEach'
+      - '@azure/arm-compute.ImageListResult.includes'
       - '@azure/arm-compute.ImageListResult.indexOf'
       - '@azure/arm-compute.ImageListResult.join'
       - '@azure/arm-compute.ImageListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.concat'
     name: 'concat(ConcatArray<Image>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.every'
-    name: 'every((value: Image, index: number, array: Image[]) => boolean, any)'
+    name: 'every((value: Image, index: number, array: Image[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Image, index: number, array: Image[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Image, index: number, array: Image[]) => boolean'
+            - '(value: Image, index: number, array: Image[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.fill'
     name: 'fill(Image, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.ImageListResult.filter_1'
-    name: 'filter((value: Image, index: number, array: Image[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Image, index: number, array:
-        Image[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Image, index: number, array: Image[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-compute.Image[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.filter'
     name: 'filter((value: Image, index: number, array: Image[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageListResult.filter_1'
+    name: 'filter((value: Image, index: number, array: Image[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Image, index: number, array:
+        Image[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Image, index: number, array: Image[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-compute.Image[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.find'
     name: >-
@@ -338,26 +348,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.find_1'
-    name: 'find((value: Image, index: number, obj: Image[]) => boolean, any)'
+    name: 'find((value: Image, index: number, obj: Image[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Image, index: number, obj: Image[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Image, index: number, obj: Image[]) => boolean'
+            - '(value: Image, index: number, obj: Image[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -367,9 +374,10 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.findIndex'
-    name: 'findIndex((value: Image, index: number, obj: Image[]) => boolean, any)'
+    name: 'findIndex((value: Image, index: number, obj: Image[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -382,11 +390,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Image, index: number, obj:
-        Image[]) => boolean, thisArg?: any)
+        Image[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Image, index: number, obj: Image[]) => boolean'
+            - '(value: Image, index: number, obj: Image[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -408,6 +416,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.forEach'
     name: 'forEach((value: Image, index: number, array: Image[]) => void, any)'
@@ -436,6 +445,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageListResult.includes'
+    name: 'includes(Image, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Image, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-compute.Image'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.indexOf'
     name: 'indexOf(Image, undefined | number)'
     children: []
@@ -460,6 +497,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.join'
     name: join(undefined | string)
@@ -484,6 +522,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.keys'
     name: keys()
@@ -498,6 +537,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.lastIndexOf'
     name: 'lastIndexOf(Image, undefined | number)'
@@ -525,6 +565,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.length'
     name: length
@@ -541,6 +582,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.map'
     name: 'map((value: Image, index: number, array: Image[]) => U, any)'
@@ -573,6 +615,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.nextLink'
     name: nextLink
@@ -592,6 +635,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.pop'
     name: pop()
@@ -606,6 +650,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.push'
     name: 'push(Image[])'
@@ -625,6 +670,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.reduce'
     name: >-
@@ -655,6 +701,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.reduce_1'
     name: >-
@@ -664,10 +711,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Image, currentValue: Image,
@@ -686,6 +730,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.reduce_2'
     name: >-
@@ -723,6 +768,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.reduceRight'
     name: >-
@@ -754,6 +800,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.reduceRight_1'
     name: >-
@@ -763,11 +810,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Image, currentValue:
@@ -787,6 +830,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.reduceRight_2'
     name: >-
@@ -825,6 +869,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.reverse'
     name: reverse()
@@ -839,6 +884,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.shift'
     name: shift()
@@ -853,6 +899,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -878,9 +925,10 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.some'
-    name: 'some((value: Image, index: number, array: Image[]) => boolean, any)'
+    name: 'some((value: Image, index: number, array: Image[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -891,11 +939,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Image, index: number, array: Image[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Image, index: number, array: Image[]) => boolean'
+            - '(value: Image, index: number, array: Image[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -911,6 +959,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.sort'
     name: 'sort(undefined | (a: Image, b: Image) => number)'
@@ -933,6 +982,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.splice_1'
     name: 'splice(number, number, Image[])'
@@ -964,6 +1014,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -992,6 +1043,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Image[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.toLocaleString'
     name: toLocaleString()
@@ -1008,6 +1060,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.toString'
     name: toString()
@@ -1022,6 +1075,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.unshift'
     name: 'unshift(Image[])'
@@ -1041,6 +1095,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ImageListResult.values'
     name: values()
@@ -1055,6 +1110,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-compute.Image>
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: Array<@azure/arm-compute.Image>

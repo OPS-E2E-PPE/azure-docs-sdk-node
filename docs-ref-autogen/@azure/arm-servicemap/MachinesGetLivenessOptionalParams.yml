@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: '@azure/arm-servicemap'
@@ -33,6 +33,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachinesGetLivenessOptionalParams.customHeaders'
     name: customHeaders
@@ -50,6 +51,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachinesGetLivenessOptionalParams.endTime'
     name: endTime
@@ -58,13 +60,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      UTC date and time specifying the end time of an interval. When not
+      specified the service uses
+
+      DateTime.UtcNow
     optional: true
     syntax:
       content: 'endTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachinesGetLivenessOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -82,6 +89,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachinesGetLivenessOptionalParams.onUploadProgress'
     name: onUploadProgress
@@ -97,6 +105,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachinesGetLivenessOptionalParams.startTime'
     name: startTime
@@ -105,13 +114,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      UTC date and time specifying the start time of an interval. When not
+      specified the service
+
+      uses DateTime.UtcNow - 10m
     optional: true
     syntax:
       content: 'startTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.MachinesGetLivenessOptionalParams.timeout'
     name: timeout
@@ -129,4 +143,5 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-servicemap'

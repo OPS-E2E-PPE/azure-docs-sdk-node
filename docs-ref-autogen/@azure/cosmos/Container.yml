@@ -8,6 +8,7 @@ items:
       - '@azure/cosmos.Container.conflicts'
       - '@azure/cosmos.Container.database'
       - '@azure/cosmos.Container.delete'
+      - '@azure/cosmos.Container.getPartitionKeyDefinition'
       - '@azure/cosmos.Container.getQueryPlan'
       - '@azure/cosmos.Container.id'
       - '@azure/cosmos.Container.item'
@@ -47,6 +48,7 @@ items:
       return:
         type:
           - '@azure/cosmos.Conflict'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Container.conflicts'
     name: conflicts
@@ -59,10 +61,11 @@ items:
       Opertaions for reading and querying conflicts for the given container.
       For reading or deleting a specific conflict, use `.conflict(id)`.
     syntax:
-      content: 'conflicts: Conflicts'
+      content: Conflicts conflicts
       return:
         type:
           - '@azure/cosmos.Conflicts'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Container.database'
     name: database
@@ -71,12 +74,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'The parent <xref:Database>.'
     syntax:
-      content: 'database: Database'
+      content: 'public database: Database'
       return:
         type:
           - '@azure/cosmos.Database'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Container.delete'
     name: delete(RequestOptions)
@@ -96,7 +100,28 @@ items:
       return:
         type:
           - Promise<@azure/cosmos.ContainerResponse>
+        description: ''
     package: '@azure/cosmos'
+  - uid: '@azure/cosmos.Container.getPartitionKeyDefinition'
+    name: getPartitionKeyDefinition()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets the partition key definition first by looking into the cache
+      otherwise by reading the collection.
+    syntax:
+      content: function getPartitionKeyDefinition()
+      parameters: []
+      return:
+        type:
+          - >-
+            Promise<@azure/cosmos.ResourceResponse<@azure/cosmos.PartitionKeyDefinition>>
+        description: ''
+    package: '@azure/cosmos'
+    deprecated:
+      content: This method has been renamed to readPartitionKeyDefinition.
   - uid: '@azure/cosmos.Container.getQueryPlan'
     name: getQueryPlan(string | SqlQuerySpec)
     children: []
@@ -114,6 +139,7 @@ items:
       return:
         type:
           - Promise<Response<PartitionedQueryExecutionInfo>>
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Container.id'
     name: id
@@ -122,12 +148,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The id of the given container.
     syntax:
-      content: 'id: string'
+      content: 'public id: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Container.item'
     name: 'item(string, any)'
@@ -139,19 +166,21 @@ items:
       Used to read, replace, or delete a specific, existing <xref:Item> by id.
       Use `.items` for creating new items, or querying/reading all items.
     syntax:
-      content: 'function item(id: string, partitionKey: any)'
+      content: 'function item(id: string, partitionKeyValue?: any)'
       parameters:
         - id: id
           type:
             - string
           description: 'The id of the <xref:Item>.'
-        - id: partitionKey
+        - id: partitionKeyValue
           type:
             - any
-          description: 'The partition key of the <xref:Item>'
+          description: 'The value of the <xref:Item> partition key'
+          optional: true
       return:
         type:
           - '@azure/cosmos.Item'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Container.items'
     name: items
@@ -164,10 +193,11 @@ items:
       Operations for creating new items, and reading/querying all items
       For reading, replacing, or deleting an existing item, use `.item(id)`.
     syntax:
-      content: 'items: Items'
+      content: Items items
       return:
         type:
           - '@azure/cosmos.Items'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Container.read'
     name: read(RequestOptions)
@@ -187,6 +217,7 @@ items:
       return:
         type:
           - Promise<@azure/cosmos.ContainerResponse>
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Container.readPartitionKeyRanges'
     name: readPartitionKeyRanges(FeedOptions)
@@ -206,6 +237,7 @@ items:
       return:
         type:
           - '@azure/cosmos.QueryIterator<PartitionKeyRange>'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Container.replace'
     name: 'replace(ContainerDefinition, RequestOptions)'
@@ -229,6 +261,7 @@ items:
       return:
         type:
           - Promise<@azure/cosmos.ContainerResponse>
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Container.scripts'
     name: scripts
@@ -239,10 +272,11 @@ items:
     type: property
     summary: 'All operations for Stored Procedures, Triggers, and User Defined Functions'
     syntax:
-      content: 'scripts: Scripts'
+      content: Scripts scripts
       return:
         type:
           - '@azure/cosmos.Scripts'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Container.url'
     name: url
@@ -253,24 +287,25 @@ items:
     type: property
     summary: Returns a reference URL to the resource. Used for linking in Permissions.
     syntax:
-      content: 'url: string'
+      content: string url
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
 references:
-  - uid: '@azure/cosmos.Conflicts'
-    name: Conflicts
-    spec.typeScript:
-      - name: Conflicts
-        fullName: Conflicts
-        uid: '@azure/cosmos.Conflicts'
   - uid: '@azure/cosmos.Database'
     name: Database
     spec.typeScript:
       - name: Database
         fullName: Database
         uid: '@azure/cosmos.Database'
+  - uid: '@azure/cosmos.Conflicts'
+    name: Conflicts
+    spec.typeScript:
+      - name: Conflicts
+        fullName: Conflicts
+        uid: '@azure/cosmos.Conflicts'
   - uid: '@azure/cosmos.Items'
     name: Items
     spec.typeScript:
@@ -305,6 +340,22 @@ references:
         uid: '@azure/cosmos.ContainerResponse'
       - name: '>'
         fullName: '>'
+  - uid: >-
+      Promise<@azure/cosmos.ResourceResponse<@azure/cosmos.PartitionKeyDefinition>>
+    name: PartitionKeyDefinition>>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ResourceResponse
+        fullName: ResourceResponse
+        uid: '@azure/cosmos.ResourceResponse'
+      - name: <
+        fullName: <
+      - name: PartitionKeyDefinition
+        fullName: PartitionKeyDefinition
+        uid: '@azure/cosmos.PartitionKeyDefinition'
+      - name: '>>'
+        fullName: '>>'
   - uid: string | @azure/cosmos.SqlQuerySpec
     name: SqlQuerySpec
     spec.typeScript:

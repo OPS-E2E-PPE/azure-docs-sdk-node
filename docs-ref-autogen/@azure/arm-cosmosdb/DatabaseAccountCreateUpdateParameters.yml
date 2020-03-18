@@ -5,10 +5,15 @@ items:
     fullName: DatabaseAccountCreateUpdateParameters
     children:
       - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.capabilities'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.connectorOffer'
       - >-
         @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.consistencyPolicy
       - >-
+        @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.disableKeyBasedMetadataWriteAccess
+      - >-
         @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.enableAutomaticFailover
+      - >-
+        @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.enableCassandraConnector
       - >-
         @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.enableMultipleWriteLocations
       - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.id'
@@ -28,7 +33,7 @@ items:
     type: interface
     summary: Parameters to create and update Cosmos DB database accounts.
     extends:
-      name: '@azure/arm-cosmosdb.Resource'
+      name: '@azure/arm-cosmosdb.ARMResourceProperties'
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.capabilities'
     name: capabilities
@@ -44,6 +49,27 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Capability[]'
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.connectorOffer'
+    name: connectorOffer
+    fullName: connectorOffer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The cassandra connector offer type for the Cosmos DB database C* account.
+      Possible values
+
+      include: 'Small'
+    optional: true
+    syntax:
+      content: 'connectorOffer?: ConnectorOffer'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.ConnectorOffer'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: >-
       @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.consistencyPolicy
@@ -60,6 +86,28 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.ConsistencyPolicy'
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: >-
+      @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.disableKeyBasedMetadataWriteAccess
+    name: disableKeyBasedMetadataWriteAccess
+    fullName: disableKeyBasedMetadataWriteAccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Disable write operations on metadata resources (databases, containers,
+      throughput) via account
+
+      keys
+    optional: true
+    syntax:
+      content: 'disableKeyBasedMetadataWriteAccess?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: >-
       @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.enableAutomaticFailover
@@ -84,6 +132,24 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: >-
+      @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.enableCassandraConnector
+    name: enableCassandraConnector
+    fullName: enableCassandraConnector
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Enables the cassandra connector on the Cosmos DB C* account
+    optional: true
+    syntax:
+      content: 'enableCassandraConnector?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: >-
       @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.enableMultipleWriteLocations
@@ -100,6 +166,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.id'
     name: id
@@ -109,7 +176,7 @@ items:
       - typeScript
     type: property
     summary: >-
-      The unique resource identifier of the database account.
+      The unique resource identifier of the ARM resource.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -119,6 +186,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.ipRangeFilter'
     name: ipRangeFilter
@@ -141,6 +209,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: >-
       @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.isVirtualNetworkFilterEnabled
@@ -157,6 +226,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.kind'
     name: kind
@@ -179,6 +249,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.DatabaseAccountKind'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.location'
     name: location
@@ -194,6 +265,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.locations'
     name: locations
@@ -210,6 +282,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.Location[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.name'
     name: name
@@ -219,7 +292,7 @@ items:
       - typeScript
     type: property
     summary: >-
-      The name of the database account.
+      The name of the ARM resource.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -229,6 +302,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.tags'
     name: tags
@@ -244,6 +318,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.type'
     name: type
@@ -263,6 +338,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: >-
       @azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.virtualNetworkRules
@@ -279,14 +355,15 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.VirtualNetworkRule[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
 references:
-  - uid: '@azure/arm-cosmosdb.Resource'
-    name: Resource
+  - uid: '@azure/arm-cosmosdb.ARMResourceProperties'
+    name: ARMResourceProperties
     spec.typeScript:
-      - name: Resource
-        fullName: Resource
-        uid: '@azure/arm-cosmosdb.Resource'
+      - name: ARMResourceProperties
+        fullName: ARMResourceProperties
+        uid: '@azure/arm-cosmosdb.ARMResourceProperties'
   - uid: '@azure/arm-cosmosdb.Capability[]'
     name: 'Capability[]'
     spec.typeScript:
@@ -295,6 +372,12 @@ references:
         uid: '@azure/arm-cosmosdb.Capability'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-cosmosdb.ConnectorOffer'
+    name: ConnectorOffer
+    spec.typeScript:
+      - name: ConnectorOffer
+        fullName: ConnectorOffer
+        uid: '@azure/arm-cosmosdb.ConnectorOffer'
   - uid: '@azure/arm-cosmosdb.ConsistencyPolicy'
     name: ConsistencyPolicy
     spec.typeScript:

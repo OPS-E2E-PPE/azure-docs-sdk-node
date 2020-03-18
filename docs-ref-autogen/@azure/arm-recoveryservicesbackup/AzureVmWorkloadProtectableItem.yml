@@ -33,7 +33,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Azure VM workload-specific protectable item.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.backupManagementType
@@ -43,13 +43,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Type of backup management to backup an item.
     optional: true
     syntax:
       content: 'backupManagementType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.friendlyName
@@ -59,13 +60,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of the backup item.
     optional: true
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.isAutoProtectable
@@ -75,13 +77,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Indicates if protectable item is auto-protectable
     optional: true
     syntax:
       content: 'isAutoProtectable?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.isAutoProtected
@@ -91,13 +94,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Indicates if protectable item is auto-protected
     optional: true
     syntax:
       content: 'isAutoProtected?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.parentName
@@ -107,13 +111,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Name for instance or AG
     optional: true
     syntax:
       content: 'parentName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.parentUniqueName
@@ -123,13 +128,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Parent Unique Name is added to provide the service formatted URI Name of
+      the Parent
+
+      Only Applicable for data bases where the parent would be either Instance
+      or a SQL AG.
     optional: true
     syntax:
       content: 'parentUniqueName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.prebackupvalidation
@@ -139,13 +150,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Pre-backup validation for protectable objects
     optional: true
     syntax:
       content: 'prebackupvalidation?: PreBackupValidation'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.PreBackupValidation'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.protectableItemType
@@ -155,12 +167,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'protectableItemType: "AzureVmWorkloadProtectableItem"'
       return:
         type:
           - '"AzureVmWorkloadProtectableItem"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.protectionState
@@ -170,13 +183,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      State of the back up item. Possible values include: 'Invalid',
+      'NotProtected', 'Protecting',
+
+      'Protected', 'ProtectionFailed'
     optional: true
     syntax:
       content: 'protectionState?: ProtectionStatus'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.serverName
@@ -186,13 +204,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Host/Cluster Name for instance or AG
     optional: true
     syntax:
       content: 'serverName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.subinquireditemcount
@@ -202,13 +221,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'For instance or AG, indicates number of DB''s present'
     optional: true
     syntax:
       content: 'subinquireditemcount?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.subprotectableitemcount
@@ -218,13 +238,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'For instance or AG, indicates number of DB''s to be protected'
     optional: true
     syntax:
       content: 'subprotectableitemcount?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectableItem.workloadType
@@ -234,13 +255,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Type of workload for the backup management
     optional: true
     syntax:
       content: 'workloadType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.PreBackupValidation'

@@ -26,7 +26,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Spark Server linked service.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.allowHostNameCNMismatch'
     name: allowHostNameCNMismatch
@@ -35,13 +35,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether to require a CA-issued SSL certificate name to match the
+      host name of the
+
+      server when connecting over SSL. The default value is false.
     optional: true
     syntax:
       content: 'allowHostNameCNMismatch?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.allowSelfSignedServerCert'
     name: allowSelfSignedServerCert
@@ -50,13 +55,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether to allow self-signed certificates from the server. The
+      default value is
+
+      false.
     optional: true
     syntax:
       content: 'allowSelfSignedServerCert?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.annotations'
     name: annotations
@@ -65,13 +75,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the linked service.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.authenticationType'
     name: authenticationType
@@ -80,12 +91,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The authentication method used to access the Spark server. Possible values
+      include:
+
+      'Anonymous', 'Username', 'UsernameAndPassword',
+      'WindowsAzureHDInsightService'
     syntax:
       content: 'authenticationType: SparkAuthenticationType'
       return:
         type:
           - '@azure/arm-datafactory.SparkAuthenticationType'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.connectVia'
     name: connectVia
@@ -94,13 +111,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The integration runtime reference.
     optional: true
     syntax:
       content: 'connectVia?: IntegrationRuntimeReference'
       return:
         type:
           - '@azure/arm-datafactory.IntegrationRuntimeReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.description'
     name: description
@@ -109,13 +127,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.enableSsl'
     name: enableSsl
@@ -124,13 +143,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether the connections to the server are encrypted using SSL.
+      The default value is
+
+      false.
     optional: true
     syntax:
       content: 'enableSsl?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.encryptedCredential'
     name: encryptedCredential
@@ -139,13 +163,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The encrypted credential used for authentication. Credentials are
+      encrypted using the
+
+      integration runtime credential manager. Type: string (or Expression with
+      resultType string).
     optional: true
     syntax:
       content: 'encryptedCredential?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.host'
     name: host
@@ -154,12 +184,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: IP address or host name of the Spark server
     syntax:
       content: 'host: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.httpPath'
     name: httpPath
@@ -168,13 +199,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The partial URL corresponding to the Spark server.
     optional: true
     syntax:
       content: 'httpPath?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.parameters'
     name: parameters
@@ -183,7 +215,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for linked service.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -192,6 +224,7 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.password'
     name: password
@@ -200,13 +233,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The password corresponding to the user name that you provided in the
+      Username field
     optional: true
     syntax:
       content: 'password?: SecretBaseUnion'
       return:
         type:
           - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.port'
     name: port
@@ -215,12 +251,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The TCP port that the Spark server uses to listen for client connections.
     syntax:
       content: 'port: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.serverType'
     name: serverType
@@ -229,13 +266,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The type of Spark server. Possible values include: 'SharkServer',
+      'SharkServer2',
+
+      'SparkThriftServer'
     optional: true
     syntax:
       content: 'serverType?: SparkServerType'
       return:
         type:
           - '@azure/arm-datafactory.SparkServerType'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.thriftTransportProtocol'
     name: thriftTransportProtocol
@@ -244,13 +286,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The transport protocol to use in the Thrift layer. Possible values
+      include: 'Binary', 'SASL',
+
+      'HTTP '
     optional: true
     syntax:
       content: 'thriftTransportProtocol?: SparkThriftTransportProtocol'
       return:
         type:
           - '@azure/arm-datafactory.SparkThriftTransportProtocol'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.trustedCertPath'
     name: trustedCertPath
@@ -259,13 +306,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The full path of the .pem file containing trusted CA certificates for
+      verifying the server
+
+      when connecting over SSL. This property can only be set when using SSL on
+      self-hosted IR. The
+
+      default value is the cacerts.pem file installed with the IR.
     optional: true
     syntax:
       content: 'trustedCertPath?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.type'
     name: type
@@ -274,12 +329,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Spark"'
       return:
         type:
           - '"Spark"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.username'
     name: username
@@ -288,13 +344,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The user name that you use to access Spark Server.
     optional: true
     syntax:
       content: 'username?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SparkLinkedService.useSystemTrustStore'
     name: useSystemTrustStore
@@ -303,13 +360,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether to use a CA certificate from the system trust store or
+      from a specified PEM
+
+      file. The default value is false.
     optional: true
     syntax:
       content: 'useSystemTrustStore?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.SparkAuthenticationType'

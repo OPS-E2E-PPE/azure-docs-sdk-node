@@ -8,6 +8,7 @@ items:
       - '@azure/arm-compute.GalleryImage.disallowed'
       - '@azure/arm-compute.GalleryImage.endOfLifeDate'
       - '@azure/arm-compute.GalleryImage.eula'
+      - '@azure/arm-compute.GalleryImage.hyperVGeneration'
       - '@azure/arm-compute.GalleryImage.id'
       - '@azure/arm-compute.GalleryImage.identifier'
       - '@azure/arm-compute.GalleryImage.location'
@@ -46,6 +47,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.disallowed'
     name: disallowed
@@ -61,6 +63,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Disallowed'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.endOfLifeDate'
     name: endOfLifeDate
@@ -80,6 +83,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.eula'
     name: eula
@@ -95,6 +99,27 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImage.hyperVGeneration'
+    name: hyperVGeneration
+    fullName: hyperVGeneration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The hypervisor generation of the Virtual Machine. Applicable to OS disks
+      only. Possible values
+
+      include: 'V1', 'V2'
+    optional: true
+    syntax:
+      content: 'hyperVGeneration?: HyperVGeneration'
+      return:
+        type:
+          - '@azure/arm-compute.HyperVGeneration'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.id'
     name: id
@@ -114,6 +139,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.identifier'
     name: identifier
@@ -128,6 +154,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.GalleryImageIdentifier'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.location'
     name: location
@@ -142,6 +169,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.name'
     name: name
@@ -161,6 +189,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.osState'
     name: osState
@@ -170,15 +199,17 @@ items:
       - typeScript
     type: property
     summary: >-
-      The allowed values for OS State are 'Generalized'. Possible values
-      include: 'Generalized',
+      This property allows the user to specify whether the virtual machines
+      created under this image
 
-      'Specialized'
+      are 'Generalized' or 'Specialized'. Possible values include:
+      'Generalized', 'Specialized'
     syntax:
       content: 'osState: OperatingSystemStateTypes'
       return:
         type:
           - '@azure/arm-compute.OperatingSystemStateTypes'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.osType'
     name: osType
@@ -200,6 +231,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.OperatingSystemTypes'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.privacyStatementUri'
     name: privacyStatementUri
@@ -215,6 +247,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.provisioningState'
     name: provisioningState
@@ -236,10 +269,11 @@ items:
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: ProvisioningState1'
+      content: 'provisioningState?: ProvisioningState2'
       return:
         type:
-          - '@azure/arm-compute.ProvisioningState1'
+          - '@azure/arm-compute.ProvisioningState2'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.purchasePlan'
     name: purchasePlan
@@ -255,6 +289,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ImagePurchasePlan'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.recommended'
     name: recommended
@@ -270,6 +305,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.RecommendedMachineConfiguration'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.releaseNoteUri'
     name: releaseNoteUri
@@ -285,6 +321,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.tags'
     name: tags
@@ -300,6 +337,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImage.type'
     name: type
@@ -319,6 +357,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: '@azure/arm-compute.Resource'
@@ -333,6 +372,12 @@ references:
       - name: Disallowed
         fullName: Disallowed
         uid: '@azure/arm-compute.Disallowed'
+  - uid: '@azure/arm-compute.HyperVGeneration'
+    name: HyperVGeneration
+    spec.typeScript:
+      - name: HyperVGeneration
+        fullName: HyperVGeneration
+        uid: '@azure/arm-compute.HyperVGeneration'
   - uid: '@azure/arm-compute.GalleryImageIdentifier'
     name: GalleryImageIdentifier
     spec.typeScript:
@@ -351,12 +396,12 @@ references:
       - name: OperatingSystemTypes
         fullName: OperatingSystemTypes
         uid: '@azure/arm-compute.OperatingSystemTypes'
-  - uid: '@azure/arm-compute.ProvisioningState1'
-    name: ProvisioningState1
+  - uid: '@azure/arm-compute.ProvisioningState2'
+    name: ProvisioningState2
     spec.typeScript:
-      - name: ProvisioningState1
-        fullName: ProvisioningState1
-        uid: '@azure/arm-compute.ProvisioningState1'
+      - name: ProvisioningState2
+        fullName: ProvisioningState2
+        uid: '@azure/arm-compute.ProvisioningState2'
   - uid: '@azure/arm-compute.ImagePurchasePlan'
     name: ImagePurchasePlan
     spec.typeScript:

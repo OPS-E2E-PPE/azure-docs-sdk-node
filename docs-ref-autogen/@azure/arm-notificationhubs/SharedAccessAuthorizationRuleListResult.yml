@@ -18,9 +18,9 @@ items:
         @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.every
       - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.fill'
       - >-
-        @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.filter_1
-      - >-
         @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.filter
+      - >-
+        @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.filter_1
       - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.find'
       - >-
         @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.find_1
@@ -28,6 +28,8 @@ items:
         @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.findIndex
       - >-
         @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.forEach
+      - >-
+        @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.includes
       - >-
         @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.indexOf
       - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.join'
@@ -93,6 +95,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.concat'
     name: 'concat(ConcatArray<SharedAccessAuthorizationRuleResource>[])'
@@ -115,6 +118,7 @@ items:
       return:
         type:
           - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource[]'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.concat_1
@@ -135,6 +139,7 @@ items:
       return:
         type:
           - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource[]'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.copyWithin
@@ -179,6 +184,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.entries
@@ -194,11 +200,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.every'
     name: >-
       every((value: SharedAccessAuthorizationRuleResource, index: number, array:
-      SharedAccessAuthorizationRuleResource[]) => boolean, any)
+      SharedAccessAuthorizationRuleResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -208,13 +215,13 @@ items:
       content: >-
         function every(callbackfn: (value:
         SharedAccessAuthorizationRuleResource, index: number, array:
-        SharedAccessAuthorizationRuleResource[]) => boolean, thisArg?: any)
+        SharedAccessAuthorizationRuleResource[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SharedAccessAuthorizationRuleResource, index: number,
-              array: SharedAccessAuthorizationRuleResource[]) => boolean
+              array: SharedAccessAuthorizationRuleResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -230,6 +237,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.fill'
     name: >-
@@ -272,45 +280,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-notificationhubs'
-  - uid: >-
-      @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.filter_1
-    name: >-
-      filter((value: SharedAccessAuthorizationRuleResource, index: number,
-      array: SharedAccessAuthorizationRuleResource[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value:
-        SharedAccessAuthorizationRuleResource, index: number, array:
-        SharedAccessAuthorizationRuleResource[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: SharedAccessAuthorizationRuleResource, index: number,
-              array: SharedAccessAuthorizationRuleResource[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource[]'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.filter'
     name: >-
@@ -349,6 +319,47 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-notificationhubs'
+  - uid: >-
+      @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.filter_1
+    name: >-
+      filter((value: SharedAccessAuthorizationRuleResource, index: number,
+      array: SharedAccessAuthorizationRuleResource[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value:
+        SharedAccessAuthorizationRuleResource, index: number, array:
+        SharedAccessAuthorizationRuleResource[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: SharedAccessAuthorizationRuleResource, index: number,
+              array: SharedAccessAuthorizationRuleResource[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource[]'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.find'
     name: >-
@@ -395,31 +406,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.find_1'
     name: >-
       find((value: SharedAccessAuthorizationRuleResource, index: number, obj:
-      SharedAccessAuthorizationRuleResource[]) => boolean, any)
+      SharedAccessAuthorizationRuleResource[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SharedAccessAuthorizationRuleResource,
-        index: number, obj: SharedAccessAuthorizationRuleResource[]) => boolean,
+        index: number, obj: SharedAccessAuthorizationRuleResource[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SharedAccessAuthorizationRuleResource, index: number, obj:
-              SharedAccessAuthorizationRuleResource[]) => boolean
+              SharedAccessAuthorizationRuleResource[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -431,12 +439,13 @@ items:
           - >-
             @azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource |
             undefined
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.findIndex
     name: >-
       findIndex((value: SharedAccessAuthorizationRuleResource, index: number,
-      obj: SharedAccessAuthorizationRuleResource[]) => boolean, any)
+      obj: SharedAccessAuthorizationRuleResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -450,13 +459,13 @@ items:
       content: >-
         function findIndex(predicate: (value:
         SharedAccessAuthorizationRuleResource, index: number, obj:
-        SharedAccessAuthorizationRuleResource[]) => boolean, thisArg?: any)
+        SharedAccessAuthorizationRuleResource[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SharedAccessAuthorizationRuleResource, index: number, obj:
-              SharedAccessAuthorizationRuleResource[]) => boolean
+              SharedAccessAuthorizationRuleResource[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -478,6 +487,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.forEach
@@ -513,6 +523,37 @@ items:
           optional: true
     package: '@azure/arm-notificationhubs'
   - uid: >-
+      @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.includes
+    name: 'includes(SharedAccessAuthorizationRuleResource, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SharedAccessAuthorizationRuleResource,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-notificationhubs'
+  - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.indexOf
     name: 'indexOf(SharedAccessAuthorizationRuleResource, undefined | number)'
     children: []
@@ -539,6 +580,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.join'
     name: join(undefined | string)
@@ -563,6 +605,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.keys'
     name: keys()
@@ -577,6 +620,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.lastIndexOf
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.length'
     name: length
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.map'
     name: >-
@@ -658,6 +704,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.nextLink
@@ -674,6 +721,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.pop'
     name: pop()
@@ -690,6 +738,7 @@ items:
           - >-
             @azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource |
             undefined
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.push'
     name: 'push(SharedAccessAuthorizationRuleResource[])'
@@ -710,6 +759,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.reduce'
     name: >-
@@ -747,6 +797,7 @@ items:
       return:
         type:
           - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.reduce_1
@@ -760,10 +811,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -788,6 +836,7 @@ items:
       return:
         type:
           - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.reduce_2
@@ -829,6 +878,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.reduceRight
@@ -868,6 +918,7 @@ items:
       return:
         type:
           - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.reduceRight_1
@@ -881,11 +932,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -910,6 +957,7 @@ items:
       return:
         type:
           - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.reduceRight_2
@@ -952,6 +1000,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.reverse
@@ -967,6 +1016,7 @@ items:
       return:
         type:
           - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource[]'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.shift'
     name: shift()
@@ -983,6 +1033,7 @@ items:
           - >-
             @azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource |
             undefined
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -1008,11 +1059,12 @@ items:
       return:
         type:
           - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource[]'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.some'
     name: >-
       some((value: SharedAccessAuthorizationRuleResource, index: number, array:
-      SharedAccessAuthorizationRuleResource[]) => boolean, any)
+      SharedAccessAuthorizationRuleResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -1024,13 +1076,13 @@ items:
       content: >-
         function some(callbackfn: (value: SharedAccessAuthorizationRuleResource,
         index: number, array: SharedAccessAuthorizationRuleResource[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SharedAccessAuthorizationRuleResource, index: number,
-              array: SharedAccessAuthorizationRuleResource[]) => boolean
+              array: SharedAccessAuthorizationRuleResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -1046,6 +1098,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.sort'
     name: >-
@@ -1075,6 +1128,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.splice_1
@@ -1110,6 +1164,7 @@ items:
       return:
         type:
           - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource[]'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1138,6 +1193,7 @@ items:
       return:
         type:
           - '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource[]'
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.toLocaleString
@@ -1155,6 +1211,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.toString
@@ -1170,6 +1227,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.unshift
@@ -1191,6 +1249,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-notificationhubs'
   - uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult.values'
     name: values()
@@ -1206,6 +1265,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource>
+        description: ''
     package: '@azure/arm-notificationhubs'
 references:
   - uid: Array<@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource>

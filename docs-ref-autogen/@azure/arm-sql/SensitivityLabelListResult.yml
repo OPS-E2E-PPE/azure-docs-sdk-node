@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.SensitivityLabelListResult.entries'
       - '@azure/arm-sql.SensitivityLabelListResult.every'
       - '@azure/arm-sql.SensitivityLabelListResult.fill'
-      - '@azure/arm-sql.SensitivityLabelListResult.filter_1'
       - '@azure/arm-sql.SensitivityLabelListResult.filter'
+      - '@azure/arm-sql.SensitivityLabelListResult.filter_1'
       - '@azure/arm-sql.SensitivityLabelListResult.find'
       - '@azure/arm-sql.SensitivityLabelListResult.find_1'
       - '@azure/arm-sql.SensitivityLabelListResult.findIndex'
       - '@azure/arm-sql.SensitivityLabelListResult.forEach'
+      - '@azure/arm-sql.SensitivityLabelListResult.includes'
       - '@azure/arm-sql.SensitivityLabelListResult.indexOf'
       - '@azure/arm-sql.SensitivityLabelListResult.join'
       - '@azure/arm-sql.SensitivityLabelListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.concat'
     name: 'concat(ConcatArray<SensitivityLabel>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.every'
     name: >-
       every((value: SensitivityLabel, index: number, array: SensitivityLabel[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: SensitivityLabel, index: number,
-        array: SensitivityLabel[]) => boolean, thisArg?: any)
+        array: SensitivityLabel[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SensitivityLabel, index: number, array:
-              SensitivityLabel[]) => boolean
+              SensitivityLabel[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.fill'
     name: 'fill(SensitivityLabel, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.SensitivityLabelListResult.filter_1'
-    name: >-
-      filter((value: SensitivityLabel, index: number, array: SensitivityLabel[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: SensitivityLabel, index: number,
-        array: SensitivityLabel[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: SensitivityLabel, index: number, array:
-              SensitivityLabel[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.SensitivityLabel[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SensitivityLabelListResult.filter_1'
+    name: >-
+      filter((value: SensitivityLabel, index: number, array: SensitivityLabel[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: SensitivityLabel, index: number,
+        array: SensitivityLabel[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: SensitivityLabel, index: number, array:
+              SensitivityLabel[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.SensitivityLabel[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.find_1'
     name: >-
       find((value: SensitivityLabel, index: number, obj: SensitivityLabel[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SensitivityLabel, index: number, obj:
-        SensitivityLabel[]) => boolean, thisArg?: any)
+        SensitivityLabel[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SensitivityLabel, index: number, obj: SensitivityLabel[])
-              => boolean
+              => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.findIndex'
     name: >-
       findIndex((value: SensitivityLabel, index: number, obj:
-      SensitivityLabel[]) => boolean, any)
+      SensitivityLabel[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: SensitivityLabel, index: number,
-        obj: SensitivityLabel[]) => boolean, thisArg?: any)
+        obj: SensitivityLabel[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SensitivityLabel, index: number, obj: SensitivityLabel[])
-              => boolean
+              => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SensitivityLabelListResult.includes'
+    name: 'includes(SensitivityLabel, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SensitivityLabel, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.SensitivityLabel'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.indexOf'
     name: 'indexOf(SensitivityLabel, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.lastIndexOf'
     name: 'lastIndexOf(SensitivityLabel, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.push'
     name: 'push(SensitivityLabel[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.reduce'
     name: >-
@@ -689,6 +737,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.reduce_1'
     name: >-
@@ -699,10 +748,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: SensitivityLabel,
@@ -723,6 +769,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.reduce_2'
     name: >-
@@ -761,6 +808,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.reduceRight'
     name: >-
@@ -795,6 +843,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.reduceRight_1'
     name: >-
@@ -805,11 +854,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: SensitivityLabel,
@@ -830,6 +875,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.reduceRight_2'
     name: >-
@@ -869,6 +915,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.reverse'
     name: reverse()
@@ -883,6 +930,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.shift'
     name: shift()
@@ -897,6 +945,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -922,11 +971,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.some'
     name: >-
       some((value: SensitivityLabel, index: number, array: SensitivityLabel[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -937,13 +987,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: SensitivityLabel, index: number,
-        array: SensitivityLabel[]) => boolean, thisArg?: any)
+        array: SensitivityLabel[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SensitivityLabel, index: number, array:
-              SensitivityLabel[]) => boolean
+              SensitivityLabel[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -959,6 +1009,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.sort'
     name: 'sort(undefined | (a: SensitivityLabel, b: SensitivityLabel) => number)'
@@ -983,6 +1034,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.splice_1'
     name: 'splice(number, number, SensitivityLabel[])'
@@ -1016,6 +1068,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1044,6 +1097,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabel[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.toLocaleString'
     name: toLocaleString()
@@ -1060,6 +1114,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.toString'
     name: toString()
@@ -1074,6 +1129,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.unshift'
     name: 'unshift(SensitivityLabel[])'
@@ -1093,6 +1149,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SensitivityLabelListResult.values'
     name: values()
@@ -1107,6 +1164,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.SensitivityLabel>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.SensitivityLabel>

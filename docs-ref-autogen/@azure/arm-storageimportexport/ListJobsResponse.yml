@@ -11,12 +11,13 @@ items:
       - '@azure/arm-storageimportexport.ListJobsResponse.entries'
       - '@azure/arm-storageimportexport.ListJobsResponse.every'
       - '@azure/arm-storageimportexport.ListJobsResponse.fill'
-      - '@azure/arm-storageimportexport.ListJobsResponse.filter_1'
       - '@azure/arm-storageimportexport.ListJobsResponse.filter'
+      - '@azure/arm-storageimportexport.ListJobsResponse.filter_1'
       - '@azure/arm-storageimportexport.ListJobsResponse.find'
       - '@azure/arm-storageimportexport.ListJobsResponse.find_1'
       - '@azure/arm-storageimportexport.ListJobsResponse.findIndex'
       - '@azure/arm-storageimportexport.ListJobsResponse.forEach'
+      - '@azure/arm-storageimportexport.ListJobsResponse.includes'
       - '@azure/arm-storageimportexport.ListJobsResponse.indexOf'
       - '@azure/arm-storageimportexport.ListJobsResponse.join'
       - '@azure/arm-storageimportexport.ListJobsResponse.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.concat'
     name: 'concat(ConcatArray<JobResponse>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse[]'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse[]'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.every'
     name: >-
       every((value: JobResponse, index: number, array: JobResponse[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: JobResponse, index: number, array:
-        JobResponse[]) => boolean, thisArg?: any)
+        JobResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: JobResponse, index: number, array: JobResponse[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.fill'
     name: 'fill(JobResponse, undefined | number, undefined | number)'
@@ -233,41 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-storageimportexport'
-  - uid: '@azure/arm-storageimportexport.ListJobsResponse.filter_1'
-    name: >-
-      filter((value: JobResponse, index: number, array: JobResponse[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: JobResponse, index: number, array:
-        JobResponse[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: JobResponse, index: number, array: JobResponse[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-storageimportexport.JobResponse[]'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.filter'
     name: >-
@@ -305,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.ListJobsResponse.filter_1'
+    name: >-
+      filter((value: JobResponse, index: number, array: JobResponse[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: JobResponse, index: number, array:
+        JobResponse[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: JobResponse, index: number, array: JobResponse[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-storageimportexport.JobResponse[]'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.find'
     name: >-
@@ -350,28 +362,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.find_1'
     name: >-
-      find((value: JobResponse, index: number, obj: JobResponse[]) => boolean,
+      find((value: JobResponse, index: number, obj: JobResponse[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: JobResponse, index: number, obj:
-        JobResponse[]) => boolean, thisArg?: any)
+        JobResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: JobResponse, index: number, obj: JobResponse[]) => boolean'
+            - '(value: JobResponse, index: number, obj: JobResponse[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -381,11 +390,12 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse | undefined'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.findIndex'
     name: >-
       findIndex((value: JobResponse, index: number, obj: JobResponse[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -398,11 +408,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: JobResponse, index: number, obj:
-        JobResponse[]) => boolean, thisArg?: any)
+        JobResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: JobResponse, index: number, obj: JobResponse[]) => boolean'
+            - '(value: JobResponse, index: number, obj: JobResponse[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -424,6 +434,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.forEach'
     name: >-
@@ -454,6 +465,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.ListJobsResponse.includes'
+    name: 'includes(JobResponse, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: JobResponse, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-storageimportexport.JobResponse'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.indexOf'
     name: 'indexOf(JobResponse, undefined | number)'
     children: []
@@ -480,6 +521,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.join'
     name: join(undefined | string)
@@ -504,6 +546,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.keys'
     name: keys()
@@ -518,6 +561,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.lastIndexOf'
     name: 'lastIndexOf(JobResponse, undefined | number)'
@@ -545,6 +589,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.length'
     name: length
@@ -561,6 +606,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.map'
     name: 'map((value: JobResponse, index: number, array: JobResponse[]) => U, any)'
@@ -593,6 +639,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.nextLink'
     name: nextLink
@@ -608,6 +655,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.pop'
     name: pop()
@@ -622,6 +670,7 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse | undefined'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.push'
     name: 'push(JobResponse[])'
@@ -641,6 +690,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.reduce'
     name: >-
@@ -671,6 +721,7 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.reduce_1'
     name: >-
@@ -680,10 +731,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: JobResponse, currentValue:
@@ -703,6 +751,7 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.reduce_2'
     name: >-
@@ -741,6 +790,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.reduceRight'
     name: >-
@@ -773,6 +823,7 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.reduceRight_1'
     name: >-
@@ -782,11 +833,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: JobResponse,
@@ -806,6 +853,7 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.reduceRight_2'
     name: >-
@@ -845,6 +893,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.reverse'
     name: reverse()
@@ -859,6 +908,7 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse[]'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.shift'
     name: shift()
@@ -873,6 +923,7 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse | undefined'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -898,10 +949,11 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse[]'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.some'
     name: >-
-      some((value: JobResponse, index: number, array: JobResponse[]) => boolean,
+      some((value: JobResponse, index: number, array: JobResponse[]) => unknown,
       any)
     children: []
     type: method
@@ -913,13 +965,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: JobResponse, index: number, array:
-        JobResponse[]) => boolean, thisArg?: any)
+        JobResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: JobResponse, index: number, array: JobResponse[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -935,6 +987,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.sort'
     name: 'sort(undefined | (a: JobResponse, b: JobResponse) => number)'
@@ -959,6 +1012,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.splice_1'
     name: 'splice(number, number, JobResponse[])'
@@ -992,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse[]'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.splice'
     name: 'splice(number, undefined | number)'
@@ -1020,6 +1075,7 @@ items:
       return:
         type:
           - '@azure/arm-storageimportexport.JobResponse[]'
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.toLocaleString'
     name: toLocaleString()
@@ -1036,6 +1092,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.toString'
     name: toString()
@@ -1050,6 +1107,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.unshift'
     name: 'unshift(JobResponse[])'
@@ -1069,6 +1127,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storageimportexport'
   - uid: '@azure/arm-storageimportexport.ListJobsResponse.values'
     name: values()
@@ -1083,6 +1142,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-storageimportexport.JobResponse>
+        description: ''
     package: '@azure/arm-storageimportexport'
 references:
   - uid: Array<@azure/arm-storageimportexport.JobResponse>

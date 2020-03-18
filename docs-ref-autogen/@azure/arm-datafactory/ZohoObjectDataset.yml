@@ -9,13 +9,14 @@ items:
       - '@azure/arm-datafactory.ZohoObjectDataset.folder'
       - '@azure/arm-datafactory.ZohoObjectDataset.linkedServiceName'
       - '@azure/arm-datafactory.ZohoObjectDataset.parameters'
+      - '@azure/arm-datafactory.ZohoObjectDataset.schema'
       - '@azure/arm-datafactory.ZohoObjectDataset.structure'
       - '@azure/arm-datafactory.ZohoObjectDataset.tableName'
       - '@azure/arm-datafactory.ZohoObjectDataset.type'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Zoho server dataset.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ZohoObjectDataset.annotations'
     name: annotations
@@ -24,13 +25,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the Dataset.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ZohoObjectDataset.description'
     name: description
@@ -39,13 +41,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Dataset description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ZohoObjectDataset.folder'
     name: folder
@@ -54,13 +57,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The folder that this Dataset is in. If not specified, Dataset will appear
+      at the root level.
     optional: true
     syntax:
       content: 'folder?: DatasetFolder'
       return:
         type:
           - '@azure/arm-datafactory.DatasetFolder'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ZohoObjectDataset.linkedServiceName'
     name: linkedServiceName
@@ -69,12 +75,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     syntax:
       content: 'linkedServiceName: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ZohoObjectDataset.parameters'
     name: parameters
@@ -83,7 +90,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for dataset.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -92,6 +99,27 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.ZohoObjectDataset.schema'
+    name: schema
+    fullName: schema
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Columns that define the physical type schema of the dataset. Type: array
+      (or Expression with
+
+      resultType array), itemType: DatasetSchemaDataElement.
+    optional: true
+    syntax:
+      content: 'schema?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ZohoObjectDataset.structure'
     name: structure
@@ -100,13 +128,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Columns that define the structure of the dataset. Type: array (or
+      Expression with resultType
+
+      array), itemType: DatasetDataElement.
     optional: true
     syntax:
       content: 'structure?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ZohoObjectDataset.tableName'
     name: tableName
@@ -115,13 +148,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'The table name. Type: string (or Expression with resultType string).'
     optional: true
     syntax:
       content: 'tableName?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ZohoObjectDataset.type'
     name: type
@@ -130,12 +164,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "ZohoObject"'
       return:
         type:
           - '"ZohoObject"'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.DatasetFolder'

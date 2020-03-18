@@ -10,12 +10,13 @@ items:
       - '@azure/arm-datafactory.SapEccResourceDataset.linkedServiceName'
       - '@azure/arm-datafactory.SapEccResourceDataset.parameters'
       - '@azure/arm-datafactory.SapEccResourceDataset.path'
+      - '@azure/arm-datafactory.SapEccResourceDataset.schema'
       - '@azure/arm-datafactory.SapEccResourceDataset.structure'
       - '@azure/arm-datafactory.SapEccResourceDataset.type'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: The path of the SAP ECC OData entity.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SapEccResourceDataset.annotations'
     name: annotations
@@ -24,13 +25,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the Dataset.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SapEccResourceDataset.description'
     name: description
@@ -39,13 +41,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Dataset description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SapEccResourceDataset.folder'
     name: folder
@@ -54,13 +57,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The folder that this Dataset is in. If not specified, Dataset will appear
+      at the root level.
     optional: true
     syntax:
       content: 'folder?: DatasetFolder'
       return:
         type:
           - '@azure/arm-datafactory.DatasetFolder'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SapEccResourceDataset.linkedServiceName'
     name: linkedServiceName
@@ -69,12 +75,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     syntax:
       content: 'linkedServiceName: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SapEccResourceDataset.parameters'
     name: parameters
@@ -83,7 +90,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for dataset.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -92,6 +99,7 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SapEccResourceDataset.path'
     name: path
@@ -100,12 +108,35 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The path of the SAP ECC OData entity. Type: string (or Expression with
+      resultType string).
     syntax:
-      content: 'path: string'
+      content: 'path: any'
       return:
         type:
-          - string
+          - any
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.SapEccResourceDataset.schema'
+    name: schema
+    fullName: schema
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Columns that define the physical type schema of the dataset. Type: array
+      (or Expression with
+
+      resultType array), itemType: DatasetSchemaDataElement.
+    optional: true
+    syntax:
+      content: 'schema?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SapEccResourceDataset.structure'
     name: structure
@@ -114,13 +145,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Columns that define the structure of the dataset. Type: array (or
+      Expression with resultType
+
+      array), itemType: DatasetDataElement.
     optional: true
     syntax:
       content: 'structure?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.SapEccResourceDataset.type'
     name: type
@@ -129,12 +165,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "SapEccResource"'
       return:
         type:
           - '"SapEccResource"'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.DatasetFolder'

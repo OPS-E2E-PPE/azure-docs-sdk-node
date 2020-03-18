@@ -9,6 +9,8 @@ items:
       - '@azure/arm-containerservice.ManagedClusters.beginResetAADProfile'
       - >-
         @azure/arm-containerservice.ManagedClusters.beginResetServicePrincipalProfile
+      - >-
+        @azure/arm-containerservice.ManagedClusters.beginRotateClusterCertificates
       - '@azure/arm-containerservice.ManagedClusters.beginUpdateTags'
       - '@azure/arm-containerservice.ManagedClusters.createOrUpdate'
       - '@azure/arm-containerservice.ManagedClusters.deleteMethod'
@@ -35,6 +37,12 @@ items:
         @azure/arm-containerservice.ManagedClusters.listClusterAdminCredentials_2
       - >-
         @azure/arm-containerservice.ManagedClusters.listClusterAdminCredentials_1
+      - >-
+        @azure/arm-containerservice.ManagedClusters.listClusterMonitoringUserCredentials
+      - >-
+        @azure/arm-containerservice.ManagedClusters.listClusterMonitoringUserCredentials_2
+      - >-
+        @azure/arm-containerservice.ManagedClusters.listClusterMonitoringUserCredentials_1
       - '@azure/arm-containerservice.ManagedClusters.listClusterUserCredentials'
       - '@azure/arm-containerservice.ManagedClusters.listClusterUserCredentials_2'
       - '@azure/arm-containerservice.ManagedClusters.listClusterUserCredentials_1'
@@ -44,6 +52,7 @@ items:
       - '@azure/arm-containerservice.ManagedClusters.constructor'
       - '@azure/arm-containerservice.ManagedClusters.resetAADProfile'
       - '@azure/arm-containerservice.ManagedClusters.resetServicePrincipalProfile'
+      - '@azure/arm-containerservice.ManagedClusters.rotateClusterCertificates'
       - '@azure/arm-containerservice.ManagedClusters.updateTags'
     langs:
       - typeScript
@@ -90,6 +99,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -119,6 +129,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.beginResetAADProfile'
     name: >-
@@ -157,6 +168,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-containerservice'
   - uid: >-
       @azure/arm-containerservice.ManagedClusters.beginResetServicePrincipalProfile
@@ -198,6 +210,37 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ManagedClusters.beginRotateClusterCertificates'
+    name: 'beginRotateClusterCertificates(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Rotate certificates of a managed cluster.
+    syntax:
+      content: >-
+        function beginRotateClusterCertificates(resourceGroupName: string,
+        resourceName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: resourceName
+          type:
+            - string
+          description: The name of the managed cluster resource.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.beginUpdateTags'
     name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
@@ -231,6 +274,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.createOrUpdate'
     name: 'createOrUpdate(string, string, ManagedCluster, msRest.RequestOptionsBase)'
@@ -270,6 +314,7 @@ items:
       return:
         type:
           - Promise<Models.ManagedClustersCreateOrUpdateResponse>
+        description: Promise<Models.ManagedClustersCreateOrUpdateResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -299,6 +344,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.get'
     name: 'get(string, string, msRest.RequestOptionsBase)'
@@ -330,6 +376,7 @@ items:
       return:
         type:
           - Promise<Models.ManagedClustersGetResponse>
+        description: Promise<Models.ManagedClustersGetResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.get_2'
     name: 'get(string, string, RequestOptionsBase, ServiceCallback<ManagedCluster>)'
@@ -360,9 +407,6 @@ items:
             - ServiceCallback<@azure/arm-containerservice.ManagedCluster>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersGetResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.get_1'
     name: 'get(string, string, ServiceCallback<ManagedCluster>)'
@@ -389,9 +433,6 @@ items:
             - ServiceCallback<@azure/arm-containerservice.ManagedCluster>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersGetResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.getAccessProfile'
     name: 'getAccessProfile(string, string, string, msRest.RequestOptionsBase)'
@@ -429,6 +470,7 @@ items:
       return:
         type:
           - Promise<Models.ManagedClustersGetAccessProfileResponse>
+        description: Promise<Models.ManagedClustersGetAccessProfileResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.getAccessProfile_2'
     name: >-
@@ -467,9 +509,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterAccessProfile>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersGetAccessProfileResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.getAccessProfile_1'
     name: >-
@@ -504,9 +543,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterAccessProfile>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersGetAccessProfileResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.getUpgradeProfile'
     name: 'getUpgradeProfile(string, string, msRest.RequestOptionsBase)'
@@ -540,6 +576,7 @@ items:
       return:
         type:
           - Promise<Models.ManagedClustersGetUpgradeProfileResponse>
+        description: Promise<Models.ManagedClustersGetUpgradeProfileResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.getUpgradeProfile_2'
     name: >-
@@ -574,9 +611,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterUpgradeProfile>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersGetUpgradeProfileResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.getUpgradeProfile_1'
     name: >-
@@ -606,9 +640,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterUpgradeProfile>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersGetUpgradeProfileResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.list'
     name: list(msRest.RequestOptionsBase)
@@ -632,6 +663,7 @@ items:
       return:
         type:
           - Promise<Models.ManagedClustersListResponse>
+        description: Promise<Models.ManagedClustersListResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.list_2'
     name: 'list(RequestOptionsBase, ServiceCallback<ManagedClusterListResult>)'
@@ -655,9 +687,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersListResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.list_1'
     name: list(ServiceCallback<ManagedClusterListResult>)
@@ -675,9 +704,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersListResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listByResourceGroup'
     name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
@@ -707,6 +733,7 @@ items:
       return:
         type:
           - Promise<Models.ManagedClustersListByResourceGroupResponse>
+        description: Promise<Models.ManagedClustersListByResourceGroupResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listByResourceGroup_2'
     name: >-
@@ -736,9 +763,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersListByResourceGroupResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listByResourceGroup_1'
     name: 'listByResourceGroup(string, ServiceCallback<ManagedClusterListResult>)'
@@ -762,9 +786,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersListByResourceGroupResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listByResourceGroupNext'
     name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
@@ -794,6 +815,7 @@ items:
       return:
         type:
           - Promise<Models.ManagedClustersListByResourceGroupNextResponse>
+        description: Promise<Models.ManagedClustersListByResourceGroupNextResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listByResourceGroupNext_2'
     name: >-
@@ -823,9 +845,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersListByResourceGroupNextResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listByResourceGroupNext_1'
     name: 'listByResourceGroupNext(string, ServiceCallback<ManagedClusterListResult>)'
@@ -849,9 +868,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersListByResourceGroupNextResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listClusterAdminCredentials'
     name: 'listClusterAdminCredentials(string, string, msRest.RequestOptionsBase)'
@@ -883,6 +899,7 @@ items:
       return:
         type:
           - Promise<Models.ManagedClustersListClusterAdminCredentialsResponse>
+        description: Promise<Models.ManagedClustersListClusterAdminCredentialsResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listClusterAdminCredentials_2'
     name: >-
@@ -916,9 +933,6 @@ items:
             - ServiceCallback<@azure/arm-containerservice.CredentialResults>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersListClusterAdminCredentialsResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listClusterAdminCredentials_1'
     name: >-
@@ -947,9 +961,108 @@ items:
             - ServiceCallback<@azure/arm-containerservice.CredentialResults>
           description: |
             The callback
+    package: '@azure/arm-containerservice'
+  - uid: >-
+      @azure/arm-containerservice.ManagedClusters.listClusterMonitoringUserCredentials
+    name: >-
+      listClusterMonitoringUserCredentials(string, string,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets cluster monitoring user credential of the managed cluster with a
+      specified resource group
+
+      and name.
+    syntax:
+      content: >-
+        function listClusterMonitoringUserCredentials(resourceGroupName: string,
+        resourceName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: resourceName
+          type:
+            - string
+          description: The name of the managed cluster resource.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.ManagedClustersListClusterAdminCredentialsResponse>
+          - >-
+            Promise<Models.ManagedClustersListClusterMonitoringUserCredentialsResponse>
+        description: >-
+          Promise<Models.ManagedClustersListClusterMonitoringUserCredentialsResponse>
+    package: '@azure/arm-containerservice'
+  - uid: >-
+      @azure/arm-containerservice.ManagedClusters.listClusterMonitoringUserCredentials_2
+    name: >-
+      listClusterMonitoringUserCredentials(string, string, RequestOptionsBase,
+      ServiceCallback<CredentialResults>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listClusterMonitoringUserCredentials(resourceGroupName: string,
+        resourceName: string, options: RequestOptionsBase, callback:
+        ServiceCallback<CredentialResults>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: resourceName
+          type:
+            - string
+          description: The name of the managed cluster resource.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-containerservice.CredentialResults>
+          description: |
+            The callback
+    package: '@azure/arm-containerservice'
+  - uid: >-
+      @azure/arm-containerservice.ManagedClusters.listClusterMonitoringUserCredentials_1
+    name: >-
+      listClusterMonitoringUserCredentials(string, string,
+      ServiceCallback<CredentialResults>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listClusterMonitoringUserCredentials(resourceGroupName: string,
+        resourceName: string, callback: ServiceCallback<CredentialResults>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: resourceName
+          type:
+            - string
+          description: The name of the managed cluster resource.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-containerservice.CredentialResults>
+          description: |
+            The callback
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listClusterUserCredentials'
     name: 'listClusterUserCredentials(string, string, msRest.RequestOptionsBase)'
@@ -981,6 +1094,7 @@ items:
       return:
         type:
           - Promise<Models.ManagedClustersListClusterUserCredentialsResponse>
+        description: Promise<Models.ManagedClustersListClusterUserCredentialsResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listClusterUserCredentials_2'
     name: >-
@@ -1014,9 +1128,6 @@ items:
             - ServiceCallback<@azure/arm-containerservice.CredentialResults>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersListClusterUserCredentialsResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listClusterUserCredentials_1'
     name: >-
@@ -1045,9 +1156,6 @@ items:
             - ServiceCallback<@azure/arm-containerservice.CredentialResults>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersListClusterUserCredentialsResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -1077,6 +1185,7 @@ items:
       return:
         type:
           - Promise<Models.ManagedClustersListNextResponse>
+        description: Promise<Models.ManagedClustersListNextResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listNext_2'
     name: >-
@@ -1106,9 +1215,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersListNextResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.listNext_1'
     name: 'listNext(string, ServiceCallback<ManagedClusterListResult>)'
@@ -1132,9 +1238,6 @@ items:
               ServiceCallback<@azure/arm-containerservice.ManagedClusterListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ManagedClustersListNextResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.constructor'
     name: ManagedClusters(ContainerServiceClientContext)
@@ -1189,6 +1292,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.resetServicePrincipalProfile'
     name: >-
@@ -1229,6 +1333,37 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ManagedClusters.rotateClusterCertificates'
+    name: 'rotateClusterCertificates(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Rotate certificates of a managed cluster.
+    syntax:
+      content: >-
+        function rotateClusterCertificates(resourceGroupName: string,
+        resourceName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: resourceName
+          type:
+            - string
+          description: The name of the managed cluster resource.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.ManagedClusters.updateTags'
     name: 'updateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
@@ -1262,6 +1397,7 @@ items:
       return:
         type:
           - Promise<Models.ManagedClustersUpdateTagsResponse>
+        description: Promise<Models.ManagedClustersUpdateTagsResponse>
     package: '@azure/arm-containerservice'
 references:
   - uid: '@azure/arm-containerservice.ContainerServiceClientContext'

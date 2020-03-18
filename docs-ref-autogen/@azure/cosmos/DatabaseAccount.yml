@@ -4,12 +4,17 @@ items:
     name: DatabaseAccount
     fullName: DatabaseAccount
     children:
+      - '@azure/cosmos.DatabaseAccount.consistencyPolicy'
       - '@azure/cosmos.DatabaseAccount.ConsistencyPolicy'
+      - '@azure/cosmos.DatabaseAccount.currentMediaStorageUsageInMB'
       - '@azure/cosmos.DatabaseAccount.CurrentMediaStorageUsageInMB'
       - '@azure/cosmos.DatabaseAccount.constructor'
+      - '@azure/cosmos.DatabaseAccount.databasesLink'
       - '@azure/cosmos.DatabaseAccount.DatabasesLink'
       - '@azure/cosmos.DatabaseAccount.enableMultipleWritableLocations'
+      - '@azure/cosmos.DatabaseAccount.maxMediaStorageUsageInMB'
       - '@azure/cosmos.DatabaseAccount.MaxMediaStorageUsageInMB'
+      - '@azure/cosmos.DatabaseAccount.mediaLink'
       - '@azure/cosmos.DatabaseAccount.MediaLink'
       - '@azure/cosmos.DatabaseAccount.readableLocations'
       - '@azure/cosmos.DatabaseAccount.writableLocations'
@@ -17,6 +22,21 @@ items:
       - typeScript
     type: class
     summary: Represents a DatabaseAccount in the Azure Cosmos DB database service.
+    package: '@azure/cosmos'
+  - uid: '@azure/cosmos.DatabaseAccount.consistencyPolicy'
+    name: consistencyPolicy
+    fullName: consistencyPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the UserConsistencyPolicy settings.
+    syntax:
+      content: 'public consistencyPolicy: ConsistencyLevel'
+      return:
+        type:
+          - '@azure/cosmos.ConsistencyLevel'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.DatabaseAccount.ConsistencyPolicy'
     name: ConsistencyPolicy
@@ -27,10 +47,34 @@ items:
     type: property
     summary: Gets the UserConsistencyPolicy settings.
     syntax:
-      content: 'ConsistencyPolicy: ConsistencyLevel'
+      content: ConsistencyLevel ConsistencyPolicy
       return:
         type:
           - '@azure/cosmos.ConsistencyLevel'
+        description: ''
+    package: '@azure/cosmos'
+    deprecated:
+      content: use `consistencyPolicy`
+  - uid: '@azure/cosmos.DatabaseAccount.currentMediaStorageUsageInMB'
+    name: currentMediaStorageUsageInMB
+    fullName: currentMediaStorageUsageInMB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >
+      Current attachment content (media) usage in MBs (Retrieved from gateway )
+
+      Value is returned from cached information updated periodically and is not
+      guaranteed
+
+      to be real time.
+    syntax:
+      content: 'public currentMediaStorageUsageInMB: number'
+      return:
+        type:
+          - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.DatabaseAccount.CurrentMediaStorageUsageInMB'
     name: CurrentMediaStorageUsageInMB
@@ -47,11 +91,14 @@ items:
 
       to be real time.
     syntax:
-      content: 'CurrentMediaStorageUsageInMB: number'
+      content: number CurrentMediaStorageUsageInMB
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
+    deprecated:
+      content: use `currentMediaStorageUsageInMB`
   - uid: '@azure/cosmos.DatabaseAccount.constructor'
     name: 'DatabaseAccount([key: string]: any, CosmosHeaders)'
     children: []
@@ -71,6 +118,21 @@ items:
             - '@azure/cosmos.CosmosHeaders'
           description: ''
     package: '@azure/cosmos'
+  - uid: '@azure/cosmos.DatabaseAccount.databasesLink'
+    name: databasesLink
+    fullName: databasesLink
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The self-link for Databases in the databaseAccount.
+    syntax:
+      content: 'public databasesLink: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: '@azure/cosmos'
   - uid: '@azure/cosmos.DatabaseAccount.DatabasesLink'
     name: DatabasesLink
     fullName: DatabasesLink
@@ -80,11 +142,14 @@ items:
     type: property
     summary: The self-link for Databases in the databaseAccount.
     syntax:
-      content: 'DatabasesLink: string'
+      content: string DatabasesLink
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
+    deprecated:
+      content: Use `databasesLink`
   - uid: '@azure/cosmos.DatabaseAccount.enableMultipleWritableLocations'
     name: enableMultipleWritableLocations
     fullName: enableMultipleWritableLocations
@@ -94,10 +159,28 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'enableMultipleWritableLocations: boolean'
+      content: 'public enableMultipleWritableLocations: boolean'
       return:
         type:
           - boolean
+        description: ''
+    package: '@azure/cosmos'
+  - uid: '@azure/cosmos.DatabaseAccount.maxMediaStorageUsageInMB'
+    name: maxMediaStorageUsageInMB
+    fullName: maxMediaStorageUsageInMB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Attachment content (media) storage quota in MBs ( Retrieved from gateway
+      ).
+    syntax:
+      content: 'public maxMediaStorageUsageInMB: number'
+      return:
+        type:
+          - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.DatabaseAccount.MaxMediaStorageUsageInMB'
     name: MaxMediaStorageUsageInMB
@@ -110,10 +193,28 @@ items:
       Attachment content (media) storage quota in MBs ( Retrieved from gateway
       ).
     syntax:
-      content: 'MaxMediaStorageUsageInMB: number'
+      content: number MaxMediaStorageUsageInMB
       return:
         type:
           - number
+        description: ''
+    package: '@azure/cosmos'
+    deprecated:
+      content: use `maxMediaStorageUsageInMB
+  - uid: '@azure/cosmos.DatabaseAccount.mediaLink'
+    name: mediaLink
+    fullName: mediaLink
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The self-link for Media in the databaseAccount.
+    syntax:
+      content: 'public mediaLink: string'
+      return:
+        type:
+          - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.DatabaseAccount.MediaLink'
     name: MediaLink
@@ -124,11 +225,14 @@ items:
     type: property
     summary: The self-link for Media in the databaseAccount.
     syntax:
-      content: 'MediaLink: string'
+      content: string MediaLink
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
+    deprecated:
+      content: Use `mediaLink`
   - uid: '@azure/cosmos.DatabaseAccount.readableLocations'
     name: readableLocations
     fullName: readableLocations
@@ -138,10 +242,11 @@ items:
     type: property
     summary: The list of readable locations for a geo-replicated database account.
     syntax:
-      content: 'readableLocations: Location[]'
+      content: 'public readableLocations: Location[] = []'
       return:
         type:
           - '@azure/cosmos.Location[]'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.DatabaseAccount.writableLocations'
     name: writableLocations
@@ -152,10 +257,11 @@ items:
     type: property
     summary: The list of writable locations for a geo-replicated database account.
     syntax:
-      content: 'writableLocations: Location[]'
+      content: 'public writableLocations: Location[] = []'
       return:
         type:
           - '@azure/cosmos.Location[]'
+        description: ''
     package: '@azure/cosmos'
 references:
   - uid: '@azure/cosmos.CosmosHeaders'

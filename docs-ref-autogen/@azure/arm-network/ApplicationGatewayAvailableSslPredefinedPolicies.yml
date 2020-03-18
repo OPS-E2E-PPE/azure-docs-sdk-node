@@ -18,9 +18,9 @@ items:
         @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.every
       - '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.fill'
       - >-
-        @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.filter_1
-      - >-
         @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.filter
+      - >-
+        @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.filter_1
       - '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.find'
       - >-
         @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.find_1
@@ -28,6 +28,8 @@ items:
         @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.findIndex
       - >-
         @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.forEach
+      - >-
+        @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.includes
       - >-
         @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.indexOf
       - '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.join'
@@ -93,6 +95,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.concat'
     name: 'concat(ConcatArray<ApplicationGatewaySslPredefinedPolicy>[])'
@@ -115,6 +118,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.concat_1
@@ -135,6 +139,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.copyWithin
@@ -179,6 +184,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.entries
@@ -194,11 +200,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.every'
     name: >-
       every((value: ApplicationGatewaySslPredefinedPolicy, index: number, array:
-      ApplicationGatewaySslPredefinedPolicy[]) => boolean, any)
+      ApplicationGatewaySslPredefinedPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -208,13 +215,13 @@ items:
       content: >-
         function every(callbackfn: (value:
         ApplicationGatewaySslPredefinedPolicy, index: number, array:
-        ApplicationGatewaySslPredefinedPolicy[]) => boolean, thisArg?: any)
+        ApplicationGatewaySslPredefinedPolicy[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ApplicationGatewaySslPredefinedPolicy, index: number,
-              array: ApplicationGatewaySslPredefinedPolicy[]) => boolean
+              array: ApplicationGatewaySslPredefinedPolicy[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -230,6 +237,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.fill'
     name: >-
@@ -272,45 +280,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: >-
-      @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.filter_1
-    name: >-
-      filter((value: ApplicationGatewaySslPredefinedPolicy, index: number,
-      array: ApplicationGatewaySslPredefinedPolicy[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value:
-        ApplicationGatewaySslPredefinedPolicy, index: number, array:
-        ApplicationGatewaySslPredefinedPolicy[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ApplicationGatewaySslPredefinedPolicy, index: number,
-              array: ApplicationGatewaySslPredefinedPolicy[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.filter'
     name: >-
@@ -349,6 +319,47 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.filter_1
+    name: >-
+      filter((value: ApplicationGatewaySslPredefinedPolicy, index: number,
+      array: ApplicationGatewaySslPredefinedPolicy[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value:
+        ApplicationGatewaySslPredefinedPolicy, index: number, array:
+        ApplicationGatewaySslPredefinedPolicy[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ApplicationGatewaySslPredefinedPolicy, index: number,
+              array: ApplicationGatewaySslPredefinedPolicy[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.find'
     name: >-
@@ -395,31 +406,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.find_1'
     name: >-
       find((value: ApplicationGatewaySslPredefinedPolicy, index: number, obj:
-      ApplicationGatewaySslPredefinedPolicy[]) => boolean, any)
+      ApplicationGatewaySslPredefinedPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ApplicationGatewaySslPredefinedPolicy,
-        index: number, obj: ApplicationGatewaySslPredefinedPolicy[]) => boolean,
+        index: number, obj: ApplicationGatewaySslPredefinedPolicy[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ApplicationGatewaySslPredefinedPolicy, index: number, obj:
-              ApplicationGatewaySslPredefinedPolicy[]) => boolean
+              ApplicationGatewaySslPredefinedPolicy[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -429,12 +437,13 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.findIndex
     name: >-
       findIndex((value: ApplicationGatewaySslPredefinedPolicy, index: number,
-      obj: ApplicationGatewaySslPredefinedPolicy[]) => boolean, any)
+      obj: ApplicationGatewaySslPredefinedPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -448,13 +457,13 @@ items:
       content: >-
         function findIndex(predicate: (value:
         ApplicationGatewaySslPredefinedPolicy, index: number, obj:
-        ApplicationGatewaySslPredefinedPolicy[]) => boolean, thisArg?: any)
+        ApplicationGatewaySslPredefinedPolicy[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ApplicationGatewaySslPredefinedPolicy, index: number, obj:
-              ApplicationGatewaySslPredefinedPolicy[]) => boolean
+              ApplicationGatewaySslPredefinedPolicy[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -476,6 +485,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.forEach
@@ -511,6 +521,37 @@ items:
           optional: true
     package: '@azure/arm-network'
   - uid: >-
+      @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.includes
+    name: 'includes(ApplicationGatewaySslPredefinedPolicy, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ApplicationGatewaySslPredefinedPolicy,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
+  - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.indexOf
     name: 'indexOf(ApplicationGatewaySslPredefinedPolicy, undefined | number)'
     children: []
@@ -537,6 +578,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.join'
     name: join(undefined | string)
@@ -561,6 +603,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.keys'
     name: keys()
@@ -575,6 +618,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.lastIndexOf
@@ -603,6 +647,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.length'
     name: length
@@ -619,6 +664,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.map'
     name: >-
@@ -656,6 +702,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.nextLink
@@ -672,6 +719,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.pop'
     name: pop()
@@ -686,6 +734,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.push'
     name: 'push(ApplicationGatewaySslPredefinedPolicy[])'
@@ -705,6 +754,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.reduce'
     name: >-
@@ -742,6 +792,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.reduce_1
@@ -755,10 +806,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -783,6 +831,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.reduce_2
@@ -824,6 +873,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.reduceRight
@@ -863,6 +913,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.reduceRight_1
@@ -876,11 +927,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -905,6 +952,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.reduceRight_2
@@ -947,6 +995,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.reverse
@@ -962,6 +1011,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.shift'
     name: shift()
@@ -976,6 +1026,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -1001,11 +1052,12 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.some'
     name: >-
       some((value: ApplicationGatewaySslPredefinedPolicy, index: number, array:
-      ApplicationGatewaySslPredefinedPolicy[]) => boolean, any)
+      ApplicationGatewaySslPredefinedPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -1017,13 +1069,13 @@ items:
       content: >-
         function some(callbackfn: (value: ApplicationGatewaySslPredefinedPolicy,
         index: number, array: ApplicationGatewaySslPredefinedPolicy[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ApplicationGatewaySslPredefinedPolicy, index: number,
-              array: ApplicationGatewaySslPredefinedPolicy[]) => boolean
+              array: ApplicationGatewaySslPredefinedPolicy[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -1039,6 +1091,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.sort'
     name: >-
@@ -1068,6 +1121,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.splice_1
@@ -1102,6 +1156,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.splice'
     name: 'splice(number, undefined | number)'
@@ -1130,6 +1185,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewaySslPredefinedPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.toLocaleString
@@ -1147,6 +1203,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.toString
@@ -1162,6 +1219,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.unshift
@@ -1182,6 +1240,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayAvailableSslPredefinedPolicies.values'
     name: values()
@@ -1197,6 +1256,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-network.ApplicationGatewaySslPredefinedPolicy>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.ApplicationGatewaySslPredefinedPolicy>

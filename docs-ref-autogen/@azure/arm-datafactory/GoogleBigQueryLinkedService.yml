@@ -25,7 +25,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Google BigQuery service linked service.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.additionalProjects'
     name: additionalProjects
@@ -34,13 +34,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A comma-separated list of public BigQuery projects to access.
     optional: true
     syntax:
       content: 'additionalProjects?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.annotations'
     name: annotations
@@ -49,13 +50,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the linked service.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.authenticationType'
     name: authenticationType
@@ -64,12 +66,20 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The OAuth 2.0 authentication mechanism used for authentication.
+      ServiceAuthentication can only
+
+      be used on self-hosted IR. Possible values include:
+      'ServiceAuthentication',
+
+      'UserAuthentication'
     syntax:
       content: 'authenticationType: GoogleBigQueryAuthenticationType'
       return:
         type:
           - '@azure/arm-datafactory.GoogleBigQueryAuthenticationType'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.clientId'
     name: clientId
@@ -78,13 +88,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The client id of the google application used to acquire the refresh token.
+      Type: string (or
+
+      Expression with resultType string).
     optional: true
     syntax:
-      content: 'clientId?: SecretBaseUnion'
+      content: 'clientId?: any'
       return:
         type:
-          - '@azure/arm-datafactory.SecretBaseUnion'
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.clientSecret'
     name: clientSecret
@@ -93,13 +108,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The client secret of the google application used to acquire the refresh
+      token.
     optional: true
     syntax:
       content: 'clientSecret?: SecretBaseUnion'
       return:
         type:
           - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.connectVia'
     name: connectVia
@@ -108,13 +126,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The integration runtime reference.
     optional: true
     syntax:
       content: 'connectVia?: IntegrationRuntimeReference'
       return:
         type:
           - '@azure/arm-datafactory.IntegrationRuntimeReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.description'
     name: description
@@ -123,13 +142,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.email'
     name: email
@@ -138,13 +158,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The service account email ID that is used for ServiceAuthentication and
+      can only be used on
+
+      self-hosted IR.
     optional: true
     syntax:
       content: 'email?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.encryptedCredential'
     name: encryptedCredential
@@ -153,13 +178,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The encrypted credential used for authentication. Credentials are
+      encrypted using the
+
+      integration runtime credential manager. Type: string (or Expression with
+      resultType string).
     optional: true
     syntax:
       content: 'encryptedCredential?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.keyFilePath'
     name: keyFilePath
@@ -168,13 +199,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The full path to the .p12 key file that is used to authenticate the
+      service account email
+
+      address and can only be used on self-hosted IR.
     optional: true
     syntax:
       content: 'keyFilePath?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.parameters'
     name: parameters
@@ -183,7 +219,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for linked service.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -192,6 +228,7 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.project'
     name: project
@@ -200,12 +237,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The default BigQuery project to query against.
     syntax:
       content: 'project: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.refreshToken'
     name: refreshToken
@@ -214,13 +252,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The refresh token obtained from Google for authorizing access to BigQuery
+      for
+
+      UserAuthentication.
     optional: true
     syntax:
       content: 'refreshToken?: SecretBaseUnion'
       return:
         type:
           - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.requestGoogleDriveScope'
     name: requestGoogleDriveScope
@@ -229,13 +272,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Whether to request access to Google Drive. Allowing Google Drive access
+      enables support for
+
+      federated tables that combine BigQuery data with data from Google Drive.
+      The default value is
+
+      false.
     optional: true
     syntax:
       content: 'requestGoogleDriveScope?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.trustedCertPath'
     name: trustedCertPath
@@ -244,13 +295,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The full path of the .pem file containing trusted CA certificates for
+      verifying the server
+
+      when connecting over SSL. This property can only be set when using SSL on
+      self-hosted IR. The
+
+      default value is the cacerts.pem file installed with the IR.
     optional: true
     syntax:
       content: 'trustedCertPath?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.type'
     name: type
@@ -259,12 +318,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "GoogleBigQuery"'
       return:
         type:
           - '"GoogleBigQuery"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.GoogleBigQueryLinkedService.useSystemTrustStore'
     name: useSystemTrustStore
@@ -273,13 +333,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether to use a CA certificate from the system trust store or
+      from a specified PEM
+
+      file. The default value is false.
     optional: true
     syntax:
       content: 'useSystemTrustStore?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.GoogleBigQueryAuthenticationType'

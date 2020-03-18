@@ -11,12 +11,13 @@ items:
       - '@azure/arm-logic.AssemblyCollection.entries'
       - '@azure/arm-logic.AssemblyCollection.every'
       - '@azure/arm-logic.AssemblyCollection.fill'
-      - '@azure/arm-logic.AssemblyCollection.filter_1'
       - '@azure/arm-logic.AssemblyCollection.filter'
+      - '@azure/arm-logic.AssemblyCollection.filter_1'
       - '@azure/arm-logic.AssemblyCollection.find'
       - '@azure/arm-logic.AssemblyCollection.find_1'
       - '@azure/arm-logic.AssemblyCollection.findIndex'
       - '@azure/arm-logic.AssemblyCollection.forEach'
+      - '@azure/arm-logic.AssemblyCollection.includes'
       - '@azure/arm-logic.AssemblyCollection.indexOf'
       - '@azure/arm-logic.AssemblyCollection.join'
       - '@azure/arm-logic.AssemblyCollection.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.concat'
     name: 'concat(ConcatArray<AssemblyDefinition>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.every'
     name: >-
       every((value: AssemblyDefinition, index: number, array:
-      AssemblyDefinition[]) => boolean, any)
+      AssemblyDefinition[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -170,13 +176,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: AssemblyDefinition, index: number,
-        array: AssemblyDefinition[]) => boolean, thisArg?: any)
+        array: AssemblyDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: AssemblyDefinition, index: number, array:
-              AssemblyDefinition[]) => boolean
+              AssemblyDefinition[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.fill'
     name: 'fill(AssemblyDefinition, undefined | number, undefined | number)'
@@ -232,43 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-logic'
-  - uid: '@azure/arm-logic.AssemblyCollection.filter_1'
-    name: >-
-      filter((value: AssemblyDefinition, index: number, array:
-      AssemblyDefinition[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: AssemblyDefinition, index: number,
-        array: AssemblyDefinition[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: AssemblyDefinition, index: number, array:
-              AssemblyDefinition[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-logic.AssemblyDefinition[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.filter'
     name: >-
@@ -306,6 +277,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-logic'
+  - uid: '@azure/arm-logic.AssemblyCollection.filter_1'
+    name: >-
+      filter((value: AssemblyDefinition, index: number, array:
+      AssemblyDefinition[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: AssemblyDefinition, index: number,
+        array: AssemblyDefinition[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: AssemblyDefinition, index: number, array:
+              AssemblyDefinition[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-logic.AssemblyDefinition[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.find'
     name: >-
@@ -351,30 +361,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.find_1'
     name: >-
       find((value: AssemblyDefinition, index: number, obj: AssemblyDefinition[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: AssemblyDefinition, index: number, obj:
-        AssemblyDefinition[]) => boolean, thisArg?: any)
+        AssemblyDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: AssemblyDefinition, index: number, obj:
-              AssemblyDefinition[]) => boolean
+              AssemblyDefinition[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -384,11 +391,12 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.findIndex'
     name: >-
       findIndex((value: AssemblyDefinition, index: number, obj:
-      AssemblyDefinition[]) => boolean, any)
+      AssemblyDefinition[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -401,13 +409,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: AssemblyDefinition, index: number,
-        obj: AssemblyDefinition[]) => boolean, thisArg?: any)
+        obj: AssemblyDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: AssemblyDefinition, index: number, obj:
-              AssemblyDefinition[]) => boolean
+              AssemblyDefinition[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -429,6 +437,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.forEach'
     name: >-
@@ -461,6 +470,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-logic'
+  - uid: '@azure/arm-logic.AssemblyCollection.includes'
+    name: 'includes(AssemblyDefinition, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: AssemblyDefinition, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-logic.AssemblyDefinition'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.indexOf'
     name: 'indexOf(AssemblyDefinition, undefined | number)'
     children: []
@@ -487,6 +526,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.join'
     name: join(undefined | string)
@@ -511,6 +551,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.keys'
     name: keys()
@@ -525,6 +566,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.lastIndexOf'
     name: 'lastIndexOf(AssemblyDefinition, undefined | number)'
@@ -552,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.length'
     name: length
@@ -568,6 +611,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.map'
     name: >-
@@ -604,6 +648,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.pop'
     name: pop()
@@ -618,6 +663,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.push'
     name: 'push(AssemblyDefinition[])'
@@ -637,6 +683,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.reduce'
     name: >-
@@ -670,6 +717,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.reduce_1'
     name: >-
@@ -680,10 +728,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: AssemblyDefinition,
@@ -705,6 +750,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.reduce_2'
     name: >-
@@ -743,6 +789,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.reduceRight'
     name: >-
@@ -777,6 +824,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.reduceRight_1'
     name: >-
@@ -787,11 +835,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: AssemblyDefinition,
@@ -813,6 +857,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.reduceRight_2'
     name: >-
@@ -852,6 +897,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.reverse'
     name: reverse()
@@ -866,6 +912,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.shift'
     name: shift()
@@ -880,6 +927,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -905,11 +953,12 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.some'
     name: >-
       some((value: AssemblyDefinition, index: number, array:
-      AssemblyDefinition[]) => boolean, any)
+      AssemblyDefinition[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -920,13 +969,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: AssemblyDefinition, index: number,
-        array: AssemblyDefinition[]) => boolean, thisArg?: any)
+        array: AssemblyDefinition[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: AssemblyDefinition, index: number, array:
-              AssemblyDefinition[]) => boolean
+              AssemblyDefinition[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -942,6 +991,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.sort'
     name: 'sort(undefined | (a: AssemblyDefinition, b: AssemblyDefinition) => number)'
@@ -968,6 +1018,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.splice_1'
     name: 'splice(number, number, AssemblyDefinition[])'
@@ -1001,6 +1052,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1029,6 +1081,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.AssemblyDefinition[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.toLocaleString'
     name: toLocaleString()
@@ -1045,6 +1098,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.toString'
     name: toString()
@@ -1059,6 +1113,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.unshift'
     name: 'unshift(AssemblyDefinition[])'
@@ -1078,6 +1133,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.AssemblyCollection.values'
     name: values()
@@ -1092,6 +1148,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-logic.AssemblyDefinition>
+        description: ''
     package: '@azure/arm-logic'
 references:
   - uid: Array<@azure/arm-logic.AssemblyDefinition>

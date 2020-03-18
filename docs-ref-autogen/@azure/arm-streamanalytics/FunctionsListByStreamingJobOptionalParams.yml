@@ -19,7 +19,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: '@azure/arm-streamanalytics'
@@ -38,6 +38,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams.customHeaders
@@ -56,6 +57,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams.onDownloadProgress
@@ -74,6 +76,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams.onUploadProgress
@@ -90,6 +93,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams.select
@@ -99,13 +103,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The $select OData query parameter. This is a comma-separated list of
+      structural properties to
+
+      include in the response, or "*" to include all properties. By default, all
+      properties are
+
+      returned except diagnostics. Currently only accepts '*' as a valid value.
     optional: true
     syntax:
       content: 'select?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: >-
       @azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams.timeout
@@ -124,4 +136,5 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-streamanalytics'

@@ -20,6 +20,10 @@ items:
       - >-
         @azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkSkuAvailability
       - >-
+        @azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkSkuAvailability_2
+      - >-
+        @azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkSkuAvailability_1
+      - >-
         @azure/arm-cognitiveservices.CognitiveServicesManagementClient.constructor
       - >-
         @azure/arm-cognitiveservices.CognitiveServicesManagementClient.credentials
@@ -62,6 +66,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cognitiveservices'
   - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.accounts'
     name: accounts
@@ -76,6 +81,7 @@ items:
       return:
         type:
           - '@azure/arm-cognitiveservices.Accounts'
+        description: ''
     package: '@azure/arm-cognitiveservices'
   - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.apiVersion'
     name: apiVersion
@@ -91,6 +97,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.beginLongRunningRequest
@@ -125,6 +132,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: |-
+          The HttpLongRunningOperationResponse
+          that provides methods for interacting with the LRO.
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability
@@ -155,6 +165,7 @@ items:
       return:
         type:
           - Promise<Models.CheckDomainAvailabilityResponse>
+        description: Promise<Models.CheckDomainAvailabilityResponse>
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability_2
@@ -190,9 +201,6 @@ items:
               ServiceCallback<@azure/arm-cognitiveservices.CheckDomainAvailabilityResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.CheckDomainAvailabilityResponse>
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability_1
@@ -223,24 +231,129 @@ items:
               ServiceCallback<@azure/arm-cognitiveservices.CheckDomainAvailabilityResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.CheckDomainAvailabilityResponse>
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkSkuAvailability
-    name: checkSkuAvailability
-    fullName: checkSkuAvailability
+    name: >-
+      checkSkuAvailability(string, string[], string, string,
+      msRest.RequestOptionsBase)
     children: []
+    type: method
     langs:
       - typeScript
-    type: property
-    summary: ''
+    summary: Check available SKUs.
     syntax:
-      content: 'checkSkuAvailability: CheckSkuAvailability'
+      content: >-
+        function checkSkuAvailability(location: string, skus: string[], kind:
+        string, type: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Resource location.
+        - id: skus
+          type:
+            - 'string[]'
+          description: The SKU of the resource.
+        - id: kind
+          type:
+            - string
+          description: The Kind of the resource.
+        - id: type
+          type:
+            - string
+          description: The Type of the resource.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - '@azure/arm-cognitiveservices.CheckSkuAvailability'
+          - Promise<Models.CheckSkuAvailabilityResponse>
+        description: Promise<Models.CheckSkuAvailabilityResponse>
+    package: '@azure/arm-cognitiveservices'
+  - uid: >-
+      @azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkSkuAvailability_2
+    name: >-
+      checkSkuAvailability(string, string[], string, string, RequestOptionsBase,
+      ServiceCallback<CheckSkuAvailabilityResultList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function checkSkuAvailability(location: string, skus: string[], kind:
+        string, type: string, options: RequestOptionsBase, callback:
+        ServiceCallback<CheckSkuAvailabilityResultList>)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Resource location.
+        - id: skus
+          type:
+            - 'string[]'
+          description: The SKU of the resource.
+        - id: kind
+          type:
+            - string
+          description: The Kind of the resource.
+        - id: type
+          type:
+            - string
+          description: The Type of the resource.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-cognitiveservices.CheckSkuAvailabilityResultList>
+          description: |
+            The callback
+    package: '@azure/arm-cognitiveservices'
+  - uid: >-
+      @azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkSkuAvailability_1
+    name: >-
+      checkSkuAvailability(string, string[], string, string,
+      ServiceCallback<CheckSkuAvailabilityResultList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function checkSkuAvailability(location: string, skus: string[], kind:
+        string, type: string, callback:
+        ServiceCallback<CheckSkuAvailabilityResultList>)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: Resource location.
+        - id: skus
+          type:
+            - 'string[]'
+          description: The SKU of the resource.
+        - id: kind
+          type:
+            - string
+          description: The Kind of the resource.
+        - id: type
+          type:
+            - string
+          description: The Type of the resource.
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-cognitiveservices.CheckSkuAvailabilityResultList>
+          description: |
+            The callback
     package: '@azure/arm-cognitiveservices'
   - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.constructor'
     name: >-
@@ -284,6 +397,7 @@ items:
       return:
         type:
           - ServiceClientCredentials
+        description: ''
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.longRunningOperationRetryTimeout
@@ -302,6 +416,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-cognitiveservices'
   - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.operations'
     name: operations
@@ -316,6 +431,7 @@ items:
       return:
         type:
           - '@azure/arm-cognitiveservices.Operations'
+        description: ''
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.resourceSkus
@@ -331,6 +447,7 @@ items:
       return:
         type:
           - '@azure/arm-cognitiveservices.ResourceSkus'
+        description: ''
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.restoreLROPoller
@@ -354,6 +471,7 @@ items:
       return:
         type:
           - LROPoller
+        description: ''
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.sendLongRunningRequest
@@ -384,6 +502,9 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: >-
+          The HttpOperationResponse containing the final polling request,
+          response and the responseBody.
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.sendLRORequest
@@ -418,6 +539,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: >-
+          The LROPoller object that provides methods for interacting with the
+          LRO.
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.sendOperationRequest
@@ -453,6 +577,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: ''
     package: '@azure/arm-cognitiveservices'
   - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.sendRequest'
     name: sendRequest(RequestPrepareOptions | WebResource)
@@ -471,6 +596,7 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: ''
     package: '@azure/arm-cognitiveservices'
   - uid: >-
       @azure/arm-cognitiveservices.CognitiveServicesManagementClient.subscriptionId
@@ -486,6 +612,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cognitiveservices'
 references:
   - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClientContext'
@@ -500,12 +627,6 @@ references:
       - name: Accounts
         fullName: Accounts
         uid: '@azure/arm-cognitiveservices.Accounts'
-  - uid: '@azure/arm-cognitiveservices.CheckSkuAvailability'
-    name: CheckSkuAvailability
-    spec.typeScript:
-      - name: CheckSkuAvailability
-        fullName: CheckSkuAvailability
-        uid: '@azure/arm-cognitiveservices.CheckSkuAvailability'
   - uid: '@azure/arm-cognitiveservices.Operations'
     name: Operations
     spec.typeScript:
@@ -527,5 +648,16 @@ references:
       - name: CheckDomainAvailabilityResult
         fullName: CheckDomainAvailabilityResult
         uid: '@azure/arm-cognitiveservices.CheckDomainAvailabilityResult'
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      ServiceCallback<@azure/arm-cognitiveservices.CheckSkuAvailabilityResultList>
+    name: CheckSkuAvailabilityResultList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CheckSkuAvailabilityResultList
+        fullName: CheckSkuAvailabilityResultList
+        uid: '@azure/arm-cognitiveservices.CheckSkuAvailabilityResultList'
       - name: '>'
         fullName: '>'

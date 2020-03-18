@@ -13,12 +13,13 @@ items:
       - '@azure/arm-datafactory.AzureDataLakeStoreDataset.format'
       - '@azure/arm-datafactory.AzureDataLakeStoreDataset.linkedServiceName'
       - '@azure/arm-datafactory.AzureDataLakeStoreDataset.parameters'
+      - '@azure/arm-datafactory.AzureDataLakeStoreDataset.schema'
       - '@azure/arm-datafactory.AzureDataLakeStoreDataset.structure'
       - '@azure/arm-datafactory.AzureDataLakeStoreDataset.type'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Azure Data Lake Store dataset.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.annotations'
     name: annotations
@@ -27,13 +28,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the Dataset.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.compression'
     name: compression
@@ -42,13 +44,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The data compression method used for the item(s) in the Azure Data Lake
+      Store.
     optional: true
     syntax:
       content: 'compression?: DatasetCompressionUnion'
       return:
         type:
           - '@azure/arm-datafactory.DatasetCompressionUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.description'
     name: description
@@ -57,13 +62,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Dataset description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.fileName'
     name: fileName
@@ -72,13 +78,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the file in the Azure Data Lake Store. Type: string (or
+      Expression with resultType
+
+      string).
     optional: true
     syntax:
       content: 'fileName?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.folder'
     name: folder
@@ -87,13 +98,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The folder that this Dataset is in. If not specified, Dataset will appear
+      at the root level.
     optional: true
     syntax:
       content: 'folder?: DatasetFolder'
       return:
         type:
           - '@azure/arm-datafactory.DatasetFolder'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.folderPath'
     name: folderPath
@@ -102,12 +116,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Path to the folder in the Azure Data Lake Store. Type: string (or
+      Expression with resultType
+
+      string).
+    optional: true
     syntax:
-      content: 'folderPath: any'
+      content: 'folderPath?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.format'
     name: format
@@ -116,13 +136,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The format of the Data Lake Store.
     optional: true
     syntax:
       content: 'format?: DatasetStorageFormatUnion'
       return:
         type:
           - '@azure/arm-datafactory.DatasetStorageFormatUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.linkedServiceName'
     name: linkedServiceName
@@ -131,12 +152,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     syntax:
       content: 'linkedServiceName: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.parameters'
     name: parameters
@@ -145,7 +167,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for dataset.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -154,6 +176,27 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.schema'
+    name: schema
+    fullName: schema
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Columns that define the physical type schema of the dataset. Type: array
+      (or Expression with
+
+      resultType array), itemType: DatasetSchemaDataElement.
+    optional: true
+    syntax:
+      content: 'schema?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.structure'
     name: structure
@@ -162,13 +205,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Columns that define the structure of the dataset. Type: array (or
+      Expression with resultType
+
+      array), itemType: DatasetDataElement.
     optional: true
     syntax:
       content: 'structure?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureDataLakeStoreDataset.type'
     name: type
@@ -177,12 +225,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "AzureDataLakeStoreFile"'
       return:
         type:
           - '"AzureDataLakeStoreFile"'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.DatasetCompressionUnion'

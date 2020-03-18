@@ -29,13 +29,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceEndpointPolicy.id'
     name: id
@@ -51,6 +56,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceEndpointPolicy.location'
     name: location
@@ -66,6 +72,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceEndpointPolicy.name'
     name: name
@@ -85,6 +92,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceEndpointPolicy.provisioningState'
     name: provisioningState
@@ -94,19 +102,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the service endpoint policy. Possible values
-      are: 'Updating',
+      The provisioning state of the service endpoint policy resource. Possible
+      values include:
 
-      'Deleting', and 'Failed'.
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceEndpointPolicy.resourceGuid'
     name: resourceGuid
@@ -126,6 +135,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceEndpointPolicy.serviceEndpointPolicyDefinitions'
     name: serviceEndpointPolicyDefinitions
@@ -143,6 +153,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ServiceEndpointPolicyDefinition[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceEndpointPolicy.subnets'
     name: subnets
@@ -162,6 +173,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Subnet[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceEndpointPolicy.tags'
     name: tags
@@ -177,6 +189,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceEndpointPolicy.type'
     name: type
@@ -196,6 +209,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -204,6 +218,12 @@ references:
       - name: Resource
         fullName: Resource
         uid: '@azure/arm-network.Resource'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.ServiceEndpointPolicyDefinition[]'
     name: 'ServiceEndpointPolicyDefinition[]'
     spec.typeScript:

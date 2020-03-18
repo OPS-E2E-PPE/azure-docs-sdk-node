@@ -9,7 +9,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: An object to provide order by options for listing runs.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RunQueryOrderBy.order'
     name: order
@@ -18,12 +18,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Sorting order of the parameter. Possible values include: ''ASC'', ''DESC'''
     syntax:
       content: 'order: RunQueryOrder'
       return:
         type:
           - '@azure/arm-datafactory.RunQueryOrder'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RunQueryOrderBy.orderBy'
     name: orderBy
@@ -32,12 +33,29 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Parameter name to be used for order by. The allowed parameters to order by
+      for pipeline runs
+
+      are PipelineName, RunStart, RunEnd and Status; for activity runs are
+      ActivityName,
+
+      ActivityRunStart, ActivityRunEnd and Status; for trigger runs are
+      TriggerName,
+
+      TriggerRunTimestamp and Status. Possible values include: 'RunStart',
+      'RunEnd', 'PipelineName',
+
+      'Status', 'ActivityName', 'ActivityRunStart', 'ActivityRunEnd',
+      'TriggerName',
+
+      'TriggerRunTimestamp'
     syntax:
       content: 'orderBy: RunQueryOrderByField'
       return:
         type:
           - '@azure/arm-datafactory.RunQueryOrderByField'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.RunQueryOrder'

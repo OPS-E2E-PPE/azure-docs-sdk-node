@@ -27,6 +27,8 @@ items:
       - >-
         @azure/servicefabric.StatefulServiceDescription.servicePackageActivationMode
       - '@azure/servicefabric.StatefulServiceDescription.servicePlacementPolicies'
+      - >-
+        @azure/servicefabric.StatefulServiceDescription.servicePlacementTimeLimitSeconds
       - '@azure/servicefabric.StatefulServiceDescription.serviceTypeName'
       - >-
         @azure/servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds
@@ -50,6 +52,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.correlationScheme'
     name: correlationScheme
@@ -65,6 +68,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.ServiceCorrelationDescription[]'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.defaultMoveCost'
     name: defaultMoveCost
@@ -75,13 +79,16 @@ items:
     type: property
     summary: >-
       The move cost for the service. Possible values include: 'Zero', 'Low',
-      'Medium', 'High'
+      'Medium', 'High',
+
+      'VeryHigh'
     optional: true
     syntax:
       content: 'defaultMoveCost?: MoveCost'
       return:
         type:
           - '@azure/servicefabric.MoveCost'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.flags'
     name: flags
@@ -124,12 +131,18 @@ items:
       property is set. The
 
       value is 4.
+
+      - ServicePlacementTimeLimit - Indicates the ServicePlacementTimeLimit
+      property is set. The
+
+      value is 8.
     optional: true
     syntax:
       content: 'flags?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.hasPersistedState'
     name: hasPersistedState
@@ -148,6 +161,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.initializationData'
     name: initializationData
@@ -167,6 +181,7 @@ items:
       return:
         type:
           - 'number[]'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.isDefaultMoveCostSpecified'
     name: isDefaultMoveCostSpecified
@@ -182,6 +197,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.minReplicaSetSize'
     name: minReplicaSetSize
@@ -196,6 +212,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.partitionDescription'
     name: partitionDescription
@@ -210,6 +227,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.PartitionSchemeDescriptionUnion'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.placementConstraints'
     name: placementConstraints
@@ -235,6 +253,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds
@@ -255,6 +274,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds
@@ -273,6 +293,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.scalingPolicies'
     name: scalingPolicies
@@ -288,6 +309,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.ScalingPolicyDescription[]'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.serviceDnsName'
     name: serviceDnsName
@@ -307,6 +329,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.serviceKind'
     name: serviceKind
@@ -321,6 +344,7 @@ items:
       return:
         type:
           - '"Stateful"'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.serviceLoadMetrics'
     name: serviceLoadMetrics
@@ -336,6 +360,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.ServiceLoadMetricDescription[]'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.serviceName'
     name: serviceName
@@ -350,6 +375,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.StatefulServiceDescription.servicePackageActivationMode
@@ -370,6 +396,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.ServicePackageActivationMode'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.servicePlacementPolicies'
     name: servicePlacementPolicies
@@ -385,6 +412,26 @@ items:
       return:
         type:
           - '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+        description: ''
+    package: '@azure/servicefabric'
+  - uid: >-
+      @azure/servicefabric.StatefulServiceDescription.servicePlacementTimeLimitSeconds
+    name: servicePlacementTimeLimitSeconds
+    fullName: servicePlacementTimeLimitSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The duration for which replicas can stay InBuild before reporting that
+      build is stuck.
+    optional: true
+    syntax:
+      content: 'servicePlacementTimeLimitSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.serviceTypeName'
     name: serviceTypeName
@@ -399,6 +446,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/servicefabric'
   - uid: >-
       @azure/servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds
@@ -417,6 +465,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.StatefulServiceDescription.targetReplicaSetSize'
     name: targetReplicaSetSize
@@ -431,6 +480,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/servicefabric'
 references:
   - uid: '@azure/servicefabric.ServiceCorrelationDescription[]'

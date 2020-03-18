@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-storage.StorageAccounts.beginCreate'
       - '@azure/arm-storage.StorageAccounts.beginFailover'
+      - '@azure/arm-storage.StorageAccounts.beginRestoreBlobRanges'
       - '@azure/arm-storage.StorageAccounts.checkNameAvailability'
       - '@azure/arm-storage.StorageAccounts.checkNameAvailability_2'
       - '@azure/arm-storage.StorageAccounts.checkNameAvailability_1'
@@ -27,14 +28,18 @@ items:
       - '@azure/arm-storage.StorageAccounts.listByResourceGroup_2'
       - '@azure/arm-storage.StorageAccounts.listByResourceGroup_1'
       - '@azure/arm-storage.StorageAccounts.listKeys'
-      - '@azure/arm-storage.StorageAccounts.listKeys_2'
       - '@azure/arm-storage.StorageAccounts.listKeys_1'
+      - '@azure/arm-storage.StorageAccounts.listKeys_2'
+      - '@azure/arm-storage.StorageAccounts.listNext'
+      - '@azure/arm-storage.StorageAccounts.listNext_2'
+      - '@azure/arm-storage.StorageAccounts.listNext_1'
       - '@azure/arm-storage.StorageAccounts.listServiceSAS'
       - '@azure/arm-storage.StorageAccounts.listServiceSAS_2'
       - '@azure/arm-storage.StorageAccounts.listServiceSAS_1'
       - '@azure/arm-storage.StorageAccounts.regenerateKey'
       - '@azure/arm-storage.StorageAccounts.regenerateKey_2'
       - '@azure/arm-storage.StorageAccounts.regenerateKey_1'
+      - '@azure/arm-storage.StorageAccounts.restoreBlobRanges'
       - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys'
       - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_2'
       - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_1'
@@ -104,6 +109,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.beginFailover'
     name: 'beginFailover(string, string, msRest.RequestOptionsBase)'
@@ -151,6 +157,59 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.beginRestoreBlobRanges'
+    name: >-
+      beginRestoreBlobRanges(string, string, Date | string, BlobRestoreRange[],
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Restore blobs in the specified blob ranges
+    syntax:
+      content: >-
+        function beginRestoreBlobRanges(resourceGroupName: string, accountName:
+        string, timeToRestore: Date | string, blobRanges: BlobRestoreRange[],
+        options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: >-
+            The name of the resource group within the user's subscription. The
+            name
+
+            is case insensitive.
+        - id: accountName
+          type:
+            - string
+          description: >-
+            The name of the storage account within the specified resource group.
+            Storage
+
+            account names must be between 3 and 24 characters in length and use
+            numbers and lower-case
+
+            letters only.
+        - id: timeToRestore
+          type:
+            - Date | string
+          description: Restore blob to the specified time.
+        - id: blobRanges
+          type:
+            - '@azure/arm-storage.BlobRestoreRange[]'
+          description: Blob ranges to restore.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability'
     name: 'checkNameAvailability(string, msRest.RequestOptionsBase)'
@@ -176,6 +235,7 @@ items:
       return:
         type:
           - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+        description: Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability_2'
     name: >-
@@ -205,9 +265,6 @@ items:
             - ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability_1'
     name: >-
@@ -232,9 +289,6 @@ items:
             - ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.create'
     name: >-
@@ -293,6 +347,7 @@ items:
       return:
         type:
           - Promise<Models.StorageAccountsCreateResponse>
+        description: Promise<Models.StorageAccountsCreateResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -333,6 +388,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.deleteMethod_2'
     name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<void>)'
@@ -374,9 +430,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.deleteMethod_1'
     name: 'deleteMethod(string, string, ServiceCallback<void>)'
@@ -414,9 +467,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.failover'
     name: 'failover(string, string, msRest.RequestOptionsBase)'
@@ -464,6 +514,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.getProperties'
     name: >-
@@ -513,6 +564,7 @@ items:
       return:
         type:
           - Promise<Models.StorageAccountsGetPropertiesResponse>
+        description: Promise<Models.StorageAccountsGetPropertiesResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.getProperties_1'
     name: 'getProperties(string, string, ServiceCallback<StorageAccount>)'
@@ -550,9 +602,6 @@ items:
             - ServiceCallback<@azure/arm-storage.StorageAccount>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsGetPropertiesResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.getProperties_2'
     name: >-
@@ -597,9 +646,6 @@ items:
             - ServiceCallback<@azure/arm-storage.StorageAccount>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsGetPropertiesResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.list'
     name: list(msRest.RequestOptionsBase)
@@ -623,6 +669,7 @@ items:
       return:
         type:
           - Promise<Models.StorageAccountsListResponse>
+        description: Promise<Models.StorageAccountsListResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.list_2'
     name: 'list(RequestOptionsBase, ServiceCallback<StorageAccountListResult>)'
@@ -645,9 +692,6 @@ items:
             - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsListResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.list_1'
     name: list(ServiceCallback<StorageAccountListResult>)
@@ -664,9 +708,6 @@ items:
             - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsListResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS'
     name: >-
@@ -715,6 +756,7 @@ items:
       return:
         type:
           - Promise<Models.StorageAccountsListAccountSASResponse>
+        description: Promise<Models.StorageAccountsListAccountSASResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS_2'
     name: >-
@@ -765,9 +807,6 @@ items:
             - ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsListAccountSASResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS_1'
     name: >-
@@ -814,9 +853,6 @@ items:
             - ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsListAccountSASResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup'
     name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
@@ -850,6 +886,7 @@ items:
       return:
         type:
           - Promise<Models.StorageAccountsListByResourceGroupResponse>
+        description: Promise<Models.StorageAccountsListByResourceGroupResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup_2'
     name: >-
@@ -882,9 +919,6 @@ items:
             - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsListByResourceGroupResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup_1'
     name: 'listByResourceGroup(string, ServiceCallback<StorageAccountListResult>)'
@@ -911,21 +945,22 @@ items:
             - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsListByResourceGroupResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.listKeys'
-    name: 'listKeys(string, string, msRest.RequestOptionsBase)'
+    name: 'listKeys(string, string, Models.StorageAccountsListKeysOptionalParams)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: Lists the access keys for the specified storage account.
+    summary: >-
+      Lists the access keys or Kerberos keys (if active directory enabled) for
+      the specified storage
+
+      account.
     syntax:
       content: >-
         function listKeys(resourceGroupName: string, accountName: string,
-        options?: msRest.RequestOptionsBase)
+        options?: Models.StorageAccountsListKeysOptionalParams)
       parameters:
         - id: resourceGroupName
           type:
@@ -948,59 +983,13 @@ items:
             letters only.
         - id: options
           type:
-            - msRest.RequestOptionsBase
+            - Models.StorageAccountsListKeysOptionalParams
           description: ''
           optional: true
       return:
         type:
           - Promise<Models.StorageAccountsListKeysResponse>
-    package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.StorageAccounts.listKeys_2'
-    name: >-
-      listKeys(string, string, RequestOptionsBase,
-      ServiceCallback<StorageAccountListKeysResult>)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function listKeys(resourceGroupName: string, accountName: string,
-        options: RequestOptionsBase, callback:
-        ServiceCallback<StorageAccountListKeysResult>)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: >-
-            The name of the resource group within the user's subscription. The
-            name
-
-            is case insensitive.
-        - id: accountName
-          type:
-            - string
-          description: >-
-            The name of the storage account within the specified resource group.
-            Storage
-
-            account names must be between 3 and 24 characters in length and use
-            numbers and lower-case
-
-            letters only.
-        - id: options
-          type:
-            - RequestOptionsBase
-          description: The optional parameters
-        - id: callback
-          type:
-            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
-          description: |
-            The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsListKeysResponse>
+        description: Promise<Models.StorageAccountsListKeysResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.listKeys_1'
     name: 'listKeys(string, string, ServiceCallback<StorageAccountListKeysResult>)'
@@ -1038,9 +1027,130 @@ items:
             - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
           description: |
             The callback
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys_2'
+    name: >-
+      listKeys(string, string, StorageAccountsListKeysOptionalParams,
+      ServiceCallback<StorageAccountListKeysResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listKeys(resourceGroupName: string, accountName: string,
+        options: StorageAccountsListKeysOptionalParams, callback:
+        ServiceCallback<StorageAccountListKeysResult>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: >-
+            The name of the resource group within the user's subscription. The
+            name
+
+            is case insensitive.
+        - id: accountName
+          type:
+            - string
+          description: >-
+            The name of the storage account within the specified resource group.
+            Storage
+
+            account names must be between 3 and 24 characters in length and use
+            numbers and lower-case
+
+            letters only.
+        - id: options
+          type:
+            - '@azure/arm-storage.StorageAccountsListKeysOptionalParams'
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            The callback
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Lists all the storage accounts available under the subscription. Note that
+      storage keys are not
+
+      returned; use the ListKeys operation for this.
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.StorageAccountsListKeysResponse>
+          - Promise<Models.StorageAccountsListNextResponse>
+        description: Promise<Models.StorageAccountsListNextResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listNext_2'
+    name: >-
+      listNext(string, RequestOptionsBase,
+      ServiceCallback<StorageAccountListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, options: RequestOptionsBase,
+        callback: ServiceCallback<StorageAccountListResult>)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            The callback
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listNext_1'
+    name: 'listNext(string, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, callback:
+        ServiceCallback<StorageAccountListResult>)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            The callback
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS'
     name: >-
@@ -1087,6 +1197,7 @@ items:
       return:
         type:
           - Promise<Models.StorageAccountsListServiceSASResponse>
+        description: Promise<Models.StorageAccountsListServiceSASResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS_2'
     name: >-
@@ -1135,9 +1246,6 @@ items:
             - ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsListServiceSASResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS_1'
     name: >-
@@ -1182,9 +1290,6 @@ items:
             - ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsListServiceSASResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.regenerateKey'
     name: 'regenerateKey(string, string, string, msRest.RequestOptionsBase)'
@@ -1192,7 +1297,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Regenerates one of the access keys for the specified storage account.
+    summary: >-
+      Regenerates one of the access keys or Kerberos keys for the specified
+      storage account.
     syntax:
       content: >-
         function regenerateKey(resourceGroupName: string, accountName: string,
@@ -1224,7 +1331,7 @@ items:
             The name of storage keys that want to be regenerated, possible
             values are key1,
 
-            key2.
+            key2, kerb1, kerb2.
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1233,6 +1340,7 @@ items:
       return:
         type:
           - Promise<Models.StorageAccountsRegenerateKeyResponse>
+        description: Promise<Models.StorageAccountsRegenerateKeyResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.regenerateKey_2'
     name: >-
@@ -1275,7 +1383,7 @@ items:
             The name of storage keys that want to be regenerated, possible
             values are key1,
 
-            key2.
+            key2, kerb1, kerb2.
         - id: options
           type:
             - RequestOptionsBase
@@ -1285,9 +1393,6 @@ items:
             - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsRegenerateKeyResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.regenerateKey_1'
     name: >-
@@ -1330,15 +1435,64 @@ items:
             The name of storage keys that want to be regenerated, possible
             values are key1,
 
-            key2.
+            key2, kerb1, kerb2.
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
           description: |
             The callback
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.restoreBlobRanges'
+    name: >-
+      restoreBlobRanges(string, string, Date | string, BlobRestoreRange[],
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Restore blobs in the specified blob ranges
+    syntax:
+      content: >-
+        function restoreBlobRanges(resourceGroupName: string, accountName:
+        string, timeToRestore: Date | string, blobRanges: BlobRestoreRange[],
+        options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: >-
+            The name of the resource group within the user's subscription. The
+            name
+
+            is case insensitive.
+        - id: accountName
+          type:
+            - string
+          description: >-
+            The name of the storage account within the specified resource group.
+            Storage
+
+            account names must be between 3 and 24 characters in length and use
+            numbers and lower-case
+
+            letters only.
+        - id: timeToRestore
+          type:
+            - Date | string
+          description: Restore blob to the specified time.
+        - id: blobRanges
+          type:
+            - '@azure/arm-storage.BlobRestoreRange[]'
+          description: Blob ranges to restore.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+          - Promise<Models.StorageAccountsRestoreBlobRangesResponse>
+        description: Promise<Models.StorageAccountsRestoreBlobRangesResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys'
     name: 'revokeUserDelegationKeys(string, string, msRest.RequestOptionsBase)'
@@ -1379,6 +1533,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_2'
     name: >-
@@ -1423,9 +1578,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_1'
     name: 'revokeUserDelegationKeys(string, string, ServiceCallback<void>)'
@@ -1463,9 +1615,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.constructor'
     name: StorageAccounts(StorageManagementClientContext)
@@ -1551,6 +1700,7 @@ items:
       return:
         type:
           - Promise<Models.StorageAccountsUpdateResponse>
+        description: Promise<Models.StorageAccountsUpdateResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.update_2'
     name: >-
@@ -1599,9 +1749,6 @@ items:
             - ServiceCallback<@azure/arm-storage.StorageAccount>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsUpdateResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccounts.update_1'
     name: >-
@@ -1646,9 +1793,6 @@ items:
             - ServiceCallback<@azure/arm-storage.StorageAccount>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.StorageAccountsUpdateResponse>
     package: '@azure/arm-storage'
 references:
   - uid: '@azure/arm-storage.StorageManagementClientContext'
@@ -1663,6 +1807,14 @@ references:
       - name: StorageAccountCreateParameters
         fullName: StorageAccountCreateParameters
         uid: '@azure/arm-storage.StorageAccountCreateParameters'
+  - uid: '@azure/arm-storage.BlobRestoreRange[]'
+    name: 'BlobRestoreRange[]'
+    spec.typeScript:
+      - name: BlobRestoreRange
+        fullName: BlobRestoreRange
+        uid: '@azure/arm-storage.BlobRestoreRange'
+      - name: '[]'
+        fullName: '[]'
   - uid: ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
     name: CheckNameAvailabilityResult>
     spec.typeScript:
@@ -1725,6 +1877,12 @@ references:
         uid: '@azure/arm-storage.StorageAccountListKeysResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-storage.StorageAccountsListKeysOptionalParams'
+    name: StorageAccountsListKeysOptionalParams
+    spec.typeScript:
+      - name: StorageAccountsListKeysOptionalParams
+        fullName: StorageAccountsListKeysOptionalParams
+        uid: '@azure/arm-storage.StorageAccountsListKeysOptionalParams'
   - uid: '@azure/arm-storage.ServiceSasParameters'
     name: ServiceSasParameters
     spec.typeScript:

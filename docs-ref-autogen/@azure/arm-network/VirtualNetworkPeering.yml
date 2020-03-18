@@ -40,6 +40,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkPeering.allowGatewayTransit'
     name: allowGatewayTransit
@@ -57,6 +58,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkPeering.allowVirtualNetworkAccess'
     name: allowVirtualNetworkAccess
@@ -76,6 +78,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkPeering.etag'
     name: etag
@@ -84,13 +87,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkPeering.id'
     name: id
@@ -106,6 +114,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkPeering.name'
     name: name
@@ -125,6 +134,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkPeering.peeringState'
     name: peeringState
@@ -144,6 +154,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkPeeringState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkPeering.provisioningState'
     name: provisioningState
@@ -152,13 +163,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The provisioning state of the resource.
+    summary: >-
+      The provisioning state of the virtual network peering resource. Possible
+      values include:
+
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkPeering.remoteAddressSpace'
     name: remoteAddressSpace
@@ -174,6 +193,7 @@ items:
       return:
         type:
           - '@azure/arm-network.AddressSpace'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkPeering.remoteVirtualNetwork'
     name: remoteVirtualNetwork
@@ -196,6 +216,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkPeering.useRemoteGateways'
     name: useRemoteGateways
@@ -221,6 +242,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -235,6 +257,12 @@ references:
       - name: VirtualNetworkPeeringState
         fullName: VirtualNetworkPeeringState
         uid: '@azure/arm-network.VirtualNetworkPeeringState'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.AddressSpace'
     name: AddressSpace
     spec.typeScript:

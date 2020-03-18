@@ -11,12 +11,13 @@ items:
       - '@azure/batch.CloudPoolListResult.entries'
       - '@azure/batch.CloudPoolListResult.every'
       - '@azure/batch.CloudPoolListResult.fill'
-      - '@azure/batch.CloudPoolListResult.filter_1'
       - '@azure/batch.CloudPoolListResult.filter'
+      - '@azure/batch.CloudPoolListResult.filter_1'
       - '@azure/batch.CloudPoolListResult.find'
       - '@azure/batch.CloudPoolListResult.find_1'
       - '@azure/batch.CloudPoolListResult.findIndex'
       - '@azure/batch.CloudPoolListResult.forEach'
+      - '@azure/batch.CloudPoolListResult.includes'
       - '@azure/batch.CloudPoolListResult.indexOf'
       - '@azure/batch.CloudPoolListResult.join'
       - '@azure/batch.CloudPoolListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.concat'
     name: 'concat(ConcatArray<CloudPool>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.entries'
     name: entries()
@@ -158,10 +163,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.every'
     name: >-
-      every((value: CloudPool, index: number, array: CloudPool[]) => boolean,
+      every((value: CloudPool, index: number, array: CloudPool[]) => unknown,
       any)
     children: []
     type: method
@@ -171,11 +177,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: CloudPool, index: number, array:
-        CloudPool[]) => boolean, thisArg?: any)
+        CloudPool[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: CloudPool, index: number, array: CloudPool[]) => boolean'
+            - '(value: CloudPool, index: number, array: CloudPool[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -191,6 +197,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.fill'
     name: 'fill(CloudPool, undefined | number, undefined | number)'
@@ -231,39 +238,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/batch'
-  - uid: '@azure/batch.CloudPoolListResult.filter_1'
-    name: 'filter((value: CloudPool, index: number, array: CloudPool[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: CloudPool, index: number, array:
-        CloudPool[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: CloudPool, index: number, array: CloudPool[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/batch.CloudPool[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.filter'
     name: >-
@@ -299,6 +274,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPoolListResult.filter_1'
+    name: >-
+      filter((value: CloudPool, index: number, array: CloudPool[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: CloudPool, index: number, array:
+        CloudPool[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: CloudPool, index: number, array: CloudPool[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/batch.CloudPool[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.find'
     name: >-
@@ -344,26 +356,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.find_1'
-    name: 'find((value: CloudPool, index: number, obj: CloudPool[]) => boolean, any)'
+    name: 'find((value: CloudPool, index: number, obj: CloudPool[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: CloudPool, index: number, obj:
-        CloudPool[]) => boolean, thisArg?: any)
+        CloudPool[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: CloudPool, index: number, obj: CloudPool[]) => boolean'
+            - '(value: CloudPool, index: number, obj: CloudPool[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -373,10 +382,11 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool | undefined'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.findIndex'
     name: >-
-      findIndex((value: CloudPool, index: number, obj: CloudPool[]) => boolean,
+      findIndex((value: CloudPool, index: number, obj: CloudPool[]) => unknown,
       any)
     children: []
     type: method
@@ -390,11 +400,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: CloudPool, index: number, obj:
-        CloudPool[]) => boolean, thisArg?: any)
+        CloudPool[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: CloudPool, index: number, obj: CloudPool[]) => boolean'
+            - '(value: CloudPool, index: number, obj: CloudPool[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -416,6 +426,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.forEach'
     name: >-
@@ -446,6 +457,36 @@ items:
             value.
           optional: true
     package: '@azure/batch'
+  - uid: '@azure/batch.CloudPoolListResult.includes'
+    name: 'includes(CloudPool, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: CloudPool, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/batch.CloudPool'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.indexOf'
     name: 'indexOf(CloudPool, undefined | number)'
     children: []
@@ -472,6 +513,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.join'
     name: join(undefined | string)
@@ -496,6 +538,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.keys'
     name: keys()
@@ -510,6 +553,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.lastIndexOf'
     name: 'lastIndexOf(CloudPool, undefined | number)'
@@ -537,6 +581,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.length'
     name: length
@@ -553,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.map'
     name: 'map((value: CloudPool, index: number, array: CloudPool[]) => U, any)'
@@ -585,6 +631,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.odatanextLink'
     name: odatanextLink
@@ -600,6 +647,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.pop'
     name: pop()
@@ -614,6 +662,7 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool | undefined'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.push'
     name: 'push(CloudPool[])'
@@ -633,6 +682,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.reduce'
     name: >-
@@ -663,6 +713,7 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.reduce_1'
     name: >-
@@ -672,10 +723,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: CloudPool, currentValue:
@@ -695,6 +743,7 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.reduce_2'
     name: >-
@@ -733,6 +782,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.reduceRight'
     name: >-
@@ -765,6 +815,7 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.reduceRight_1'
     name: >-
@@ -774,11 +825,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: CloudPool,
@@ -798,6 +845,7 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.reduceRight_2'
     name: >-
@@ -837,6 +885,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.reverse'
     name: reverse()
@@ -851,6 +900,7 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.shift'
     name: shift()
@@ -865,6 +915,7 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool | undefined'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -890,10 +941,11 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.some'
     name: >-
-      some((value: CloudPool, index: number, array: CloudPool[]) => boolean,
+      some((value: CloudPool, index: number, array: CloudPool[]) => unknown,
       any)
     children: []
     type: method
@@ -905,11 +957,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: CloudPool, index: number, array:
-        CloudPool[]) => boolean, thisArg?: any)
+        CloudPool[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: CloudPool, index: number, array: CloudPool[]) => boolean'
+            - '(value: CloudPool, index: number, array: CloudPool[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -925,6 +977,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.sort'
     name: 'sort(undefined | (a: CloudPool, b: CloudPool) => number)'
@@ -949,6 +1002,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.splice_1'
     name: 'splice(number, number, CloudPool[])'
@@ -980,6 +1034,7 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1008,6 +1063,7 @@ items:
       return:
         type:
           - '@azure/batch.CloudPool[]'
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.toLocaleString'
     name: toLocaleString()
@@ -1024,6 +1080,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.toString'
     name: toString()
@@ -1038,6 +1095,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.unshift'
     name: 'unshift(CloudPool[])'
@@ -1057,6 +1115,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/batch'
   - uid: '@azure/batch.CloudPoolListResult.values'
     name: values()
@@ -1071,6 +1130,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/batch.CloudPool>
+        description: ''
     package: '@azure/batch'
 references:
   - uid: Array<@azure/batch.CloudPool>

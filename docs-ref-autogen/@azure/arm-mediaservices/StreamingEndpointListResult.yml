@@ -11,12 +11,13 @@ items:
       - '@azure/arm-mediaservices.StreamingEndpointListResult.entries'
       - '@azure/arm-mediaservices.StreamingEndpointListResult.every'
       - '@azure/arm-mediaservices.StreamingEndpointListResult.fill'
-      - '@azure/arm-mediaservices.StreamingEndpointListResult.filter_1'
       - '@azure/arm-mediaservices.StreamingEndpointListResult.filter'
+      - '@azure/arm-mediaservices.StreamingEndpointListResult.filter_1'
       - '@azure/arm-mediaservices.StreamingEndpointListResult.find'
       - '@azure/arm-mediaservices.StreamingEndpointListResult.find_1'
       - '@azure/arm-mediaservices.StreamingEndpointListResult.findIndex'
       - '@azure/arm-mediaservices.StreamingEndpointListResult.forEach'
+      - '@azure/arm-mediaservices.StreamingEndpointListResult.includes'
       - '@azure/arm-mediaservices.StreamingEndpointListResult.indexOf'
       - '@azure/arm-mediaservices.StreamingEndpointListResult.join'
       - '@azure/arm-mediaservices.StreamingEndpointListResult.keys'
@@ -64,6 +65,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.concat'
     name: 'concat(ConcatArray<StreamingEndpoint>[])'
@@ -83,6 +85,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -102,6 +105,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -145,6 +149,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.entries'
     name: entries()
@@ -159,11 +164,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.every'
     name: >-
       every((value: StreamingEndpoint, index: number, array:
-      StreamingEndpoint[]) => boolean, any)
+      StreamingEndpoint[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -172,13 +178,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: StreamingEndpoint, index: number,
-        array: StreamingEndpoint[]) => boolean, thisArg?: any)
+        array: StreamingEndpoint[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: StreamingEndpoint, index: number, array:
-              StreamingEndpoint[]) => boolean
+              StreamingEndpoint[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -194,6 +200,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.fill'
     name: 'fill(StreamingEndpoint, undefined | number, undefined | number)'
@@ -234,43 +241,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-mediaservices'
-  - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.filter_1'
-    name: >-
-      filter((value: StreamingEndpoint, index: number, array:
-      StreamingEndpoint[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: StreamingEndpoint, index: number,
-        array: StreamingEndpoint[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: StreamingEndpoint, index: number, array:
-              StreamingEndpoint[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-mediaservices.StreamingEndpoint[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.filter'
     name: >-
@@ -308,6 +279,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.filter_1'
+    name: >-
+      filter((value: StreamingEndpoint, index: number, array:
+      StreamingEndpoint[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: StreamingEndpoint, index: number,
+        array: StreamingEndpoint[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: StreamingEndpoint, index: number, array:
+              StreamingEndpoint[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-mediaservices.StreamingEndpoint[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.find'
     name: >-
@@ -353,30 +363,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.find_1'
     name: >-
       find((value: StreamingEndpoint, index: number, obj: StreamingEndpoint[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: StreamingEndpoint, index: number, obj:
-        StreamingEndpoint[]) => boolean, thisArg?: any)
+        StreamingEndpoint[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: StreamingEndpoint, index: number, obj:
-              StreamingEndpoint[]) => boolean
+              StreamingEndpoint[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -386,11 +393,12 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.findIndex'
     name: >-
       findIndex((value: StreamingEndpoint, index: number, obj:
-      StreamingEndpoint[]) => boolean, any)
+      StreamingEndpoint[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -403,13 +411,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: StreamingEndpoint, index: number,
-        obj: StreamingEndpoint[]) => boolean, thisArg?: any)
+        obj: StreamingEndpoint[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: StreamingEndpoint, index: number, obj:
-              StreamingEndpoint[]) => boolean
+              StreamingEndpoint[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -431,6 +439,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.forEach'
     name: >-
@@ -463,6 +472,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.includes'
+    name: 'includes(StreamingEndpoint, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: StreamingEndpoint, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-mediaservices.StreamingEndpoint'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.indexOf'
     name: 'indexOf(StreamingEndpoint, undefined | number)'
     children: []
@@ -489,6 +528,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.join'
     name: join(undefined | string)
@@ -513,6 +553,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.keys'
     name: keys()
@@ -527,6 +568,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.lastIndexOf'
     name: 'lastIndexOf(StreamingEndpoint, undefined | number)'
@@ -554,6 +596,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.length'
     name: length
@@ -570,6 +613,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.map'
     name: >-
@@ -606,6 +650,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.odatacount'
     name: odatacount
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.odatanextLink'
     name: odatanextLink
@@ -640,6 +686,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.pop'
     name: pop()
@@ -654,6 +701,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.push'
     name: 'push(StreamingEndpoint[])'
@@ -673,6 +721,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.reduce'
     name: >-
@@ -705,6 +754,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.reduce_1'
     name: >-
@@ -715,10 +765,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: StreamingEndpoint,
@@ -740,6 +787,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.reduce_2'
     name: >-
@@ -778,6 +826,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.reduceRight'
     name: >-
@@ -812,6 +861,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.reduceRight_1'
     name: >-
@@ -822,11 +872,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: StreamingEndpoint,
@@ -848,6 +894,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.reduceRight_2'
     name: >-
@@ -887,6 +934,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.reverse'
     name: reverse()
@@ -901,6 +949,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.shift'
     name: shift()
@@ -915,6 +964,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -940,11 +990,12 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.some'
     name: >-
       some((value: StreamingEndpoint, index: number, array: StreamingEndpoint[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -955,13 +1006,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: StreamingEndpoint, index: number,
-        array: StreamingEndpoint[]) => boolean, thisArg?: any)
+        array: StreamingEndpoint[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: StreamingEndpoint, index: number, array:
-              StreamingEndpoint[]) => boolean
+              StreamingEndpoint[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -977,6 +1028,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.sort'
     name: 'sort(undefined | (a: StreamingEndpoint, b: StreamingEndpoint) => number)'
@@ -1001,6 +1053,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.splice_1'
     name: 'splice(number, number, StreamingEndpoint[])'
@@ -1034,6 +1087,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1062,6 +1116,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.StreamingEndpoint[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.toLocaleString'
     name: toLocaleString()
@@ -1078,6 +1133,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.toString'
     name: toString()
@@ -1092,6 +1148,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.unshift'
     name: 'unshift(StreamingEndpoint[])'
@@ -1111,6 +1168,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.StreamingEndpointListResult.values'
     name: values()
@@ -1125,6 +1183,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-mediaservices.StreamingEndpoint>
+        description: ''
     package: '@azure/arm-mediaservices'
 references:
   - uid: Array<@azure/arm-mediaservices.StreamingEndpoint>

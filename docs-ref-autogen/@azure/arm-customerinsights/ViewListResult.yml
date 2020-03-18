@@ -11,12 +11,13 @@ items:
       - '@azure/arm-customerinsights.ViewListResult.entries'
       - '@azure/arm-customerinsights.ViewListResult.every'
       - '@azure/arm-customerinsights.ViewListResult.fill'
-      - '@azure/arm-customerinsights.ViewListResult.filter_1'
       - '@azure/arm-customerinsights.ViewListResult.filter'
+      - '@azure/arm-customerinsights.ViewListResult.filter_1'
       - '@azure/arm-customerinsights.ViewListResult.find'
       - '@azure/arm-customerinsights.ViewListResult.find_1'
       - '@azure/arm-customerinsights.ViewListResult.findIndex'
       - '@azure/arm-customerinsights.ViewListResult.forEach'
+      - '@azure/arm-customerinsights.ViewListResult.includes'
       - '@azure/arm-customerinsights.ViewListResult.indexOf'
       - '@azure/arm-customerinsights.ViewListResult.join'
       - '@azure/arm-customerinsights.ViewListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.concat'
     name: 'concat(ConcatArray<ViewResourceFormat>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.every'
     name: >-
       every((value: ViewResourceFormat, index: number, array:
-      ViewResourceFormat[]) => boolean, any)
+      ViewResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ViewResourceFormat, index: number,
-        array: ViewResourceFormat[]) => boolean, thisArg?: any)
+        array: ViewResourceFormat[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ViewResourceFormat, index: number, array:
-              ViewResourceFormat[]) => boolean
+              ViewResourceFormat[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.fill'
     name: 'fill(ViewResourceFormat, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-customerinsights'
-  - uid: '@azure/arm-customerinsights.ViewListResult.filter_1'
-    name: >-
-      filter((value: ViewResourceFormat, index: number, array:
-      ViewResourceFormat[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ViewResourceFormat, index: number,
-        array: ViewResourceFormat[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ViewResourceFormat, index: number, array:
-              ViewResourceFormat[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-customerinsights.ViewResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-customerinsights'
+  - uid: '@azure/arm-customerinsights.ViewListResult.filter_1'
+    name: >-
+      filter((value: ViewResourceFormat, index: number, array:
+      ViewResourceFormat[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ViewResourceFormat, index: number,
+        array: ViewResourceFormat[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ViewResourceFormat, index: number, array:
+              ViewResourceFormat[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-customerinsights.ViewResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.find_1'
     name: >-
       find((value: ViewResourceFormat, index: number, obj: ViewResourceFormat[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ViewResourceFormat, index: number, obj:
-        ViewResourceFormat[]) => boolean, thisArg?: any)
+        ViewResourceFormat[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ViewResourceFormat, index: number, obj:
-              ViewResourceFormat[]) => boolean
+              ViewResourceFormat[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.findIndex'
     name: >-
       findIndex((value: ViewResourceFormat, index: number, obj:
-      ViewResourceFormat[]) => boolean, any)
+      ViewResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ViewResourceFormat, index: number,
-        obj: ViewResourceFormat[]) => boolean, thisArg?: any)
+        obj: ViewResourceFormat[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ViewResourceFormat, index: number, obj:
-              ViewResourceFormat[]) => boolean
+              ViewResourceFormat[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-customerinsights'
+  - uid: '@azure/arm-customerinsights.ViewListResult.includes'
+    name: 'includes(ViewResourceFormat, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ViewResourceFormat, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-customerinsights.ViewResourceFormat'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.indexOf'
     name: 'indexOf(ViewResourceFormat, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.lastIndexOf'
     name: 'lastIndexOf(ViewResourceFormat, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.push'
     name: 'push(ViewResourceFormat[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.reduce_2'
     name: >-
@@ -691,6 +739,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.reduce'
     name: >-
@@ -724,6 +773,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.reduce_1'
     name: >-
@@ -734,10 +784,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ViewResourceFormat,
@@ -759,6 +806,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.reduceRight_2'
     name: >-
@@ -798,6 +846,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.reduceRight'
     name: >-
@@ -832,6 +881,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.reduceRight_1'
     name: >-
@@ -842,11 +892,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ViewResourceFormat,
@@ -868,6 +914,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.reverse'
     name: reverse()
@@ -882,6 +929,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.shift'
     name: shift()
@@ -896,6 +944,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -921,11 +970,12 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.some'
     name: >-
       some((value: ViewResourceFormat, index: number, array:
-      ViewResourceFormat[]) => boolean, any)
+      ViewResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -936,13 +986,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ViewResourceFormat, index: number,
-        array: ViewResourceFormat[]) => boolean, thisArg?: any)
+        array: ViewResourceFormat[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ViewResourceFormat, index: number, array:
-              ViewResourceFormat[]) => boolean
+              ViewResourceFormat[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -958,6 +1008,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.sort'
     name: 'sort(undefined | (a: ViewResourceFormat, b: ViewResourceFormat) => number)'
@@ -984,6 +1035,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.splice_1'
     name: 'splice(number, number, ViewResourceFormat[])'
@@ -1017,6 +1069,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1045,6 +1098,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.ViewResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.toLocaleString'
     name: toLocaleString()
@@ -1061,6 +1115,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.toString'
     name: toString()
@@ -1075,6 +1130,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.unshift'
     name: 'unshift(ViewResourceFormat[])'
@@ -1094,6 +1150,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.ViewListResult.values'
     name: values()
@@ -1108,6 +1165,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-customerinsights.ViewResourceFormat>
+        description: ''
     package: '@azure/arm-customerinsights'
 references:
   - uid: Array<@azure/arm-customerinsights.ViewResourceFormat>

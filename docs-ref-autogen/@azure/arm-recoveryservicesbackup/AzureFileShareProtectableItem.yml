@@ -23,7 +23,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Protectable item for Azure Fileshare workloads.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.azureFileShareType
@@ -33,13 +33,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      File Share type XSync or XSMB. Possible values include: 'Invalid', 'XSMB',
+      'XSync'
     optional: true
     syntax:
       content: 'azureFileShareType?: AzureFileShareType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.AzureFileShareType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.backupManagementType
@@ -49,13 +52,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Type of backup management to backup an item.
     optional: true
     syntax:
       content: 'backupManagementType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.friendlyName
@@ -65,13 +69,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of the backup item.
     optional: true
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.parentContainerFabricId
@@ -81,13 +86,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Full Fabric ID of container to which this protectable item belongs. For
+      example, ARM ID.
     optional: true
     syntax:
       content: 'parentContainerFabricId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.parentContainerFriendlyName
@@ -97,13 +105,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of container to which this protectable item belongs.
     optional: true
     syntax:
       content: 'parentContainerFriendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.protectableItemType
@@ -113,12 +122,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'protectableItemType: "AzureFileShare"'
       return:
         type:
           - '"AzureFileShare"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.protectionState
@@ -128,13 +138,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      State of the back up item. Possible values include: 'Invalid',
+      'NotProtected', 'Protecting',
+
+      'Protected', 'ProtectionFailed'
     optional: true
     syntax:
       content: 'protectionState?: ProtectionStatus'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.workloadType
@@ -144,13 +159,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Type of workload for the backup management
     optional: true
     syntax:
       content: 'workloadType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.AzureFileShareType'

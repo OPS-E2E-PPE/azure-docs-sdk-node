@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.entries'
       - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.every'
       - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.fill'
-      - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.filter_1'
       - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.filter'
+      - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.filter_1'
       - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.find'
       - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.find_1'
       - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.findIndex'
       - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.forEach'
+      - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.includes'
       - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.indexOf'
       - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.join'
       - '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.keys'
@@ -68,6 +69,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.concat'
     name: 'concat(ConcatArray<NetworkInterfaceTapConfiguration>[])'
@@ -87,6 +89,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -106,6 +109,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -149,6 +153,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.entries'
     name: entries()
@@ -163,11 +168,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.every'
     name: >-
       every((value: NetworkInterfaceTapConfiguration, index: number, array:
-      NetworkInterfaceTapConfiguration[]) => boolean, any)
+      NetworkInterfaceTapConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -176,14 +182,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: NetworkInterfaceTapConfiguration,
-        index: number, array: NetworkInterfaceTapConfiguration[]) => boolean,
+        index: number, array: NetworkInterfaceTapConfiguration[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: NetworkInterfaceTapConfiguration, index: number, array:
-              NetworkInterfaceTapConfiguration[]) => boolean
+              NetworkInterfaceTapConfiguration[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -199,6 +205,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.fill'
     name: >-
@@ -241,44 +248,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.filter_1'
-    name: >-
-      filter((value: NetworkInterfaceTapConfiguration, index: number, array:
-      NetworkInterfaceTapConfiguration[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: NetworkInterfaceTapConfiguration,
-        index: number, array: NetworkInterfaceTapConfiguration[]) => any,
-        thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: NetworkInterfaceTapConfiguration, index: number, array:
-              NetworkInterfaceTapConfiguration[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.filter'
     name: >-
@@ -317,6 +287,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.filter_1'
+    name: >-
+      filter((value: NetworkInterfaceTapConfiguration, index: number, array:
+      NetworkInterfaceTapConfiguration[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: NetworkInterfaceTapConfiguration,
+        index: number, array: NetworkInterfaceTapConfiguration[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: NetworkInterfaceTapConfiguration, index: number, array:
+              NetworkInterfaceTapConfiguration[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.find'
     name: >-
@@ -363,31 +373,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.find_1'
     name: >-
       find((value: NetworkInterfaceTapConfiguration, index: number, obj:
-      NetworkInterfaceTapConfiguration[]) => boolean, any)
+      NetworkInterfaceTapConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: NetworkInterfaceTapConfiguration,
-        index: number, obj: NetworkInterfaceTapConfiguration[]) => boolean,
+        index: number, obj: NetworkInterfaceTapConfiguration[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: NetworkInterfaceTapConfiguration, index: number, obj:
-              NetworkInterfaceTapConfiguration[]) => boolean
+              NetworkInterfaceTapConfiguration[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -397,11 +404,12 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.findIndex'
     name: >-
       findIndex((value: NetworkInterfaceTapConfiguration, index: number, obj:
-      NetworkInterfaceTapConfiguration[]) => boolean, any)
+      NetworkInterfaceTapConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -414,14 +422,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: NetworkInterfaceTapConfiguration,
-        index: number, obj: NetworkInterfaceTapConfiguration[]) => boolean,
+        index: number, obj: NetworkInterfaceTapConfiguration[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: NetworkInterfaceTapConfiguration, index: number, obj:
-              NetworkInterfaceTapConfiguration[]) => boolean
+              NetworkInterfaceTapConfiguration[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -443,6 +451,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.forEach'
     name: >-
@@ -476,6 +485,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.includes'
+    name: 'includes(NetworkInterfaceTapConfiguration, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: NetworkInterfaceTapConfiguration,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.NetworkInterfaceTapConfiguration'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.indexOf'
     name: 'indexOf(NetworkInterfaceTapConfiguration, undefined | number)'
     children: []
@@ -502,6 +541,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.join'
     name: join(undefined | string)
@@ -526,6 +566,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.keys'
     name: keys()
@@ -540,6 +581,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.lastIndexOf'
     name: 'lastIndexOf(NetworkInterfaceTapConfiguration, undefined | number)'
@@ -567,6 +609,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.length'
     name: length
@@ -583,6 +626,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.map'
     name: >-
@@ -620,6 +664,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.nextLink'
     name: nextLink
@@ -639,6 +684,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.pop'
     name: pop()
@@ -653,6 +699,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.push'
     name: 'push(NetworkInterfaceTapConfiguration[])'
@@ -672,6 +719,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.reduce'
     name: >-
@@ -707,6 +755,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.reduce_1'
     name: >-
@@ -718,10 +767,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -745,6 +791,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.reduce_2'
     name: >-
@@ -784,6 +831,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.reduceRight'
     name: >-
@@ -821,6 +869,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkInterfaceTapConfigurationListResult.reduceRight_1
@@ -833,11 +882,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -861,6 +906,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkInterfaceTapConfigurationListResult.reduceRight_2
@@ -903,6 +949,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.reverse'
     name: reverse()
@@ -917,6 +964,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.shift'
     name: shift()
@@ -931,6 +979,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -956,11 +1005,12 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.some'
     name: >-
       some((value: NetworkInterfaceTapConfiguration, index: number, array:
-      NetworkInterfaceTapConfiguration[]) => boolean, any)
+      NetworkInterfaceTapConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -971,14 +1021,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: NetworkInterfaceTapConfiguration,
-        index: number, array: NetworkInterfaceTapConfiguration[]) => boolean,
+        index: number, array: NetworkInterfaceTapConfiguration[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: NetworkInterfaceTapConfiguration, index: number, array:
-              NetworkInterfaceTapConfiguration[]) => boolean
+              NetworkInterfaceTapConfiguration[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -994,6 +1044,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.sort'
     name: >-
@@ -1023,6 +1074,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.splice_1'
     name: 'splice(number, number, NetworkInterfaceTapConfiguration[])'
@@ -1056,6 +1108,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1084,6 +1137,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkInterfaceTapConfigurationListResult.toLocaleString
@@ -1101,6 +1155,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.toString'
     name: toString()
@@ -1115,6 +1170,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.unshift'
     name: 'unshift(NetworkInterfaceTapConfiguration[])'
@@ -1134,6 +1190,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfigurationListResult.values'
     name: values()
@@ -1149,6 +1206,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-network.NetworkInterfaceTapConfiguration>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.NetworkInterfaceTapConfiguration>

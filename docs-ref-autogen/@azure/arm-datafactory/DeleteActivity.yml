@@ -7,7 +7,10 @@ items:
       - '@azure/arm-datafactory.DeleteActivity.dataset'
       - '@azure/arm-datafactory.DeleteActivity.dependsOn'
       - '@azure/arm-datafactory.DeleteActivity.description'
+      - '@azure/arm-datafactory.DeleteActivity.enableLogging'
       - '@azure/arm-datafactory.DeleteActivity.linkedServiceName'
+      - '@azure/arm-datafactory.DeleteActivity.logStorageSettings'
+      - '@azure/arm-datafactory.DeleteActivity.maxConcurrentConnections'
       - '@azure/arm-datafactory.DeleteActivity.name'
       - '@azure/arm-datafactory.DeleteActivity.policy'
       - '@azure/arm-datafactory.DeleteActivity.recursive'
@@ -16,7 +19,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Delete activity.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DeleteActivity.dataset'
     name: dataset
@@ -25,12 +28,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Delete activity dataset reference.
     syntax:
       content: 'dataset: DatasetReference'
       return:
         type:
           - '@azure/arm-datafactory.DatasetReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DeleteActivity.dependsOn'
     name: dependsOn
@@ -39,13 +43,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity depends on condition.
     optional: true
     syntax:
       content: 'dependsOn?: ActivityDependency[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityDependency[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DeleteActivity.description'
     name: description
@@ -54,13 +59,34 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.DeleteActivity.enableLogging'
+    name: enableLogging
+    fullName: enableLogging
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether to record detailed logs of delete-activity execution. Default
+      value is false. Type:
+
+      boolean (or Expression with resultType boolean).
+    optional: true
+    syntax:
+      content: 'enableLogging?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DeleteActivity.linkedServiceName'
     name: linkedServiceName
@@ -69,13 +95,46 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     optional: true
     syntax:
       content: 'linkedServiceName?: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.DeleteActivity.logStorageSettings'
+    name: logStorageSettings
+    fullName: logStorageSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Log storage settings customer need to provide when enableLogging is true.
+    optional: true
+    syntax:
+      content: 'logStorageSettings?: LogStorageSettings'
+      return:
+        type:
+          - '@azure/arm-datafactory.LogStorageSettings'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.DeleteActivity.maxConcurrentConnections'
+    name: maxConcurrentConnections
+    fullName: maxConcurrentConnections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The max concurrent connections to connect data source at the same time.
+    optional: true
+    syntax:
+      content: 'maxConcurrentConnections?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DeleteActivity.name'
     name: name
@@ -84,12 +143,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity name.
     syntax:
       content: 'name: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DeleteActivity.policy'
     name: policy
@@ -98,13 +158,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity policy.
     optional: true
     syntax:
       content: 'policy?: ActivityPolicy'
       return:
         type:
           - '@azure/arm-datafactory.ActivityPolicy'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DeleteActivity.recursive'
     name: recursive
@@ -113,13 +174,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      If true, files or sub-folders under current folder path will be deleted
+      recursively. Default
+
+      is false. Type: boolean (or Expression with resultType boolean).
     optional: true
     syntax:
       content: 'recursive?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DeleteActivity.type'
     name: type
@@ -128,12 +194,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Delete"'
       return:
         type:
           - '"Delete"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.DeleteActivity.userProperties'
     name: userProperties
@@ -142,13 +209,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity user properties.
     optional: true
     syntax:
       content: 'userProperties?: UserProperty[]'
       return:
         type:
           - '@azure/arm-datafactory.UserProperty[]'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.DatasetReference'
@@ -171,6 +239,12 @@ references:
       - name: LinkedServiceReference
         fullName: LinkedServiceReference
         uid: '@azure/arm-datafactory.LinkedServiceReference'
+  - uid: '@azure/arm-datafactory.LogStorageSettings'
+    name: LogStorageSettings
+    spec.typeScript:
+      - name: LogStorageSettings
+        fullName: LogStorageSettings
+        uid: '@azure/arm-datafactory.LogStorageSettings'
   - uid: '@azure/arm-datafactory.ActivityPolicy'
     name: ActivityPolicy
     spec.typeScript:

@@ -12,12 +12,13 @@ items:
       - '@azure/arm-managementgroups.EntityListResult.entries'
       - '@azure/arm-managementgroups.EntityListResult.every'
       - '@azure/arm-managementgroups.EntityListResult.fill'
-      - '@azure/arm-managementgroups.EntityListResult.filter_1'
       - '@azure/arm-managementgroups.EntityListResult.filter'
+      - '@azure/arm-managementgroups.EntityListResult.filter_1'
       - '@azure/arm-managementgroups.EntityListResult.find'
       - '@azure/arm-managementgroups.EntityListResult.find_1'
       - '@azure/arm-managementgroups.EntityListResult.findIndex'
       - '@azure/arm-managementgroups.EntityListResult.forEach'
+      - '@azure/arm-managementgroups.EntityListResult.includes'
       - '@azure/arm-managementgroups.EntityListResult.indexOf'
       - '@azure/arm-managementgroups.EntityListResult.join'
       - '@azure/arm-managementgroups.EntityListResult.keys'
@@ -64,6 +65,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.concat'
     name: 'concat(ConcatArray<EntityInfo>[])'
@@ -83,6 +85,7 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo[]'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -102,6 +105,7 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo[]'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -145,6 +149,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.count'
     name: count
@@ -160,6 +165,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.entries'
     name: entries()
@@ -174,10 +180,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.every'
     name: >-
-      every((value: EntityInfo, index: number, array: EntityInfo[]) => boolean,
+      every((value: EntityInfo, index: number, array: EntityInfo[]) => unknown,
       any)
     children: []
     type: method
@@ -187,11 +194,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: EntityInfo, index: number, array:
-        EntityInfo[]) => boolean, thisArg?: any)
+        EntityInfo[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: EntityInfo, index: number, array: EntityInfo[]) => boolean'
+            - '(value: EntityInfo, index: number, array: EntityInfo[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -207,6 +214,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.fill'
     name: 'fill(EntityInfo, undefined | number, undefined | number)'
@@ -247,41 +255,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-managementgroups'
-  - uid: '@azure/arm-managementgroups.EntityListResult.filter_1'
-    name: >-
-      filter((value: EntityInfo, index: number, array: EntityInfo[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: EntityInfo, index: number, array:
-        EntityInfo[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: EntityInfo, index: number, array: EntityInfo[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-managementgroups.EntityInfo[]'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.filter'
     name: >-
@@ -317,6 +291,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-managementgroups'
+  - uid: '@azure/arm-managementgroups.EntityListResult.filter_1'
+    name: >-
+      filter((value: EntityInfo, index: number, array: EntityInfo[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: EntityInfo, index: number, array:
+        EntityInfo[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: EntityInfo, index: number, array: EntityInfo[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-managementgroups.EntityInfo[]'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.find'
     name: >-
@@ -362,28 +373,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.find_1'
     name: >-
-      find((value: EntityInfo, index: number, obj: EntityInfo[]) => boolean,
+      find((value: EntityInfo, index: number, obj: EntityInfo[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: EntityInfo, index: number, obj:
-        EntityInfo[]) => boolean, thisArg?: any)
+        EntityInfo[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: EntityInfo, index: number, obj: EntityInfo[]) => boolean'
+            - '(value: EntityInfo, index: number, obj: EntityInfo[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -393,11 +401,12 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo | undefined'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.findIndex'
     name: >-
       findIndex((value: EntityInfo, index: number, obj: EntityInfo[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -410,11 +419,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: EntityInfo, index: number, obj:
-        EntityInfo[]) => boolean, thisArg?: any)
+        EntityInfo[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: EntityInfo, index: number, obj: EntityInfo[]) => boolean'
+            - '(value: EntityInfo, index: number, obj: EntityInfo[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -436,6 +445,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.forEach'
     name: >-
@@ -466,6 +476,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-managementgroups'
+  - uid: '@azure/arm-managementgroups.EntityListResult.includes'
+    name: 'includes(EntityInfo, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: EntityInfo, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-managementgroups.EntityInfo'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.indexOf'
     name: 'indexOf(EntityInfo, undefined | number)'
     children: []
@@ -492,6 +532,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.join'
     name: join(undefined | string)
@@ -516,6 +557,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.keys'
     name: keys()
@@ -530,6 +572,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.lastIndexOf'
     name: 'lastIndexOf(EntityInfo, undefined | number)'
@@ -557,6 +600,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.length'
     name: length
@@ -573,6 +617,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.map'
     name: 'map((value: EntityInfo, index: number, array: EntityInfo[]) => U, any)'
@@ -605,6 +650,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.nextLink'
     name: nextLink
@@ -620,6 +666,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.pop'
     name: pop()
@@ -634,6 +681,7 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo | undefined'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.push'
     name: 'push(EntityInfo[])'
@@ -653,6 +701,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.reduce'
     name: >-
@@ -683,6 +732,7 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.reduce_1'
     name: >-
@@ -692,10 +742,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: EntityInfo, currentValue:
@@ -715,6 +762,7 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.reduce_2'
     name: >-
@@ -753,6 +801,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.reduceRight'
     name: >-
@@ -785,6 +834,7 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.reduceRight_1'
     name: >-
@@ -794,11 +844,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: EntityInfo,
@@ -818,6 +864,7 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.reduceRight_2'
     name: >-
@@ -857,6 +904,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.reverse'
     name: reverse()
@@ -871,6 +919,7 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo[]'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.shift'
     name: shift()
@@ -885,6 +934,7 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo | undefined'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -910,10 +960,11 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo[]'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.some'
     name: >-
-      some((value: EntityInfo, index: number, array: EntityInfo[]) => boolean,
+      some((value: EntityInfo, index: number, array: EntityInfo[]) => unknown,
       any)
     children: []
     type: method
@@ -925,11 +976,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: EntityInfo, index: number, array:
-        EntityInfo[]) => boolean, thisArg?: any)
+        EntityInfo[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: EntityInfo, index: number, array: EntityInfo[]) => boolean'
+            - '(value: EntityInfo, index: number, array: EntityInfo[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -945,6 +996,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.sort'
     name: 'sort(undefined | (a: EntityInfo, b: EntityInfo) => number)'
@@ -969,6 +1021,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.splice_1'
     name: 'splice(number, number, EntityInfo[])'
@@ -1000,6 +1053,7 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo[]'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1028,6 +1082,7 @@ items:
       return:
         type:
           - '@azure/arm-managementgroups.EntityInfo[]'
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.toLocaleString'
     name: toLocaleString()
@@ -1044,6 +1099,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.toString'
     name: toString()
@@ -1058,6 +1114,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.unshift'
     name: 'unshift(EntityInfo[])'
@@ -1077,6 +1134,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-managementgroups'
   - uid: '@azure/arm-managementgroups.EntityListResult.values'
     name: values()
@@ -1091,6 +1149,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-managementgroups.EntityInfo>
+        description: ''
     package: '@azure/arm-managementgroups'
 references:
   - uid: Array<@azure/arm-managementgroups.EntityInfo>

@@ -10,6 +10,8 @@ items:
       - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.close
       - >-
         microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.enableTelemetry
+      - >-
+        microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.internalData
       - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.properties
       - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognized
       - >-
@@ -27,6 +29,8 @@ items:
         microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechStartDetected
       - >-
         microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.startContinuousRecognitionAsync
+      - >-
+        microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.startContinuousRecognitionAsyncImpl
       - >-
         microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.stopContinuousRecognitionAsync
       - >-
@@ -52,12 +56,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Gets/Sets the authorization token used to communicate with the service.
+    summary: |-
+      Gets the authorization token used to communicate with the service.
+      Gets/Sets the authorization token used to communicate with the service.
     syntax:
-      content: 'public authorizationToken: string'
+      content: string authorizationToken
       return:
         type:
           - string
+        description: Authorization token.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.canceled
     name: canceled
@@ -76,6 +83,7 @@ items:
           - >-
             (sender: TranslationRecognizer, event:
             TranslationRecognitionCanceledEventArgs) => void
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.close
     name: close()
@@ -108,6 +116,21 @@ items:
             recognition errors are collected and sent to Microsoft.
             If set to false, no telemetry is sent to Microsoft.
     package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.internalData
+    name: internalData
+    fullName: internalData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: object internalData
+      return:
+        type:
+          - object
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.properties
     name: properties
     fullName: properties
@@ -119,10 +142,13 @@ items:
       The collection of properties and their values defined for this
       TranslationRecognizer.
     syntax:
-      content: 'public properties: PropertyCollection'
+      content: PropertyCollection properties
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.PropertyCollection
+        description: >-
+          The collection of properties and their values defined for this
+          TranslationRecognizer.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognized
     name: recognized
@@ -141,6 +167,7 @@ items:
           - >-
             (sender: TranslationRecognizer, event:
             TranslationRecognitionEventArgs) => void
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizeOnceAsync
@@ -199,6 +226,7 @@ items:
           - >-
             (sender: TranslationRecognizer, event:
             TranslationRecognitionEventArgs) => void
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.sessionStarted
@@ -216,6 +244,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: SessionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.sessionStopped
@@ -233,6 +262,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: SessionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechEndDetected
@@ -250,6 +280,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechRecognitionLanguage
@@ -261,10 +292,11 @@ items:
     type: property
     summary: Gets the language name that was set when the recognizer was created.
     syntax:
-      content: 'public speechRecognitionLanguage: string'
+      content: string speechRecognitionLanguage
       return:
         type:
           - string
+        description: Gets the language name that was set when the recognizer was created.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechStartDetected
@@ -282,6 +314,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.startContinuousRecognitionAsync
@@ -310,6 +343,36 @@ items:
             - '(e: string) => void'
           description: |
             Callback invoked in case of an error.
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.startContinuousRecognitionAsyncImpl
+    name: >-
+      startContinuousRecognitionAsyncImpl(RecognitionMode, () => void, (e:
+      string) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function startContinuousRecognitionAsyncImpl(recognitionMode:
+        RecognitionMode, cb?: () => void, err?: (e: string) => void)
+      parameters:
+        - id: recognitionMode
+          type:
+            - microsoft-cognitiveservices-speech-sdk.RecognitionMode
+          description: ''
+        - id: cb
+          type:
+            - () => void
+          description: ''
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: ''
           optional: true
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
@@ -356,6 +419,7 @@ items:
           - >-
             (sender: TranslationRecognizer, event:
             TranslationSynthesisEventArgs) => void
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.targetLanguages
@@ -372,10 +436,13 @@ items:
       The language is specified in BCP-47 format. The translation will provide
       translated text for each of language.
     syntax:
-      content: 'public targetLanguages: string[]'
+      content: 'string[] targetLanguages'
       return:
         type:
           - 'string[]'
+        description: >-
+          Gets target languages for translation that were set when the
+          recognizer was created.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.telemetryEnabled
@@ -387,10 +454,11 @@ items:
     type: property
     summary: This method returns the current state of the telemetry setting.
     syntax:
-      content: 'public static telemetryEnabled: boolean'
+      content: static boolean telemetryEnabled
       return:
         type:
           - boolean
+        description: 'true if the telemetry is enabled, false otherwise.'
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.constructor
     name: 'TranslationRecognizer(SpeechTranslationConfig, AudioConfig)'
@@ -424,10 +492,11 @@ items:
     type: property
     summary: Gets the name of output voice.
     syntax:
-      content: 'public voiceName: string'
+      content: string voiceName
       return:
         type:
           - string
+        description: the name of output voice.
     package: microsoft-cognitiveservices-speech-sdk
 references:
   - uid: microsoft-cognitiveservices-speech-sdk.Recognizer
@@ -454,3 +523,9 @@ references:
       - name: PropertyCollection
         fullName: PropertyCollection
         uid: microsoft-cognitiveservices-speech-sdk.PropertyCollection
+  - uid: microsoft-cognitiveservices-speech-sdk.RecognitionMode
+    name: RecognitionMode
+    spec.typeScript:
+      - name: RecognitionMode
+        fullName: RecognitionMode
+        uid: microsoft-cognitiveservices-speech-sdk.RecognitionMode

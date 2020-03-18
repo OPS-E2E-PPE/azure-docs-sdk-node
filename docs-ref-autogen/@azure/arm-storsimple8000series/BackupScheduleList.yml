@@ -11,12 +11,13 @@ items:
       - '@azure/arm-storsimple8000series.BackupScheduleList.entries'
       - '@azure/arm-storsimple8000series.BackupScheduleList.every'
       - '@azure/arm-storsimple8000series.BackupScheduleList.fill'
-      - '@azure/arm-storsimple8000series.BackupScheduleList.filter_1'
       - '@azure/arm-storsimple8000series.BackupScheduleList.filter'
+      - '@azure/arm-storsimple8000series.BackupScheduleList.filter_1'
       - '@azure/arm-storsimple8000series.BackupScheduleList.find'
       - '@azure/arm-storsimple8000series.BackupScheduleList.find_1'
       - '@azure/arm-storsimple8000series.BackupScheduleList.findIndex'
       - '@azure/arm-storsimple8000series.BackupScheduleList.forEach'
+      - '@azure/arm-storsimple8000series.BackupScheduleList.includes'
       - '@azure/arm-storsimple8000series.BackupScheduleList.indexOf'
       - '@azure/arm-storsimple8000series.BackupScheduleList.join'
       - '@azure/arm-storsimple8000series.BackupScheduleList.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.concat'
     name: 'concat(ConcatArray<BackupSchedule>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.every'
     name: >-
       every((value: BackupSchedule, index: number, array: BackupSchedule[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -170,13 +176,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: BackupSchedule, index: number, array:
-        BackupSchedule[]) => boolean, thisArg?: any)
+        BackupSchedule[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: BackupSchedule, index: number, array: BackupSchedule[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.fill'
     name: 'fill(BackupSchedule, undefined | number, undefined | number)'
@@ -232,43 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-storsimple8000series'
-  - uid: '@azure/arm-storsimple8000series.BackupScheduleList.filter_1'
-    name: >-
-      filter((value: BackupSchedule, index: number, array: BackupSchedule[]) =>
-      any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: BackupSchedule, index: number,
-        array: BackupSchedule[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: BackupSchedule, index: number, array: BackupSchedule[]) =>
-              any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-storsimple8000series.BackupSchedule[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.filter'
     name: >-
@@ -306,6 +277,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-storsimple8000series'
+  - uid: '@azure/arm-storsimple8000series.BackupScheduleList.filter_1'
+    name: >-
+      filter((value: BackupSchedule, index: number, array: BackupSchedule[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: BackupSchedule, index: number,
+        array: BackupSchedule[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: BackupSchedule, index: number, array: BackupSchedule[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-storsimple8000series.BackupSchedule[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.find'
     name: >-
@@ -351,30 +361,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.find_1'
     name: >-
       find((value: BackupSchedule, index: number, obj: BackupSchedule[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: BackupSchedule, index: number, obj:
-        BackupSchedule[]) => boolean, thisArg?: any)
+        BackupSchedule[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: BackupSchedule, index: number, obj: BackupSchedule[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -384,11 +391,12 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule | undefined'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.findIndex'
     name: >-
       findIndex((value: BackupSchedule, index: number, obj: BackupSchedule[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -401,13 +409,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: BackupSchedule, index: number,
-        obj: BackupSchedule[]) => boolean, thisArg?: any)
+        obj: BackupSchedule[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: BackupSchedule, index: number, obj: BackupSchedule[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -429,6 +437,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.forEach'
     name: >-
@@ -461,6 +470,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-storsimple8000series'
+  - uid: '@azure/arm-storsimple8000series.BackupScheduleList.includes'
+    name: 'includes(BackupSchedule, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: BackupSchedule, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-storsimple8000series.BackupSchedule'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.indexOf'
     name: 'indexOf(BackupSchedule, undefined | number)'
     children: []
@@ -487,6 +526,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.join'
     name: join(undefined | string)
@@ -511,6 +551,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.keys'
     name: keys()
@@ -525,6 +566,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.lastIndexOf'
     name: 'lastIndexOf(BackupSchedule, undefined | number)'
@@ -552,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.length'
     name: length
@@ -568,6 +611,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.map'
     name: >-
@@ -604,6 +648,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.pop'
     name: pop()
@@ -618,6 +663,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule | undefined'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.push'
     name: 'push(BackupSchedule[])'
@@ -637,6 +683,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.reduce'
     name: >-
@@ -668,6 +715,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.reduce_1'
     name: >-
@@ -678,10 +726,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: BackupSchedule,
@@ -701,6 +746,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.reduce_2'
     name: >-
@@ -739,6 +785,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.reduceRight'
     name: >-
@@ -771,6 +818,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.reduceRight_1'
     name: >-
@@ -781,11 +829,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: BackupSchedule,
@@ -805,6 +849,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.reduceRight_2'
     name: >-
@@ -844,6 +889,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.reverse'
     name: reverse()
@@ -858,6 +904,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.shift'
     name: shift()
@@ -872,6 +919,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule | undefined'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -897,11 +945,12 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.some'
     name: >-
       some((value: BackupSchedule, index: number, array: BackupSchedule[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -912,13 +961,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: BackupSchedule, index: number, array:
-        BackupSchedule[]) => boolean, thisArg?: any)
+        BackupSchedule[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: BackupSchedule, index: number, array: BackupSchedule[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -934,6 +983,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.sort'
     name: 'sort(undefined | (a: BackupSchedule, b: BackupSchedule) => number)'
@@ -958,6 +1008,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.splice_1'
     name: 'splice(number, number, BackupSchedule[])'
@@ -991,6 +1042,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.splice'
     name: 'splice(number, undefined | number)'
@@ -1019,6 +1071,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.BackupSchedule[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.toLocaleString'
     name: toLocaleString()
@@ -1035,6 +1088,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.toString'
     name: toString()
@@ -1049,6 +1103,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.unshift'
     name: 'unshift(BackupSchedule[])'
@@ -1068,6 +1123,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.BackupScheduleList.values'
     name: values()
@@ -1082,6 +1138,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-storsimple8000series.BackupSchedule>
+        description: ''
     package: '@azure/arm-storsimple8000series'
 references:
   - uid: Array<@azure/arm-storsimple8000series.BackupSchedule>

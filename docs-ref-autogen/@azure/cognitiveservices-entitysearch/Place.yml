@@ -18,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 'Defines information about a local entity, such as a restaurant or hotel.'
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.Place.address'
     name: address
@@ -27,13 +27,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The postal address of where the entity is located
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'address?: PostalAddress'
       return:
         type:
           - '@azure/cognitiveservices-entitysearch.PostalAddress'
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.Place.bingId'
     name: bingId
@@ -42,13 +47,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      An ID that uniquely identifies this item.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'bingId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.Place.contractualRules'
     name: contractualRules
@@ -57,7 +67,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A list of rules that you must adhere to if you display the item.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'contractualRules?: ContractualRulesContractualRuleUnion[]'
@@ -65,6 +79,7 @@ items:
         type:
           - >-
             @azure/cognitiveservices-entitysearch.ContractualRulesContractualRuleUnion[]
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.Place.description'
     name: description
@@ -73,13 +88,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A short description of the item.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.Place.entityPresentationInfo'
     name: entityPresentationInfo
@@ -88,13 +108,24 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Additional information about the entity such as hints that you can use to
+      determine the
+
+      entity's type. To determine the entity's type, use the entityScenario and
+      entityTypeHint
+
+      fields.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'entityPresentationInfo?: EntitiesEntityPresentationInfo'
       return:
         type:
           - '@azure/cognitiveservices-entitysearch.EntitiesEntityPresentationInfo'
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.Place.id'
     name: id
@@ -103,13 +134,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A String identifier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.Place.image'
     name: image
@@ -118,13 +154,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'image?: ImageObject'
       return:
         type:
           - '@azure/cognitiveservices-entitysearch.ImageObject'
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.Place.name'
     name: name
@@ -133,13 +172,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the thing represented by this object.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.Place.telephone'
     name: telephone
@@ -148,13 +192,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The entity's telephone number
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'telephone?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.Place.url'
     name: url
@@ -163,13 +212,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The URL to get more information about the thing represented by this
+      object.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'url?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
   - uid: '@azure/cognitiveservices-entitysearch.Place.webSearchUrl'
     name: webSearchUrl
@@ -178,13 +233,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The URL To Bing's search result for this item.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'webSearchUrl?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-entitysearch'
 references:
   - uid: '@azure/cognitiveservices-entitysearch.PostalAddress'

@@ -26,13 +26,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.IPConfiguration.id'
     name: id
@@ -48,6 +53,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.IPConfiguration.name'
     name: name
@@ -67,6 +73,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.IPConfiguration.privateIPAddress'
     name: privateIPAddress
@@ -82,6 +89,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.IPConfiguration.privateIPAllocationMethod'
     name: privateIPAllocationMethod
@@ -99,6 +107,7 @@ items:
       return:
         type:
           - '@azure/arm-network.IPAllocationMethod'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.IPConfiguration.provisioningState'
     name: provisioningState
@@ -108,16 +117,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets the provisioning state of the public IP resource. Possible values
-      are: 'Updating',
+      The provisioning state of the IP configuration resource. Possible values
+      include: 'Succeeded',
 
-      'Deleting', and 'Failed'.
+      'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.IPConfiguration.publicIPAddress'
     name: publicIPAddress
@@ -133,6 +146,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PublicIPAddress'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.IPConfiguration.subnet'
     name: subnet
@@ -148,6 +162,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Subnet'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -162,6 +177,12 @@ references:
       - name: IPAllocationMethod
         fullName: IPAllocationMethod
         uid: '@azure/arm-network.IPAllocationMethod'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.PublicIPAddress'
     name: PublicIPAddress
     spec.typeScript:

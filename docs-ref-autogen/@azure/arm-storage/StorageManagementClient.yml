@@ -10,10 +10,14 @@ items:
       - '@azure/arm-storage.StorageManagementClient.blobContainers'
       - '@azure/arm-storage.StorageManagementClient.blobServices'
       - '@azure/arm-storage.StorageManagementClient.credentials'
+      - '@azure/arm-storage.StorageManagementClient.fileServices'
+      - '@azure/arm-storage.StorageManagementClient.fileShares'
       - >-
         @azure/arm-storage.StorageManagementClient.longRunningOperationRetryTimeout
       - '@azure/arm-storage.StorageManagementClient.managementPolicies'
       - '@azure/arm-storage.StorageManagementClient.operations'
+      - '@azure/arm-storage.StorageManagementClient.privateEndpointConnections'
+      - '@azure/arm-storage.StorageManagementClient.privateLinkResources'
       - '@azure/arm-storage.StorageManagementClient.restoreLROPoller'
       - '@azure/arm-storage.StorageManagementClient.sendLongRunningRequest'
       - '@azure/arm-storage.StorageManagementClient.sendLRORequest'
@@ -44,6 +48,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.apiVersion'
     name: apiVersion
@@ -59,6 +64,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.beginLongRunningRequest'
     name: >-
@@ -92,6 +98,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: |-
+          The HttpLongRunningOperationResponse
+          that provides methods for interacting with the LRO.
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.blobContainers'
     name: blobContainers
@@ -106,6 +115,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.BlobContainers'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.blobServices'
     name: blobServices
@@ -120,6 +130,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.BlobServices'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.credentials'
     name: credentials
@@ -134,6 +145,37 @@ items:
       return:
         type:
           - ServiceClientCredentials
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageManagementClient.fileServices'
+    name: fileServices
+    fullName: fileServices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'fileServices: FileServices'
+      return:
+        type:
+          - '@azure/arm-storage.FileServices'
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageManagementClient.fileShares'
+    name: fileShares
+    fullName: fileShares
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'fileShares: FileShares'
+      return:
+        type:
+          - '@azure/arm-storage.FileShares'
+        description: ''
     package: '@azure/arm-storage'
   - uid: >-
       @azure/arm-storage.StorageManagementClient.longRunningOperationRetryTimeout
@@ -152,6 +194,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.managementPolicies'
     name: managementPolicies
@@ -166,6 +209,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.ManagementPolicies'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.operations'
     name: operations
@@ -180,6 +224,37 @@ items:
       return:
         type:
           - '@azure/arm-storage.Operations'
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageManagementClient.privateEndpointConnections'
+    name: privateEndpointConnections
+    fullName: privateEndpointConnections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'privateEndpointConnections: PrivateEndpointConnections'
+      return:
+        type:
+          - '@azure/arm-storage.PrivateEndpointConnections'
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageManagementClient.privateLinkResources'
+    name: privateLinkResources
+    fullName: privateLinkResources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'privateLinkResources: PrivateLinkResources'
+      return:
+        type:
+          - '@azure/arm-storage.PrivateLinkResources'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.restoreLROPoller'
     name: restoreLROPoller(LROPollState)
@@ -202,6 +277,7 @@ items:
       return:
         type:
           - LROPoller
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.sendLongRunningRequest'
     name: >-
@@ -231,6 +307,9 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: >-
+          The HttpOperationResponse containing the final polling request,
+          response and the responseBody.
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.sendLRORequest'
     name: 'sendLRORequest(OperationArguments, OperationSpec, RequestOptionsBase)'
@@ -264,6 +343,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: >-
+          The LROPoller object that provides methods for interacting with the
+          LRO.
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.sendOperationRequest'
     name: >-
@@ -298,6 +380,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.sendRequest'
     name: sendRequest(RequestPrepareOptions | WebResource)
@@ -316,6 +399,7 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.skus'
     name: skus
@@ -330,6 +414,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Skus'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.storageAccounts'
     name: storageAccounts
@@ -344,6 +429,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.StorageAccounts'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.constructor'
     name: >-
@@ -386,6 +472,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageManagementClient.usages'
     name: usages
@@ -400,6 +487,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Usages'
+        description: ''
     package: '@azure/arm-storage'
 references:
   - uid: '@azure/arm-storage.StorageManagementClientContext'
@@ -420,6 +508,18 @@ references:
       - name: BlobServices
         fullName: BlobServices
         uid: '@azure/arm-storage.BlobServices'
+  - uid: '@azure/arm-storage.FileServices'
+    name: FileServices
+    spec.typeScript:
+      - name: FileServices
+        fullName: FileServices
+        uid: '@azure/arm-storage.FileServices'
+  - uid: '@azure/arm-storage.FileShares'
+    name: FileShares
+    spec.typeScript:
+      - name: FileShares
+        fullName: FileShares
+        uid: '@azure/arm-storage.FileShares'
   - uid: '@azure/arm-storage.ManagementPolicies'
     name: ManagementPolicies
     spec.typeScript:
@@ -432,6 +532,18 @@ references:
       - name: Operations
         fullName: Operations
         uid: '@azure/arm-storage.Operations'
+  - uid: '@azure/arm-storage.PrivateEndpointConnections'
+    name: PrivateEndpointConnections
+    spec.typeScript:
+      - name: PrivateEndpointConnections
+        fullName: PrivateEndpointConnections
+        uid: '@azure/arm-storage.PrivateEndpointConnections'
+  - uid: '@azure/arm-storage.PrivateLinkResources'
+    name: PrivateLinkResources
+    spec.typeScript:
+      - name: PrivateLinkResources
+        fullName: PrivateLinkResources
+        uid: '@azure/arm-storage.PrivateLinkResources'
   - uid: '@azure/arm-storage.Skus'
     name: Skus
     spec.typeScript:

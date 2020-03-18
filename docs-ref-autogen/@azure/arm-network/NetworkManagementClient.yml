@@ -13,11 +13,12 @@ items:
       - '@azure/arm-network.NetworkManagementClient.availablePrivateEndpointTypes'
       - >-
         @azure/arm-network.NetworkManagementClient.availableResourceGroupDelegations
-      - >-
-        @azure/arm-network.NetworkManagementClient.availableResourceGroupPrivateEndpointTypes
+      - '@azure/arm-network.NetworkManagementClient.availableServiceAliases'
       - '@azure/arm-network.NetworkManagementClient.azureFirewallFqdnTags'
       - '@azure/arm-network.NetworkManagementClient.azureFirewalls'
       - '@azure/arm-network.NetworkManagementClient.bastionHosts'
+      - >-
+        @azure/arm-network.NetworkManagementClient.beginGeneratevirtualwanvpnserverconfigurationvpnprofile
       - '@azure/arm-network.NetworkManagementClient.beginLongRunningRequest'
       - '@azure/arm-network.NetworkManagementClient.bgpServiceCommunities'
       - '@azure/arm-network.NetworkManagementClient.checkDnsNameAvailability'
@@ -43,8 +44,13 @@ items:
       - '@azure/arm-network.NetworkManagementClient.expressRoutePorts'
       - '@azure/arm-network.NetworkManagementClient.expressRoutePortsLocations'
       - '@azure/arm-network.NetworkManagementClient.expressRouteServiceProviders'
+      - '@azure/arm-network.NetworkManagementClient.firewallPolicies'
+      - '@azure/arm-network.NetworkManagementClient.firewallPolicyRuleGroups'
+      - >-
+        @azure/arm-network.NetworkManagementClient.generatevirtualwanvpnserverconfigurationvpnprofile
       - '@azure/arm-network.NetworkManagementClient.hubVirtualNetworkConnections'
       - '@azure/arm-network.NetworkManagementClient.inboundNatRules'
+      - '@azure/arm-network.NetworkManagementClient.ipGroups'
       - >-
         @azure/arm-network.NetworkManagementClient.loadBalancerBackendAddressPools
       - >-
@@ -71,7 +77,6 @@ items:
       - '@azure/arm-network.NetworkManagementClient.networkWatchers'
       - '@azure/arm-network.NetworkManagementClient.operations'
       - '@azure/arm-network.NetworkManagementClient.p2sVpnGateways'
-      - '@azure/arm-network.NetworkManagementClient.p2sVpnServerConfigurations'
       - '@azure/arm-network.NetworkManagementClient.packetCaptures'
       - >-
         @azure/arm-network.NetworkManagementClient.peerExpressRouteCircuitConnections
@@ -101,6 +106,7 @@ items:
       - '@azure/arm-network.NetworkManagementClient.supportedSecurityProviders_2'
       - '@azure/arm-network.NetworkManagementClient.supportedSecurityProviders_1'
       - '@azure/arm-network.NetworkManagementClient.usages'
+      - '@azure/arm-network.NetworkManagementClient.virtualHubRouteTableV2s'
       - '@azure/arm-network.NetworkManagementClient.virtualHubs'
       - >-
         @azure/arm-network.NetworkManagementClient.virtualNetworkGatewayConnections
@@ -108,9 +114,17 @@ items:
       - '@azure/arm-network.NetworkManagementClient.virtualNetworkPeerings'
       - '@azure/arm-network.NetworkManagementClient.virtualNetworks'
       - '@azure/arm-network.NetworkManagementClient.virtualNetworkTaps'
+      - '@azure/arm-network.NetworkManagementClient.virtualRouterPeerings'
+      - '@azure/arm-network.NetworkManagementClient.virtualRouters'
       - '@azure/arm-network.NetworkManagementClient.virtualWans'
       - '@azure/arm-network.NetworkManagementClient.vpnConnections'
       - '@azure/arm-network.NetworkManagementClient.vpnGateways'
+      - '@azure/arm-network.NetworkManagementClient.vpnLinkConnections'
+      - '@azure/arm-network.NetworkManagementClient.vpnServerConfigurations'
+      - >-
+        @azure/arm-network.NetworkManagementClient.vpnServerConfigurationsAssociatedWithVirtualWan
+      - '@azure/arm-network.NetworkManagementClient.vpnSiteLinkConnections'
+      - '@azure/arm-network.NetworkManagementClient.vpnSiteLinks'
       - '@azure/arm-network.NetworkManagementClient.vpnSites'
       - '@azure/arm-network.NetworkManagementClient.vpnSitesConfiguration'
       - >-
@@ -135,6 +149,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.apiVersion'
     name: apiVersion
@@ -150,6 +165,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.applicationGateways'
     name: applicationGateways
@@ -164,6 +180,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGateways'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.applicationSecurityGroups'
     name: applicationSecurityGroups
@@ -178,6 +195,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationSecurityGroups'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.availableDelegations'
     name: availableDelegations
@@ -192,6 +210,7 @@ items:
       return:
         type:
           - '@azure/arm-network.AvailableDelegations'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.availableEndpointServices'
     name: availableEndpointServices
@@ -206,6 +225,7 @@ items:
       return:
         type:
           - '@azure/arm-network.AvailableEndpointServices'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.availablePrivateEndpointTypes'
     name: availablePrivateEndpointTypes
@@ -220,6 +240,7 @@ items:
       return:
         type:
           - '@azure/arm-network.AvailablePrivateEndpointTypes'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkManagementClient.availableResourceGroupDelegations
@@ -235,23 +256,22 @@ items:
       return:
         type:
           - '@azure/arm-network.AvailableResourceGroupDelegations'
+        description: ''
     package: '@azure/arm-network'
-  - uid: >-
-      @azure/arm-network.NetworkManagementClient.availableResourceGroupPrivateEndpointTypes
-    name: availableResourceGroupPrivateEndpointTypes
-    fullName: availableResourceGroupPrivateEndpointTypes
+  - uid: '@azure/arm-network.NetworkManagementClient.availableServiceAliases'
+    name: availableServiceAliases
+    fullName: availableServiceAliases
     children: []
     langs:
       - typeScript
     type: property
     summary: ''
     syntax:
-      content: >-
-        availableResourceGroupPrivateEndpointTypes:
-        AvailableResourceGroupPrivateEndpointTypes
+      content: 'availableServiceAliases: AvailableServiceAliases'
       return:
         type:
-          - '@azure/arm-network.AvailableResourceGroupPrivateEndpointTypes'
+          - '@azure/arm-network.AvailableServiceAliases'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.azureFirewallFqdnTags'
     name: azureFirewallFqdnTags
@@ -266,6 +286,7 @@ items:
       return:
         type:
           - '@azure/arm-network.AzureFirewallFqdnTags'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.azureFirewalls'
     name: azureFirewalls
@@ -280,6 +301,7 @@ items:
       return:
         type:
           - '@azure/arm-network.AzureFirewalls'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.bastionHosts'
     name: bastionHosts
@@ -294,6 +316,58 @@ items:
       return:
         type:
           - '@azure/arm-network.BastionHosts'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.NetworkManagementClient.beginGeneratevirtualwanvpnserverconfigurationvpnprofile
+    name: >-
+      beginGeneratevirtualwanvpnserverconfigurationvpnprofile(string, string,
+      VirtualWanVpnProfileParameters, msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Generates a unique VPN profile for P2S clients for VirtualWan and
+      associated
+
+      VpnServerConfiguration combination in the specified resource group.
+    syntax:
+      content: >-
+        function
+        beginGeneratevirtualwanvpnserverconfigurationvpnprofile(resourceGroupName:
+        string, virtualWANName: string, vpnClientParams:
+        VirtualWanVpnProfileParameters, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: virtualWANName
+          type:
+            - string
+          description: >-
+            The name of the VirtualWAN whose associated VpnServerConfigurations
+            is
+
+            needed.
+        - id: vpnClientParams
+          type:
+            - '@azure/arm-network.VirtualWanVpnProfileParameters'
+          description: >-
+            Parameters supplied to the generate VirtualWan VPN profile
+            generation
+
+            operation.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.beginLongRunningRequest'
     name: >-
@@ -327,6 +401,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: |-
+          The HttpLongRunningOperationResponse
+          that provides methods for interacting with the LRO.
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.bgpServiceCommunities'
     name: bgpServiceCommunities
@@ -341,6 +418,7 @@ items:
       return:
         type:
           - '@azure/arm-network.BgpServiceCommunities'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.checkDnsNameAvailability'
     name: 'checkDnsNameAvailability(string, string, msRest.RequestOptionsBase)'
@@ -376,6 +454,7 @@ items:
       return:
         type:
           - Promise<Models.CheckDnsNameAvailabilityResponse>
+        description: Promise<Models.CheckDnsNameAvailabilityResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.checkDnsNameAvailability_2'
     name: >-
@@ -413,9 +492,6 @@ items:
             - ServiceCallback<@azure/arm-network.DnsNameAvailabilityResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.CheckDnsNameAvailabilityResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.checkDnsNameAvailability_1'
     name: >-
@@ -448,9 +524,6 @@ items:
             - ServiceCallback<@azure/arm-network.DnsNameAvailabilityResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.CheckDnsNameAvailabilityResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.connectionMonitors'
     name: connectionMonitors
@@ -465,6 +538,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ConnectionMonitors'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.credentials'
     name: credentials
@@ -479,6 +553,7 @@ items:
       return:
         type:
           - ServiceClientCredentials
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.ddosCustomPolicies'
     name: ddosCustomPolicies
@@ -493,6 +568,7 @@ items:
       return:
         type:
           - '@azure/arm-network.DdosCustomPolicies'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.ddosProtectionPlans'
     name: ddosProtectionPlans
@@ -507,6 +583,7 @@ items:
       return:
         type:
           - '@azure/arm-network.DdosProtectionPlans'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.defaultSecurityRules'
     name: defaultSecurityRules
@@ -521,6 +598,7 @@ items:
       return:
         type:
           - '@azure/arm-network.DefaultSecurityRules'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkManagementClient.expressRouteCircuitAuthorizations
@@ -536,6 +614,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuitAuthorizations'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.expressRouteCircuitConnections'
     name: expressRouteCircuitConnections
@@ -550,6 +629,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuitConnections'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.expressRouteCircuitPeerings'
     name: expressRouteCircuitPeerings
@@ -564,6 +644,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuitPeerings'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.expressRouteCircuits'
     name: expressRouteCircuits
@@ -578,6 +659,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCircuits'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.expressRouteConnections'
     name: expressRouteConnections
@@ -592,6 +674,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteConnections'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkManagementClient.expressRouteCrossConnectionPeerings
@@ -607,6 +690,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnectionPeerings'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.expressRouteCrossConnections'
     name: expressRouteCrossConnections
@@ -621,6 +705,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteCrossConnections'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.expressRouteGateways'
     name: expressRouteGateways
@@ -635,6 +720,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteGateways'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.expressRouteLinks'
     name: expressRouteLinks
@@ -649,6 +735,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteLinks'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.expressRoutePorts'
     name: expressRoutePorts
@@ -663,6 +750,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePorts'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.expressRoutePortsLocations'
     name: expressRoutePortsLocations
@@ -677,6 +765,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRoutePortsLocations'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.expressRouteServiceProviders'
     name: expressRouteServiceProviders
@@ -691,6 +780,90 @@ items:
       return:
         type:
           - '@azure/arm-network.ExpressRouteServiceProviders'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.firewallPolicies'
+    name: firewallPolicies
+    fullName: firewallPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'firewallPolicies: FirewallPolicies'
+      return:
+        type:
+          - '@azure/arm-network.FirewallPolicies'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.firewallPolicyRuleGroups'
+    name: firewallPolicyRuleGroups
+    fullName: firewallPolicyRuleGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'firewallPolicyRuleGroups: FirewallPolicyRuleGroups'
+      return:
+        type:
+          - '@azure/arm-network.FirewallPolicyRuleGroups'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.NetworkManagementClient.generatevirtualwanvpnserverconfigurationvpnprofile
+    name: >-
+      generatevirtualwanvpnserverconfigurationvpnprofile(string, string,
+      VirtualWanVpnProfileParameters, msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Generates a unique VPN profile for P2S clients for VirtualWan and
+      associated
+
+      VpnServerConfiguration combination in the specified resource group.
+    syntax:
+      content: >-
+        function
+        generatevirtualwanvpnserverconfigurationvpnprofile(resourceGroupName:
+        string, virtualWANName: string, vpnClientParams:
+        VirtualWanVpnProfileParameters, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name.
+        - id: virtualWANName
+          type:
+            - string
+          description: >-
+            The name of the VirtualWAN whose associated VpnServerConfigurations
+            is
+
+            needed.
+        - id: vpnClientParams
+          type:
+            - '@azure/arm-network.VirtualWanVpnProfileParameters'
+          description: >-
+            Parameters supplied to the generate VirtualWan VPN profile
+            generation
+
+            operation.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<Models.GeneratevirtualwanvpnserverconfigurationvpnprofileResponse>
+        description: >-
+          Promise<Models.GeneratevirtualwanvpnserverconfigurationvpnprofileResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.hubVirtualNetworkConnections'
     name: hubVirtualNetworkConnections
@@ -705,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-network.HubVirtualNetworkConnections'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.inboundNatRules'
     name: inboundNatRules
@@ -719,6 +893,22 @@ items:
       return:
         type:
           - '@azure/arm-network.InboundNatRules'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.ipGroups'
+    name: ipGroups
+    fullName: ipGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'ipGroups: IpGroups'
+      return:
+        type:
+          - '@azure/arm-network.IpGroups'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.loadBalancerBackendAddressPools'
     name: loadBalancerBackendAddressPools
@@ -733,6 +923,7 @@ items:
       return:
         type:
           - '@azure/arm-network.LoadBalancerBackendAddressPools'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkManagementClient.loadBalancerFrontendIPConfigurations
@@ -750,6 +941,7 @@ items:
       return:
         type:
           - '@azure/arm-network.LoadBalancerFrontendIPConfigurations'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.loadBalancerLoadBalancingRules'
     name: loadBalancerLoadBalancingRules
@@ -764,6 +956,7 @@ items:
       return:
         type:
           - '@azure/arm-network.LoadBalancerLoadBalancingRules'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.loadBalancerNetworkInterfaces'
     name: loadBalancerNetworkInterfaces
@@ -778,6 +971,7 @@ items:
       return:
         type:
           - '@azure/arm-network.LoadBalancerNetworkInterfaces'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.loadBalancerOutboundRules'
     name: loadBalancerOutboundRules
@@ -792,6 +986,7 @@ items:
       return:
         type:
           - '@azure/arm-network.LoadBalancerOutboundRules'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.loadBalancerProbes'
     name: loadBalancerProbes
@@ -806,6 +1001,7 @@ items:
       return:
         type:
           - '@azure/arm-network.LoadBalancerProbes'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.loadBalancers'
     name: loadBalancers
@@ -820,6 +1016,7 @@ items:
       return:
         type:
           - '@azure/arm-network.LoadBalancers'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.localNetworkGateways'
     name: localNetworkGateways
@@ -834,6 +1031,7 @@ items:
       return:
         type:
           - '@azure/arm-network.LocalNetworkGateways'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkManagementClient.longRunningOperationRetryTimeout
@@ -852,6 +1050,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.natGateways'
     name: natGateways
@@ -866,6 +1065,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NatGateways'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkManagementClient.networkInterfaceIPConfigurations
@@ -881,6 +1081,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfigurations'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.networkInterfaceLoadBalancers'
     name: networkInterfaceLoadBalancers
@@ -895,6 +1096,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceLoadBalancers'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.networkInterfaces'
     name: networkInterfaces
@@ -909,6 +1111,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaces'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkManagementClient.networkInterfaceTapConfigurations
@@ -924,6 +1127,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceTapConfigurations'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.constructor'
     name: >-
@@ -971,6 +1175,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkProfiles'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.networkSecurityGroups'
     name: networkSecurityGroups
@@ -985,6 +1190,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkSecurityGroups'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.networkWatchers'
     name: networkWatchers
@@ -999,6 +1205,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkWatchers'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.operations'
     name: operations
@@ -1013,6 +1220,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Operations'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.p2sVpnGateways'
     name: p2sVpnGateways
@@ -1027,20 +1235,7 @@ items:
       return:
         type:
           - '@azure/arm-network.P2sVpnGateways'
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.NetworkManagementClient.p2sVpnServerConfigurations'
-    name: p2sVpnServerConfigurations
-    fullName: p2sVpnServerConfigurations
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'p2sVpnServerConfigurations: P2sVpnServerConfigurations'
-      return:
-        type:
-          - '@azure/arm-network.P2sVpnServerConfigurations'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.packetCaptures'
     name: packetCaptures
@@ -1055,6 +1250,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PacketCaptures'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkManagementClient.peerExpressRouteCircuitConnections
@@ -1070,6 +1266,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PeerExpressRouteCircuitConnections'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.privateEndpoints'
     name: privateEndpoints
@@ -1084,6 +1281,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PrivateEndpoints'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.privateLinkServices'
     name: privateLinkServices
@@ -1098,6 +1296,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PrivateLinkServices'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.publicIPAddresses'
     name: publicIPAddresses
@@ -1112,6 +1311,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PublicIPAddresses'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.publicIPPrefixes'
     name: publicIPPrefixes
@@ -1126,6 +1326,7 @@ items:
       return:
         type:
           - '@azure/arm-network.PublicIPPrefixes'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.resourceNavigationLinks'
     name: resourceNavigationLinks
@@ -1140,6 +1341,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ResourceNavigationLinks'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.restoreLROPoller'
     name: restoreLROPoller(LROPollState)
@@ -1162,6 +1364,7 @@ items:
       return:
         type:
           - LROPoller
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.routeFilterRules'
     name: routeFilterRules
@@ -1176,6 +1379,7 @@ items:
       return:
         type:
           - '@azure/arm-network.RouteFilterRules'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.routeFilters'
     name: routeFilters
@@ -1190,6 +1394,7 @@ items:
       return:
         type:
           - '@azure/arm-network.RouteFilters'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.routes'
     name: routes
@@ -1204,6 +1409,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Routes'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.routeTables'
     name: routeTables
@@ -1218,6 +1424,7 @@ items:
       return:
         type:
           - '@azure/arm-network.RouteTables'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.securityRules'
     name: securityRules
@@ -1232,6 +1439,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SecurityRules'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.sendLongRunningRequest'
     name: >-
@@ -1261,6 +1469,9 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: >-
+          The HttpOperationResponse containing the final polling request,
+          response and the responseBody.
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.sendLRORequest'
     name: 'sendLRORequest(OperationArguments, OperationSpec, RequestOptionsBase)'
@@ -1294,6 +1505,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: >-
+          The LROPoller object that provides methods for interacting with the
+          LRO.
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.sendOperationRequest'
     name: >-
@@ -1328,6 +1542,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.sendRequest'
     name: sendRequest(RequestPrepareOptions | WebResource)
@@ -1346,6 +1561,7 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.serviceAssociationLinks'
     name: serviceAssociationLinks
@@ -1360,6 +1576,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ServiceAssociationLinks'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.serviceEndpointPolicies'
     name: serviceEndpointPolicies
@@ -1374,6 +1591,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ServiceEndpointPolicies'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkManagementClient.serviceEndpointPolicyDefinitions
@@ -1389,6 +1607,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ServiceEndpointPolicyDefinitions'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.serviceTags'
     name: serviceTags
@@ -1403,6 +1622,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ServiceTags'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.subnets'
     name: subnets
@@ -1417,6 +1637,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Subnets'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.subscriptionId'
     name: subscriptionId
@@ -1431,6 +1652,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.supportedSecurityProviders'
     name: 'supportedSecurityProviders(string, string, msRest.RequestOptionsBase)'
@@ -1464,6 +1686,7 @@ items:
       return:
         type:
           - Promise<Models.SupportedSecurityProvidersResponse>
+        description: Promise<Models.SupportedSecurityProvidersResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.supportedSecurityProviders_2'
     name: >-
@@ -1501,9 +1724,6 @@ items:
             - ServiceCallback<@azure/arm-network.VirtualWanSecurityProviders>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.SupportedSecurityProvidersResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.supportedSecurityProviders_1'
     name: >-
@@ -1537,9 +1757,6 @@ items:
             - ServiceCallback<@azure/arm-network.VirtualWanSecurityProviders>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.SupportedSecurityProvidersResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.usages'
     name: usages
@@ -1554,6 +1771,22 @@ items:
       return:
         type:
           - '@azure/arm-network.Usages'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.virtualHubRouteTableV2s'
+    name: virtualHubRouteTableV2s
+    fullName: virtualHubRouteTableV2s
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'virtualHubRouteTableV2s: VirtualHubRouteTableV2s'
+      return:
+        type:
+          - '@azure/arm-network.VirtualHubRouteTableV2s'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.virtualHubs'
     name: virtualHubs
@@ -1568,6 +1801,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualHubs'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkManagementClient.virtualNetworkGatewayConnections
@@ -1583,6 +1817,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnections'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.virtualNetworkGateways'
     name: virtualNetworkGateways
@@ -1597,6 +1832,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGateways'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.virtualNetworkPeerings'
     name: virtualNetworkPeerings
@@ -1611,6 +1847,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkPeerings'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.virtualNetworks'
     name: virtualNetworks
@@ -1625,6 +1862,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworks'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.virtualNetworkTaps'
     name: virtualNetworkTaps
@@ -1639,6 +1877,37 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTaps'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.virtualRouterPeerings'
+    name: virtualRouterPeerings
+    fullName: virtualRouterPeerings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'virtualRouterPeerings: VirtualRouterPeerings'
+      return:
+        type:
+          - '@azure/arm-network.VirtualRouterPeerings'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.virtualRouters'
+    name: virtualRouters
+    fullName: virtualRouters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'virtualRouters: VirtualRouters'
+      return:
+        type:
+          - '@azure/arm-network.VirtualRouters'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.virtualWans'
     name: virtualWans
@@ -1653,6 +1922,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualWans'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.vpnConnections'
     name: vpnConnections
@@ -1667,6 +1937,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnections'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.vpnGateways'
     name: vpnGateways
@@ -1681,6 +1952,85 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnGateways'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.vpnLinkConnections'
+    name: vpnLinkConnections
+    fullName: vpnLinkConnections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'vpnLinkConnections: VpnLinkConnections'
+      return:
+        type:
+          - '@azure/arm-network.VpnLinkConnections'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.vpnServerConfigurations'
+    name: vpnServerConfigurations
+    fullName: vpnServerConfigurations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'vpnServerConfigurations: VpnServerConfigurations'
+      return:
+        type:
+          - '@azure/arm-network.VpnServerConfigurations'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.NetworkManagementClient.vpnServerConfigurationsAssociatedWithVirtualWan
+    name: vpnServerConfigurationsAssociatedWithVirtualWan
+    fullName: vpnServerConfigurationsAssociatedWithVirtualWan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: >-
+        vpnServerConfigurationsAssociatedWithVirtualWan:
+        VpnServerConfigurationsAssociatedWithVirtualWan
+      return:
+        type:
+          - '@azure/arm-network.VpnServerConfigurationsAssociatedWithVirtualWan'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.vpnSiteLinkConnections'
+    name: vpnSiteLinkConnections
+    fullName: vpnSiteLinkConnections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'vpnSiteLinkConnections: VpnSiteLinkConnections'
+      return:
+        type:
+          - '@azure/arm-network.VpnSiteLinkConnections'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.vpnSiteLinks'
+    name: vpnSiteLinks
+    fullName: vpnSiteLinks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'vpnSiteLinks: VpnSiteLinks'
+      return:
+        type:
+          - '@azure/arm-network.VpnSiteLinks'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.vpnSites'
     name: vpnSites
@@ -1695,6 +2045,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnSites'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.vpnSitesConfiguration'
     name: vpnSitesConfiguration
@@ -1709,6 +2060,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnSitesConfiguration'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.webApplicationFirewallPolicies'
     name: webApplicationFirewallPolicies
@@ -1723,6 +2075,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicies'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -1767,12 +2120,12 @@ references:
       - name: AvailableResourceGroupDelegations
         fullName: AvailableResourceGroupDelegations
         uid: '@azure/arm-network.AvailableResourceGroupDelegations'
-  - uid: '@azure/arm-network.AvailableResourceGroupPrivateEndpointTypes'
-    name: AvailableResourceGroupPrivateEndpointTypes
+  - uid: '@azure/arm-network.AvailableServiceAliases'
+    name: AvailableServiceAliases
     spec.typeScript:
-      - name: AvailableResourceGroupPrivateEndpointTypes
-        fullName: AvailableResourceGroupPrivateEndpointTypes
-        uid: '@azure/arm-network.AvailableResourceGroupPrivateEndpointTypes'
+      - name: AvailableServiceAliases
+        fullName: AvailableServiceAliases
+        uid: '@azure/arm-network.AvailableServiceAliases'
   - uid: '@azure/arm-network.AzureFirewallFqdnTags'
     name: AzureFirewallFqdnTags
     spec.typeScript:
@@ -1893,6 +2246,18 @@ references:
       - name: ExpressRouteServiceProviders
         fullName: ExpressRouteServiceProviders
         uid: '@azure/arm-network.ExpressRouteServiceProviders'
+  - uid: '@azure/arm-network.FirewallPolicies'
+    name: FirewallPolicies
+    spec.typeScript:
+      - name: FirewallPolicies
+        fullName: FirewallPolicies
+        uid: '@azure/arm-network.FirewallPolicies'
+  - uid: '@azure/arm-network.FirewallPolicyRuleGroups'
+    name: FirewallPolicyRuleGroups
+    spec.typeScript:
+      - name: FirewallPolicyRuleGroups
+        fullName: FirewallPolicyRuleGroups
+        uid: '@azure/arm-network.FirewallPolicyRuleGroups'
   - uid: '@azure/arm-network.HubVirtualNetworkConnections'
     name: HubVirtualNetworkConnections
     spec.typeScript:
@@ -1905,6 +2270,12 @@ references:
       - name: InboundNatRules
         fullName: InboundNatRules
         uid: '@azure/arm-network.InboundNatRules'
+  - uid: '@azure/arm-network.IpGroups'
+    name: IpGroups
+    spec.typeScript:
+      - name: IpGroups
+        fullName: IpGroups
+        uid: '@azure/arm-network.IpGroups'
   - uid: '@azure/arm-network.LoadBalancerBackendAddressPools'
     name: LoadBalancerBackendAddressPools
     spec.typeScript:
@@ -2013,12 +2384,6 @@ references:
       - name: P2sVpnGateways
         fullName: P2sVpnGateways
         uid: '@azure/arm-network.P2sVpnGateways'
-  - uid: '@azure/arm-network.P2sVpnServerConfigurations'
-    name: P2sVpnServerConfigurations
-    spec.typeScript:
-      - name: P2sVpnServerConfigurations
-        fullName: P2sVpnServerConfigurations
-        uid: '@azure/arm-network.P2sVpnServerConfigurations'
   - uid: '@azure/arm-network.PacketCaptures'
     name: PacketCaptures
     spec.typeScript:
@@ -2127,6 +2492,12 @@ references:
       - name: Usages
         fullName: Usages
         uid: '@azure/arm-network.Usages'
+  - uid: '@azure/arm-network.VirtualHubRouteTableV2s'
+    name: VirtualHubRouteTableV2s
+    spec.typeScript:
+      - name: VirtualHubRouteTableV2s
+        fullName: VirtualHubRouteTableV2s
+        uid: '@azure/arm-network.VirtualHubRouteTableV2s'
   - uid: '@azure/arm-network.VirtualHubs'
     name: VirtualHubs
     spec.typeScript:
@@ -2163,6 +2534,18 @@ references:
       - name: VirtualNetworks
         fullName: VirtualNetworks
         uid: '@azure/arm-network.VirtualNetworks'
+  - uid: '@azure/arm-network.VirtualRouterPeerings'
+    name: VirtualRouterPeerings
+    spec.typeScript:
+      - name: VirtualRouterPeerings
+        fullName: VirtualRouterPeerings
+        uid: '@azure/arm-network.VirtualRouterPeerings'
+  - uid: '@azure/arm-network.VirtualRouters'
+    name: VirtualRouters
+    spec.typeScript:
+      - name: VirtualRouters
+        fullName: VirtualRouters
+        uid: '@azure/arm-network.VirtualRouters'
   - uid: '@azure/arm-network.VirtualWans'
     name: VirtualWans
     spec.typeScript:
@@ -2181,6 +2564,36 @@ references:
       - name: VpnGateways
         fullName: VpnGateways
         uid: '@azure/arm-network.VpnGateways'
+  - uid: '@azure/arm-network.VpnLinkConnections'
+    name: VpnLinkConnections
+    spec.typeScript:
+      - name: VpnLinkConnections
+        fullName: VpnLinkConnections
+        uid: '@azure/arm-network.VpnLinkConnections'
+  - uid: '@azure/arm-network.VpnServerConfigurations'
+    name: VpnServerConfigurations
+    spec.typeScript:
+      - name: VpnServerConfigurations
+        fullName: VpnServerConfigurations
+        uid: '@azure/arm-network.VpnServerConfigurations'
+  - uid: '@azure/arm-network.VpnServerConfigurationsAssociatedWithVirtualWan'
+    name: VpnServerConfigurationsAssociatedWithVirtualWan
+    spec.typeScript:
+      - name: VpnServerConfigurationsAssociatedWithVirtualWan
+        fullName: VpnServerConfigurationsAssociatedWithVirtualWan
+        uid: '@azure/arm-network.VpnServerConfigurationsAssociatedWithVirtualWan'
+  - uid: '@azure/arm-network.VpnSiteLinkConnections'
+    name: VpnSiteLinkConnections
+    spec.typeScript:
+      - name: VpnSiteLinkConnections
+        fullName: VpnSiteLinkConnections
+        uid: '@azure/arm-network.VpnSiteLinkConnections'
+  - uid: '@azure/arm-network.VpnSiteLinks'
+    name: VpnSiteLinks
+    spec.typeScript:
+      - name: VpnSiteLinks
+        fullName: VpnSiteLinks
+        uid: '@azure/arm-network.VpnSiteLinks'
   - uid: '@azure/arm-network.VpnSites'
     name: VpnSites
     spec.typeScript:
@@ -2199,6 +2612,12 @@ references:
       - name: WebApplicationFirewallPolicies
         fullName: WebApplicationFirewallPolicies
         uid: '@azure/arm-network.WebApplicationFirewallPolicies'
+  - uid: '@azure/arm-network.VirtualWanVpnProfileParameters'
+    name: VirtualWanVpnProfileParameters
+    spec.typeScript:
+      - name: VirtualWanVpnProfileParameters
+        fullName: VirtualWanVpnProfileParameters
+        uid: '@azure/arm-network.VirtualWanVpnProfileParameters'
   - uid: ServiceCallback<@azure/arm-network.DnsNameAvailabilityResult>
     name: DnsNameAvailabilityResult>
     spec.typeScript:

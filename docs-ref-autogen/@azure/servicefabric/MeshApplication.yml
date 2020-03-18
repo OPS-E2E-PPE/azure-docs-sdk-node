@@ -13,6 +13,9 @@ items:
       - '@azure/servicefabric.MeshApplication.get'
       - '@azure/servicefabric.MeshApplication.get_2'
       - '@azure/servicefabric.MeshApplication.get_1'
+      - '@azure/servicefabric.MeshApplication.getUpgradeProgress'
+      - '@azure/servicefabric.MeshApplication.getUpgradeProgress_2'
+      - '@azure/servicefabric.MeshApplication.getUpgradeProgress_1'
       - '@azure/servicefabric.MeshApplication.list'
       - '@azure/servicefabric.MeshApplication.list_2'
       - '@azure/servicefabric.MeshApplication.list_1'
@@ -60,6 +63,7 @@ items:
       return:
         type:
           - Promise<Models.MeshApplicationCreateOrUpdateResponse>
+        description: Promise<Models.MeshApplicationCreateOrUpdateResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.createOrUpdate_2'
     name: >-
@@ -95,9 +99,6 @@ items:
               ServiceCallback<@azure/servicefabric.ApplicationResourceDescription>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.MeshApplicationCreateOrUpdateResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.createOrUpdate_1'
     name: >-
@@ -128,9 +129,6 @@ items:
               ServiceCallback<@azure/servicefabric.ApplicationResourceDescription>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.MeshApplicationCreateOrUpdateResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.deleteMethod'
     name: 'deleteMethod(string, msRest.RequestOptionsBase)'
@@ -156,6 +154,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.deleteMethod_2'
     name: 'deleteMethod(string, RequestOptionsBase, ServiceCallback<void>)'
@@ -182,9 +181,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.deleteMethod_1'
     name: 'deleteMethod(string, ServiceCallback<void>)'
@@ -207,9 +203,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.get'
     name: 'get(string, msRest.RequestOptionsBase)'
@@ -239,6 +232,7 @@ items:
       return:
         type:
           - Promise<Models.MeshApplicationGetResponse>
+        description: Promise<Models.MeshApplicationGetResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.get_2'
     name: >-
@@ -269,9 +263,6 @@ items:
               ServiceCallback<@azure/servicefabric.ApplicationResourceDescription>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.MeshApplicationGetResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.get_1'
     name: 'get(string, ServiceCallback<ApplicationResourceDescription>)'
@@ -295,9 +286,94 @@ items:
               ServiceCallback<@azure/servicefabric.ApplicationResourceDescription>
           description: |
             The callback
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MeshApplication.getUpgradeProgress'
+    name: 'getUpgradeProgress(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets the upgrade progress information about the Application resource with
+      the given name. The
+
+      information include percentage of completion and other upgrade state
+      information of the
+
+      Application resource.
+    syntax:
+      content: >-
+        function getUpgradeProgress(applicationResourceName: string, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: applicationResourceName
+          type:
+            - string
+          description: The identity of the application.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.MeshApplicationGetResponse>
+          - Promise<Models.MeshApplicationGetUpgradeProgressResponse>
+        description: Promise<Models.MeshApplicationGetUpgradeProgressResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MeshApplication.getUpgradeProgress_2'
+    name: >-
+      getUpgradeProgress(string, RequestOptionsBase,
+      ServiceCallback<ApplicationResourceUpgradeProgressInfo>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getUpgradeProgress(applicationResourceName: string, options:
+        RequestOptionsBase, callback:
+        ServiceCallback<ApplicationResourceUpgradeProgressInfo>)
+      parameters:
+        - id: applicationResourceName
+          type:
+            - string
+          description: The identity of the application.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/servicefabric.ApplicationResourceUpgradeProgressInfo>
+          description: |
+            The callback
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MeshApplication.getUpgradeProgress_1'
+    name: >-
+      getUpgradeProgress(string,
+      ServiceCallback<ApplicationResourceUpgradeProgressInfo>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getUpgradeProgress(applicationResourceName: string, callback:
+        ServiceCallback<ApplicationResourceUpgradeProgressInfo>)
+      parameters:
+        - id: applicationResourceName
+          type:
+            - string
+          description: The identity of the application.
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/servicefabric.ApplicationResourceUpgradeProgressInfo>
+          description: |
+            The callback
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.list'
     name: list(msRest.RequestOptionsBase)
@@ -321,6 +397,7 @@ items:
       return:
         type:
           - Promise<Models.MeshApplicationListResponse>
+        description: Promise<Models.MeshApplicationListResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.list_2'
     name: >-
@@ -346,9 +423,6 @@ items:
               ServiceCallback<@azure/servicefabric.PagedApplicationResourceDescriptionList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.MeshApplicationListResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.list_1'
     name: list(ServiceCallback<PagedApplicationResourceDescriptionList>)
@@ -368,9 +442,6 @@ items:
               ServiceCallback<@azure/servicefabric.PagedApplicationResourceDescriptionList>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.MeshApplicationListResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.MeshApplication.constructor'
     name: MeshApplication(ServiceFabricClientContext)
@@ -409,6 +480,17 @@ references:
       - name: ApplicationResourceDescription
         fullName: ApplicationResourceDescription
         uid: '@azure/servicefabric.ApplicationResourceDescription'
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      ServiceCallback<@azure/servicefabric.ApplicationResourceUpgradeProgressInfo>
+    name: ApplicationResourceUpgradeProgressInfo>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ApplicationResourceUpgradeProgressInfo
+        fullName: ApplicationResourceUpgradeProgressInfo
+        uid: '@azure/servicefabric.ApplicationResourceUpgradeProgressInfo'
       - name: '>'
         fullName: '>'
   - uid: >-

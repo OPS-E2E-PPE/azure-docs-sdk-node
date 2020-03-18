@@ -11,12 +11,13 @@ items:
       - '@azure/graph.DomainListResult.entries'
       - '@azure/graph.DomainListResult.every'
       - '@azure/graph.DomainListResult.fill'
-      - '@azure/graph.DomainListResult.filter_1'
       - '@azure/graph.DomainListResult.filter'
+      - '@azure/graph.DomainListResult.filter_1'
       - '@azure/graph.DomainListResult.find'
       - '@azure/graph.DomainListResult.find_1'
       - '@azure/graph.DomainListResult.findIndex'
       - '@azure/graph.DomainListResult.forEach'
+      - '@azure/graph.DomainListResult.includes'
       - '@azure/graph.DomainListResult.indexOf'
       - '@azure/graph.DomainListResult.join'
       - '@azure/graph.DomainListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.concat'
     name: 'concat(ConcatArray<Domain>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/graph.Domain[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/graph.Domain[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.entries'
     name: entries()
@@ -157,9 +162,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.every'
-    name: 'every((value: Domain, index: number, array: Domain[]) => boolean, any)'
+    name: 'every((value: Domain, index: number, array: Domain[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -168,11 +174,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Domain, index: number, array:
-        Domain[]) => boolean, thisArg?: any)
+        Domain[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Domain, index: number, array: Domain[]) => boolean'
+            - '(value: Domain, index: number, array: Domain[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -188,6 +194,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.fill'
     name: 'fill(Domain, undefined | number, undefined | number)'
@@ -228,39 +235,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/graph'
-  - uid: '@azure/graph.DomainListResult.filter_1'
-    name: 'filter((value: Domain, index: number, array: Domain[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Domain, index: number, array:
-        Domain[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Domain, index: number, array: Domain[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/graph.Domain[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.filter'
     name: 'filter((value: Domain, index: number, array: Domain[]) => boolean, any)'
@@ -294,6 +269,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/graph'
+  - uid: '@azure/graph.DomainListResult.filter_1'
+    name: 'filter((value: Domain, index: number, array: Domain[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Domain, index: number, array:
+        Domain[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Domain, index: number, array: Domain[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/graph.Domain[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.find'
     name: >-
@@ -339,26 +349,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.find_1'
-    name: 'find((value: Domain, index: number, obj: Domain[]) => boolean, any)'
+    name: 'find((value: Domain, index: number, obj: Domain[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Domain, index: number, obj: Domain[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Domain, index: number, obj: Domain[]) => boolean'
+            - '(value: Domain, index: number, obj: Domain[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -368,9 +375,10 @@ items:
       return:
         type:
           - '@azure/graph.Domain | undefined'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.findIndex'
-    name: 'findIndex((value: Domain, index: number, obj: Domain[]) => boolean, any)'
+    name: 'findIndex((value: Domain, index: number, obj: Domain[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -383,11 +391,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Domain, index: number, obj:
-        Domain[]) => boolean, thisArg?: any)
+        Domain[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Domain, index: number, obj: Domain[]) => boolean'
+            - '(value: Domain, index: number, obj: Domain[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -409,6 +417,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.forEach'
     name: 'forEach((value: Domain, index: number, array: Domain[]) => void, any)'
@@ -437,6 +446,34 @@ items:
             value.
           optional: true
     package: '@azure/graph'
+  - uid: '@azure/graph.DomainListResult.includes'
+    name: 'includes(Domain, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Domain, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/graph.Domain'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.indexOf'
     name: 'indexOf(Domain, undefined | number)'
     children: []
@@ -461,6 +498,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.join'
     name: join(undefined | string)
@@ -485,6 +523,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.keys'
     name: keys()
@@ -499,6 +538,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.lastIndexOf'
     name: 'lastIndexOf(Domain, undefined | number)'
@@ -526,6 +566,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.length'
     name: length
@@ -542,6 +583,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.map'
     name: 'map((value: Domain, index: number, array: Domain[]) => U, any)'
@@ -574,6 +616,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.pop'
     name: pop()
@@ -588,6 +631,7 @@ items:
       return:
         type:
           - '@azure/graph.Domain | undefined'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.push'
     name: 'push(Domain[])'
@@ -607,6 +651,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.reduce'
     name: >-
@@ -637,6 +682,7 @@ items:
       return:
         type:
           - '@azure/graph.Domain'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.reduce_1'
     name: >-
@@ -646,10 +692,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Domain, currentValue:
@@ -669,6 +712,7 @@ items:
       return:
         type:
           - '@azure/graph.Domain'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.reduce_2'
     name: >-
@@ -706,6 +750,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.reduceRight'
     name: >-
@@ -737,6 +782,7 @@ items:
       return:
         type:
           - '@azure/graph.Domain'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.reduceRight_1'
     name: >-
@@ -746,11 +792,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Domain, currentValue:
@@ -770,6 +812,7 @@ items:
       return:
         type:
           - '@azure/graph.Domain'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.reduceRight_2'
     name: >-
@@ -808,6 +851,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.reverse'
     name: reverse()
@@ -822,6 +866,7 @@ items:
       return:
         type:
           - '@azure/graph.Domain[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.shift'
     name: shift()
@@ -836,6 +881,7 @@ items:
       return:
         type:
           - '@azure/graph.Domain | undefined'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -861,9 +907,10 @@ items:
       return:
         type:
           - '@azure/graph.Domain[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.some'
-    name: 'some((value: Domain, index: number, array: Domain[]) => boolean, any)'
+    name: 'some((value: Domain, index: number, array: Domain[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -874,11 +921,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Domain, index: number, array:
-        Domain[]) => boolean, thisArg?: any)
+        Domain[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Domain, index: number, array: Domain[]) => boolean'
+            - '(value: Domain, index: number, array: Domain[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -894,6 +941,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.sort'
     name: 'sort(undefined | (a: Domain, b: Domain) => number)'
@@ -916,6 +964,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.splice_1'
     name: 'splice(number, number, Domain[])'
@@ -947,6 +996,7 @@ items:
       return:
         type:
           - '@azure/graph.Domain[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -975,6 +1025,7 @@ items:
       return:
         type:
           - '@azure/graph.Domain[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.toLocaleString'
     name: toLocaleString()
@@ -991,6 +1042,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.toString'
     name: toString()
@@ -1005,6 +1057,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.unshift'
     name: 'unshift(Domain[])'
@@ -1024,6 +1077,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.DomainListResult.values'
     name: values()
@@ -1038,6 +1092,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/graph.Domain>
+        description: ''
     package: '@azure/graph'
 references:
   - uid: Array<@azure/graph.Domain>

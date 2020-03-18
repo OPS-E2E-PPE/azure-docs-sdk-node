@@ -6,17 +6,23 @@ items:
     children:
       - '@azure/arm-compute.VirtualMachineUpdate.additionalCapabilities'
       - '@azure/arm-compute.VirtualMachineUpdate.availabilitySet'
+      - '@azure/arm-compute.VirtualMachineUpdate.billingProfile'
       - '@azure/arm-compute.VirtualMachineUpdate.diagnosticsProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.evictionPolicy'
       - '@azure/arm-compute.VirtualMachineUpdate.hardwareProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.host'
       - '@azure/arm-compute.VirtualMachineUpdate.identity'
       - '@azure/arm-compute.VirtualMachineUpdate.instanceView'
       - '@azure/arm-compute.VirtualMachineUpdate.licenseType'
       - '@azure/arm-compute.VirtualMachineUpdate.networkProfile'
       - '@azure/arm-compute.VirtualMachineUpdate.osProfile'
       - '@azure/arm-compute.VirtualMachineUpdate.plan'
+      - '@azure/arm-compute.VirtualMachineUpdate.priority'
       - '@azure/arm-compute.VirtualMachineUpdate.provisioningState'
+      - '@azure/arm-compute.VirtualMachineUpdate.proximityPlacementGroup'
       - '@azure/arm-compute.VirtualMachineUpdate.storageProfile'
       - '@azure/arm-compute.VirtualMachineUpdate.tags'
+      - '@azure/arm-compute.VirtualMachineUpdate.virtualMachineScaleSet'
       - '@azure/arm-compute.VirtualMachineUpdate.vmId'
       - '@azure/arm-compute.VirtualMachineUpdate.zones'
     langs:
@@ -42,6 +48,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.AdditionalCapabilities'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.availabilitySet'
     name: availabilitySet
@@ -72,15 +79,43 @@ items:
       Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
 
       <br><br> Currently, a VM can only be added to availability set at creation
-      time. An existing
+      time. The
 
-      VM cannot be added to an availability set.
+      availability set to which the VM is being added should be under the same
+      resource group as the
+
+      availability set resource. An existing VM cannot be added to an
+      availability set. <br><br>This
+
+      property cannot exist along with a non-null
+      properties.virtualMachineScaleSet reference.
     optional: true
     syntax:
       content: 'availabilitySet?: SubResource'
       return:
         type:
           - '@azure/arm-compute.SubResource'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.billingProfile'
+    name: billingProfile
+    fullName: billingProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies the billing related details of a Azure Spot virtual machine.
+      <br><br>Minimum
+
+      api-version: 2019-03-01.
+    optional: true
+    syntax:
+      content: 'billingProfile?: BillingProfile'
+      return:
+        type:
+          - '@azure/arm-compute.BillingProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.diagnosticsProfile'
     name: diagnosticsProfile
@@ -98,6 +133,36 @@ items:
       return:
         type:
           - '@azure/arm-compute.DiagnosticsProfile'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.evictionPolicy'
+    name: evictionPolicy
+    fullName: evictionPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies the eviction policy for the Azure Spot virtual machine and Azure
+      Spot scale set.
+
+      <br><br>For Azure Spot virtual machines, the only supported value is
+      'Deallocate' and the
+
+      minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both
+      'Deallocate' and
+
+      'Delete' are supported and the minimum api-version is 2017-10-30-preview.
+      Possible values
+
+      include: 'Deallocate', 'Delete'
+    optional: true
+    syntax:
+      content: 'evictionPolicy?: VirtualMachineEvictionPolicyTypes'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineEvictionPolicyTypes'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.hardwareProfile'
     name: hardwareProfile
@@ -113,6 +178,27 @@ items:
       return:
         type:
           - '@azure/arm-compute.HardwareProfile'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.host'
+    name: host
+    fullName: host
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies information about the dedicated host that the virtual machine
+      resides in.
+
+      <br><br>Minimum api-version: 2018-10-01.
+    optional: true
+    syntax:
+      content: 'host?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.identity'
     name: identity
@@ -128,6 +214,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineIdentity'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.instanceView'
     name: instanceView
@@ -147,6 +234,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineInstanceView'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.licenseType'
     name: licenseType
@@ -180,6 +268,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.networkProfile'
     name: networkProfile
@@ -195,6 +284,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.NetworkProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.osProfile'
     name: osProfile
@@ -203,13 +293,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Specifies the operating system settings for the virtual machine.
+    summary: >-
+      Specifies the operating system settings used while creating the virtual
+      machine. Some of the
+
+      settings cannot be changed once VM is provisioned.
     optional: true
     syntax:
       content: 'osProfile?: OSProfile'
       return:
         type:
           - '@azure/arm-compute.OSProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.plan'
     name: plan
@@ -238,6 +333,27 @@ items:
       return:
         type:
           - '@azure/arm-compute.Plan'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies the priority for the virtual machine. <br><br>Minimum
+      api-version: 2019-03-01.
+
+      Possible values include: 'Regular', 'Low', 'Spot'
+    optional: true
+    syntax:
+      content: 'priority?: VirtualMachinePriorityTypes'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachinePriorityTypes'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.provisioningState'
     name: provisioningState
@@ -257,6 +373,27 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.proximityPlacementGroup'
+    name: proximityPlacementGroup
+    fullName: proximityPlacementGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies information about the proximity placement group that the virtual
+      machine should be
+
+      assigned to. <br><br>Minimum api-version: 2018-04-01.
+    optional: true
+    syntax:
+      content: 'proximityPlacementGroup?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.storageProfile'
     name: storageProfile
@@ -272,6 +409,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.StorageProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.tags'
     name: tags
@@ -287,6 +425,39 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.virtualMachineScaleSet'
+    name: virtualMachineScaleSet
+    fullName: virtualMachineScaleSet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies information about the virtual machine scale set that the virtual
+      machine should be
+
+      assigned to. Virtual machines specified in the same virtual machine scale
+      set are allocated to
+
+      different nodes to maximize availability. Currently, a VM can only be
+      added to virtual machine
+
+      scale set at creation time. An existing VM cannot be added to a virtual
+      machine scale set.
+
+      <br><br>This property cannot exist along with a non-null
+      properties.availabilitySet reference.
+
+      <br><br>Minimum api‐version: 2019‐03‐01
+    optional: true
+    syntax:
+      content: 'virtualMachineScaleSet?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.vmId'
     name: vmId
@@ -309,6 +480,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineUpdate.zones'
     name: zones
@@ -324,6 +496,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: '@azure/arm-compute.UpdateResource'
@@ -344,12 +517,24 @@ references:
       - name: SubResource
         fullName: SubResource
         uid: '@azure/arm-compute.SubResource'
+  - uid: '@azure/arm-compute.BillingProfile'
+    name: BillingProfile
+    spec.typeScript:
+      - name: BillingProfile
+        fullName: BillingProfile
+        uid: '@azure/arm-compute.BillingProfile'
   - uid: '@azure/arm-compute.DiagnosticsProfile'
     name: DiagnosticsProfile
     spec.typeScript:
       - name: DiagnosticsProfile
         fullName: DiagnosticsProfile
         uid: '@azure/arm-compute.DiagnosticsProfile'
+  - uid: '@azure/arm-compute.VirtualMachineEvictionPolicyTypes'
+    name: VirtualMachineEvictionPolicyTypes
+    spec.typeScript:
+      - name: VirtualMachineEvictionPolicyTypes
+        fullName: VirtualMachineEvictionPolicyTypes
+        uid: '@azure/arm-compute.VirtualMachineEvictionPolicyTypes'
   - uid: '@azure/arm-compute.HardwareProfile'
     name: HardwareProfile
     spec.typeScript:
@@ -386,6 +571,12 @@ references:
       - name: Plan
         fullName: Plan
         uid: '@azure/arm-compute.Plan'
+  - uid: '@azure/arm-compute.VirtualMachinePriorityTypes'
+    name: VirtualMachinePriorityTypes
+    spec.typeScript:
+      - name: VirtualMachinePriorityTypes
+        fullName: VirtualMachinePriorityTypes
+        uid: '@azure/arm-compute.VirtualMachinePriorityTypes'
   - uid: '@azure/arm-compute.StorageProfile'
     name: StorageProfile
     spec.typeScript:

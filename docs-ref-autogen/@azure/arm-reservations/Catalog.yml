@@ -4,6 +4,7 @@ items:
     name: Catalog
     fullName: Catalog
     children:
+      - '@azure/arm-reservations.Catalog.billingPlans'
       - '@azure/arm-reservations.Catalog.locations'
       - '@azure/arm-reservations.Catalog.name'
       - '@azure/arm-reservations.Catalog.resourceType'
@@ -14,6 +15,22 @@ items:
       - typeScript
     type: interface
     summary: An interface representing Catalog.
+    package: '@azure/arm-reservations'
+  - uid: '@azure/arm-reservations.Catalog.billingPlans'
+    name: billingPlans
+    fullName: billingPlans
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The billing plan options available for this SKU.
+    optional: true
+    syntax:
+      content: 'billingPlans?: undefined | [key: string]: function'
+      return:
+        type:
+          - 'undefined | [key: string]: function'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.Catalog.locations'
     name: locations
@@ -31,6 +48,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.Catalog.name'
     name: name
@@ -50,6 +68,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.Catalog.resourceType'
     name: resourceType
@@ -69,6 +88,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.Catalog.restrictions'
     name: restrictions
@@ -86,6 +106,7 @@ items:
       return:
         type:
           - '@azure/arm-reservations.SkuRestriction[]'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.Catalog.skuProperties'
     name: skuProperties
@@ -103,6 +124,7 @@ items:
       return:
         type:
           - '@azure/arm-reservations.SkuProperty[]'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.Catalog.terms'
     name: terms
@@ -122,6 +144,7 @@ items:
       return:
         type:
           - '@azure/arm-reservations.ReservationTerm[]'
+        description: ''
     package: '@azure/arm-reservations'
 references:
   - uid: '@azure/arm-reservations.SkuRestriction[]'

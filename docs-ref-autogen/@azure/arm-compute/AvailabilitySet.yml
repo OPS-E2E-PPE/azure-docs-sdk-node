@@ -9,6 +9,7 @@ items:
       - '@azure/arm-compute.AvailabilitySet.name'
       - '@azure/arm-compute.AvailabilitySet.platformFaultDomainCount'
       - '@azure/arm-compute.AvailabilitySet.platformUpdateDomainCount'
+      - '@azure/arm-compute.AvailabilitySet.proximityPlacementGroup'
       - '@azure/arm-compute.AvailabilitySet.sku'
       - '@azure/arm-compute.AvailabilitySet.statuses'
       - '@azure/arm-compute.AvailabilitySet.tags'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.AvailabilitySet.location'
     name: location
@@ -77,6 +79,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.AvailabilitySet.name'
     name: name
@@ -96,6 +99,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.AvailabilitySet.platformFaultDomainCount'
     name: platformFaultDomainCount
@@ -111,6 +115,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.AvailabilitySet.platformUpdateDomainCount'
     name: platformUpdateDomainCount
@@ -126,6 +131,27 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AvailabilitySet.proximityPlacementGroup'
+    name: proximityPlacementGroup
+    fullName: proximityPlacementGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies information about the proximity placement group that the
+      availability set should be
+
+      assigned to. <br><br>Minimum api-version: 2018-04-01.
+    optional: true
+    syntax:
+      content: 'proximityPlacementGroup?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.AvailabilitySet.sku'
     name: sku
@@ -148,6 +174,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Sku'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.AvailabilitySet.statuses'
     name: statuses
@@ -167,6 +194,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.InstanceViewStatus[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.AvailabilitySet.tags'
     name: tags
@@ -182,6 +210,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.AvailabilitySet.type'
     name: type
@@ -201,6 +230,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.AvailabilitySet.virtualMachines'
     name: virtualMachines
@@ -216,6 +246,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.SubResource[]'
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: '@azure/arm-compute.Resource'
@@ -224,6 +255,12 @@ references:
       - name: Resource
         fullName: Resource
         uid: '@azure/arm-compute.Resource'
+  - uid: '@azure/arm-compute.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-compute.SubResource'
   - uid: '@azure/arm-compute.Sku'
     name: Sku
     spec.typeScript:

@@ -33,16 +33,17 @@ items:
       - typeScript
     type: property
     summary: >-
-      Elliptic curve name. For valid values, see JsonWebKeyCurveName. Possible
-      values include:
+      Elliptic curve name. For valid values, see KeyCurveName. Possible values
+      include:
 
       'P-256', 'P-384', 'P-521', 'P-256K'
     optional: true
     syntax:
-      content: 'crv?: JsonWebKeyCurveName'
+      content: 'crv?: KeyCurveName'
       return:
         type:
-          - '@azure/keyvault-keys.JsonWebKeyCurveName'
+          - '@azure/keyvault-keys.KeyCurveName'
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.d'
     name: d
@@ -58,6 +59,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.dp'
     name: dp
@@ -73,6 +75,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.dq'
     name: dq
@@ -88,6 +91,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.e'
     name: e
@@ -103,6 +107,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.k'
     name: k
@@ -118,6 +123,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.keyOps'
     name: keyOps
@@ -126,13 +132,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Json web key operations. For more
+      information on possible key operations, see KeyOperation.
     optional: true
     syntax:
-      content: 'keyOps?: string[]'
+      content: 'keyOps?: KeyOperation[]'
       return:
         type:
-          - 'string[]'
+          - '@azure/keyvault-keys.KeyOperation[]'
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.kid'
     name: kid
@@ -148,6 +157,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.kty'
     name: kty
@@ -165,10 +175,11 @@ items:
       'EC', 'EC-HSM', 'RSA', 'RSA-HSM', 'oct'
     optional: true
     syntax:
-      content: 'kty?: JsonWebKeyType'
+      content: 'kty?: KeyType'
       return:
         type:
-          - '@azure/keyvault-keys.JsonWebKeyType'
+          - '@azure/keyvault-keys.KeyType'
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.n'
     name: 'n'
@@ -184,6 +195,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.p'
     name: p
@@ -199,6 +211,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.q'
     name: q
@@ -214,6 +227,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.qi'
     name: qi
@@ -229,6 +243,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.t'
     name: t
@@ -244,6 +259,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.x'
     name: x
@@ -259,6 +275,7 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.JsonWebKey.y'
     name: 'y'
@@ -274,17 +291,26 @@ items:
       return:
         type:
           - Uint8Array
+        description: ''
     package: '@azure/keyvault-keys'
 references:
-  - uid: '@azure/keyvault-keys.JsonWebKeyCurveName'
-    name: JsonWebKeyCurveName
+  - uid: '@azure/keyvault-keys.KeyCurveName'
+    name: KeyCurveName
     spec.typeScript:
-      - name: JsonWebKeyCurveName
-        fullName: JsonWebKeyCurveName
-        uid: '@azure/keyvault-keys.JsonWebKeyCurveName'
-  - uid: '@azure/keyvault-keys.JsonWebKeyType'
-    name: JsonWebKeyType
+      - name: KeyCurveName
+        fullName: KeyCurveName
+        uid: '@azure/keyvault-keys.KeyCurveName'
+  - uid: '@azure/keyvault-keys.KeyOperation[]'
+    name: 'KeyOperation[]'
     spec.typeScript:
-      - name: JsonWebKeyType
-        fullName: JsonWebKeyType
-        uid: '@azure/keyvault-keys.JsonWebKeyType'
+      - name: KeyOperation
+        fullName: KeyOperation
+        uid: '@azure/keyvault-keys.KeyOperation'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/keyvault-keys.KeyType'
+    name: KeyType
+    spec.typeScript:
+      - name: KeyType
+        fullName: KeyType
+        uid: '@azure/keyvault-keys.KeyType'

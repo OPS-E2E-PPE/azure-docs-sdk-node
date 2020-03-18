@@ -12,7 +12,7 @@ items:
     type: class
     summary: |
       Provides iterator for change feed.
-      Use `Items.readChangeFeed()` to get an instance of the iterator.
+      Use `Items.changeFeed()` to get an instance of the iterator.
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ChangeFeedIterator.fetchNext'
     name: fetchNext()
@@ -29,6 +29,7 @@ items:
           - >-
             Promise<@azure/cosmos.ChangeFeedResponse<Array<T &
             @azure/cosmos.Resource>>>
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ChangeFeedIterator.getAsyncIterator'
     name: getAsyncIterator()
@@ -47,6 +48,7 @@ items:
           - >-
             AsyncIterable<@azure/cosmos.ChangeFeedResponse<Array<T &
             @azure/cosmos.Resource>>>
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ChangeFeedIterator.hasMoreResults'
     name: hasMoreResults
@@ -62,10 +64,13 @@ items:
       Initially returns true. This value is set based on whether the last
       execution returned a continuation token.
     syntax:
-      content: 'hasMoreResults: boolean'
+      content: boolean hasMoreResults
       return:
         type:
           - boolean
+        description: >-
+          Boolean value representing if whether there are potentially additional
+          results that can be retrieved.
     package: '@azure/cosmos'
 references:
   - uid: >-

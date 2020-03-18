@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Describes an Event Hub output data source.
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.eventHubName'
     name: eventHubName
@@ -24,13 +24,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'eventHubName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.partitionKey'
     name: partitionKey
@@ -39,13 +40,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The key/column that is used to determine to which partition to send event
+      data.
     optional: true
     syntax:
       content: 'partitionKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.serviceBusNamespace'
     name: serviceBusNamespace
@@ -54,13 +58,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The namespace that is associated with the desired Event Hub, Service Bus
+      Queue, Service Bus
+
+      Topic, etc. Required on PUT (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'serviceBusNamespace?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.sharedAccessPolicyKey'
     name: sharedAccessPolicyKey
@@ -69,13 +78,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The shared access policy key for the specified shared access policy.
+      Required on PUT
+
+      (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'sharedAccessPolicyKey?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.sharedAccessPolicyName'
     name: sharedAccessPolicyName
@@ -84,13 +98,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The shared access policy name for the Event Hub, Service Bus Queue,
+      Service Bus Topic, etc.
+
+      Required on PUT (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'sharedAccessPolicyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.type'
     name: type
@@ -99,10 +118,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Microsoft.ServiceBus/EventHub"'
       return:
         type:
           - '"Microsoft.ServiceBus/EventHub"'
+        description: ''
     package: '@azure/arm-streamanalytics'

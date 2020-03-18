@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.entries'
       - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.every'
       - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.fill'
-      - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.filter_1'
       - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.filter'
+      - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.filter_1'
       - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.find'
       - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.find_1'
       - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.findIndex'
       - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.forEach'
+      - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.includes'
       - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.indexOf'
       - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.join'
       - '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.keys'
@@ -68,6 +69,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.concat'
     name: 'concat(ConcatArray<VirtualNetworkGatewayConnectionListEntity>[])'
@@ -90,6 +92,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -109,6 +112,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -152,6 +156,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.entries'
     name: entries()
@@ -166,11 +171,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.every'
     name: >-
       every((value: VirtualNetworkGatewayConnectionListEntity, index: number,
-      array: VirtualNetworkGatewayConnectionListEntity[]) => boolean, any)
+      array: VirtualNetworkGatewayConnectionListEntity[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -180,13 +186,13 @@ items:
       content: >-
         function every(callbackfn: (value:
         VirtualNetworkGatewayConnectionListEntity, index: number, array:
-        VirtualNetworkGatewayConnectionListEntity[]) => boolean, thisArg?: any)
+        VirtualNetworkGatewayConnectionListEntity[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VirtualNetworkGatewayConnectionListEntity, index: number,
-              array: VirtualNetworkGatewayConnectionListEntity[]) => boolean
+              array: VirtualNetworkGatewayConnectionListEntity[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -202,6 +208,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.fill'
     name: >-
@@ -244,44 +251,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.filter_1'
-    name: >-
-      filter((value: VirtualNetworkGatewayConnectionListEntity, index: number,
-      array: VirtualNetworkGatewayConnectionListEntity[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value:
-        VirtualNetworkGatewayConnectionListEntity, index: number, array:
-        VirtualNetworkGatewayConnectionListEntity[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: VirtualNetworkGatewayConnectionListEntity, index: number,
-              array: VirtualNetworkGatewayConnectionListEntity[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.filter'
     name: >-
@@ -320,6 +290,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.filter_1'
+    name: >-
+      filter((value: VirtualNetworkGatewayConnectionListEntity, index: number,
+      array: VirtualNetworkGatewayConnectionListEntity[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value:
+        VirtualNetworkGatewayConnectionListEntity, index: number, array:
+        VirtualNetworkGatewayConnectionListEntity[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: VirtualNetworkGatewayConnectionListEntity, index: number,
+              array: VirtualNetworkGatewayConnectionListEntity[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.find'
     name: >-
@@ -367,31 +377,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.find_1'
     name: >-
       find((value: VirtualNetworkGatewayConnectionListEntity, index: number,
-      obj: VirtualNetworkGatewayConnectionListEntity[]) => boolean, any)
+      obj: VirtualNetworkGatewayConnectionListEntity[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value:
         VirtualNetworkGatewayConnectionListEntity, index: number, obj:
-        VirtualNetworkGatewayConnectionListEntity[]) => boolean, thisArg?: any)
+        VirtualNetworkGatewayConnectionListEntity[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VirtualNetworkGatewayConnectionListEntity, index: number,
-              obj: VirtualNetworkGatewayConnectionListEntity[]) => boolean
+              obj: VirtualNetworkGatewayConnectionListEntity[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -403,11 +410,12 @@ items:
           - >-
             @azure/arm-network.VirtualNetworkGatewayConnectionListEntity |
             undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.findIndex'
     name: >-
       findIndex((value: VirtualNetworkGatewayConnectionListEntity, index:
-      number, obj: VirtualNetworkGatewayConnectionListEntity[]) => boolean, any)
+      number, obj: VirtualNetworkGatewayConnectionListEntity[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -421,13 +429,13 @@ items:
       content: >-
         function findIndex(predicate: (value:
         VirtualNetworkGatewayConnectionListEntity, index: number, obj:
-        VirtualNetworkGatewayConnectionListEntity[]) => boolean, thisArg?: any)
+        VirtualNetworkGatewayConnectionListEntity[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VirtualNetworkGatewayConnectionListEntity, index: number,
-              obj: VirtualNetworkGatewayConnectionListEntity[]) => boolean
+              obj: VirtualNetworkGatewayConnectionListEntity[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -449,6 +457,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.forEach'
     name: >-
@@ -482,6 +491,37 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.includes'
+    name: 'includes(VirtualNetworkGatewayConnectionListEntity, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement:
+        VirtualNetworkGatewayConnectionListEntity, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.indexOf'
     name: 'indexOf(VirtualNetworkGatewayConnectionListEntity, undefined | number)'
     children: []
@@ -509,6 +549,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.join'
     name: join(undefined | string)
@@ -533,6 +574,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.keys'
     name: keys()
@@ -547,6 +589,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.lastIndexOf'
     name: 'lastIndexOf(VirtualNetworkGatewayConnectionListEntity, undefined | number)'
@@ -575,6 +618,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.length'
     name: length
@@ -591,6 +635,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.map'
     name: >-
@@ -628,6 +673,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.nextLink'
     name: nextLink
@@ -647,6 +693,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.pop'
     name: pop()
@@ -663,6 +710,7 @@ items:
           - >-
             @azure/arm-network.VirtualNetworkGatewayConnectionListEntity |
             undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.push'
     name: 'push(VirtualNetworkGatewayConnectionListEntity[])'
@@ -682,6 +730,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.reduce_2'
     name: >-
@@ -722,6 +771,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.reduce'
     name: >-
@@ -760,6 +810,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.reduce_1'
     name: >-
@@ -772,10 +823,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -801,6 +849,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.VirtualNetworkGatewayListConnectionsResult.reduceRight_2
@@ -843,6 +892,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.reduceRight'
     name: >-
@@ -882,6 +932,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.VirtualNetworkGatewayListConnectionsResult.reduceRight_1
@@ -895,11 +946,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -925,6 +972,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.reverse'
     name: reverse()
@@ -939,6 +987,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.shift'
     name: shift()
@@ -955,6 +1004,7 @@ items:
           - >-
             @azure/arm-network.VirtualNetworkGatewayConnectionListEntity |
             undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -980,11 +1030,12 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.some'
     name: >-
       some((value: VirtualNetworkGatewayConnectionListEntity, index: number,
-      array: VirtualNetworkGatewayConnectionListEntity[]) => boolean, any)
+      array: VirtualNetworkGatewayConnectionListEntity[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -996,13 +1047,13 @@ items:
       content: >-
         function some(callbackfn: (value:
         VirtualNetworkGatewayConnectionListEntity, index: number, array:
-        VirtualNetworkGatewayConnectionListEntity[]) => boolean, thisArg?: any)
+        VirtualNetworkGatewayConnectionListEntity[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VirtualNetworkGatewayConnectionListEntity, index: number,
-              array: VirtualNetworkGatewayConnectionListEntity[]) => boolean
+              array: VirtualNetworkGatewayConnectionListEntity[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -1018,6 +1069,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.sort'
     name: >-
@@ -1047,6 +1099,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.splice_1'
     name: 'splice(number, number, VirtualNetworkGatewayConnectionListEntity[])'
@@ -1080,6 +1133,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1108,6 +1162,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkGatewayConnectionListEntity[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.VirtualNetworkGatewayListConnectionsResult.toLocaleString
@@ -1125,6 +1180,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.toString'
     name: toString()
@@ -1139,6 +1195,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.unshift'
     name: 'unshift(VirtualNetworkGatewayConnectionListEntity[])'
@@ -1158,6 +1215,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGatewayListConnectionsResult.values'
     name: values()
@@ -1173,6 +1231,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-network.VirtualNetworkGatewayConnectionListEntity>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.VirtualNetworkGatewayConnectionListEntity>

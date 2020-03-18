@@ -5,6 +5,7 @@ items:
     fullName: HealthEvent
     children:
       - '@azure/servicefabric.HealthEvent.description'
+      - '@azure/servicefabric.HealthEvent.healthReportId'
       - '@azure/servicefabric.HealthEvent.healthState'
       - '@azure/servicefabric.HealthEvent.isExpired'
       - '@azure/servicefabric.HealthEvent.lastErrorTransitionAt'
@@ -62,6 +63,29 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.healthReportId'
+    name: healthReportId
+    fullName: healthReportId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A health report ID which identifies the health report and can be used to
+      find more detailed
+
+      information about a specific health event at
+
+      aka.ms/sfhealthid
+    optional: true
+    syntax:
+      content: 'healthReportId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.healthState'
     name: healthState
@@ -83,6 +107,7 @@ items:
       return:
         type:
           - '@azure/servicefabric.HealthState'
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.isExpired'
     name: isExpired
@@ -98,6 +123,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.lastErrorTransitionAt'
     name: lastErrorTransitionAt
@@ -132,6 +158,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.lastModifiedUtcTimestamp'
     name: lastModifiedUtcTimestamp
@@ -149,6 +176,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.lastOkTransitionAt'
     name: lastOkTransitionAt
@@ -182,6 +210,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.lastWarningTransitionAt'
     name: lastWarningTransitionAt
@@ -215,6 +244,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.property'
     name: property
@@ -258,6 +288,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.removeWhenExpired'
     name: removeWhenExpired
@@ -293,6 +324,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.sequenceNumber'
     name: sequenceNumber
@@ -317,6 +349,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.sourceId'
     name: sourceId
@@ -335,6 +368,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.sourceUtcTimestamp'
     name: sourceUtcTimestamp
@@ -350,6 +384,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.HealthEvent.timeToLiveInMilliSeconds'
     name: timeToLiveInMilliSeconds
@@ -387,6 +422,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/servicefabric'
 references:
   - uid: '@azure/servicefabric.HealthInformation'

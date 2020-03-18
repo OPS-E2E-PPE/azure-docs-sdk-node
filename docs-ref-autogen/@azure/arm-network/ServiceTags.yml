@@ -26,7 +26,14 @@ items:
         - id: location
           type:
             - string
-          description: The location.
+          description: >-
+            The location that will be used as a reference for version (not as a
+            filter based
+
+            on location, you will get the list of service tags with prefix
+            details across all regions but
+
+            limited to the cloud that your subscription belongs to).
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -35,6 +42,7 @@ items:
       return:
         type:
           - Promise<Models.ServiceTagsListResponse>
+        description: Promise<Models.ServiceTagsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceTags.list_2'
     name: 'list(string, RequestOptionsBase, ServiceCallback<ServiceTagsListResult>)'
@@ -51,7 +59,14 @@ items:
         - id: location
           type:
             - string
-          description: The location.
+          description: >-
+            The location that will be used as a reference for version (not as a
+            filter based
+
+            on location, you will get the list of service tags with prefix
+            details across all regions but
+
+            limited to the cloud that your subscription belongs to).
         - id: options
           type:
             - RequestOptionsBase
@@ -61,9 +76,6 @@ items:
             - ServiceCallback<@azure/arm-network.ServiceTagsListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ServiceTagsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceTags.list_1'
     name: 'list(string, ServiceCallback<ServiceTagsListResult>)'
@@ -80,15 +92,19 @@ items:
         - id: location
           type:
             - string
-          description: The location.
+          description: >-
+            The location that will be used as a reference for version (not as a
+            filter based
+
+            on location, you will get the list of service tags with prefix
+            details across all regions but
+
+            limited to the cloud that your subscription belongs to).
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.ServiceTagsListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ServiceTagsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceTags.constructor'
     name: ServiceTags(NetworkManagementClientContext)

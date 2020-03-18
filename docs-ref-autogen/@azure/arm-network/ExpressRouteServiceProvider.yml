@@ -26,13 +26,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Gets bandwidths offered.
+    summary: A list of bandwidths offered.
     optional: true
     syntax:
       content: 'bandwidthsOffered?: ExpressRouteServiceProviderBandwidthsOffered[]'
       return:
         type:
           - '@azure/arm-network.ExpressRouteServiceProviderBandwidthsOffered[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteServiceProvider.id'
     name: id
@@ -48,6 +49,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteServiceProvider.location'
     name: location
@@ -63,6 +65,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteServiceProvider.name'
     name: name
@@ -82,6 +85,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteServiceProvider.peeringLocations'
     name: peeringLocations
@@ -90,13 +94,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Get a list of peering locations.
+    summary: A list of peering locations.
     optional: true
     syntax:
       content: 'peeringLocations?: string[]'
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteServiceProvider.provisioningState'
     name: provisioningState
@@ -105,13 +110,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Gets the provisioning state of the resource.
+    summary: >-
+      The provisioning state of the express route service provider resource.
+      Possible values
+
+      include: 'Succeeded', 'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteServiceProvider.tags'
     name: tags
@@ -127,6 +140,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteServiceProvider.type'
     name: type
@@ -146,6 +160,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -162,3 +177,9 @@ references:
         uid: '@azure/arm-network.ExpressRouteServiceProviderBandwidthsOffered'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

@@ -29,10 +29,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'Details: string'
+      content: 'Details: string | undefined'
       return:
         type:
-          - string
+          - string | undefined
+        description: ''
     package: durable-functions
   - uid: durable-functions.TaskFailedEvent.EventId
     name: EventId
@@ -47,6 +48,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: durable-functions
   - uid: durable-functions.TaskFailedEvent.EventType
     name: EventType
@@ -61,6 +63,7 @@ items:
       return:
         type:
           - durable-functions.HistoryEventType
+        description: ''
     package: durable-functions
   - uid: durable-functions.TaskFailedEvent.IsPlayed
     name: IsPlayed
@@ -75,6 +78,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: durable-functions
   - uid: durable-functions.TaskFailedEvent.IsProcessed
     name: IsProcessed
@@ -89,6 +93,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: durable-functions
   - uid: durable-functions.TaskFailedEvent.Reason
     name: Reason
@@ -99,10 +104,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'Reason: string'
+      content: 'Reason: string | undefined'
       return:
         type:
-          - string
+          - string | undefined
+        description: ''
     package: durable-functions
   - uid: durable-functions.TaskFailedEvent.constructor
     name: TaskFailedEvent(HistoryEventOptions)
@@ -132,6 +138,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: durable-functions
   - uid: durable-functions.TaskFailedEvent.Timestamp
     name: Timestamp
@@ -146,6 +153,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: durable-functions
 references:
   - uid: durable-functions.HistoryEvent

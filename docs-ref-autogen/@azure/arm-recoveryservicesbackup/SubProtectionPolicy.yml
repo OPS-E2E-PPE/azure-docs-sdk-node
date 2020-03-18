@@ -10,7 +10,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Sub-protection policy which includes schedule and retention
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.SubProtectionPolicy.policyType'
     name: policyType
@@ -19,13 +19,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type of backup policy type. Possible values include: 'Invalid', 'Full',
+      'Differential', 'Log',
+
+      'CopyOnlyFull'
     optional: true
     syntax:
       content: 'policyType?: PolicyType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.PolicyType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.SubProtectionPolicy.retentionPolicy'
     name: retentionPolicy
@@ -34,13 +39,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Retention policy with the details on backup copy retention ranges.
     optional: true
     syntax:
       content: 'retentionPolicy?: RetentionPolicyUnion'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.RetentionPolicyUnion'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.SubProtectionPolicy.schedulePolicy'
     name: schedulePolicy
@@ -49,13 +55,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Backup schedule specified as part of backup policy.
     optional: true
     syntax:
       content: 'schedulePolicy?: SchedulePolicyUnion'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.SchedulePolicyUnion'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.PolicyType'

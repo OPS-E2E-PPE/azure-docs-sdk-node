@@ -11,12 +11,13 @@ items:
       - '@azure/arm-streamanalytics.FunctionListResult.entries'
       - '@azure/arm-streamanalytics.FunctionListResult.every'
       - '@azure/arm-streamanalytics.FunctionListResult.fill'
-      - '@azure/arm-streamanalytics.FunctionListResult.filter_1'
       - '@azure/arm-streamanalytics.FunctionListResult.filter'
+      - '@azure/arm-streamanalytics.FunctionListResult.filter_1'
       - '@azure/arm-streamanalytics.FunctionListResult.find'
       - '@azure/arm-streamanalytics.FunctionListResult.find_1'
       - '@azure/arm-streamanalytics.FunctionListResult.findIndex'
       - '@azure/arm-streamanalytics.FunctionListResult.forEach'
+      - '@azure/arm-streamanalytics.FunctionListResult.includes'
       - '@azure/arm-streamanalytics.FunctionListResult.indexOf'
       - '@azure/arm-streamanalytics.FunctionListResult.join'
       - '@azure/arm-streamanalytics.FunctionListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.concat'
     name: 'concat(ConcatArray<FunctionModel>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel[]'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel[]'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.every'
     name: >-
       every((value: FunctionModel, index: number, array: FunctionModel[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: FunctionModel, index: number, array:
-        FunctionModel[]) => boolean, thisArg?: any)
+        FunctionModel[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: FunctionModel, index: number, array: FunctionModel[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.fill'
     name: 'fill(FunctionModel, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.FunctionListResult.filter_1'
-    name: >-
-      filter((value: FunctionModel, index: number, array: FunctionModel[]) =>
-      any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: FunctionModel, index: number, array:
-        FunctionModel[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: FunctionModel, index: number, array: FunctionModel[]) =>
-              any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-streamanalytics.FunctionModel[]'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.FunctionListResult.filter_1'
+    name: >-
+      filter((value: FunctionModel, index: number, array: FunctionModel[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: FunctionModel, index: number, array:
+        FunctionModel[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: FunctionModel, index: number, array: FunctionModel[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-streamanalytics.FunctionModel[]'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.find_1'
     name: >-
       find((value: FunctionModel, index: number, obj: FunctionModel[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: FunctionModel, index: number, obj:
-        FunctionModel[]) => boolean, thisArg?: any)
+        FunctionModel[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: FunctionModel, index: number, obj: FunctionModel[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel | undefined'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.findIndex'
     name: >-
       findIndex((value: FunctionModel, index: number, obj: FunctionModel[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: FunctionModel, index: number, obj:
-        FunctionModel[]) => boolean, thisArg?: any)
+        FunctionModel[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: FunctionModel, index: number, obj: FunctionModel[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.FunctionListResult.includes'
+    name: 'includes(FunctionModel, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: FunctionModel, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.indexOf'
     name: 'indexOf(FunctionModel, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.lastIndexOf'
     name: 'lastIndexOf(FunctionModel, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.map'
     name: >-
@@ -603,6 +647,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.nextLink'
     name: nextLink
@@ -611,13 +656,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The link (url) to the next page of results.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'nextLink?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.pop'
     name: pop()
@@ -632,6 +682,7 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel | undefined'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.push'
     name: 'push(FunctionModel[])'
@@ -651,6 +702,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.reduce'
     name: >-
@@ -682,6 +734,7 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.reduce_1'
     name: >-
@@ -692,10 +745,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: FunctionModel, currentValue:
@@ -715,6 +765,7 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.reduce_2'
     name: >-
@@ -753,6 +804,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.reduceRight'
     name: >-
@@ -785,6 +837,7 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.reduceRight_1'
     name: >-
@@ -795,11 +848,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: FunctionModel,
@@ -819,6 +868,7 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.reduceRight_2'
     name: >-
@@ -858,6 +908,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.reverse'
     name: reverse()
@@ -872,6 +923,7 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel[]'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.shift'
     name: shift()
@@ -886,6 +938,7 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel | undefined'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -911,11 +964,12 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel[]'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.some'
     name: >-
       some((value: FunctionModel, index: number, array: FunctionModel[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -926,13 +980,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: FunctionModel, index: number, array:
-        FunctionModel[]) => boolean, thisArg?: any)
+        FunctionModel[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: FunctionModel, index: number, array: FunctionModel[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -948,6 +1002,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.sort'
     name: 'sort(undefined | (a: FunctionModel, b: FunctionModel) => number)'
@@ -972,6 +1027,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.splice_1'
     name: 'splice(number, number, FunctionModel[])'
@@ -1005,6 +1061,7 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel[]'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1033,6 +1090,7 @@ items:
       return:
         type:
           - '@azure/arm-streamanalytics.FunctionModel[]'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.toLocaleString'
     name: toLocaleString()
@@ -1049,6 +1107,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.toString'
     name: toString()
@@ -1063,6 +1122,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.unshift'
     name: 'unshift(FunctionModel[])'
@@ -1082,6 +1142,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.FunctionListResult.values'
     name: values()
@@ -1096,6 +1157,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-streamanalytics.FunctionModel>
+        description: ''
     package: '@azure/arm-streamanalytics'
 references:
   - uid: Array<@azure/arm-streamanalytics.FunctionModel>

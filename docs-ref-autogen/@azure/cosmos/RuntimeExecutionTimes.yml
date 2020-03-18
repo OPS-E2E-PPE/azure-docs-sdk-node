@@ -37,6 +37,7 @@ items:
       return:
         type:
           - '@azure/cosmos.RuntimeExecutionTimes'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.RuntimeExecutionTimes.createFromArray'
     name: 'createFromArray(RuntimeExecutionTimes[])'
@@ -59,6 +60,7 @@ items:
       return:
         type:
           - '@azure/cosmos.RuntimeExecutionTimes'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.RuntimeExecutionTimes.createFromDelimitedString'
     name: createFromDelimitedString(string)
@@ -79,6 +81,7 @@ items:
       return:
         type:
           - '@azure/cosmos.RuntimeExecutionTimes'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.RuntimeExecutionTimes.queryEngineExecutionTime'
     name: queryEngineExecutionTime
@@ -89,10 +92,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'queryEngineExecutionTime: TimeSpan'
+      content: 'public queryEngineExecutionTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.RuntimeExecutionTimes.constructor'
     name: 'RuntimeExecutionTimes(TimeSpan, TimeSpan, TimeSpan)'
@@ -129,10 +133,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'systemFunctionExecutionTime: TimeSpan'
+      content: 'public systemFunctionExecutionTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.RuntimeExecutionTimes.toDelimitedString'
     name: toDelimitedString()
@@ -147,6 +152,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.RuntimeExecutionTimes.userDefinedFunctionExecutionTime'
     name: userDefinedFunctionExecutionTime
@@ -157,10 +163,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'userDefinedFunctionExecutionTime: TimeSpan'
+      content: 'public userDefinedFunctionExecutionTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.RuntimeExecutionTimes.zero'
     name: zero
@@ -171,10 +178,16 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'static zero: RuntimeExecutionTimes'
+      content: |-
+        public static zero: RuntimeExecutionTimes = new RuntimeExecutionTimes(
+            TimeSpan.zero,
+            TimeSpan.zero,
+            TimeSpan.zero
+          )
       return:
         type:
           - '@azure/cosmos.RuntimeExecutionTimes'
+        description: ''
     package: '@azure/cosmos'
 references:
   - uid: '@azure/cosmos.RuntimeExecutionTimes'

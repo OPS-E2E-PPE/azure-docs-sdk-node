@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.DomainCollection.entries'
       - '@azure/arm-appservice.DomainCollection.every'
       - '@azure/arm-appservice.DomainCollection.fill'
-      - '@azure/arm-appservice.DomainCollection.filter_1'
       - '@azure/arm-appservice.DomainCollection.filter'
+      - '@azure/arm-appservice.DomainCollection.filter_1'
       - '@azure/arm-appservice.DomainCollection.find'
       - '@azure/arm-appservice.DomainCollection.find_1'
       - '@azure/arm-appservice.DomainCollection.findIndex'
       - '@azure/arm-appservice.DomainCollection.forEach'
+      - '@azure/arm-appservice.DomainCollection.includes'
       - '@azure/arm-appservice.DomainCollection.indexOf'
       - '@azure/arm-appservice.DomainCollection.join'
       - '@azure/arm-appservice.DomainCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.concat'
     name: 'concat(ConcatArray<Domain>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.every'
-    name: 'every((value: Domain, index: number, array: Domain[]) => boolean, any)'
+    name: 'every((value: Domain, index: number, array: Domain[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Domain, index: number, array:
-        Domain[]) => boolean, thisArg?: any)
+        Domain[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Domain, index: number, array: Domain[]) => boolean'
+            - '(value: Domain, index: number, array: Domain[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.fill'
     name: 'fill(Domain, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.DomainCollection.filter_1'
-    name: 'filter((value: Domain, index: number, array: Domain[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Domain, index: number, array:
-        Domain[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Domain, index: number, array: Domain[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.Domain[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.filter'
     name: 'filter((value: Domain, index: number, array: Domain[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.DomainCollection.filter_1'
+    name: 'filter((value: Domain, index: number, array: Domain[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Domain, index: number, array:
+        Domain[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Domain, index: number, array: Domain[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.Domain[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.find'
     name: >-
@@ -340,26 +350,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.find_1'
-    name: 'find((value: Domain, index: number, obj: Domain[]) => boolean, any)'
+    name: 'find((value: Domain, index: number, obj: Domain[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Domain, index: number, obj: Domain[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Domain, index: number, obj: Domain[]) => boolean'
+            - '(value: Domain, index: number, obj: Domain[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -369,9 +376,10 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.findIndex'
-    name: 'findIndex((value: Domain, index: number, obj: Domain[]) => boolean, any)'
+    name: 'findIndex((value: Domain, index: number, obj: Domain[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -384,11 +392,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Domain, index: number, obj:
-        Domain[]) => boolean, thisArg?: any)
+        Domain[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Domain, index: number, obj: Domain[]) => boolean'
+            - '(value: Domain, index: number, obj: Domain[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -410,6 +418,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.forEach'
     name: 'forEach((value: Domain, index: number, array: Domain[]) => void, any)'
@@ -438,6 +447,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.DomainCollection.includes'
+    name: 'includes(Domain, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Domain, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.Domain'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.indexOf'
     name: 'indexOf(Domain, undefined | number)'
     children: []
@@ -462,6 +499,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.join'
     name: join(undefined | string)
@@ -486,6 +524,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.keys'
     name: keys()
@@ -500,6 +539,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.lastIndexOf'
     name: 'lastIndexOf(Domain, undefined | number)'
@@ -527,6 +567,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.length'
     name: length
@@ -543,6 +584,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.map'
     name: 'map((value: Domain, index: number, array: Domain[]) => U, any)'
@@ -575,6 +617,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.nextLink'
     name: nextLink
@@ -594,6 +637,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.pop'
     name: pop()
@@ -608,6 +652,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.push'
     name: 'push(Domain[])'
@@ -627,6 +672,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.reduce'
     name: >-
@@ -657,6 +703,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.reduce_1'
     name: >-
@@ -666,10 +713,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Domain, currentValue:
@@ -689,6 +733,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.reduce_2'
     name: >-
@@ -726,6 +771,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.reduceRight'
     name: >-
@@ -757,6 +803,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.reduceRight_1'
     name: >-
@@ -766,11 +813,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Domain, currentValue:
@@ -790,6 +833,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.reduceRight_2'
     name: >-
@@ -828,6 +872,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.reverse'
     name: reverse()
@@ -842,6 +887,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.shift'
     name: shift()
@@ -856,6 +902,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -881,9 +928,10 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.some'
-    name: 'some((value: Domain, index: number, array: Domain[]) => boolean, any)'
+    name: 'some((value: Domain, index: number, array: Domain[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -894,11 +942,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Domain, index: number, array:
-        Domain[]) => boolean, thisArg?: any)
+        Domain[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Domain, index: number, array: Domain[]) => boolean'
+            - '(value: Domain, index: number, array: Domain[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -914,6 +962,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.sort'
     name: 'sort(undefined | (a: Domain, b: Domain) => number)'
@@ -936,6 +985,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.splice_1'
     name: 'splice(number, number, Domain[])'
@@ -967,6 +1017,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -995,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.Domain[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.toLocaleString'
     name: toLocaleString()
@@ -1011,6 +1063,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.toString'
     name: toString()
@@ -1025,6 +1078,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.unshift'
     name: 'unshift(Domain[])'
@@ -1044,6 +1098,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DomainCollection.values'
     name: values()
@@ -1058,6 +1113,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-appservice.Domain>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.Domain>

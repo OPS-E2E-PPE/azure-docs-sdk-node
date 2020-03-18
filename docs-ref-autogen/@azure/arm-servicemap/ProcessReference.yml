@@ -12,7 +12,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Reference to a process.
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ProcessReference.id'
     name: id
@@ -21,12 +21,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource URI.
     syntax:
       content: 'id: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ProcessReference.kind'
     name: kind
@@ -35,12 +36,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'kind: "ref:process"'
       return:
         type:
           - '"ref:process"'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ProcessReference.machine'
     name: machine
@@ -49,13 +51,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Machine hosting the process.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'machine?: MachineReference'
       return:
         type:
           - '@azure/arm-servicemap.MachineReference'
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ProcessReference.name'
     name: name
@@ -64,13 +71,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
   - uid: '@azure/arm-servicemap.ProcessReference.type'
     name: type
@@ -79,13 +91,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource type qualifier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicemap'
 references:
   - uid: '@azure/arm-servicemap.MachineReference'

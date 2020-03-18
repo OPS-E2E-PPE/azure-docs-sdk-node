@@ -32,10 +32,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'activityId: string'
+      content: string activityId
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserDefinedFunctionResponse.etag'
     name: etag
@@ -46,10 +47,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'etag: string'
+      content: string etag
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserDefinedFunctionResponse.headers'
     name: headers
@@ -60,10 +62,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'headers: CosmosHeaders_2'
+      content: 'public headers: CosmosHeaders'
       return:
         type:
-          - '@azure/cosmos.CosmosHeaders_2'
+          - '@azure/cosmos.CosmosHeaders'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserDefinedFunctionResponse.requestCharge'
     name: requestCharge
@@ -74,10 +77,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'requestCharge: number'
+      content: number requestCharge
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserDefinedFunctionResponse.resource'
     name: resource
@@ -88,10 +92,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'resource: UserDefinedFunctionDefinition & Resource'
+      content: 'public resource: UserDefinedFunctionDefinition & Resource'
       return:
         type:
           - '@azure/cosmos.UserDefinedFunctionDefinition & @azure/cosmos.Resource'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserDefinedFunctionResponse.statusCode'
     name: statusCode
@@ -102,10 +107,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'statusCode: StatusCode'
+      content: 'public statusCode: StatusCode'
       return:
         type:
           - StatusCode
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserDefinedFunctionResponse.substatus'
     name: substatus
@@ -117,10 +123,11 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'substatus?: SubStatusCode'
+      content: 'public substatus?: SubStatusCode'
       return:
         type:
-          - SubStatusCode
+          - '@azure/cosmos.SubStatusCode'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserDefinedFunctionResponse.udf'
     name: udf
@@ -135,10 +142,11 @@ items:
       A reference to the <xref:UserDefinedFunction> corresponding to the
       returned <xref:UserDefinedFunctionDefinition>.
     syntax:
-      content: 'udf: UserDefinedFunction'
+      content: UserDefinedFunction udf
       return:
         type:
           - '@azure/cosmos.UserDefinedFunction'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserDefinedFunctionResponse.userDefinedFunction'
     name: userDefinedFunction
@@ -151,10 +159,11 @@ items:
       A reference to the <xref:UserDefinedFunction> corresponding to the
       returned <xref:UserDefinedFunctionDefinition>.
     syntax:
-      content: 'userDefinedFunction: UserDefinedFunction'
+      content: 'public userDefinedFunction: UserDefinedFunction'
       return:
         type:
           - '@azure/cosmos.UserDefinedFunction'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserDefinedFunctionResponse.constructor'
     name: >-
@@ -234,9 +243,9 @@ references:
       - name: UserDefinedFunction
         fullName: UserDefinedFunction
         uid: '@azure/cosmos.UserDefinedFunction'
-  - uid: '@azure/cosmos.CosmosHeaders_2'
-    name: CosmosHeaders_2
+  - uid: '@azure/cosmos.SubStatusCode'
+    name: SubStatusCode
     spec.typeScript:
-      - name: CosmosHeaders_2
-        fullName: CosmosHeaders_2
-        uid: '@azure/cosmos.CosmosHeaders_2'
+      - name: SubStatusCode
+        fullName: SubStatusCode
+        uid: '@azure/cosmos.SubStatusCode'

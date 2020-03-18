@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.entries'
       - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.every'
       - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.fill'
-      - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.filter_1'
       - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.filter'
+      - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.filter_1'
       - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.find'
       - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.find_1'
       - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.findIndex'
       - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.forEach'
+      - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.includes'
       - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.indexOf'
       - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.join'
       - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.concat'
     name: 'concat(ConcatArray<RestorableDroppedManagedDatabase>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.every'
     name: >-
       every((value: RestorableDroppedManagedDatabase, index: number, array:
-      RestorableDroppedManagedDatabase[]) => boolean, any)
+      RestorableDroppedManagedDatabase[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,14 +177,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: RestorableDroppedManagedDatabase,
-        index: number, array: RestorableDroppedManagedDatabase[]) => boolean,
+        index: number, array: RestorableDroppedManagedDatabase[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: RestorableDroppedManagedDatabase, index: number, array:
-              RestorableDroppedManagedDatabase[]) => boolean
+              RestorableDroppedManagedDatabase[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -194,6 +200,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.fill'
     name: >-
@@ -236,44 +243,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.filter_1'
-    name: >-
-      filter((value: RestorableDroppedManagedDatabase, index: number, array:
-      RestorableDroppedManagedDatabase[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: RestorableDroppedManagedDatabase,
-        index: number, array: RestorableDroppedManagedDatabase[]) => any,
-        thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: RestorableDroppedManagedDatabase, index: number, array:
-              RestorableDroppedManagedDatabase[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.RestorableDroppedManagedDatabase[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.filter'
     name: >-
@@ -312,6 +282,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.filter_1'
+    name: >-
+      filter((value: RestorableDroppedManagedDatabase, index: number, array:
+      RestorableDroppedManagedDatabase[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: RestorableDroppedManagedDatabase,
+        index: number, array: RestorableDroppedManagedDatabase[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: RestorableDroppedManagedDatabase, index: number, array:
+              RestorableDroppedManagedDatabase[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.RestorableDroppedManagedDatabase[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.find'
     name: >-
@@ -358,31 +368,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.find_1'
     name: >-
       find((value: RestorableDroppedManagedDatabase, index: number, obj:
-      RestorableDroppedManagedDatabase[]) => boolean, any)
+      RestorableDroppedManagedDatabase[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: RestorableDroppedManagedDatabase,
-        index: number, obj: RestorableDroppedManagedDatabase[]) => boolean,
+        index: number, obj: RestorableDroppedManagedDatabase[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: RestorableDroppedManagedDatabase, index: number, obj:
-              RestorableDroppedManagedDatabase[]) => boolean
+              RestorableDroppedManagedDatabase[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -392,11 +399,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.findIndex'
     name: >-
       findIndex((value: RestorableDroppedManagedDatabase, index: number, obj:
-      RestorableDroppedManagedDatabase[]) => boolean, any)
+      RestorableDroppedManagedDatabase[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -409,14 +417,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: RestorableDroppedManagedDatabase,
-        index: number, obj: RestorableDroppedManagedDatabase[]) => boolean,
+        index: number, obj: RestorableDroppedManagedDatabase[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: RestorableDroppedManagedDatabase, index: number, obj:
-              RestorableDroppedManagedDatabase[]) => boolean
+              RestorableDroppedManagedDatabase[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -438,6 +446,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.forEach'
     name: >-
@@ -471,6 +480,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.includes'
+    name: 'includes(RestorableDroppedManagedDatabase, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: RestorableDroppedManagedDatabase,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.RestorableDroppedManagedDatabase'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.indexOf'
     name: 'indexOf(RestorableDroppedManagedDatabase, undefined | number)'
     children: []
@@ -497,6 +536,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.join'
     name: join(undefined | string)
@@ -521,6 +561,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.keys'
     name: keys()
@@ -535,6 +576,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.lastIndexOf'
     name: 'lastIndexOf(RestorableDroppedManagedDatabase, undefined | number)'
@@ -562,6 +604,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.length'
     name: length
@@ -578,6 +621,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.map'
     name: >-
@@ -615,6 +659,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.nextLink'
     name: nextLink
@@ -634,6 +679,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.pop'
     name: pop()
@@ -648,6 +694,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.push'
     name: 'push(RestorableDroppedManagedDatabase[])'
@@ -667,6 +714,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.reduce'
     name: >-
@@ -702,6 +750,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.reduce_1'
     name: >-
@@ -713,10 +762,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -740,6 +786,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.reduce_2'
     name: >-
@@ -779,6 +826,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.reduceRight'
     name: >-
@@ -816,6 +864,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.reduceRight_1'
     name: >-
@@ -827,11 +876,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -855,6 +900,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.reduceRight_2'
     name: >-
@@ -896,6 +942,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.reverse'
     name: reverse()
@@ -910,6 +957,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.shift'
     name: shift()
@@ -924,6 +972,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -949,11 +998,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.some'
     name: >-
       some((value: RestorableDroppedManagedDatabase, index: number, array:
-      RestorableDroppedManagedDatabase[]) => boolean, any)
+      RestorableDroppedManagedDatabase[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -964,14 +1014,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: RestorableDroppedManagedDatabase,
-        index: number, array: RestorableDroppedManagedDatabase[]) => boolean,
+        index: number, array: RestorableDroppedManagedDatabase[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: RestorableDroppedManagedDatabase, index: number, array:
-              RestorableDroppedManagedDatabase[]) => boolean
+              RestorableDroppedManagedDatabase[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -987,6 +1037,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.sort'
     name: >-
@@ -1016,6 +1067,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.splice_1'
     name: 'splice(number, number, RestorableDroppedManagedDatabase[])'
@@ -1049,6 +1101,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1077,6 +1130,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabase[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.toLocaleString'
     name: toLocaleString()
@@ -1093,6 +1147,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.toString'
     name: toString()
@@ -1107,6 +1162,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.unshift'
     name: 'unshift(RestorableDroppedManagedDatabase[])'
@@ -1126,6 +1182,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult.values'
     name: values()
@@ -1140,6 +1197,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.RestorableDroppedManagedDatabase>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.RestorableDroppedManagedDatabase>

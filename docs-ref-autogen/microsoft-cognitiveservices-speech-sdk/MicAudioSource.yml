@@ -32,6 +32,7 @@ items:
       return:
         type:
           - '(audioNodeId: string) => Promise<IAudioStreamNode>'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.MicAudioSource.detach
     name: detach
@@ -46,6 +47,7 @@ items:
       return:
         type:
           - '(audioNodeId: string) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.MicAudioSource.deviceInfo
     name: deviceInfo
@@ -56,11 +58,12 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'deviceInfo: Promise<ISpeechConfigAudioDevice>'
+      content: Promise<ISpeechConfigAudioDevice> deviceInfo
       return:
         type:
           - >-
             microsoft-cognitiveservices-speech-sdk.Promise<microsoft-cognitiveservices-speech-sdk.ISpeechConfigAudioDevice>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.MicAudioSource.events
     name: events
@@ -71,11 +74,12 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'events: EventSource<AudioSourceEvent>'
+      content: EventSource<AudioSourceEvent> events
       return:
         type:
           - >-
             microsoft-cognitiveservices-speech-sdk.EventSource<microsoft-cognitiveservices-speech-sdk.AudioSourceEvent>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.MicAudioSource.format
     name: format
@@ -86,10 +90,12 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'format: AudioStreamFormat'
+      content: Promise<AudioStreamFormatImpl> format
       return:
         type:
-          - microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+          - >-
+            microsoft-cognitiveservices-speech-sdk.Promise<AudioStreamFormatImpl>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.MicAudioSource.id
     name: id
@@ -104,9 +110,10 @@ items:
       return:
         type:
           - () => string
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.MicAudioSource.constructor
-    name: 'MicAudioSource(IRecorder, number, string, string)'
+    name: 'MicAudioSource(IRecorder, string, string)'
     children: []
     type: constructor
     langs:
@@ -114,23 +121,19 @@ items:
     summary: ''
     syntax:
       content: >-
-        new MicAudioSource(privRecorder: IRecorder, outputChunkSize: number,
-        audioSourceId?: string, deviceId?: string)
+        new MicAudioSource(privRecorder: IRecorder, deviceId?: string,
+        audioSourceId?: string)
       parameters:
         - id: privRecorder
           type:
             - microsoft-cognitiveservices-speech-sdk.IRecorder
           description: ''
-        - id: outputChunkSize
-          type:
-            - number
-          description: ''
-        - id: audioSourceId
+        - id: deviceId
           type:
             - string
           description: ''
           optional: true
-        - id: deviceId
+        - id: audioSourceId
           type:
             - string
           description: ''
@@ -168,6 +171,7 @@ items:
       return:
         type:
           - () => Promise<boolean>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.MicAudioSource.turnOn
     name: turnOn
@@ -182,6 +186,7 @@ items:
       return:
         type:
           - () => Promise<boolean>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
 references:
   - uid: microsoft-cognitiveservices-speech-sdk.IRecorder
@@ -218,9 +223,11 @@ references:
         uid: microsoft-cognitiveservices-speech-sdk.AudioSourceEvent
       - name: '>'
         fullName: '>'
-  - uid: microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
-    name: AudioStreamFormat
+  - uid: microsoft-cognitiveservices-speech-sdk.Promise<AudioStreamFormatImpl>
+    name: Promise<AudioStreamFormatImpl>
     spec.typeScript:
-      - name: AudioStreamFormat
-        fullName: AudioStreamFormat
-        uid: microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+      - name: Promise
+        fullName: Promise
+        uid: microsoft-cognitiveservices-speech-sdk.Promise
+      - name: <AudioStreamFormatImpl>
+        fullName: <AudioStreamFormatImpl>

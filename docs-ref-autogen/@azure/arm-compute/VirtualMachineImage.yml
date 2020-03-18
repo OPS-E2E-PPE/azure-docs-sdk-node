@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-compute.VirtualMachineImage.automaticOSUpgradeProperties'
       - '@azure/arm-compute.VirtualMachineImage.dataDiskImages'
+      - '@azure/arm-compute.VirtualMachineImage.hyperVGeneration'
       - '@azure/arm-compute.VirtualMachineImage.id'
       - '@azure/arm-compute.VirtualMachineImage.location'
       - '@azure/arm-compute.VirtualMachineImage.name'
@@ -33,6 +34,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.AutomaticOSUpgradeProperties'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineImage.dataDiskImages'
     name: dataDiskImages
@@ -48,6 +50,23 @@ items:
       return:
         type:
           - '@azure/arm-compute.DataDiskImage[]'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineImage.hyperVGeneration'
+    name: hyperVGeneration
+    fullName: hyperVGeneration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Possible values include: ''V1'', ''V2'''
+    optional: true
+    syntax:
+      content: 'hyperVGeneration?: HyperVGenerationTypes'
+      return:
+        type:
+          - '@azure/arm-compute.HyperVGenerationTypes'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineImage.id'
     name: id
@@ -63,6 +82,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineImage.location'
     name: location
@@ -77,6 +97,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineImage.name'
     name: name
@@ -91,6 +112,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineImage.osDiskImage'
     name: osDiskImage
@@ -106,6 +128,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.OSDiskImage'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineImage.plan'
     name: plan
@@ -121,6 +144,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.PurchasePlan'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineImage.tags'
     name: tags
@@ -142,6 +166,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: '@azure/arm-compute.VirtualMachineImageResource'
@@ -164,6 +189,12 @@ references:
         uid: '@azure/arm-compute.DataDiskImage'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-compute.HyperVGenerationTypes'
+    name: HyperVGenerationTypes
+    spec.typeScript:
+      - name: HyperVGenerationTypes
+        fullName: HyperVGenerationTypes
+        uid: '@azure/arm-compute.HyperVGenerationTypes'
   - uid: '@azure/arm-compute.OSDiskImage'
     name: OSDiskImage
     spec.typeScript:

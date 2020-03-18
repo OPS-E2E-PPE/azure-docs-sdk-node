@@ -11,12 +11,13 @@ items:
       - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.entries'
       - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.every'
       - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.fill'
-      - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.filter_1'
       - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.filter'
+      - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.filter_1'
       - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.find'
       - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.find_1'
       - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.findIndex'
       - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.forEach'
+      - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.includes'
       - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.indexOf'
       - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.join'
       - '@azure/arm-machinelearningexperimentation.WorkspaceListResult.keys'
@@ -68,6 +69,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.concat'
     name: 'concat(ConcatArray<Workspace>[])'
@@ -87,6 +89,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace[]'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -106,6 +109,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace[]'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -149,6 +153,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.entries'
     name: entries()
@@ -163,10 +168,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.every'
     name: >-
-      every((value: Workspace, index: number, array: Workspace[]) => boolean,
+      every((value: Workspace, index: number, array: Workspace[]) => unknown,
       any)
     children: []
     type: method
@@ -176,11 +182,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Workspace, index: number, array:
-        Workspace[]) => boolean, thisArg?: any)
+        Workspace[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Workspace, index: number, array: Workspace[]) => boolean'
+            - '(value: Workspace, index: number, array: Workspace[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -196,6 +202,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.fill'
     name: 'fill(Workspace, undefined | number, undefined | number)'
@@ -236,39 +243,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-machinelearningexperimentation'
-  - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.filter_1'
-    name: 'filter((value: Workspace, index: number, array: Workspace[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Workspace, index: number, array:
-        Workspace[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Workspace, index: number, array: Workspace[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-machinelearningexperimentation.Workspace[]'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.filter'
     name: >-
@@ -304,6 +279,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-machinelearningexperimentation'
+  - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.filter_1'
+    name: >-
+      filter((value: Workspace, index: number, array: Workspace[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Workspace, index: number, array:
+        Workspace[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Workspace, index: number, array: Workspace[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-machinelearningexperimentation.Workspace[]'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.find'
     name: >-
@@ -349,26 +361,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.find_1'
-    name: 'find((value: Workspace, index: number, obj: Workspace[]) => boolean, any)'
+    name: 'find((value: Workspace, index: number, obj: Workspace[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Workspace, index: number, obj:
-        Workspace[]) => boolean, thisArg?: any)
+        Workspace[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Workspace, index: number, obj: Workspace[]) => boolean'
+            - '(value: Workspace, index: number, obj: Workspace[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -378,10 +387,11 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace | undefined'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.findIndex'
     name: >-
-      findIndex((value: Workspace, index: number, obj: Workspace[]) => boolean,
+      findIndex((value: Workspace, index: number, obj: Workspace[]) => unknown,
       any)
     children: []
     type: method
@@ -395,11 +405,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Workspace, index: number, obj:
-        Workspace[]) => boolean, thisArg?: any)
+        Workspace[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Workspace, index: number, obj: Workspace[]) => boolean'
+            - '(value: Workspace, index: number, obj: Workspace[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -421,6 +431,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.forEach'
     name: >-
@@ -451,6 +462,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-machinelearningexperimentation'
+  - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.includes'
+    name: 'includes(Workspace, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Workspace, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-machinelearningexperimentation.Workspace'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.indexOf'
     name: 'indexOf(Workspace, undefined | number)'
     children: []
@@ -477,6 +518,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.join'
     name: join(undefined | string)
@@ -501,6 +543,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.keys'
     name: keys()
@@ -515,6 +558,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.lastIndexOf'
     name: 'lastIndexOf(Workspace, undefined | number)'
@@ -542,6 +586,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.length'
     name: length
@@ -558,6 +603,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.map'
     name: 'map((value: Workspace, index: number, array: Workspace[]) => U, any)'
@@ -590,6 +636,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.nextLink'
     name: nextLink
@@ -605,6 +652,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.pop'
     name: pop()
@@ -619,6 +667,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace | undefined'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.push'
     name: 'push(Workspace[])'
@@ -638,6 +687,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.reduce_2'
     name: >-
@@ -676,6 +726,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.reduce'
     name: >-
@@ -706,6 +757,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.reduce_1'
     name: >-
@@ -715,10 +767,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Workspace, currentValue:
@@ -738,6 +787,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: >-
       @azure/arm-machinelearningexperimentation.WorkspaceListResult.reduceRight_2
@@ -778,6 +828,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.reduceRight'
     name: >-
@@ -810,6 +861,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: >-
       @azure/arm-machinelearningexperimentation.WorkspaceListResult.reduceRight_1
@@ -820,11 +872,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Workspace,
@@ -844,6 +892,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.reverse'
     name: reverse()
@@ -858,6 +907,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace[]'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.shift'
     name: shift()
@@ -872,6 +922,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace | undefined'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -897,10 +948,11 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace[]'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.some'
     name: >-
-      some((value: Workspace, index: number, array: Workspace[]) => boolean,
+      some((value: Workspace, index: number, array: Workspace[]) => unknown,
       any)
     children: []
     type: method
@@ -912,11 +964,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Workspace, index: number, array:
-        Workspace[]) => boolean, thisArg?: any)
+        Workspace[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Workspace, index: number, array: Workspace[]) => boolean'
+            - '(value: Workspace, index: number, array: Workspace[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -932,6 +984,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.sort'
     name: 'sort(undefined | (a: Workspace, b: Workspace) => number)'
@@ -956,6 +1009,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.splice_1'
     name: 'splice(number, number, Workspace[])'
@@ -987,6 +1041,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace[]'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1015,6 +1070,7 @@ items:
       return:
         type:
           - '@azure/arm-machinelearningexperimentation.Workspace[]'
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: >-
       @azure/arm-machinelearningexperimentation.WorkspaceListResult.toLocaleString
@@ -1032,6 +1088,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.toString'
     name: toString()
@@ -1046,6 +1103,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.unshift'
     name: 'unshift(Workspace[])'
@@ -1065,6 +1123,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
   - uid: '@azure/arm-machinelearningexperimentation.WorkspaceListResult.values'
     name: values()
@@ -1080,6 +1139,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-machinelearningexperimentation.Workspace>
+        description: ''
     package: '@azure/arm-machinelearningexperimentation'
 references:
   - uid: Array<@azure/arm-machinelearningexperimentation.Workspace>

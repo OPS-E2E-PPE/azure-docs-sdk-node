@@ -21,13 +21,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ContainerNetworkInterfaceIpConfiguration.name'
     name: name
@@ -43,6 +48,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ContainerNetworkInterfaceIpConfiguration.provisioningState
@@ -53,16 +59,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the resource.
+      The provisioning state of the container network interface IP configuration
+      resource. Possible
+
+      values include: 'Succeeded', 'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ContainerNetworkInterfaceIpConfiguration.type'
     name: type
@@ -82,4 +92,12 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
+references:
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

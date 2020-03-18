@@ -4,12 +4,11 @@ items:
     name: NetworkProfiles
     fullName: NetworkProfiles
     children:
+      - '@azure/arm-network.NetworkProfiles.beginDeleteMethod'
       - '@azure/arm-network.NetworkProfiles.createOrUpdate'
       - '@azure/arm-network.NetworkProfiles.createOrUpdate_2'
       - '@azure/arm-network.NetworkProfiles.createOrUpdate_1'
       - '@azure/arm-network.NetworkProfiles.deleteMethod'
-      - '@azure/arm-network.NetworkProfiles.deleteMethod_2'
-      - '@azure/arm-network.NetworkProfiles.deleteMethod_1'
       - '@azure/arm-network.NetworkProfiles.get'
       - '@azure/arm-network.NetworkProfiles.get_2'
       - '@azure/arm-network.NetworkProfiles.get_1'
@@ -33,6 +32,36 @@ items:
       - typeScript
     type: class
     summary: Class representing a NetworkProfiles.
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkProfiles.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Deletes the specified network profile.
+    syntax:
+      content: >-
+        function beginDeleteMethod(resourceGroupName: string,
+        networkProfileName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: networkProfileName
+          type:
+            - string
+          description: The name of the NetworkProfile.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.createOrUpdate'
     name: 'createOrUpdate(string, string, NetworkProfile, msRest.RequestOptionsBase)'
@@ -68,6 +97,7 @@ items:
       return:
         type:
           - Promise<Models.NetworkProfilesCreateOrUpdateResponse>
+        description: Promise<Models.NetworkProfilesCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.createOrUpdate_2'
     name: >-
@@ -107,9 +137,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfile>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.createOrUpdate_1'
     name: >-
@@ -145,9 +172,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfile>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -177,68 +201,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.NetworkProfiles.deleteMethod_2'
-    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<void>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function deleteMethod(resourceGroupName: string, networkProfileName:
-        string, options: RequestOptionsBase, callback: ServiceCallback<void>)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: networkProfileName
-          type:
-            - string
-          description: The name of the NetworkProfile.
-        - id: options
-          type:
-            - RequestOptionsBase
-          description: The optional parameters
-        - id: callback
-          type:
-            - ServiceCallback<void>
-          description: |
-            The callback
-      return:
-        type:
-          - Promise<RestResponse>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.NetworkProfiles.deleteMethod_1'
-    name: 'deleteMethod(string, string, ServiceCallback<void>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function deleteMethod(resourceGroupName: string, networkProfileName:
-        string, callback: ServiceCallback<void>)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: networkProfileName
-          type:
-            - string
-          description: The name of the NetworkProfile.
-        - id: callback
-          type:
-            - ServiceCallback<void>
-          description: |
-            The callback
-      return:
-        type:
-          - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.get'
     name: 'get(string, string, Models.NetworkProfilesGetOptionalParams)'
@@ -268,6 +231,7 @@ items:
       return:
         type:
           - Promise<Models.NetworkProfilesGetResponse>
+        description: Promise<Models.NetworkProfilesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.get_2'
     name: >-
@@ -301,9 +265,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfile>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.get_1'
     name: 'get(string, string, ServiceCallback<NetworkProfile>)'
@@ -330,9 +291,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfile>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.list'
     name: 'list(string, msRest.RequestOptionsBase)'
@@ -358,6 +316,7 @@ items:
       return:
         type:
           - Promise<Models.NetworkProfilesListResponse>
+        description: Promise<Models.NetworkProfilesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.list_2'
     name: >-
@@ -386,9 +345,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfileListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.list_1'
     name: 'list(string, ServiceCallback<NetworkProfileListResult>)'
@@ -411,9 +367,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfileListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.listAll'
     name: listAll(msRest.RequestOptionsBase)
@@ -433,6 +386,7 @@ items:
       return:
         type:
           - Promise<Models.NetworkProfilesListAllResponse>
+        description: Promise<Models.NetworkProfilesListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.listAll_2'
     name: 'listAll(RequestOptionsBase, ServiceCallback<NetworkProfileListResult>)'
@@ -455,9 +409,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfileListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.listAll_1'
     name: listAll(ServiceCallback<NetworkProfileListResult>)
@@ -474,9 +425,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfileListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.listAllNext'
     name: 'listAllNext(string, msRest.RequestOptionsBase)'
@@ -502,6 +450,7 @@ items:
       return:
         type:
           - Promise<Models.NetworkProfilesListAllNextResponse>
+        description: Promise<Models.NetworkProfilesListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.listAllNext_2'
     name: >-
@@ -530,9 +479,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfileListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.listAllNext_1'
     name: 'listAllNext(string, ServiceCallback<NetworkProfileListResult>)'
@@ -555,9 +501,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfileListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -583,6 +526,7 @@ items:
       return:
         type:
           - Promise<Models.NetworkProfilesListNextResponse>
+        description: Promise<Models.NetworkProfilesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.listNext_2'
     name: >-
@@ -611,9 +555,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfileListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.listNext_1'
     name: 'listNext(string, ServiceCallback<NetworkProfileListResult>)'
@@ -636,9 +577,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfileListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.constructor'
     name: NetworkProfiles(NetworkManagementClientContext)
@@ -688,6 +626,7 @@ items:
       return:
         type:
           - Promise<Models.NetworkProfilesUpdateTagsResponse>
+        description: Promise<Models.NetworkProfilesUpdateTagsResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.updateTags_2'
     name: >-
@@ -725,9 +664,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfile>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesUpdateTagsResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfiles.updateTags_1'
     name: 'updateTags(string, string, TagsObject, ServiceCallback<NetworkProfile>)'
@@ -759,9 +695,6 @@ items:
             - ServiceCallback<@azure/arm-network.NetworkProfile>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.NetworkProfilesUpdateTagsResponse>
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'

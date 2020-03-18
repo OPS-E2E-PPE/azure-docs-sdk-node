@@ -5,6 +5,7 @@ items:
     fullName: ServerEndpoint
     children:
       - '@azure/arm-storagesync.ServerEndpoint.cloudTiering'
+      - '@azure/arm-storagesync.ServerEndpoint.cloudTieringStatus'
       - '@azure/arm-storagesync.ServerEndpoint.friendlyName'
       - '@azure/arm-storagesync.ServerEndpoint.id'
       - '@azure/arm-storagesync.ServerEndpoint.lastOperationName'
@@ -17,6 +18,7 @@ items:
       - >-
         @azure/arm-storagesync.ServerEndpoint.offlineDataTransferStorageAccountTenantId
       - '@azure/arm-storagesync.ServerEndpoint.provisioningState'
+      - '@azure/arm-storagesync.ServerEndpoint.recallStatus'
       - '@azure/arm-storagesync.ServerEndpoint.serverLocalPath'
       - '@azure/arm-storagesync.ServerEndpoint.serverResourceId'
       - '@azure/arm-storagesync.ServerEndpoint.syncStatus'
@@ -44,6 +46,27 @@ items:
       return:
         type:
           - '@azure/arm-storagesync.CloudTiering2'
+        description: ''
+    package: '@azure/arm-storagesync'
+  - uid: '@azure/arm-storagesync.ServerEndpoint.cloudTieringStatus'
+    name: cloudTieringStatus
+    fullName: cloudTieringStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Cloud tiering status. Only populated if cloud tiering is enabled.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'cloudTieringStatus?: ServerEndpointCloudTieringStatus'
+      return:
+        type:
+          - '@azure/arm-storagesync.ServerEndpointCloudTieringStatus'
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.friendlyName'
     name: friendlyName
@@ -59,6 +82,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.id'
     name: id
@@ -80,6 +104,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.lastOperationName'
     name: lastOperationName
@@ -99,6 +124,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.lastWorkflowId'
     name: lastWorkflowId
@@ -118,6 +144,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.name'
     name: name
@@ -137,6 +164,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.offlineDataTransfer'
     name: offlineDataTransfer
@@ -152,6 +180,7 @@ items:
       return:
         type:
           - '@azure/arm-storagesync.OfflineDataTransfer2'
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.offlineDataTransferShareName'
     name: offlineDataTransferShareName
@@ -167,6 +196,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: >-
       @azure/arm-storagesync.ServerEndpoint.offlineDataTransferStorageAccountResourceId
@@ -187,6 +217,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: >-
       @azure/arm-storagesync.ServerEndpoint.offlineDataTransferStorageAccountTenantId
@@ -207,6 +238,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.provisioningState'
     name: provisioningState
@@ -226,6 +258,27 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-storagesync'
+  - uid: '@azure/arm-storagesync.ServerEndpoint.recallStatus'
+    name: recallStatus
+    fullName: recallStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Recall status. Only populated if cloud tiering is enabled.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'recallStatus?: ServerEndpointRecallStatus'
+      return:
+        type:
+          - '@azure/arm-storagesync.ServerEndpointRecallStatus'
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.serverLocalPath'
     name: serverLocalPath
@@ -241,6 +294,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.serverResourceId'
     name: serverResourceId
@@ -256,6 +310,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.syncStatus'
     name: syncStatus
@@ -275,6 +330,7 @@ items:
       return:
         type:
           - '@azure/arm-storagesync.ServerEndpointSyncStatus'
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.tierFilesOlderThanDays'
     name: tierFilesOlderThanDays
@@ -290,6 +346,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.type'
     name: type
@@ -311,6 +368,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storagesync'
   - uid: '@azure/arm-storagesync.ServerEndpoint.volumeFreeSpacePercent'
     name: volumeFreeSpacePercent
@@ -326,6 +384,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-storagesync'
 references:
   - uid: '@azure/arm-storagesync.ProxyResource'
@@ -340,12 +399,24 @@ references:
       - name: CloudTiering2
         fullName: CloudTiering2
         uid: '@azure/arm-storagesync.CloudTiering2'
+  - uid: '@azure/arm-storagesync.ServerEndpointCloudTieringStatus'
+    name: ServerEndpointCloudTieringStatus
+    spec.typeScript:
+      - name: ServerEndpointCloudTieringStatus
+        fullName: ServerEndpointCloudTieringStatus
+        uid: '@azure/arm-storagesync.ServerEndpointCloudTieringStatus'
   - uid: '@azure/arm-storagesync.OfflineDataTransfer2'
     name: OfflineDataTransfer2
     spec.typeScript:
       - name: OfflineDataTransfer2
         fullName: OfflineDataTransfer2
         uid: '@azure/arm-storagesync.OfflineDataTransfer2'
+  - uid: '@azure/arm-storagesync.ServerEndpointRecallStatus'
+    name: ServerEndpointRecallStatus
+    spec.typeScript:
+      - name: ServerEndpointRecallStatus
+        fullName: ServerEndpointRecallStatus
+        uid: '@azure/arm-storagesync.ServerEndpointRecallStatus'
   - uid: '@azure/arm-storagesync.ServerEndpointSyncStatus'
     name: ServerEndpointSyncStatus
     spec.typeScript:

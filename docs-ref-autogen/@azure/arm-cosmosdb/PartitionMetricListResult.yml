@@ -11,12 +11,13 @@ items:
       - '@azure/arm-cosmosdb.PartitionMetricListResult.entries'
       - '@azure/arm-cosmosdb.PartitionMetricListResult.every'
       - '@azure/arm-cosmosdb.PartitionMetricListResult.fill'
-      - '@azure/arm-cosmosdb.PartitionMetricListResult.filter_1'
       - '@azure/arm-cosmosdb.PartitionMetricListResult.filter'
+      - '@azure/arm-cosmosdb.PartitionMetricListResult.filter_1'
       - '@azure/arm-cosmosdb.PartitionMetricListResult.find'
       - '@azure/arm-cosmosdb.PartitionMetricListResult.find_1'
       - '@azure/arm-cosmosdb.PartitionMetricListResult.findIndex'
       - '@azure/arm-cosmosdb.PartitionMetricListResult.forEach'
+      - '@azure/arm-cosmosdb.PartitionMetricListResult.includes'
       - '@azure/arm-cosmosdb.PartitionMetricListResult.indexOf'
       - '@azure/arm-cosmosdb.PartitionMetricListResult.join'
       - '@azure/arm-cosmosdb.PartitionMetricListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.concat'
     name: 'concat(ConcatArray<PartitionMetric>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.every'
     name: >-
       every((value: PartitionMetric, index: number, array: PartitionMetric[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -170,13 +176,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: PartitionMetric, index: number,
-        array: PartitionMetric[]) => boolean, thisArg?: any)
+        array: PartitionMetric[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: PartitionMetric, index: number, array: PartitionMetric[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.fill'
     name: 'fill(PartitionMetric, undefined | number, undefined | number)'
@@ -232,43 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-cosmosdb'
-  - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.filter_1'
-    name: >-
-      filter((value: PartitionMetric, index: number, array: PartitionMetric[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: PartitionMetric, index: number,
-        array: PartitionMetric[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: PartitionMetric, index: number, array: PartitionMetric[])
-              => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-cosmosdb.PartitionMetric[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.filter'
     name: >-
@@ -306,6 +277,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.filter_1'
+    name: >-
+      filter((value: PartitionMetric, index: number, array: PartitionMetric[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: PartitionMetric, index: number,
+        array: PartitionMetric[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: PartitionMetric, index: number, array: PartitionMetric[])
+              => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-cosmosdb.PartitionMetric[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.find'
     name: >-
@@ -351,30 +361,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.find_1'
     name: >-
       find((value: PartitionMetric, index: number, obj: PartitionMetric[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: PartitionMetric, index: number, obj:
-        PartitionMetric[]) => boolean, thisArg?: any)
+        PartitionMetric[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: PartitionMetric, index: number, obj: PartitionMetric[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -384,11 +391,12 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.findIndex'
     name: >-
       findIndex((value: PartitionMetric, index: number, obj: PartitionMetric[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -401,13 +409,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: PartitionMetric, index: number,
-        obj: PartitionMetric[]) => boolean, thisArg?: any)
+        obj: PartitionMetric[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: PartitionMetric, index: number, obj: PartitionMetric[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -429,6 +437,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.forEach'
     name: >-
@@ -461,6 +470,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.includes'
+    name: 'includes(PartitionMetric, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: PartitionMetric, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-cosmosdb.PartitionMetric'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.indexOf'
     name: 'indexOf(PartitionMetric, undefined | number)'
     children: []
@@ -487,6 +526,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.join'
     name: join(undefined | string)
@@ -511,6 +551,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.keys'
     name: keys()
@@ -525,6 +566,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.lastIndexOf'
     name: 'lastIndexOf(PartitionMetric, undefined | number)'
@@ -552,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.length'
     name: length
@@ -568,6 +611,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.map'
     name: >-
@@ -604,6 +648,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.pop'
     name: pop()
@@ -618,6 +663,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.push'
     name: 'push(PartitionMetric[])'
@@ -637,6 +683,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.reduce'
     name: >-
@@ -668,6 +715,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.reduce_1'
     name: >-
@@ -678,10 +726,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: PartitionMetric,
@@ -701,6 +746,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.reduce_2'
     name: >-
@@ -739,6 +785,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.reduceRight'
     name: >-
@@ -772,6 +819,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.reduceRight_1'
     name: >-
@@ -782,11 +830,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: PartitionMetric,
@@ -806,6 +850,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.reduceRight_2'
     name: >-
@@ -845,6 +890,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.reverse'
     name: reverse()
@@ -859,6 +905,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.shift'
     name: shift()
@@ -873,6 +920,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric | undefined'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -898,11 +946,12 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.some'
     name: >-
       some((value: PartitionMetric, index: number, array: PartitionMetric[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -913,13 +962,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: PartitionMetric, index: number, array:
-        PartitionMetric[]) => boolean, thisArg?: any)
+        PartitionMetric[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: PartitionMetric, index: number, array: PartitionMetric[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -935,6 +984,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.sort'
     name: 'sort(undefined | (a: PartitionMetric, b: PartitionMetric) => number)'
@@ -959,6 +1009,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.splice_1'
     name: 'splice(number, number, PartitionMetric[])'
@@ -992,6 +1043,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1020,6 +1072,7 @@ items:
       return:
         type:
           - '@azure/arm-cosmosdb.PartitionMetric[]'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.toLocaleString'
     name: toLocaleString()
@@ -1036,6 +1089,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.toString'
     name: toString()
@@ -1050,6 +1104,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.unshift'
     name: 'unshift(PartitionMetric[])'
@@ -1069,6 +1124,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.PartitionMetricListResult.values'
     name: values()
@@ -1083,6 +1139,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-cosmosdb.PartitionMetric>
+        description: ''
     package: '@azure/arm-cosmosdb'
 references:
   - uid: Array<@azure/arm-cosmosdb.PartitionMetric>

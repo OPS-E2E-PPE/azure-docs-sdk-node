@@ -17,7 +17,17 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      A reference data set provides metadata about the events in an environment.
+      Metadata in the
+
+      reference data set will be joined with events as they are read from event
+      sources. The metadata
+
+      that makes up the reference data set is uploaded or modified through the
+      Time Series Insights
+
+      data plane APIs.
     extends:
       name: '@azure/arm-timeseriesinsights.TrackedResource'
     package: '@azure/arm-timeseriesinsights'
@@ -28,13 +38,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The time the resource was created.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'creationTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: >-
       @azure/arm-timeseriesinsights.ReferenceDataSetResource.dataStringComparisonBehavior
@@ -44,13 +59,27 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The reference data set key comparison behavior can be set using this
+      property. By default, the
+
+      value is 'Ordinal' - which means case sensitive key comparison will be
+      performed while joining
+
+      reference data with events or while adding new reference data. When
+      'OrdinalIgnoreCase' is
+
+      set, case insensitive comparison will be used. Possible values include:
+      'Ordinal',
+
+      'OrdinalIgnoreCase'
     optional: true
     syntax:
       content: 'dataStringComparisonBehavior?: DataStringComparisonBehavior'
       return:
         type:
           - '@azure/arm-timeseriesinsights.DataStringComparisonBehavior'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.ReferenceDataSetResource.id'
     name: id
@@ -59,13 +88,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource Id
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.ReferenceDataSetResource.keyProperties'
     name: keyProperties
@@ -74,12 +108,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The list of key properties for the reference data set.
     syntax:
       content: 'keyProperties: ReferenceDataSetKeyProperty[]'
       return:
         type:
           - '@azure/arm-timeseriesinsights.ReferenceDataSetKeyProperty[]'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.ReferenceDataSetResource.location'
     name: location
@@ -88,12 +123,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource location
     syntax:
       content: 'location: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.ReferenceDataSetResource.name'
     name: name
@@ -102,13 +138,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource name
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.ReferenceDataSetResource.provisioningState'
     name: provisioningState
@@ -117,13 +158,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Provisioning state of the resource. Possible values include: 'Accepted',
+      'Creating',
+
+      'Updating', 'Succeeded', 'Failed', 'Deleting'
     optional: true
     syntax:
       content: 'provisioningState?: ProvisioningState'
       return:
         type:
           - '@azure/arm-timeseriesinsights.ProvisioningState'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.ReferenceDataSetResource.tags'
     name: tags
@@ -132,13 +178,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource tags
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.ReferenceDataSetResource.type'
     name: type
@@ -147,13 +194,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource type
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-timeseriesinsights'
 references:
   - uid: '@azure/arm-timeseriesinsights.TrackedResource'

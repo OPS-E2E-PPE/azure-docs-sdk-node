@@ -11,12 +11,13 @@ items:
       - '@azure/arm-monitor.IncidentListResult.entries'
       - '@azure/arm-monitor.IncidentListResult.every'
       - '@azure/arm-monitor.IncidentListResult.fill'
-      - '@azure/arm-monitor.IncidentListResult.filter_1'
       - '@azure/arm-monitor.IncidentListResult.filter'
+      - '@azure/arm-monitor.IncidentListResult.filter_1'
       - '@azure/arm-monitor.IncidentListResult.find'
       - '@azure/arm-monitor.IncidentListResult.find_1'
       - '@azure/arm-monitor.IncidentListResult.findIndex'
       - '@azure/arm-monitor.IncidentListResult.forEach'
+      - '@azure/arm-monitor.IncidentListResult.includes'
       - '@azure/arm-monitor.IncidentListResult.indexOf'
       - '@azure/arm-monitor.IncidentListResult.join'
       - '@azure/arm-monitor.IncidentListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.concat'
     name: 'concat(ConcatArray<Incident>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.entries'
     name: entries()
@@ -157,9 +162,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.every'
-    name: 'every((value: Incident, index: number, array: Incident[]) => boolean, any)'
+    name: 'every((value: Incident, index: number, array: Incident[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -168,11 +174,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Incident, index: number, array:
-        Incident[]) => boolean, thisArg?: any)
+        Incident[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Incident, index: number, array: Incident[]) => boolean'
+            - '(value: Incident, index: number, array: Incident[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -188,6 +194,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.fill'
     name: 'fill(Incident, undefined | number, undefined | number)'
@@ -228,39 +235,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-monitor'
-  - uid: '@azure/arm-monitor.IncidentListResult.filter_1'
-    name: 'filter((value: Incident, index: number, array: Incident[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Incident, index: number, array:
-        Incident[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Incident, index: number, array: Incident[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-monitor.Incident[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.filter'
     name: >-
@@ -296,6 +271,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.IncidentListResult.filter_1'
+    name: >-
+      filter((value: Incident, index: number, array: Incident[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Incident, index: number, array:
+        Incident[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Incident, index: number, array: Incident[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-monitor.Incident[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.find'
     name: >-
@@ -341,26 +353,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.find_1'
-    name: 'find((value: Incident, index: number, obj: Incident[]) => boolean, any)'
+    name: 'find((value: Incident, index: number, obj: Incident[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Incident, index: number, obj:
-        Incident[]) => boolean, thisArg?: any)
+        Incident[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Incident, index: number, obj: Incident[]) => boolean'
+            - '(value: Incident, index: number, obj: Incident[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -370,10 +379,11 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident | undefined'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.findIndex'
     name: >-
-      findIndex((value: Incident, index: number, obj: Incident[]) => boolean,
+      findIndex((value: Incident, index: number, obj: Incident[]) => unknown,
       any)
     children: []
     type: method
@@ -387,11 +397,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Incident, index: number, obj:
-        Incident[]) => boolean, thisArg?: any)
+        Incident[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Incident, index: number, obj: Incident[]) => boolean'
+            - '(value: Incident, index: number, obj: Incident[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -413,6 +423,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.forEach'
     name: 'forEach((value: Incident, index: number, array: Incident[]) => void, any)'
@@ -441,6 +452,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.IncidentListResult.includes'
+    name: 'includes(Incident, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Incident, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-monitor.Incident'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.indexOf'
     name: 'indexOf(Incident, undefined | number)'
     children: []
@@ -467,6 +508,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.join'
     name: join(undefined | string)
@@ -491,6 +533,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.keys'
     name: keys()
@@ -505,6 +548,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.lastIndexOf'
     name: 'lastIndexOf(Incident, undefined | number)'
@@ -532,6 +576,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.length'
     name: length
@@ -548,6 +593,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.map'
     name: 'map((value: Incident, index: number, array: Incident[]) => U, any)'
@@ -580,6 +626,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.pop'
     name: pop()
@@ -594,6 +641,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident | undefined'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.push'
     name: 'push(Incident[])'
@@ -613,6 +661,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.reduce'
     name: >-
@@ -643,6 +692,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.reduce_1'
     name: >-
@@ -652,10 +702,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Incident, currentValue:
@@ -675,6 +722,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.reduce_2'
     name: >-
@@ -713,6 +761,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.reduceRight'
     name: >-
@@ -744,6 +793,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.reduceRight_1'
     name: >-
@@ -753,11 +803,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Incident, currentValue:
@@ -777,6 +823,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.reduceRight_2'
     name: >-
@@ -816,6 +863,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.reverse'
     name: reverse()
@@ -830,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.shift'
     name: shift()
@@ -844,6 +893,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident | undefined'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -869,9 +919,10 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.some'
-    name: 'some((value: Incident, index: number, array: Incident[]) => boolean, any)'
+    name: 'some((value: Incident, index: number, array: Incident[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -882,11 +933,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Incident, index: number, array:
-        Incident[]) => boolean, thisArg?: any)
+        Incident[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Incident, index: number, array: Incident[]) => boolean'
+            - '(value: Incident, index: number, array: Incident[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -902,6 +953,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.sort'
     name: 'sort(undefined | (a: Incident, b: Incident) => number)'
@@ -926,6 +978,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.splice_1'
     name: 'splice(number, number, Incident[])'
@@ -957,6 +1010,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -985,6 +1039,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.Incident[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.toLocaleString'
     name: toLocaleString()
@@ -1001,6 +1056,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.toString'
     name: toString()
@@ -1015,6 +1071,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.unshift'
     name: 'unshift(Incident[])'
@@ -1034,6 +1091,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.IncidentListResult.values'
     name: values()
@@ -1048,6 +1106,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-monitor.Incident>
+        description: ''
     package: '@azure/arm-monitor'
 references:
   - uid: Array<@azure/arm-monitor.Incident>

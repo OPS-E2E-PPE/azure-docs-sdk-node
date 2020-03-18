@@ -37,6 +37,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroup.id'
     name: id
@@ -52,6 +53,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroup.location'
     name: location
@@ -67,6 +69,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroup.name'
     name: name
@@ -86,6 +89,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroup.provisioningState'
     name: provisioningState
@@ -96,18 +100,19 @@ items:
     type: property
     summary: >-
       The provisioning state of the application security group resource.
-      Possible values are:
+      Possible values include:
 
-      'Succeeded', 'Updating', 'Deleting', and 'Failed'.
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroup.resourceGuid'
     name: resourceGuid
@@ -133,6 +138,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroup.tags'
     name: tags
@@ -148,6 +154,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationSecurityGroup.type'
     name: type
@@ -167,6 +174,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -175,3 +183,9 @@ references:
       - name: Resource
         fullName: Resource
         uid: '@azure/arm-network.Resource'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

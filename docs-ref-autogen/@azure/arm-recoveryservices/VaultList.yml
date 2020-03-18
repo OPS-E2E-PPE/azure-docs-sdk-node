@@ -11,12 +11,13 @@ items:
       - '@azure/arm-recoveryservices.VaultList.entries'
       - '@azure/arm-recoveryservices.VaultList.every'
       - '@azure/arm-recoveryservices.VaultList.fill'
-      - '@azure/arm-recoveryservices.VaultList.filter_1'
       - '@azure/arm-recoveryservices.VaultList.filter'
+      - '@azure/arm-recoveryservices.VaultList.filter_1'
       - '@azure/arm-recoveryservices.VaultList.find'
       - '@azure/arm-recoveryservices.VaultList.find_1'
       - '@azure/arm-recoveryservices.VaultList.findIndex'
       - '@azure/arm-recoveryservices.VaultList.forEach'
+      - '@azure/arm-recoveryservices.VaultList.includes'
       - '@azure/arm-recoveryservices.VaultList.indexOf'
       - '@azure/arm-recoveryservices.VaultList.join'
       - '@azure/arm-recoveryservices.VaultList.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.concat'
     name: 'concat(ConcatArray<Vault>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault[]'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault[]'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.every'
-    name: 'every((value: Vault, index: number, array: Vault[]) => boolean, any)'
+    name: 'every((value: Vault, index: number, array: Vault[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Vault, index: number, array: Vault[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Vault, index: number, array: Vault[]) => boolean'
+            - '(value: Vault, index: number, array: Vault[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.fill'
     name: 'fill(Vault, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-recoveryservices'
-  - uid: '@azure/arm-recoveryservices.VaultList.filter_1'
-    name: 'filter((value: Vault, index: number, array: Vault[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Vault, index: number, array:
-        Vault[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Vault, index: number, array: Vault[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-recoveryservices.Vault[]'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.filter'
     name: 'filter((value: Vault, index: number, array: Vault[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-recoveryservices'
+  - uid: '@azure/arm-recoveryservices.VaultList.filter_1'
+    name: 'filter((value: Vault, index: number, array: Vault[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Vault, index: number, array:
+        Vault[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Vault, index: number, array: Vault[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-recoveryservices.Vault[]'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.find'
     name: >-
@@ -338,26 +348,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.find_1'
-    name: 'find((value: Vault, index: number, obj: Vault[]) => boolean, any)'
+    name: 'find((value: Vault, index: number, obj: Vault[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Vault, index: number, obj: Vault[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Vault, index: number, obj: Vault[]) => boolean'
+            - '(value: Vault, index: number, obj: Vault[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -367,9 +374,10 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault | undefined'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.findIndex'
-    name: 'findIndex((value: Vault, index: number, obj: Vault[]) => boolean, any)'
+    name: 'findIndex((value: Vault, index: number, obj: Vault[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -382,11 +390,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Vault, index: number, obj:
-        Vault[]) => boolean, thisArg?: any)
+        Vault[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Vault, index: number, obj: Vault[]) => boolean'
+            - '(value: Vault, index: number, obj: Vault[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -408,6 +416,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.forEach'
     name: 'forEach((value: Vault, index: number, array: Vault[]) => void, any)'
@@ -436,6 +445,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-recoveryservices'
+  - uid: '@azure/arm-recoveryservices.VaultList.includes'
+    name: 'includes(Vault, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Vault, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-recoveryservices.Vault'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.indexOf'
     name: 'indexOf(Vault, undefined | number)'
     children: []
@@ -460,6 +497,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.join'
     name: join(undefined | string)
@@ -484,6 +522,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.keys'
     name: keys()
@@ -498,6 +537,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.lastIndexOf'
     name: 'lastIndexOf(Vault, undefined | number)'
@@ -525,6 +565,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.length'
     name: length
@@ -541,6 +582,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.map'
     name: 'map((value: Vault, index: number, array: Vault[]) => U, any)'
@@ -573,6 +615,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.nextLink'
     name: nextLink
@@ -590,6 +633,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.pop'
     name: pop()
@@ -604,6 +648,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault | undefined'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.push'
     name: 'push(Vault[])'
@@ -623,6 +668,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.reduce_2'
     name: >-
@@ -660,6 +706,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.reduce'
     name: >-
@@ -690,6 +737,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.reduce_1'
     name: >-
@@ -699,10 +747,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Vault, currentValue: Vault,
@@ -721,6 +766,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.reduceRight_2'
     name: >-
@@ -759,6 +805,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.reduceRight'
     name: >-
@@ -790,6 +837,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.reduceRight_1'
     name: >-
@@ -799,11 +847,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Vault, currentValue:
@@ -823,6 +867,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.reverse'
     name: reverse()
@@ -837,6 +882,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault[]'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.shift'
     name: shift()
@@ -851,6 +897,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault | undefined'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -876,9 +923,10 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault[]'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.some'
-    name: 'some((value: Vault, index: number, array: Vault[]) => boolean, any)'
+    name: 'some((value: Vault, index: number, array: Vault[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -889,11 +937,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Vault, index: number, array: Vault[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Vault, index: number, array: Vault[]) => boolean'
+            - '(value: Vault, index: number, array: Vault[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -909,6 +957,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.sort'
     name: 'sort(undefined | (a: Vault, b: Vault) => number)'
@@ -931,6 +980,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.splice_1'
     name: 'splice(number, number, Vault[])'
@@ -962,6 +1012,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault[]'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.splice'
     name: 'splice(number, undefined | number)'
@@ -990,6 +1041,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservices.Vault[]'
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.toLocaleString'
     name: toLocaleString()
@@ -1006,6 +1058,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.toString'
     name: toString()
@@ -1020,6 +1073,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.unshift'
     name: 'unshift(Vault[])'
@@ -1039,6 +1093,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservices'
   - uid: '@azure/arm-recoveryservices.VaultList.values'
     name: values()
@@ -1053,6 +1108,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-recoveryservices.Vault>
+        description: ''
     package: '@azure/arm-recoveryservices'
 references:
   - uid: Array<@azure/arm-recoveryservices.Vault>

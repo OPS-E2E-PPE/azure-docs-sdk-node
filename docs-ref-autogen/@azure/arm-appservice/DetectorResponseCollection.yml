@@ -11,12 +11,13 @@ items:
       - '@azure/arm-appservice.DetectorResponseCollection.entries'
       - '@azure/arm-appservice.DetectorResponseCollection.every'
       - '@azure/arm-appservice.DetectorResponseCollection.fill'
-      - '@azure/arm-appservice.DetectorResponseCollection.filter_1'
       - '@azure/arm-appservice.DetectorResponseCollection.filter'
+      - '@azure/arm-appservice.DetectorResponseCollection.filter_1'
       - '@azure/arm-appservice.DetectorResponseCollection.find'
       - '@azure/arm-appservice.DetectorResponseCollection.find_1'
       - '@azure/arm-appservice.DetectorResponseCollection.findIndex'
       - '@azure/arm-appservice.DetectorResponseCollection.forEach'
+      - '@azure/arm-appservice.DetectorResponseCollection.includes'
       - '@azure/arm-appservice.DetectorResponseCollection.indexOf'
       - '@azure/arm-appservice.DetectorResponseCollection.join'
       - '@azure/arm-appservice.DetectorResponseCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.concat'
     name: 'concat(ConcatArray<DetectorResponse>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.every'
     name: >-
       every((value: DetectorResponse, index: number, array: DetectorResponse[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: DetectorResponse, index: number,
-        array: DetectorResponse[]) => boolean, thisArg?: any)
+        array: DetectorResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: DetectorResponse, index: number, array:
-              DetectorResponse[]) => boolean
+              DetectorResponse[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.fill'
     name: 'fill(DetectorResponse, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appservice'
-  - uid: '@azure/arm-appservice.DetectorResponseCollection.filter_1'
-    name: >-
-      filter((value: DetectorResponse, index: number, array: DetectorResponse[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: DetectorResponse, index: number,
-        array: DetectorResponse[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: DetectorResponse, index: number, array:
-              DetectorResponse[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appservice.DetectorResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.DetectorResponseCollection.filter_1'
+    name: >-
+      filter((value: DetectorResponse, index: number, array: DetectorResponse[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: DetectorResponse, index: number,
+        array: DetectorResponse[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: DetectorResponse, index: number, array:
+              DetectorResponse[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appservice.DetectorResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.find_1'
     name: >-
       find((value: DetectorResponse, index: number, obj: DetectorResponse[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: DetectorResponse, index: number, obj:
-        DetectorResponse[]) => boolean, thisArg?: any)
+        DetectorResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: DetectorResponse, index: number, obj: DetectorResponse[])
-              => boolean
+              => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.findIndex'
     name: >-
       findIndex((value: DetectorResponse, index: number, obj:
-      DetectorResponse[]) => boolean, any)
+      DetectorResponse[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: DetectorResponse, index: number,
-        obj: DetectorResponse[]) => boolean, thisArg?: any)
+        obj: DetectorResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: DetectorResponse, index: number, obj: DetectorResponse[])
-              => boolean
+              => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.DetectorResponseCollection.includes'
+    name: 'includes(DetectorResponse, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: DetectorResponse, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appservice.DetectorResponse'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.indexOf'
     name: 'indexOf(DetectorResponse, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.lastIndexOf'
     name: 'lastIndexOf(DetectorResponse, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.push'
     name: 'push(DetectorResponse[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.reduce'
     name: >-
@@ -689,6 +737,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.reduce_1'
     name: >-
@@ -699,10 +748,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: DetectorResponse,
@@ -723,6 +769,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.reduce_2'
     name: >-
@@ -761,6 +808,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.reduceRight'
     name: >-
@@ -795,6 +843,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.reduceRight_1'
     name: >-
@@ -805,11 +854,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: DetectorResponse,
@@ -830,6 +875,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.reduceRight_2'
     name: >-
@@ -869,6 +915,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.reverse'
     name: reverse()
@@ -883,6 +930,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.shift'
     name: shift()
@@ -897,6 +945,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse | undefined'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -922,11 +971,12 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.some'
     name: >-
       some((value: DetectorResponse, index: number, array: DetectorResponse[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -937,13 +987,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: DetectorResponse, index: number,
-        array: DetectorResponse[]) => boolean, thisArg?: any)
+        array: DetectorResponse[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: DetectorResponse, index: number, array:
-              DetectorResponse[]) => boolean
+              DetectorResponse[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -959,6 +1009,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.sort'
     name: 'sort(undefined | (a: DetectorResponse, b: DetectorResponse) => number)'
@@ -983,6 +1034,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.splice_1'
     name: 'splice(number, number, DetectorResponse[])'
@@ -1016,6 +1068,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1044,6 +1097,7 @@ items:
       return:
         type:
           - '@azure/arm-appservice.DetectorResponse[]'
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.toLocaleString'
     name: toLocaleString()
@@ -1060,6 +1114,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.toString'
     name: toString()
@@ -1074,6 +1129,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.unshift'
     name: 'unshift(DetectorResponse[])'
@@ -1093,6 +1149,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appservice'
   - uid: '@azure/arm-appservice.DetectorResponseCollection.values'
     name: values()
@@ -1107,6 +1164,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-appservice.DetectorResponse>
+        description: ''
     package: '@azure/arm-appservice'
 references:
   - uid: Array<@azure/arm-appservice.DetectorResponse>

@@ -11,12 +11,13 @@ items:
       - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.entries'
       - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.every'
       - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.fill'
-      - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.filter_1'
       - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.filter'
+      - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.filter_1'
       - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.find'
       - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.find_1'
       - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.findIndex'
       - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.forEach'
+      - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.includes'
       - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.indexOf'
       - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.join'
       - '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.keys'
@@ -64,6 +65,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.concat'
     name: 'concat(ConcatArray<VolumeResourceDescription>[])'
@@ -84,6 +86,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -103,6 +106,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -146,6 +150,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.entries'
     name: entries()
@@ -160,11 +165,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.every'
     name: >-
       every((value: VolumeResourceDescription, index: number, array:
-      VolumeResourceDescription[]) => boolean, any)
+      VolumeResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -173,13 +179,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: VolumeResourceDescription, index:
-        number, array: VolumeResourceDescription[]) => boolean, thisArg?: any)
+        number, array: VolumeResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VolumeResourceDescription, index: number, array:
-              VolumeResourceDescription[]) => boolean
+              VolumeResourceDescription[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -195,6 +201,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.fill'
     name: 'fill(VolumeResourceDescription, undefined | number, undefined | number)'
@@ -235,43 +242,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-servicefabricmesh'
-  - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.filter_1'
-    name: >-
-      filter((value: VolumeResourceDescription, index: number, array:
-      VolumeResourceDescription[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: VolumeResourceDescription, index:
-        number, array: VolumeResourceDescription[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: VolumeResourceDescription, index: number, array:
-              VolumeResourceDescription[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-servicefabricmesh.VolumeResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.filter'
     name: >-
@@ -309,6 +280,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-servicefabricmesh'
+  - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.filter_1'
+    name: >-
+      filter((value: VolumeResourceDescription, index: number, array:
+      VolumeResourceDescription[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: VolumeResourceDescription, index:
+        number, array: VolumeResourceDescription[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: VolumeResourceDescription, index: number, array:
+              VolumeResourceDescription[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-servicefabricmesh.VolumeResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.find'
     name: >-
@@ -355,30 +365,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.find_1'
     name: >-
       find((value: VolumeResourceDescription, index: number, obj:
-      VolumeResourceDescription[]) => boolean, any)
+      VolumeResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: VolumeResourceDescription, index:
-        number, obj: VolumeResourceDescription[]) => boolean, thisArg?: any)
+        number, obj: VolumeResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VolumeResourceDescription, index: number, obj:
-              VolumeResourceDescription[]) => boolean
+              VolumeResourceDescription[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -388,11 +395,12 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription | undefined'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.findIndex'
     name: >-
       findIndex((value: VolumeResourceDescription, index: number, obj:
-      VolumeResourceDescription[]) => boolean, any)
+      VolumeResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -405,13 +413,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: VolumeResourceDescription, index:
-        number, obj: VolumeResourceDescription[]) => boolean, thisArg?: any)
+        number, obj: VolumeResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VolumeResourceDescription, index: number, obj:
-              VolumeResourceDescription[]) => boolean
+              VolumeResourceDescription[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -433,6 +441,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.forEach'
     name: >-
@@ -465,6 +474,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-servicefabricmesh'
+  - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.includes'
+    name: 'includes(VolumeResourceDescription, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: VolumeResourceDescription, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-servicefabricmesh.VolumeResourceDescription'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.indexOf'
     name: 'indexOf(VolumeResourceDescription, undefined | number)'
     children: []
@@ -491,6 +530,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.join'
     name: join(undefined | string)
@@ -515,6 +555,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.keys'
     name: keys()
@@ -529,6 +570,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.lastIndexOf'
     name: 'lastIndexOf(VolumeResourceDescription, undefined | number)'
@@ -556,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.length'
     name: length
@@ -572,6 +615,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.map'
     name: >-
@@ -608,6 +652,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.nextLink'
     name: nextLink
@@ -623,6 +668,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.pop'
     name: pop()
@@ -637,6 +683,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription | undefined'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.push'
     name: 'push(VolumeResourceDescription[])'
@@ -656,6 +703,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.reduce_2'
     name: >-
@@ -694,6 +742,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.reduce'
     name: >-
@@ -727,6 +776,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.reduce_1'
     name: >-
@@ -738,10 +788,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: VolumeResourceDescription,
@@ -763,6 +810,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.reduceRight_2'
     name: >-
@@ -802,6 +850,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.reduceRight'
     name: >-
@@ -837,6 +886,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.reduceRight_1'
     name: >-
@@ -848,11 +898,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -874,6 +920,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.reverse'
     name: reverse()
@@ -888,6 +935,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.shift'
     name: shift()
@@ -902,6 +950,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription | undefined'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -927,11 +976,12 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.some'
     name: >-
       some((value: VolumeResourceDescription, index: number, array:
-      VolumeResourceDescription[]) => boolean, any)
+      VolumeResourceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -942,13 +992,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: VolumeResourceDescription, index:
-        number, array: VolumeResourceDescription[]) => boolean, thisArg?: any)
+        number, array: VolumeResourceDescription[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VolumeResourceDescription, index: number, array:
-              VolumeResourceDescription[]) => boolean
+              VolumeResourceDescription[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -964,6 +1014,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.sort'
     name: >-
@@ -992,6 +1043,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.splice_1'
     name: 'splice(number, number, VolumeResourceDescription[])'
@@ -1025,6 +1077,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.splice'
     name: 'splice(number, undefined | number)'
@@ -1053,6 +1106,7 @@ items:
       return:
         type:
           - '@azure/arm-servicefabricmesh.VolumeResourceDescription[]'
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.toLocaleString'
     name: toLocaleString()
@@ -1069,6 +1123,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.toString'
     name: toString()
@@ -1083,6 +1138,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.unshift'
     name: 'unshift(VolumeResourceDescription[])'
@@ -1102,6 +1158,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-servicefabricmesh'
   - uid: '@azure/arm-servicefabricmesh.VolumeResourceDescriptionList.values'
     name: values()
@@ -1117,6 +1174,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-servicefabricmesh.VolumeResourceDescription>
+        description: ''
     package: '@azure/arm-servicefabricmesh'
 references:
   - uid: Array<@azure/arm-servicefabricmesh.VolumeResourceDescription>

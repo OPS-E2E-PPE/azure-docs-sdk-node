@@ -6,7 +6,6 @@ items:
     children:
       - '@azure/arm-network.PublicIPPrefixes.beginCreateOrUpdate'
       - '@azure/arm-network.PublicIPPrefixes.beginDeleteMethod'
-      - '@azure/arm-network.PublicIPPrefixes.beginUpdateTags'
       - '@azure/arm-network.PublicIPPrefixes.createOrUpdate'
       - '@azure/arm-network.PublicIPPrefixes.deleteMethod'
       - '@azure/arm-network.PublicIPPrefixes.get'
@@ -26,6 +25,8 @@ items:
       - '@azure/arm-network.PublicIPPrefixes.listNext_1'
       - '@azure/arm-network.PublicIPPrefixes.constructor'
       - '@azure/arm-network.PublicIPPrefixes.updateTags'
+      - '@azure/arm-network.PublicIPPrefixes.updateTags_2'
+      - '@azure/arm-network.PublicIPPrefixes.updateTags_1'
     langs:
       - typeScript
     type: class
@@ -68,6 +69,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -97,39 +99,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.PublicIPPrefixes.beginUpdateTags'
-    name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Updates public IP prefix tags.
-    syntax:
-      content: >-
-        function beginUpdateTags(resourceGroupName: string, publicIpPrefixName:
-        string, parameters: TagsObject, options?: msRest.RequestOptionsBase)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: publicIpPrefixName
-          type:
-            - string
-          description: The name of the public IP prefix.
-        - id: parameters
-          type:
-            - '@azure/arm-network.TagsObject'
-          description: Parameters supplied to update public IP prefix tags.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.createOrUpdate'
     name: 'createOrUpdate(string, string, PublicIPPrefix, msRest.RequestOptionsBase)'
@@ -165,6 +135,7 @@ items:
       return:
         type:
           - Promise<Models.PublicIPPrefixesCreateOrUpdateResponse>
+        description: Promise<Models.PublicIPPrefixesCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -194,6 +165,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.get'
     name: 'get(string, string, Models.PublicIPPrefixesGetOptionalParams)'
@@ -223,6 +195,7 @@ items:
       return:
         type:
           - Promise<Models.PublicIPPrefixesGetResponse>
+        description: Promise<Models.PublicIPPrefixesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.get_2'
     name: >-
@@ -256,9 +229,6 @@ items:
             - ServiceCallback<@azure/arm-network.PublicIPPrefix>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PublicIPPrefixesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.get_1'
     name: 'get(string, string, ServiceCallback<PublicIPPrefix>)'
@@ -285,9 +255,6 @@ items:
             - ServiceCallback<@azure/arm-network.PublicIPPrefix>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PublicIPPrefixesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.list'
     name: 'list(string, msRest.RequestOptionsBase)'
@@ -313,6 +280,7 @@ items:
       return:
         type:
           - Promise<Models.PublicIPPrefixesListResponse>
+        description: Promise<Models.PublicIPPrefixesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.list_2'
     name: >-
@@ -341,9 +309,6 @@ items:
             - ServiceCallback<@azure/arm-network.PublicIPPrefixListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PublicIPPrefixesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.list_1'
     name: 'list(string, ServiceCallback<PublicIPPrefixListResult>)'
@@ -366,9 +331,6 @@ items:
             - ServiceCallback<@azure/arm-network.PublicIPPrefixListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PublicIPPrefixesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.listAll'
     name: listAll(msRest.RequestOptionsBase)
@@ -388,6 +350,7 @@ items:
       return:
         type:
           - Promise<Models.PublicIPPrefixesListAllResponse>
+        description: Promise<Models.PublicIPPrefixesListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.listAll_2'
     name: 'listAll(RequestOptionsBase, ServiceCallback<PublicIPPrefixListResult>)'
@@ -410,9 +373,6 @@ items:
             - ServiceCallback<@azure/arm-network.PublicIPPrefixListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PublicIPPrefixesListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.listAll_1'
     name: listAll(ServiceCallback<PublicIPPrefixListResult>)
@@ -429,9 +389,6 @@ items:
             - ServiceCallback<@azure/arm-network.PublicIPPrefixListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PublicIPPrefixesListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.listAllNext'
     name: 'listAllNext(string, msRest.RequestOptionsBase)'
@@ -457,6 +414,7 @@ items:
       return:
         type:
           - Promise<Models.PublicIPPrefixesListAllNextResponse>
+        description: Promise<Models.PublicIPPrefixesListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.listAllNext_2'
     name: >-
@@ -485,9 +443,6 @@ items:
             - ServiceCallback<@azure/arm-network.PublicIPPrefixListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PublicIPPrefixesListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.listAllNext_1'
     name: 'listAllNext(string, ServiceCallback<PublicIPPrefixListResult>)'
@@ -510,9 +465,6 @@ items:
             - ServiceCallback<@azure/arm-network.PublicIPPrefixListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PublicIPPrefixesListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -538,6 +490,7 @@ items:
       return:
         type:
           - Promise<Models.PublicIPPrefixesListNextResponse>
+        description: Promise<Models.PublicIPPrefixesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.listNext_2'
     name: >-
@@ -566,9 +519,6 @@ items:
             - ServiceCallback<@azure/arm-network.PublicIPPrefixListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PublicIPPrefixesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.listNext_1'
     name: 'listNext(string, ServiceCallback<PublicIPPrefixListResult>)'
@@ -591,9 +541,6 @@ items:
             - ServiceCallback<@azure/arm-network.PublicIPPrefixListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PublicIPPrefixesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PublicIPPrefixes.constructor'
     name: PublicIPPrefixes(NetworkManagementClientContext)
@@ -643,6 +590,75 @@ items:
       return:
         type:
           - Promise<Models.PublicIPPrefixesUpdateTagsResponse>
+        description: Promise<Models.PublicIPPrefixesUpdateTagsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PublicIPPrefixes.updateTags_2'
+    name: >-
+      updateTags(string, string, TagsObject, RequestOptionsBase,
+      ServiceCallback<PublicIPPrefix>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, publicIpPrefixName:
+        string, parameters: TagsObject, options: RequestOptionsBase, callback:
+        ServiceCallback<PublicIPPrefix>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: publicIpPrefixName
+          type:
+            - string
+          description: The name of the public IP prefix.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update public IP prefix tags.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.PublicIPPrefix>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PublicIPPrefixes.updateTags_1'
+    name: 'updateTags(string, string, TagsObject, ServiceCallback<PublicIPPrefix>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, publicIpPrefixName:
+        string, parameters: TagsObject, callback:
+        ServiceCallback<PublicIPPrefix>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: publicIpPrefixName
+          type:
+            - string
+          description: The name of the public IP prefix.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update public IP prefix tags.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.PublicIPPrefix>
+          description: |
+            The callback
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -657,12 +673,6 @@ references:
       - name: PublicIPPrefix
         fullName: PublicIPPrefix
         uid: '@azure/arm-network.PublicIPPrefix'
-  - uid: '@azure/arm-network.TagsObject'
-    name: TagsObject
-    spec.typeScript:
-      - name: TagsObject
-        fullName: TagsObject
-        uid: '@azure/arm-network.TagsObject'
   - uid: ServiceCallback<@azure/arm-network.PublicIPPrefix>
     name: PublicIPPrefix>
     spec.typeScript:
@@ -689,3 +699,9 @@ references:
         uid: '@azure/arm-network.PublicIPPrefixListResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'

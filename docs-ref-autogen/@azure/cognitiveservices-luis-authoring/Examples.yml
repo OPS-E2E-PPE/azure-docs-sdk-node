@@ -28,7 +28,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adds a labeled example to the application.
+    summary: Adds a labeled example utterance in a version of the application.
     syntax:
       content: >-
         function add(appId: string, versionId: string, exampleLabelObject:
@@ -45,7 +45,7 @@ items:
         - id: exampleLabelObject
           type:
             - '@azure/cognitiveservices-luis-authoring.ExampleLabelObject'
-          description: An example label with the expected intent and entities.
+          description: A labeled example utterance with the expected intent and entities.
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -54,6 +54,7 @@ items:
       return:
         type:
           - Promise<Models.ExamplesAddResponse>
+        description: Promise<Models.ExamplesAddResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Examples.add_2'
     name: >-
@@ -81,7 +82,7 @@ items:
         - id: exampleLabelObject
           type:
             - '@azure/cognitiveservices-luis-authoring.ExampleLabelObject'
-          description: An example label with the expected intent and entities.
+          description: A labeled example utterance with the expected intent and entities.
         - id: options
           type:
             - RequestOptionsBase
@@ -92,9 +93,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.LabelExampleResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExamplesAddResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Examples.add_1'
     name: >-
@@ -121,16 +119,13 @@ items:
         - id: exampleLabelObject
           type:
             - '@azure/cognitiveservices-luis-authoring.ExampleLabelObject'
-          description: An example label with the expected intent and entities.
+          description: A labeled example utterance with the expected intent and entities.
         - id: callback
           type:
             - >-
               ServiceCallback<@azure/cognitiveservices-luis-authoring.LabelExampleResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExamplesAddResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Examples.batch'
     name: 'batch(string, string, ExampleLabelObject[], msRest.RequestOptionsBase)'
@@ -138,7 +133,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adds a batch of labeled examples to the application.
+    summary: >-
+      Adds a batch of labeled example utterances to a version of the
+      application.
     syntax:
       content: >-
         function batch(appId: string, versionId: string,
@@ -156,7 +153,7 @@ items:
         - id: exampleLabelObjectArray
           type:
             - '@azure/cognitiveservices-luis-authoring.ExampleLabelObject[]'
-          description: Array of examples.
+          description: Array of example utterances.
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -165,6 +162,7 @@ items:
       return:
         type:
           - Promise<Models.ExamplesBatchResponse>
+        description: Promise<Models.ExamplesBatchResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Examples.batch_2'
     name: >-
@@ -192,7 +190,7 @@ items:
         - id: exampleLabelObjectArray
           type:
             - '@azure/cognitiveservices-luis-authoring.ExampleLabelObject[]'
-          description: Array of examples.
+          description: Array of example utterances.
         - id: options
           type:
             - RequestOptionsBase
@@ -203,9 +201,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.BatchLabelExample[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExamplesBatchResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Examples.batch_1'
     name: >-
@@ -233,16 +228,13 @@ items:
         - id: exampleLabelObjectArray
           type:
             - '@azure/cognitiveservices-luis-authoring.ExampleLabelObject[]'
-          description: Array of examples.
+          description: Array of example utterances.
         - id: callback
           type:
             - >-
               ServiceCallback<@azure/cognitiveservices-luis-authoring.BatchLabelExample[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExamplesBatchResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Examples.deleteMethod'
     name: 'deleteMethod(string, string, number, msRest.RequestOptionsBase)'
@@ -250,7 +242,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Deletes the labeled example with the specified ID.
+    summary: >-
+      Deletes the labeled example utterances with the specified ID from a
+      version of the application.
     syntax:
       content: >-
         function deleteMethod(appId: string, versionId: string, exampleId:
@@ -276,6 +270,7 @@ items:
       return:
         type:
           - Promise<Models.ExamplesDeleteMethodResponse>
+        description: Promise<Models.ExamplesDeleteMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Examples.deleteMethod_2'
     name: >-
@@ -314,9 +309,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExamplesDeleteMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Examples.deleteMethod_1'
     name: 'deleteMethod(string, string, number, ServiceCallback<OperationStatus>)'
@@ -348,9 +340,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.OperationStatus>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExamplesDeleteMethodResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Examples.constructor'
     name: Examples(LUISAuthoringClientContext)
@@ -401,9 +390,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.LabeledUtterance[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExamplesListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Examples.list'
     name: 'list(string, string, Models.ExamplesListOptionalParams)'
@@ -411,7 +397,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Returns examples to be reviewed.
+    summary: >-
+      Returns example utterances to be reviewed from a version of the
+      application.
     syntax:
       content: >-
         function list(appId: string, versionId: string, options?:
@@ -433,6 +421,7 @@ items:
       return:
         type:
           - Promise<Models.ExamplesListResponse>
+        description: Promise<Models.ExamplesListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.Examples.list_1'
     name: 'list(string, string, ServiceCallback<LabeledUtterance[]>)'
@@ -460,9 +449,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-luis-authoring.LabeledUtterance[]>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExamplesListResponse>
     package: '@azure/cognitiveservices-luis-authoring'
 references:
   - uid: '@azure/cognitiveservices-luis-authoring.LUISAuthoringClientContext'

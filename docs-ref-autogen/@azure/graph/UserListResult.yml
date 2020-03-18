@@ -11,12 +11,13 @@ items:
       - '@azure/graph.UserListResult.entries'
       - '@azure/graph.UserListResult.every'
       - '@azure/graph.UserListResult.fill'
-      - '@azure/graph.UserListResult.filter_1'
       - '@azure/graph.UserListResult.filter'
+      - '@azure/graph.UserListResult.filter_1'
       - '@azure/graph.UserListResult.find'
       - '@azure/graph.UserListResult.find_1'
       - '@azure/graph.UserListResult.findIndex'
       - '@azure/graph.UserListResult.forEach'
+      - '@azure/graph.UserListResult.includes'
       - '@azure/graph.UserListResult.indexOf'
       - '@azure/graph.UserListResult.join'
       - '@azure/graph.UserListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.concat'
     name: 'concat(ConcatArray<User>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/graph.User[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/graph.User[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.every'
-    name: 'every((value: User, index: number, array: User[]) => boolean, any)'
+    name: 'every((value: User, index: number, array: User[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: User, index: number, array: User[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: User, index: number, array: User[]) => boolean'
+            - '(value: User, index: number, array: User[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.fill'
     name: 'fill(User, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/graph'
-  - uid: '@azure/graph.UserListResult.filter_1'
-    name: 'filter((value: User, index: number, array: User[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: User, index: number, array: User[])
-        => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: User, index: number, array: User[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/graph.User[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.filter'
     name: 'filter((value: User, index: number, array: User[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/graph'
+  - uid: '@azure/graph.UserListResult.filter_1'
+    name: 'filter((value: User, index: number, array: User[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: User, index: number, array: User[])
+        => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: User, index: number, array: User[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/graph.User[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.find'
     name: >-
@@ -338,26 +348,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.find_1'
-    name: 'find((value: User, index: number, obj: User[]) => boolean, any)'
+    name: 'find((value: User, index: number, obj: User[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: User, index: number, obj: User[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: User, index: number, obj: User[]) => boolean'
+            - '(value: User, index: number, obj: User[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -367,9 +374,10 @@ items:
       return:
         type:
           - '@azure/graph.User | undefined'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.findIndex'
-    name: 'findIndex((value: User, index: number, obj: User[]) => boolean, any)'
+    name: 'findIndex((value: User, index: number, obj: User[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -382,11 +390,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: User, index: number, obj: User[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: User, index: number, obj: User[]) => boolean'
+            - '(value: User, index: number, obj: User[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -408,6 +416,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.forEach'
     name: 'forEach((value: User, index: number, array: User[]) => void, any)'
@@ -436,6 +445,34 @@ items:
             value.
           optional: true
     package: '@azure/graph'
+  - uid: '@azure/graph.UserListResult.includes'
+    name: 'includes(User, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: User, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/graph.User'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.indexOf'
     name: 'indexOf(User, undefined | number)'
     children: []
@@ -460,6 +497,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.join'
     name: join(undefined | string)
@@ -484,6 +522,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.keys'
     name: keys()
@@ -498,6 +537,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.lastIndexOf'
     name: 'lastIndexOf(User, undefined | number)'
@@ -525,6 +565,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.length'
     name: length
@@ -541,6 +582,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.map'
     name: 'map((value: User, index: number, array: User[]) => U, any)'
@@ -573,6 +615,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.odatanextLink'
     name: odatanextLink
@@ -581,13 +624,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The URL to get the next set of results.
     optional: true
     syntax:
       content: 'odatanextLink?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.pop'
     name: pop()
@@ -602,6 +646,7 @@ items:
       return:
         type:
           - '@azure/graph.User | undefined'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.push'
     name: 'push(User[])'
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.reduce_2'
     name: >-
@@ -658,6 +704,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.reduce'
     name: >-
@@ -688,6 +735,7 @@ items:
       return:
         type:
           - '@azure/graph.User'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.reduce_1'
     name: >-
@@ -697,10 +745,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: User, currentValue: User,
@@ -719,6 +764,7 @@ items:
       return:
         type:
           - '@azure/graph.User'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.reduceRight_2'
     name: >-
@@ -757,6 +803,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.reduceRight'
     name: >-
@@ -788,6 +835,7 @@ items:
       return:
         type:
           - '@azure/graph.User'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.reduceRight_1'
     name: >-
@@ -797,11 +845,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: User, currentValue:
@@ -820,6 +864,7 @@ items:
       return:
         type:
           - '@azure/graph.User'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.reverse'
     name: reverse()
@@ -834,6 +879,7 @@ items:
       return:
         type:
           - '@azure/graph.User[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.shift'
     name: shift()
@@ -848,6 +894,7 @@ items:
       return:
         type:
           - '@azure/graph.User | undefined'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -873,9 +920,10 @@ items:
       return:
         type:
           - '@azure/graph.User[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.some'
-    name: 'some((value: User, index: number, array: User[]) => boolean, any)'
+    name: 'some((value: User, index: number, array: User[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -886,11 +934,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: User, index: number, array: User[]) =>
-        boolean, thisArg?: any)
+        unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: User, index: number, array: User[]) => boolean'
+            - '(value: User, index: number, array: User[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -906,6 +954,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.sort'
     name: 'sort(undefined | (a: User, b: User) => number)'
@@ -928,6 +977,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.splice_1'
     name: 'splice(number, number, User[])'
@@ -959,6 +1009,7 @@ items:
       return:
         type:
           - '@azure/graph.User[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -987,6 +1038,7 @@ items:
       return:
         type:
           - '@azure/graph.User[]'
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.toLocaleString'
     name: toLocaleString()
@@ -1003,6 +1055,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.toString'
     name: toString()
@@ -1017,6 +1070,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.unshift'
     name: 'unshift(User[])'
@@ -1036,6 +1090,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/graph'
   - uid: '@azure/graph.UserListResult.values'
     name: values()
@@ -1050,6 +1105,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/graph.User>
+        description: ''
     package: '@azure/graph'
 references:
   - uid: Array<@azure/graph.User>

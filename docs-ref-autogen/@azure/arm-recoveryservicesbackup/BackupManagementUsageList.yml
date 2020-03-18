@@ -11,12 +11,13 @@ items:
       - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.entries'
       - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.every'
       - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.fill'
-      - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.filter_1'
       - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.filter'
+      - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.filter_1'
       - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.find'
       - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.find_1'
       - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.findIndex'
       - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.forEach'
+      - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.includes'
       - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.indexOf'
       - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.join'
       - '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.keys'
@@ -65,6 +66,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.concat'
     name: 'concat(ConcatArray<BackupManagementUsage>[])'
@@ -85,6 +87,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -104,6 +107,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -147,6 +151,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.entries'
     name: entries()
@@ -161,11 +166,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.every'
     name: >-
       every((value: BackupManagementUsage, index: number, array:
-      BackupManagementUsage[]) => boolean, any)
+      BackupManagementUsage[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -174,13 +180,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: BackupManagementUsage, index: number,
-        array: BackupManagementUsage[]) => boolean, thisArg?: any)
+        array: BackupManagementUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: BackupManagementUsage, index: number, array:
-              BackupManagementUsage[]) => boolean
+              BackupManagementUsage[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -196,6 +202,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.fill'
     name: 'fill(BackupManagementUsage, undefined | number, undefined | number)'
@@ -236,43 +243,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.filter_1'
-    name: >-
-      filter((value: BackupManagementUsage, index: number, array:
-      BackupManagementUsage[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: BackupManagementUsage, index:
-        number, array: BackupManagementUsage[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: BackupManagementUsage, index: number, array:
-              BackupManagementUsage[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.BackupManagementUsage[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.filter'
     name: >-
@@ -310,6 +281,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.filter_1'
+    name: >-
+      filter((value: BackupManagementUsage, index: number, array:
+      BackupManagementUsage[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: BackupManagementUsage, index:
+        number, array: BackupManagementUsage[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: BackupManagementUsage, index: number, array:
+              BackupManagementUsage[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-recoveryservicesbackup.BackupManagementUsage[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.find'
     name: >-
@@ -355,30 +365,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.find_1'
     name: >-
       find((value: BackupManagementUsage, index: number, obj:
-      BackupManagementUsage[]) => boolean, any)
+      BackupManagementUsage[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: BackupManagementUsage, index: number,
-        obj: BackupManagementUsage[]) => boolean, thisArg?: any)
+        obj: BackupManagementUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: BackupManagementUsage, index: number, obj:
-              BackupManagementUsage[]) => boolean
+              BackupManagementUsage[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -388,11 +395,12 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage | undefined'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.findIndex'
     name: >-
       findIndex((value: BackupManagementUsage, index: number, obj:
-      BackupManagementUsage[]) => boolean, any)
+      BackupManagementUsage[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -405,13 +413,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: BackupManagementUsage, index:
-        number, obj: BackupManagementUsage[]) => boolean, thisArg?: any)
+        number, obj: BackupManagementUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: BackupManagementUsage, index: number, obj:
-              BackupManagementUsage[]) => boolean
+              BackupManagementUsage[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -433,6 +441,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.forEach'
     name: >-
@@ -465,6 +474,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.includes'
+    name: 'includes(BackupManagementUsage, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: BackupManagementUsage, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-recoveryservicesbackup.BackupManagementUsage'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.indexOf'
     name: 'indexOf(BackupManagementUsage, undefined | number)'
     children: []
@@ -491,6 +530,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.join'
     name: join(undefined | string)
@@ -515,6 +555,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.keys'
     name: keys()
@@ -529,6 +570,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.lastIndexOf'
     name: 'lastIndexOf(BackupManagementUsage, undefined | number)'
@@ -556,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.length'
     name: length
@@ -572,6 +615,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.map'
     name: >-
@@ -608,6 +652,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.pop'
     name: pop()
@@ -622,6 +667,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage | undefined'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.push'
     name: 'push(BackupManagementUsage[])'
@@ -641,6 +687,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.reduce'
     name: >-
@@ -674,6 +721,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.reduce_1'
     name: >-
@@ -684,10 +732,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: BackupManagementUsage,
@@ -709,6 +754,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.reduce_2'
     name: >-
@@ -747,6 +793,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.reduceRight'
     name: >-
@@ -781,6 +828,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.reduceRight_1'
     name: >-
@@ -791,11 +839,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: BackupManagementUsage,
@@ -817,6 +861,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.reduceRight_2'
     name: >-
@@ -856,6 +901,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.reverse'
     name: reverse()
@@ -870,6 +916,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.shift'
     name: shift()
@@ -884,6 +931,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage | undefined'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -909,11 +957,12 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.some'
     name: >-
       some((value: BackupManagementUsage, index: number, array:
-      BackupManagementUsage[]) => boolean, any)
+      BackupManagementUsage[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -924,13 +973,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: BackupManagementUsage, index: number,
-        array: BackupManagementUsage[]) => boolean, thisArg?: any)
+        array: BackupManagementUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: BackupManagementUsage, index: number, array:
-              BackupManagementUsage[]) => boolean
+              BackupManagementUsage[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -946,6 +995,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.sort'
     name: >-
@@ -974,6 +1024,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.splice_1'
     name: 'splice(number, number, BackupManagementUsage[])'
@@ -1007,6 +1058,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.splice'
     name: 'splice(number, undefined | number)'
@@ -1035,6 +1087,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementUsage[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.toLocaleString'
     name: toLocaleString()
@@ -1051,6 +1104,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.toString'
     name: toString()
@@ -1065,6 +1119,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.unshift'
     name: 'unshift(BackupManagementUsage[])'
@@ -1084,6 +1139,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementUsageList.values'
     name: values()
@@ -1099,6 +1155,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-recoveryservicesbackup.BackupManagementUsage>
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: Array<@azure/arm-recoveryservicesbackup.BackupManagementUsage>

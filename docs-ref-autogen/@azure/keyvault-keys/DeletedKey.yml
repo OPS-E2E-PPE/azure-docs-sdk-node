@@ -4,87 +4,16 @@ items:
     name: DeletedKey
     fullName: DeletedKey
     children:
-      - '@azure/keyvault-keys.DeletedKey.created'
-      - '@azure/keyvault-keys.DeletedKey.deletedDate'
-      - '@azure/keyvault-keys.DeletedKey.enabled'
-      - '@azure/keyvault-keys.DeletedKey.expires'
       - '@azure/keyvault-keys.DeletedKey.id'
-      - '@azure/keyvault-keys.DeletedKey.keyMaterial'
+      - '@azure/keyvault-keys.DeletedKey.key'
+      - '@azure/keyvault-keys.DeletedKey.keyOperations'
+      - '@azure/keyvault-keys.DeletedKey.keyType'
       - '@azure/keyvault-keys.DeletedKey.name'
-      - '@azure/keyvault-keys.DeletedKey.notBefore'
-      - '@azure/keyvault-keys.DeletedKey.recoveryId'
-      - '@azure/keyvault-keys.DeletedKey.recoveryLevel'
-      - '@azure/keyvault-keys.DeletedKey.scheduledPurgeDate'
-      - '@azure/keyvault-keys.DeletedKey.tags'
-      - '@azure/keyvault-keys.DeletedKey.updated'
-      - '@azure/keyvault-keys.DeletedKey.vaultUrl'
-      - '@azure/keyvault-keys.DeletedKey.version'
+      - '@azure/keyvault-keys.DeletedKey.properties'
     langs:
       - typeScript
     type: interface
-    summary: ''
-    extends:
-      name: '@azure/keyvault-keys.Key'
-    package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.created'
-    name: created
-    fullName: created
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'created?: Date'
-      return:
-        type:
-          - Date
-    package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.deletedDate'
-    name: deletedDate
-    fullName: deletedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'deletedDate?: Date'
-      return:
-        type:
-          - Date
-    package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.enabled'
-    name: enabled
-    fullName: enabled
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'enabled?: undefined | false | true'
-      return:
-        type:
-          - undefined | false | true
-    package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.expires'
-    name: expires
-    fullName: expires
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'expires?: Date'
-      return:
-        type:
-          - Date
+    summary: An interface representing a deleted KeyVault Key.
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.DeletedKey.id'
     name: id
@@ -93,28 +22,68 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Key identifier.
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.keyMaterial'
-    name: keyMaterial
-    fullName: keyMaterial
+  - uid: '@azure/keyvault-keys.DeletedKey.key'
+    name: key
+    fullName: key
     children: []
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The key value.
     optional: true
     syntax:
-      content: 'keyMaterial?: JsonWebKey'
+      content: 'key?: JsonWebKey'
       return:
         type:
           - '@azure/keyvault-keys.JsonWebKey'
+        description: ''
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.DeletedKey.keyOperations'
+    name: keyOperations
+    fullName: keyOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Operations allowed on this key
+    optional: true
+    syntax:
+      content: 'keyOperations?: KeyOperation[]'
+      return:
+        type:
+          - '@azure/keyvault-keys.KeyOperation[]'
+        description: ''
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.DeletedKey.keyType'
+    name: keyType
+    fullName: keyType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      JsonWebKey Key Type (kty), as defined in
+
+      https://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms-40.
+      Possible values include:
+
+      'EC', 'EC-HSM', 'RSA', 'RSA-HSM', 'oct'
+    optional: true
+    syntax:
+      content: 'keyType?: KeyType'
+      return:
+        type:
+          - '@azure/keyvault-keys.KeyType'
+        description: ''
     package: '@azure/keyvault-keys'
   - uid: '@azure/keyvault-keys.DeletedKey.name'
     name: name
@@ -123,148 +92,55 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The name of the key.
     syntax:
       content: 'name: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.notBefore'
-    name: notBefore
-    fullName: notBefore
+  - uid: '@azure/keyvault-keys.DeletedKey.properties'
+    name: properties
+    fullName: properties
     children: []
     langs:
       - typeScript
     type: property
-    summary: ''
-    optional: true
+    summary: The properties of the key.
     syntax:
-      content: 'notBefore?: Date'
+      content: 'properties: KeyProperties & Object'
       return:
         type:
-          - Date
-    package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.recoveryId'
-    name: recoveryId
-    fullName: recoveryId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'recoveryId?: undefined | string'
-      return:
-        type:
-          - undefined | string
-    package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.recoveryLevel'
-    name: recoveryLevel
-    fullName: recoveryLevel
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'recoveryLevel?: DeletionRecoveryLevel'
-      return:
-        type:
-          - '@azure/keyvault-keys.DeletionRecoveryLevel'
-    package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.scheduledPurgeDate'
-    name: scheduledPurgeDate
-    fullName: scheduledPurgeDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'scheduledPurgeDate?: Date'
-      return:
-        type:
-          - Date
-    package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.tags'
-    name: tags
-    fullName: tags
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'tags?: undefined | [key: string]: string'
-      return:
-        type:
-          - 'undefined | [key: string]: string'
-    package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.updated'
-    name: updated
-    fullName: updated
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'updated?: Date'
-      return:
-        type:
-          - Date
-    package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.vaultUrl'
-    name: vaultUrl
-    fullName: vaultUrl
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'vaultUrl: string'
-      return:
-        type:
-          - string
-    package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.DeletedKey.version'
-    name: version
-    fullName: version
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'version?: undefined | string'
-      return:
-        type:
-          - undefined | string
+          - '@azure/keyvault-keys.KeyProperties & Object'
+        description: ''
     package: '@azure/keyvault-keys'
 references:
-  - uid: '@azure/keyvault-keys.Key'
-    name: Key
-    spec.typeScript:
-      - name: Key
-        fullName: Key
-        uid: '@azure/keyvault-keys.Key'
   - uid: '@azure/keyvault-keys.JsonWebKey'
     name: JsonWebKey
     spec.typeScript:
       - name: JsonWebKey
         fullName: JsonWebKey
         uid: '@azure/keyvault-keys.JsonWebKey'
-  - uid: '@azure/keyvault-keys.DeletionRecoveryLevel'
-    name: DeletionRecoveryLevel
+  - uid: '@azure/keyvault-keys.KeyOperation[]'
+    name: 'KeyOperation[]'
     spec.typeScript:
-      - name: DeletionRecoveryLevel
-        fullName: DeletionRecoveryLevel
-        uid: '@azure/keyvault-keys.DeletionRecoveryLevel'
+      - name: KeyOperation
+        fullName: KeyOperation
+        uid: '@azure/keyvault-keys.KeyOperation'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/keyvault-keys.KeyType'
+    name: KeyType
+    spec.typeScript:
+      - name: KeyType
+        fullName: KeyType
+        uid: '@azure/keyvault-keys.KeyType'
+  - uid: '@azure/keyvault-keys.KeyProperties & Object'
+    name: KeyProperties & Object
+    spec.typeScript:
+      - name: KeyProperties
+        fullName: KeyProperties
+        uid: '@azure/keyvault-keys.KeyProperties'
+      - name: ' & Object'
+        fullName: ' & Object'

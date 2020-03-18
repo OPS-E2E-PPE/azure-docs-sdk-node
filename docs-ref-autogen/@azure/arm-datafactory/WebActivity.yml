@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-datafactory.WebActivity.authentication'
       - '@azure/arm-datafactory.WebActivity.body'
+      - '@azure/arm-datafactory.WebActivity.connectVia'
       - '@azure/arm-datafactory.WebActivity.datasets'
       - '@azure/arm-datafactory.WebActivity.dependsOn'
       - '@azure/arm-datafactory.WebActivity.description'
@@ -21,7 +22,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Web activity.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.authentication'
     name: authentication
@@ -30,13 +31,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Authentication method used for calling the endpoint.
     optional: true
     syntax:
       content: 'authentication?: WebActivityAuthentication'
       return:
         type:
           - '@azure/arm-datafactory.WebActivityAuthentication'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.body'
     name: body
@@ -45,13 +47,35 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Represents the payload that will be sent to the endpoint. Required for
+      POST/PUT method, not
+
+      allowed for GET method Type: string (or Expression with resultType
+      string).
     optional: true
     syntax:
       content: 'body?: any'
       return:
         type:
           - any
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.WebActivity.connectVia'
+    name: connectVia
+    fullName: connectVia
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The integration runtime reference.
+    optional: true
+    syntax:
+      content: 'connectVia?: IntegrationRuntimeReference'
+      return:
+        type:
+          - '@azure/arm-datafactory.IntegrationRuntimeReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.datasets'
     name: datasets
@@ -60,13 +84,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of datasets passed to web endpoint.
     optional: true
     syntax:
       content: 'datasets?: DatasetReference[]'
       return:
         type:
           - '@azure/arm-datafactory.DatasetReference[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.dependsOn'
     name: dependsOn
@@ -75,13 +100,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity depends on condition.
     optional: true
     syntax:
       content: 'dependsOn?: ActivityDependency[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityDependency[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.description'
     name: description
@@ -90,13 +116,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.headers'
     name: headers
@@ -105,13 +132,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Represents the headers that will be sent to the request. For example, to
+      set the language and
+
+      type on a request: "headers" : { "Accept-Language": "en-us",
+      "Content-Type":
+
+      "application/json" }. Type: string (or Expression with resultType string).
     optional: true
     syntax:
       content: 'headers?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.linkedServiceName'
     name: linkedServiceName
@@ -120,13 +155,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     optional: true
     syntax:
       content: 'linkedServiceName?: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.linkedServices'
     name: linkedServices
@@ -135,13 +171,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of linked services passed to web endpoint.
     optional: true
     syntax:
       content: 'linkedServices?: LinkedServiceReference[]'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.method'
     name: method
@@ -150,12 +187,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Rest API method for target endpoint. Possible values include: 'GET',
+      'POST', 'PUT', 'DELETE'
     syntax:
       content: 'method: WebActivityMethod'
       return:
         type:
           - '@azure/arm-datafactory.WebActivityMethod'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.name'
     name: name
@@ -164,12 +204,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity name.
     syntax:
       content: 'name: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.policy'
     name: policy
@@ -178,13 +219,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity policy.
     optional: true
     syntax:
       content: 'policy?: ActivityPolicy'
       return:
         type:
           - '@azure/arm-datafactory.ActivityPolicy'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.type'
     name: type
@@ -193,12 +235,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "WebActivity"'
       return:
         type:
           - '"WebActivity"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.url'
     name: url
@@ -207,12 +250,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Web activity target endpoint and path. Type: string (or Expression with
+      resultType string).
     syntax:
       content: 'url: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivity.userProperties'
     name: userProperties
@@ -221,13 +267,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity user properties.
     optional: true
     syntax:
       content: 'userProperties?: UserProperty[]'
       return:
         type:
           - '@azure/arm-datafactory.UserProperty[]'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.WebActivityAuthentication'
@@ -236,6 +283,12 @@ references:
       - name: WebActivityAuthentication
         fullName: WebActivityAuthentication
         uid: '@azure/arm-datafactory.WebActivityAuthentication'
+  - uid: '@azure/arm-datafactory.IntegrationRuntimeReference'
+    name: IntegrationRuntimeReference
+    spec.typeScript:
+      - name: IntegrationRuntimeReference
+        fullName: IntegrationRuntimeReference
+        uid: '@azure/arm-datafactory.IntegrationRuntimeReference'
   - uid: '@azure/arm-datafactory.DatasetReference[]'
     name: 'DatasetReference[]'
     spec.typeScript:

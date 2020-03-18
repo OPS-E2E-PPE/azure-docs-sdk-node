@@ -46,6 +46,7 @@ items:
       return:
         type:
           - '@azure/cosmos.QueryMetrics'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.clientSideMetrics'
     name: clientSideMetrics
@@ -56,10 +57,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'clientSideMetrics: ClientSideMetrics'
+      content: 'public clientSideMetrics: ClientSideMetrics'
       return:
         type:
           - '@azure/cosmos.ClientSideMetrics'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.createFromArray'
     name: 'createFromArray(QueryMetrics[])'
@@ -80,6 +82,7 @@ items:
       return:
         type:
           - '@azure/cosmos.QueryMetrics'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.createFromDelimitedString'
     name: 'createFromDelimitedString(string, ClientSideMetrics)'
@@ -107,6 +110,7 @@ items:
       return:
         type:
           - '@azure/cosmos.QueryMetrics'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.documentLoadTime'
     name: documentLoadTime
@@ -117,10 +121,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'documentLoadTime: TimeSpan'
+      content: 'public documentLoadTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.documentWriteTime'
     name: documentWriteTime
@@ -131,10 +136,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'documentWriteTime: TimeSpan'
+      content: 'public documentWriteTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.indexHitDocumentCount'
     name: indexHitDocumentCount
@@ -145,10 +151,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'indexHitDocumentCount: number'
+      content: 'public indexHitDocumentCount: number'
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.indexLookupTime'
     name: indexLookupTime
@@ -159,10 +166,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'indexLookupTime: TimeSpan'
+      content: 'public indexLookupTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.outputDocumentCount'
     name: outputDocumentCount
@@ -173,10 +181,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'outputDocumentCount: number'
+      content: 'public outputDocumentCount: number'
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.outputDocumentSize'
     name: outputDocumentSize
@@ -187,10 +196,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'outputDocumentSize: number'
+      content: 'public outputDocumentSize: number'
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.constructor'
     name: >-
@@ -274,10 +284,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'queryPreparationTimes: QueryPreparationTimes'
+      content: 'public queryPreparationTimes: QueryPreparationTimes'
       return:
         type:
           - '@azure/cosmos.QueryPreparationTimes'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.retrievedDocumentCount'
     name: retrievedDocumentCount
@@ -288,10 +299,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'retrievedDocumentCount: number'
+      content: 'public retrievedDocumentCount: number'
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.retrievedDocumentSize'
     name: retrievedDocumentSize
@@ -302,10 +314,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'retrievedDocumentSize: number'
+      content: 'public retrievedDocumentSize: number'
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.runtimeExecutionTimes'
     name: runtimeExecutionTimes
@@ -316,10 +329,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'runtimeExecutionTimes: RuntimeExecutionTimes'
+      content: 'public runtimeExecutionTimes: RuntimeExecutionTimes'
       return:
         type:
           - '@azure/cosmos.RuntimeExecutionTimes'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.totalQueryExecutionTime'
     name: totalQueryExecutionTime
@@ -330,10 +344,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'totalQueryExecutionTime: TimeSpan'
+      content: 'public totalQueryExecutionTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.vmExecutionTime'
     name: vmExecutionTime
@@ -344,10 +359,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'vmExecutionTime: TimeSpan'
+      content: 'public vmExecutionTime: TimeSpan'
       return:
         type:
           - TimeSpan
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.QueryMetrics.zero'
     name: zero
@@ -358,10 +374,26 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'static zero: QueryMetrics'
+      content: |-
+        public static zero: QueryMetrics = new QueryMetrics(
+            0,
+            0,
+            0,
+            0,
+            0,
+            TimeSpan.zero,
+            QueryPreparationTimes.zero,
+            TimeSpan.zero,
+            TimeSpan.zero,
+            TimeSpan.zero,
+            RuntimeExecutionTimes.zero,
+            TimeSpan.zero,
+            ClientSideMetrics.zero
+          )
       return:
         type:
           - '@azure/cosmos.QueryMetrics'
+        description: ''
     package: '@azure/cosmos'
 references:
   - uid: '@azure/cosmos.QueryPreparationTimes'

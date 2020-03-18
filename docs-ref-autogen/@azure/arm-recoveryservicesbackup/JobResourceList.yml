@@ -11,12 +11,13 @@ items:
       - '@azure/arm-recoveryservicesbackup.JobResourceList.entries'
       - '@azure/arm-recoveryservicesbackup.JobResourceList.every'
       - '@azure/arm-recoveryservicesbackup.JobResourceList.fill'
-      - '@azure/arm-recoveryservicesbackup.JobResourceList.filter_1'
       - '@azure/arm-recoveryservicesbackup.JobResourceList.filter'
+      - '@azure/arm-recoveryservicesbackup.JobResourceList.filter_1'
       - '@azure/arm-recoveryservicesbackup.JobResourceList.find'
       - '@azure/arm-recoveryservicesbackup.JobResourceList.find_1'
       - '@azure/arm-recoveryservicesbackup.JobResourceList.findIndex'
       - '@azure/arm-recoveryservicesbackup.JobResourceList.forEach'
+      - '@azure/arm-recoveryservicesbackup.JobResourceList.includes'
       - '@azure/arm-recoveryservicesbackup.JobResourceList.indexOf'
       - '@azure/arm-recoveryservicesbackup.JobResourceList.join'
       - '@azure/arm-recoveryservicesbackup.JobResourceList.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.concat'
     name: 'concat(ConcatArray<JobResource>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.every'
     name: >-
       every((value: JobResource, index: number, array: JobResource[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -170,13 +176,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: JobResource, index: number, array:
-        JobResource[]) => boolean, thisArg?: any)
+        JobResource[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: JobResource, index: number, array: JobResource[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.fill'
     name: 'fill(JobResource, undefined | number, undefined | number)'
@@ -232,41 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.filter_1'
-    name: >-
-      filter((value: JobResource, index: number, array: JobResource[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: JobResource, index: number, array:
-        JobResource[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: JobResource, index: number, array: JobResource[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.JobResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.filter'
     name: >-
@@ -304,6 +277,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.filter_1'
+    name: >-
+      filter((value: JobResource, index: number, array: JobResource[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: JobResource, index: number, array:
+        JobResource[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: JobResource, index: number, array: JobResource[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-recoveryservicesbackup.JobResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.find'
     name: >-
@@ -349,28 +361,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.find_1'
     name: >-
-      find((value: JobResource, index: number, obj: JobResource[]) => boolean,
+      find((value: JobResource, index: number, obj: JobResource[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: JobResource, index: number, obj:
-        JobResource[]) => boolean, thisArg?: any)
+        JobResource[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: JobResource, index: number, obj: JobResource[]) => boolean'
+            - '(value: JobResource, index: number, obj: JobResource[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -380,11 +389,12 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource | undefined'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.findIndex'
     name: >-
       findIndex((value: JobResource, index: number, obj: JobResource[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -397,11 +407,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: JobResource, index: number, obj:
-        JobResource[]) => boolean, thisArg?: any)
+        JobResource[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: JobResource, index: number, obj: JobResource[]) => boolean'
+            - '(value: JobResource, index: number, obj: JobResource[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -423,6 +433,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.forEach'
     name: >-
@@ -453,6 +464,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.includes'
+    name: 'includes(JobResource, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: JobResource, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-recoveryservicesbackup.JobResource'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.indexOf'
     name: 'indexOf(JobResource, undefined | number)'
     children: []
@@ -479,6 +520,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.join'
     name: join(undefined | string)
@@ -503,6 +545,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.keys'
     name: keys()
@@ -517,6 +560,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.lastIndexOf'
     name: 'lastIndexOf(JobResource, undefined | number)'
@@ -544,6 +588,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.length'
     name: length
@@ -560,6 +605,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.map'
     name: 'map((value: JobResource, index: number, array: JobResource[]) => U, any)'
@@ -592,6 +638,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.pop'
     name: pop()
@@ -606,6 +653,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource | undefined'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.push'
     name: 'push(JobResource[])'
@@ -625,6 +673,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.reduce'
     name: >-
@@ -655,6 +704,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.reduce_1'
     name: >-
@@ -664,10 +714,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: JobResource, currentValue:
@@ -687,6 +734,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.reduce_2'
     name: >-
@@ -725,6 +773,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.reduceRight'
     name: >-
@@ -757,6 +806,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.reduceRight_1'
     name: >-
@@ -766,11 +816,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: JobResource,
@@ -790,6 +836,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.reduceRight_2'
     name: >-
@@ -829,6 +876,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.reverse'
     name: reverse()
@@ -843,6 +891,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.shift'
     name: shift()
@@ -857,6 +906,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource | undefined'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -882,10 +932,11 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.some'
     name: >-
-      some((value: JobResource, index: number, array: JobResource[]) => boolean,
+      some((value: JobResource, index: number, array: JobResource[]) => unknown,
       any)
     children: []
     type: method
@@ -897,13 +948,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: JobResource, index: number, array:
-        JobResource[]) => boolean, thisArg?: any)
+        JobResource[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: JobResource, index: number, array: JobResource[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -919,6 +970,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.sort'
     name: 'sort(undefined | (a: JobResource, b: JobResource) => number)'
@@ -943,6 +995,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.splice_1'
     name: 'splice(number, number, JobResource[])'
@@ -976,6 +1029,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.splice'
     name: 'splice(number, undefined | number)'
@@ -1004,6 +1058,7 @@ items:
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobResource[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.toLocaleString'
     name: toLocaleString()
@@ -1020,6 +1075,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.toString'
     name: toString()
@@ -1034,6 +1090,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.unshift'
     name: 'unshift(JobResource[])'
@@ -1053,6 +1110,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.JobResourceList.values'
     name: values()
@@ -1067,6 +1125,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-recoveryservicesbackup.JobResource>
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: Array<@azure/arm-recoveryservicesbackup.JobResource>

@@ -11,12 +11,13 @@ items:
       - '@azure/arm-storsimple8000series.HardwareComponentGroupList.entries'
       - '@azure/arm-storsimple8000series.HardwareComponentGroupList.every'
       - '@azure/arm-storsimple8000series.HardwareComponentGroupList.fill'
-      - '@azure/arm-storsimple8000series.HardwareComponentGroupList.filter_1'
       - '@azure/arm-storsimple8000series.HardwareComponentGroupList.filter'
+      - '@azure/arm-storsimple8000series.HardwareComponentGroupList.filter_1'
       - '@azure/arm-storsimple8000series.HardwareComponentGroupList.find'
       - '@azure/arm-storsimple8000series.HardwareComponentGroupList.find_1'
       - '@azure/arm-storsimple8000series.HardwareComponentGroupList.findIndex'
       - '@azure/arm-storsimple8000series.HardwareComponentGroupList.forEach'
+      - '@azure/arm-storsimple8000series.HardwareComponentGroupList.includes'
       - '@azure/arm-storsimple8000series.HardwareComponentGroupList.indexOf'
       - '@azure/arm-storsimple8000series.HardwareComponentGroupList.join'
       - '@azure/arm-storsimple8000series.HardwareComponentGroupList.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.concat'
     name: 'concat(ConcatArray<HardwareComponentGroup>[])'
@@ -83,6 +85,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -102,6 +105,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -145,6 +149,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.entries'
     name: entries()
@@ -159,11 +164,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.every'
     name: >-
       every((value: HardwareComponentGroup, index: number, array:
-      HardwareComponentGroup[]) => boolean, any)
+      HardwareComponentGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -172,13 +178,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: HardwareComponentGroup, index:
-        number, array: HardwareComponentGroup[]) => boolean, thisArg?: any)
+        number, array: HardwareComponentGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: HardwareComponentGroup, index: number, array:
-              HardwareComponentGroup[]) => boolean
+              HardwareComponentGroup[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -194,6 +200,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.fill'
     name: 'fill(HardwareComponentGroup, undefined | number, undefined | number)'
@@ -234,43 +241,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-storsimple8000series'
-  - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.filter_1'
-    name: >-
-      filter((value: HardwareComponentGroup, index: number, array:
-      HardwareComponentGroup[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: HardwareComponentGroup, index:
-        number, array: HardwareComponentGroup[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: HardwareComponentGroup, index: number, array:
-              HardwareComponentGroup[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-storsimple8000series.HardwareComponentGroup[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.filter'
     name: >-
@@ -308,6 +279,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-storsimple8000series'
+  - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.filter_1'
+    name: >-
+      filter((value: HardwareComponentGroup, index: number, array:
+      HardwareComponentGroup[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: HardwareComponentGroup, index:
+        number, array: HardwareComponentGroup[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: HardwareComponentGroup, index: number, array:
+              HardwareComponentGroup[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-storsimple8000series.HardwareComponentGroup[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.find'
     name: >-
@@ -353,30 +363,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.find_1'
     name: >-
       find((value: HardwareComponentGroup, index: number, obj:
-      HardwareComponentGroup[]) => boolean, any)
+      HardwareComponentGroup[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: HardwareComponentGroup, index: number,
-        obj: HardwareComponentGroup[]) => boolean, thisArg?: any)
+        obj: HardwareComponentGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: HardwareComponentGroup, index: number, obj:
-              HardwareComponentGroup[]) => boolean
+              HardwareComponentGroup[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -386,11 +393,12 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup | undefined'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.findIndex'
     name: >-
       findIndex((value: HardwareComponentGroup, index: number, obj:
-      HardwareComponentGroup[]) => boolean, any)
+      HardwareComponentGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -403,13 +411,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: HardwareComponentGroup, index:
-        number, obj: HardwareComponentGroup[]) => boolean, thisArg?: any)
+        number, obj: HardwareComponentGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: HardwareComponentGroup, index: number, obj:
-              HardwareComponentGroup[]) => boolean
+              HardwareComponentGroup[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -431,6 +439,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.forEach'
     name: >-
@@ -463,6 +472,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-storsimple8000series'
+  - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.includes'
+    name: 'includes(HardwareComponentGroup, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: HardwareComponentGroup, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-storsimple8000series.HardwareComponentGroup'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.indexOf'
     name: 'indexOf(HardwareComponentGroup, undefined | number)'
     children: []
@@ -489,6 +528,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.join'
     name: join(undefined | string)
@@ -513,6 +553,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.keys'
     name: keys()
@@ -527,6 +568,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.lastIndexOf'
     name: 'lastIndexOf(HardwareComponentGroup, undefined | number)'
@@ -554,6 +596,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.length'
     name: length
@@ -570,6 +613,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.map'
     name: >-
@@ -606,6 +650,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.pop'
     name: pop()
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup | undefined'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.push'
     name: 'push(HardwareComponentGroup[])'
@@ -639,6 +685,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.reduce'
     name: >-
@@ -672,6 +719,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.reduce_1'
     name: >-
@@ -683,10 +731,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: HardwareComponentGroup,
@@ -708,6 +753,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.reduce_2'
     name: >-
@@ -746,6 +792,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.reduceRight'
     name: >-
@@ -780,6 +827,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.reduceRight_1'
     name: >-
@@ -791,11 +839,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: HardwareComponentGroup,
@@ -817,6 +861,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.reduceRight_2'
     name: >-
@@ -856,6 +901,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.reverse'
     name: reverse()
@@ -870,6 +916,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.shift'
     name: shift()
@@ -884,6 +931,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup | undefined'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -909,11 +957,12 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.some'
     name: >-
       some((value: HardwareComponentGroup, index: number, array:
-      HardwareComponentGroup[]) => boolean, any)
+      HardwareComponentGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -924,13 +973,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: HardwareComponentGroup, index: number,
-        array: HardwareComponentGroup[]) => boolean, thisArg?: any)
+        array: HardwareComponentGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: HardwareComponentGroup, index: number, array:
-              HardwareComponentGroup[]) => boolean
+              HardwareComponentGroup[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -946,6 +995,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.sort'
     name: >-
@@ -974,6 +1024,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.splice_1'
     name: 'splice(number, number, HardwareComponentGroup[])'
@@ -1007,6 +1058,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.splice'
     name: 'splice(number, undefined | number)'
@@ -1035,6 +1087,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.HardwareComponentGroup[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.toLocaleString'
     name: toLocaleString()
@@ -1051,6 +1104,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.toString'
     name: toString()
@@ -1065,6 +1119,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.unshift'
     name: 'unshift(HardwareComponentGroup[])'
@@ -1084,6 +1139,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.HardwareComponentGroupList.values'
     name: values()
@@ -1099,6 +1155,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-storsimple8000series.HardwareComponentGroup>
+        description: ''
     package: '@azure/arm-storsimple8000series'
 references:
   - uid: Array<@azure/arm-storsimple8000series.HardwareComponentGroup>

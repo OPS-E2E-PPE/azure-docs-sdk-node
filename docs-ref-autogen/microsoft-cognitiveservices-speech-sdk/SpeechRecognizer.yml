@@ -11,6 +11,7 @@ items:
       - microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.dispose
       - microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.enableTelemetry
       - microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.endpointId
+      - microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.internalData
       - microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.outputFormat
       - microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.properties
       - microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.recognized
@@ -28,6 +29,8 @@ items:
         microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.speechStartDetected
       - >-
         microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.startContinuousRecognitionAsync
+      - >-
+        microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.startContinuousRecognitionAsyncImpl
       - >-
         microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.startKeywordRecognitionAsync
       - >-
@@ -51,12 +54,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Gets/Sets the authorization token used to communicate with the service.
+    summary: |-
+      Gets the authorization token used to communicate with the service.
+      Gets/Sets the authorization token used to communicate with the service.
     syntax:
-      content: 'public authorizationToken: string'
+      content: string authorizationToken
       return:
         type:
           - string
+        description: Authorization token.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.canceled
     name: canceled
@@ -75,6 +81,7 @@ items:
           - >-
             (sender: Recognizer, event: SpeechRecognitionCanceledEventArgs) =>
             void
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.close
     name: close()
@@ -133,10 +140,28 @@ items:
       Gets the endpoint id of a customized speech model that is used for speech
       recognition.
     syntax:
-      content: 'public endpointId: string'
+      content: string endpointId
       return:
         type:
           - string
+        description: >-
+          the endpoint id of a customized speech model that is used for speech
+          recognition.
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.internalData
+    name: internalData
+    fullName: internalData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: object internalData
+      return:
+        type:
+          - object
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.outputFormat
     name: outputFormat
@@ -147,10 +172,11 @@ items:
     type: property
     summary: Gets the output format of recognition.
     syntax:
-      content: 'public outputFormat: OutputFormat'
+      content: OutputFormat outputFormat
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.OutputFormat
+        description: The output format of recognition.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.properties
     name: properties
@@ -163,10 +189,13 @@ items:
       The collection of properties and their values defined for this
       SpeechRecognizer.
     syntax:
-      content: 'public properties: PropertyCollection'
+      content: PropertyCollection properties
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.PropertyCollection
+        description: >-
+          The collection of properties and their values defined for this
+          SpeechRecognizer.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.recognized
     name: recognized
@@ -183,6 +212,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: SpeechRecognitionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.recognizeOnceAsync
     name: >-
@@ -236,6 +266,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: SpeechRecognitionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.sessionStarted
     name: sessionStarted
@@ -252,6 +283,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: SessionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.sessionStopped
     name: sessionStopped
@@ -268,6 +300,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: SessionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.speechEndDetected
     name: speechEndDetected
@@ -284,6 +317,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.speechRecognitionLanguage
@@ -295,10 +329,11 @@ items:
     type: property
     summary: Gets the spoken language of recognition.
     syntax:
-      content: 'public speechRecognitionLanguage: string'
+      content: string speechRecognitionLanguage
       return:
         type:
           - string
+        description: The spoken language of recognition.
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.constructor
     name: 'SpeechRecognizer(SpeechConfig, AudioConfig)'
@@ -339,6 +374,7 @@ items:
       return:
         type:
           - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.startContinuousRecognitionAsync
@@ -367,6 +403,36 @@ items:
             - '(e: string) => void'
           description: |
             Callback invoked in case of an error.
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.SpeechRecognizer.startContinuousRecognitionAsyncImpl
+    name: >-
+      startContinuousRecognitionAsyncImpl(RecognitionMode, () => void, (e:
+      string) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function startContinuousRecognitionAsyncImpl(recognitionMode:
+        RecognitionMode, cb?: () => void, err?: (e: string) => void)
+      parameters:
+        - id: recognitionMode
+          type:
+            - microsoft-cognitiveservices-speech-sdk.RecognitionMode
+          description: ''
+        - id: cb
+          type:
+            - () => void
+          description: ''
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: ''
           optional: true
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
@@ -469,10 +535,11 @@ items:
     type: property
     summary: This method returns the current state of the telemetry setting.
     syntax:
-      content: 'public static telemetryEnabled: boolean'
+      content: static boolean telemetryEnabled
       return:
         type:
           - boolean
+        description: 'true if the telemetry is enabled, false otherwise.'
     package: microsoft-cognitiveservices-speech-sdk
 references:
   - uid: microsoft-cognitiveservices-speech-sdk.Recognizer
@@ -505,6 +572,12 @@ references:
       - name: PropertyCollection
         fullName: PropertyCollection
         uid: microsoft-cognitiveservices-speech-sdk.PropertyCollection
+  - uid: microsoft-cognitiveservices-speech-sdk.RecognitionMode
+    name: RecognitionMode
+    spec.typeScript:
+      - name: RecognitionMode
+        fullName: RecognitionMode
+        uid: microsoft-cognitiveservices-speech-sdk.RecognitionMode
   - uid: microsoft-cognitiveservices-speech-sdk.KeywordRecognitionModel
     name: KeywordRecognitionModel
     spec.typeScript:

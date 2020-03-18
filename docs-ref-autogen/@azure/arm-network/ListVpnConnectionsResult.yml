@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.ListVpnConnectionsResult.entries'
       - '@azure/arm-network.ListVpnConnectionsResult.every'
       - '@azure/arm-network.ListVpnConnectionsResult.fill'
-      - '@azure/arm-network.ListVpnConnectionsResult.filter_1'
       - '@azure/arm-network.ListVpnConnectionsResult.filter'
+      - '@azure/arm-network.ListVpnConnectionsResult.filter_1'
       - '@azure/arm-network.ListVpnConnectionsResult.find'
       - '@azure/arm-network.ListVpnConnectionsResult.find_1'
       - '@azure/arm-network.ListVpnConnectionsResult.findIndex'
       - '@azure/arm-network.ListVpnConnectionsResult.forEach'
+      - '@azure/arm-network.ListVpnConnectionsResult.includes'
       - '@azure/arm-network.ListVpnConnectionsResult.indexOf'
       - '@azure/arm-network.ListVpnConnectionsResult.join'
       - '@azure/arm-network.ListVpnConnectionsResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.concat'
     name: 'concat(ConcatArray<VpnConnection>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.every'
     name: >-
       every((value: VpnConnection, index: number, array: VpnConnection[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: VpnConnection, index: number, array:
-        VpnConnection[]) => boolean, thisArg?: any)
+        VpnConnection[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VpnConnection, index: number, array: VpnConnection[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.fill'
     name: 'fill(VpnConnection, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ListVpnConnectionsResult.filter_1'
-    name: >-
-      filter((value: VpnConnection, index: number, array: VpnConnection[]) =>
-      any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: VpnConnection, index: number, array:
-        VpnConnection[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: VpnConnection, index: number, array: VpnConnection[]) =>
-              any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.VpnConnection[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ListVpnConnectionsResult.filter_1'
+    name: >-
+      filter((value: VpnConnection, index: number, array: VpnConnection[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: VpnConnection, index: number, array:
+        VpnConnection[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: VpnConnection, index: number, array: VpnConnection[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.VpnConnection[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.find_1'
     name: >-
       find((value: VpnConnection, index: number, obj: VpnConnection[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: VpnConnection, index: number, obj:
-        VpnConnection[]) => boolean, thisArg?: any)
+        VpnConnection[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VpnConnection, index: number, obj: VpnConnection[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.findIndex'
     name: >-
       findIndex((value: VpnConnection, index: number, obj: VpnConnection[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: VpnConnection, index: number, obj:
-        VpnConnection[]) => boolean, thisArg?: any)
+        VpnConnection[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VpnConnection, index: number, obj: VpnConnection[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ListVpnConnectionsResult.includes'
+    name: 'includes(VpnConnection, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: VpnConnection, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.VpnConnection'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.indexOf'
     name: 'indexOf(VpnConnection, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.lastIndexOf'
     name: 'lastIndexOf(VpnConnection, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.map'
     name: >-
@@ -603,6 +647,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.nextLink'
     name: nextLink
@@ -618,6 +663,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.pop'
     name: pop()
@@ -632,6 +678,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.push'
     name: 'push(VpnConnection[])'
@@ -651,6 +698,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.reduce_2'
     name: >-
@@ -689,6 +737,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.reduce'
     name: >-
@@ -720,6 +769,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.reduce_1'
     name: >-
@@ -730,10 +780,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: VpnConnection, currentValue:
@@ -753,6 +800,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.reduceRight_2'
     name: >-
@@ -792,6 +840,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.reduceRight'
     name: >-
@@ -824,6 +873,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.reduceRight_1'
     name: >-
@@ -834,11 +884,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: VpnConnection,
@@ -858,6 +904,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.reverse'
     name: reverse()
@@ -872,6 +919,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.shift'
     name: shift()
@@ -886,6 +934,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -911,11 +960,12 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.some'
     name: >-
       some((value: VpnConnection, index: number, array: VpnConnection[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -926,13 +976,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: VpnConnection, index: number, array:
-        VpnConnection[]) => boolean, thisArg?: any)
+        VpnConnection[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VpnConnection, index: number, array: VpnConnection[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -948,6 +998,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.sort'
     name: 'sort(undefined | (a: VpnConnection, b: VpnConnection) => number)'
@@ -972,6 +1023,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.splice_1'
     name: 'splice(number, number, VpnConnection[])'
@@ -1005,6 +1057,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1033,6 +1086,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VpnConnection[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.toLocaleString'
     name: toLocaleString()
@@ -1049,6 +1103,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.toString'
     name: toString()
@@ -1063,6 +1118,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.unshift'
     name: 'unshift(VpnConnection[])'
@@ -1082,6 +1138,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ListVpnConnectionsResult.values'
     name: values()
@@ -1096,6 +1153,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-network.VpnConnection>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.VpnConnection>

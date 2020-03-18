@@ -28,7 +28,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: An interface representing WebSearchClientOptions.
     extends:
       name: ServiceClientOptions
     package: '@azure/cognitiveservices-websearch'
@@ -52,6 +52,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: >-
       @azure/cognitiveservices-websearch.WebSearchClientOptions.deserializationContentTypes
@@ -68,6 +69,7 @@ items:
       return:
         type:
           - DeserializationContentTypes
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: '@azure/cognitiveservices-websearch.WebSearchClientOptions.endpoint'
     name: endpoint
@@ -76,13 +78,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Supported Cognitive Services endpoints (protocol and hostname, for
+      example:
+
+      "https://westus.api.cognitive.microsoft.com",
+      "https://api.cognitive.microsoft.com"). Default
+
+      value: 'https://api.cognitive.microsoft.com'.
     optional: true
     syntax:
       content: 'endpoint?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: >-
       @azure/cognitiveservices-websearch.WebSearchClientOptions.generateClientRequestIdHeader
@@ -101,6 +111,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: '@azure/cognitiveservices-websearch.WebSearchClientOptions.httpClient'
     name: httpClient
@@ -116,6 +127,7 @@ items:
       return:
         type:
           - HttpClient
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: >-
       @azure/cognitiveservices-websearch.WebSearchClientOptions.httpPipelineLogger
@@ -134,6 +146,7 @@ items:
       return:
         type:
           - HttpPipelineLogger
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: '@azure/cognitiveservices-websearch.WebSearchClientOptions.noRetryPolicy'
     name: noRetryPolicy
@@ -149,6 +162,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: '@azure/cognitiveservices-websearch.WebSearchClientOptions.proxySettings'
     name: proxySettings
@@ -164,6 +178,7 @@ items:
       return:
         type:
           - ProxySettings
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: >-
       @azure/cognitiveservices-websearch.WebSearchClientOptions.requestPolicyFactories
@@ -192,6 +207,7 @@ items:
           - >-
             RequestPolicyFactory[] | (defaultRequestPolicyFactories:
             RequestPolicyFactory[]) => void | Object[]
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: >-
       @azure/cognitiveservices-websearch.WebSearchClientOptions.rpRegistrationRetryTimeout
@@ -210,6 +226,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: '@azure/cognitiveservices-websearch.WebSearchClientOptions.userAgent'
     name: userAgent
@@ -230,6 +247,7 @@ items:
       return:
         type:
           - 'string | (defaultUserAgent: string) => string'
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: >-
       @azure/cognitiveservices-websearch.WebSearchClientOptions.userAgentHeaderName
@@ -255,6 +273,7 @@ items:
       return:
         type:
           - 'string | (defaultUserAgentHeaderName: string) => string'
+        description: ''
     package: '@azure/cognitiveservices-websearch'
   - uid: '@azure/cognitiveservices-websearch.WebSearchClientOptions.withCredentials'
     name: withCredentials
@@ -275,4 +294,5 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/cognitiveservices-websearch'

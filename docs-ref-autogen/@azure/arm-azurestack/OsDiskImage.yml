@@ -9,7 +9,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: OS disk image.
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.OsDiskImage.operatingSystem'
     name: operatingSystem
@@ -18,13 +18,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      OS operating system type. Possible values include: 'None', 'Windows',
+      'Linux'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'operatingSystem?: OperatingSystem'
       return:
         type:
           - '@azure/arm-azurestack.OperatingSystem'
+        description: ''
     package: '@azure/arm-azurestack'
   - uid: '@azure/arm-azurestack.OsDiskImage.sourceBlobSasUri'
     name: sourceBlobSasUri
@@ -33,13 +39,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      SAS key for source blob.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'sourceBlobSasUri?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-azurestack'
 references:
   - uid: '@azure/arm-azurestack.OperatingSystem'

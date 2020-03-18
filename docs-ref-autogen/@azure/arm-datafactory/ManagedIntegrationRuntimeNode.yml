@@ -10,7 +10,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Properties of integration runtime node.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeNode.errors'
     name: errors
@@ -19,13 +19,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The errors that occurred on this integration runtime node.
     optional: true
     syntax:
       content: 'errors?: ManagedIntegrationRuntimeError[]'
       return:
         type:
           - '@azure/arm-datafactory.ManagedIntegrationRuntimeError[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeNode.nodeId'
     name: nodeId
@@ -34,13 +35,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The managed integration runtime node id.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'nodeId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeNode.status'
     name: status
@@ -49,13 +55,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The managed integration runtime node status. Possible values include:
+      'Starting', 'Available',
+
+      'Recycling', 'Unavailable'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'status?: ManagedIntegrationRuntimeNodeStatus'
       return:
         type:
           - '@azure/arm-datafactory.ManagedIntegrationRuntimeNodeStatus'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntimeError[]'

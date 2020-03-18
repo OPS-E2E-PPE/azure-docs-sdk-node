@@ -22,12 +22,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'The parent <xref:CosmosClient> for the Database.'
     syntax:
-      content: 'client: CosmosClient'
+      content: 'public client: CosmosClient'
       return:
         type:
           - '@azure/cosmos.CosmosClient'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Databases.create'
     name: 'create(DatabaseRequest, RequestOptions)'
@@ -55,7 +56,7 @@ items:
       required in order to access and successfully complete any action using the
       User APIs.
     syntax:
-      content: 'function create(body: DatabaseRequest, options?: RequestOptions)'
+      content: 'function create(body: DatabaseRequest, options: RequestOptions)'
       parameters:
         - id: body
           type:
@@ -69,10 +70,10 @@ items:
           description: >
             Use to set options like response page size, continuation tokens,
             etc.
-          optional: true
       return:
         type:
           - Promise<@azure/cosmos.DatabaseResponse>
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Databases.createIfNotExists'
     name: 'createIfNotExists(DatabaseRequest, RequestOptions)'
@@ -122,6 +123,7 @@ items:
       return:
         type:
           - Promise<@azure/cosmos.DatabaseResponse>
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Databases.query'
     name: 'query(string | SqlQuerySpec, FeedOptions)'
@@ -149,6 +151,9 @@ items:
       return:
         type:
           - '@azure/cosmos.QueryIterator<any>'
+        description: >-
+          Allows you to return all databases in an array or iterate over them
+          one at a time.
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Databases.query_1'
     name: 'query(string | SqlQuerySpec, FeedOptions)'
@@ -176,6 +181,9 @@ items:
       return:
         type:
           - '@azure/cosmos.QueryIterator<T>'
+        description: >-
+          Allows you to return all databases in an array or iterate over them
+          one at a time.
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.Databases.readAll'
     name: readAll(FeedOptions)
@@ -199,6 +207,9 @@ items:
           - >-
             @azure/cosmos.QueryIterator<@azure/cosmos.DatabaseDefinition &
             @azure/cosmos.Resource>
+        description: >-
+          Allows you to return all databases in an array or iterate over them
+          one at a time.
     package: '@azure/cosmos'
 references:
   - uid: '@azure/cosmos.CosmosClient'

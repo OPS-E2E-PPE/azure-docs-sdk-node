@@ -13,7 +13,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: The resource representation of a rollout step.
     extends:
       name: '@azure/arm-deploymentmanager.TrackedResource'
     package: '@azure/arm-deploymentmanager'
@@ -24,13 +24,20 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Fully qualified resource Id for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.StepResource.location'
     name: location
@@ -39,12 +46,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The geo-location where the resource lives
     syntax:
       content: 'location: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.StepResource.name'
     name: name
@@ -53,13 +61,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the resource
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.StepResource.properties'
     name: properties
@@ -68,12 +81,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The properties that define the step.
     syntax:
       content: 'properties: StepPropertiesUnion'
       return:
         type:
           - '@azure/arm-deploymentmanager.StepPropertiesUnion'
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.StepResource.tags'
     name: tags
@@ -82,13 +96,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource tags.
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.StepResource.type'
     name: type
@@ -97,13 +112,20 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The type of the resource. Ex- Microsoft.Compute/virtualMachines or
+
+      Microsoft.Storage/storageAccounts.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deploymentmanager'
 references:
   - uid: '@azure/arm-deploymentmanager.TrackedResource'

@@ -11,12 +11,13 @@ items:
       - '@azure/arm-compute.ContainerServiceListResult.entries'
       - '@azure/arm-compute.ContainerServiceListResult.every'
       - '@azure/arm-compute.ContainerServiceListResult.fill'
-      - '@azure/arm-compute.ContainerServiceListResult.filter_1'
       - '@azure/arm-compute.ContainerServiceListResult.filter'
+      - '@azure/arm-compute.ContainerServiceListResult.filter_1'
       - '@azure/arm-compute.ContainerServiceListResult.find'
       - '@azure/arm-compute.ContainerServiceListResult.find_1'
       - '@azure/arm-compute.ContainerServiceListResult.findIndex'
       - '@azure/arm-compute.ContainerServiceListResult.forEach'
+      - '@azure/arm-compute.ContainerServiceListResult.includes'
       - '@azure/arm-compute.ContainerServiceListResult.indexOf'
       - '@azure/arm-compute.ContainerServiceListResult.join'
       - '@azure/arm-compute.ContainerServiceListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.concat'
     name: 'concat(ConcatArray<ContainerService>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.every'
     name: >-
       every((value: ContainerService, index: number, array: ContainerService[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ContainerService, index: number,
-        array: ContainerService[]) => boolean, thisArg?: any)
+        array: ContainerService[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ContainerService, index: number, array:
-              ContainerService[]) => boolean
+              ContainerService[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.fill'
     name: 'fill(ContainerService, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.ContainerServiceListResult.filter_1'
-    name: >-
-      filter((value: ContainerService, index: number, array: ContainerService[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ContainerService, index: number,
-        array: ContainerService[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ContainerService, index: number, array:
-              ContainerService[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-compute.ContainerService[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServiceListResult.filter_1'
+    name: >-
+      filter((value: ContainerService, index: number, array: ContainerService[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ContainerService, index: number,
+        array: ContainerService[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ContainerService, index: number, array:
+              ContainerService[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-compute.ContainerService[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.find_1'
     name: >-
       find((value: ContainerService, index: number, obj: ContainerService[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ContainerService, index: number, obj:
-        ContainerService[]) => boolean, thisArg?: any)
+        ContainerService[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ContainerService, index: number, obj: ContainerService[])
-              => boolean
+              => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.findIndex'
     name: >-
       findIndex((value: ContainerService, index: number, obj:
-      ContainerService[]) => boolean, any)
+      ContainerService[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ContainerService, index: number,
-        obj: ContainerService[]) => boolean, thisArg?: any)
+        obj: ContainerService[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ContainerService, index: number, obj: ContainerService[])
-              => boolean
+              => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServiceListResult.includes'
+    name: 'includes(ContainerService, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ContainerService, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-compute.ContainerService'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.indexOf'
     name: 'indexOf(ContainerService, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.lastIndexOf'
     name: 'lastIndexOf(ContainerService, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.push'
     name: 'push(ContainerService[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.reduce'
     name: >-
@@ -685,6 +733,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.reduce_1'
     name: >-
@@ -695,10 +744,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ContainerService,
@@ -719,6 +765,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.reduce_2'
     name: >-
@@ -757,6 +804,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.reduceRight'
     name: >-
@@ -791,6 +839,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.reduceRight_1'
     name: >-
@@ -801,11 +850,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ContainerService,
@@ -826,6 +871,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.reduceRight_2'
     name: >-
@@ -865,6 +911,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.reverse'
     name: reverse()
@@ -879,6 +926,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.shift'
     name: shift()
@@ -893,6 +941,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService | undefined'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -918,11 +967,12 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.some'
     name: >-
       some((value: ContainerService, index: number, array: ContainerService[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -933,13 +983,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ContainerService, index: number,
-        array: ContainerService[]) => boolean, thisArg?: any)
+        array: ContainerService[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ContainerService, index: number, array:
-              ContainerService[]) => boolean
+              ContainerService[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -955,6 +1005,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.sort'
     name: 'sort(undefined | (a: ContainerService, b: ContainerService) => number)'
@@ -979,6 +1030,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.splice_1'
     name: 'splice(number, number, ContainerService[])'
@@ -1012,6 +1064,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1040,6 +1093,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerService[]'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.toLocaleString'
     name: toLocaleString()
@@ -1056,6 +1110,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.toString'
     name: toString()
@@ -1070,6 +1125,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.unshift'
     name: 'unshift(ContainerService[])'
@@ -1089,6 +1145,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ContainerServiceListResult.values'
     name: values()
@@ -1103,6 +1160,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-compute.ContainerService>
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: Array<@azure/arm-compute.ContainerService>

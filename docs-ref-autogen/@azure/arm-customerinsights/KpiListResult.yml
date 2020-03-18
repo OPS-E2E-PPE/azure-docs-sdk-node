@@ -11,12 +11,13 @@ items:
       - '@azure/arm-customerinsights.KpiListResult.entries'
       - '@azure/arm-customerinsights.KpiListResult.every'
       - '@azure/arm-customerinsights.KpiListResult.fill'
-      - '@azure/arm-customerinsights.KpiListResult.filter_1'
       - '@azure/arm-customerinsights.KpiListResult.filter'
+      - '@azure/arm-customerinsights.KpiListResult.filter_1'
       - '@azure/arm-customerinsights.KpiListResult.find'
       - '@azure/arm-customerinsights.KpiListResult.find_1'
       - '@azure/arm-customerinsights.KpiListResult.findIndex'
       - '@azure/arm-customerinsights.KpiListResult.forEach'
+      - '@azure/arm-customerinsights.KpiListResult.includes'
       - '@azure/arm-customerinsights.KpiListResult.indexOf'
       - '@azure/arm-customerinsights.KpiListResult.join'
       - '@azure/arm-customerinsights.KpiListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.concat'
     name: 'concat(ConcatArray<KpiResourceFormat>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.every'
     name: >-
       every((value: KpiResourceFormat, index: number, array:
-      KpiResourceFormat[]) => boolean, any)
+      KpiResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: KpiResourceFormat, index: number,
-        array: KpiResourceFormat[]) => boolean, thisArg?: any)
+        array: KpiResourceFormat[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: KpiResourceFormat, index: number, array:
-              KpiResourceFormat[]) => boolean
+              KpiResourceFormat[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.fill'
     name: 'fill(KpiResourceFormat, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-customerinsights'
-  - uid: '@azure/arm-customerinsights.KpiListResult.filter_1'
-    name: >-
-      filter((value: KpiResourceFormat, index: number, array:
-      KpiResourceFormat[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: KpiResourceFormat, index: number,
-        array: KpiResourceFormat[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: KpiResourceFormat, index: number, array:
-              KpiResourceFormat[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-customerinsights.KpiResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-customerinsights'
+  - uid: '@azure/arm-customerinsights.KpiListResult.filter_1'
+    name: >-
+      filter((value: KpiResourceFormat, index: number, array:
+      KpiResourceFormat[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: KpiResourceFormat, index: number,
+        array: KpiResourceFormat[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: KpiResourceFormat, index: number, array:
+              KpiResourceFormat[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-customerinsights.KpiResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.find_1'
     name: >-
       find((value: KpiResourceFormat, index: number, obj: KpiResourceFormat[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: KpiResourceFormat, index: number, obj:
-        KpiResourceFormat[]) => boolean, thisArg?: any)
+        KpiResourceFormat[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: KpiResourceFormat, index: number, obj:
-              KpiResourceFormat[]) => boolean
+              KpiResourceFormat[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.findIndex'
     name: >-
       findIndex((value: KpiResourceFormat, index: number, obj:
-      KpiResourceFormat[]) => boolean, any)
+      KpiResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: KpiResourceFormat, index: number,
-        obj: KpiResourceFormat[]) => boolean, thisArg?: any)
+        obj: KpiResourceFormat[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: KpiResourceFormat, index: number, obj:
-              KpiResourceFormat[]) => boolean
+              KpiResourceFormat[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-customerinsights'
+  - uid: '@azure/arm-customerinsights.KpiListResult.includes'
+    name: 'includes(KpiResourceFormat, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: KpiResourceFormat, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-customerinsights.KpiResourceFormat'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.indexOf'
     name: 'indexOf(KpiResourceFormat, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.lastIndexOf'
     name: 'lastIndexOf(KpiResourceFormat, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.push'
     name: 'push(KpiResourceFormat[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.reduce'
     name: >-
@@ -685,6 +733,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.reduce_1'
     name: >-
@@ -695,10 +744,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: KpiResourceFormat,
@@ -720,6 +766,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.reduce_2'
     name: >-
@@ -758,6 +805,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.reduceRight'
     name: >-
@@ -792,6 +840,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.reduceRight_1'
     name: >-
@@ -802,11 +851,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: KpiResourceFormat,
@@ -828,6 +873,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.reduceRight_2'
     name: >-
@@ -867,6 +913,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.reverse'
     name: reverse()
@@ -881,6 +928,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.shift'
     name: shift()
@@ -895,6 +943,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -920,11 +969,12 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.some'
     name: >-
       some((value: KpiResourceFormat, index: number, array: KpiResourceFormat[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -935,13 +985,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: KpiResourceFormat, index: number,
-        array: KpiResourceFormat[]) => boolean, thisArg?: any)
+        array: KpiResourceFormat[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: KpiResourceFormat, index: number, array:
-              KpiResourceFormat[]) => boolean
+              KpiResourceFormat[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -957,6 +1007,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.sort'
     name: 'sort(undefined | (a: KpiResourceFormat, b: KpiResourceFormat) => number)'
@@ -981,6 +1032,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.splice_1'
     name: 'splice(number, number, KpiResourceFormat[])'
@@ -1014,6 +1066,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1042,6 +1095,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.KpiResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.toLocaleString'
     name: toLocaleString()
@@ -1058,6 +1112,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.toString'
     name: toString()
@@ -1072,6 +1127,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.unshift'
     name: 'unshift(KpiResourceFormat[])'
@@ -1091,6 +1147,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.KpiListResult.values'
     name: values()
@@ -1105,6 +1162,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-customerinsights.KpiResourceFormat>
+        description: ''
     package: '@azure/arm-customerinsights'
 references:
   - uid: Array<@azure/arm-customerinsights.KpiResourceFormat>

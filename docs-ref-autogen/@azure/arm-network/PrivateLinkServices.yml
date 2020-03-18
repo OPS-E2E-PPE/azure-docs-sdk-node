@@ -8,15 +8,53 @@ items:
       - '@azure/arm-network.PrivateLinkServices.beginDeleteMethod'
       - >-
         @azure/arm-network.PrivateLinkServices.beginDeletePrivateEndpointConnection
+      - '@azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibility'
+      - >-
+        @azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibility_2
+      - >-
+        @azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibility_1
+      - >-
+        @azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibilityByResourceGroup
+      - >-
+        @azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibilityByResourceGroup_2
+      - >-
+        @azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibilityByResourceGroup_1
       - '@azure/arm-network.PrivateLinkServices.createOrUpdate'
       - '@azure/arm-network.PrivateLinkServices.deleteMethod'
       - '@azure/arm-network.PrivateLinkServices.deletePrivateEndpointConnection'
       - '@azure/arm-network.PrivateLinkServices.get'
       - '@azure/arm-network.PrivateLinkServices.get_2'
       - '@azure/arm-network.PrivateLinkServices.get_1'
+      - '@azure/arm-network.PrivateLinkServices.getPrivateEndpointConnection'
+      - '@azure/arm-network.PrivateLinkServices.getPrivateEndpointConnection_2'
+      - '@azure/arm-network.PrivateLinkServices.getPrivateEndpointConnection_1'
       - '@azure/arm-network.PrivateLinkServices.list'
       - '@azure/arm-network.PrivateLinkServices.list_2'
       - '@azure/arm-network.PrivateLinkServices.list_1'
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServices
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServices_2
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServices_1
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroup
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroup_2
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroup_1
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroupNext
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroupNext_2
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroupNext_1
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesNext
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesNext_2
+      - >-
+        @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesNext_1
       - '@azure/arm-network.PrivateLinkServices.listBySubscription'
       - '@azure/arm-network.PrivateLinkServices.listBySubscription_2'
       - '@azure/arm-network.PrivateLinkServices.listBySubscription_1'
@@ -26,6 +64,15 @@ items:
       - '@azure/arm-network.PrivateLinkServices.listNext'
       - '@azure/arm-network.PrivateLinkServices.listNext_2'
       - '@azure/arm-network.PrivateLinkServices.listNext_1'
+      - '@azure/arm-network.PrivateLinkServices.listPrivateEndpointConnections'
+      - '@azure/arm-network.PrivateLinkServices.listPrivateEndpointConnections_2'
+      - '@azure/arm-network.PrivateLinkServices.listPrivateEndpointConnections_1'
+      - >-
+        @azure/arm-network.PrivateLinkServices.listPrivateEndpointConnectionsNext
+      - >-
+        @azure/arm-network.PrivateLinkServices.listPrivateEndpointConnectionsNext_2
+      - >-
+        @azure/arm-network.PrivateLinkServices.listPrivateEndpointConnectionsNext_1
       - '@azure/arm-network.PrivateLinkServices.constructor'
       - '@azure/arm-network.PrivateLinkServices.updatePrivateEndpointConnection'
       - '@azure/arm-network.PrivateLinkServices.updatePrivateEndpointConnection_2'
@@ -65,7 +112,7 @@ items:
             - '@azure/arm-network.PrivateLinkService'
           description: >-
             Parameters supplied to the create or update private link service
-            operation
+            operation.
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -74,6 +121,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -103,6 +151,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.PrivateLinkServices.beginDeletePrivateEndpointConnection
@@ -142,6 +191,227 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibility'
+    name: >-
+      checkPrivateLinkServiceVisibility(string,
+      CheckPrivateLinkServiceVisibilityRequest, msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Checks whether the subscription is visible to private link service.
+    syntax:
+      content: >-
+        function checkPrivateLinkServiceVisibility(location: string, parameters:
+        CheckPrivateLinkServiceVisibilityRequest, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: parameters
+          type:
+            - '@azure/arm-network.CheckPrivateLinkServiceVisibilityRequest'
+          description: The request body of CheckPrivateLinkService API call.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<Models.PrivateLinkServicesCheckPrivateLinkServiceVisibilityResponse>
+        description: >-
+          Promise<Models.PrivateLinkServicesCheckPrivateLinkServiceVisibilityResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibility_2'
+    name: >-
+      checkPrivateLinkServiceVisibility(string,
+      CheckPrivateLinkServiceVisibilityRequest, RequestOptionsBase,
+      ServiceCallback<PrivateLinkServiceVisibility>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function checkPrivateLinkServiceVisibility(location: string, parameters:
+        CheckPrivateLinkServiceVisibilityRequest, options: RequestOptionsBase,
+        callback: ServiceCallback<PrivateLinkServiceVisibility>)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: parameters
+          type:
+            - '@azure/arm-network.CheckPrivateLinkServiceVisibilityRequest'
+          description: The request body of CheckPrivateLinkService API call.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.PrivateLinkServiceVisibility>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibility_1'
+    name: >-
+      checkPrivateLinkServiceVisibility(string,
+      CheckPrivateLinkServiceVisibilityRequest,
+      ServiceCallback<PrivateLinkServiceVisibility>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function checkPrivateLinkServiceVisibility(location: string, parameters:
+        CheckPrivateLinkServiceVisibilityRequest, callback:
+        ServiceCallback<PrivateLinkServiceVisibility>)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: parameters
+          type:
+            - '@azure/arm-network.CheckPrivateLinkServiceVisibilityRequest'
+          description: The request body of CheckPrivateLinkService API call.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.PrivateLinkServiceVisibility>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibilityByResourceGroup
+    name: >-
+      checkPrivateLinkServiceVisibilityByResourceGroup(string, string,
+      CheckPrivateLinkServiceVisibilityRequest, msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Checks whether the subscription is visible to private link service in the
+      specified resource
+
+      group.
+    syntax:
+      content: >-
+        function checkPrivateLinkServiceVisibilityByResourceGroup(location:
+        string, resourceGroupName: string, parameters:
+        CheckPrivateLinkServiceVisibilityRequest, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: parameters
+          type:
+            - '@azure/arm-network.CheckPrivateLinkServiceVisibilityRequest'
+          description: The request body of CheckPrivateLinkService API call.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<Models.PrivateLinkServicesCheckPrivateLinkServiceVisibilityByResourceGroupResponse>
+        description: >-
+          Promise<Models.PrivateLinkServicesCheckPrivateLinkServiceVisibilityByResourceGroupResponse>
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibilityByResourceGroup_2
+    name: >-
+      checkPrivateLinkServiceVisibilityByResourceGroup(string, string,
+      CheckPrivateLinkServiceVisibilityRequest, RequestOptionsBase,
+      ServiceCallback<PrivateLinkServiceVisibility>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function checkPrivateLinkServiceVisibilityByResourceGroup(location:
+        string, resourceGroupName: string, parameters:
+        CheckPrivateLinkServiceVisibilityRequest, options: RequestOptionsBase,
+        callback: ServiceCallback<PrivateLinkServiceVisibility>)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: parameters
+          type:
+            - '@azure/arm-network.CheckPrivateLinkServiceVisibilityRequest'
+          description: The request body of CheckPrivateLinkService API call.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.PrivateLinkServiceVisibility>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.checkPrivateLinkServiceVisibilityByResourceGroup_1
+    name: >-
+      checkPrivateLinkServiceVisibilityByResourceGroup(string, string,
+      CheckPrivateLinkServiceVisibilityRequest,
+      ServiceCallback<PrivateLinkServiceVisibility>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function checkPrivateLinkServiceVisibilityByResourceGroup(location:
+        string, resourceGroupName: string, parameters:
+        CheckPrivateLinkServiceVisibilityRequest, callback:
+        ServiceCallback<PrivateLinkServiceVisibility>)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: parameters
+          type:
+            - '@azure/arm-network.CheckPrivateLinkServiceVisibilityRequest'
+          description: The request body of CheckPrivateLinkService API call.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.PrivateLinkServiceVisibility>
+          description: |
+            The callback
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.createOrUpdate'
     name: >-
@@ -172,7 +442,7 @@ items:
             - '@azure/arm-network.PrivateLinkService'
           description: >-
             Parameters supplied to the create or update private link service
-            operation
+            operation.
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -181,6 +451,7 @@ items:
       return:
         type:
           - Promise<Models.PrivateLinkServicesCreateOrUpdateResponse>
+        description: Promise<Models.PrivateLinkServicesCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -210,6 +481,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.deletePrivateEndpointConnection'
     name: >-
@@ -248,6 +520,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.get'
     name: 'get(string, string, Models.PrivateLinkServicesGetOptionalParams)'
@@ -277,6 +550,7 @@ items:
       return:
         type:
           - Promise<Models.PrivateLinkServicesGetResponse>
+        description: Promise<Models.PrivateLinkServicesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.get_2'
     name: >-
@@ -310,9 +584,6 @@ items:
             - ServiceCallback<@azure/arm-network.PrivateLinkService>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PrivateLinkServicesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.get_1'
     name: 'get(string, string, ServiceCallback<PrivateLinkService>)'
@@ -339,9 +610,123 @@ items:
             - ServiceCallback<@azure/arm-network.PrivateLinkService>
           description: |
             The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PrivateLinkServices.getPrivateEndpointConnection'
+    name: >-
+      getPrivateEndpointConnection(string, string, string,
+      Models.PrivateLinkServicesGetPrivateEndpointConnectionOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Get the specific private end point connection by specific private link
+      service in the resource
+
+      group.
+    syntax:
+      content: >-
+        function getPrivateEndpointConnection(resourceGroupName: string,
+        serviceName: string, peConnectionName: string, options?:
+        Models.PrivateLinkServicesGetPrivateEndpointConnectionOptionalParams)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: serviceName
+          type:
+            - string
+          description: The name of the private link service.
+        - id: peConnectionName
+          type:
+            - string
+          description: The name of the private end point connection.
+        - id: options
+          type:
+            - >-
+              Models.PrivateLinkServicesGetPrivateEndpointConnectionOptionalParams
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.PrivateLinkServicesGetResponse>
+          - >-
+            Promise<Models.PrivateLinkServicesGetPrivateEndpointConnectionResponse>
+        description: >-
+          Promise<Models.PrivateLinkServicesGetPrivateEndpointConnectionResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PrivateLinkServices.getPrivateEndpointConnection_2'
+    name: >-
+      getPrivateEndpointConnection(string, string, string,
+      PrivateLinkServicesGetPrivateEndpointConnectionOptionalParams,
+      ServiceCallback<PrivateEndpointConnection>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getPrivateEndpointConnection(resourceGroupName: string,
+        serviceName: string, peConnectionName: string, options:
+        PrivateLinkServicesGetPrivateEndpointConnectionOptionalParams, callback:
+        ServiceCallback<PrivateEndpointConnection>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: serviceName
+          type:
+            - string
+          description: The name of the private link service.
+        - id: peConnectionName
+          type:
+            - string
+          description: The name of the private end point connection.
+        - id: options
+          type:
+            - >-
+              @azure/arm-network.PrivateLinkServicesGetPrivateEndpointConnectionOptionalParams
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.PrivateEndpointConnection>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PrivateLinkServices.getPrivateEndpointConnection_1'
+    name: >-
+      getPrivateEndpointConnection(string, string, string,
+      ServiceCallback<PrivateEndpointConnection>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getPrivateEndpointConnection(resourceGroupName: string,
+        serviceName: string, peConnectionName: string, callback:
+        ServiceCallback<PrivateEndpointConnection>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: serviceName
+          type:
+            - string
+          description: The name of the private link service.
+        - id: peConnectionName
+          type:
+            - string
+          description: The name of the private end point connection.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.PrivateEndpointConnection>
+          description: |
+            The callback
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.list'
     name: 'list(string, msRest.RequestOptionsBase)'
@@ -367,6 +752,7 @@ items:
       return:
         type:
           - Promise<Models.PrivateLinkServicesListResponse>
+        description: Promise<Models.PrivateLinkServicesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.list_2'
     name: >-
@@ -395,9 +781,6 @@ items:
             - ServiceCallback<@azure/arm-network.PrivateLinkServiceListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PrivateLinkServicesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.list_1'
     name: 'list(string, ServiceCallback<PrivateLinkServiceListResult>)'
@@ -420,9 +803,388 @@ items:
             - ServiceCallback<@azure/arm-network.PrivateLinkServiceListResult>
           description: |
             The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServices'
+    name: 'listAutoApprovedPrivateLinkServices(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns all of the private link service ids that can be linked to a
+      Private Endpoint with auto
+
+      approved in this subscription in this region.
+    syntax:
+      content: >-
+        function listAutoApprovedPrivateLinkServices(location: string, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.PrivateLinkServicesListResponse>
+          - >-
+            Promise<Models.PrivateLinkServicesListAutoApprovedPrivateLinkServicesResponse>
+        description: >-
+          Promise<Models.PrivateLinkServicesListAutoApprovedPrivateLinkServicesResponse>
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServices_2
+    name: >-
+      listAutoApprovedPrivateLinkServices(string, RequestOptionsBase,
+      ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listAutoApprovedPrivateLinkServices(location: string, options:
+        RequestOptionsBase, callback:
+        ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.AutoApprovedPrivateLinkServicesResult>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServices_1
+    name: >-
+      listAutoApprovedPrivateLinkServices(string,
+      ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listAutoApprovedPrivateLinkServices(location: string, callback:
+        ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.AutoApprovedPrivateLinkServicesResult>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroup
+    name: >-
+      listAutoApprovedPrivateLinkServicesByResourceGroup(string, string,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns all of the private link service ids that can be linked to a
+      Private Endpoint with auto
+
+      approved in this subscription in this region.
+    syntax:
+      content: >-
+        function listAutoApprovedPrivateLinkServicesByResourceGroup(location:
+        string, resourceGroupName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<Models.PrivateLinkServicesListAutoApprovedPrivateLinkServicesByResourceGroupResponse>
+        description: >-
+          Promise<Models.PrivateLinkServicesListAutoApprovedPrivateLinkServicesByResourceGroupResponse>
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroup_2
+    name: >-
+      listAutoApprovedPrivateLinkServicesByResourceGroup(string, string,
+      RequestOptionsBase,
+      ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listAutoApprovedPrivateLinkServicesByResourceGroup(location:
+        string, resourceGroupName: string, options: RequestOptionsBase,
+        callback: ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.AutoApprovedPrivateLinkServicesResult>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroup_1
+    name: >-
+      listAutoApprovedPrivateLinkServicesByResourceGroup(string, string,
+      ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listAutoApprovedPrivateLinkServicesByResourceGroup(location:
+        string, resourceGroupName: string, callback:
+        ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+      parameters:
+        - id: location
+          type:
+            - string
+          description: The location of the domain name.
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.AutoApprovedPrivateLinkServicesResult>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroupNext
+    name: >-
+      listAutoApprovedPrivateLinkServicesByResourceGroupNext(string,
+      msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns all of the private link service ids that can be linked to a
+      Private Endpoint with auto
+
+      approved in this subscription in this region.
+    syntax:
+      content: >-
+        function
+        listAutoApprovedPrivateLinkServicesByResourceGroupNext(nextPageLink:
+        string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<Models.PrivateLinkServicesListAutoApprovedPrivateLinkServicesByResourceGroupNextResponse>
+        description: >-
+          Promise<Models.PrivateLinkServicesListAutoApprovedPrivateLinkServicesByResourceGroupNextResponse>
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroupNext_2
+    name: >-
+      listAutoApprovedPrivateLinkServicesByResourceGroupNext(string,
+      RequestOptionsBase,
+      ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function
+        listAutoApprovedPrivateLinkServicesByResourceGroupNext(nextPageLink:
+        string, options: RequestOptionsBase, callback:
+        ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.AutoApprovedPrivateLinkServicesResult>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesByResourceGroupNext_1
+    name: >-
+      listAutoApprovedPrivateLinkServicesByResourceGroupNext(string,
+      ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function
+        listAutoApprovedPrivateLinkServicesByResourceGroupNext(nextPageLink:
+        string, callback:
+        ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.AutoApprovedPrivateLinkServicesResult>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesNext
+    name: 'listAutoApprovedPrivateLinkServicesNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns all of the private link service ids that can be linked to a
+      Private Endpoint with auto
+
+      approved in this subscription in this region.
+    syntax:
+      content: >-
+        function listAutoApprovedPrivateLinkServicesNext(nextPageLink: string,
+        options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<Models.PrivateLinkServicesListAutoApprovedPrivateLinkServicesNextResponse>
+        description: >-
+          Promise<Models.PrivateLinkServicesListAutoApprovedPrivateLinkServicesNextResponse>
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesNext_2
+    name: >-
+      listAutoApprovedPrivateLinkServicesNext(string, RequestOptionsBase,
+      ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listAutoApprovedPrivateLinkServicesNext(nextPageLink: string,
+        options: RequestOptionsBase, callback:
+        ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.AutoApprovedPrivateLinkServicesResult>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listAutoApprovedPrivateLinkServicesNext_1
+    name: >-
+      listAutoApprovedPrivateLinkServicesNext(string,
+      ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listAutoApprovedPrivateLinkServicesNext(nextPageLink: string,
+        callback: ServiceCallback<AutoApprovedPrivateLinkServicesResult>)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.AutoApprovedPrivateLinkServicesResult>
+          description: |
+            The callback
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.listBySubscription'
     name: listBySubscription(msRest.RequestOptionsBase)
@@ -442,6 +1204,7 @@ items:
       return:
         type:
           - Promise<Models.PrivateLinkServicesListBySubscriptionResponse>
+        description: Promise<Models.PrivateLinkServicesListBySubscriptionResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.listBySubscription_2'
     name: >-
@@ -466,9 +1229,6 @@ items:
             - ServiceCallback<@azure/arm-network.PrivateLinkServiceListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PrivateLinkServicesListBySubscriptionResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.listBySubscription_1'
     name: listBySubscription(ServiceCallback<PrivateLinkServiceListResult>)
@@ -487,9 +1247,6 @@ items:
             - ServiceCallback<@azure/arm-network.PrivateLinkServiceListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PrivateLinkServicesListBySubscriptionResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.listBySubscriptionNext'
     name: 'listBySubscriptionNext(string, msRest.RequestOptionsBase)'
@@ -515,6 +1272,7 @@ items:
       return:
         type:
           - Promise<Models.PrivateLinkServicesListBySubscriptionNextResponse>
+        description: Promise<Models.PrivateLinkServicesListBySubscriptionNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.listBySubscriptionNext_2'
     name: >-
@@ -544,9 +1302,6 @@ items:
             - ServiceCallback<@azure/arm-network.PrivateLinkServiceListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PrivateLinkServicesListBySubscriptionNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.listBySubscriptionNext_1'
     name: >-
@@ -571,9 +1326,6 @@ items:
             - ServiceCallback<@azure/arm-network.PrivateLinkServiceListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PrivateLinkServicesListBySubscriptionNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -599,6 +1351,7 @@ items:
       return:
         type:
           - Promise<Models.PrivateLinkServicesListNextResponse>
+        description: Promise<Models.PrivateLinkServicesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.listNext_2'
     name: >-
@@ -627,9 +1380,6 @@ items:
             - ServiceCallback<@azure/arm-network.PrivateLinkServiceListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.PrivateLinkServicesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.listNext_1'
     name: 'listNext(string, ServiceCallback<PrivateLinkServiceListResult>)'
@@ -652,9 +1402,191 @@ items:
             - ServiceCallback<@azure/arm-network.PrivateLinkServiceListResult>
           description: |
             The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PrivateLinkServices.listPrivateEndpointConnections'
+    name: 'listPrivateEndpointConnections(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets all private end point connections for a specific private link
+      service.
+    syntax:
+      content: >-
+        function listPrivateEndpointConnections(resourceGroupName: string,
+        serviceName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: serviceName
+          type:
+            - string
+          description: The name of the private link service.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.PrivateLinkServicesListNextResponse>
+          - >-
+            Promise<Models.PrivateLinkServicesListPrivateEndpointConnectionsResponse>
+        description: >-
+          Promise<Models.PrivateLinkServicesListPrivateEndpointConnectionsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PrivateLinkServices.listPrivateEndpointConnections_2'
+    name: >-
+      listPrivateEndpointConnections(string, string, RequestOptionsBase,
+      ServiceCallback<PrivateEndpointConnectionListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listPrivateEndpointConnections(resourceGroupName: string,
+        serviceName: string, options: RequestOptionsBase, callback:
+        ServiceCallback<PrivateEndpointConnectionListResult>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: serviceName
+          type:
+            - string
+          description: The name of the private link service.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.PrivateEndpointConnectionListResult>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PrivateLinkServices.listPrivateEndpointConnections_1'
+    name: >-
+      listPrivateEndpointConnections(string, string,
+      ServiceCallback<PrivateEndpointConnectionListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listPrivateEndpointConnections(resourceGroupName: string,
+        serviceName: string, callback:
+        ServiceCallback<PrivateEndpointConnectionListResult>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: serviceName
+          type:
+            - string
+          description: The name of the private link service.
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.PrivateEndpointConnectionListResult>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PrivateLinkServices.listPrivateEndpointConnectionsNext'
+    name: 'listPrivateEndpointConnectionsNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets all private end point connections for a specific private link
+      service.
+    syntax:
+      content: >-
+        function listPrivateEndpointConnectionsNext(nextPageLink: string,
+        options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<Models.PrivateLinkServicesListPrivateEndpointConnectionsNextResponse>
+        description: >-
+          Promise<Models.PrivateLinkServicesListPrivateEndpointConnectionsNextResponse>
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listPrivateEndpointConnectionsNext_2
+    name: >-
+      listPrivateEndpointConnectionsNext(string, RequestOptionsBase,
+      ServiceCallback<PrivateEndpointConnectionListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listPrivateEndpointConnectionsNext(nextPageLink: string,
+        options: RequestOptionsBase, callback:
+        ServiceCallback<PrivateEndpointConnectionListResult>)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.PrivateEndpointConnectionListResult>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServices.listPrivateEndpointConnectionsNext_1
+    name: >-
+      listPrivateEndpointConnectionsNext(string,
+      ServiceCallback<PrivateEndpointConnectionListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function listPrivateEndpointConnectionsNext(nextPageLink: string,
+        callback: ServiceCallback<PrivateEndpointConnectionListResult>)
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: The NextLink from the previous successful call to List operation.
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<@azure/arm-network.PrivateEndpointConnectionListResult>
+          description: |
+            The callback
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.constructor'
     name: PrivateLinkServices(NetworkManagementClientContext)
@@ -714,12 +1646,16 @@ items:
           optional: true
       return:
         type:
-          - Promise<RestResponse>
+          - >-
+            Promise<Models.PrivateLinkServicesUpdatePrivateEndpointConnectionResponse>
+        description: >-
+          Promise<Models.PrivateLinkServicesUpdatePrivateEndpointConnectionResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.updatePrivateEndpointConnection_2'
     name: >-
       updatePrivateEndpointConnection(string, string, string,
-      PrivateEndpointConnection, RequestOptionsBase, ServiceCallback<void>)
+      PrivateEndpointConnection, RequestOptionsBase,
+      ServiceCallback<PrivateEndpointConnection>)
     children: []
     type: method
     langs:
@@ -730,7 +1666,7 @@ items:
         function updatePrivateEndpointConnection(resourceGroupName: string,
         serviceName: string, peConnectionName: string, parameters:
         PrivateEndpointConnection, options: RequestOptionsBase, callback:
-        ServiceCallback<void>)
+        ServiceCallback<PrivateEndpointConnection>)
       parameters:
         - id: resourceGroupName
           type:
@@ -756,17 +1692,14 @@ items:
           description: The optional parameters
         - id: callback
           type:
-            - ServiceCallback<void>
+            - ServiceCallback<@azure/arm-network.PrivateEndpointConnection>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.PrivateLinkServices.updatePrivateEndpointConnection_1'
     name: >-
       updatePrivateEndpointConnection(string, string, string,
-      PrivateEndpointConnection, ServiceCallback<void>)
+      PrivateEndpointConnection, ServiceCallback<PrivateEndpointConnection>)
     children: []
     type: method
     langs:
@@ -776,7 +1709,8 @@ items:
       content: >-
         function updatePrivateEndpointConnection(resourceGroupName: string,
         serviceName: string, peConnectionName: string, parameters:
-        PrivateEndpointConnection, callback: ServiceCallback<void>)
+        PrivateEndpointConnection, callback:
+        ServiceCallback<PrivateEndpointConnection>)
       parameters:
         - id: resourceGroupName
           type:
@@ -798,12 +1732,9 @@ items:
             connection.
         - id: callback
           type:
-            - ServiceCallback<void>
+            - ServiceCallback<@azure/arm-network.PrivateEndpointConnection>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -818,6 +1749,22 @@ references:
       - name: PrivateLinkService
         fullName: PrivateLinkService
         uid: '@azure/arm-network.PrivateLinkService'
+  - uid: '@azure/arm-network.CheckPrivateLinkServiceVisibilityRequest'
+    name: CheckPrivateLinkServiceVisibilityRequest
+    spec.typeScript:
+      - name: CheckPrivateLinkServiceVisibilityRequest
+        fullName: CheckPrivateLinkServiceVisibilityRequest
+        uid: '@azure/arm-network.CheckPrivateLinkServiceVisibilityRequest'
+  - uid: ServiceCallback<@azure/arm-network.PrivateLinkServiceVisibility>
+    name: PrivateLinkServiceVisibility>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PrivateLinkServiceVisibility
+        fullName: PrivateLinkServiceVisibility
+        uid: '@azure/arm-network.PrivateLinkServiceVisibility'
+      - name: '>'
+        fullName: '>'
   - uid: ServiceCallback<@azure/arm-network.PrivateLinkService>
     name: PrivateLinkService>
     spec.typeScript:
@@ -834,6 +1781,24 @@ references:
       - name: PrivateLinkServicesGetOptionalParams
         fullName: PrivateLinkServicesGetOptionalParams
         uid: '@azure/arm-network.PrivateLinkServicesGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-network.PrivateEndpointConnection>
+    name: PrivateEndpointConnection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PrivateEndpointConnection
+        fullName: PrivateEndpointConnection
+        uid: '@azure/arm-network.PrivateEndpointConnection'
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      @azure/arm-network.PrivateLinkServicesGetPrivateEndpointConnectionOptionalParams
+    name: PrivateLinkServicesGetPrivateEndpointConnectionOptionalParams
+    spec.typeScript:
+      - name: PrivateLinkServicesGetPrivateEndpointConnectionOptionalParams
+        fullName: PrivateLinkServicesGetPrivateEndpointConnectionOptionalParams
+        uid: >-
+          @azure/arm-network.PrivateLinkServicesGetPrivateEndpointConnectionOptionalParams
   - uid: ServiceCallback<@azure/arm-network.PrivateLinkServiceListResult>
     name: PrivateLinkServiceListResult>
     spec.typeScript:
@@ -842,6 +1807,26 @@ references:
       - name: PrivateLinkServiceListResult
         fullName: PrivateLinkServiceListResult
         uid: '@azure/arm-network.PrivateLinkServiceListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-network.AutoApprovedPrivateLinkServicesResult>
+    name: AutoApprovedPrivateLinkServicesResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AutoApprovedPrivateLinkServicesResult
+        fullName: AutoApprovedPrivateLinkServicesResult
+        uid: '@azure/arm-network.AutoApprovedPrivateLinkServicesResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-network.PrivateEndpointConnectionListResult>
+    name: PrivateEndpointConnectionListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PrivateEndpointConnectionListResult
+        fullName: PrivateEndpointConnectionListResult
+        uid: '@azure/arm-network.PrivateEndpointConnectionListResult'
       - name: '>'
         fullName: '>'
   - uid: '@azure/arm-network.PrivateEndpointConnection'

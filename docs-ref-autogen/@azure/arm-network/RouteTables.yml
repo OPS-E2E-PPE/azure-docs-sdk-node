@@ -6,7 +6,6 @@ items:
     children:
       - '@azure/arm-network.RouteTables.beginCreateOrUpdate'
       - '@azure/arm-network.RouteTables.beginDeleteMethod'
-      - '@azure/arm-network.RouteTables.beginUpdateTags'
       - '@azure/arm-network.RouteTables.createOrUpdate'
       - '@azure/arm-network.RouteTables.deleteMethod'
       - '@azure/arm-network.RouteTables.get'
@@ -26,6 +25,8 @@ items:
       - '@azure/arm-network.RouteTables.listNext_1'
       - '@azure/arm-network.RouteTables.constructor'
       - '@azure/arm-network.RouteTables.updateTags'
+      - '@azure/arm-network.RouteTables.updateTags_2'
+      - '@azure/arm-network.RouteTables.updateTags_1'
     langs:
       - typeScript
     type: class
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -92,39 +94,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.RouteTables.beginUpdateTags'
-    name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Updates a route table tags.
-    syntax:
-      content: >-
-        function beginUpdateTags(resourceGroupName: string, routeTableName:
-        string, parameters: TagsObject, options?: msRest.RequestOptionsBase)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: routeTableName
-          type:
-            - string
-          description: The name of the route table.
-        - id: parameters
-          type:
-            - '@azure/arm-network.TagsObject'
-          description: Parameters supplied to update route table tags.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.createOrUpdate'
     name: 'createOrUpdate(string, string, RouteTable, msRest.RequestOptionsBase)'
@@ -158,6 +128,7 @@ items:
       return:
         type:
           - Promise<Models.RouteTablesCreateOrUpdateResponse>
+        description: Promise<Models.RouteTablesCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -187,6 +158,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.get'
     name: 'get(string, string, Models.RouteTablesGetOptionalParams)'
@@ -216,6 +188,7 @@ items:
       return:
         type:
           - Promise<Models.RouteTablesGetResponse>
+        description: Promise<Models.RouteTablesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.get_2'
     name: >-
@@ -248,9 +221,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteTable>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteTablesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.get_1'
     name: 'get(string, string, ServiceCallback<RouteTable>)'
@@ -277,9 +247,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteTable>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteTablesGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.list'
     name: 'list(string, msRest.RequestOptionsBase)'
@@ -305,6 +272,7 @@ items:
       return:
         type:
           - Promise<Models.RouteTablesListResponse>
+        description: Promise<Models.RouteTablesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.list_2'
     name: 'list(string, RequestOptionsBase, ServiceCallback<RouteTableListResult>)'
@@ -331,9 +299,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteTableListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteTablesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.list_1'
     name: 'list(string, ServiceCallback<RouteTableListResult>)'
@@ -356,9 +321,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteTableListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteTablesListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.listAll'
     name: listAll(msRest.RequestOptionsBase)
@@ -378,6 +340,7 @@ items:
       return:
         type:
           - Promise<Models.RouteTablesListAllResponse>
+        description: Promise<Models.RouteTablesListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.listAll_2'
     name: 'listAll(RequestOptionsBase, ServiceCallback<RouteTableListResult>)'
@@ -400,9 +363,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteTableListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteTablesListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.listAll_1'
     name: listAll(ServiceCallback<RouteTableListResult>)
@@ -419,9 +379,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteTableListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteTablesListAllResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.listAllNext'
     name: 'listAllNext(string, msRest.RequestOptionsBase)'
@@ -447,6 +404,7 @@ items:
       return:
         type:
           - Promise<Models.RouteTablesListAllNextResponse>
+        description: Promise<Models.RouteTablesListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.listAllNext_2'
     name: >-
@@ -475,9 +433,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteTableListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteTablesListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.listAllNext_1'
     name: 'listAllNext(string, ServiceCallback<RouteTableListResult>)'
@@ -500,9 +455,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteTableListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteTablesListAllNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -528,6 +480,7 @@ items:
       return:
         type:
           - Promise<Models.RouteTablesListNextResponse>
+        description: Promise<Models.RouteTablesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.listNext_2'
     name: >-
@@ -556,9 +509,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteTableListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteTablesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.listNext_1'
     name: 'listNext(string, ServiceCallback<RouteTableListResult>)'
@@ -581,9 +531,6 @@ items:
             - ServiceCallback<@azure/arm-network.RouteTableListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RouteTablesListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteTables.constructor'
     name: RouteTables(NetworkManagementClientContext)
@@ -633,6 +580,74 @@ items:
       return:
         type:
           - Promise<Models.RouteTablesUpdateTagsResponse>
+        description: Promise<Models.RouteTablesUpdateTagsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.RouteTables.updateTags_2'
+    name: >-
+      updateTags(string, string, TagsObject, RequestOptionsBase,
+      ServiceCallback<RouteTable>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, routeTableName: string,
+        parameters: TagsObject, options: RequestOptionsBase, callback:
+        ServiceCallback<RouteTable>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: routeTableName
+          type:
+            - string
+          description: The name of the route table.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update route table tags.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.RouteTable>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.RouteTables.updateTags_1'
+    name: 'updateTags(string, string, TagsObject, ServiceCallback<RouteTable>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, routeTableName: string,
+        parameters: TagsObject, callback: ServiceCallback<RouteTable>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: routeTableName
+          type:
+            - string
+          description: The name of the route table.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update route table tags.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.RouteTable>
+          description: |
+            The callback
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -647,12 +662,6 @@ references:
       - name: RouteTable
         fullName: RouteTable
         uid: '@azure/arm-network.RouteTable'
-  - uid: '@azure/arm-network.TagsObject'
-    name: TagsObject
-    spec.typeScript:
-      - name: TagsObject
-        fullName: TagsObject
-        uid: '@azure/arm-network.TagsObject'
   - uid: ServiceCallback<@azure/arm-network.RouteTable>
     name: RouteTable>
     spec.typeScript:
@@ -679,3 +688,9 @@ references:
         uid: '@azure/arm-network.RouteTableListResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'

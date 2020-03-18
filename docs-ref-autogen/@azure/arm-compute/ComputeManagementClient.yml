@@ -10,8 +10,13 @@ items:
       - '@azure/arm-compute.ComputeManagementClient.constructor'
       - '@azure/arm-compute.ComputeManagementClient.containerServices'
       - '@azure/arm-compute.ComputeManagementClient.credentials'
+      - '@azure/arm-compute.ComputeManagementClient.dedicatedHostGroups'
+      - '@azure/arm-compute.ComputeManagementClient.dedicatedHosts'
+      - '@azure/arm-compute.ComputeManagementClient.diskEncryptionSets'
       - '@azure/arm-compute.ComputeManagementClient.disks'
       - '@azure/arm-compute.ComputeManagementClient.galleries'
+      - '@azure/arm-compute.ComputeManagementClient.galleryApplications'
+      - '@azure/arm-compute.ComputeManagementClient.galleryApplicationVersions'
       - '@azure/arm-compute.ComputeManagementClient.galleryImages'
       - '@azure/arm-compute.ComputeManagementClient.galleryImageVersions'
       - '@azure/arm-compute.ComputeManagementClient.images'
@@ -19,6 +24,7 @@ items:
       - >-
         @azure/arm-compute.ComputeManagementClient.longRunningOperationRetryTimeout
       - '@azure/arm-compute.ComputeManagementClient.operations'
+      - '@azure/arm-compute.ComputeManagementClient.proximityPlacementGroups'
       - '@azure/arm-compute.ComputeManagementClient.resourceSkus'
       - '@azure/arm-compute.ComputeManagementClient.restoreLROPoller'
       - '@azure/arm-compute.ComputeManagementClient.sendLongRunningRequest'
@@ -33,12 +39,13 @@ items:
       - '@azure/arm-compute.ComputeManagementClient.virtualMachineImages'
       - '@azure/arm-compute.ComputeManagementClient.virtualMachineRunCommands'
       - '@azure/arm-compute.ComputeManagementClient.virtualMachines'
-      - '@azure/arm-compute.ComputeManagementClient.virtualMachineScaleSet'
       - >-
         @azure/arm-compute.ComputeManagementClient.virtualMachineScaleSetExtensions
       - >-
         @azure/arm-compute.ComputeManagementClient.virtualMachineScaleSetRollingUpgrades
       - '@azure/arm-compute.ComputeManagementClient.virtualMachineScaleSets'
+      - >-
+        @azure/arm-compute.ComputeManagementClient.virtualMachineScaleSetVMExtensions
       - '@azure/arm-compute.ComputeManagementClient.virtualMachineScaleSetVMs'
       - '@azure/arm-compute.ComputeManagementClient.virtualMachineSizes'
     langs:
@@ -61,6 +68,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.availabilitySets'
     name: availabilitySets
@@ -75,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.AvailabilitySets'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.beginLongRunningRequest'
     name: >-
@@ -108,6 +117,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: |-
+          The HttpLongRunningOperationResponse
+          that provides methods for interacting with the LRO.
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.constructor'
     name: >-
@@ -154,6 +166,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ContainerServices'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.credentials'
     name: credentials
@@ -168,6 +181,52 @@ items:
       return:
         type:
           - ServiceClientCredentials
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ComputeManagementClient.dedicatedHostGroups'
+    name: dedicatedHostGroups
+    fullName: dedicatedHostGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'dedicatedHostGroups: DedicatedHostGroups'
+      return:
+        type:
+          - '@azure/arm-compute.DedicatedHostGroups'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ComputeManagementClient.dedicatedHosts'
+    name: dedicatedHosts
+    fullName: dedicatedHosts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'dedicatedHosts: DedicatedHosts'
+      return:
+        type:
+          - '@azure/arm-compute.DedicatedHosts'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ComputeManagementClient.diskEncryptionSets'
+    name: diskEncryptionSets
+    fullName: diskEncryptionSets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'diskEncryptionSets: DiskEncryptionSets'
+      return:
+        type:
+          - '@azure/arm-compute.DiskEncryptionSets'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.disks'
     name: disks
@@ -182,6 +241,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Disks'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.galleries'
     name: galleries
@@ -196,6 +256,37 @@ items:
       return:
         type:
           - '@azure/arm-compute.Galleries'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ComputeManagementClient.galleryApplications'
+    name: galleryApplications
+    fullName: galleryApplications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'galleryApplications: GalleryApplications'
+      return:
+        type:
+          - '@azure/arm-compute.GalleryApplications'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ComputeManagementClient.galleryApplicationVersions'
+    name: galleryApplicationVersions
+    fullName: galleryApplicationVersions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'galleryApplicationVersions: GalleryApplicationVersions'
+      return:
+        type:
+          - '@azure/arm-compute.GalleryApplicationVersions'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.galleryImages'
     name: galleryImages
@@ -210,6 +301,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.GalleryImages'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.galleryImageVersions'
     name: galleryImageVersions
@@ -224,6 +316,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.GalleryImageVersions'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.images'
     name: images
@@ -238,6 +331,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Images'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.logAnalytics'
     name: logAnalytics
@@ -252,6 +346,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.LogAnalytics'
+        description: ''
     package: '@azure/arm-compute'
   - uid: >-
       @azure/arm-compute.ComputeManagementClient.longRunningOperationRetryTimeout
@@ -270,6 +365,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.operations'
     name: operations
@@ -284,6 +380,22 @@ items:
       return:
         type:
           - '@azure/arm-compute.Operations'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ComputeManagementClient.proximityPlacementGroups'
+    name: proximityPlacementGroups
+    fullName: proximityPlacementGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'proximityPlacementGroups: ProximityPlacementGroups'
+      return:
+        type:
+          - '@azure/arm-compute.ProximityPlacementGroups'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.resourceSkus'
     name: resourceSkus
@@ -298,6 +410,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ResourceSkus'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.restoreLROPoller'
     name: restoreLROPoller(LROPollState)
@@ -320,6 +433,7 @@ items:
       return:
         type:
           - LROPoller
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.sendLongRunningRequest'
     name: >-
@@ -349,6 +463,9 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: >-
+          The HttpOperationResponse containing the final polling request,
+          response and the responseBody.
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.sendLRORequest'
     name: 'sendLRORequest(OperationArguments, OperationSpec, RequestOptionsBase)'
@@ -382,6 +499,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: >-
+          The LROPoller object that provides methods for interacting with the
+          LRO.
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.sendOperationRequest'
     name: >-
@@ -416,6 +536,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.sendRequest'
     name: sendRequest(RequestPrepareOptions | WebResource)
@@ -434,6 +555,7 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.snapshots'
     name: snapshots
@@ -448,6 +570,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.Snapshots'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.subscriptionId'
     name: subscriptionId
@@ -462,6 +585,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.usage'
     name: usage
@@ -476,6 +600,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.UsageOperations'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.virtualMachineExtensionImages'
     name: virtualMachineExtensionImages
@@ -490,6 +615,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineExtensionImages'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.virtualMachineExtensions'
     name: virtualMachineExtensions
@@ -504,6 +630,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineExtensions'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.virtualMachineImages'
     name: virtualMachineImages
@@ -518,6 +645,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineImages'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.virtualMachineRunCommands'
     name: virtualMachineRunCommands
@@ -532,6 +660,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineRunCommands'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.virtualMachines'
     name: virtualMachines
@@ -546,20 +675,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachines'
-    package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.ComputeManagementClient.virtualMachineScaleSet'
-    name: virtualMachineScaleSet
-    fullName: virtualMachineScaleSet
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'virtualMachineScaleSet: VirtualMachineScaleSetOperations'
-      return:
-        type:
-          - '@azure/arm-compute.VirtualMachineScaleSetOperations'
+        description: ''
     package: '@azure/arm-compute'
   - uid: >-
       @azure/arm-compute.ComputeManagementClient.virtualMachineScaleSetExtensions
@@ -575,6 +691,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSetExtensions'
+        description: ''
     package: '@azure/arm-compute'
   - uid: >-
       @azure/arm-compute.ComputeManagementClient.virtualMachineScaleSetRollingUpgrades
@@ -592,6 +709,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.virtualMachineScaleSets'
     name: virtualMachineScaleSets
@@ -606,6 +724,23 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSets'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: >-
+      @azure/arm-compute.ComputeManagementClient.virtualMachineScaleSetVMExtensions
+    name: virtualMachineScaleSetVMExtensions
+    fullName: virtualMachineScaleSetVMExtensions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'virtualMachineScaleSetVMExtensions: VirtualMachineScaleSetVMExtensions'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetVMExtensions'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.virtualMachineScaleSetVMs'
     name: virtualMachineScaleSetVMs
@@ -620,6 +755,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineScaleSetVMs'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.ComputeManagementClient.virtualMachineSizes'
     name: virtualMachineSizes
@@ -634,6 +770,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.VirtualMachineSizes'
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: '@azure/arm-compute.ComputeManagementClientContext'
@@ -654,6 +791,24 @@ references:
       - name: ContainerServices
         fullName: ContainerServices
         uid: '@azure/arm-compute.ContainerServices'
+  - uid: '@azure/arm-compute.DedicatedHostGroups'
+    name: DedicatedHostGroups
+    spec.typeScript:
+      - name: DedicatedHostGroups
+        fullName: DedicatedHostGroups
+        uid: '@azure/arm-compute.DedicatedHostGroups'
+  - uid: '@azure/arm-compute.DedicatedHosts'
+    name: DedicatedHosts
+    spec.typeScript:
+      - name: DedicatedHosts
+        fullName: DedicatedHosts
+        uid: '@azure/arm-compute.DedicatedHosts'
+  - uid: '@azure/arm-compute.DiskEncryptionSets'
+    name: DiskEncryptionSets
+    spec.typeScript:
+      - name: DiskEncryptionSets
+        fullName: DiskEncryptionSets
+        uid: '@azure/arm-compute.DiskEncryptionSets'
   - uid: '@azure/arm-compute.Disks'
     name: Disks
     spec.typeScript:
@@ -666,6 +821,18 @@ references:
       - name: Galleries
         fullName: Galleries
         uid: '@azure/arm-compute.Galleries'
+  - uid: '@azure/arm-compute.GalleryApplicationVersions'
+    name: GalleryApplicationVersions
+    spec.typeScript:
+      - name: GalleryApplicationVersions
+        fullName: GalleryApplicationVersions
+        uid: '@azure/arm-compute.GalleryApplicationVersions'
+  - uid: '@azure/arm-compute.GalleryApplications'
+    name: GalleryApplications
+    spec.typeScript:
+      - name: GalleryApplications
+        fullName: GalleryApplications
+        uid: '@azure/arm-compute.GalleryApplications'
   - uid: '@azure/arm-compute.GalleryImageVersions'
     name: GalleryImageVersions
     spec.typeScript:
@@ -696,6 +863,12 @@ references:
       - name: Operations
         fullName: Operations
         uid: '@azure/arm-compute.Operations'
+  - uid: '@azure/arm-compute.ProximityPlacementGroups'
+    name: ProximityPlacementGroups
+    spec.typeScript:
+      - name: ProximityPlacementGroups
+        fullName: ProximityPlacementGroups
+        uid: '@azure/arm-compute.ProximityPlacementGroups'
   - uid: '@azure/arm-compute.ResourceSkus'
     name: ResourceSkus
     spec.typeScript:
@@ -738,12 +911,6 @@ references:
       - name: VirtualMachineRunCommands
         fullName: VirtualMachineRunCommands
         uid: '@azure/arm-compute.VirtualMachineRunCommands'
-  - uid: '@azure/arm-compute.VirtualMachineScaleSetOperations'
-    name: VirtualMachineScaleSetOperations
-    spec.typeScript:
-      - name: VirtualMachineScaleSetOperations
-        fullName: VirtualMachineScaleSetOperations
-        uid: '@azure/arm-compute.VirtualMachineScaleSetOperations'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetExtensions'
     name: VirtualMachineScaleSetExtensions
     spec.typeScript:
@@ -756,6 +923,12 @@ references:
       - name: VirtualMachineScaleSetRollingUpgrades
         fullName: VirtualMachineScaleSetRollingUpgrades
         uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMExtensions'
+    name: VirtualMachineScaleSetVMExtensions
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMExtensions
+        fullName: VirtualMachineScaleSetVMExtensions
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMExtensions'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs'
     name: VirtualMachineScaleSetVMs
     spec.typeScript:

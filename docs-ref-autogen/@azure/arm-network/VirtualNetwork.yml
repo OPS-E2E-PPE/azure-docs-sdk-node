@@ -5,6 +5,7 @@ items:
     fullName: VirtualNetwork
     children:
       - '@azure/arm-network.VirtualNetwork.addressSpace'
+      - '@azure/arm-network.VirtualNetwork.bgpCommunities'
       - '@azure/arm-network.VirtualNetwork.ddosProtectionPlan'
       - '@azure/arm-network.VirtualNetwork.dhcpOptions'
       - '@azure/arm-network.VirtualNetwork.enableDdosProtection'
@@ -42,6 +43,25 @@ items:
       return:
         type:
           - '@azure/arm-network.AddressSpace'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetwork.bgpCommunities'
+    name: bgpCommunities
+    fullName: bgpCommunities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Bgp Communities sent over ExpressRoute with each route corresponding to a
+      prefix in this VNET.
+    optional: true
+    syntax:
+      content: 'bgpCommunities?: VirtualNetworkBgpCommunities'
+      return:
+        type:
+          - '@azure/arm-network.VirtualNetworkBgpCommunities'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.ddosProtectionPlan'
     name: ddosProtectionPlan
@@ -57,6 +77,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.dhcpOptions'
     name: dhcpOptions
@@ -76,6 +97,7 @@ items:
       return:
         type:
           - '@azure/arm-network.DhcpOptions'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.enableDdosProtection'
     name: enableDdosProtection
@@ -98,6 +120,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.enableVmProtection'
     name: enableVmProtection
@@ -117,6 +140,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.etag'
     name: etag
@@ -126,14 +150,17 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets a unique read-only string that changes whenever the resource is
-      updated.
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.id'
     name: id
@@ -149,6 +176,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.location'
     name: location
@@ -164,6 +192,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.name'
     name: name
@@ -183,6 +212,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.provisioningState'
     name: provisioningState
@@ -192,16 +222,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the PublicIP resource. Possible values are:
-      'Updating', 'Deleting',
+      The provisioning state of the virtual network resource. Possible values
+      include: 'Succeeded',
 
-      and 'Failed'.
+      'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.resourceGuid'
     name: resourceGuid
@@ -210,13 +244,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The resourceGuid property of the Virtual Network resource.
+    summary: >-
+      The resourceGuid property of the Virtual Network resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'resourceGuid?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.subnets'
     name: subnets
@@ -232,6 +271,7 @@ items:
       return:
         type:
           - '@azure/arm-network.Subnet[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.tags'
     name: tags
@@ -247,6 +287,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.type'
     name: type
@@ -266,6 +307,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetwork.virtualNetworkPeerings'
     name: virtualNetworkPeerings
@@ -281,6 +323,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkPeering[]'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -295,6 +338,12 @@ references:
       - name: AddressSpace
         fullName: AddressSpace
         uid: '@azure/arm-network.AddressSpace'
+  - uid: '@azure/arm-network.VirtualNetworkBgpCommunities'
+    name: VirtualNetworkBgpCommunities
+    spec.typeScript:
+      - name: VirtualNetworkBgpCommunities
+        fullName: VirtualNetworkBgpCommunities
+        uid: '@azure/arm-network.VirtualNetworkBgpCommunities'
   - uid: '@azure/arm-network.SubResource'
     name: SubResource
     spec.typeScript:
@@ -307,6 +356,12 @@ references:
       - name: DhcpOptions
         fullName: DhcpOptions
         uid: '@azure/arm-network.DhcpOptions'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.Subnet[]'
     name: 'Subnet[]'
     spec.typeScript:

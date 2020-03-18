@@ -7,10 +7,12 @@ items:
       - '@azure/arm-recoveryservicesbackup.TargetRestoreInfo.containerId'
       - '@azure/arm-recoveryservicesbackup.TargetRestoreInfo.databaseName'
       - '@azure/arm-recoveryservicesbackup.TargetRestoreInfo.overwriteOption'
+      - >-
+        @azure/arm-recoveryservicesbackup.TargetRestoreInfo.targetDirectoryForFileRestore
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Details about target workload during restore operation.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.TargetRestoreInfo.containerId'
     name: containerId
@@ -19,13 +21,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Resource Id name of the container in which Target DataBase resides
     optional: true
     syntax:
       content: 'containerId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.TargetRestoreInfo.databaseName'
     name: databaseName
@@ -34,13 +37,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Database name InstanceName/DataBaseName for SQL or System/DbName for SAP
+      Hana
     optional: true
     syntax:
       content: 'databaseName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.TargetRestoreInfo.overwriteOption'
     name: overwriteOption
@@ -49,13 +55,35 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Can Overwrite if Target DataBase already exists. Possible values include:
+      'Invalid',
+
+      'FailOnConflict', 'Overwrite'
     optional: true
     syntax:
       content: 'overwriteOption?: OverwriteOptions'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.OverwriteOptions'
+        description: ''
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: >-
+      @azure/arm-recoveryservicesbackup.TargetRestoreInfo.targetDirectoryForFileRestore
+    name: targetDirectoryForFileRestore
+    fullName: targetDirectoryForFileRestore
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Target directory location for restore as files.
+    optional: true
+    syntax:
+      content: 'targetDirectoryForFileRestore?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.OverwriteOptions'

@@ -10,7 +10,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Common settings field for backup management
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.Settings.isCompression'
     name: isCompression
@@ -19,13 +19,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Workload compression flag. This has been added so that 'isSqlCompression'
+      will be deprecated once clients upgrade to consider this flag.
     optional: true
     syntax:
       content: 'isCompression?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.Settings.issqlcompression'
     name: issqlcompression
@@ -34,13 +37,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: SQL compression flag
     optional: true
     syntax:
       content: 'issqlcompression?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.Settings.timeZone'
     name: timeZone
@@ -49,11 +53,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      TimeZone optional input as string. For example: TimeZone = "Pacific
+      Standard Time".
     optional: true
     syntax:
       content: 'timeZone?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'

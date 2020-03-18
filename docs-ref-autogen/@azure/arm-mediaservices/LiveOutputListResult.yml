@@ -11,12 +11,13 @@ items:
       - '@azure/arm-mediaservices.LiveOutputListResult.entries'
       - '@azure/arm-mediaservices.LiveOutputListResult.every'
       - '@azure/arm-mediaservices.LiveOutputListResult.fill'
-      - '@azure/arm-mediaservices.LiveOutputListResult.filter_1'
       - '@azure/arm-mediaservices.LiveOutputListResult.filter'
+      - '@azure/arm-mediaservices.LiveOutputListResult.filter_1'
       - '@azure/arm-mediaservices.LiveOutputListResult.find'
       - '@azure/arm-mediaservices.LiveOutputListResult.find_1'
       - '@azure/arm-mediaservices.LiveOutputListResult.findIndex'
       - '@azure/arm-mediaservices.LiveOutputListResult.forEach'
+      - '@azure/arm-mediaservices.LiveOutputListResult.includes'
       - '@azure/arm-mediaservices.LiveOutputListResult.indexOf'
       - '@azure/arm-mediaservices.LiveOutputListResult.join'
       - '@azure/arm-mediaservices.LiveOutputListResult.keys'
@@ -64,6 +65,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.concat'
     name: 'concat(ConcatArray<LiveOutput>[])'
@@ -83,6 +85,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -102,6 +105,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -145,6 +149,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.entries'
     name: entries()
@@ -159,10 +164,11 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.every'
     name: >-
-      every((value: LiveOutput, index: number, array: LiveOutput[]) => boolean,
+      every((value: LiveOutput, index: number, array: LiveOutput[]) => unknown,
       any)
     children: []
     type: method
@@ -172,11 +178,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: LiveOutput, index: number, array:
-        LiveOutput[]) => boolean, thisArg?: any)
+        LiveOutput[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: LiveOutput, index: number, array: LiveOutput[]) => boolean'
+            - '(value: LiveOutput, index: number, array: LiveOutput[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.fill'
     name: 'fill(LiveOutput, undefined | number, undefined | number)'
@@ -232,41 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-mediaservices'
-  - uid: '@azure/arm-mediaservices.LiveOutputListResult.filter_1'
-    name: >-
-      filter((value: LiveOutput, index: number, array: LiveOutput[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: LiveOutput, index: number, array:
-        LiveOutput[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: LiveOutput, index: number, array: LiveOutput[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-mediaservices.LiveOutput[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.filter'
     name: >-
@@ -302,6 +275,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.LiveOutputListResult.filter_1'
+    name: >-
+      filter((value: LiveOutput, index: number, array: LiveOutput[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: LiveOutput, index: number, array:
+        LiveOutput[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: LiveOutput, index: number, array: LiveOutput[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-mediaservices.LiveOutput[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.find'
     name: >-
@@ -347,28 +357,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.find_1'
     name: >-
-      find((value: LiveOutput, index: number, obj: LiveOutput[]) => boolean,
+      find((value: LiveOutput, index: number, obj: LiveOutput[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: LiveOutput, index: number, obj:
-        LiveOutput[]) => boolean, thisArg?: any)
+        LiveOutput[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: LiveOutput, index: number, obj: LiveOutput[]) => boolean'
+            - '(value: LiveOutput, index: number, obj: LiveOutput[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -378,11 +385,12 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.findIndex'
     name: >-
       findIndex((value: LiveOutput, index: number, obj: LiveOutput[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -395,11 +403,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: LiveOutput, index: number, obj:
-        LiveOutput[]) => boolean, thisArg?: any)
+        LiveOutput[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: LiveOutput, index: number, obj: LiveOutput[]) => boolean'
+            - '(value: LiveOutput, index: number, obj: LiveOutput[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -421,6 +429,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.forEach'
     name: >-
@@ -451,6 +460,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.LiveOutputListResult.includes'
+    name: 'includes(LiveOutput, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: LiveOutput, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-mediaservices.LiveOutput'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.indexOf'
     name: 'indexOf(LiveOutput, undefined | number)'
     children: []
@@ -477,6 +516,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.join'
     name: join(undefined | string)
@@ -501,6 +541,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.keys'
     name: keys()
@@ -515,6 +556,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.lastIndexOf'
     name: 'lastIndexOf(LiveOutput, undefined | number)'
@@ -542,6 +584,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.length'
     name: length
@@ -558,6 +601,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.map'
     name: 'map((value: LiveOutput, index: number, array: LiveOutput[]) => U, any)'
@@ -590,6 +634,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.odatacount'
     name: odatacount
@@ -605,6 +650,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.odatanextLink'
     name: odatanextLink
@@ -624,6 +670,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.pop'
     name: pop()
@@ -638,6 +685,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.push'
     name: 'push(LiveOutput[])'
@@ -657,6 +705,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.reduce'
     name: >-
@@ -687,6 +736,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.reduce_1'
     name: >-
@@ -696,10 +746,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: LiveOutput, currentValue:
@@ -719,6 +766,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.reduce_2'
     name: >-
@@ -757,6 +805,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.reduceRight'
     name: >-
@@ -789,6 +838,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.reduceRight_1'
     name: >-
@@ -798,11 +848,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: LiveOutput,
@@ -822,6 +868,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.reduceRight_2'
     name: >-
@@ -861,6 +908,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.reverse'
     name: reverse()
@@ -875,6 +923,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.shift'
     name: shift()
@@ -889,6 +938,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -914,10 +964,11 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.some'
     name: >-
-      some((value: LiveOutput, index: number, array: LiveOutput[]) => boolean,
+      some((value: LiveOutput, index: number, array: LiveOutput[]) => unknown,
       any)
     children: []
     type: method
@@ -929,11 +980,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: LiveOutput, index: number, array:
-        LiveOutput[]) => boolean, thisArg?: any)
+        LiveOutput[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: LiveOutput, index: number, array: LiveOutput[]) => boolean'
+            - '(value: LiveOutput, index: number, array: LiveOutput[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -949,6 +1000,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.sort'
     name: 'sort(undefined | (a: LiveOutput, b: LiveOutput) => number)'
@@ -973,6 +1025,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.splice_1'
     name: 'splice(number, number, LiveOutput[])'
@@ -1004,6 +1057,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1032,6 +1086,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.LiveOutput[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.toLocaleString'
     name: toLocaleString()
@@ -1048,6 +1103,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.toString'
     name: toString()
@@ -1062,6 +1118,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.unshift'
     name: 'unshift(LiveOutput[])'
@@ -1081,6 +1138,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.LiveOutputListResult.values'
     name: values()
@@ -1095,6 +1153,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-mediaservices.LiveOutput>
+        description: ''
     package: '@azure/arm-mediaservices'
 references:
   - uid: Array<@azure/arm-mediaservices.LiveOutput>

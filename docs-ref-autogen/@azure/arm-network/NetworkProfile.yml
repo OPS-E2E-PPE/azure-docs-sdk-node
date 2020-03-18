@@ -38,6 +38,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ContainerNetworkInterfaceConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfile.containerNetworkInterfaces'
     name: containerNetworkInterfaces
@@ -46,13 +47,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: List of child container network interfaces.
+    summary: >-
+      List of child container network interfaces.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'containerNetworkInterfaces?: ContainerNetworkInterface[]'
       return:
         type:
           - '@azure/arm-network.ContainerNetworkInterface[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfile.etag'
     name: etag
@@ -61,13 +67,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfile.id'
     name: id
@@ -83,6 +94,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfile.location'
     name: location
@@ -98,6 +110,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfile.name'
     name: name
@@ -117,6 +130,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfile.provisioningState'
     name: provisioningState
@@ -126,16 +140,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the resource.
+      The provisioning state of the network profile resource. Possible values
+      include: 'Succeeded',
+
+      'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfile.resourceGuid'
     name: resourceGuid
@@ -145,7 +163,7 @@ items:
       - typeScript
     type: property
     summary: >-
-      The resource GUID property of the network interface resource.
+      The resource GUID property of the network profile resource.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -155,6 +173,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfile.tags'
     name: tags
@@ -170,6 +189,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkProfile.type'
     name: type
@@ -189,6 +209,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -213,3 +234,9 @@ references:
         uid: '@azure/arm-network.ContainerNetworkInterface'
       - name: '[]'
         fullName: '[]'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

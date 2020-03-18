@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.entries'
       - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.every'
       - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.fill'
-      - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.filter_1'
       - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.filter'
+      - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.filter_1'
       - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.find'
       - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.find_1'
       - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.findIndex'
       - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.forEach'
+      - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.includes'
       - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.indexOf'
       - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.join'
       - '@azure/arm-sql.TransparentDataEncryptionActivityListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.concat'
     name: 'concat(ConcatArray<TransparentDataEncryptionActivity>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.every'
     name: >-
       every((value: TransparentDataEncryptionActivity, index: number, array:
-      TransparentDataEncryptionActivity[]) => boolean, any)
+      TransparentDataEncryptionActivity[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,14 +177,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: TransparentDataEncryptionActivity,
-        index: number, array: TransparentDataEncryptionActivity[]) => boolean,
+        index: number, array: TransparentDataEncryptionActivity[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: TransparentDataEncryptionActivity, index: number, array:
-              TransparentDataEncryptionActivity[]) => boolean
+              TransparentDataEncryptionActivity[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -194,6 +200,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.fill'
     name: >-
@@ -236,44 +243,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.filter_1'
-    name: >-
-      filter((value: TransparentDataEncryptionActivity, index: number, array:
-      TransparentDataEncryptionActivity[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: TransparentDataEncryptionActivity,
-        index: number, array: TransparentDataEncryptionActivity[]) => any,
-        thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: TransparentDataEncryptionActivity, index: number, array:
-              TransparentDataEncryptionActivity[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.TransparentDataEncryptionActivity[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.filter'
     name: >-
@@ -312,6 +282,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.filter_1'
+    name: >-
+      filter((value: TransparentDataEncryptionActivity, index: number, array:
+      TransparentDataEncryptionActivity[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: TransparentDataEncryptionActivity,
+        index: number, array: TransparentDataEncryptionActivity[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: TransparentDataEncryptionActivity, index: number, array:
+              TransparentDataEncryptionActivity[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.TransparentDataEncryptionActivity[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.find'
     name: >-
@@ -358,31 +368,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.find_1'
     name: >-
       find((value: TransparentDataEncryptionActivity, index: number, obj:
-      TransparentDataEncryptionActivity[]) => boolean, any)
+      TransparentDataEncryptionActivity[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: TransparentDataEncryptionActivity,
-        index: number, obj: TransparentDataEncryptionActivity[]) => boolean,
+        index: number, obj: TransparentDataEncryptionActivity[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: TransparentDataEncryptionActivity, index: number, obj:
-              TransparentDataEncryptionActivity[]) => boolean
+              TransparentDataEncryptionActivity[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -392,11 +399,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.findIndex'
     name: >-
       findIndex((value: TransparentDataEncryptionActivity, index: number, obj:
-      TransparentDataEncryptionActivity[]) => boolean, any)
+      TransparentDataEncryptionActivity[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -409,14 +417,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: TransparentDataEncryptionActivity,
-        index: number, obj: TransparentDataEncryptionActivity[]) => boolean,
+        index: number, obj: TransparentDataEncryptionActivity[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: TransparentDataEncryptionActivity, index: number, obj:
-              TransparentDataEncryptionActivity[]) => boolean
+              TransparentDataEncryptionActivity[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -438,6 +446,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.forEach'
     name: >-
@@ -471,6 +480,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.includes'
+    name: 'includes(TransparentDataEncryptionActivity, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: TransparentDataEncryptionActivity,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.TransparentDataEncryptionActivity'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.indexOf'
     name: 'indexOf(TransparentDataEncryptionActivity, undefined | number)'
     children: []
@@ -497,6 +536,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.join'
     name: join(undefined | string)
@@ -521,6 +561,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.keys'
     name: keys()
@@ -535,6 +576,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.lastIndexOf'
     name: 'lastIndexOf(TransparentDataEncryptionActivity, undefined | number)'
@@ -562,6 +604,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.length'
     name: length
@@ -578,6 +621,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.map'
     name: >-
@@ -615,6 +659,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.pop'
     name: pop()
@@ -629,6 +674,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.push'
     name: 'push(TransparentDataEncryptionActivity[])'
@@ -648,6 +694,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.reduce'
     name: >-
@@ -684,6 +731,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.reduce_1'
     name: >-
@@ -695,10 +743,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -723,6 +768,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.reduce_2'
     name: >-
@@ -762,6 +808,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.reduceRight'
     name: >-
@@ -800,6 +847,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.reduceRight_1'
     name: >-
@@ -811,11 +859,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -840,6 +884,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.reduceRight_2'
     name: >-
@@ -881,6 +926,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.reverse'
     name: reverse()
@@ -895,6 +941,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.shift'
     name: shift()
@@ -909,6 +956,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -934,11 +982,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.some'
     name: >-
       some((value: TransparentDataEncryptionActivity, index: number, array:
-      TransparentDataEncryptionActivity[]) => boolean, any)
+      TransparentDataEncryptionActivity[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -949,14 +998,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: TransparentDataEncryptionActivity,
-        index: number, array: TransparentDataEncryptionActivity[]) => boolean,
+        index: number, array: TransparentDataEncryptionActivity[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: TransparentDataEncryptionActivity, index: number, array:
-              TransparentDataEncryptionActivity[]) => boolean
+              TransparentDataEncryptionActivity[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -972,6 +1021,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.sort'
     name: >-
@@ -1001,6 +1051,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.splice_1'
     name: 'splice(number, number, TransparentDataEncryptionActivity[])'
@@ -1034,6 +1085,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1062,6 +1114,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivity[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.toLocaleString'
     name: toLocaleString()
@@ -1078,6 +1131,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.toString'
     name: toString()
@@ -1092,6 +1146,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.unshift'
     name: 'unshift(TransparentDataEncryptionActivity[])'
@@ -1111,6 +1166,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.TransparentDataEncryptionActivityListResult.values'
     name: values()
@@ -1125,6 +1181,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.TransparentDataEncryptionActivity>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.TransparentDataEncryptionActivity>

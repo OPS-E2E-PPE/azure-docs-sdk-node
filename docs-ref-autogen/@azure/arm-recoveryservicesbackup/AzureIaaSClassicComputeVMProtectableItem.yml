@@ -19,7 +19,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: IaaS VM workload-specific backup item representing the Classic Compute VM.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMProtectableItem.backupManagementType
@@ -29,13 +29,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Type of backup management to backup an item.
     optional: true
     syntax:
       content: 'backupManagementType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMProtectableItem.friendlyName
@@ -45,13 +46,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of the backup item.
     optional: true
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMProtectableItem.protectableItemType
@@ -61,12 +63,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'protectableItemType: "Microsoft.ClassicCompute/virtualMachines"'
       return:
         type:
           - '"Microsoft.ClassicCompute/virtualMachines"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMProtectableItem.protectionState
@@ -76,13 +79,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      State of the back up item. Possible values include: 'Invalid',
+      'NotProtected', 'Protecting',
+
+      'Protected', 'ProtectionFailed'
     optional: true
     syntax:
       content: 'protectionState?: ProtectionStatus'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMProtectableItem.virtualMachineId
@@ -92,13 +100,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Fully qualified ARM ID of the virtual machine.
     optional: true
     syntax:
       content: 'virtualMachineId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMProtectableItem.workloadType
@@ -108,13 +117,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Type of workload for the backup management
     optional: true
     syntax:
       content: 'workloadType?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.ProtectionStatus'

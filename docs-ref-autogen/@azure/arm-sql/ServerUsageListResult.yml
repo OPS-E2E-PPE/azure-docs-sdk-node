@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.ServerUsageListResult.entries'
       - '@azure/arm-sql.ServerUsageListResult.every'
       - '@azure/arm-sql.ServerUsageListResult.fill'
-      - '@azure/arm-sql.ServerUsageListResult.filter_1'
       - '@azure/arm-sql.ServerUsageListResult.filter'
+      - '@azure/arm-sql.ServerUsageListResult.filter_1'
       - '@azure/arm-sql.ServerUsageListResult.find'
       - '@azure/arm-sql.ServerUsageListResult.find_1'
       - '@azure/arm-sql.ServerUsageListResult.findIndex'
       - '@azure/arm-sql.ServerUsageListResult.forEach'
+      - '@azure/arm-sql.ServerUsageListResult.includes'
       - '@azure/arm-sql.ServerUsageListResult.indexOf'
       - '@azure/arm-sql.ServerUsageListResult.join'
       - '@azure/arm-sql.ServerUsageListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.concat'
     name: 'concat(ConcatArray<ServerUsage>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.every'
     name: >-
       every((value: ServerUsage, index: number, array: ServerUsage[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -170,13 +176,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ServerUsage, index: number, array:
-        ServerUsage[]) => boolean, thisArg?: any)
+        ServerUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ServerUsage, index: number, array: ServerUsage[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.fill'
     name: 'fill(ServerUsage, undefined | number, undefined | number)'
@@ -232,41 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.ServerUsageListResult.filter_1'
-    name: >-
-      filter((value: ServerUsage, index: number, array: ServerUsage[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ServerUsage, index: number, array:
-        ServerUsage[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: ServerUsage, index: number, array: ServerUsage[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.ServerUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.filter'
     name: >-
@@ -304,6 +277,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerUsageListResult.filter_1'
+    name: >-
+      filter((value: ServerUsage, index: number, array: ServerUsage[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ServerUsage, index: number, array:
+        ServerUsage[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ServerUsage, index: number, array: ServerUsage[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.ServerUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.find'
     name: >-
@@ -349,28 +361,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.find_1'
     name: >-
-      find((value: ServerUsage, index: number, obj: ServerUsage[]) => boolean,
+      find((value: ServerUsage, index: number, obj: ServerUsage[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ServerUsage, index: number, obj:
-        ServerUsage[]) => boolean, thisArg?: any)
+        ServerUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: ServerUsage, index: number, obj: ServerUsage[]) => boolean'
+            - '(value: ServerUsage, index: number, obj: ServerUsage[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -380,11 +389,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.findIndex'
     name: >-
       findIndex((value: ServerUsage, index: number, obj: ServerUsage[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -397,11 +407,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ServerUsage, index: number, obj:
-        ServerUsage[]) => boolean, thisArg?: any)
+        ServerUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: ServerUsage, index: number, obj: ServerUsage[]) => boolean'
+            - '(value: ServerUsage, index: number, obj: ServerUsage[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -423,6 +433,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.forEach'
     name: >-
@@ -453,6 +464,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerUsageListResult.includes'
+    name: 'includes(ServerUsage, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ServerUsage, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.ServerUsage'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.indexOf'
     name: 'indexOf(ServerUsage, undefined | number)'
     children: []
@@ -479,6 +520,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.join'
     name: join(undefined | string)
@@ -503,6 +545,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.keys'
     name: keys()
@@ -517,6 +560,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.lastIndexOf'
     name: 'lastIndexOf(ServerUsage, undefined | number)'
@@ -544,6 +588,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.length'
     name: length
@@ -560,6 +605,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.map'
     name: 'map((value: ServerUsage, index: number, array: ServerUsage[]) => U, any)'
@@ -592,6 +638,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.pop'
     name: pop()
@@ -606,6 +653,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.push'
     name: 'push(ServerUsage[])'
@@ -625,6 +673,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.reduce'
     name: >-
@@ -655,6 +704,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.reduce_1'
     name: >-
@@ -664,10 +714,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ServerUsage, currentValue:
@@ -687,6 +734,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.reduce_2'
     name: >-
@@ -725,6 +773,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.reduceRight'
     name: >-
@@ -757,6 +806,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.reduceRight_1'
     name: >-
@@ -766,11 +816,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ServerUsage,
@@ -790,6 +836,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.reduceRight_2'
     name: >-
@@ -829,6 +876,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.reverse'
     name: reverse()
@@ -843,6 +891,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.shift'
     name: shift()
@@ -857,6 +906,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -882,10 +932,11 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.some'
     name: >-
-      some((value: ServerUsage, index: number, array: ServerUsage[]) => boolean,
+      some((value: ServerUsage, index: number, array: ServerUsage[]) => unknown,
       any)
     children: []
     type: method
@@ -897,13 +948,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ServerUsage, index: number, array:
-        ServerUsage[]) => boolean, thisArg?: any)
+        ServerUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ServerUsage, index: number, array: ServerUsage[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -919,6 +970,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.sort'
     name: 'sort(undefined | (a: ServerUsage, b: ServerUsage) => number)'
@@ -943,6 +995,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.splice_1'
     name: 'splice(number, number, ServerUsage[])'
@@ -976,6 +1029,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1004,6 +1058,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.toLocaleString'
     name: toLocaleString()
@@ -1020,6 +1075,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.toString'
     name: toString()
@@ -1034,6 +1090,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.unshift'
     name: 'unshift(ServerUsage[])'
@@ -1053,6 +1110,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerUsageListResult.values'
     name: values()
@@ -1067,6 +1125,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.ServerUsage>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.ServerUsage>

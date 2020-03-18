@@ -73,9 +73,6 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.Image>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageAddImageResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementImage.addImage'
     name: 'addImage(string, Models.ListManagementImageAddImageOptionalParams)'
@@ -101,6 +98,7 @@ items:
       return:
         type:
           - Promise<Models.ListManagementImageAddImageResponse>
+        description: Promise<Models.ListManagementImageAddImageResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementImage.addImage_1'
     name: 'addImage(string, ServiceCallback<Image>)'
@@ -121,9 +119,6 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.Image>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageAddImageResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.addImageFileInput_2
@@ -161,9 +156,6 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.Image>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageAddImageFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.addImageFileInput
@@ -197,6 +189,7 @@ items:
       return:
         type:
           - Promise<Models.ListManagementImageAddImageFileInputResponse>
+        description: Promise<Models.ListManagementImageAddImageFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.addImageFileInput_1
@@ -224,14 +217,11 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.Image>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageAddImageFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.addImageUrlInput_2
     name: >-
-      addImageUrlInput(string, string, BodyModel,
+      addImageUrlInput(string, string, ImageUrl,
       ListManagementImageAddImageUrlInputOptionalParams, ServiceCallback<Image>)
     children: []
     type: method
@@ -241,7 +231,7 @@ items:
     syntax:
       content: >-
         function addImageUrlInput(listId: string, contentType: string, imageUrl:
-        BodyModel, options: ListManagementImageAddImageUrlInputOptionalParams,
+        ImageUrl, options: ListManagementImageAddImageUrlInputOptionalParams,
         callback: ServiceCallback<Image>)
       parameters:
         - id: listId
@@ -254,7 +244,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: options
           type:
@@ -266,14 +256,11 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.Image>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageAddImageUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.addImageUrlInput
     name: >-
-      addImageUrlInput(string, string, BodyModel,
+      addImageUrlInput(string, string, ImageUrl,
       Models.ListManagementImageAddImageUrlInputOptionalParams)
     children: []
     type: method
@@ -283,7 +270,7 @@ items:
     syntax:
       content: >-
         function addImageUrlInput(listId: string, contentType: string, imageUrl:
-        BodyModel, options?:
+        ImageUrl, options?:
         Models.ListManagementImageAddImageUrlInputOptionalParams)
       parameters:
         - id: listId
@@ -296,7 +283,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: options
           type:
@@ -306,10 +293,11 @@ items:
       return:
         type:
           - Promise<Models.ListManagementImageAddImageUrlInputResponse>
+        description: Promise<Models.ListManagementImageAddImageUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.addImageUrlInput_1
-    name: 'addImageUrlInput(string, string, BodyModel, ServiceCallback<Image>)'
+    name: 'addImageUrlInput(string, string, ImageUrl, ServiceCallback<Image>)'
     children: []
     type: method
     langs:
@@ -318,7 +306,7 @@ items:
     syntax:
       content: >-
         function addImageUrlInput(listId: string, contentType: string, imageUrl:
-        BodyModel, callback: ServiceCallback<Image>)
+        ImageUrl, callback: ServiceCallback<Image>)
       parameters:
         - id: listId
           type:
@@ -330,16 +318,13 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.Image>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageAddImageUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.deleteAllImages
@@ -366,6 +351,7 @@ items:
       return:
         type:
           - Promise<Models.ListManagementImageDeleteAllImagesResponse>
+        description: Promise<Models.ListManagementImageDeleteAllImagesResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.deleteAllImages_2
@@ -393,9 +379,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageDeleteAllImagesResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.deleteAllImages_1
@@ -419,9 +402,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageDeleteAllImagesResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementImage.deleteImage'
     name: 'deleteImage(string, string, msRest.RequestOptionsBase)'
@@ -451,6 +431,7 @@ items:
       return:
         type:
           - Promise<Models.ListManagementImageDeleteImageResponse>
+        description: Promise<Models.ListManagementImageDeleteImageResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.deleteImage_2
@@ -482,9 +463,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageDeleteImageResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.deleteImage_1
@@ -512,9 +490,6 @@ items:
             - ServiceCallback<string>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageDeleteImageResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.getAllImageIds
@@ -541,6 +516,7 @@ items:
       return:
         type:
           - Promise<Models.ListManagementImageGetAllImageIdsResponse>
+        description: Promise<Models.ListManagementImageGetAllImageIdsResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.getAllImageIds_2
@@ -569,9 +545,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.ImageIds>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageGetAllImageIdsResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImage.getAllImageIds_1
@@ -596,9 +569,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.ImageIds>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ListManagementImageGetAllImageIdsResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ListManagementImage.constructor'
     name: ListManagementImage(ContentModeratorClientContext)
@@ -651,12 +621,12 @@ references:
         fullName: ListManagementImageAddImageFileInputOptionalParams
         uid: >-
           @azure/cognitiveservices-contentmoderator.ListManagementImageAddImageFileInputOptionalParams
-  - uid: '@azure/cognitiveservices-contentmoderator.BodyModel'
-    name: BodyModel
+  - uid: '@azure/cognitiveservices-contentmoderator.ImageUrl'
+    name: ImageUrl
     spec.typeScript:
-      - name: BodyModel
-        fullName: BodyModel
-        uid: '@azure/cognitiveservices-contentmoderator.BodyModel'
+      - name: ImageUrl
+        fullName: ImageUrl
+        uid: '@azure/cognitiveservices-contentmoderator.ImageUrl'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ListManagementImageAddImageUrlInputOptionalParams
     name: ListManagementImageAddImageUrlInputOptionalParams

@@ -13,7 +13,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: AzureResource(IaaS VM) Specific feature support request
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVMResourceFeatureSupportRequest.featureType
@@ -23,12 +23,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'featureType: "AzureVMResourceBackup"'
       return:
         type:
           - '"AzureVMResourceBackup"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVMResourceFeatureSupportRequest.vmSize
@@ -38,13 +39,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Size of the resource: VM size(A/D series etc) in case of IaasVM'
     optional: true
     syntax:
       content: 'vmSize?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureVMResourceFeatureSupportRequest.vmSku
@@ -54,11 +56,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: SKUs (Premium/Managed etc) in case of IaasVM
     optional: true
     syntax:
       content: 'vmSku?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'

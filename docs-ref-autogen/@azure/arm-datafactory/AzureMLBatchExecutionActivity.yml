@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Azure ML Batch Execution activity.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLBatchExecutionActivity.dependsOn'
     name: dependsOn
@@ -26,13 +26,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity depends on condition.
     optional: true
     syntax:
       content: 'dependsOn?: ActivityDependency[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityDependency[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLBatchExecutionActivity.description'
     name: description
@@ -41,13 +42,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLBatchExecutionActivity.globalParameters'
     name: globalParameters
@@ -56,13 +58,22 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Key,Value pairs to be passed to the Azure ML Batch Execution Service
+      endpoint. Keys must match
+
+      the names of web service parameters defined in the published Azure ML web
+      service. Values will
+
+      be passed in the GlobalParameters property of the Azure ML batch execution
+      request.
     optional: true
     syntax:
       content: 'globalParameters?: undefined | [key: string]: any'
       return:
         type:
           - 'undefined | [key: string]: any'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLBatchExecutionActivity.linkedServiceName'
     name: linkedServiceName
@@ -71,13 +82,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     optional: true
     syntax:
       content: 'linkedServiceName?: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLBatchExecutionActivity.name'
     name: name
@@ -86,12 +98,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity name.
     syntax:
       content: 'name: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLBatchExecutionActivity.policy'
     name: policy
@@ -100,13 +113,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity policy.
     optional: true
     syntax:
       content: 'policy?: ActivityPolicy'
       return:
         type:
           - '@azure/arm-datafactory.ActivityPolicy'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLBatchExecutionActivity.type'
     name: type
@@ -115,12 +129,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "AzureMLBatchExecution"'
       return:
         type:
           - '"AzureMLBatchExecution"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLBatchExecutionActivity.userProperties'
     name: userProperties
@@ -129,13 +144,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity user properties.
     optional: true
     syntax:
       content: 'userProperties?: UserProperty[]'
       return:
         type:
           - '@azure/arm-datafactory.UserProperty[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLBatchExecutionActivity.webServiceInputs'
     name: webServiceInputs
@@ -144,7 +160,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Key,Value pairs, mapping the names of Azure ML endpoint's Web Service
+      Inputs to
+
+      AzureMLWebServiceFile objects specifying the input Blob locations.. This
+      information will be
+
+      passed in the WebServiceInputs property of the Azure ML batch execution
+      request.
     optional: true
     syntax:
       content: 'webServiceInputs?: undefined | [key: string]: AzureMLWebServiceFile'
@@ -153,6 +177,7 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.AzureMLWebServiceFile
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureMLBatchExecutionActivity.webServiceOutputs'
     name: webServiceOutputs
@@ -161,7 +186,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Key,Value pairs, mapping the names of Azure ML endpoint's Web Service
+      Outputs to
+
+      AzureMLWebServiceFile objects specifying the output Blob locations. This
+      information will be
+
+      passed in the WebServiceOutputs property of the Azure ML batch execution
+      request.
     optional: true
     syntax:
       content: 'webServiceOutputs?: undefined | [key: string]: AzureMLWebServiceFile'
@@ -170,6 +203,7 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.AzureMLWebServiceFile
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.ActivityDependency[]'

@@ -95,9 +95,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.Evaluate>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationEvaluateFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModeration.evaluateFileInput
@@ -126,6 +123,7 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationEvaluateFileInputResponse>
+        description: Promise<Models.ImageModerationEvaluateFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModeration.evaluateFileInput_1
@@ -150,9 +148,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.Evaluate>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationEvaluateFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.evaluateMethod_2'
     name: >-
@@ -180,9 +175,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.Evaluate>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationEvaluateMethodResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.evaluateMethod'
     name: evaluateMethod(Models.ImageModerationEvaluateMethodOptionalParams)
@@ -204,6 +196,7 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationEvaluateMethodResponse>
+        description: Promise<Models.ImageModerationEvaluateMethodResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.evaluateMethod_1'
     name: evaluateMethod(ServiceCallback<Evaluate>)
@@ -221,14 +214,11 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.Evaluate>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationEvaluateMethodResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModeration.evaluateUrlInput_2
     name: >-
-      evaluateUrlInput(string, BodyModel,
+      evaluateUrlInput(string, ImageUrl,
       ImageModerationEvaluateUrlInputOptionalParams, ServiceCallback<Evaluate>)
     children: []
     type: method
@@ -237,7 +227,7 @@ items:
     summary: ''
     syntax:
       content: >-
-        function evaluateUrlInput(contentType: string, imageUrl: BodyModel,
+        function evaluateUrlInput(contentType: string, imageUrl: ImageUrl,
         options: ImageModerationEvaluateUrlInputOptionalParams, callback:
         ServiceCallback<Evaluate>)
       parameters:
@@ -247,7 +237,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: options
           type:
@@ -260,13 +250,10 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.Evaluate>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationEvaluateUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.evaluateUrlInput'
     name: >-
-      evaluateUrlInput(string, BodyModel,
+      evaluateUrlInput(string, ImageUrl,
       Models.ImageModerationEvaluateUrlInputOptionalParams)
     children: []
     type: method
@@ -275,7 +262,7 @@ items:
     summary: Returns probabilities of the image containing racy or adult content.
     syntax:
       content: >-
-        function evaluateUrlInput(contentType: string, imageUrl: BodyModel,
+        function evaluateUrlInput(contentType: string, imageUrl: ImageUrl,
         options?: Models.ImageModerationEvaluateUrlInputOptionalParams)
       parameters:
         - id: contentType
@@ -284,7 +271,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: options
           type:
@@ -294,10 +281,11 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationEvaluateUrlInputResponse>
+        description: Promise<Models.ImageModerationEvaluateUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModeration.evaluateUrlInput_1
-    name: 'evaluateUrlInput(string, BodyModel, ServiceCallback<Evaluate>)'
+    name: 'evaluateUrlInput(string, ImageUrl, ServiceCallback<Evaluate>)'
     children: []
     type: method
     langs:
@@ -305,7 +293,7 @@ items:
     summary: ''
     syntax:
       content: >-
-        function evaluateUrlInput(contentType: string, imageUrl: BodyModel,
+        function evaluateUrlInput(contentType: string, imageUrl: ImageUrl,
         callback: ServiceCallback<Evaluate>)
       parameters:
         - id: contentType
@@ -314,7 +302,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: callback
           type:
@@ -322,9 +310,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.Evaluate>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationEvaluateUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.findFaces_2'
     name: >-
@@ -351,9 +336,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.FoundFaces>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationFindFacesResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.findFaces'
     name: findFaces(Models.ImageModerationFindFacesOptionalParams)
@@ -375,6 +357,7 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationFindFacesResponse>
+        description: Promise<Models.ImageModerationFindFacesResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.findFaces_1'
     name: findFaces(ServiceCallback<FoundFaces>)
@@ -392,9 +375,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.FoundFaces>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationFindFacesResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModeration.findFacesFileInput_2
@@ -428,9 +408,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.FoundFaces>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationFindFacesFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModeration.findFacesFileInput
@@ -459,6 +436,7 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationFindFacesFileInputResponse>
+        description: Promise<Models.ImageModerationFindFacesFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModeration.findFacesFileInput_1
@@ -483,14 +461,11 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.FoundFaces>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationFindFacesFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModeration.findFacesUrlInput_2
     name: >-
-      findFacesUrlInput(string, BodyModel,
+      findFacesUrlInput(string, ImageUrl,
       ImageModerationFindFacesUrlInputOptionalParams,
       ServiceCallback<FoundFaces>)
     children: []
@@ -500,7 +475,7 @@ items:
     summary: ''
     syntax:
       content: >-
-        function findFacesUrlInput(contentType: string, imageUrl: BodyModel,
+        function findFacesUrlInput(contentType: string, imageUrl: ImageUrl,
         options: ImageModerationFindFacesUrlInputOptionalParams, callback:
         ServiceCallback<FoundFaces>)
       parameters:
@@ -510,7 +485,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: options
           type:
@@ -523,14 +498,11 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.FoundFaces>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationFindFacesUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModeration.findFacesUrlInput
     name: >-
-      findFacesUrlInput(string, BodyModel,
+      findFacesUrlInput(string, ImageUrl,
       Models.ImageModerationFindFacesUrlInputOptionalParams)
     children: []
     type: method
@@ -539,7 +511,7 @@ items:
     summary: Returns the list of faces found.
     syntax:
       content: >-
-        function findFacesUrlInput(contentType: string, imageUrl: BodyModel,
+        function findFacesUrlInput(contentType: string, imageUrl: ImageUrl,
         options?: Models.ImageModerationFindFacesUrlInputOptionalParams)
       parameters:
         - id: contentType
@@ -548,7 +520,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: options
           type:
@@ -558,10 +530,11 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationFindFacesUrlInputResponse>
+        description: Promise<Models.ImageModerationFindFacesUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModeration.findFacesUrlInput_1
-    name: 'findFacesUrlInput(string, BodyModel, ServiceCallback<FoundFaces>)'
+    name: 'findFacesUrlInput(string, ImageUrl, ServiceCallback<FoundFaces>)'
     children: []
     type: method
     langs:
@@ -569,7 +542,7 @@ items:
     summary: ''
     syntax:
       content: >-
-        function findFacesUrlInput(contentType: string, imageUrl: BodyModel,
+        function findFacesUrlInput(contentType: string, imageUrl: ImageUrl,
         callback: ServiceCallback<FoundFaces>)
       parameters:
         - id: contentType
@@ -578,7 +551,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: callback
           type:
@@ -586,9 +559,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.FoundFaces>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationFindFacesUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.constructor'
     name: ImageModeration(ContentModeratorClientContext)
@@ -638,9 +608,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.MatchResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationMatchFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.matchFileInput'
     name: >-
@@ -684,6 +651,7 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationMatchFileInputResponse>
+        description: Promise<Models.ImageModerationMatchFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.matchFileInput_1'
     name: 'matchFileInput(msRest.HttpRequestBody, ServiceCallback<MatchResponse>)'
@@ -707,9 +675,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.MatchResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationMatchFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.matchMethod_2'
     name: >-
@@ -736,9 +701,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.MatchResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationMatchMethodResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.matchMethod'
     name: matchMethod(Models.ImageModerationMatchMethodOptionalParams)
@@ -776,6 +738,7 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationMatchMethodResponse>
+        description: Promise<Models.ImageModerationMatchMethodResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.matchMethod_1'
     name: matchMethod(ServiceCallback<MatchResponse>)
@@ -793,13 +756,10 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.MatchResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationMatchMethodResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.matchUrlInput_2'
     name: >-
-      matchUrlInput(string, BodyModel,
+      matchUrlInput(string, ImageUrl,
       ImageModerationMatchUrlInputOptionalParams,
       ServiceCallback<MatchResponse>)
     children: []
@@ -809,8 +769,8 @@ items:
     summary: ''
     syntax:
       content: >-
-        function matchUrlInput(contentType: string, imageUrl: BodyModel,
-        options: ImageModerationMatchUrlInputOptionalParams, callback:
+        function matchUrlInput(contentType: string, imageUrl: ImageUrl, options:
+        ImageModerationMatchUrlInputOptionalParams, callback:
         ServiceCallback<MatchResponse>)
       parameters:
         - id: contentType
@@ -819,7 +779,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: options
           type:
@@ -832,13 +792,10 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.MatchResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationMatchUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.matchUrlInput'
     name: >-
-      matchUrlInput(string, BodyModel,
+      matchUrlInput(string, ImageUrl,
       Models.ImageModerationMatchUrlInputOptionalParams)
     children: []
     type: method
@@ -863,7 +820,7 @@ items:
       are reflected in the response.
     syntax:
       content: >-
-        function matchUrlInput(contentType: string, imageUrl: BodyModel,
+        function matchUrlInput(contentType: string, imageUrl: ImageUrl,
         options?: Models.ImageModerationMatchUrlInputOptionalParams)
       parameters:
         - id: contentType
@@ -872,7 +829,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: options
           type:
@@ -882,9 +839,10 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationMatchUrlInputResponse>
+        description: Promise<Models.ImageModerationMatchUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.matchUrlInput_1'
-    name: 'matchUrlInput(string, BodyModel, ServiceCallback<MatchResponse>)'
+    name: 'matchUrlInput(string, ImageUrl, ServiceCallback<MatchResponse>)'
     children: []
     type: method
     langs:
@@ -892,7 +850,7 @@ items:
     summary: ''
     syntax:
       content: >-
-        function matchUrlInput(contentType: string, imageUrl: BodyModel,
+        function matchUrlInput(contentType: string, imageUrl: ImageUrl,
         callback: ServiceCallback<MatchResponse>)
       parameters:
         - id: contentType
@@ -901,7 +859,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: callback
           type:
@@ -909,9 +867,6 @@ items:
               ServiceCallback<@azure/cognitiveservices-contentmoderator.MatchResponse>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationMatchUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.oCRFileInput_2'
     name: >-
@@ -947,9 +902,6 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.OCR>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationOCRFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.oCRFileInput'
     name: >-
@@ -986,6 +938,7 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationOCRFileInputResponse>
+        description: Promise<Models.ImageModerationOCRFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.oCRFileInput_1'
     name: 'oCRFileInput(string, msRest.HttpRequestBody, ServiceCallback<OCR>)'
@@ -1012,9 +965,6 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.OCR>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationOCRFileInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.oCRMethod_2'
     name: >-
@@ -1044,9 +994,6 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.OCR>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationOCRMethodResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.oCRMethod'
     name: 'oCRMethod(string, Models.ImageModerationOCRMethodOptionalParams)'
@@ -1076,6 +1023,7 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationOCRMethodResponse>
+        description: Promise<Models.ImageModerationOCRMethodResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.oCRMethod_1'
     name: 'oCRMethod(string, ServiceCallback<OCR>)'
@@ -1096,13 +1044,10 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.OCR>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationOCRMethodResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.oCRUrlInput_2'
     name: >-
-      oCRUrlInput(string, string, BodyModel,
+      oCRUrlInput(string, string, ImageUrl,
       ImageModerationOCRUrlInputOptionalParams, ServiceCallback<OCR>)
     children: []
     type: method
@@ -1112,7 +1057,7 @@ items:
     syntax:
       content: >-
         function oCRUrlInput(language: string, contentType: string, imageUrl:
-        BodyModel, options: ImageModerationOCRUrlInputOptionalParams, callback:
+        ImageUrl, options: ImageModerationOCRUrlInputOptionalParams, callback:
         ServiceCallback<OCR>)
       parameters:
         - id: language
@@ -1125,7 +1070,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: options
           type:
@@ -1137,13 +1082,10 @@ items:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.OCR>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationOCRUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.oCRUrlInput'
     name: >-
-      oCRUrlInput(string, string, BodyModel,
+      oCRUrlInput(string, string, ImageUrl,
       Models.ImageModerationOCRUrlInputOptionalParams)
     children: []
     type: method
@@ -1157,7 +1099,7 @@ items:
     syntax:
       content: >-
         function oCRUrlInput(language: string, contentType: string, imageUrl:
-        BodyModel, options?: Models.ImageModerationOCRUrlInputOptionalParams)
+        ImageUrl, options?: Models.ImageModerationOCRUrlInputOptionalParams)
       parameters:
         - id: language
           type:
@@ -1169,7 +1111,7 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: options
           type:
@@ -1179,9 +1121,10 @@ items:
       return:
         type:
           - Promise<Models.ImageModerationOCRUrlInputResponse>
+        description: Promise<Models.ImageModerationOCRUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
   - uid: '@azure/cognitiveservices-contentmoderator.ImageModeration.oCRUrlInput_1'
-    name: 'oCRUrlInput(string, string, BodyModel, ServiceCallback<OCR>)'
+    name: 'oCRUrlInput(string, string, ImageUrl, ServiceCallback<OCR>)'
     children: []
     type: method
     langs:
@@ -1190,7 +1133,7 @@ items:
     syntax:
       content: >-
         function oCRUrlInput(language: string, contentType: string, imageUrl:
-        BodyModel, callback: ServiceCallback<OCR>)
+        ImageUrl, callback: ServiceCallback<OCR>)
       parameters:
         - id: language
           type:
@@ -1202,16 +1145,13 @@ items:
           description: The content type.
         - id: imageUrl
           type:
-            - '@azure/cognitiveservices-contentmoderator.BodyModel'
+            - '@azure/cognitiveservices-contentmoderator.ImageUrl'
           description: The image url.
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-contentmoderator.OCR>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ImageModerationOCRUrlInputResponse>
     package: '@azure/cognitiveservices-contentmoderator'
 references:
   - uid: '@azure/cognitiveservices-contentmoderator.ContentModeratorClientContext'
@@ -1247,12 +1187,12 @@ references:
         fullName: ImageModerationEvaluateMethodOptionalParams
         uid: >-
           @azure/cognitiveservices-contentmoderator.ImageModerationEvaluateMethodOptionalParams
-  - uid: '@azure/cognitiveservices-contentmoderator.BodyModel'
-    name: BodyModel
+  - uid: '@azure/cognitiveservices-contentmoderator.ImageUrl'
+    name: ImageUrl
     spec.typeScript:
-      - name: BodyModel
-        fullName: BodyModel
-        uid: '@azure/cognitiveservices-contentmoderator.BodyModel'
+      - name: ImageUrl
+        fullName: ImageUrl
+        uid: '@azure/cognitiveservices-contentmoderator.ImageUrl'
   - uid: >-
       @azure/cognitiveservices-contentmoderator.ImageModerationEvaluateUrlInputOptionalParams
     name: ImageModerationEvaluateUrlInputOptionalParams

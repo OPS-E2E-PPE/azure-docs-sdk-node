@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cosmos.FeedResponse.activityId'
       - '@azure/cosmos.FeedResponse.continuation'
+      - '@azure/cosmos.FeedResponse.continuationToken'
       - '@azure/cosmos.FeedResponse.constructor'
       - '@azure/cosmos.FeedResponse.hasMoreResults'
       - '@azure/cosmos.FeedResponse.queryMetrics'
@@ -25,10 +26,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'activityId: string'
+      content: string activityId
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.FeedResponse.continuation'
     name: continuation
@@ -39,10 +41,26 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'continuation: string'
+      content: string continuation
       return:
         type:
           - string
+        description: ''
+    package: '@azure/cosmos'
+  - uid: '@azure/cosmos.FeedResponse.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string continuationToken
+      return:
+        type:
+          - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.FeedResponse.constructor'
     name: 'FeedResponse(TResource[], CosmosHeaders, boolean)'
@@ -78,10 +96,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'hasMoreResults: boolean'
+      content: 'public hasMoreResults: boolean'
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.FeedResponse.queryMetrics'
     name: queryMetrics
@@ -92,10 +111,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'queryMetrics: string'
+      content: string queryMetrics
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.FeedResponse.requestCharge'
     name: requestCharge
@@ -106,10 +126,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'requestCharge: number'
+      content: number requestCharge
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.FeedResponse.resources'
     name: resources
@@ -120,10 +141,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'resources: TResource[]'
+      content: 'public resources: TResource[]'
       return:
         type:
           - 'TResource[]'
+        description: ''
     package: '@azure/cosmos'
 references:
   - uid: '@azure/cosmos.CosmosHeaders'

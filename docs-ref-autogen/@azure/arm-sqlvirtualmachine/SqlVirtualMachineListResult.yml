@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.entries'
       - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.every'
       - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.fill'
-      - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.filter_1'
       - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.filter'
+      - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.filter_1'
       - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.find'
       - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.find_1'
       - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.findIndex'
       - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.forEach'
+      - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.includes'
       - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.indexOf'
       - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.join'
       - '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.concat'
     name: 'concat(ConcatArray<SqlVirtualMachine>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.every'
     name: >-
       every((value: SqlVirtualMachine, index: number, array:
-      SqlVirtualMachine[]) => boolean, any)
+      SqlVirtualMachine[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: SqlVirtualMachine, index: number,
-        array: SqlVirtualMachine[]) => boolean, thisArg?: any)
+        array: SqlVirtualMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SqlVirtualMachine, index: number, array:
-              SqlVirtualMachine[]) => boolean
+              SqlVirtualMachine[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.fill'
     name: 'fill(SqlVirtualMachine, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sqlvirtualmachine'
-  - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.filter_1'
-    name: >-
-      filter((value: SqlVirtualMachine, index: number, array:
-      SqlVirtualMachine[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: SqlVirtualMachine, index: number,
-        array: SqlVirtualMachine[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: SqlVirtualMachine, index: number, array:
-              SqlVirtualMachine[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sqlvirtualmachine'
+  - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.filter_1'
+    name: >-
+      filter((value: SqlVirtualMachine, index: number, array:
+      SqlVirtualMachine[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: SqlVirtualMachine, index: number,
+        array: SqlVirtualMachine[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: SqlVirtualMachine, index: number, array:
+              SqlVirtualMachine[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.find_1'
     name: >-
       find((value: SqlVirtualMachine, index: number, obj: SqlVirtualMachine[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SqlVirtualMachine, index: number, obj:
-        SqlVirtualMachine[]) => boolean, thisArg?: any)
+        SqlVirtualMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SqlVirtualMachine, index: number, obj:
-              SqlVirtualMachine[]) => boolean
+              SqlVirtualMachine[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine | undefined'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.findIndex'
     name: >-
       findIndex((value: SqlVirtualMachine, index: number, obj:
-      SqlVirtualMachine[]) => boolean, any)
+      SqlVirtualMachine[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: SqlVirtualMachine, index: number,
-        obj: SqlVirtualMachine[]) => boolean, thisArg?: any)
+        obj: SqlVirtualMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SqlVirtualMachine, index: number, obj:
-              SqlVirtualMachine[]) => boolean
+              SqlVirtualMachine[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sqlvirtualmachine'
+  - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.includes'
+    name: 'includes(SqlVirtualMachine, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SqlVirtualMachine, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.indexOf'
     name: 'indexOf(SqlVirtualMachine, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.lastIndexOf'
     name: 'lastIndexOf(SqlVirtualMachine, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine | undefined'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.push'
     name: 'push(SqlVirtualMachine[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.reduce'
     name: >-
@@ -689,6 +737,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.reduce_1'
     name: >-
@@ -699,10 +748,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: SqlVirtualMachine,
@@ -724,6 +770,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.reduce_2'
     name: >-
@@ -762,6 +809,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.reduceRight'
     name: >-
@@ -796,6 +844,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.reduceRight_1'
     name: >-
@@ -806,11 +855,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: SqlVirtualMachine,
@@ -832,6 +877,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.reduceRight_2'
     name: >-
@@ -871,6 +917,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.reverse'
     name: reverse()
@@ -885,6 +932,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.shift'
     name: shift()
@@ -899,6 +947,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine | undefined'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -924,11 +973,12 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.some'
     name: >-
       some((value: SqlVirtualMachine, index: number, array: SqlVirtualMachine[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -939,13 +989,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: SqlVirtualMachine, index: number,
-        array: SqlVirtualMachine[]) => boolean, thisArg?: any)
+        array: SqlVirtualMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SqlVirtualMachine, index: number, array:
-              SqlVirtualMachine[]) => boolean
+              SqlVirtualMachine[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -961,6 +1011,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.sort'
     name: 'sort(undefined | (a: SqlVirtualMachine, b: SqlVirtualMachine) => number)'
@@ -985,6 +1036,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.splice_1'
     name: 'splice(number, number, SqlVirtualMachine[])'
@@ -1018,6 +1070,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1046,6 +1099,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.SqlVirtualMachine[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.toLocaleString'
     name: toLocaleString()
@@ -1062,6 +1116,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.toString'
     name: toString()
@@ -1076,6 +1131,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.unshift'
     name: 'unshift(SqlVirtualMachine[])'
@@ -1095,6 +1151,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.SqlVirtualMachineListResult.values'
     name: values()
@@ -1109,6 +1166,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sqlvirtualmachine.SqlVirtualMachine>
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
 references:
   - uid: Array<@azure/arm-sqlvirtualmachine.SqlVirtualMachine>

@@ -12,12 +12,13 @@ items:
       - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.entries'
       - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.every'
       - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.fill'
-      - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.filter_1'
       - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.filter'
+      - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.filter_1'
       - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.find'
       - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.find_1'
       - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.findIndex'
       - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.forEach'
+      - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.includes'
       - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.indexOf'
       - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.join'
       - '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.keys'
@@ -69,6 +70,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.concat'
     name: 'concat(ConcatArray<SourceControlSyncJobStream>[])'
@@ -88,6 +90,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -107,6 +110,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -150,6 +154,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.entries'
     name: entries()
@@ -164,11 +169,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.every'
     name: >-
       every((value: SourceControlSyncJobStream, index: number, array:
-      SourceControlSyncJobStream[]) => boolean, any)
+      SourceControlSyncJobStream[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -177,13 +183,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: SourceControlSyncJobStream, index:
-        number, array: SourceControlSyncJobStream[]) => boolean, thisArg?: any)
+        number, array: SourceControlSyncJobStream[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SourceControlSyncJobStream, index: number, array:
-              SourceControlSyncJobStream[]) => boolean
+              SourceControlSyncJobStream[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -199,6 +205,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.fill'
     name: 'fill(SourceControlSyncJobStream, undefined | number, undefined | number)'
@@ -239,43 +246,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-automation'
-  - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.filter_1'
-    name: >-
-      filter((value: SourceControlSyncJobStream, index: number, array:
-      SourceControlSyncJobStream[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: SourceControlSyncJobStream, index:
-        number, array: SourceControlSyncJobStream[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: SourceControlSyncJobStream, index: number, array:
-              SourceControlSyncJobStream[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-automation.SourceControlSyncJobStream[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.filter'
     name: >-
@@ -314,6 +285,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.filter_1'
+    name: >-
+      filter((value: SourceControlSyncJobStream, index: number, array:
+      SourceControlSyncJobStream[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: SourceControlSyncJobStream, index:
+        number, array: SourceControlSyncJobStream[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: SourceControlSyncJobStream, index: number, array:
+              SourceControlSyncJobStream[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-automation.SourceControlSyncJobStream[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.find'
     name: >-
@@ -360,30 +370,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.find_1'
     name: >-
       find((value: SourceControlSyncJobStream, index: number, obj:
-      SourceControlSyncJobStream[]) => boolean, any)
+      SourceControlSyncJobStream[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SourceControlSyncJobStream, index:
-        number, obj: SourceControlSyncJobStream[]) => boolean, thisArg?: any)
+        number, obj: SourceControlSyncJobStream[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SourceControlSyncJobStream, index: number, obj:
-              SourceControlSyncJobStream[]) => boolean
+              SourceControlSyncJobStream[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -393,11 +400,12 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream | undefined'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.findIndex'
     name: >-
       findIndex((value: SourceControlSyncJobStream, index: number, obj:
-      SourceControlSyncJobStream[]) => boolean, any)
+      SourceControlSyncJobStream[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -410,13 +418,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: SourceControlSyncJobStream, index:
-        number, obj: SourceControlSyncJobStream[]) => boolean, thisArg?: any)
+        number, obj: SourceControlSyncJobStream[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SourceControlSyncJobStream, index: number, obj:
-              SourceControlSyncJobStream[]) => boolean
+              SourceControlSyncJobStream[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -438,6 +446,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.forEach'
     name: >-
@@ -470,6 +479,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.includes'
+    name: 'includes(SourceControlSyncJobStream, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SourceControlSyncJobStream, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-automation.SourceControlSyncJobStream'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.indexOf'
     name: 'indexOf(SourceControlSyncJobStream, undefined | number)'
     children: []
@@ -496,6 +535,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.join'
     name: join(undefined | string)
@@ -520,6 +560,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.keys'
     name: keys()
@@ -534,6 +575,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.lastIndexOf'
     name: 'lastIndexOf(SourceControlSyncJobStream, undefined | number)'
@@ -561,6 +603,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.length'
     name: length
@@ -577,6 +620,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.map'
     name: >-
@@ -613,6 +657,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.nextLink'
     name: nextLink
@@ -628,6 +673,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.pop'
     name: pop()
@@ -642,6 +688,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream | undefined'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.push'
     name: 'push(SourceControlSyncJobStream[])'
@@ -661,6 +708,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.reduce'
     name: >-
@@ -694,6 +742,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.reduce_1'
     name: >-
@@ -705,10 +754,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: SourceControlSyncJobStream,
@@ -730,6 +776,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.reduce_2'
     name: >-
@@ -768,6 +815,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.reduceRight'
     name: >-
@@ -803,6 +851,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream'
+        description: ''
     package: '@azure/arm-automation'
   - uid: >-
       @azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.reduceRight_1
@@ -815,11 +864,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -841,6 +886,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream'
+        description: ''
     package: '@azure/arm-automation'
   - uid: >-
       @azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.reduceRight_2
@@ -881,6 +927,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.reverse'
     name: reverse()
@@ -895,6 +942,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.shift'
     name: shift()
@@ -909,6 +957,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream | undefined'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -934,11 +983,12 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.some'
     name: >-
       some((value: SourceControlSyncJobStream, index: number, array:
-      SourceControlSyncJobStream[]) => boolean, any)
+      SourceControlSyncJobStream[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -949,13 +999,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: SourceControlSyncJobStream, index:
-        number, array: SourceControlSyncJobStream[]) => boolean, thisArg?: any)
+        number, array: SourceControlSyncJobStream[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SourceControlSyncJobStream, index: number, array:
-              SourceControlSyncJobStream[]) => boolean
+              SourceControlSyncJobStream[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -971,6 +1021,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.sort'
     name: >-
@@ -999,6 +1050,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.splice_1'
     name: 'splice(number, number, SourceControlSyncJobStream[])'
@@ -1032,6 +1084,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.splice'
     name: 'splice(number, undefined | number)'
@@ -1060,6 +1113,7 @@ items:
       return:
         type:
           - '@azure/arm-automation.SourceControlSyncJobStream[]'
+        description: ''
     package: '@azure/arm-automation'
   - uid: >-
       @azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.toLocaleString
@@ -1077,6 +1131,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.toString'
     name: toString()
@@ -1091,6 +1146,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.unshift'
     name: 'unshift(SourceControlSyncJobStream[])'
@@ -1110,6 +1166,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-automation'
   - uid: '@azure/arm-automation.SourceControlSyncJobStreamsListBySyncJob.values'
     name: values()
@@ -1124,6 +1181,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-automation.SourceControlSyncJobStream>
+        description: ''
     package: '@azure/arm-automation'
 references:
   - uid: Array<@azure/arm-automation.SourceControlSyncJobStream>

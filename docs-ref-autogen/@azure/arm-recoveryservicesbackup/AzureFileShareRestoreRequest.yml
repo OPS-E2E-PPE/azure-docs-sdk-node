@@ -21,7 +21,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: AzureFileShare Restore Request
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureFileShareRestoreRequest.copyOptions'
     name: copyOptions
@@ -30,13 +30,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Options to resolve copy conflicts. Possible values include: 'Invalid',
+      'CreateCopy', 'Skip',
+
+      'Overwrite', 'FailOnConflict'
     optional: true
     syntax:
       content: 'copyOptions?: CopyOptions'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.CopyOptions'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.AzureFileShareRestoreRequest.objectType'
     name: objectType
@@ -45,12 +50,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'objectType: "AzureFileShareRestoreRequest"'
       return:
         type:
           - '"AzureFileShareRestoreRequest"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareRestoreRequest.recoveryType
@@ -60,13 +66,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type of this recovery. Possible values include: 'Invalid',
+      'OriginalLocation',
+
+      'AlternateLocation', 'RestoreDisks', 'Offline'
     optional: true
     syntax:
       content: 'recoveryType?: RecoveryType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.RecoveryType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareRestoreRequest.restoreFileSpecs
@@ -76,13 +87,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      List of Source Files/Folders(which need to recover) and TargetFolderPath
+      details
     optional: true
     syntax:
       content: 'restoreFileSpecs?: RestoreFileSpecs[]'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.RestoreFileSpecs[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareRestoreRequest.restoreRequestType
@@ -92,13 +106,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Restore Type (FullShareRestore or ItemLevelRestore). Possible values
+      include: 'Invalid',
+
+      'FullShareRestore', 'ItemLevelRestore'
     optional: true
     syntax:
       content: 'restoreRequestType?: RestoreRequestType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.RestoreRequestType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareRestoreRequest.sourceResourceId
@@ -108,13 +127,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Source storage account ARM Id
     optional: true
     syntax:
       content: 'sourceResourceId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareRestoreRequest.targetDetails
@@ -124,13 +144,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Target File Share Details
     optional: true
     syntax:
       content: 'targetDetails?: TargetAFSRestoreInfo'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.TargetAFSRestoreInfo'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.CopyOptions'

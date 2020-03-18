@@ -15,7 +15,11 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      This activity executes inner activities until the specified boolean
+      expression results to true
+
+      or timeout is reached, whichever is earlier.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.UntilActivity.activities'
     name: activities
@@ -24,12 +28,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of activities to execute.
     syntax:
       content: 'activities: ActivityUnion[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityUnion[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.UntilActivity.dependsOn'
     name: dependsOn
@@ -38,13 +43,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity depends on condition.
     optional: true
     syntax:
       content: 'dependsOn?: ActivityDependency[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityDependency[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.UntilActivity.description'
     name: description
@@ -53,13 +59,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.UntilActivity.expression'
     name: expression
@@ -68,12 +75,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      An expression that would evaluate to Boolean. The loop will continue until
+      this expression
+
+      evaluates to true
     syntax:
       content: 'expression: Expression'
       return:
         type:
           - '@azure/arm-datafactory.Expression'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.UntilActivity.name'
     name: name
@@ -82,12 +94,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity name.
     syntax:
       content: 'name: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.UntilActivity.timeout'
     name: timeout
@@ -96,13 +109,26 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies the timeout for the activity to run. If there is no value
+      specified, it takes the
+
+      value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or
+      Expression with
+
+      resultType string), pattern:
+      ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type:
+
+      string (or Expression with resultType string), pattern:
+
+      ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
     optional: true
     syntax:
       content: 'timeout?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.UntilActivity.type'
     name: type
@@ -111,12 +137,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Until"'
       return:
         type:
           - '"Until"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.UntilActivity.userProperties'
     name: userProperties
@@ -125,13 +152,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity user properties.
     optional: true
     syntax:
       content: 'userProperties?: UserProperty[]'
       return:
         type:
           - '@azure/arm-datafactory.UserProperty[]'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.ActivityUnion[]'

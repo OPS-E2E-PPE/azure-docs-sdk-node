@@ -5,6 +5,7 @@ items:
     fullName: VirtualHub
     children:
       - '@azure/arm-network.VirtualHub.addressPrefix'
+      - '@azure/arm-network.VirtualHub.azureFirewall'
       - '@azure/arm-network.VirtualHub.etag'
       - '@azure/arm-network.VirtualHub.expressRouteGateway'
       - '@azure/arm-network.VirtualHub.id'
@@ -13,8 +14,11 @@ items:
       - '@azure/arm-network.VirtualHub.p2SVpnGateway'
       - '@azure/arm-network.VirtualHub.provisioningState'
       - '@azure/arm-network.VirtualHub.routeTable'
+      - '@azure/arm-network.VirtualHub.securityProviderName'
+      - '@azure/arm-network.VirtualHub.sku'
       - '@azure/arm-network.VirtualHub.tags'
       - '@azure/arm-network.VirtualHub.type'
+      - '@azure/arm-network.VirtualHub.virtualHubRouteTableV2s'
       - '@azure/arm-network.VirtualHub.virtualNetworkConnections'
       - '@azure/arm-network.VirtualHub.virtualWan'
       - '@azure/arm-network.VirtualHub.vpnGateway'
@@ -39,6 +43,23 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualHub.azureFirewall'
+    name: azureFirewall
+    fullName: azureFirewall
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The azureFirewall associated with this VirtualHub.
+    optional: true
+    syntax:
+      content: 'azureFirewall?: SubResource'
+      return:
+        type:
+          - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.etag'
     name: etag
@@ -48,8 +69,7 @@ items:
       - typeScript
     type: property
     summary: >-
-      Gets a unique read-only string that changes whenever the resource is
-      updated.
+      A unique read-only string that changes whenever the resource is updated.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -59,6 +79,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.expressRouteGateway'
     name: expressRouteGateway
@@ -74,6 +95,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.id'
     name: id
@@ -89,6 +111,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.location'
     name: location
@@ -104,6 +127,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.name'
     name: name
@@ -123,6 +147,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.p2SVpnGateway'
     name: p2SVpnGateway
@@ -138,6 +163,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.provisioningState'
     name: provisioningState
@@ -147,16 +173,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      The provisioning state of the resource. Possible values include:
-      'Succeeded', 'Updating',
+      The provisioning state of the virtual hub resource. Possible values
+      include: 'Succeeded',
 
-      'Deleting', 'Failed'
+      'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'provisioningState?: ProvisioningState'
       return:
         type:
           - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.routeTable'
     name: routeTable
@@ -172,6 +202,39 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualHubRouteTable'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualHub.securityProviderName'
+    name: securityProviderName
+    fullName: securityProviderName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The Security Provider name.
+    optional: true
+    syntax:
+      content: 'securityProviderName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualHub.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The sku of this VirtualHub.
+    optional: true
+    syntax:
+      content: 'sku?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.tags'
     name: tags
@@ -187,6 +250,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.type'
     name: type
@@ -206,6 +270,23 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualHub.virtualHubRouteTableV2s'
+    name: virtualHubRouteTableV2s
+    fullName: virtualHubRouteTableV2s
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of all virtual hub route table v2s associated with this VirtualHub.
+    optional: true
+    syntax:
+      content: 'virtualHubRouteTableV2s?: VirtualHubRouteTableV2[]'
+      return:
+        type:
+          - '@azure/arm-network.VirtualHubRouteTableV2[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.virtualNetworkConnections'
     name: virtualNetworkConnections
@@ -221,6 +302,7 @@ items:
       return:
         type:
           - '@azure/arm-network.HubVirtualNetworkConnection[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.virtualWan'
     name: virtualWan
@@ -236,6 +318,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualHub.vpnGateway'
     name: vpnGateway
@@ -251,6 +334,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
@@ -277,6 +361,14 @@ references:
       - name: VirtualHubRouteTable
         fullName: VirtualHubRouteTable
         uid: '@azure/arm-network.VirtualHubRouteTable'
+  - uid: '@azure/arm-network.VirtualHubRouteTableV2[]'
+    name: 'VirtualHubRouteTableV2[]'
+    spec.typeScript:
+      - name: VirtualHubRouteTableV2
+        fullName: VirtualHubRouteTableV2
+        uid: '@azure/arm-network.VirtualHubRouteTableV2'
+      - name: '[]'
+        fullName: '[]'
   - uid: '@azure/arm-network.HubVirtualNetworkConnection[]'
     name: 'HubVirtualNetworkConnection[]'
     spec.typeScript:

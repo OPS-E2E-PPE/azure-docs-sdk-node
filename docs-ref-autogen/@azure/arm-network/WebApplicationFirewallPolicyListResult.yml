@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.WebApplicationFirewallPolicyListResult.entries'
       - '@azure/arm-network.WebApplicationFirewallPolicyListResult.every'
       - '@azure/arm-network.WebApplicationFirewallPolicyListResult.fill'
-      - '@azure/arm-network.WebApplicationFirewallPolicyListResult.filter_1'
       - '@azure/arm-network.WebApplicationFirewallPolicyListResult.filter'
+      - '@azure/arm-network.WebApplicationFirewallPolicyListResult.filter_1'
       - '@azure/arm-network.WebApplicationFirewallPolicyListResult.find'
       - '@azure/arm-network.WebApplicationFirewallPolicyListResult.find_1'
       - '@azure/arm-network.WebApplicationFirewallPolicyListResult.findIndex'
       - '@azure/arm-network.WebApplicationFirewallPolicyListResult.forEach'
+      - '@azure/arm-network.WebApplicationFirewallPolicyListResult.includes'
       - '@azure/arm-network.WebApplicationFirewallPolicyListResult.indexOf'
       - '@azure/arm-network.WebApplicationFirewallPolicyListResult.join'
       - '@azure/arm-network.WebApplicationFirewallPolicyListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.concat'
     name: 'concat(ConcatArray<WebApplicationFirewallPolicy>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.every'
     name: >-
       every((value: WebApplicationFirewallPolicy, index: number, array:
-      WebApplicationFirewallPolicy[]) => boolean, any)
+      WebApplicationFirewallPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,14 +177,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: WebApplicationFirewallPolicy, index:
-        number, array: WebApplicationFirewallPolicy[]) => boolean, thisArg?:
+        number, array: WebApplicationFirewallPolicy[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: WebApplicationFirewallPolicy, index: number, array:
-              WebApplicationFirewallPolicy[]) => boolean
+              WebApplicationFirewallPolicy[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -194,6 +200,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.fill'
     name: 'fill(WebApplicationFirewallPolicy, undefined | number, undefined | number)'
@@ -234,43 +241,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.filter_1'
-    name: >-
-      filter((value: WebApplicationFirewallPolicy, index: number, array:
-      WebApplicationFirewallPolicy[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: WebApplicationFirewallPolicy, index:
-        number, array: WebApplicationFirewallPolicy[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: WebApplicationFirewallPolicy, index: number, array:
-              WebApplicationFirewallPolicy[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.WebApplicationFirewallPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.filter'
     name: >-
@@ -309,6 +280,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.filter_1'
+    name: >-
+      filter((value: WebApplicationFirewallPolicy, index: number, array:
+      WebApplicationFirewallPolicy[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: WebApplicationFirewallPolicy, index:
+        number, array: WebApplicationFirewallPolicy[]) => unknown, thisArg?:
+        any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: WebApplicationFirewallPolicy, index: number, array:
+              WebApplicationFirewallPolicy[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.WebApplicationFirewallPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.find'
     name: >-
@@ -355,30 +366,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.find_1'
     name: >-
       find((value: WebApplicationFirewallPolicy, index: number, obj:
-      WebApplicationFirewallPolicy[]) => boolean, any)
+      WebApplicationFirewallPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: WebApplicationFirewallPolicy, index:
-        number, obj: WebApplicationFirewallPolicy[]) => boolean, thisArg?: any)
+        number, obj: WebApplicationFirewallPolicy[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: WebApplicationFirewallPolicy, index: number, obj:
-              WebApplicationFirewallPolicy[]) => boolean
+              WebApplicationFirewallPolicy[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -388,11 +396,12 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.findIndex'
     name: >-
       findIndex((value: WebApplicationFirewallPolicy, index: number, obj:
-      WebApplicationFirewallPolicy[]) => boolean, any)
+      WebApplicationFirewallPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -405,14 +414,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: WebApplicationFirewallPolicy,
-        index: number, obj: WebApplicationFirewallPolicy[]) => boolean,
+        index: number, obj: WebApplicationFirewallPolicy[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: WebApplicationFirewallPolicy, index: number, obj:
-              WebApplicationFirewallPolicy[]) => boolean
+              WebApplicationFirewallPolicy[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -434,6 +443,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.forEach'
     name: >-
@@ -467,6 +477,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.includes'
+    name: 'includes(WebApplicationFirewallPolicy, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: WebApplicationFirewallPolicy,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.WebApplicationFirewallPolicy'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.indexOf'
     name: 'indexOf(WebApplicationFirewallPolicy, undefined | number)'
     children: []
@@ -493,6 +533,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.join'
     name: join(undefined | string)
@@ -517,6 +558,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.keys'
     name: keys()
@@ -531,6 +573,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.lastIndexOf'
     name: 'lastIndexOf(WebApplicationFirewallPolicy, undefined | number)'
@@ -558,6 +601,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.length'
     name: length
@@ -574,6 +618,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.map'
     name: >-
@@ -610,6 +655,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.nextLink'
     name: nextLink
@@ -630,6 +676,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.pop'
     name: pop()
@@ -644,6 +691,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.push'
     name: 'push(WebApplicationFirewallPolicy[])'
@@ -663,6 +711,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.reduce_2'
     name: >-
@@ -701,6 +750,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.reduce'
     name: >-
@@ -735,6 +785,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.reduce_1'
     name: >-
@@ -746,10 +797,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -772,6 +820,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.reduceRight_2'
     name: >-
@@ -811,6 +860,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.reduceRight'
     name: >-
@@ -846,6 +896,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.reduceRight_1'
     name: >-
@@ -857,11 +908,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -884,6 +931,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.reverse'
     name: reverse()
@@ -898,6 +946,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.shift'
     name: shift()
@@ -912,6 +961,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -937,11 +987,12 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.some'
     name: >-
       some((value: WebApplicationFirewallPolicy, index: number, array:
-      WebApplicationFirewallPolicy[]) => boolean, any)
+      WebApplicationFirewallPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -952,14 +1003,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: WebApplicationFirewallPolicy, index:
-        number, array: WebApplicationFirewallPolicy[]) => boolean, thisArg?:
+        number, array: WebApplicationFirewallPolicy[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: WebApplicationFirewallPolicy, index: number, array:
-              WebApplicationFirewallPolicy[]) => boolean
+              WebApplicationFirewallPolicy[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -975,6 +1026,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.sort'
     name: >-
@@ -1003,6 +1055,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.splice_1'
     name: 'splice(number, number, WebApplicationFirewallPolicy[])'
@@ -1036,6 +1089,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1064,6 +1118,7 @@ items:
       return:
         type:
           - '@azure/arm-network.WebApplicationFirewallPolicy[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.toLocaleString'
     name: toLocaleString()
@@ -1080,6 +1135,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.toString'
     name: toString()
@@ -1094,6 +1150,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.unshift'
     name: 'unshift(WebApplicationFirewallPolicy[])'
@@ -1113,6 +1170,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.WebApplicationFirewallPolicyListResult.values'
     name: values()
@@ -1127,6 +1185,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-network.WebApplicationFirewallPolicy>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.WebApplicationFirewallPolicy>

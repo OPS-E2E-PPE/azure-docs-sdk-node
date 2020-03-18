@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.InstanceFailoverGroupListResult.entries'
       - '@azure/arm-sql.InstanceFailoverGroupListResult.every'
       - '@azure/arm-sql.InstanceFailoverGroupListResult.fill'
-      - '@azure/arm-sql.InstanceFailoverGroupListResult.filter_1'
       - '@azure/arm-sql.InstanceFailoverGroupListResult.filter'
+      - '@azure/arm-sql.InstanceFailoverGroupListResult.filter_1'
       - '@azure/arm-sql.InstanceFailoverGroupListResult.find'
       - '@azure/arm-sql.InstanceFailoverGroupListResult.find_1'
       - '@azure/arm-sql.InstanceFailoverGroupListResult.findIndex'
       - '@azure/arm-sql.InstanceFailoverGroupListResult.forEach'
+      - '@azure/arm-sql.InstanceFailoverGroupListResult.includes'
       - '@azure/arm-sql.InstanceFailoverGroupListResult.indexOf'
       - '@azure/arm-sql.InstanceFailoverGroupListResult.join'
       - '@azure/arm-sql.InstanceFailoverGroupListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.concat'
     name: 'concat(ConcatArray<InstanceFailoverGroup>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.every'
     name: >-
       every((value: InstanceFailoverGroup, index: number, array:
-      InstanceFailoverGroup[]) => boolean, any)
+      InstanceFailoverGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: InstanceFailoverGroup, index: number,
-        array: InstanceFailoverGroup[]) => boolean, thisArg?: any)
+        array: InstanceFailoverGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: InstanceFailoverGroup, index: number, array:
-              InstanceFailoverGroup[]) => boolean
+              InstanceFailoverGroup[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.fill'
     name: 'fill(InstanceFailoverGroup, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.filter_1'
-    name: >-
-      filter((value: InstanceFailoverGroup, index: number, array:
-      InstanceFailoverGroup[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: InstanceFailoverGroup, index:
-        number, array: InstanceFailoverGroup[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: InstanceFailoverGroup, index: number, array:
-              InstanceFailoverGroup[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.InstanceFailoverGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.filter_1'
+    name: >-
+      filter((value: InstanceFailoverGroup, index: number, array:
+      InstanceFailoverGroup[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: InstanceFailoverGroup, index:
+        number, array: InstanceFailoverGroup[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: InstanceFailoverGroup, index: number, array:
+              InstanceFailoverGroup[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.InstanceFailoverGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.find_1'
     name: >-
       find((value: InstanceFailoverGroup, index: number, obj:
-      InstanceFailoverGroup[]) => boolean, any)
+      InstanceFailoverGroup[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: InstanceFailoverGroup, index: number,
-        obj: InstanceFailoverGroup[]) => boolean, thisArg?: any)
+        obj: InstanceFailoverGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: InstanceFailoverGroup, index: number, obj:
-              InstanceFailoverGroup[]) => boolean
+              InstanceFailoverGroup[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.findIndex'
     name: >-
       findIndex((value: InstanceFailoverGroup, index: number, obj:
-      InstanceFailoverGroup[]) => boolean, any)
+      InstanceFailoverGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: InstanceFailoverGroup, index:
-        number, obj: InstanceFailoverGroup[]) => boolean, thisArg?: any)
+        number, obj: InstanceFailoverGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: InstanceFailoverGroup, index: number, obj:
-              InstanceFailoverGroup[]) => boolean
+              InstanceFailoverGroup[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.includes'
+    name: 'includes(InstanceFailoverGroup, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: InstanceFailoverGroup, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.InstanceFailoverGroup'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.indexOf'
     name: 'indexOf(InstanceFailoverGroup, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.lastIndexOf'
     name: 'lastIndexOf(InstanceFailoverGroup, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.push'
     name: 'push(InstanceFailoverGroup[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.reduce'
     name: >-
@@ -690,6 +738,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.reduce_1'
     name: >-
@@ -700,10 +749,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: InstanceFailoverGroup,
@@ -725,6 +771,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.reduce_2'
     name: >-
@@ -763,6 +810,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.reduceRight'
     name: >-
@@ -797,6 +845,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.reduceRight_1'
     name: >-
@@ -807,11 +856,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: InstanceFailoverGroup,
@@ -833,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.reduceRight_2'
     name: >-
@@ -872,6 +918,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.reverse'
     name: reverse()
@@ -886,6 +933,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.shift'
     name: shift()
@@ -900,6 +948,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -925,11 +974,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.some'
     name: >-
       some((value: InstanceFailoverGroup, index: number, array:
-      InstanceFailoverGroup[]) => boolean, any)
+      InstanceFailoverGroup[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -940,13 +990,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: InstanceFailoverGroup, index: number,
-        array: InstanceFailoverGroup[]) => boolean, thisArg?: any)
+        array: InstanceFailoverGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: InstanceFailoverGroup, index: number, array:
-              InstanceFailoverGroup[]) => boolean
+              InstanceFailoverGroup[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -962,6 +1012,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.sort'
     name: >-
@@ -990,6 +1041,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.splice_1'
     name: 'splice(number, number, InstanceFailoverGroup[])'
@@ -1023,6 +1075,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1051,6 +1104,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroup[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.toLocaleString'
     name: toLocaleString()
@@ -1067,6 +1121,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.toString'
     name: toString()
@@ -1081,6 +1136,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.unshift'
     name: 'unshift(InstanceFailoverGroup[])'
@@ -1100,6 +1156,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.InstanceFailoverGroupListResult.values'
     name: values()
@@ -1114,6 +1171,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.InstanceFailoverGroup>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.InstanceFailoverGroup>

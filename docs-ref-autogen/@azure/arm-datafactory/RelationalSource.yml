@@ -4,6 +4,8 @@ items:
     name: RelationalSource
     fullName: RelationalSource
     children:
+      - '@azure/arm-datafactory.RelationalSource.additionalColumns'
+      - '@azure/arm-datafactory.RelationalSource.maxConcurrentConnections'
       - '@azure/arm-datafactory.RelationalSource.query'
       - '@azure/arm-datafactory.RelationalSource.sourceRetryCount'
       - '@azure/arm-datafactory.RelationalSource.sourceRetryWait'
@@ -11,7 +13,47 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: A copy activity source for various relational databases.
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.RelationalSource.additionalColumns'
+    name: additionalColumns
+    fullName: additionalColumns
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies the additional columns to be added to source data. Type: array
+      of objects (or
+
+      Expression with resultType array of objects).
+    optional: true
+    syntax:
+      content: 'additionalColumns?: AdditionalColumns[]'
+      return:
+        type:
+          - '@azure/arm-datafactory.AdditionalColumns[]'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.RelationalSource.maxConcurrentConnections'
+    name: maxConcurrentConnections
+    fullName: maxConcurrentConnections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The maximum concurrent connection count for the source data store. Type:
+      integer (or
+
+      Expression with resultType integer).
+    optional: true
+    syntax:
+      content: 'maxConcurrentConnections?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RelationalSource.query'
     name: query
@@ -20,13 +62,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Database query. Type: string (or Expression with resultType string).'
     optional: true
     syntax:
       content: 'query?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RelationalSource.sourceRetryCount'
     name: sourceRetryCount
@@ -35,13 +78,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Source retry count. Type: integer (or Expression with resultType integer).'
     optional: true
     syntax:
       content: 'sourceRetryCount?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RelationalSource.sourceRetryWait'
     name: sourceRetryWait
@@ -50,13 +94,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Source retry wait. Type: string (or Expression with resultType string),
+      pattern:
+
+      ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
     optional: true
     syntax:
       content: 'sourceRetryWait?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.RelationalSource.type'
     name: type
@@ -65,10 +114,20 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "RelationalSource"'
       return:
         type:
           - '"RelationalSource"'
+        description: ''
     package: '@azure/arm-datafactory'
+references:
+  - uid: '@azure/arm-datafactory.AdditionalColumns[]'
+    name: 'AdditionalColumns[]'
+    spec.typeScript:
+      - name: AdditionalColumns
+        fullName: AdditionalColumns
+        uid: '@azure/arm-datafactory.AdditionalColumns'
+      - name: '[]'
+        fullName: '[]'

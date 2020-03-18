@@ -11,12 +11,13 @@ items:
       - '@azure/arm-mysql.PerformanceTierListResult.entries'
       - '@azure/arm-mysql.PerformanceTierListResult.every'
       - '@azure/arm-mysql.PerformanceTierListResult.fill'
-      - '@azure/arm-mysql.PerformanceTierListResult.filter_1'
       - '@azure/arm-mysql.PerformanceTierListResult.filter'
+      - '@azure/arm-mysql.PerformanceTierListResult.filter_1'
       - '@azure/arm-mysql.PerformanceTierListResult.find'
       - '@azure/arm-mysql.PerformanceTierListResult.find_1'
       - '@azure/arm-mysql.PerformanceTierListResult.findIndex'
       - '@azure/arm-mysql.PerformanceTierListResult.forEach'
+      - '@azure/arm-mysql.PerformanceTierListResult.includes'
       - '@azure/arm-mysql.PerformanceTierListResult.indexOf'
       - '@azure/arm-mysql.PerformanceTierListResult.join'
       - '@azure/arm-mysql.PerformanceTierListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.concat'
     name: 'concat(ConcatArray<PerformanceTierProperties>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.every'
     name: >-
       every((value: PerformanceTierProperties, index: number, array:
-      PerformanceTierProperties[]) => boolean, any)
+      PerformanceTierProperties[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -170,13 +176,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: PerformanceTierProperties, index:
-        number, array: PerformanceTierProperties[]) => boolean, thisArg?: any)
+        number, array: PerformanceTierProperties[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: PerformanceTierProperties, index: number, array:
-              PerformanceTierProperties[]) => boolean
+              PerformanceTierProperties[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.fill'
     name: 'fill(PerformanceTierProperties, undefined | number, undefined | number)'
@@ -232,43 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-mysql'
-  - uid: '@azure/arm-mysql.PerformanceTierListResult.filter_1'
-    name: >-
-      filter((value: PerformanceTierProperties, index: number, array:
-      PerformanceTierProperties[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: PerformanceTierProperties, index:
-        number, array: PerformanceTierProperties[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: PerformanceTierProperties, index: number, array:
-              PerformanceTierProperties[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-mysql.PerformanceTierProperties[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.filter'
     name: >-
@@ -306,6 +277,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.PerformanceTierListResult.filter_1'
+    name: >-
+      filter((value: PerformanceTierProperties, index: number, array:
+      PerformanceTierProperties[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: PerformanceTierProperties, index:
+        number, array: PerformanceTierProperties[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: PerformanceTierProperties, index: number, array:
+              PerformanceTierProperties[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-mysql.PerformanceTierProperties[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.find_1'
     name: >-
       find((value: PerformanceTierProperties, index: number, obj:
-      PerformanceTierProperties[]) => boolean, any)
+      PerformanceTierProperties[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: PerformanceTierProperties, index:
-        number, obj: PerformanceTierProperties[]) => boolean, thisArg?: any)
+        number, obj: PerformanceTierProperties[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: PerformanceTierProperties, index: number, obj:
-              PerformanceTierProperties[]) => boolean
+              PerformanceTierProperties[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties | undefined'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.findIndex'
     name: >-
       findIndex((value: PerformanceTierProperties, index: number, obj:
-      PerformanceTierProperties[]) => boolean, any)
+      PerformanceTierProperties[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: PerformanceTierProperties, index:
-        number, obj: PerformanceTierProperties[]) => boolean, thisArg?: any)
+        number, obj: PerformanceTierProperties[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: PerformanceTierProperties, index: number, obj:
-              PerformanceTierProperties[]) => boolean
+              PerformanceTierProperties[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.PerformanceTierListResult.includes'
+    name: 'includes(PerformanceTierProperties, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: PerformanceTierProperties, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-mysql.PerformanceTierProperties'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.indexOf'
     name: 'indexOf(PerformanceTierProperties, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.lastIndexOf'
     name: 'lastIndexOf(PerformanceTierProperties, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.pop'
     name: pop()
@@ -619,6 +664,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties | undefined'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.push'
     name: 'push(PerformanceTierProperties[])'
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.reduce'
     name: >-
@@ -671,6 +718,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.reduce_1'
     name: >-
@@ -682,10 +730,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: PerformanceTierProperties,
@@ -707,6 +752,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.reduce_2'
     name: >-
@@ -745,6 +791,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.reduceRight'
     name: >-
@@ -780,6 +827,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.reduceRight_1'
     name: >-
@@ -791,11 +839,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -817,6 +861,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.reduceRight_2'
     name: >-
@@ -856,6 +901,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.reverse'
     name: reverse()
@@ -870,6 +916,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.shift'
     name: shift()
@@ -884,6 +931,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties | undefined'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -909,11 +957,12 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.some'
     name: >-
       some((value: PerformanceTierProperties, index: number, array:
-      PerformanceTierProperties[]) => boolean, any)
+      PerformanceTierProperties[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -924,13 +973,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: PerformanceTierProperties, index:
-        number, array: PerformanceTierProperties[]) => boolean, thisArg?: any)
+        number, array: PerformanceTierProperties[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: PerformanceTierProperties, index: number, array:
-              PerformanceTierProperties[]) => boolean
+              PerformanceTierProperties[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -946,6 +995,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.sort'
     name: >-
@@ -974,6 +1024,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.splice_1'
     name: 'splice(number, number, PerformanceTierProperties[])'
@@ -1007,6 +1058,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1035,6 +1087,7 @@ items:
       return:
         type:
           - '@azure/arm-mysql.PerformanceTierProperties[]'
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.toLocaleString'
     name: toLocaleString()
@@ -1051,6 +1104,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.toString'
     name: toString()
@@ -1065,6 +1119,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.unshift'
     name: 'unshift(PerformanceTierProperties[])'
@@ -1084,6 +1139,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.PerformanceTierListResult.values'
     name: values()
@@ -1098,6 +1154,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-mysql.PerformanceTierProperties>
+        description: ''
     package: '@azure/arm-mysql'
 references:
   - uid: Array<@azure/arm-mysql.PerformanceTierProperties>

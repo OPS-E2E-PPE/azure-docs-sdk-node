@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.SyncGroupLogListResult.entries'
       - '@azure/arm-sql.SyncGroupLogListResult.every'
       - '@azure/arm-sql.SyncGroupLogListResult.fill'
-      - '@azure/arm-sql.SyncGroupLogListResult.filter_1'
       - '@azure/arm-sql.SyncGroupLogListResult.filter'
+      - '@azure/arm-sql.SyncGroupLogListResult.filter_1'
       - '@azure/arm-sql.SyncGroupLogListResult.find'
       - '@azure/arm-sql.SyncGroupLogListResult.find_1'
       - '@azure/arm-sql.SyncGroupLogListResult.findIndex'
       - '@azure/arm-sql.SyncGroupLogListResult.forEach'
+      - '@azure/arm-sql.SyncGroupLogListResult.includes'
       - '@azure/arm-sql.SyncGroupLogListResult.indexOf'
       - '@azure/arm-sql.SyncGroupLogListResult.join'
       - '@azure/arm-sql.SyncGroupLogListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.concat'
     name: 'concat(ConcatArray<SyncGroupLogProperties>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.every'
     name: >-
       every((value: SyncGroupLogProperties, index: number, array:
-      SyncGroupLogProperties[]) => boolean, any)
+      SyncGroupLogProperties[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: SyncGroupLogProperties, index:
-        number, array: SyncGroupLogProperties[]) => boolean, thisArg?: any)
+        number, array: SyncGroupLogProperties[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SyncGroupLogProperties, index: number, array:
-              SyncGroupLogProperties[]) => boolean
+              SyncGroupLogProperties[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.fill'
     name: 'fill(SyncGroupLogProperties, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.SyncGroupLogListResult.filter_1'
-    name: >-
-      filter((value: SyncGroupLogProperties, index: number, array:
-      SyncGroupLogProperties[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: SyncGroupLogProperties, index:
-        number, array: SyncGroupLogProperties[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: SyncGroupLogProperties, index: number, array:
-              SyncGroupLogProperties[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.SyncGroupLogProperties[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncGroupLogListResult.filter_1'
+    name: >-
+      filter((value: SyncGroupLogProperties, index: number, array:
+      SyncGroupLogProperties[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: SyncGroupLogProperties, index:
+        number, array: SyncGroupLogProperties[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: SyncGroupLogProperties, index: number, array:
+              SyncGroupLogProperties[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.SyncGroupLogProperties[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.find_1'
     name: >-
       find((value: SyncGroupLogProperties, index: number, obj:
-      SyncGroupLogProperties[]) => boolean, any)
+      SyncGroupLogProperties[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SyncGroupLogProperties, index: number,
-        obj: SyncGroupLogProperties[]) => boolean, thisArg?: any)
+        obj: SyncGroupLogProperties[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SyncGroupLogProperties, index: number, obj:
-              SyncGroupLogProperties[]) => boolean
+              SyncGroupLogProperties[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.findIndex'
     name: >-
       findIndex((value: SyncGroupLogProperties, index: number, obj:
-      SyncGroupLogProperties[]) => boolean, any)
+      SyncGroupLogProperties[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: SyncGroupLogProperties, index:
-        number, obj: SyncGroupLogProperties[]) => boolean, thisArg?: any)
+        number, obj: SyncGroupLogProperties[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SyncGroupLogProperties, index: number, obj:
-              SyncGroupLogProperties[]) => boolean
+              SyncGroupLogProperties[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SyncGroupLogListResult.includes'
+    name: 'includes(SyncGroupLogProperties, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SyncGroupLogProperties, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.SyncGroupLogProperties'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.indexOf'
     name: 'indexOf(SyncGroupLogProperties, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.lastIndexOf'
     name: 'lastIndexOf(SyncGroupLogProperties, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.push'
     name: 'push(SyncGroupLogProperties[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.reduce'
     name: >-
@@ -690,6 +738,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.reduce_1'
     name: >-
@@ -701,10 +750,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: SyncGroupLogProperties,
@@ -726,6 +772,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.reduce_2'
     name: >-
@@ -764,6 +811,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.reduceRight'
     name: >-
@@ -798,6 +846,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.reduceRight_1'
     name: >-
@@ -809,11 +858,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: SyncGroupLogProperties,
@@ -835,6 +880,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.reduceRight_2'
     name: >-
@@ -874,6 +920,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.reverse'
     name: reverse()
@@ -888,6 +935,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.shift'
     name: shift()
@@ -902,6 +950,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -927,11 +976,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.some'
     name: >-
       some((value: SyncGroupLogProperties, index: number, array:
-      SyncGroupLogProperties[]) => boolean, any)
+      SyncGroupLogProperties[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -942,13 +992,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: SyncGroupLogProperties, index: number,
-        array: SyncGroupLogProperties[]) => boolean, thisArg?: any)
+        array: SyncGroupLogProperties[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SyncGroupLogProperties, index: number, array:
-              SyncGroupLogProperties[]) => boolean
+              SyncGroupLogProperties[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -964,6 +1014,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.sort'
     name: >-
@@ -992,6 +1043,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.splice_1'
     name: 'splice(number, number, SyncGroupLogProperties[])'
@@ -1025,6 +1077,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1053,6 +1106,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroupLogProperties[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.toLocaleString'
     name: toLocaleString()
@@ -1069,6 +1123,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.toString'
     name: toString()
@@ -1083,6 +1138,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.unshift'
     name: 'unshift(SyncGroupLogProperties[])'
@@ -1102,6 +1158,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SyncGroupLogListResult.values'
     name: values()
@@ -1116,6 +1173,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.SyncGroupLogProperties>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.SyncGroupLogProperties>

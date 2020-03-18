@@ -11,12 +11,13 @@ items:
       - '@azure/arm-customerinsights.RoleAssignmentListResult.entries'
       - '@azure/arm-customerinsights.RoleAssignmentListResult.every'
       - '@azure/arm-customerinsights.RoleAssignmentListResult.fill'
-      - '@azure/arm-customerinsights.RoleAssignmentListResult.filter_1'
       - '@azure/arm-customerinsights.RoleAssignmentListResult.filter'
+      - '@azure/arm-customerinsights.RoleAssignmentListResult.filter_1'
       - '@azure/arm-customerinsights.RoleAssignmentListResult.find'
       - '@azure/arm-customerinsights.RoleAssignmentListResult.find_1'
       - '@azure/arm-customerinsights.RoleAssignmentListResult.findIndex'
       - '@azure/arm-customerinsights.RoleAssignmentListResult.forEach'
+      - '@azure/arm-customerinsights.RoleAssignmentListResult.includes'
       - '@azure/arm-customerinsights.RoleAssignmentListResult.indexOf'
       - '@azure/arm-customerinsights.RoleAssignmentListResult.join'
       - '@azure/arm-customerinsights.RoleAssignmentListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.concat'
     name: 'concat(ConcatArray<RoleAssignmentResourceFormat>[])'
@@ -83,6 +85,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -102,6 +105,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -145,6 +149,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.entries'
     name: entries()
@@ -159,11 +164,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.every'
     name: >-
       every((value: RoleAssignmentResourceFormat, index: number, array:
-      RoleAssignmentResourceFormat[]) => boolean, any)
+      RoleAssignmentResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -172,14 +178,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: RoleAssignmentResourceFormat, index:
-        number, array: RoleAssignmentResourceFormat[]) => boolean, thisArg?:
+        number, array: RoleAssignmentResourceFormat[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: RoleAssignmentResourceFormat, index: number, array:
-              RoleAssignmentResourceFormat[]) => boolean
+              RoleAssignmentResourceFormat[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -195,6 +201,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.fill'
     name: 'fill(RoleAssignmentResourceFormat, undefined | number, undefined | number)'
@@ -235,43 +242,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-customerinsights'
-  - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.filter_1'
-    name: >-
-      filter((value: RoleAssignmentResourceFormat, index: number, array:
-      RoleAssignmentResourceFormat[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: RoleAssignmentResourceFormat, index:
-        number, array: RoleAssignmentResourceFormat[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: RoleAssignmentResourceFormat, index: number, array:
-              RoleAssignmentResourceFormat[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-customerinsights.RoleAssignmentResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.filter'
     name: >-
@@ -310,6 +281,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-customerinsights'
+  - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.filter_1'
+    name: >-
+      filter((value: RoleAssignmentResourceFormat, index: number, array:
+      RoleAssignmentResourceFormat[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: RoleAssignmentResourceFormat, index:
+        number, array: RoleAssignmentResourceFormat[]) => unknown, thisArg?:
+        any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: RoleAssignmentResourceFormat, index: number, array:
+              RoleAssignmentResourceFormat[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-customerinsights.RoleAssignmentResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.find'
     name: >-
@@ -356,30 +367,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.find_1'
     name: >-
       find((value: RoleAssignmentResourceFormat, index: number, obj:
-      RoleAssignmentResourceFormat[]) => boolean, any)
+      RoleAssignmentResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: RoleAssignmentResourceFormat, index:
-        number, obj: RoleAssignmentResourceFormat[]) => boolean, thisArg?: any)
+        number, obj: RoleAssignmentResourceFormat[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: RoleAssignmentResourceFormat, index: number, obj:
-              RoleAssignmentResourceFormat[]) => boolean
+              RoleAssignmentResourceFormat[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -389,11 +397,12 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.findIndex'
     name: >-
       findIndex((value: RoleAssignmentResourceFormat, index: number, obj:
-      RoleAssignmentResourceFormat[]) => boolean, any)
+      RoleAssignmentResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -406,14 +415,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: RoleAssignmentResourceFormat,
-        index: number, obj: RoleAssignmentResourceFormat[]) => boolean,
+        index: number, obj: RoleAssignmentResourceFormat[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: RoleAssignmentResourceFormat, index: number, obj:
-              RoleAssignmentResourceFormat[]) => boolean
+              RoleAssignmentResourceFormat[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -435,6 +444,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.forEach'
     name: >-
@@ -468,6 +478,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-customerinsights'
+  - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.includes'
+    name: 'includes(RoleAssignmentResourceFormat, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: RoleAssignmentResourceFormat,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-customerinsights.RoleAssignmentResourceFormat'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.indexOf'
     name: 'indexOf(RoleAssignmentResourceFormat, undefined | number)'
     children: []
@@ -494,6 +534,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.join'
     name: join(undefined | string)
@@ -518,6 +559,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.keys'
     name: keys()
@@ -532,6 +574,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.lastIndexOf'
     name: 'lastIndexOf(RoleAssignmentResourceFormat, undefined | number)'
@@ -559,6 +602,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.length'
     name: length
@@ -575,6 +619,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.map'
     name: >-
@@ -611,6 +656,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.nextLink'
     name: nextLink
@@ -626,6 +672,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.pop'
     name: pop()
@@ -640,6 +687,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.push'
     name: 'push(RoleAssignmentResourceFormat[])'
@@ -659,6 +707,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.reduce'
     name: >-
@@ -693,6 +742,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.reduce_1'
     name: >-
@@ -704,10 +754,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -730,6 +777,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.reduce_2'
     name: >-
@@ -768,6 +816,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.reduceRight'
     name: >-
@@ -803,6 +852,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.reduceRight_1'
     name: >-
@@ -814,11 +864,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -841,6 +887,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.reduceRight_2'
     name: >-
@@ -880,6 +927,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.reverse'
     name: reverse()
@@ -894,6 +942,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.shift'
     name: shift()
@@ -908,6 +957,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat | undefined'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -933,11 +983,12 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.some'
     name: >-
       some((value: RoleAssignmentResourceFormat, index: number, array:
-      RoleAssignmentResourceFormat[]) => boolean, any)
+      RoleAssignmentResourceFormat[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -948,14 +999,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: RoleAssignmentResourceFormat, index:
-        number, array: RoleAssignmentResourceFormat[]) => boolean, thisArg?:
+        number, array: RoleAssignmentResourceFormat[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: RoleAssignmentResourceFormat, index: number, array:
-              RoleAssignmentResourceFormat[]) => boolean
+              RoleAssignmentResourceFormat[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -971,6 +1022,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.sort'
     name: >-
@@ -999,6 +1051,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.splice_1'
     name: 'splice(number, number, RoleAssignmentResourceFormat[])'
@@ -1032,6 +1085,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1060,6 +1114,7 @@ items:
       return:
         type:
           - '@azure/arm-customerinsights.RoleAssignmentResourceFormat[]'
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.toLocaleString'
     name: toLocaleString()
@@ -1076,6 +1131,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.toString'
     name: toString()
@@ -1090,6 +1146,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.unshift'
     name: 'unshift(RoleAssignmentResourceFormat[])'
@@ -1109,6 +1166,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-customerinsights'
   - uid: '@azure/arm-customerinsights.RoleAssignmentListResult.values'
     name: values()
@@ -1124,6 +1182,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-customerinsights.RoleAssignmentResourceFormat>
+        description: ''
     package: '@azure/arm-customerinsights'
 references:
   - uid: Array<@azure/arm-customerinsights.RoleAssignmentResourceFormat>

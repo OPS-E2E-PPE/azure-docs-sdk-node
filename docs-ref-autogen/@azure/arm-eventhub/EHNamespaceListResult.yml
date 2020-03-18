@@ -11,12 +11,13 @@ items:
       - '@azure/arm-eventhub.EHNamespaceListResult.entries'
       - '@azure/arm-eventhub.EHNamespaceListResult.every'
       - '@azure/arm-eventhub.EHNamespaceListResult.fill'
-      - '@azure/arm-eventhub.EHNamespaceListResult.filter_1'
       - '@azure/arm-eventhub.EHNamespaceListResult.filter'
+      - '@azure/arm-eventhub.EHNamespaceListResult.filter_1'
       - '@azure/arm-eventhub.EHNamespaceListResult.find'
       - '@azure/arm-eventhub.EHNamespaceListResult.find_1'
       - '@azure/arm-eventhub.EHNamespaceListResult.findIndex'
       - '@azure/arm-eventhub.EHNamespaceListResult.forEach'
+      - '@azure/arm-eventhub.EHNamespaceListResult.includes'
       - '@azure/arm-eventhub.EHNamespaceListResult.indexOf'
       - '@azure/arm-eventhub.EHNamespaceListResult.join'
       - '@azure/arm-eventhub.EHNamespaceListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.concat'
     name: 'concat(ConcatArray<EHNamespace>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace[]'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace[]'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.every'
     name: >-
       every((value: EHNamespace, index: number, array: EHNamespace[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: EHNamespace, index: number, array:
-        EHNamespace[]) => boolean, thisArg?: any)
+        EHNamespace[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: EHNamespace, index: number, array: EHNamespace[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.fill'
     name: 'fill(EHNamespace, undefined | number, undefined | number)'
@@ -233,41 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-eventhub'
-  - uid: '@azure/arm-eventhub.EHNamespaceListResult.filter_1'
-    name: >-
-      filter((value: EHNamespace, index: number, array: EHNamespace[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: EHNamespace, index: number, array:
-        EHNamespace[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: EHNamespace, index: number, array: EHNamespace[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-eventhub.EHNamespace[]'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.filter'
     name: >-
@@ -305,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-eventhub'
+  - uid: '@azure/arm-eventhub.EHNamespaceListResult.filter_1'
+    name: >-
+      filter((value: EHNamespace, index: number, array: EHNamespace[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: EHNamespace, index: number, array:
+        EHNamespace[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: EHNamespace, index: number, array: EHNamespace[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-eventhub.EHNamespace[]'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.find'
     name: >-
@@ -350,28 +362,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.find_1'
     name: >-
-      find((value: EHNamespace, index: number, obj: EHNamespace[]) => boolean,
+      find((value: EHNamespace, index: number, obj: EHNamespace[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: EHNamespace, index: number, obj:
-        EHNamespace[]) => boolean, thisArg?: any)
+        EHNamespace[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: EHNamespace, index: number, obj: EHNamespace[]) => boolean'
+            - '(value: EHNamespace, index: number, obj: EHNamespace[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -381,11 +390,12 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace | undefined'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.findIndex'
     name: >-
       findIndex((value: EHNamespace, index: number, obj: EHNamespace[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -398,11 +408,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: EHNamespace, index: number, obj:
-        EHNamespace[]) => boolean, thisArg?: any)
+        EHNamespace[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: EHNamespace, index: number, obj: EHNamespace[]) => boolean'
+            - '(value: EHNamespace, index: number, obj: EHNamespace[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -424,6 +434,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.forEach'
     name: >-
@@ -454,6 +465,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-eventhub'
+  - uid: '@azure/arm-eventhub.EHNamespaceListResult.includes'
+    name: 'includes(EHNamespace, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: EHNamespace, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-eventhub.EHNamespace'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.indexOf'
     name: 'indexOf(EHNamespace, undefined | number)'
     children: []
@@ -480,6 +521,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.join'
     name: join(undefined | string)
@@ -504,6 +546,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.keys'
     name: keys()
@@ -518,6 +561,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.lastIndexOf'
     name: 'lastIndexOf(EHNamespace, undefined | number)'
@@ -545,6 +589,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.length'
     name: length
@@ -561,6 +606,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.map'
     name: 'map((value: EHNamespace, index: number, array: EHNamespace[]) => U, any)'
@@ -593,6 +639,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.nextLink'
     name: nextLink
@@ -610,6 +657,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.pop'
     name: pop()
@@ -624,6 +672,7 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace | undefined'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.push'
     name: 'push(EHNamespace[])'
@@ -643,6 +692,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.reduce'
     name: >-
@@ -673,6 +723,7 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.reduce_1'
     name: >-
@@ -682,10 +733,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: EHNamespace, currentValue:
@@ -705,6 +753,7 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.reduce_2'
     name: >-
@@ -743,6 +792,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.reduceRight'
     name: >-
@@ -775,6 +825,7 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.reduceRight_1'
     name: >-
@@ -784,11 +835,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: EHNamespace,
@@ -808,6 +855,7 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.reduceRight_2'
     name: >-
@@ -847,6 +895,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.reverse'
     name: reverse()
@@ -861,6 +910,7 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace[]'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.shift'
     name: shift()
@@ -875,6 +925,7 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace | undefined'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -900,10 +951,11 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace[]'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.some'
     name: >-
-      some((value: EHNamespace, index: number, array: EHNamespace[]) => boolean,
+      some((value: EHNamespace, index: number, array: EHNamespace[]) => unknown,
       any)
     children: []
     type: method
@@ -915,13 +967,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: EHNamespace, index: number, array:
-        EHNamespace[]) => boolean, thisArg?: any)
+        EHNamespace[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: EHNamespace, index: number, array: EHNamespace[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -937,6 +989,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.sort'
     name: 'sort(undefined | (a: EHNamespace, b: EHNamespace) => number)'
@@ -961,6 +1014,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.splice_1'
     name: 'splice(number, number, EHNamespace[])'
@@ -994,6 +1048,7 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace[]'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1022,6 +1077,7 @@ items:
       return:
         type:
           - '@azure/arm-eventhub.EHNamespace[]'
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.toLocaleString'
     name: toLocaleString()
@@ -1038,6 +1094,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.toString'
     name: toString()
@@ -1052,6 +1109,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.unshift'
     name: 'unshift(EHNamespace[])'
@@ -1071,6 +1129,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventhub'
   - uid: '@azure/arm-eventhub.EHNamespaceListResult.values'
     name: values()
@@ -1085,6 +1144,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-eventhub.EHNamespace>
+        description: ''
     package: '@azure/arm-eventhub'
 references:
   - uid: Array<@azure/arm-eventhub.EHNamespace>

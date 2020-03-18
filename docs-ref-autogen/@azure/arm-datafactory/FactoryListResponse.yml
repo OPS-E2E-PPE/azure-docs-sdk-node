@@ -11,12 +11,13 @@ items:
       - '@azure/arm-datafactory.FactoryListResponse.entries'
       - '@azure/arm-datafactory.FactoryListResponse.every'
       - '@azure/arm-datafactory.FactoryListResponse.fill'
-      - '@azure/arm-datafactory.FactoryListResponse.filter_1'
       - '@azure/arm-datafactory.FactoryListResponse.filter'
+      - '@azure/arm-datafactory.FactoryListResponse.filter_1'
       - '@azure/arm-datafactory.FactoryListResponse.find'
       - '@azure/arm-datafactory.FactoryListResponse.find_1'
       - '@azure/arm-datafactory.FactoryListResponse.findIndex'
       - '@azure/arm-datafactory.FactoryListResponse.forEach'
+      - '@azure/arm-datafactory.FactoryListResponse.includes'
       - '@azure/arm-datafactory.FactoryListResponse.indexOf'
       - '@azure/arm-datafactory.FactoryListResponse.join'
       - '@azure/arm-datafactory.FactoryListResponse.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.concat'
     name: 'concat(ConcatArray<Factory>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.every'
-    name: 'every((value: Factory, index: number, array: Factory[]) => boolean, any)'
+    name: 'every((value: Factory, index: number, array: Factory[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Factory, index: number, array:
-        Factory[]) => boolean, thisArg?: any)
+        Factory[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Factory, index: number, array: Factory[]) => boolean'
+            - '(value: Factory, index: number, array: Factory[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.fill'
     name: 'fill(Factory, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.FactoryListResponse.filter_1'
-    name: 'filter((value: Factory, index: number, array: Factory[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Factory, index: number, array:
-        Factory[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Factory, index: number, array: Factory[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-datafactory.Factory[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.filter'
     name: 'filter((value: Factory, index: number, array: Factory[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.FactoryListResponse.filter_1'
+    name: 'filter((value: Factory, index: number, array: Factory[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Factory, index: number, array:
+        Factory[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Factory, index: number, array: Factory[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-datafactory.Factory[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.find'
     name: >-
@@ -340,26 +350,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.find_1'
-    name: 'find((value: Factory, index: number, obj: Factory[]) => boolean, any)'
+    name: 'find((value: Factory, index: number, obj: Factory[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Factory, index: number, obj: Factory[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Factory, index: number, obj: Factory[]) => boolean'
+            - '(value: Factory, index: number, obj: Factory[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -369,9 +376,10 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory | undefined'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.findIndex'
-    name: 'findIndex((value: Factory, index: number, obj: Factory[]) => boolean, any)'
+    name: 'findIndex((value: Factory, index: number, obj: Factory[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -384,11 +392,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Factory, index: number, obj:
-        Factory[]) => boolean, thisArg?: any)
+        Factory[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Factory, index: number, obj: Factory[]) => boolean'
+            - '(value: Factory, index: number, obj: Factory[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -410,6 +418,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.forEach'
     name: 'forEach((value: Factory, index: number, array: Factory[]) => void, any)'
@@ -438,6 +447,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.FactoryListResponse.includes'
+    name: 'includes(Factory, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Factory, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-datafactory.Factory'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.indexOf'
     name: 'indexOf(Factory, undefined | number)'
     children: []
@@ -462,6 +501,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.join'
     name: join(undefined | string)
@@ -486,6 +526,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.keys'
     name: keys()
@@ -500,6 +541,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.lastIndexOf'
     name: 'lastIndexOf(Factory, undefined | number)'
@@ -527,6 +569,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.length'
     name: length
@@ -543,6 +586,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.map'
     name: 'map((value: Factory, index: number, array: Factory[]) => U, any)'
@@ -575,6 +619,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.nextLink'
     name: nextLink
@@ -583,13 +628,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'The link to the next page of results, if any remaining results exist.'
     optional: true
     syntax:
       content: 'nextLink?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.pop'
     name: pop()
@@ -604,6 +650,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory | undefined'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.push'
     name: 'push(Factory[])'
@@ -623,6 +670,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.reduce'
     name: >-
@@ -653,6 +701,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.reduce_1'
     name: >-
@@ -662,10 +711,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Factory, currentValue:
@@ -685,6 +731,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.reduce_2'
     name: >-
@@ -722,6 +769,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.reduceRight'
     name: >-
@@ -753,6 +801,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.reduceRight_1'
     name: >-
@@ -762,11 +811,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Factory, currentValue:
@@ -786,6 +831,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.reduceRight_2'
     name: >-
@@ -824,6 +870,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.reverse'
     name: reverse()
@@ -838,6 +885,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.shift'
     name: shift()
@@ -852,6 +900,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory | undefined'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -877,9 +926,10 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.some'
-    name: 'some((value: Factory, index: number, array: Factory[]) => boolean, any)'
+    name: 'some((value: Factory, index: number, array: Factory[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -890,11 +940,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Factory, index: number, array:
-        Factory[]) => boolean, thisArg?: any)
+        Factory[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Factory, index: number, array: Factory[]) => boolean'
+            - '(value: Factory, index: number, array: Factory[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -910,6 +960,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.sort'
     name: 'sort(undefined | (a: Factory, b: Factory) => number)'
@@ -934,6 +985,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.splice_1'
     name: 'splice(number, number, Factory[])'
@@ -965,6 +1017,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.splice'
     name: 'splice(number, undefined | number)'
@@ -993,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/arm-datafactory.Factory[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.toLocaleString'
     name: toLocaleString()
@@ -1009,6 +1063,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.toString'
     name: toString()
@@ -1023,6 +1078,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.unshift'
     name: 'unshift(Factory[])'
@@ -1042,6 +1098,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FactoryListResponse.values'
     name: values()
@@ -1056,6 +1113,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-datafactory.Factory>
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: Array<@azure/arm-datafactory.Factory>

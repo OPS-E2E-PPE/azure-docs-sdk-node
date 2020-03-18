@@ -11,12 +11,13 @@ items:
       - '@azure/arm-devtestlabs.LabVirtualMachineList.entries'
       - '@azure/arm-devtestlabs.LabVirtualMachineList.every'
       - '@azure/arm-devtestlabs.LabVirtualMachineList.fill'
-      - '@azure/arm-devtestlabs.LabVirtualMachineList.filter_1'
       - '@azure/arm-devtestlabs.LabVirtualMachineList.filter'
+      - '@azure/arm-devtestlabs.LabVirtualMachineList.filter_1'
       - '@azure/arm-devtestlabs.LabVirtualMachineList.find'
       - '@azure/arm-devtestlabs.LabVirtualMachineList.find_1'
       - '@azure/arm-devtestlabs.LabVirtualMachineList.findIndex'
       - '@azure/arm-devtestlabs.LabVirtualMachineList.forEach'
+      - '@azure/arm-devtestlabs.LabVirtualMachineList.includes'
       - '@azure/arm-devtestlabs.LabVirtualMachineList.indexOf'
       - '@azure/arm-devtestlabs.LabVirtualMachineList.join'
       - '@azure/arm-devtestlabs.LabVirtualMachineList.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.concat'
     name: 'concat(ConcatArray<LabVirtualMachine>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.every'
     name: >-
       every((value: LabVirtualMachine, index: number, array:
-      LabVirtualMachine[]) => boolean, any)
+      LabVirtualMachine[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: LabVirtualMachine, index: number,
-        array: LabVirtualMachine[]) => boolean, thisArg?: any)
+        array: LabVirtualMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: LabVirtualMachine, index: number, array:
-              LabVirtualMachine[]) => boolean
+              LabVirtualMachine[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.fill'
     name: 'fill(LabVirtualMachine, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-devtestlabs'
-  - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.filter_1'
-    name: >-
-      filter((value: LabVirtualMachine, index: number, array:
-      LabVirtualMachine[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: LabVirtualMachine, index: number,
-        array: LabVirtualMachine[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: LabVirtualMachine, index: number, array:
-              LabVirtualMachine[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-devtestlabs.LabVirtualMachine[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-devtestlabs'
+  - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.filter_1'
+    name: >-
+      filter((value: LabVirtualMachine, index: number, array:
+      LabVirtualMachine[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: LabVirtualMachine, index: number,
+        array: LabVirtualMachine[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: LabVirtualMachine, index: number, array:
+              LabVirtualMachine[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-devtestlabs.LabVirtualMachine[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.find_1'
     name: >-
       find((value: LabVirtualMachine, index: number, obj: LabVirtualMachine[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: LabVirtualMachine, index: number, obj:
-        LabVirtualMachine[]) => boolean, thisArg?: any)
+        LabVirtualMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: LabVirtualMachine, index: number, obj:
-              LabVirtualMachine[]) => boolean
+              LabVirtualMachine[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine | undefined'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.findIndex'
     name: >-
       findIndex((value: LabVirtualMachine, index: number, obj:
-      LabVirtualMachine[]) => boolean, any)
+      LabVirtualMachine[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: LabVirtualMachine, index: number,
-        obj: LabVirtualMachine[]) => boolean, thisArg?: any)
+        obj: LabVirtualMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: LabVirtualMachine, index: number, obj:
-              LabVirtualMachine[]) => boolean
+              LabVirtualMachine[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-devtestlabs'
+  - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.includes'
+    name: 'includes(LabVirtualMachine, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: LabVirtualMachine, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-devtestlabs.LabVirtualMachine'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.indexOf'
     name: 'indexOf(LabVirtualMachine, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.lastIndexOf'
     name: 'lastIndexOf(LabVirtualMachine, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine | undefined'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.push'
     name: 'push(LabVirtualMachine[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.reduce'
     name: >-
@@ -685,6 +733,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.reduce_1'
     name: >-
@@ -695,10 +744,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: LabVirtualMachine,
@@ -720,6 +766,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.reduce_2'
     name: >-
@@ -758,6 +805,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.reduceRight'
     name: >-
@@ -792,6 +840,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.reduceRight_1'
     name: >-
@@ -802,11 +851,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: LabVirtualMachine,
@@ -828,6 +873,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.reduceRight_2'
     name: >-
@@ -867,6 +913,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.reverse'
     name: reverse()
@@ -881,6 +928,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.shift'
     name: shift()
@@ -895,6 +943,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine | undefined'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -920,11 +969,12 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.some'
     name: >-
       some((value: LabVirtualMachine, index: number, array: LabVirtualMachine[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -935,13 +985,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: LabVirtualMachine, index: number,
-        array: LabVirtualMachine[]) => boolean, thisArg?: any)
+        array: LabVirtualMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: LabVirtualMachine, index: number, array:
-              LabVirtualMachine[]) => boolean
+              LabVirtualMachine[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -957,6 +1007,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.sort'
     name: 'sort(undefined | (a: LabVirtualMachine, b: LabVirtualMachine) => number)'
@@ -981,6 +1032,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.splice_1'
     name: 'splice(number, number, LabVirtualMachine[])'
@@ -1014,6 +1066,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.splice'
     name: 'splice(number, undefined | number)'
@@ -1042,6 +1095,7 @@ items:
       return:
         type:
           - '@azure/arm-devtestlabs.LabVirtualMachine[]'
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.toLocaleString'
     name: toLocaleString()
@@ -1058,6 +1112,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.toString'
     name: toString()
@@ -1072,6 +1127,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.unshift'
     name: 'unshift(LabVirtualMachine[])'
@@ -1091,6 +1147,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-devtestlabs'
   - uid: '@azure/arm-devtestlabs.LabVirtualMachineList.values'
     name: values()
@@ -1105,6 +1162,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-devtestlabs.LabVirtualMachine>
+        description: ''
     package: '@azure/arm-devtestlabs'
 references:
   - uid: Array<@azure/arm-devtestlabs.LabVirtualMachine>

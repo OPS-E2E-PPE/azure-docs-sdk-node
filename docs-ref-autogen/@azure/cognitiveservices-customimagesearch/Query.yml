@@ -12,7 +12,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Defines a search query.
     package: '@azure/cognitiveservices-customimagesearch'
   - uid: '@azure/cognitiveservices-customimagesearch.Query.displayText'
     name: displayText
@@ -21,13 +21,24 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The display version of the query term. This version of the query term may
+      contain special
+
+      characters that highlight the search term found in the query string. The
+      string contains the
+
+      highlighting characters only if the query enabled hit highlighting
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'displayText?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-customimagesearch'
   - uid: '@azure/cognitiveservices-customimagesearch.Query.searchLink'
     name: searchLink
@@ -36,13 +47,27 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The URL that you use to get the results of the related search. Before
+      using the URL, you must
+
+      append query parameters as appropriate and include the
+      Ocp-Apim-Subscription-Key header. Use
+
+      this URL if you're displaying the results in your own user interface.
+      Otherwise, use the
+
+      webSearchUrl URL.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'searchLink?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-customimagesearch'
   - uid: '@azure/cognitiveservices-customimagesearch.Query.text'
     name: text
@@ -51,12 +76,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The query string. Use this string as the query term in a new search
+      request.
     syntax:
       content: 'text: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/cognitiveservices-customimagesearch'
   - uid: '@azure/cognitiveservices-customimagesearch.Query.thumbnail'
     name: thumbnail
@@ -65,13 +93,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The URL to a thumbnail of a related image.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'thumbnail?: ImageObject'
       return:
         type:
           - '@azure/cognitiveservices-customimagesearch.ImageObject'
+        description: ''
     package: '@azure/cognitiveservices-customimagesearch'
   - uid: '@azure/cognitiveservices-customimagesearch.Query.webSearchUrl'
     name: webSearchUrl
@@ -80,13 +113,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The URL that takes the user to the Bing search results page for the
+      query.Only related search
+
+      results include this field.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'webSearchUrl?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-customimagesearch'
 references:
   - uid: '@azure/cognitiveservices-customimagesearch.ImageObject'

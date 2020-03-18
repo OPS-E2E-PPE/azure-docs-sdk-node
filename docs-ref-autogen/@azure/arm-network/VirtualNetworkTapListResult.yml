@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.VirtualNetworkTapListResult.entries'
       - '@azure/arm-network.VirtualNetworkTapListResult.every'
       - '@azure/arm-network.VirtualNetworkTapListResult.fill'
-      - '@azure/arm-network.VirtualNetworkTapListResult.filter_1'
       - '@azure/arm-network.VirtualNetworkTapListResult.filter'
+      - '@azure/arm-network.VirtualNetworkTapListResult.filter_1'
       - '@azure/arm-network.VirtualNetworkTapListResult.find'
       - '@azure/arm-network.VirtualNetworkTapListResult.find_1'
       - '@azure/arm-network.VirtualNetworkTapListResult.findIndex'
       - '@azure/arm-network.VirtualNetworkTapListResult.forEach'
+      - '@azure/arm-network.VirtualNetworkTapListResult.includes'
       - '@azure/arm-network.VirtualNetworkTapListResult.indexOf'
       - '@azure/arm-network.VirtualNetworkTapListResult.join'
       - '@azure/arm-network.VirtualNetworkTapListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.concat'
     name: 'concat(ConcatArray<VirtualNetworkTap>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.every'
     name: >-
       every((value: VirtualNetworkTap, index: number, array:
-      VirtualNetworkTap[]) => boolean, any)
+      VirtualNetworkTap[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: VirtualNetworkTap, index: number,
-        array: VirtualNetworkTap[]) => boolean, thisArg?: any)
+        array: VirtualNetworkTap[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VirtualNetworkTap, index: number, array:
-              VirtualNetworkTap[]) => boolean
+              VirtualNetworkTap[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.fill'
     name: 'fill(VirtualNetworkTap, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.VirtualNetworkTapListResult.filter_1'
-    name: >-
-      filter((value: VirtualNetworkTap, index: number, array:
-      VirtualNetworkTap[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: VirtualNetworkTap, index: number,
-        array: VirtualNetworkTap[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: VirtualNetworkTap, index: number, array:
-              VirtualNetworkTap[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.VirtualNetworkTap[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkTapListResult.filter_1'
+    name: >-
+      filter((value: VirtualNetworkTap, index: number, array:
+      VirtualNetworkTap[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: VirtualNetworkTap, index: number,
+        array: VirtualNetworkTap[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: VirtualNetworkTap, index: number, array:
+              VirtualNetworkTap[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.VirtualNetworkTap[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.find_1'
     name: >-
       find((value: VirtualNetworkTap, index: number, obj: VirtualNetworkTap[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: VirtualNetworkTap, index: number, obj:
-        VirtualNetworkTap[]) => boolean, thisArg?: any)
+        VirtualNetworkTap[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VirtualNetworkTap, index: number, obj:
-              VirtualNetworkTap[]) => boolean
+              VirtualNetworkTap[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.findIndex'
     name: >-
       findIndex((value: VirtualNetworkTap, index: number, obj:
-      VirtualNetworkTap[]) => boolean, any)
+      VirtualNetworkTap[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: VirtualNetworkTap, index: number,
-        obj: VirtualNetworkTap[]) => boolean, thisArg?: any)
+        obj: VirtualNetworkTap[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: VirtualNetworkTap, index: number, obj:
-              VirtualNetworkTap[]) => boolean
+              VirtualNetworkTap[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkTapListResult.includes'
+    name: 'includes(VirtualNetworkTap, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: VirtualNetworkTap, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.VirtualNetworkTap'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.indexOf'
     name: 'indexOf(VirtualNetworkTap, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.lastIndexOf'
     name: 'lastIndexOf(VirtualNetworkTap, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.push'
     name: 'push(VirtualNetworkTap[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.reduce_2'
     name: >-
@@ -691,6 +739,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.reduce'
     name: >-
@@ -723,6 +772,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.reduce_1'
     name: >-
@@ -733,10 +783,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: VirtualNetworkTap,
@@ -758,6 +805,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.reduceRight_2'
     name: >-
@@ -797,6 +845,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.reduceRight'
     name: >-
@@ -831,6 +880,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.reduceRight_1'
     name: >-
@@ -841,11 +891,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: VirtualNetworkTap,
@@ -867,6 +913,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.reverse'
     name: reverse()
@@ -881,6 +928,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.shift'
     name: shift()
@@ -895,6 +943,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -920,11 +969,12 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.some'
     name: >-
       some((value: VirtualNetworkTap, index: number, array: VirtualNetworkTap[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -935,13 +985,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: VirtualNetworkTap, index: number,
-        array: VirtualNetworkTap[]) => boolean, thisArg?: any)
+        array: VirtualNetworkTap[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: VirtualNetworkTap, index: number, array:
-              VirtualNetworkTap[]) => boolean
+              VirtualNetworkTap[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -957,6 +1007,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.sort'
     name: 'sort(undefined | (a: VirtualNetworkTap, b: VirtualNetworkTap) => number)'
@@ -981,6 +1032,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.splice_1'
     name: 'splice(number, number, VirtualNetworkTap[])'
@@ -1014,6 +1066,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1042,6 +1095,7 @@ items:
       return:
         type:
           - '@azure/arm-network.VirtualNetworkTap[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.toLocaleString'
     name: toLocaleString()
@@ -1058,6 +1112,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.toString'
     name: toString()
@@ -1072,6 +1127,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.unshift'
     name: 'unshift(VirtualNetworkTap[])'
@@ -1091,6 +1147,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkTapListResult.values'
     name: values()
@@ -1105,6 +1162,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-network.VirtualNetworkTap>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.VirtualNetworkTap>

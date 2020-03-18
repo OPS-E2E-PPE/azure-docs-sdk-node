@@ -6,10 +6,12 @@ items:
     children:
       - '@azure/arm-reservations.PurchaseRequest.appliedScopes'
       - '@azure/arm-reservations.PurchaseRequest.appliedScopeType'
+      - '@azure/arm-reservations.PurchaseRequest.billingPlan'
       - '@azure/arm-reservations.PurchaseRequest.billingScopeId'
       - '@azure/arm-reservations.PurchaseRequest.displayName'
       - '@azure/arm-reservations.PurchaseRequest.location'
       - '@azure/arm-reservations.PurchaseRequest.quantity'
+      - '@azure/arm-reservations.PurchaseRequest.renew'
       - '@azure/arm-reservations.PurchaseRequest.reservedResourceProperties'
       - '@azure/arm-reservations.PurchaseRequest.reservedResourceType'
       - '@azure/arm-reservations.PurchaseRequest.sku'
@@ -33,6 +35,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.PurchaseRequest.appliedScopeType'
     name: appliedScopeType
@@ -48,6 +51,23 @@ items:
       return:
         type:
           - '@azure/arm-reservations.AppliedScopeType'
+        description: ''
+    package: '@azure/arm-reservations'
+  - uid: '@azure/arm-reservations.PurchaseRequest.billingPlan'
+    name: billingPlan
+    fullName: billingPlan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Possible values include: ''Upfront'', ''Monthly'''
+    optional: true
+    syntax:
+      content: 'billingPlan?: ReservationBillingPlan'
+      return:
+        type:
+          - '@azure/arm-reservations.ReservationBillingPlan'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.PurchaseRequest.billingScopeId'
     name: billingScopeId
@@ -63,6 +83,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.PurchaseRequest.displayName'
     name: displayName
@@ -78,6 +99,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.PurchaseRequest.location'
     name: location
@@ -93,6 +115,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.PurchaseRequest.quantity'
     name: quantity
@@ -108,6 +131,23 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
+    package: '@azure/arm-reservations'
+  - uid: '@azure/arm-reservations.PurchaseRequest.renew'
+    name: renew
+    fullName: renew
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'renew?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.PurchaseRequest.reservedResourceProperties'
     name: reservedResourceProperties
@@ -128,6 +168,7 @@ items:
         type:
           - >-
             @azure/arm-reservations.PurchaseRequestPropertiesReservedResourceProperties
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.PurchaseRequest.reservedResourceType'
     name: reservedResourceType
@@ -138,13 +179,16 @@ items:
     type: property
     summary: >-
       Possible values include: 'VirtualMachines', 'SqlDatabases', 'SuseLinux',
-      'CosmosDb'
+      'CosmosDb', 'RedHat',
+
+      'SqlDataWarehouse', 'VMwareCloudSimple', 'RedHatOsa'
     optional: true
     syntax:
       content: 'reservedResourceType?: ReservedResourceType'
       return:
         type:
           - '@azure/arm-reservations.ReservedResourceType'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.PurchaseRequest.sku'
     name: sku
@@ -160,6 +204,7 @@ items:
       return:
         type:
           - '@azure/arm-reservations.SkuName'
+        description: ''
     package: '@azure/arm-reservations'
   - uid: '@azure/arm-reservations.PurchaseRequest.term'
     name: term
@@ -175,6 +220,7 @@ items:
       return:
         type:
           - '@azure/arm-reservations.ReservationTerm'
+        description: ''
     package: '@azure/arm-reservations'
 references:
   - uid: '@azure/arm-reservations.AppliedScopeType'
@@ -183,6 +229,12 @@ references:
       - name: AppliedScopeType
         fullName: AppliedScopeType
         uid: '@azure/arm-reservations.AppliedScopeType'
+  - uid: '@azure/arm-reservations.ReservationBillingPlan'
+    name: ReservationBillingPlan
+    spec.typeScript:
+      - name: ReservationBillingPlan
+        fullName: ReservationBillingPlan
+        uid: '@azure/arm-reservations.ReservationBillingPlan'
   - uid: >-
       @azure/arm-reservations.PurchaseRequestPropertiesReservedResourceProperties
     name: PurchaseRequestPropertiesReservedResourceProperties

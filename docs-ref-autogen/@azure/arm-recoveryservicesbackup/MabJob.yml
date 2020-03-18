@@ -22,7 +22,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: MAB workload-specific job.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.actionsInfo'
     name: actionsInfo
@@ -31,13 +31,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The state/actions applicable on jobs like cancel/retry.
     optional: true
     syntax:
       content: 'actionsInfo?: JobSupportedAction[]'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.JobSupportedAction[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.activityId'
     name: activityId
@@ -46,13 +47,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: ActivityId of job.
     optional: true
     syntax:
       content: 'activityId?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.backupManagementType'
     name: backupManagementType
@@ -61,13 +63,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Backup management type to execute the current job. Possible values
+      include: 'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     optional: true
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.duration'
     name: duration
@@ -76,13 +86,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Time taken by job to run.
     optional: true
     syntax:
       content: 'duration?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.endTime'
     name: endTime
@@ -91,13 +102,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The end time.
     optional: true
     syntax:
       content: 'endTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.entityFriendlyName'
     name: entityFriendlyName
@@ -106,13 +118,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of the entity on which the current job is executing.
     optional: true
     syntax:
       content: 'entityFriendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.errorDetails'
     name: errorDetails
@@ -121,13 +134,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The errors.
     optional: true
     syntax:
       content: 'errorDetails?: MabErrorInfo[]'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.MabErrorInfo[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.extendedInfo'
     name: extendedInfo
@@ -136,13 +150,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Additional information on the job.
     optional: true
     syntax:
       content: 'extendedInfo?: MabJobExtendedInfo'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.MabJobExtendedInfo'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.jobType'
     name: jobType
@@ -151,12 +166,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'jobType: "MabJob"'
       return:
         type:
           - '"MabJob"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.mabServerName'
     name: mabServerName
@@ -165,13 +181,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Name of server protecting the DS.
     optional: true
     syntax:
       content: 'mabServerName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.mabServerType'
     name: mabServerType
@@ -180,13 +197,24 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Server type of MAB container. Possible values include: 'Invalid',
+      'Unknown',
+
+      'IaasVMContainer', 'IaasVMServiceContainer', 'DPMContainer',
+      'AzureBackupServerContainer',
+
+      'MABContainer', 'Cluster', 'AzureSqlContainer', 'Windows', 'VCenter',
+      'VMAppContainer',
+
+      'SQLAGWorkLoadContainer', 'StorageContainer', 'GenericContainer'
     optional: true
     syntax:
       content: 'mabServerType?: MabServerType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.MabServerType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.operation'
     name: operation
@@ -195,13 +223,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The operation name.
     optional: true
     syntax:
       content: 'operation?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.startTime'
     name: startTime
@@ -210,13 +239,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The start time.
     optional: true
     syntax:
       content: 'startTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.status'
     name: status
@@ -225,13 +255,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Job status.
     optional: true
     syntax:
       content: 'status?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.MabJob.workloadType'
     name: workloadType
@@ -240,13 +271,22 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Workload type of backup item. Possible values include: 'Invalid', 'VM',
+      'FileFolder',
+
+      'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM',
+      'SystemState', 'Client',
+
+      'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase',
+      'SAPAseDatabase'
     optional: true
     syntax:
       content: 'workloadType?: WorkloadType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.WorkloadType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.JobSupportedAction[]'

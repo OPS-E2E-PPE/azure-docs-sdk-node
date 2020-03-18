@@ -29,10 +29,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'activityId: string'
+      content: string activityId
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ItemResponse.etag'
     name: etag
@@ -43,10 +44,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'etag: string'
+      content: string etag
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ItemResponse.headers'
     name: headers
@@ -57,10 +59,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'headers: CosmosHeaders_2'
+      content: 'public headers: CosmosHeaders'
       return:
         type:
-          - '@azure/cosmos.CosmosHeaders_2'
+          - '@azure/cosmos.CosmosHeaders'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ItemResponse.item'
     name: item
@@ -71,10 +74,11 @@ items:
     type: property
     summary: 'Reference to the <xref:Item> the response corresponds to.'
     syntax:
-      content: 'item: Item'
+      content: 'public item: Item'
       return:
         type:
           - '@azure/cosmos.Item'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ItemResponse.constructor'
     name: 'ItemResponse(T & Resource, CosmosHeaders, number, number, Item)'
@@ -118,10 +122,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'requestCharge: number'
+      content: number requestCharge
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ItemResponse.resource'
     name: resource
@@ -132,10 +137,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'resource: T & Resource'
+      content: 'public resource: T & Resource'
       return:
         type:
           - T & @azure/cosmos.Resource
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ItemResponse.statusCode'
     name: statusCode
@@ -146,10 +152,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'statusCode: StatusCode'
+      content: 'public statusCode: StatusCode'
       return:
         type:
           - StatusCode
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.ItemResponse.substatus'
     name: substatus
@@ -161,10 +168,11 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'substatus?: SubStatusCode'
+      content: 'public substatus?: SubStatusCode'
       return:
         type:
-          - SubStatusCode
+          - '@azure/cosmos.SubStatusCode'
+        description: ''
     package: '@azure/cosmos'
 references:
   - uid: '@azure/cosmos.ResourceResponse<T & @azure/cosmos.Resource>'
@@ -200,9 +208,9 @@ references:
       - name: Item
         fullName: Item
         uid: '@azure/cosmos.Item'
-  - uid: '@azure/cosmos.CosmosHeaders_2'
-    name: CosmosHeaders_2
+  - uid: '@azure/cosmos.SubStatusCode'
+    name: SubStatusCode
     spec.typeScript:
-      - name: CosmosHeaders_2
-        fullName: CosmosHeaders_2
-        uid: '@azure/cosmos.CosmosHeaders_2'
+      - name: SubStatusCode
+        fullName: SubStatusCode
+        uid: '@azure/cosmos.SubStatusCode'

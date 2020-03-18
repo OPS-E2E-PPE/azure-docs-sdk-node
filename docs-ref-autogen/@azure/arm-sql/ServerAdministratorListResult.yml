@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.ServerAdministratorListResult.entries'
       - '@azure/arm-sql.ServerAdministratorListResult.every'
       - '@azure/arm-sql.ServerAdministratorListResult.fill'
-      - '@azure/arm-sql.ServerAdministratorListResult.filter_1'
       - '@azure/arm-sql.ServerAdministratorListResult.filter'
+      - '@azure/arm-sql.ServerAdministratorListResult.filter_1'
       - '@azure/arm-sql.ServerAdministratorListResult.find'
       - '@azure/arm-sql.ServerAdministratorListResult.find_1'
       - '@azure/arm-sql.ServerAdministratorListResult.findIndex'
       - '@azure/arm-sql.ServerAdministratorListResult.forEach'
+      - '@azure/arm-sql.ServerAdministratorListResult.includes'
       - '@azure/arm-sql.ServerAdministratorListResult.indexOf'
       - '@azure/arm-sql.ServerAdministratorListResult.join'
       - '@azure/arm-sql.ServerAdministratorListResult.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.concat'
     name: 'concat(ConcatArray<ServerAzureADAdministrator>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.every'
     name: >-
       every((value: ServerAzureADAdministrator, index: number, array:
-      ServerAzureADAdministrator[]) => boolean, any)
+      ServerAzureADAdministrator[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -170,13 +176,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ServerAzureADAdministrator, index:
-        number, array: ServerAzureADAdministrator[]) => boolean, thisArg?: any)
+        number, array: ServerAzureADAdministrator[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ServerAzureADAdministrator, index: number, array:
-              ServerAzureADAdministrator[]) => boolean
+              ServerAzureADAdministrator[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.fill'
     name: 'fill(ServerAzureADAdministrator, undefined | number, undefined | number)'
@@ -232,43 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.ServerAdministratorListResult.filter_1'
-    name: >-
-      filter((value: ServerAzureADAdministrator, index: number, array:
-      ServerAzureADAdministrator[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ServerAzureADAdministrator, index:
-        number, array: ServerAzureADAdministrator[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ServerAzureADAdministrator, index: number, array:
-              ServerAzureADAdministrator[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.ServerAzureADAdministrator[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerAdministratorListResult.filter_1'
+    name: >-
+      filter((value: ServerAzureADAdministrator, index: number, array:
+      ServerAzureADAdministrator[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ServerAzureADAdministrator, index:
+        number, array: ServerAzureADAdministrator[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ServerAzureADAdministrator, index: number, array:
+              ServerAzureADAdministrator[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.ServerAzureADAdministrator[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.find'
     name: >-
@@ -353,30 +363,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.find_1'
     name: >-
       find((value: ServerAzureADAdministrator, index: number, obj:
-      ServerAzureADAdministrator[]) => boolean, any)
+      ServerAzureADAdministrator[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ServerAzureADAdministrator, index:
-        number, obj: ServerAzureADAdministrator[]) => boolean, thisArg?: any)
+        number, obj: ServerAzureADAdministrator[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ServerAzureADAdministrator, index: number, obj:
-              ServerAzureADAdministrator[]) => boolean
+              ServerAzureADAdministrator[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -386,11 +393,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.findIndex'
     name: >-
       findIndex((value: ServerAzureADAdministrator, index: number, obj:
-      ServerAzureADAdministrator[]) => boolean, any)
+      ServerAzureADAdministrator[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -403,13 +411,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ServerAzureADAdministrator, index:
-        number, obj: ServerAzureADAdministrator[]) => boolean, thisArg?: any)
+        number, obj: ServerAzureADAdministrator[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ServerAzureADAdministrator, index: number, obj:
-              ServerAzureADAdministrator[]) => boolean
+              ServerAzureADAdministrator[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -431,6 +439,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.forEach'
     name: >-
@@ -463,6 +472,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerAdministratorListResult.includes'
+    name: 'includes(ServerAzureADAdministrator, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ServerAzureADAdministrator, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.ServerAzureADAdministrator'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.indexOf'
     name: 'indexOf(ServerAzureADAdministrator, undefined | number)'
     children: []
@@ -489,6 +528,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.join'
     name: join(undefined | string)
@@ -513,6 +553,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.keys'
     name: keys()
@@ -527,6 +568,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.lastIndexOf'
     name: 'lastIndexOf(ServerAzureADAdministrator, undefined | number)'
@@ -554,6 +596,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.length'
     name: length
@@ -570,6 +613,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.map'
     name: >-
@@ -606,6 +650,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.pop'
     name: pop()
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.push'
     name: 'push(ServerAzureADAdministrator[])'
@@ -639,6 +685,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.reduce'
     name: >-
@@ -672,6 +719,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.reduce_1'
     name: >-
@@ -683,10 +731,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ServerAzureADAdministrator,
@@ -708,6 +753,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.reduce_2'
     name: >-
@@ -746,6 +792,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.reduceRight'
     name: >-
@@ -781,6 +828,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.reduceRight_1'
     name: >-
@@ -792,11 +840,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -818,6 +862,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.reduceRight_2'
     name: >-
@@ -857,6 +902,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.reverse'
     name: reverse()
@@ -871,6 +917,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.shift'
     name: shift()
@@ -885,6 +932,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -910,11 +958,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.some'
     name: >-
       some((value: ServerAzureADAdministrator, index: number, array:
-      ServerAzureADAdministrator[]) => boolean, any)
+      ServerAzureADAdministrator[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -925,13 +974,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ServerAzureADAdministrator, index:
-        number, array: ServerAzureADAdministrator[]) => boolean, thisArg?: any)
+        number, array: ServerAzureADAdministrator[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ServerAzureADAdministrator, index: number, array:
-              ServerAzureADAdministrator[]) => boolean
+              ServerAzureADAdministrator[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -947,6 +996,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.sort'
     name: >-
@@ -975,6 +1025,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.splice_1'
     name: 'splice(number, number, ServerAzureADAdministrator[])'
@@ -1008,6 +1059,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1036,6 +1088,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrator[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.toLocaleString'
     name: toLocaleString()
@@ -1052,6 +1105,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.toString'
     name: toString()
@@ -1066,6 +1120,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.unshift'
     name: 'unshift(ServerAzureADAdministrator[])'
@@ -1085,6 +1140,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.ServerAdministratorListResult.values'
     name: values()
@@ -1099,6 +1155,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.ServerAzureADAdministrator>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.ServerAzureADAdministrator>

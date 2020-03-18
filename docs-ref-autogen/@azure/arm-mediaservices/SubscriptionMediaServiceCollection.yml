@@ -11,12 +11,13 @@ items:
       - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.entries'
       - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.every'
       - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.fill'
-      - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.filter_1'
       - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.filter'
+      - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.filter_1'
       - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.find'
       - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.find_1'
       - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.findIndex'
       - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.forEach'
+      - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.includes'
       - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.indexOf'
       - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.join'
       - '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.keys'
@@ -67,6 +68,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.concat'
     name: 'concat(ConcatArray<SubscriptionMediaService>[])'
@@ -86,6 +88,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -105,6 +108,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -148,6 +152,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.entries'
     name: entries()
@@ -162,11 +167,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.every'
     name: >-
       every((value: SubscriptionMediaService, index: number, array:
-      SubscriptionMediaService[]) => boolean, any)
+      SubscriptionMediaService[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -175,13 +181,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: SubscriptionMediaService, index:
-        number, array: SubscriptionMediaService[]) => boolean, thisArg?: any)
+        number, array: SubscriptionMediaService[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SubscriptionMediaService, index: number, array:
-              SubscriptionMediaService[]) => boolean
+              SubscriptionMediaService[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -197,6 +203,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.fill'
     name: 'fill(SubscriptionMediaService, undefined | number, undefined | number)'
@@ -237,43 +244,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-mediaservices'
-  - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.filter_1'
-    name: >-
-      filter((value: SubscriptionMediaService, index: number, array:
-      SubscriptionMediaService[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: SubscriptionMediaService, index:
-        number, array: SubscriptionMediaService[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: SubscriptionMediaService, index: number, array:
-              SubscriptionMediaService[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-mediaservices.SubscriptionMediaService[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.filter'
     name: >-
@@ -311,6 +282,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.filter_1'
+    name: >-
+      filter((value: SubscriptionMediaService, index: number, array:
+      SubscriptionMediaService[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: SubscriptionMediaService, index:
+        number, array: SubscriptionMediaService[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: SubscriptionMediaService, index: number, array:
+              SubscriptionMediaService[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-mediaservices.SubscriptionMediaService[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.find'
     name: >-
@@ -357,30 +367,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.find_1'
     name: >-
       find((value: SubscriptionMediaService, index: number, obj:
-      SubscriptionMediaService[]) => boolean, any)
+      SubscriptionMediaService[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SubscriptionMediaService, index:
-        number, obj: SubscriptionMediaService[]) => boolean, thisArg?: any)
+        number, obj: SubscriptionMediaService[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SubscriptionMediaService, index: number, obj:
-              SubscriptionMediaService[]) => boolean
+              SubscriptionMediaService[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -390,11 +397,12 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.findIndex'
     name: >-
       findIndex((value: SubscriptionMediaService, index: number, obj:
-      SubscriptionMediaService[]) => boolean, any)
+      SubscriptionMediaService[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -407,13 +415,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: SubscriptionMediaService, index:
-        number, obj: SubscriptionMediaService[]) => boolean, thisArg?: any)
+        number, obj: SubscriptionMediaService[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SubscriptionMediaService, index: number, obj:
-              SubscriptionMediaService[]) => boolean
+              SubscriptionMediaService[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -435,6 +443,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.forEach'
     name: >-
@@ -467,6 +476,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.includes'
+    name: 'includes(SubscriptionMediaService, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SubscriptionMediaService, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-mediaservices.SubscriptionMediaService'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.indexOf'
     name: 'indexOf(SubscriptionMediaService, undefined | number)'
     children: []
@@ -493,6 +532,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.join'
     name: join(undefined | string)
@@ -517,6 +557,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.keys'
     name: keys()
@@ -531,6 +572,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.lastIndexOf'
     name: 'lastIndexOf(SubscriptionMediaService, undefined | number)'
@@ -558,6 +600,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.length'
     name: length
@@ -574,6 +617,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.map'
     name: >-
@@ -610,6 +654,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.odatanextLink'
     name: odatanextLink
@@ -629,6 +674,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.pop'
     name: pop()
@@ -643,6 +689,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.push'
     name: 'push(SubscriptionMediaService[])'
@@ -662,6 +709,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.reduce'
     name: >-
@@ -695,6 +743,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.reduce_1'
     name: >-
@@ -706,10 +755,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: SubscriptionMediaService,
@@ -731,6 +777,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.reduce_2'
     name: >-
@@ -769,6 +816,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.reduceRight'
     name: >-
@@ -804,6 +852,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.reduceRight_1'
     name: >-
@@ -815,11 +864,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -841,6 +886,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.reduceRight_2'
     name: >-
@@ -880,6 +926,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.reverse'
     name: reverse()
@@ -894,6 +941,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.shift'
     name: shift()
@@ -908,6 +956,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService | undefined'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -933,11 +982,12 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.some'
     name: >-
       some((value: SubscriptionMediaService, index: number, array:
-      SubscriptionMediaService[]) => boolean, any)
+      SubscriptionMediaService[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -948,13 +998,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: SubscriptionMediaService, index:
-        number, array: SubscriptionMediaService[]) => boolean, thisArg?: any)
+        number, array: SubscriptionMediaService[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SubscriptionMediaService, index: number, array:
-              SubscriptionMediaService[]) => boolean
+              SubscriptionMediaService[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -970,6 +1020,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.sort'
     name: >-
@@ -998,6 +1049,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.splice_1'
     name: 'splice(number, number, SubscriptionMediaService[])'
@@ -1031,6 +1083,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1059,6 +1112,7 @@ items:
       return:
         type:
           - '@azure/arm-mediaservices.SubscriptionMediaService[]'
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.toLocaleString'
     name: toLocaleString()
@@ -1075,6 +1129,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.toString'
     name: toString()
@@ -1089,6 +1144,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.unshift'
     name: 'unshift(SubscriptionMediaService[])'
@@ -1108,6 +1164,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-mediaservices'
   - uid: '@azure/arm-mediaservices.SubscriptionMediaServiceCollection.values'
     name: values()
@@ -1122,6 +1179,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-mediaservices.SubscriptionMediaService>
+        description: ''
     package: '@azure/arm-mediaservices'
 references:
   - uid: Array<@azure/arm-mediaservices.SubscriptionMediaService>

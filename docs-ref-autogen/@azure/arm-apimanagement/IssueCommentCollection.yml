@@ -11,12 +11,13 @@ items:
       - '@azure/arm-apimanagement.IssueCommentCollection.entries'
       - '@azure/arm-apimanagement.IssueCommentCollection.every'
       - '@azure/arm-apimanagement.IssueCommentCollection.fill'
-      - '@azure/arm-apimanagement.IssueCommentCollection.filter_1'
       - '@azure/arm-apimanagement.IssueCommentCollection.filter'
+      - '@azure/arm-apimanagement.IssueCommentCollection.filter_1'
       - '@azure/arm-apimanagement.IssueCommentCollection.find'
       - '@azure/arm-apimanagement.IssueCommentCollection.find_1'
       - '@azure/arm-apimanagement.IssueCommentCollection.findIndex'
       - '@azure/arm-apimanagement.IssueCommentCollection.forEach'
+      - '@azure/arm-apimanagement.IssueCommentCollection.includes'
       - '@azure/arm-apimanagement.IssueCommentCollection.indexOf'
       - '@azure/arm-apimanagement.IssueCommentCollection.join'
       - '@azure/arm-apimanagement.IssueCommentCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.concat'
     name: 'concat(ConcatArray<IssueCommentContract>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.every'
     name: >-
       every((value: IssueCommentContract, index: number, array:
-      IssueCommentContract[]) => boolean, any)
+      IssueCommentContract[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: IssueCommentContract, index: number,
-        array: IssueCommentContract[]) => boolean, thisArg?: any)
+        array: IssueCommentContract[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: IssueCommentContract, index: number, array:
-              IssueCommentContract[]) => boolean
+              IssueCommentContract[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.fill'
     name: 'fill(IssueCommentContract, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.IssueCommentCollection.filter_1'
-    name: >-
-      filter((value: IssueCommentContract, index: number, array:
-      IssueCommentContract[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: IssueCommentContract, index: number,
-        array: IssueCommentContract[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: IssueCommentContract, index: number, array:
-              IssueCommentContract[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-apimanagement.IssueCommentContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.IssueCommentCollection.filter_1'
+    name: >-
+      filter((value: IssueCommentContract, index: number, array:
+      IssueCommentContract[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: IssueCommentContract, index: number,
+        array: IssueCommentContract[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: IssueCommentContract, index: number, array:
+              IssueCommentContract[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-apimanagement.IssueCommentContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.find_1'
     name: >-
       find((value: IssueCommentContract, index: number, obj:
-      IssueCommentContract[]) => boolean, any)
+      IssueCommentContract[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: IssueCommentContract, index: number,
-        obj: IssueCommentContract[]) => boolean, thisArg?: any)
+        obj: IssueCommentContract[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: IssueCommentContract, index: number, obj:
-              IssueCommentContract[]) => boolean
+              IssueCommentContract[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract | undefined'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.findIndex'
     name: >-
       findIndex((value: IssueCommentContract, index: number, obj:
-      IssueCommentContract[]) => boolean, any)
+      IssueCommentContract[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: IssueCommentContract, index:
-        number, obj: IssueCommentContract[]) => boolean, thisArg?: any)
+        number, obj: IssueCommentContract[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: IssueCommentContract, index: number, obj:
-              IssueCommentContract[]) => boolean
+              IssueCommentContract[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.IssueCommentCollection.includes'
+    name: 'includes(IssueCommentContract, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: IssueCommentContract, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-apimanagement.IssueCommentContract'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.indexOf'
     name: 'indexOf(IssueCommentContract, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.lastIndexOf'
     name: 'lastIndexOf(IssueCommentContract, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract | undefined'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.push'
     name: 'push(IssueCommentContract[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.reduce'
     name: >-
@@ -690,6 +738,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.reduce_1'
     name: >-
@@ -700,10 +749,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: IssueCommentContract,
@@ -725,6 +771,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.reduce_2'
     name: >-
@@ -763,6 +810,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.reduceRight'
     name: >-
@@ -797,6 +845,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.reduceRight_1'
     name: >-
@@ -807,11 +856,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: IssueCommentContract,
@@ -833,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.reduceRight_2'
     name: >-
@@ -872,6 +918,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.reverse'
     name: reverse()
@@ -886,6 +933,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.shift'
     name: shift()
@@ -900,6 +948,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract | undefined'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -925,11 +974,12 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.some'
     name: >-
       some((value: IssueCommentContract, index: number, array:
-      IssueCommentContract[]) => boolean, any)
+      IssueCommentContract[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -940,13 +990,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: IssueCommentContract, index: number,
-        array: IssueCommentContract[]) => boolean, thisArg?: any)
+        array: IssueCommentContract[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: IssueCommentContract, index: number, array:
-              IssueCommentContract[]) => boolean
+              IssueCommentContract[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -962,6 +1012,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.sort'
     name: >-
@@ -990,6 +1041,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.splice_1'
     name: 'splice(number, number, IssueCommentContract[])'
@@ -1023,6 +1075,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1051,6 +1104,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.IssueCommentContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.toLocaleString'
     name: toLocaleString()
@@ -1067,6 +1121,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.toString'
     name: toString()
@@ -1081,6 +1136,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.unshift'
     name: 'unshift(IssueCommentContract[])'
@@ -1100,6 +1156,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.IssueCommentCollection.values'
     name: values()
@@ -1114,6 +1171,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-apimanagement.IssueCommentContract>
+        description: ''
     package: '@azure/arm-apimanagement'
 references:
   - uid: Array<@azure/arm-apimanagement.IssueCommentContract>

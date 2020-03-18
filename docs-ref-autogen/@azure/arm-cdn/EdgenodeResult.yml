@@ -11,12 +11,13 @@ items:
       - '@azure/arm-cdn.EdgenodeResult.entries'
       - '@azure/arm-cdn.EdgenodeResult.every'
       - '@azure/arm-cdn.EdgenodeResult.fill'
-      - '@azure/arm-cdn.EdgenodeResult.filter_1'
       - '@azure/arm-cdn.EdgenodeResult.filter'
+      - '@azure/arm-cdn.EdgenodeResult.filter_1'
       - '@azure/arm-cdn.EdgenodeResult.find'
       - '@azure/arm-cdn.EdgenodeResult.find_1'
       - '@azure/arm-cdn.EdgenodeResult.findIndex'
       - '@azure/arm-cdn.EdgenodeResult.forEach'
+      - '@azure/arm-cdn.EdgenodeResult.includes'
       - '@azure/arm-cdn.EdgenodeResult.indexOf'
       - '@azure/arm-cdn.EdgenodeResult.join'
       - '@azure/arm-cdn.EdgenodeResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.concat'
     name: 'concat(ConcatArray<EdgeNode>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.every'
-    name: 'every((value: EdgeNode, index: number, array: EdgeNode[]) => boolean, any)'
+    name: 'every((value: EdgeNode, index: number, array: EdgeNode[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: EdgeNode, index: number, array:
-        EdgeNode[]) => boolean, thisArg?: any)
+        EdgeNode[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: EdgeNode, index: number, array: EdgeNode[]) => boolean'
+            - '(value: EdgeNode, index: number, array: EdgeNode[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.fill'
     name: 'fill(EdgeNode, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-cdn'
-  - uid: '@azure/arm-cdn.EdgenodeResult.filter_1'
-    name: 'filter((value: EdgeNode, index: number, array: EdgeNode[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: EdgeNode, index: number, array:
-        EdgeNode[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: EdgeNode, index: number, array: EdgeNode[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-cdn.EdgeNode[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.filter'
     name: >-
@@ -297,6 +272,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EdgenodeResult.filter_1'
+    name: >-
+      filter((value: EdgeNode, index: number, array: EdgeNode[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: EdgeNode, index: number, array:
+        EdgeNode[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: EdgeNode, index: number, array: EdgeNode[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-cdn.EdgeNode[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.find'
     name: >-
@@ -342,26 +354,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.find_1'
-    name: 'find((value: EdgeNode, index: number, obj: EdgeNode[]) => boolean, any)'
+    name: 'find((value: EdgeNode, index: number, obj: EdgeNode[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: EdgeNode, index: number, obj:
-        EdgeNode[]) => boolean, thisArg?: any)
+        EdgeNode[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: EdgeNode, index: number, obj: EdgeNode[]) => boolean'
+            - '(value: EdgeNode, index: number, obj: EdgeNode[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -371,10 +380,11 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.findIndex'
     name: >-
-      findIndex((value: EdgeNode, index: number, obj: EdgeNode[]) => boolean,
+      findIndex((value: EdgeNode, index: number, obj: EdgeNode[]) => unknown,
       any)
     children: []
     type: method
@@ -388,11 +398,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: EdgeNode, index: number, obj:
-        EdgeNode[]) => boolean, thisArg?: any)
+        EdgeNode[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: EdgeNode, index: number, obj: EdgeNode[]) => boolean'
+            - '(value: EdgeNode, index: number, obj: EdgeNode[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -414,6 +424,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.forEach'
     name: 'forEach((value: EdgeNode, index: number, array: EdgeNode[]) => void, any)'
@@ -442,6 +453,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EdgenodeResult.includes'
+    name: 'includes(EdgeNode, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: EdgeNode, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-cdn.EdgeNode'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.indexOf'
     name: 'indexOf(EdgeNode, undefined | number)'
     children: []
@@ -468,6 +509,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.join'
     name: join(undefined | string)
@@ -492,6 +534,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.keys'
     name: keys()
@@ -506,6 +549,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.lastIndexOf'
     name: 'lastIndexOf(EdgeNode, undefined | number)'
@@ -533,6 +577,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.length'
     name: length
@@ -549,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.map'
     name: 'map((value: EdgeNode, index: number, array: EdgeNode[]) => U, any)'
@@ -581,6 +627,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.nextLink'
     name: nextLink
@@ -596,6 +643,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.pop'
     name: pop()
@@ -610,6 +658,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.push'
     name: 'push(EdgeNode[])'
@@ -629,6 +678,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.reduce'
     name: >-
@@ -659,6 +709,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.reduce_1'
     name: >-
@@ -668,10 +719,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: EdgeNode, currentValue:
@@ -691,6 +739,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.reduce_2'
     name: >-
@@ -729,6 +778,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.reduceRight'
     name: >-
@@ -760,6 +810,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.reduceRight_1'
     name: >-
@@ -769,11 +820,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: EdgeNode, currentValue:
@@ -793,6 +840,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.reduceRight_2'
     name: >-
@@ -832,6 +880,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.reverse'
     name: reverse()
@@ -846,6 +895,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.shift'
     name: shift()
@@ -860,6 +910,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -885,9 +936,10 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.some'
-    name: 'some((value: EdgeNode, index: number, array: EdgeNode[]) => boolean, any)'
+    name: 'some((value: EdgeNode, index: number, array: EdgeNode[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -898,11 +950,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: EdgeNode, index: number, array:
-        EdgeNode[]) => boolean, thisArg?: any)
+        EdgeNode[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: EdgeNode, index: number, array: EdgeNode[]) => boolean'
+            - '(value: EdgeNode, index: number, array: EdgeNode[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -918,6 +970,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.sort'
     name: 'sort(undefined | (a: EdgeNode, b: EdgeNode) => number)'
@@ -942,6 +995,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.splice_1'
     name: 'splice(number, number, EdgeNode[])'
@@ -973,6 +1027,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1001,6 +1056,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.EdgeNode[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.toLocaleString'
     name: toLocaleString()
@@ -1017,6 +1073,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.toString'
     name: toString()
@@ -1031,6 +1088,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.unshift'
     name: 'unshift(EdgeNode[])'
@@ -1050,6 +1108,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EdgenodeResult.values'
     name: values()
@@ -1064,6 +1123,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-cdn.EdgeNode>
+        description: ''
     package: '@azure/arm-cdn'
 references:
   - uid: Array<@azure/arm-cdn.EdgeNode>

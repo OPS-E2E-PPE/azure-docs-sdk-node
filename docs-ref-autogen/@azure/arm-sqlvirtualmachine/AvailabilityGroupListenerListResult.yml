@@ -13,14 +13,16 @@ items:
       - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.entries'
       - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.every'
       - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.fill'
+      - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.filter'
       - >-
         @azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.filter_1
-      - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.filter'
       - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.find'
       - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.find_1'
       - >-
         @azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.findIndex
       - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.forEach'
+      - >-
+        @azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.includes
       - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.indexOf'
       - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.join'
       - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.keys'
@@ -77,6 +79,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.concat'
     name: 'concat(ConcatArray<AvailabilityGroupListener>[])'
@@ -97,6 +100,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -116,6 +120,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: >-
       @azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.copyWithin
@@ -160,6 +165,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.entries'
     name: entries()
@@ -174,11 +180,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.every'
     name: >-
       every((value: AvailabilityGroupListener, index: number, array:
-      AvailabilityGroupListener[]) => boolean, any)
+      AvailabilityGroupListener[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -187,13 +194,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: AvailabilityGroupListener, index:
-        number, array: AvailabilityGroupListener[]) => boolean, thisArg?: any)
+        number, array: AvailabilityGroupListener[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: AvailabilityGroupListener, index: number, array:
-              AvailabilityGroupListener[]) => boolean
+              AvailabilityGroupListener[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -209,6 +216,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.fill'
     name: 'fill(AvailabilityGroupListener, undefined | number, undefined | number)'
@@ -249,43 +257,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sqlvirtualmachine'
-  - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.filter_1'
-    name: >-
-      filter((value: AvailabilityGroupListener, index: number, array:
-      AvailabilityGroupListener[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: AvailabilityGroupListener, index:
-        number, array: AvailabilityGroupListener[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: AvailabilityGroupListener, index: number, array:
-              AvailabilityGroupListener[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.filter'
     name: >-
@@ -323,6 +295,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sqlvirtualmachine'
+  - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.filter_1'
+    name: >-
+      filter((value: AvailabilityGroupListener, index: number, array:
+      AvailabilityGroupListener[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: AvailabilityGroupListener, index:
+        number, array: AvailabilityGroupListener[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: AvailabilityGroupListener, index: number, array:
+              AvailabilityGroupListener[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.find'
     name: >-
@@ -369,30 +380,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.find_1'
     name: >-
       find((value: AvailabilityGroupListener, index: number, obj:
-      AvailabilityGroupListener[]) => boolean, any)
+      AvailabilityGroupListener[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: AvailabilityGroupListener, index:
-        number, obj: AvailabilityGroupListener[]) => boolean, thisArg?: any)
+        number, obj: AvailabilityGroupListener[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: AvailabilityGroupListener, index: number, obj:
-              AvailabilityGroupListener[]) => boolean
+              AvailabilityGroupListener[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -402,11 +410,12 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener | undefined'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.findIndex'
     name: >-
       findIndex((value: AvailabilityGroupListener, index: number, obj:
-      AvailabilityGroupListener[]) => boolean, any)
+      AvailabilityGroupListener[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -419,13 +428,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: AvailabilityGroupListener, index:
-        number, obj: AvailabilityGroupListener[]) => boolean, thisArg?: any)
+        number, obj: AvailabilityGroupListener[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: AvailabilityGroupListener, index: number, obj:
-              AvailabilityGroupListener[]) => boolean
+              AvailabilityGroupListener[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -447,6 +456,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.forEach'
     name: >-
@@ -479,6 +489,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sqlvirtualmachine'
+  - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.includes'
+    name: 'includes(AvailabilityGroupListener, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: AvailabilityGroupListener, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.indexOf'
     name: 'indexOf(AvailabilityGroupListener, undefined | number)'
     children: []
@@ -505,6 +545,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.join'
     name: join(undefined | string)
@@ -529,6 +570,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.keys'
     name: keys()
@@ -543,6 +585,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: >-
       @azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.lastIndexOf
@@ -571,6 +614,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.length'
     name: length
@@ -587,6 +631,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.map'
     name: >-
@@ -623,6 +668,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.nextLink'
     name: nextLink
@@ -642,6 +688,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.pop'
     name: pop()
@@ -656,6 +703,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener | undefined'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.push'
     name: 'push(AvailabilityGroupListener[])'
@@ -675,6 +723,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.reduce'
     name: >-
@@ -708,6 +757,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.reduce_1'
     name: >-
@@ -719,10 +769,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: AvailabilityGroupListener,
@@ -744,6 +791,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.reduce_2'
     name: >-
@@ -782,6 +830,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: >-
       @azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.reduceRight
@@ -818,6 +867,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: >-
       @azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.reduceRight_1
@@ -830,11 +880,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -856,6 +902,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: >-
       @azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.reduceRight_2
@@ -896,6 +943,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.reverse'
     name: reverse()
@@ -910,6 +958,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.shift'
     name: shift()
@@ -924,6 +973,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener | undefined'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -949,11 +999,12 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.some'
     name: >-
       some((value: AvailabilityGroupListener, index: number, array:
-      AvailabilityGroupListener[]) => boolean, any)
+      AvailabilityGroupListener[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -964,13 +1015,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: AvailabilityGroupListener, index:
-        number, array: AvailabilityGroupListener[]) => boolean, thisArg?: any)
+        number, array: AvailabilityGroupListener[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: AvailabilityGroupListener, index: number, array:
-              AvailabilityGroupListener[]) => boolean
+              AvailabilityGroupListener[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -986,6 +1037,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.sort'
     name: >-
@@ -1014,6 +1066,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.splice_1'
     name: 'splice(number, number, AvailabilityGroupListener[])'
@@ -1047,6 +1100,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1075,6 +1129,7 @@ items:
       return:
         type:
           - '@azure/arm-sqlvirtualmachine.AvailabilityGroupListener[]'
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: >-
       @azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.toLocaleString
@@ -1092,6 +1147,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.toString'
     name: toString()
@@ -1106,6 +1162,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.unshift'
     name: 'unshift(AvailabilityGroupListener[])'
@@ -1125,6 +1182,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
   - uid: '@azure/arm-sqlvirtualmachine.AvailabilityGroupListenerListResult.values'
     name: values()
@@ -1140,6 +1198,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-sqlvirtualmachine.AvailabilityGroupListener>
+        description: ''
     package: '@azure/arm-sqlvirtualmachine'
 references:
   - uid: Array<@azure/arm-sqlvirtualmachine.AvailabilityGroupListener>

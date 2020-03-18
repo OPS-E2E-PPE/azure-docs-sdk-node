@@ -40,6 +40,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImageVersion.location'
     name: location
@@ -54,6 +55,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImageVersion.name'
     name: name
@@ -73,6 +75,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImageVersion.provisioningState'
     name: provisioningState
@@ -94,10 +97,11 @@ items:
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: ProvisioningState2'
+      content: 'provisioningState?: ProvisioningState3'
       return:
         type:
-          - '@azure/arm-compute.ProvisioningState2'
+          - '@azure/arm-compute.ProvisioningState3'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImageVersion.publishingProfile'
     name: publishingProfile
@@ -107,11 +111,13 @@ items:
       - typeScript
     type: property
     summary: ''
+    optional: true
     syntax:
-      content: 'publishingProfile: GalleryImageVersionPublishingProfile'
+      content: 'publishingProfile?: GalleryImageVersionPublishingProfile'
       return:
         type:
           - '@azure/arm-compute.GalleryImageVersionPublishingProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImageVersion.replicationStatus'
     name: replicationStatus
@@ -129,6 +135,7 @@ items:
       return:
         type:
           - '@azure/arm-compute.ReplicationStatus'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImageVersion.storageProfile'
     name: storageProfile
@@ -137,15 +144,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: >-
-      **NOTE: This property will not be serialized. It can only be populated by
-      the server.**
-    optional: true
+    summary: ''
     syntax:
-      content: 'storageProfile?: GalleryImageVersionStorageProfile'
+      content: 'storageProfile: GalleryImageVersionStorageProfile'
       return:
         type:
           - '@azure/arm-compute.GalleryImageVersionStorageProfile'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImageVersion.tags'
     name: tags
@@ -161,6 +166,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.GalleryImageVersion.type'
     name: type
@@ -180,6 +186,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: '@azure/arm-compute.Resource'
@@ -188,12 +195,12 @@ references:
       - name: Resource
         fullName: Resource
         uid: '@azure/arm-compute.Resource'
-  - uid: '@azure/arm-compute.ProvisioningState2'
-    name: ProvisioningState2
+  - uid: '@azure/arm-compute.ProvisioningState3'
+    name: ProvisioningState3
     spec.typeScript:
-      - name: ProvisioningState2
-        fullName: ProvisioningState2
-        uid: '@azure/arm-compute.ProvisioningState2'
+      - name: ProvisioningState3
+        fullName: ProvisioningState3
+        uid: '@azure/arm-compute.ProvisioningState3'
   - uid: '@azure/arm-compute.GalleryImageVersionPublishingProfile'
     name: GalleryImageVersionPublishingProfile
     spec.typeScript:

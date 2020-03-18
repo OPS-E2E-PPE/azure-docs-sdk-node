@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.SubscriptionUsageListResult.entries'
       - '@azure/arm-sql.SubscriptionUsageListResult.every'
       - '@azure/arm-sql.SubscriptionUsageListResult.fill'
-      - '@azure/arm-sql.SubscriptionUsageListResult.filter_1'
       - '@azure/arm-sql.SubscriptionUsageListResult.filter'
+      - '@azure/arm-sql.SubscriptionUsageListResult.filter_1'
       - '@azure/arm-sql.SubscriptionUsageListResult.find'
       - '@azure/arm-sql.SubscriptionUsageListResult.find_1'
       - '@azure/arm-sql.SubscriptionUsageListResult.findIndex'
       - '@azure/arm-sql.SubscriptionUsageListResult.forEach'
+      - '@azure/arm-sql.SubscriptionUsageListResult.includes'
       - '@azure/arm-sql.SubscriptionUsageListResult.indexOf'
       - '@azure/arm-sql.SubscriptionUsageListResult.join'
       - '@azure/arm-sql.SubscriptionUsageListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.concat'
     name: 'concat(ConcatArray<SubscriptionUsage>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.every'
     name: >-
       every((value: SubscriptionUsage, index: number, array:
-      SubscriptionUsage[]) => boolean, any)
+      SubscriptionUsage[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: SubscriptionUsage, index: number,
-        array: SubscriptionUsage[]) => boolean, thisArg?: any)
+        array: SubscriptionUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SubscriptionUsage, index: number, array:
-              SubscriptionUsage[]) => boolean
+              SubscriptionUsage[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.fill'
     name: 'fill(SubscriptionUsage, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.SubscriptionUsageListResult.filter_1'
-    name: >-
-      filter((value: SubscriptionUsage, index: number, array:
-      SubscriptionUsage[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: SubscriptionUsage, index: number,
-        array: SubscriptionUsage[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: SubscriptionUsage, index: number, array:
-              SubscriptionUsage[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.SubscriptionUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SubscriptionUsageListResult.filter_1'
+    name: >-
+      filter((value: SubscriptionUsage, index: number, array:
+      SubscriptionUsage[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: SubscriptionUsage, index: number,
+        array: SubscriptionUsage[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: SubscriptionUsage, index: number, array:
+              SubscriptionUsage[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.SubscriptionUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.find_1'
     name: >-
       find((value: SubscriptionUsage, index: number, obj: SubscriptionUsage[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SubscriptionUsage, index: number, obj:
-        SubscriptionUsage[]) => boolean, thisArg?: any)
+        SubscriptionUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SubscriptionUsage, index: number, obj:
-              SubscriptionUsage[]) => boolean
+              SubscriptionUsage[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.findIndex'
     name: >-
       findIndex((value: SubscriptionUsage, index: number, obj:
-      SubscriptionUsage[]) => boolean, any)
+      SubscriptionUsage[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: SubscriptionUsage, index: number,
-        obj: SubscriptionUsage[]) => boolean, thisArg?: any)
+        obj: SubscriptionUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SubscriptionUsage, index: number, obj:
-              SubscriptionUsage[]) => boolean
+              SubscriptionUsage[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SubscriptionUsageListResult.includes'
+    name: 'includes(SubscriptionUsage, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SubscriptionUsage, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.SubscriptionUsage'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.indexOf'
     name: 'indexOf(SubscriptionUsage, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.lastIndexOf'
     name: 'lastIndexOf(SubscriptionUsage, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.push'
     name: 'push(SubscriptionUsage[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.reduce'
     name: >-
@@ -689,6 +737,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.reduce_1'
     name: >-
@@ -699,10 +748,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: SubscriptionUsage,
@@ -724,6 +770,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.reduce_2'
     name: >-
@@ -762,6 +809,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.reduceRight'
     name: >-
@@ -796,6 +844,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.reduceRight_1'
     name: >-
@@ -806,11 +855,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: SubscriptionUsage,
@@ -832,6 +877,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.reduceRight_2'
     name: >-
@@ -871,6 +917,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.reverse'
     name: reverse()
@@ -885,6 +932,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.shift'
     name: shift()
@@ -899,6 +947,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -924,11 +973,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.some'
     name: >-
       some((value: SubscriptionUsage, index: number, array: SubscriptionUsage[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -939,13 +989,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: SubscriptionUsage, index: number,
-        array: SubscriptionUsage[]) => boolean, thisArg?: any)
+        array: SubscriptionUsage[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SubscriptionUsage, index: number, array:
-              SubscriptionUsage[]) => boolean
+              SubscriptionUsage[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -961,6 +1011,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.sort'
     name: 'sort(undefined | (a: SubscriptionUsage, b: SubscriptionUsage) => number)'
@@ -985,6 +1036,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.splice_1'
     name: 'splice(number, number, SubscriptionUsage[])'
@@ -1018,6 +1070,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1046,6 +1099,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsage[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.toLocaleString'
     name: toLocaleString()
@@ -1062,6 +1116,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.toString'
     name: toString()
@@ -1076,6 +1131,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.unshift'
     name: 'unshift(SubscriptionUsage[])'
@@ -1095,6 +1151,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SubscriptionUsageListResult.values'
     name: values()
@@ -1109,6 +1166,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.SubscriptionUsage>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.SubscriptionUsage>

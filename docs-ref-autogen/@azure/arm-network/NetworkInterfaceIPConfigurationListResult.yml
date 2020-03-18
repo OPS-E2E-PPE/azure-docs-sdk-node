@@ -11,12 +11,13 @@ items:
       - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.entries'
       - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.every'
       - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.fill'
-      - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.filter_1'
       - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.filter'
+      - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.filter_1'
       - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.find'
       - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.find_1'
       - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.findIndex'
       - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.forEach'
+      - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.includes'
       - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.indexOf'
       - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.join'
       - '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.keys'
@@ -66,6 +67,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.concat'
     name: 'concat(ConcatArray<NetworkInterfaceIPConfiguration>[])'
@@ -85,6 +87,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -104,6 +107,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -147,6 +151,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.entries'
     name: entries()
@@ -161,11 +166,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.every'
     name: >-
       every((value: NetworkInterfaceIPConfiguration, index: number, array:
-      NetworkInterfaceIPConfiguration[]) => boolean, any)
+      NetworkInterfaceIPConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -174,14 +180,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: NetworkInterfaceIPConfiguration,
-        index: number, array: NetworkInterfaceIPConfiguration[]) => boolean,
+        index: number, array: NetworkInterfaceIPConfiguration[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: NetworkInterfaceIPConfiguration, index: number, array:
-              NetworkInterfaceIPConfiguration[]) => boolean
+              NetworkInterfaceIPConfiguration[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -197,6 +203,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.fill'
     name: >-
@@ -239,44 +246,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.filter_1'
-    name: >-
-      filter((value: NetworkInterfaceIPConfiguration, index: number, array:
-      NetworkInterfaceIPConfiguration[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: NetworkInterfaceIPConfiguration,
-        index: number, array: NetworkInterfaceIPConfiguration[]) => any,
-        thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: NetworkInterfaceIPConfiguration, index: number, array:
-              NetworkInterfaceIPConfiguration[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.filter'
     name: >-
@@ -315,6 +285,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.filter_1'
+    name: >-
+      filter((value: NetworkInterfaceIPConfiguration, index: number, array:
+      NetworkInterfaceIPConfiguration[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: NetworkInterfaceIPConfiguration,
+        index: number, array: NetworkInterfaceIPConfiguration[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: NetworkInterfaceIPConfiguration, index: number, array:
+              NetworkInterfaceIPConfiguration[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.find'
     name: >-
@@ -361,31 +371,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.find_1'
     name: >-
       find((value: NetworkInterfaceIPConfiguration, index: number, obj:
-      NetworkInterfaceIPConfiguration[]) => boolean, any)
+      NetworkInterfaceIPConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: NetworkInterfaceIPConfiguration, index:
-        number, obj: NetworkInterfaceIPConfiguration[]) => boolean, thisArg?:
+        number, obj: NetworkInterfaceIPConfiguration[]) => unknown, thisArg?:
         any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: NetworkInterfaceIPConfiguration, index: number, obj:
-              NetworkInterfaceIPConfiguration[]) => boolean
+              NetworkInterfaceIPConfiguration[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -395,11 +402,12 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.findIndex'
     name: >-
       findIndex((value: NetworkInterfaceIPConfiguration, index: number, obj:
-      NetworkInterfaceIPConfiguration[]) => boolean, any)
+      NetworkInterfaceIPConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -412,14 +420,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: NetworkInterfaceIPConfiguration,
-        index: number, obj: NetworkInterfaceIPConfiguration[]) => boolean,
+        index: number, obj: NetworkInterfaceIPConfiguration[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: NetworkInterfaceIPConfiguration, index: number, obj:
-              NetworkInterfaceIPConfiguration[]) => boolean
+              NetworkInterfaceIPConfiguration[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -441,6 +449,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.forEach'
     name: >-
@@ -474,6 +483,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.includes'
+    name: 'includes(NetworkInterfaceIPConfiguration, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: NetworkInterfaceIPConfiguration,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-network.NetworkInterfaceIPConfiguration'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.indexOf'
     name: 'indexOf(NetworkInterfaceIPConfiguration, undefined | number)'
     children: []
@@ -500,6 +539,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.join'
     name: join(undefined | string)
@@ -524,6 +564,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.keys'
     name: keys()
@@ -538,6 +579,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.lastIndexOf'
     name: 'lastIndexOf(NetworkInterfaceIPConfiguration, undefined | number)'
@@ -565,6 +607,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.length'
     name: length
@@ -581,6 +624,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.map'
     name: >-
@@ -618,6 +662,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.nextLink'
     name: nextLink
@@ -637,6 +682,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.pop'
     name: pop()
@@ -651,6 +697,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.push'
     name: 'push(NetworkInterfaceIPConfiguration[])'
@@ -670,6 +717,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.reduce'
     name: >-
@@ -705,6 +753,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.reduce_1'
     name: >-
@@ -716,10 +765,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -743,6 +789,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.reduce_2'
     name: >-
@@ -782,6 +829,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.reduceRight'
     name: >-
@@ -818,6 +866,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.reduceRight_1'
     name: >-
@@ -829,11 +878,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -857,6 +902,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.reduceRight_2'
     name: >-
@@ -898,6 +944,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.reverse'
     name: reverse()
@@ -912,6 +959,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.shift'
     name: shift()
@@ -926,6 +974,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration | undefined'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -951,11 +1000,12 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.some'
     name: >-
       some((value: NetworkInterfaceIPConfiguration, index: number, array:
-      NetworkInterfaceIPConfiguration[]) => boolean, any)
+      NetworkInterfaceIPConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -966,14 +1016,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: NetworkInterfaceIPConfiguration,
-        index: number, array: NetworkInterfaceIPConfiguration[]) => boolean,
+        index: number, array: NetworkInterfaceIPConfiguration[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: NetworkInterfaceIPConfiguration, index: number, array:
-              NetworkInterfaceIPConfiguration[]) => boolean
+              NetworkInterfaceIPConfiguration[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -989,6 +1039,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.sort'
     name: >-
@@ -1018,6 +1069,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.splice_1'
     name: 'splice(number, number, NetworkInterfaceIPConfiguration[])'
@@ -1051,6 +1103,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1079,6 +1132,7 @@ items:
       return:
         type:
           - '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.NetworkInterfaceIPConfigurationListResult.toLocaleString
@@ -1096,6 +1150,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.toString'
     name: toString()
@@ -1110,6 +1165,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.unshift'
     name: 'unshift(NetworkInterfaceIPConfiguration[])'
@@ -1129,6 +1185,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfigurationListResult.values'
     name: values()
@@ -1143,6 +1200,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-network.NetworkInterfaceIPConfiguration>
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: Array<@azure/arm-network.NetworkInterfaceIPConfiguration>

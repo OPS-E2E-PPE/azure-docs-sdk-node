@@ -9,7 +9,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Properties that are common to all tracked resources.
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.ResourceProperties.creationTime'
     name: creationTime
@@ -18,13 +18,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The time the resource was created.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'creationTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.ResourceProperties.provisioningState'
     name: provisioningState
@@ -33,13 +38,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Provisioning state of the resource. Possible values include: 'Accepted',
+      'Creating',
+
+      'Updating', 'Succeeded', 'Failed', 'Deleting'
     optional: true
     syntax:
       content: 'provisioningState?: ProvisioningState'
       return:
         type:
           - '@azure/arm-timeseriesinsights.ProvisioningState'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
 references:
   - uid: '@azure/arm-timeseriesinsights.ProvisioningState'

@@ -18,9 +18,9 @@ items:
         @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.every
       - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.fill'
       - >-
-        @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.filter_1
-      - >-
         @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.filter
+      - >-
+        @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.filter_1
       - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.find'
       - >-
         @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.find_1
@@ -28,6 +28,8 @@ items:
         @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.findIndex
       - >-
         @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.forEach
+      - >-
+        @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.includes
       - >-
         @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.indexOf
       - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.join'
@@ -91,6 +93,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.concat'
     name: 'concat(ConcatArray<ApplicationInsightsComponentAPIKey>[])'
@@ -113,6 +116,7 @@ items:
       return:
         type:
           - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey[]'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.concat_1
@@ -133,6 +137,7 @@ items:
       return:
         type:
           - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey[]'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.copyWithin
@@ -177,6 +182,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.entries
@@ -192,11 +198,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.every'
     name: >-
       every((value: ApplicationInsightsComponentAPIKey, index: number, array:
-      ApplicationInsightsComponentAPIKey[]) => boolean, any)
+      ApplicationInsightsComponentAPIKey[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -205,14 +212,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ApplicationInsightsComponentAPIKey,
-        index: number, array: ApplicationInsightsComponentAPIKey[]) => boolean,
+        index: number, array: ApplicationInsightsComponentAPIKey[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ApplicationInsightsComponentAPIKey, index: number, array:
-              ApplicationInsightsComponentAPIKey[]) => boolean
+              ApplicationInsightsComponentAPIKey[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -228,6 +235,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.fill'
     name: >-
@@ -270,45 +278,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-appinsights'
-  - uid: >-
-      @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.filter_1
-    name: >-
-      filter((value: ApplicationInsightsComponentAPIKey, index: number, array:
-      ApplicationInsightsComponentAPIKey[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ApplicationInsightsComponentAPIKey,
-        index: number, array: ApplicationInsightsComponentAPIKey[]) => any,
-        thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ApplicationInsightsComponentAPIKey, index: number, array:
-              ApplicationInsightsComponentAPIKey[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey[]'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.filter'
     name: >-
@@ -347,6 +317,47 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-appinsights'
+  - uid: >-
+      @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.filter_1
+    name: >-
+      filter((value: ApplicationInsightsComponentAPIKey, index: number, array:
+      ApplicationInsightsComponentAPIKey[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ApplicationInsightsComponentAPIKey,
+        index: number, array: ApplicationInsightsComponentAPIKey[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ApplicationInsightsComponentAPIKey, index: number, array:
+              ApplicationInsightsComponentAPIKey[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey[]'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.find'
     name: >-
@@ -393,31 +404,28 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.find_1'
     name: >-
       find((value: ApplicationInsightsComponentAPIKey, index: number, obj:
-      ApplicationInsightsComponentAPIKey[]) => boolean, any)
+      ApplicationInsightsComponentAPIKey[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ApplicationInsightsComponentAPIKey,
-        index: number, obj: ApplicationInsightsComponentAPIKey[]) => boolean,
+        index: number, obj: ApplicationInsightsComponentAPIKey[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ApplicationInsightsComponentAPIKey, index: number, obj:
-              ApplicationInsightsComponentAPIKey[]) => boolean
+              ApplicationInsightsComponentAPIKey[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -429,12 +437,13 @@ items:
           - >-
             @azure/arm-appinsights.ApplicationInsightsComponentAPIKey |
             undefined
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.findIndex
     name: >-
       findIndex((value: ApplicationInsightsComponentAPIKey, index: number, obj:
-      ApplicationInsightsComponentAPIKey[]) => boolean, any)
+      ApplicationInsightsComponentAPIKey[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -448,13 +457,13 @@ items:
       content: >-
         function findIndex(predicate: (value:
         ApplicationInsightsComponentAPIKey, index: number, obj:
-        ApplicationInsightsComponentAPIKey[]) => boolean, thisArg?: any)
+        ApplicationInsightsComponentAPIKey[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ApplicationInsightsComponentAPIKey, index: number, obj:
-              ApplicationInsightsComponentAPIKey[]) => boolean
+              ApplicationInsightsComponentAPIKey[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -476,6 +485,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.forEach
@@ -511,6 +521,37 @@ items:
           optional: true
     package: '@azure/arm-appinsights'
   - uid: >-
+      @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.includes
+    name: 'includes(ApplicationInsightsComponentAPIKey, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ApplicationInsightsComponentAPIKey,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-appinsights'
+  - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.indexOf
     name: 'indexOf(ApplicationInsightsComponentAPIKey, undefined | number)'
     children: []
@@ -537,6 +578,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.join'
     name: join(undefined | string)
@@ -561,6 +603,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.keys'
     name: keys()
@@ -575,6 +618,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.lastIndexOf
@@ -603,6 +647,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.length'
     name: length
@@ -619,6 +664,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.map'
     name: >-
@@ -656,6 +702,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.pop'
     name: pop()
@@ -672,6 +719,7 @@ items:
           - >-
             @azure/arm-appinsights.ApplicationInsightsComponentAPIKey |
             undefined
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.push'
     name: 'push(ApplicationInsightsComponentAPIKey[])'
@@ -691,6 +739,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.reduce'
     name: >-
@@ -728,6 +777,7 @@ items:
       return:
         type:
           - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.reduce_1
@@ -740,10 +790,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -768,6 +815,7 @@ items:
       return:
         type:
           - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.reduce_2
@@ -809,6 +857,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.reduceRight
@@ -848,6 +897,7 @@ items:
       return:
         type:
           - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.reduceRight_1
@@ -860,11 +910,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -889,6 +935,7 @@ items:
       return:
         type:
           - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.reduceRight_2
@@ -931,6 +978,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.reverse
@@ -946,6 +994,7 @@ items:
       return:
         type:
           - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey[]'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.shift'
     name: shift()
@@ -962,6 +1011,7 @@ items:
           - >-
             @azure/arm-appinsights.ApplicationInsightsComponentAPIKey |
             undefined
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -987,11 +1037,12 @@ items:
       return:
         type:
           - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey[]'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.some'
     name: >-
       some((value: ApplicationInsightsComponentAPIKey, index: number, array:
-      ApplicationInsightsComponentAPIKey[]) => boolean, any)
+      ApplicationInsightsComponentAPIKey[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -1002,14 +1053,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ApplicationInsightsComponentAPIKey,
-        index: number, array: ApplicationInsightsComponentAPIKey[]) => boolean,
+        index: number, array: ApplicationInsightsComponentAPIKey[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ApplicationInsightsComponentAPIKey, index: number, array:
-              ApplicationInsightsComponentAPIKey[]) => boolean
+              ApplicationInsightsComponentAPIKey[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -1025,6 +1076,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.sort'
     name: >-
@@ -1054,6 +1106,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.splice_1
@@ -1088,6 +1141,7 @@ items:
       return:
         type:
           - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey[]'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1116,6 +1170,7 @@ items:
       return:
         type:
           - '@azure/arm-appinsights.ApplicationInsightsComponentAPIKey[]'
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.toLocaleString
@@ -1133,6 +1188,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.toString
@@ -1148,6 +1204,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: >-
       @azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.unshift
@@ -1168,6 +1225,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-appinsights'
   - uid: '@azure/arm-appinsights.ApplicationInsightsComponentAPIKeyListResult.values'
     name: values()
@@ -1183,6 +1241,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-appinsights.ApplicationInsightsComponentAPIKey>
+        description: ''
     package: '@azure/arm-appinsights'
 references:
   - uid: Array<@azure/arm-appinsights.ApplicationInsightsComponentAPIKey>

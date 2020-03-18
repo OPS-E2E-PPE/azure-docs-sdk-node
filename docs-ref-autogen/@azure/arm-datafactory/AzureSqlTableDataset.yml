@@ -5,17 +5,20 @@ items:
     fullName: AzureSqlTableDataset
     children:
       - '@azure/arm-datafactory.AzureSqlTableDataset.annotations'
+      - '@azure/arm-datafactory.AzureSqlTableDataset.azureSqlTableDatasetSchema'
       - '@azure/arm-datafactory.AzureSqlTableDataset.description'
       - '@azure/arm-datafactory.AzureSqlTableDataset.folder'
       - '@azure/arm-datafactory.AzureSqlTableDataset.linkedServiceName'
       - '@azure/arm-datafactory.AzureSqlTableDataset.parameters'
+      - '@azure/arm-datafactory.AzureSqlTableDataset.schema'
       - '@azure/arm-datafactory.AzureSqlTableDataset.structure'
+      - '@azure/arm-datafactory.AzureSqlTableDataset.table'
       - '@azure/arm-datafactory.AzureSqlTableDataset.tableName'
       - '@azure/arm-datafactory.AzureSqlTableDataset.type'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: The Azure SQL Server database dataset.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureSqlTableDataset.annotations'
     name: annotations
@@ -24,13 +27,34 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the Dataset.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.AzureSqlTableDataset.azureSqlTableDatasetSchema'
+    name: azureSqlTableDatasetSchema
+    fullName: azureSqlTableDatasetSchema
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The schema name of the Azure SQL database. Type: string (or Expression
+      with resultType
+
+      string).
+    optional: true
+    syntax:
+      content: 'azureSqlTableDatasetSchema?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureSqlTableDataset.description'
     name: description
@@ -39,13 +63,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Dataset description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureSqlTableDataset.folder'
     name: folder
@@ -54,13 +79,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The folder that this Dataset is in. If not specified, Dataset will appear
+      at the root level.
     optional: true
     syntax:
       content: 'folder?: DatasetFolder'
       return:
         type:
           - '@azure/arm-datafactory.DatasetFolder'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureSqlTableDataset.linkedServiceName'
     name: linkedServiceName
@@ -69,12 +97,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     syntax:
       content: 'linkedServiceName: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureSqlTableDataset.parameters'
     name: parameters
@@ -83,7 +112,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for dataset.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -92,6 +121,27 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.AzureSqlTableDataset.schema'
+    name: schema
+    fullName: schema
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Columns that define the physical type schema of the dataset. Type: array
+      (or Expression with
+
+      resultType array), itemType: DatasetSchemaDataElement.
+    optional: true
+    syntax:
+      content: 'schema?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureSqlTableDataset.structure'
     name: structure
@@ -100,13 +150,36 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Columns that define the structure of the dataset. Type: array (or
+      Expression with resultType
+
+      array), itemType: DatasetDataElement.
     optional: true
     syntax:
       content: 'structure?: any'
       return:
         type:
           - any
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.AzureSqlTableDataset.table'
+    name: table
+    fullName: table
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The table name of the Azure SQL database. Type: string (or Expression with
+      resultType string).
+    optional: true
+    syntax:
+      content: 'table?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureSqlTableDataset.tableName'
     name: tableName
@@ -115,12 +188,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      This property will be retired. Please consider using schema + table
+      properties instead.
+    optional: true
     syntax:
-      content: 'tableName: any'
+      content: 'tableName?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.AzureSqlTableDataset.type'
     name: type
@@ -129,12 +206,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "AzureSqlTable"'
       return:
         type:
           - '"AzureSqlTable"'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.DatasetFolder'

@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Azure VM (Mercury) workload-specific backup policy.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.GenericProtectionPolicy.backupManagementType
@@ -25,12 +25,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'backupManagementType: "GenericProtectionPolicy"'
       return:
         type:
           - '"GenericProtectionPolicy"'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.GenericProtectionPolicy.fabricName'
     name: fabricName
@@ -39,13 +40,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Name of this policy's fabric.
     optional: true
     syntax:
       content: 'fabricName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.GenericProtectionPolicy.protectedItemsCount
@@ -55,13 +57,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Number of items associated with this policy.
     optional: true
     syntax:
       content: 'protectedItemsCount?: undefined | number'
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.GenericProtectionPolicy.subProtectionPolicy
@@ -71,13 +74,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of sub-protection policies which includes schedule and retention
     optional: true
     syntax:
       content: 'subProtectionPolicy?: SubProtectionPolicy[]'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.SubProtectionPolicy[]'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.GenericProtectionPolicy.timeZone'
     name: timeZone
@@ -86,13 +90,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      TimeZone optional input as string. For example: TimeZone = "Pacific
+      Standard Time".
     optional: true
     syntax:
       content: 'timeZone?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.SubProtectionPolicy[]'

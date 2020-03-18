@@ -7,7 +7,6 @@ items:
       - '@azure/arm-network.VpnGateways.beginCreateOrUpdate'
       - '@azure/arm-network.VpnGateways.beginDeleteMethod'
       - '@azure/arm-network.VpnGateways.beginReset'
-      - '@azure/arm-network.VpnGateways.beginUpdateTags'
       - '@azure/arm-network.VpnGateways.createOrUpdate'
       - '@azure/arm-network.VpnGateways.deleteMethod'
       - '@azure/arm-network.VpnGateways.get'
@@ -27,6 +26,8 @@ items:
       - '@azure/arm-network.VpnGateways.listNext_1'
       - '@azure/arm-network.VpnGateways.reset'
       - '@azure/arm-network.VpnGateways.updateTags'
+      - '@azure/arm-network.VpnGateways.updateTags_2'
+      - '@azure/arm-network.VpnGateways.updateTags_1'
       - '@azure/arm-network.VpnGateways.constructor'
     langs:
       - typeScript
@@ -68,6 +69,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -97,6 +99,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.beginReset'
     name: 'beginReset(string, string, msRest.RequestOptionsBase)'
@@ -126,39 +129,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.VpnGateways.beginUpdateTags'
-    name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Updates virtual wan vpn gateway tags.
-    syntax:
-      content: >-
-        function beginUpdateTags(resourceGroupName: string, gatewayName: string,
-        vpnGatewayParameters: TagsObject, options?: msRest.RequestOptionsBase)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The resource group name of the VpnGateway.
-        - id: gatewayName
-          type:
-            - string
-          description: The name of the gateway.
-        - id: vpnGatewayParameters
-          type:
-            - '@azure/arm-network.TagsObject'
-          description: Parameters supplied to update a virtual wan vpn gateway tags.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.createOrUpdate'
     name: 'createOrUpdate(string, string, VpnGateway, msRest.RequestOptionsBase)'
@@ -194,6 +165,7 @@ items:
       return:
         type:
           - Promise<Models.VpnGatewaysCreateOrUpdateResponse>
+        description: Promise<Models.VpnGatewaysCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -223,6 +195,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.get'
     name: 'get(string, string, msRest.RequestOptionsBase)'
@@ -252,6 +225,7 @@ items:
       return:
         type:
           - Promise<Models.VpnGatewaysGetResponse>
+        description: Promise<Models.VpnGatewaysGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.get_2'
     name: 'get(string, string, RequestOptionsBase, ServiceCallback<VpnGateway>)'
@@ -282,9 +256,6 @@ items:
             - ServiceCallback<@azure/arm-network.VpnGateway>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnGatewaysGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.get_1'
     name: 'get(string, string, ServiceCallback<VpnGateway>)'
@@ -311,9 +282,6 @@ items:
             - ServiceCallback<@azure/arm-network.VpnGateway>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnGatewaysGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.list'
     name: list(msRest.RequestOptionsBase)
@@ -333,6 +301,7 @@ items:
       return:
         type:
           - Promise<Models.VpnGatewaysListResponse>
+        description: Promise<Models.VpnGatewaysListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.list_2'
     name: 'list(RequestOptionsBase, ServiceCallback<ListVpnGatewaysResult>)'
@@ -355,9 +324,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnGatewaysResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnGatewaysListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.list_1'
     name: list(ServiceCallback<ListVpnGatewaysResult>)
@@ -374,9 +340,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnGatewaysResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnGatewaysListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.listByResourceGroup'
     name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
@@ -402,6 +365,7 @@ items:
       return:
         type:
           - Promise<Models.VpnGatewaysListByResourceGroupResponse>
+        description: Promise<Models.VpnGatewaysListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.listByResourceGroup_2'
     name: >-
@@ -430,9 +394,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnGatewaysResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnGatewaysListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.listByResourceGroup_1'
     name: 'listByResourceGroup(string, ServiceCallback<ListVpnGatewaysResult>)'
@@ -455,9 +416,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnGatewaysResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnGatewaysListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.listByResourceGroupNext'
     name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
@@ -483,6 +441,7 @@ items:
       return:
         type:
           - Promise<Models.VpnGatewaysListByResourceGroupNextResponse>
+        description: Promise<Models.VpnGatewaysListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.listByResourceGroupNext_2'
     name: >-
@@ -511,9 +470,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnGatewaysResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnGatewaysListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.listByResourceGroupNext_1'
     name: 'listByResourceGroupNext(string, ServiceCallback<ListVpnGatewaysResult>)'
@@ -536,9 +492,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnGatewaysResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnGatewaysListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -564,6 +517,7 @@ items:
       return:
         type:
           - Promise<Models.VpnGatewaysListNextResponse>
+        description: Promise<Models.VpnGatewaysListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.listNext_2'
     name: >-
@@ -592,9 +546,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnGatewaysResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnGatewaysListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.listNext_1'
     name: 'listNext(string, ServiceCallback<ListVpnGatewaysResult>)'
@@ -617,9 +568,6 @@ items:
             - ServiceCallback<@azure/arm-network.ListVpnGatewaysResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VpnGatewaysListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.reset'
     name: 'reset(string, string, msRest.RequestOptionsBase)'
@@ -649,6 +597,7 @@ items:
       return:
         type:
           - Promise<Models.VpnGatewaysResetResponse>
+        description: Promise<Models.VpnGatewaysResetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.updateTags'
     name: 'updateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
@@ -682,6 +631,74 @@ items:
       return:
         type:
           - Promise<Models.VpnGatewaysUpdateTagsResponse>
+        description: Promise<Models.VpnGatewaysUpdateTagsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VpnGateways.updateTags_2'
+    name: >-
+      updateTags(string, string, TagsObject, RequestOptionsBase,
+      ServiceCallback<VpnGateway>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, gatewayName: string,
+        vpnGatewayParameters: TagsObject, options: RequestOptionsBase, callback:
+        ServiceCallback<VpnGateway>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name of the VpnGateway.
+        - id: gatewayName
+          type:
+            - string
+          description: The name of the gateway.
+        - id: vpnGatewayParameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update a virtual wan vpn gateway tags.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VpnGateway>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VpnGateways.updateTags_1'
+    name: 'updateTags(string, string, TagsObject, ServiceCallback<VpnGateway>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, gatewayName: string,
+        vpnGatewayParameters: TagsObject, callback: ServiceCallback<VpnGateway>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The resource group name of the VpnGateway.
+        - id: gatewayName
+          type:
+            - string
+          description: The name of the gateway.
+        - id: vpnGatewayParameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update a virtual wan vpn gateway tags.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.VpnGateway>
+          description: |
+            The callback
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VpnGateways.constructor'
     name: VpnGateways(NetworkManagementClientContext)
@@ -712,12 +729,6 @@ references:
       - name: VpnGateway
         fullName: VpnGateway
         uid: '@azure/arm-network.VpnGateway'
-  - uid: '@azure/arm-network.TagsObject'
-    name: TagsObject
-    spec.typeScript:
-      - name: TagsObject
-        fullName: TagsObject
-        uid: '@azure/arm-network.TagsObject'
   - uid: ServiceCallback<@azure/arm-network.VpnGateway>
     name: VpnGateway>
     spec.typeScript:
@@ -738,3 +749,9 @@ references:
         uid: '@azure/arm-network.ListVpnGatewaysResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'

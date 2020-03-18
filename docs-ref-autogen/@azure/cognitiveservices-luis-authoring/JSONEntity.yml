@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-luis-authoring.JSONEntity.endPos'
       - '@azure/cognitiveservices-luis-authoring.JSONEntity.entity'
+      - '@azure/cognitiveservices-luis-authoring.JSONEntity.role'
       - '@azure/cognitiveservices-luis-authoring.JSONEntity.startPos'
     langs:
       - typeScript
@@ -25,6 +26,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.JSONEntity.entity'
     name: entity
@@ -39,6 +41,23 @@ items:
       return:
         type:
           - string
+        description: ''
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.JSONEntity.role'
+    name: role
+    fullName: role
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The role the entity plays in the utterance.
+    optional: true
+    syntax:
+      content: 'role?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.JSONEntity.startPos'
     name: startPos
@@ -53,4 +72,5 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'

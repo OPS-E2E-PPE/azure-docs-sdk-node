@@ -11,7 +11,9 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      The resource model definition for a Azure Resource Manager resource with
+      an etag.
     extends:
       name: '@azure/arm-deploymentmanager.Resource'
     package: '@azure/arm-deploymentmanager'
@@ -22,13 +24,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource Etag.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.AzureEntityResource.id'
     name: id
@@ -37,13 +44,20 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Fully qualified resource Id for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.AzureEntityResource.name'
     name: name
@@ -52,13 +66,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the resource
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'name?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deploymentmanager'
   - uid: '@azure/arm-deploymentmanager.AzureEntityResource.type'
     name: type
@@ -67,13 +86,20 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The type of the resource. Ex- Microsoft.Compute/virtualMachines or
+
+      Microsoft.Storage/storageAccounts.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deploymentmanager'
 references:
   - uid: '@azure/arm-deploymentmanager.Resource'

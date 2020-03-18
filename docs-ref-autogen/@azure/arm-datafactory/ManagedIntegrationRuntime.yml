@@ -12,7 +12,11 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      Managed integration runtime, including managed elastic and managed
+      dedicated integration
+
+      runtimes.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntime.computeProperties'
     name: computeProperties
@@ -21,13 +25,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The compute resource for managed integration runtime.
     optional: true
     syntax:
       content: 'computeProperties?: IntegrationRuntimeComputeProperties'
       return:
         type:
           - '@azure/arm-datafactory.IntegrationRuntimeComputeProperties'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntime.description'
     name: description
@@ -36,13 +41,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Integration runtime description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntime.ssisProperties'
     name: ssisProperties
@@ -51,13 +57,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: SSIS properties for managed integration runtime.
     optional: true
     syntax:
       content: 'ssisProperties?: IntegrationRuntimeSsisProperties'
       return:
         type:
           - '@azure/arm-datafactory.IntegrationRuntimeSsisProperties'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntime.state'
     name: state
@@ -66,13 +73,24 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Integration runtime state, only valid for managed dedicated integration
+      runtime. Possible
+
+      values include: 'Initial', 'Stopped', 'Started', 'Starting', 'Stopping',
+      'NeedRegistration',
+
+      'Online', 'Limited', 'Offline', 'AccessDenied'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'state?: IntegrationRuntimeState'
       return:
         type:
           - '@azure/arm-datafactory.IntegrationRuntimeState'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.ManagedIntegrationRuntime.type'
     name: type
@@ -81,12 +99,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Managed"'
       return:
         type:
           - '"Managed"'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.IntegrationRuntimeComputeProperties'

@@ -31,10 +31,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'activityId: string'
+      content: string activityId
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserResponse.etag'
     name: etag
@@ -45,10 +46,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'etag: string'
+      content: string etag
       return:
         type:
           - string
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserResponse.headers'
     name: headers
@@ -59,10 +61,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'headers: CosmosHeaders_2'
+      content: 'public headers: CosmosHeaders'
       return:
         type:
-          - '@azure/cosmos.CosmosHeaders_2'
+          - '@azure/cosmos.CosmosHeaders'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserResponse.requestCharge'
     name: requestCharge
@@ -73,10 +76,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'requestCharge: number'
+      content: number requestCharge
       return:
         type:
           - number
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserResponse.resource'
     name: resource
@@ -87,10 +91,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'resource: UserDefinition & Resource'
+      content: 'public resource: UserDefinition & Resource'
       return:
         type:
           - '@azure/cosmos.UserDefinition & @azure/cosmos.Resource'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserResponse.statusCode'
     name: statusCode
@@ -101,10 +106,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'statusCode: StatusCode'
+      content: 'public statusCode: StatusCode'
       return:
         type:
           - StatusCode
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserResponse.substatus'
     name: substatus
@@ -116,10 +122,11 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'substatus?: SubStatusCode'
+      content: 'public substatus?: SubStatusCode'
       return:
         type:
-          - SubStatusCode
+          - '@azure/cosmos.SubStatusCode'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserResponse.user'
     name: user
@@ -132,10 +139,11 @@ items:
       A reference to the <xref:User> corresponding to the returned
       <xref:UserDefinition>.
     syntax:
-      content: 'user: User'
+      content: 'public user: User'
       return:
         type:
           - '@azure/cosmos.User'
+        description: ''
     package: '@azure/cosmos'
   - uid: '@azure/cosmos.UserResponse.constructor'
     name: 'UserResponse(UserDefinition & Resource, CosmosHeaders, number, User)'
@@ -210,9 +218,9 @@ references:
       - name: User
         fullName: User
         uid: '@azure/cosmos.User'
-  - uid: '@azure/cosmos.CosmosHeaders_2'
-    name: CosmosHeaders_2
+  - uid: '@azure/cosmos.SubStatusCode'
+    name: SubStatusCode
     spec.typeScript:
-      - name: CosmosHeaders_2
-        fullName: CosmosHeaders_2
-        uid: '@azure/cosmos.CosmosHeaders_2'
+      - name: SubStatusCode
+        fullName: SubStatusCode
+        uid: '@azure/cosmos.SubStatusCode'

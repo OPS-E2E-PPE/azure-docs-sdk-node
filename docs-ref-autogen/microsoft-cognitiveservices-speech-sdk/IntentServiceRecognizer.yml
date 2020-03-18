@@ -5,12 +5,22 @@ items:
     fullName: IntentServiceRecognizer
     children:
       - >-
+        microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.activityTemplate
+      - >-
+        microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.agentConfig
+      - >-
         microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.audioSource
       - microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.connect
       - >-
+        microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.connectAsync
+      - >-
         microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.connectionEvents
       - >-
+        microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.conversationTranslatorToken
+      - >-
         microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.disconnect
+      - >-
+        microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.disconnectAsync
       - microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.dispose
       - >-
         microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.dynamicGrammar
@@ -21,6 +31,10 @@ items:
       - >-
         microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.recognitionMode
       - microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.recognize
+      - >-
+        microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.sendMessage
+      - >-
+        microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.serviceEvents
       - >-
         microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.setIntents
       - >-
@@ -38,6 +52,37 @@ items:
     extends:
       name: microsoft-cognitiveservices-speech-sdk.ServiceRecognizerBase
     package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.activityTemplate
+    name: activityTemplate
+    fullName: activityTemplate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string activityTemplate
+      return:
+        type:
+          - string
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.agentConfig
+    name: agentConfig
+    fullName: agentConfig
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: AgentConfig agentConfig
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.AgentConfig
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.audioSource
     name: audioSource
     fullName: audioSource
@@ -47,10 +92,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'audioSource: IAudioSource'
+      content: IAudioSource audioSource
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.IAudioSource
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.connect
     name: connect()
@@ -64,6 +110,28 @@ items:
       parameters: []
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
+      microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.connectAsync
+    name: 'connectAsync(Callback, Callback)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function connectAsync(cb?: Callback, err?: Callback)'
+      parameters:
+        - id: cb
+          type:
+            - microsoft-cognitiveservices-speech-sdk.Callback
+          description: ''
+          optional: true
+        - id: err
+          type:
+            - microsoft-cognitiveservices-speech-sdk.Callback
+          description: ''
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
       microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.connectionEvents
     name: connectionEvents
     fullName: connectionEvents
@@ -73,11 +141,28 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'connectionEvents: EventSource<ConnectionEvent>'
+      content: EventSource<ConnectionEvent> connectionEvents
       return:
         type:
           - >-
             microsoft-cognitiveservices-speech-sdk.EventSource<microsoft-cognitiveservices-speech-sdk.ConnectionEvent>
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.conversationTranslatorToken
+    name: conversationTranslatorToken
+    fullName: conversationTranslatorToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: any conversationTranslatorToken
+      return:
+        type:
+          - any
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.disconnect
     name: disconnect()
@@ -89,6 +174,28 @@ items:
     syntax:
       content: function disconnect()
       parameters: []
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.disconnectAsync
+    name: 'disconnectAsync(Callback, Callback)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disconnectAsync(cb?: Callback, err?: Callback)'
+      parameters:
+        - id: cb
+          type:
+            - microsoft-cognitiveservices-speech-sdk.Callback
+          description: ''
+          optional: true
+        - id: err
+          type:
+            - microsoft-cognitiveservices-speech-sdk.Callback
+          description: ''
+          optional: true
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.dispose
     name: dispose(string)
@@ -116,10 +223,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'dynamicGrammar: DynamicGrammarBuilder'
+      content: DynamicGrammarBuilder dynamicGrammar
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.DynamicGrammarBuilder
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.constructor
     name: >-
@@ -170,6 +278,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.recognitionMode
@@ -181,10 +290,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'recognitionMode: RecognitionMode'
+      content: RecognitionMode recognitionMode
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.RecognitionMode
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.recognize
     name: >-
@@ -215,6 +325,39 @@ items:
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.Promise<boolean>
+        description: ''
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.sendMessage
+    name: sendMessage(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function sendMessage(message: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.serviceEvents
+    name: serviceEvents
+    fullName: serviceEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: EventSource<ServiceEvent> serviceEvents
+      return:
+        type:
+          - >-
+            microsoft-cognitiveservices-speech-sdk.EventSource<microsoft-cognitiveservices-speech-sdk.ServiceEvent>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.setIntents
     name: 'setIntents([key: string]: AddedLmIntent, AddedLmIntent)'
@@ -249,10 +392,11 @@ items:
     type: property
     summary: ''
     syntax:
-      content: 'speechContext: SpeechContext'
+      content: SpeechContext speechContext
       return:
         type:
           - microsoft-cognitiveservices-speech-sdk.SpeechContext
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.stopRecognizing
@@ -265,6 +409,10 @@ items:
     syntax:
       content: function stopRecognizing()
       parameters: []
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.Promise<boolean>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.telemetryData
@@ -280,6 +428,7 @@ items:
       return:
         type:
           - '(json: string) => void'
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer.telemetryDataEnabled
@@ -295,6 +444,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
 references:
   - uid: microsoft-cognitiveservices-speech-sdk.ServiceRecognizerBase
@@ -333,6 +483,12 @@ references:
       - name: IntentRecognizer
         fullName: IntentRecognizer
         uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer
+  - uid: microsoft-cognitiveservices-speech-sdk.AgentConfig
+    name: AgentConfig
+    spec.typeScript:
+      - name: AgentConfig
+        fullName: AgentConfig
+        uid: microsoft-cognitiveservices-speech-sdk.AgentConfig
   - uid: >-
       microsoft-cognitiveservices-speech-sdk.EventSource<microsoft-cognitiveservices-speech-sdk.ConnectionEvent>
     name: ConnectionEvent>
@@ -359,12 +515,32 @@ references:
       - name: RecognitionMode
         fullName: RecognitionMode
         uid: microsoft-cognitiveservices-speech-sdk.RecognitionMode
+  - uid: >-
+      microsoft-cognitiveservices-speech-sdk.EventSource<microsoft-cognitiveservices-speech-sdk.ServiceEvent>
+    name: ServiceEvent>
+    spec.typeScript:
+      - name: EventSource
+        fullName: EventSource
+        uid: microsoft-cognitiveservices-speech-sdk.EventSource
+      - name: <
+        fullName: <
+      - name: ServiceEvent
+        fullName: ServiceEvent
+        uid: microsoft-cognitiveservices-speech-sdk.ServiceEvent
+      - name: '>'
+        fullName: '>'
   - uid: microsoft-cognitiveservices-speech-sdk.SpeechContext
     name: SpeechContext
     spec.typeScript:
       - name: SpeechContext
         fullName: SpeechContext
         uid: microsoft-cognitiveservices-speech-sdk.SpeechContext
+  - uid: microsoft-cognitiveservices-speech-sdk.Callback
+    name: Callback
+    spec.typeScript:
+      - name: Callback
+        fullName: Callback
+        uid: microsoft-cognitiveservices-speech-sdk.Callback
   - uid: microsoft-cognitiveservices-speech-sdk.Promise<boolean>
     name: Promise<boolean>
     spec.typeScript:

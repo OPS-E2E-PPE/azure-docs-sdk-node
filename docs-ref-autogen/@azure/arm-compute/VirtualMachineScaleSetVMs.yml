@@ -18,8 +18,8 @@ items:
       - '@azure/arm-compute.VirtualMachineScaleSetVMs.deallocate'
       - '@azure/arm-compute.VirtualMachineScaleSetVMs.deleteMethod'
       - '@azure/arm-compute.VirtualMachineScaleSetVMs.get'
-      - '@azure/arm-compute.VirtualMachineScaleSetVMs.get_2'
       - '@azure/arm-compute.VirtualMachineScaleSetVMs.get_1'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.get_2'
       - '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView'
       - '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_2'
       - '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_1'
@@ -83,6 +83,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
@@ -116,6 +117,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginPerformMaintenance'
     name: 'beginPerformMaintenance(string, string, string, msRest.RequestOptionsBase)'
@@ -150,6 +152,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginPowerOff'
     name: >-
@@ -193,6 +196,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRedeploy'
     name: 'beginRedeploy(string, string, string, msRest.RequestOptionsBase)'
@@ -200,7 +204,11 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Redeploys a virtual machine in a VM scale set.
+    summary: >-
+      Shuts down the virtual machine in the virtual machine scale set, moves it
+      to a new node, and
+
+      powers it back on.
     syntax:
       content: >-
         function beginRedeploy(resourceGroupName: string, vmScaleSetName:
@@ -226,6 +234,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginReimage'
     name: >-
@@ -264,6 +273,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginReimageAll'
     name: 'beginReimageAll(string, string, string, msRest.RequestOptionsBase)'
@@ -301,6 +311,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRestart'
     name: 'beginRestart(string, string, string, msRest.RequestOptionsBase)'
@@ -334,6 +345,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRunCommand'
     name: >-
@@ -374,6 +386,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginStart'
     name: 'beginStart(string, string, string, msRest.RequestOptionsBase)'
@@ -407,6 +420,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginUpdate'
     name: >-
@@ -451,6 +465,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.deallocate'
     name: 'deallocate(string, string, string, msRest.RequestOptionsBase)'
@@ -491,6 +506,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.deleteMethod'
     name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
@@ -524,9 +540,12 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.get'
-    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    name: >-
+      get(string, string, string,
+      Models.VirtualMachineScaleSetVMsGetOptionalParams)
     children: []
     type: method
     langs:
@@ -535,7 +554,8 @@ items:
     syntax:
       content: >-
         function get(resourceGroupName: string, vmScaleSetName: string,
-        instanceId: string, options?: msRest.RequestOptionsBase)
+        instanceId: string, options?:
+        Models.VirtualMachineScaleSetVMsGetOptionalParams)
       parameters:
         - id: resourceGroupName
           type:
@@ -551,52 +571,13 @@ items:
           description: The instance ID of the virtual machine.
         - id: options
           type:
-            - msRest.RequestOptionsBase
+            - Models.VirtualMachineScaleSetVMsGetOptionalParams
           description: ''
           optional: true
       return:
         type:
           - Promise<Models.VirtualMachineScaleSetVMsGetResponse>
-    package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.get_2'
-    name: >-
-      get(string, string, string, RequestOptionsBase,
-      ServiceCallback<VirtualMachineScaleSetVM>)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function get(resourceGroupName: string, vmScaleSetName: string,
-        instanceId: string, options: RequestOptionsBase, callback:
-        ServiceCallback<VirtualMachineScaleSetVM>)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: vmScaleSetName
-          type:
-            - string
-          description: The name of the VM scale set.
-        - id: instanceId
-          type:
-            - string
-          description: The instance ID of the virtual machine.
-        - id: options
-          type:
-            - RequestOptionsBase
-          description: The optional parameters
-        - id: callback
-          type:
-            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVM>
-          description: |
-            The callback
-      return:
-        type:
-          - Promise<Models.VirtualMachineScaleSetVMsGetResponse>
+        description: Promise<Models.VirtualMachineScaleSetVMsGetResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.get_1'
     name: 'get(string, string, string, ServiceCallback<VirtualMachineScaleSetVM>)'
@@ -627,9 +608,43 @@ items:
             - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVM>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualMachineScaleSetVMsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.get_2'
+    name: >-
+      get(string, string, string, VirtualMachineScaleSetVMsGetOptionalParams,
+      ServiceCallback<VirtualMachineScaleSetVM>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function get(resourceGroupName: string, vmScaleSetName: string,
+        instanceId: string, options: VirtualMachineScaleSetVMsGetOptionalParams,
+        callback: ServiceCallback<VirtualMachineScaleSetVM>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type:
+            - string
+          description: The name of the VM scale set.
+        - id: instanceId
+          type:
+            - string
+          description: The instance ID of the virtual machine.
+        - id: options
+          type:
+            - '@azure/arm-compute.VirtualMachineScaleSetVMsGetOptionalParams'
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVM>
+          description: |
+            The callback
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView'
     name: 'getInstanceView(string, string, string, msRest.RequestOptionsBase)'
@@ -663,6 +678,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualMachineScaleSetVMsGetInstanceViewResponse>
+        description: Promise<Models.VirtualMachineScaleSetVMsGetInstanceViewResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_2'
     name: >-
@@ -701,9 +717,6 @@ items:
               ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMInstanceView>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualMachineScaleSetVMsGetInstanceViewResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_1'
     name: >-
@@ -738,9 +751,6 @@ items:
               ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMInstanceView>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualMachineScaleSetVMsGetInstanceViewResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.list'
     name: 'list(string, string, Models.VirtualMachineScaleSetVMsListOptionalParams)'
@@ -770,6 +780,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualMachineScaleSetVMsListResponse>
+        description: Promise<Models.VirtualMachineScaleSetVMsListResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.list_1'
     name: 'list(string, string, ServiceCallback<VirtualMachineScaleSetVMListResult>)'
@@ -797,9 +808,6 @@ items:
               ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualMachineScaleSetVMsListResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.list_2'
     name: >-
@@ -834,9 +842,6 @@ items:
               ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualMachineScaleSetVMsListResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -862,6 +867,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualMachineScaleSetVMsListNextResponse>
+        description: Promise<Models.VirtualMachineScaleSetVMsListNextResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext_2'
     name: >-
@@ -891,9 +897,6 @@ items:
               ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualMachineScaleSetVMsListNextResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext_1'
     name: 'listNext(string, ServiceCallback<VirtualMachineScaleSetVMListResult>)'
@@ -917,9 +920,6 @@ items:
               ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.VirtualMachineScaleSetVMsListNextResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.performMaintenance'
     name: 'performMaintenance(string, string, string, msRest.RequestOptionsBase)'
@@ -953,6 +953,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.powerOff'
     name: >-
@@ -996,6 +997,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.redeploy'
     name: 'redeploy(string, string, string, msRest.RequestOptionsBase)'
@@ -1003,7 +1005,11 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Redeploys a virtual machine in a VM scale set.
+    summary: >-
+      Shuts down the virtual machine in the virtual machine scale set, moves it
+      to a new node, and
+
+      powers it back on.
     syntax:
       content: >-
         function redeploy(resourceGroupName: string, vmScaleSetName: string,
@@ -1029,6 +1035,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.reimage'
     name: >-
@@ -1067,6 +1074,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.reimageAll'
     name: 'reimageAll(string, string, string, msRest.RequestOptionsBase)'
@@ -1104,6 +1112,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.restart'
     name: 'restart(string, string, string, msRest.RequestOptionsBase)'
@@ -1137,6 +1146,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.runCommand'
     name: >-
@@ -1177,6 +1187,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualMachineScaleSetVMsRunCommandResponse>
+        description: Promise<Models.VirtualMachineScaleSetVMsRunCommandResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.start'
     name: 'start(string, string, string, msRest.RequestOptionsBase)'
@@ -1210,6 +1221,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.update'
     name: >-
@@ -1254,6 +1266,7 @@ items:
       return:
         type:
           - Promise<Models.VirtualMachineScaleSetVMsUpdateResponse>
+        description: Promise<Models.VirtualMachineScaleSetVMsUpdateResponse>
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.constructor'
     name: VirtualMachineScaleSetVMs(ComputeManagementClientContext)
@@ -1300,6 +1313,12 @@ references:
         uid: '@azure/arm-compute.VirtualMachineScaleSetVM'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMsGetOptionalParams'
+    name: VirtualMachineScaleSetVMsGetOptionalParams
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMsGetOptionalParams
+        fullName: VirtualMachineScaleSetVMsGetOptionalParams
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMsGetOptionalParams'
   - uid: ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMInstanceView>
     name: VirtualMachineScaleSetVMInstanceView>
     spec.typeScript:

@@ -46,6 +46,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.ReplayableAudioNode.id
     name: id
@@ -60,6 +61,7 @@ items:
       return:
         type:
           - () => string
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.ReplayableAudioNode.read
     name: read()
@@ -75,6 +77,7 @@ items:
         type:
           - >-
             microsoft-cognitiveservices-speech-sdk.Promise<microsoft-cognitiveservices-speech-sdk.IStreamChunk<ArrayBuffer>>
+        description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.ReplayableAudioNode.replay
     name: replay()
@@ -88,7 +91,7 @@ items:
       parameters: []
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.ReplayableAudioNode.constructor
-    name: 'ReplayableAudioNode(IAudioStreamNode, AudioStreamFormatImpl)'
+    name: 'ReplayableAudioNode(IAudioStreamNode, number)'
     children: []
     type: constructor
     langs:
@@ -96,16 +99,16 @@ items:
     summary: ''
     syntax:
       content: >-
-        new ReplayableAudioNode(audioSource: IAudioStreamNode, format:
-        AudioStreamFormatImpl)
+        new ReplayableAudioNode(audioSource: IAudioStreamNode, bytesPerSecond:
+        number)
       parameters:
         - id: audioSource
           type:
             - microsoft-cognitiveservices-speech-sdk.IAudioStreamNode
           description: ''
-        - id: format
+        - id: bytesPerSecond
           type:
-            - AudioStreamFormatImpl
+            - number
           description: ''
     package: microsoft-cognitiveservices-speech-sdk
   - uid: microsoft-cognitiveservices-speech-sdk.ReplayableAudioNode.shrinkBuffers

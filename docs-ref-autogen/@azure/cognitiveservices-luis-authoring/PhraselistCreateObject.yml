@@ -5,6 +5,8 @@ items:
     fullName: PhraselistCreateObject
     children:
       - >-
+        @azure/cognitiveservices-luis-authoring.PhraselistCreateObject.enabledForAllModels
+      - >-
         @azure/cognitiveservices-luis-authoring.PhraselistCreateObject.isExchangeable
       - '@azure/cognitiveservices-luis-authoring.PhraselistCreateObject.name'
       - '@azure/cognitiveservices-luis-authoring.PhraselistCreateObject.phrases'
@@ -12,6 +14,25 @@ items:
       - typeScript
     type: interface
     summary: Object model for creating a phraselist model.
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: >-
+      @azure/cognitiveservices-luis-authoring.PhraselistCreateObject.enabledForAllModels
+    name: enabledForAllModels
+    fullName: enabledForAllModels
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Indicates if the Phraselist is enabled for all models in the application.
+      Default value: true.
+    optional: true
+    syntax:
+      content: 'enabledForAllModels?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.PhraselistCreateObject.isExchangeable
@@ -22,37 +43,32 @@ items:
       - typeScript
     type: property
     summary: >-
-      An exchangeable phrase list feature are serves as single feature to the
-      LUIS underlying
+      An interchangeable phrase list feature serves as a list of synonyms for
+      training. A
 
-      training algorithm. It is used as a lexicon lookup feature where its value
-      is 1 if the lexicon
+      non-exchangeable phrase list serves as separate features for training. So,
+      if your
 
-      contains a given word or 0 if it doesn’t. Think of an exchangeable as a
-      synonyms list. A
+      non-interchangeable phrase list contains 5 phrases, they will be mapped to
+      5 separate
 
-      non-exchangeable phrase list feature has all the phrases in the list serve
-      as separate
+      features. You can think of the non-interchangeable phrase list as an
+      additional bag of words
 
-      features to the underlying training algorithm. So, if you your phrase list
-      feature contains 5
+      to add to LUIS existing vocabulary features. It is used as a lexicon
+      lookup feature where its
 
-      phrases, they will be mapped to 5 separate features. You can think of the
-      non-exchangeable
+      value is 1 if the lexicon contains a given word or 0 if it doesn’t. 
+      Default value is true.
 
-      phrase list feature as an additional bag of words that you are willing to
-      add to LUIS existing
-
-      vocabulary features. Think of a non-exchangeable as set of different
-      words. Default value is
-
-      true. Default value: true.
+      Default value: true.
     optional: true
     syntax:
       content: 'isExchangeable?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.PhraselistCreateObject.name'
     name: name
@@ -68,6 +84,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: '@azure/cognitiveservices-luis-authoring.PhraselistCreateObject.phrases'
     name: phrases
@@ -83,4 +100,5 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'

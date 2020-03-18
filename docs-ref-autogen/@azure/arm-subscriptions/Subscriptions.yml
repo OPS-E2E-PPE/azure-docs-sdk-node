@@ -4,6 +4,9 @@ items:
     name: Subscriptions
     fullName: Subscriptions
     children:
+      - '@azure/arm-subscriptions.Subscriptions.cancel'
+      - '@azure/arm-subscriptions.Subscriptions.cancel_2'
+      - '@azure/arm-subscriptions.Subscriptions.cancel_1'
       - '@azure/arm-subscriptions.Subscriptions.get'
       - '@azure/arm-subscriptions.Subscriptions.get_2'
       - '@azure/arm-subscriptions.Subscriptions.get_1'
@@ -16,11 +19,90 @@ items:
       - '@azure/arm-subscriptions.Subscriptions.listNext'
       - '@azure/arm-subscriptions.Subscriptions.listNext_2'
       - '@azure/arm-subscriptions.Subscriptions.listNext_1'
+      - '@azure/arm-subscriptions.Subscriptions.rename'
+      - '@azure/arm-subscriptions.Subscriptions.rename_2'
+      - '@azure/arm-subscriptions.Subscriptions.rename_1'
       - '@azure/arm-subscriptions.Subscriptions.constructor'
     langs:
       - typeScript
     type: class
     summary: Class representing a Subscriptions.
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.Subscriptions.cancel'
+    name: 'cancel(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: The operation to cancel a subscription
+    syntax:
+      content: >-
+        function cancel(subscriptionId: string, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: Subscription Id.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SubscriptionsCancelResponse>
+        description: Promise<Models.SubscriptionsCancelResponse>
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.Subscriptions.cancel_2'
+    name: >-
+      cancel(string, RequestOptionsBase,
+      ServiceCallback<CanceledSubscriptionId>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function cancel(subscriptionId: string, options: RequestOptionsBase,
+        callback: ServiceCallback<CanceledSubscriptionId>)
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: Subscription Id.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-subscriptions.CanceledSubscriptionId>
+          description: |
+            The callback
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.Subscriptions.cancel_1'
+    name: 'cancel(string, ServiceCallback<CanceledSubscriptionId>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function cancel(subscriptionId: string, callback:
+        ServiceCallback<CanceledSubscriptionId>)
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: Subscription Id.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-subscriptions.CanceledSubscriptionId>
+          description: |
+            The callback
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.get'
     name: 'get(string, msRest.RequestOptionsBase)'
@@ -46,6 +128,7 @@ items:
       return:
         type:
           - Promise<Models.SubscriptionsGetResponse>
+        description: Promise<Models.SubscriptionsGetResponse>
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.get_2'
     name: 'get(string, RequestOptionsBase, ServiceCallback<Subscription>)'
@@ -72,9 +155,6 @@ items:
             - ServiceCallback<@azure/arm-subscriptions.Subscription>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.SubscriptionsGetResponse>
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.get_1'
     name: 'get(string, ServiceCallback<Subscription>)'
@@ -97,9 +177,6 @@ items:
             - ServiceCallback<@azure/arm-subscriptions.Subscription>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.SubscriptionsGetResponse>
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.list'
     name: list(msRest.RequestOptionsBase)
@@ -119,6 +196,7 @@ items:
       return:
         type:
           - Promise<Models.SubscriptionsListResponse>
+        description: Promise<Models.SubscriptionsListResponse>
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.list_2'
     name: 'list(RequestOptionsBase, ServiceCallback<SubscriptionListResult>)'
@@ -141,9 +219,6 @@ items:
             - ServiceCallback<@azure/arm-subscriptions.SubscriptionListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.SubscriptionsListResponse>
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.list_1'
     name: list(ServiceCallback<SubscriptionListResult>)
@@ -160,9 +235,6 @@ items:
             - ServiceCallback<@azure/arm-subscriptions.SubscriptionListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.SubscriptionsListResponse>
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.listLocations'
     name: 'listLocations(string, msRest.RequestOptionsBase)'
@@ -192,6 +264,7 @@ items:
       return:
         type:
           - Promise<Models.SubscriptionsListLocationsResponse>
+        description: Promise<Models.SubscriptionsListLocationsResponse>
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.listLocations_2'
     name: >-
@@ -220,9 +293,6 @@ items:
             - ServiceCallback<@azure/arm-subscriptions.LocationListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.SubscriptionsListLocationsResponse>
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.listLocations_1'
     name: 'listLocations(string, ServiceCallback<LocationListResult>)'
@@ -245,9 +315,6 @@ items:
             - ServiceCallback<@azure/arm-subscriptions.LocationListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.SubscriptionsListLocationsResponse>
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -273,6 +340,7 @@ items:
       return:
         type:
           - Promise<Models.SubscriptionsListNextResponse>
+        description: Promise<Models.SubscriptionsListNextResponse>
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.listNext_2'
     name: >-
@@ -301,9 +369,6 @@ items:
             - ServiceCallback<@azure/arm-subscriptions.SubscriptionListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.SubscriptionsListNextResponse>
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.listNext_1'
     name: 'listNext(string, ServiceCallback<SubscriptionListResult>)'
@@ -326,9 +391,94 @@ items:
             - ServiceCallback<@azure/arm-subscriptions.SubscriptionListResult>
           description: |
             The callback
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.Subscriptions.rename'
+    name: 'rename(string, SubscriptionName, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: The operation to rename a subscription
+    syntax:
+      content: >-
+        function rename(subscriptionId: string, body: SubscriptionName,
+        options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: Subscription Id.
+        - id: body
+          type:
+            - '@azure/arm-subscriptions.SubscriptionName'
+          description: Subscription Name
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.SubscriptionsListNextResponse>
+          - Promise<Models.SubscriptionsRenameResponse>
+        description: Promise<Models.SubscriptionsRenameResponse>
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.Subscriptions.rename_2'
+    name: >-
+      rename(string, SubscriptionName, RequestOptionsBase,
+      ServiceCallback<RenamedSubscriptionId>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function rename(subscriptionId: string, body: SubscriptionName, options:
+        RequestOptionsBase, callback: ServiceCallback<RenamedSubscriptionId>)
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: Subscription Id.
+        - id: body
+          type:
+            - '@azure/arm-subscriptions.SubscriptionName'
+          description: Subscription Name
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-subscriptions.RenamedSubscriptionId>
+          description: |
+            The callback
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.Subscriptions.rename_1'
+    name: 'rename(string, SubscriptionName, ServiceCallback<RenamedSubscriptionId>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function rename(subscriptionId: string, body: SubscriptionName,
+        callback: ServiceCallback<RenamedSubscriptionId>)
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: Subscription Id.
+        - id: body
+          type:
+            - '@azure/arm-subscriptions.SubscriptionName'
+          description: Subscription Name
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-subscriptions.RenamedSubscriptionId>
+          description: |
+            The callback
     package: '@azure/arm-subscriptions'
   - uid: '@azure/arm-subscriptions.Subscriptions.constructor'
     name: Subscriptions(SubscriptionClientContext)
@@ -353,6 +503,16 @@ references:
       - name: SubscriptionClientContext
         fullName: SubscriptionClientContext
         uid: '@azure/arm-subscriptions.SubscriptionClientContext'
+  - uid: ServiceCallback<@azure/arm-subscriptions.CanceledSubscriptionId>
+    name: CanceledSubscriptionId>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CanceledSubscriptionId
+        fullName: CanceledSubscriptionId
+        uid: '@azure/arm-subscriptions.CanceledSubscriptionId'
+      - name: '>'
+        fullName: '>'
   - uid: ServiceCallback<@azure/arm-subscriptions.Subscription>
     name: Subscription>
     spec.typeScript:
@@ -381,5 +541,21 @@ references:
       - name: LocationListResult
         fullName: LocationListResult
         uid: '@azure/arm-subscriptions.LocationListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-subscriptions.SubscriptionName'
+    name: SubscriptionName
+    spec.typeScript:
+      - name: SubscriptionName
+        fullName: SubscriptionName
+        uid: '@azure/arm-subscriptions.SubscriptionName'
+  - uid: ServiceCallback<@azure/arm-subscriptions.RenamedSubscriptionId>
+    name: RenamedSubscriptionId>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RenamedSubscriptionId
+        fullName: RenamedSubscriptionId
+        uid: '@azure/arm-subscriptions.RenamedSubscriptionId'
       - name: '>'
         fullName: '>'

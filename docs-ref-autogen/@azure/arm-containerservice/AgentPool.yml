@@ -8,15 +8,22 @@ items:
       - '@azure/arm-containerservice.AgentPool.availabilityZones'
       - '@azure/arm-containerservice.AgentPool.count'
       - '@azure/arm-containerservice.AgentPool.enableAutoScaling'
+      - '@azure/arm-containerservice.AgentPool.enableNodePublicIP'
       - '@azure/arm-containerservice.AgentPool.id'
       - '@azure/arm-containerservice.AgentPool.maxCount'
       - '@azure/arm-containerservice.AgentPool.maxPods'
       - '@azure/arm-containerservice.AgentPool.minCount'
       - '@azure/arm-containerservice.AgentPool.name'
+      - '@azure/arm-containerservice.AgentPool.nodeLabels'
+      - '@azure/arm-containerservice.AgentPool.nodeTaints'
       - '@azure/arm-containerservice.AgentPool.orchestratorVersion'
       - '@azure/arm-containerservice.AgentPool.osDiskSizeGB'
       - '@azure/arm-containerservice.AgentPool.osType'
       - '@azure/arm-containerservice.AgentPool.provisioningState'
+      - '@azure/arm-containerservice.AgentPool.scaleSetEvictionPolicy'
+      - '@azure/arm-containerservice.AgentPool.scaleSetPriority'
+      - '@azure/arm-containerservice.AgentPool.spotMaxPrice'
+      - '@azure/arm-containerservice.AgentPool.tags'
       - '@azure/arm-containerservice.AgentPool.type'
       - '@azure/arm-containerservice.AgentPool.vmSize'
       - '@azure/arm-containerservice.AgentPool.vnetSubnetID'
@@ -43,6 +50,7 @@ items:
       return:
         type:
           - '@azure/arm-containerservice.AgentPoolType'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.availabilityZones'
     name: availabilityZones
@@ -52,7 +60,7 @@ items:
       - typeScript
     type: property
     summary: >-
-      (PREVIEW) Availability zones for nodes. Must use VirtualMachineScaleSets
+      Availability zones for nodes. Must use VirtualMachineScaleSets
       AgentPoolType.
     optional: true
     syntax:
@@ -60,6 +68,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.count'
     name: count
@@ -78,6 +87,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.enableAutoScaling'
     name: enableAutoScaling
@@ -93,6 +103,23 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.AgentPool.enableNodePublicIP'
+    name: enableNodePublicIP
+    fullName: enableNodePublicIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Enable public IP for nodes
+    optional: true
+    syntax:
+      content: 'enableNodePublicIP?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.id'
     name: id
@@ -112,6 +139,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.maxCount'
     name: maxCount
@@ -127,6 +155,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.maxPods'
     name: maxPods
@@ -142,6 +171,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.minCount'
     name: minCount
@@ -157,6 +187,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.name'
     name: name
@@ -179,6 +210,41 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.AgentPool.nodeLabels'
+    name: nodeLabels
+    fullName: nodeLabels
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Agent pool node labels to be persisted across all nodes in agent pool.
+    optional: true
+    syntax:
+      content: 'nodeLabels?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.AgentPool.nodeTaints'
+    name: nodeTaints
+    fullName: nodeTaints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Taints added to new nodes during node pool create and scale. For example,
+      key=value:NoSchedule.
+    optional: true
+    syntax:
+      content: 'nodeTaints?: string[]'
+      return:
+        type:
+          - 'string[]'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.orchestratorVersion'
     name: orchestratorVersion
@@ -194,6 +260,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.osDiskSizeGB'
     name: osDiskSizeGB
@@ -216,6 +283,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.osType'
     name: osType
@@ -235,6 +303,7 @@ items:
       return:
         type:
           - '@azure/arm-containerservice.OSType'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.provisioningState'
     name: provisioningState
@@ -255,6 +324,92 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.AgentPool.scaleSetEvictionPolicy'
+    name: scaleSetEvictionPolicy
+    fullName: scaleSetEvictionPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      ScaleSetEvictionPolicy to be used to specify eviction policy for Spot or
+      low priority virtual
+
+      machine scale set. Default to Delete. Possible values include: 'Delete',
+      'Deallocate'. Default
+
+      value: 'Delete'.
+    optional: true
+    syntax:
+      content: 'scaleSetEvictionPolicy?: ScaleSetEvictionPolicy'
+      return:
+        type:
+          - '@azure/arm-containerservice.ScaleSetEvictionPolicy'
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.AgentPool.scaleSetPriority'
+    name: scaleSetPriority
+    fullName: scaleSetPriority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      ScaleSetPriority to be used to specify virtual machine scale set priority.
+      Default to regular.
+
+      Possible values include: 'Spot', 'Low', 'Regular'. Default value:
+      'Regular'.
+    optional: true
+    syntax:
+      content: 'scaleSetPriority?: ScaleSetPriority'
+      return:
+        type:
+          - '@azure/arm-containerservice.ScaleSetPriority'
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.AgentPool.spotMaxPrice'
+    name: spotMaxPrice
+    fullName: spotMaxPrice
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      SpotMaxPrice to be used to specify the maximum price you are willing to
+      pay in US Dollars.
+
+      Possible values are any decimal value greater than zero or -1 which
+      indicates default price to
+
+      be up-to on-demand.
+    optional: true
+    syntax:
+      content: 'spotMaxPrice?: undefined | number'
+      return:
+        type:
+          - undefined | number
+        description: ''
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.AgentPool.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Agent pool tags to be persisted on the agent pool virtual machine scale
+      set.
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.type'
     name: type
@@ -274,6 +429,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.vmSize'
     name: vmSize
@@ -400,6 +556,7 @@ items:
       return:
         type:
           - '@azure/arm-containerservice.ContainerServiceVMSizeTypes'
+        description: ''
     package: '@azure/arm-containerservice'
   - uid: '@azure/arm-containerservice.AgentPool.vnetSubnetID'
     name: vnetSubnetID
@@ -415,6 +572,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-containerservice'
 references:
   - uid: '@azure/arm-containerservice.SubResource'
@@ -435,6 +593,18 @@ references:
       - name: OSType
         fullName: OSType
         uid: '@azure/arm-containerservice.OSType'
+  - uid: '@azure/arm-containerservice.ScaleSetEvictionPolicy'
+    name: ScaleSetEvictionPolicy
+    spec.typeScript:
+      - name: ScaleSetEvictionPolicy
+        fullName: ScaleSetEvictionPolicy
+        uid: '@azure/arm-containerservice.ScaleSetEvictionPolicy'
+  - uid: '@azure/arm-containerservice.ScaleSetPriority'
+    name: ScaleSetPriority
+    spec.typeScript:
+      - name: ScaleSetPriority
+        fullName: ScaleSetPriority
+        uid: '@azure/arm-containerservice.ScaleSetPriority'
   - uid: '@azure/arm-containerservice.ContainerServiceVMSizeTypes'
     name: ContainerServiceVMSizeTypes
     spec.typeScript:

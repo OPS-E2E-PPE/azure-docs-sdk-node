@@ -12,7 +12,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Web activity authentication properties.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivityAuthentication.password'
     name: password
@@ -21,13 +21,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Password for the PFX file or basic authentication.
     optional: true
     syntax:
-      content: 'password?: SecureString'
+      content: 'password?: SecretBaseUnion'
       return:
         type:
-          - '@azure/arm-datafactory.SecureString'
+          - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivityAuthentication.pfx'
     name: pfx
@@ -36,13 +37,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Base64-encoded contents of a PFX file.
     optional: true
     syntax:
-      content: 'pfx?: SecureString'
+      content: 'pfx?: SecretBaseUnion'
       return:
         type:
-          - '@azure/arm-datafactory.SecureString'
+          - '@azure/arm-datafactory.SecretBaseUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivityAuthentication.resource'
     name: resource
@@ -51,13 +53,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Resource for which Azure Auth token will be requested when using MSI
+      Authentication.
     optional: true
     syntax:
       content: 'resource?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivityAuthentication.type'
     name: type
@@ -66,12 +71,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Web activity authentication (Basic/ClientCertificate/MSI)
     syntax:
       content: 'type: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.WebActivityAuthentication.username'
     name: username
@@ -80,18 +86,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Web activity authentication user name for basic authentication.
     optional: true
     syntax:
       content: 'username?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
 references:
-  - uid: '@azure/arm-datafactory.SecureString'
-    name: SecureString
+  - uid: '@azure/arm-datafactory.SecretBaseUnion'
+    name: SecretBaseUnion
     spec.typeScript:
-      - name: SecureString
-        fullName: SecureString
-        uid: '@azure/arm-datafactory.SecureString'
+      - name: SecretBaseUnion
+        fullName: SecretBaseUnion
+        uid: '@azure/arm-datafactory.SecretBaseUnion'

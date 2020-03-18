@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: '@azure/arm-datafactory'
@@ -32,6 +32,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.LinkedServicesGetOptionalParams.customHeaders'
     name: customHeaders
@@ -49,6 +50,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.LinkedServicesGetOptionalParams.ifNoneMatch'
     name: ifNoneMatch
@@ -57,13 +59,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      ETag of the linked service entity. Should only be specified for get. If
+      the ETag matches the
+
+      existing entity tag, or if * was provided, then no content will be
+      returned.
     optional: true
     syntax:
       content: 'ifNoneMatch?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.LinkedServicesGetOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -81,6 +89,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.LinkedServicesGetOptionalParams.onUploadProgress'
     name: onUploadProgress
@@ -96,6 +105,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.LinkedServicesGetOptionalParams.timeout'
     name: timeout
@@ -113,4 +123,5 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-datafactory'

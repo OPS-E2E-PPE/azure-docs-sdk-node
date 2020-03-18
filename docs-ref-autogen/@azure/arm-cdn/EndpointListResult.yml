@@ -11,12 +11,13 @@ items:
       - '@azure/arm-cdn.EndpointListResult.entries'
       - '@azure/arm-cdn.EndpointListResult.every'
       - '@azure/arm-cdn.EndpointListResult.fill'
-      - '@azure/arm-cdn.EndpointListResult.filter_1'
       - '@azure/arm-cdn.EndpointListResult.filter'
+      - '@azure/arm-cdn.EndpointListResult.filter_1'
       - '@azure/arm-cdn.EndpointListResult.find'
       - '@azure/arm-cdn.EndpointListResult.find_1'
       - '@azure/arm-cdn.EndpointListResult.findIndex'
       - '@azure/arm-cdn.EndpointListResult.forEach'
+      - '@azure/arm-cdn.EndpointListResult.includes'
       - '@azure/arm-cdn.EndpointListResult.indexOf'
       - '@azure/arm-cdn.EndpointListResult.join'
       - '@azure/arm-cdn.EndpointListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.concat'
     name: 'concat(ConcatArray<Endpoint>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.every'
-    name: 'every((value: Endpoint, index: number, array: Endpoint[]) => boolean, any)'
+    name: 'every((value: Endpoint, index: number, array: Endpoint[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Endpoint, index: number, array:
-        Endpoint[]) => boolean, thisArg?: any)
+        Endpoint[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Endpoint, index: number, array: Endpoint[]) => boolean'
+            - '(value: Endpoint, index: number, array: Endpoint[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.fill'
     name: 'fill(Endpoint, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-cdn'
-  - uid: '@azure/arm-cdn.EndpointListResult.filter_1'
-    name: 'filter((value: Endpoint, index: number, array: Endpoint[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Endpoint, index: number, array:
-        Endpoint[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Endpoint, index: number, array: Endpoint[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-cdn.Endpoint[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.filter'
     name: >-
@@ -297,6 +272,43 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointListResult.filter_1'
+    name: >-
+      filter((value: Endpoint, index: number, array: Endpoint[]) => unknown,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Endpoint, index: number, array:
+        Endpoint[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Endpoint, index: number, array: Endpoint[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-cdn.Endpoint[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.find'
     name: >-
@@ -342,26 +354,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.find_1'
-    name: 'find((value: Endpoint, index: number, obj: Endpoint[]) => boolean, any)'
+    name: 'find((value: Endpoint, index: number, obj: Endpoint[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Endpoint, index: number, obj:
-        Endpoint[]) => boolean, thisArg?: any)
+        Endpoint[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Endpoint, index: number, obj: Endpoint[]) => boolean'
+            - '(value: Endpoint, index: number, obj: Endpoint[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -371,10 +380,11 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.findIndex'
     name: >-
-      findIndex((value: Endpoint, index: number, obj: Endpoint[]) => boolean,
+      findIndex((value: Endpoint, index: number, obj: Endpoint[]) => unknown,
       any)
     children: []
     type: method
@@ -388,11 +398,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Endpoint, index: number, obj:
-        Endpoint[]) => boolean, thisArg?: any)
+        Endpoint[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Endpoint, index: number, obj: Endpoint[]) => boolean'
+            - '(value: Endpoint, index: number, obj: Endpoint[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -414,6 +424,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.forEach'
     name: 'forEach((value: Endpoint, index: number, array: Endpoint[]) => void, any)'
@@ -442,6 +453,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointListResult.includes'
+    name: 'includes(Endpoint, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: Endpoint, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-cdn.Endpoint'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.indexOf'
     name: 'indexOf(Endpoint, undefined | number)'
     children: []
@@ -468,6 +509,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.join'
     name: join(undefined | string)
@@ -492,6 +534,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.keys'
     name: keys()
@@ -506,6 +549,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.lastIndexOf'
     name: 'lastIndexOf(Endpoint, undefined | number)'
@@ -533,6 +577,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.length'
     name: length
@@ -549,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.map'
     name: 'map((value: Endpoint, index: number, array: Endpoint[]) => U, any)'
@@ -581,6 +627,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.nextLink'
     name: nextLink
@@ -596,6 +643,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.pop'
     name: pop()
@@ -610,6 +658,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.push'
     name: 'push(Endpoint[])'
@@ -629,6 +678,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.reduce'
     name: >-
@@ -659,6 +709,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.reduce_1'
     name: >-
@@ -668,10 +719,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Endpoint, currentValue:
@@ -691,6 +739,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.reduce_2'
     name: >-
@@ -729,6 +778,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.reduceRight'
     name: >-
@@ -760,6 +810,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.reduceRight_1'
     name: >-
@@ -769,11 +820,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Endpoint, currentValue:
@@ -793,6 +840,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.reduceRight_2'
     name: >-
@@ -832,6 +880,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.reverse'
     name: reverse()
@@ -846,6 +895,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.shift'
     name: shift()
@@ -860,6 +910,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -885,9 +936,10 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.some'
-    name: 'some((value: Endpoint, index: number, array: Endpoint[]) => boolean, any)'
+    name: 'some((value: Endpoint, index: number, array: Endpoint[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -898,11 +950,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Endpoint, index: number, array:
-        Endpoint[]) => boolean, thisArg?: any)
+        Endpoint[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Endpoint, index: number, array: Endpoint[]) => boolean'
+            - '(value: Endpoint, index: number, array: Endpoint[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -918,6 +970,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.sort'
     name: 'sort(undefined | (a: Endpoint, b: Endpoint) => number)'
@@ -942,6 +995,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.splice_1'
     name: 'splice(number, number, Endpoint[])'
@@ -973,6 +1027,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1001,6 +1056,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Endpoint[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.toLocaleString'
     name: toLocaleString()
@@ -1017,6 +1073,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.toString'
     name: toString()
@@ -1031,6 +1088,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.unshift'
     name: 'unshift(Endpoint[])'
@@ -1050,6 +1108,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.EndpointListResult.values'
     name: values()
@@ -1064,6 +1123,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-cdn.Endpoint>
+        description: ''
     package: '@azure/arm-cdn'
 references:
   - uid: Array<@azure/arm-cdn.Endpoint>

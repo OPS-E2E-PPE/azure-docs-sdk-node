@@ -9,7 +9,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: An object that represents the status of ingress on an environment.
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.IngressEnvironmentStatus.state'
     name: state
@@ -18,13 +18,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      This string represents the state of ingress operations on an environment.
+      It can be
+
+      "Disabled", "Ready", "Running", "Paused" or "Unknown". Possible values
+      include: 'Disabled',
+
+      'Ready', 'Running', 'Paused', 'Unknown'
     optional: true
     syntax:
       content: 'state?: IngressState'
       return:
         type:
           - '@azure/arm-timeseriesinsights.IngressState'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
   - uid: '@azure/arm-timeseriesinsights.IngressEnvironmentStatus.stateDetails'
     name: stateDetails
@@ -33,13 +41,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: An object that contains the details about an environment's state.
     optional: true
     syntax:
       content: 'stateDetails?: EnvironmentStateDetails'
       return:
         type:
           - '@azure/arm-timeseriesinsights.EnvironmentStateDetails'
+        description: ''
     package: '@azure/arm-timeseriesinsights'
 references:
   - uid: '@azure/arm-timeseriesinsights.IngressState'

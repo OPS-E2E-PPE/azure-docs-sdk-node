@@ -16,9 +16,9 @@ items:
       - '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.every'
       - '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.fill'
       - >-
-        @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.filter_1
-      - >-
         @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.filter
+      - >-
+        @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.filter_1
       - '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.find'
       - >-
         @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.find_1
@@ -26,6 +26,8 @@ items:
         @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.findIndex
       - >-
         @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.forEach
+      - >-
+        @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.includes
       - >-
         @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.indexOf
       - '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.join'
@@ -87,6 +89,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.concat'
     name: 'concat(ConcatArray<ManagementGroup>[])'
@@ -106,6 +109,7 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup[]'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.concat_1
@@ -126,6 +130,7 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup[]'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.copyWithin
@@ -170,6 +175,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.entries'
     name: entries()
@@ -184,11 +190,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.every'
     name: >-
       every((value: ManagementGroup, index: number, array: ManagementGroup[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -197,13 +204,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ManagementGroup, index: number,
-        array: ManagementGroup[]) => boolean, thisArg?: any)
+        array: ManagementGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ManagementGroup, index: number, array: ManagementGroup[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -219,6 +226,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.fill'
     name: 'fill(ManagementGroup, undefined | number, undefined | number)'
@@ -259,44 +267,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-operationalinsights'
-  - uid: >-
-      @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.filter_1
-    name: >-
-      filter((value: ManagementGroup, index: number, array: ManagementGroup[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ManagementGroup, index: number,
-        array: ManagementGroup[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ManagementGroup, index: number, array: ManagementGroup[])
-              => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-operationalinsights.ManagementGroup[]'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.filter'
     name: >-
@@ -334,6 +305,46 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-operationalinsights'
+  - uid: >-
+      @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.filter_1
+    name: >-
+      filter((value: ManagementGroup, index: number, array: ManagementGroup[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ManagementGroup, index: number,
+        array: ManagementGroup[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ManagementGroup, index: number, array: ManagementGroup[])
+              => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-operationalinsights.ManagementGroup[]'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.find'
     name: >-
@@ -379,30 +390,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.find_1'
     name: >-
       find((value: ManagementGroup, index: number, obj: ManagementGroup[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ManagementGroup, index: number, obj:
-        ManagementGroup[]) => boolean, thisArg?: any)
+        ManagementGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ManagementGroup, index: number, obj: ManagementGroup[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -412,12 +420,13 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup | undefined'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.findIndex
     name: >-
       findIndex((value: ManagementGroup, index: number, obj: ManagementGroup[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -430,13 +439,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ManagementGroup, index: number,
-        obj: ManagementGroup[]) => boolean, thisArg?: any)
+        obj: ManagementGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ManagementGroup, index: number, obj: ManagementGroup[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -458,6 +467,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.forEach'
     name: >-
@@ -490,6 +500,37 @@ items:
             value.
           optional: true
     package: '@azure/arm-operationalinsights'
+  - uid: >-
+      @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.includes
+    name: 'includes(ManagementGroup, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ManagementGroup, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-operationalinsights.ManagementGroup'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.indexOf'
     name: 'indexOf(ManagementGroup, undefined | number)'
     children: []
@@ -516,6 +557,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.join'
     name: join(undefined | string)
@@ -540,6 +582,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.keys'
     name: keys()
@@ -554,6 +597,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.lastIndexOf
@@ -582,6 +626,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.length'
     name: length
@@ -598,6 +643,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.map'
     name: >-
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.pop'
     name: pop()
@@ -648,6 +695,7 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup | undefined'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.push'
     name: 'push(ManagementGroup[])'
@@ -667,6 +715,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.reduce'
     name: >-
@@ -698,6 +747,7 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.reduce_1
@@ -709,10 +759,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ManagementGroup,
@@ -732,6 +779,7 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.reduce_2
@@ -771,6 +819,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.reduceRight
@@ -805,6 +854,7 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.reduceRight_1
@@ -816,11 +866,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: ManagementGroup,
@@ -840,6 +886,7 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.reduceRight_2
@@ -880,6 +927,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.reverse'
     name: reverse()
@@ -894,6 +942,7 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup[]'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.shift'
     name: shift()
@@ -908,6 +957,7 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup | undefined'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -933,11 +983,12 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup[]'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.some'
     name: >-
       some((value: ManagementGroup, index: number, array: ManagementGroup[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -948,13 +999,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ManagementGroup, index: number, array:
-        ManagementGroup[]) => boolean, thisArg?: any)
+        ManagementGroup[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ManagementGroup, index: number, array: ManagementGroup[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -970,6 +1021,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.sort'
     name: 'sort(undefined | (a: ManagementGroup, b: ManagementGroup) => number)'
@@ -994,6 +1046,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.splice_1
@@ -1028,6 +1081,7 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup[]'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1056,6 +1110,7 @@ items:
       return:
         type:
           - '@azure/arm-operationalinsights.ManagementGroup[]'
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.toLocaleString
@@ -1073,6 +1128,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: >-
       @azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.toString
@@ -1088,6 +1144,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.unshift'
     name: 'unshift(ManagementGroup[])'
@@ -1107,6 +1164,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-operationalinsights'
   - uid: '@azure/arm-operationalinsights.WorkspaceListManagementGroupsResult.values'
     name: values()
@@ -1121,6 +1179,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-operationalinsights.ManagementGroup>
+        description: ''
     package: '@azure/arm-operationalinsights'
 references:
   - uid: Array<@azure/arm-operationalinsights.ManagementGroup>

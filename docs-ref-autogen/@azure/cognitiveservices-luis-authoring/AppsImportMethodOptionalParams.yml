@@ -38,6 +38,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.AppsImportMethodOptionalParams.appName
@@ -51,13 +52,15 @@ items:
       The application name to create. If not specified, the application name
       will be read from the
 
-      imported object.
+      imported object. If the application name already exists, an error is
+      returned.
     optional: true
     syntax:
       content: 'appName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.AppsImportMethodOptionalParams.customHeaders
@@ -76,6 +79,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.AppsImportMethodOptionalParams.onDownloadProgress
@@ -94,6 +98,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.AppsImportMethodOptionalParams.onUploadProgress
@@ -110,6 +115,7 @@ items:
       return:
         type:
           - 'undefined | (progress: TransferProgressEvent) => void'
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'
   - uid: >-
       @azure/cognitiveservices-luis-authoring.AppsImportMethodOptionalParams.timeout
@@ -128,4 +134,5 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/cognitiveservices-luis-authoring'

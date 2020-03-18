@@ -6,10 +6,13 @@ items:
     children:
       - '@azure/arm-network.AzureFirewallNetworkRule.description'
       - '@azure/arm-network.AzureFirewallNetworkRule.destinationAddresses'
+      - '@azure/arm-network.AzureFirewallNetworkRule.destinationFqdns'
+      - '@azure/arm-network.AzureFirewallNetworkRule.destinationIpGroups'
       - '@azure/arm-network.AzureFirewallNetworkRule.destinationPorts'
       - '@azure/arm-network.AzureFirewallNetworkRule.name'
       - '@azure/arm-network.AzureFirewallNetworkRule.protocols'
       - '@azure/arm-network.AzureFirewallNetworkRule.sourceAddresses'
+      - '@azure/arm-network.AzureFirewallNetworkRule.sourceIpGroups'
     langs:
       - typeScript
     type: interface
@@ -29,6 +32,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.AzureFirewallNetworkRule.destinationAddresses'
     name: destinationAddresses
@@ -44,6 +48,39 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.AzureFirewallNetworkRule.destinationFqdns'
+    name: destinationFqdns
+    fullName: destinationFqdns
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of destination FQDNs.
+    optional: true
+    syntax:
+      content: 'destinationFqdns?: string[]'
+      return:
+        type:
+          - 'string[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.AzureFirewallNetworkRule.destinationIpGroups'
+    name: destinationIpGroups
+    fullName: destinationIpGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of destination IpGroups for this rule.
+    optional: true
+    syntax:
+      content: 'destinationIpGroups?: string[]'
+      return:
+        type:
+          - 'string[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.AzureFirewallNetworkRule.destinationPorts'
     name: destinationPorts
@@ -59,6 +96,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.AzureFirewallNetworkRule.name'
     name: name
@@ -74,6 +112,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.AzureFirewallNetworkRule.protocols'
     name: protocols
@@ -89,6 +128,7 @@ items:
       return:
         type:
           - '@azure/arm-network.AzureFirewallNetworkRuleProtocol[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.AzureFirewallNetworkRule.sourceAddresses'
     name: sourceAddresses
@@ -104,6 +144,23 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.AzureFirewallNetworkRule.sourceIpGroups'
+    name: sourceIpGroups
+    fullName: sourceIpGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of source IpGroups for this rule.
+    optional: true
+    syntax:
+      content: 'sourceIpGroups?: string[]'
+      return:
+        type:
+          - 'string[]'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.AzureFirewallNetworkRuleProtocol[]'

@@ -12,13 +12,14 @@ items:
       - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.entries'
       - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.every'
       - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.fill'
-      - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.filter_1'
       - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.filter'
+      - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.filter_1'
       - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.find'
       - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.find_1'
       - >-
         @azure/arm-storsimple8000series.CloudApplianceConfigurationList.findIndex
       - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.forEach'
+      - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.includes'
       - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.indexOf'
       - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.join'
       - '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.keys'
@@ -69,6 +70,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.concat'
     name: 'concat(ConcatArray<CloudApplianceConfiguration>[])'
@@ -89,6 +91,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.CloudApplianceConfiguration[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -108,6 +111,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.CloudApplianceConfiguration[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -151,6 +155,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.entries'
     name: entries()
@@ -165,11 +170,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.every'
     name: >-
       every((value: CloudApplianceConfiguration, index: number, array:
-      CloudApplianceConfiguration[]) => boolean, any)
+      CloudApplianceConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -178,13 +184,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: CloudApplianceConfiguration, index:
-        number, array: CloudApplianceConfiguration[]) => boolean, thisArg?: any)
+        number, array: CloudApplianceConfiguration[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: CloudApplianceConfiguration, index: number, array:
-              CloudApplianceConfiguration[]) => boolean
+              CloudApplianceConfiguration[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -200,6 +206,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.fill'
     name: 'fill(CloudApplianceConfiguration, undefined | number, undefined | number)'
@@ -240,43 +247,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-storsimple8000series'
-  - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.filter_1'
-    name: >-
-      filter((value: CloudApplianceConfiguration, index: number, array:
-      CloudApplianceConfiguration[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: CloudApplianceConfiguration, index:
-        number, array: CloudApplianceConfiguration[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: CloudApplianceConfiguration, index: number, array:
-              CloudApplianceConfiguration[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-storsimple8000series.CloudApplianceConfiguration[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.filter'
     name: >-
@@ -315,6 +286,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-storsimple8000series'
+  - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.filter_1'
+    name: >-
+      filter((value: CloudApplianceConfiguration, index: number, array:
+      CloudApplianceConfiguration[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: CloudApplianceConfiguration, index:
+        number, array: CloudApplianceConfiguration[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: CloudApplianceConfiguration, index: number, array:
+              CloudApplianceConfiguration[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-storsimple8000series.CloudApplianceConfiguration[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.find'
     name: >-
@@ -361,30 +371,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.find_1'
     name: >-
       find((value: CloudApplianceConfiguration, index: number, obj:
-      CloudApplianceConfiguration[]) => boolean, any)
+      CloudApplianceConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: CloudApplianceConfiguration, index:
-        number, obj: CloudApplianceConfiguration[]) => boolean, thisArg?: any)
+        number, obj: CloudApplianceConfiguration[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: CloudApplianceConfiguration, index: number, obj:
-              CloudApplianceConfiguration[]) => boolean
+              CloudApplianceConfiguration[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -396,11 +403,12 @@ items:
           - >-
             @azure/arm-storsimple8000series.CloudApplianceConfiguration |
             undefined
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.findIndex'
     name: >-
       findIndex((value: CloudApplianceConfiguration, index: number, obj:
-      CloudApplianceConfiguration[]) => boolean, any)
+      CloudApplianceConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -413,14 +421,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: CloudApplianceConfiguration,
-        index: number, obj: CloudApplianceConfiguration[]) => boolean, thisArg?:
+        index: number, obj: CloudApplianceConfiguration[]) => unknown, thisArg?:
         any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: CloudApplianceConfiguration, index: number, obj:
-              CloudApplianceConfiguration[]) => boolean
+              CloudApplianceConfiguration[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -442,6 +450,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.forEach'
     name: >-
@@ -474,6 +483,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-storsimple8000series'
+  - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.includes'
+    name: 'includes(CloudApplianceConfiguration, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: CloudApplianceConfiguration,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-storsimple8000series.CloudApplianceConfiguration'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.indexOf'
     name: 'indexOf(CloudApplianceConfiguration, undefined | number)'
     children: []
@@ -500,6 +539,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.join'
     name: join(undefined | string)
@@ -524,6 +564,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.keys'
     name: keys()
@@ -538,6 +579,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: >-
       @azure/arm-storsimple8000series.CloudApplianceConfigurationList.lastIndexOf
@@ -566,6 +608,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.length'
     name: length
@@ -582,6 +625,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.map'
     name: >-
@@ -618,6 +662,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.pop'
     name: pop()
@@ -634,6 +679,7 @@ items:
           - >-
             @azure/arm-storsimple8000series.CloudApplianceConfiguration |
             undefined
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.push'
     name: 'push(CloudApplianceConfiguration[])'
@@ -653,6 +699,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.reduce'
     name: >-
@@ -686,6 +733,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.CloudApplianceConfiguration'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.reduce_1'
     name: >-
@@ -697,10 +745,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: CloudApplianceConfiguration,
@@ -722,6 +767,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.CloudApplianceConfiguration'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.reduce_2'
     name: >-
@@ -760,6 +806,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: >-
       @azure/arm-storsimple8000series.CloudApplianceConfigurationList.reduceRight
@@ -796,6 +843,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.CloudApplianceConfiguration'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: >-
       @azure/arm-storsimple8000series.CloudApplianceConfigurationList.reduceRight_1
@@ -808,11 +856,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -834,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.CloudApplianceConfiguration'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: >-
       @azure/arm-storsimple8000series.CloudApplianceConfigurationList.reduceRight_2
@@ -874,6 +919,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.reverse'
     name: reverse()
@@ -888,6 +934,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.CloudApplianceConfiguration[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.shift'
     name: shift()
@@ -904,6 +951,7 @@ items:
           - >-
             @azure/arm-storsimple8000series.CloudApplianceConfiguration |
             undefined
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -929,11 +977,12 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.CloudApplianceConfiguration[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.some'
     name: >-
       some((value: CloudApplianceConfiguration, index: number, array:
-      CloudApplianceConfiguration[]) => boolean, any)
+      CloudApplianceConfiguration[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -944,13 +993,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: CloudApplianceConfiguration, index:
-        number, array: CloudApplianceConfiguration[]) => boolean, thisArg?: any)
+        number, array: CloudApplianceConfiguration[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: CloudApplianceConfiguration, index: number, array:
-              CloudApplianceConfiguration[]) => boolean
+              CloudApplianceConfiguration[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -966,6 +1015,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.sort'
     name: >-
@@ -994,6 +1044,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.splice_1'
     name: 'splice(number, number, CloudApplianceConfiguration[])'
@@ -1027,6 +1078,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.CloudApplianceConfiguration[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.splice'
     name: 'splice(number, undefined | number)'
@@ -1055,6 +1107,7 @@ items:
       return:
         type:
           - '@azure/arm-storsimple8000series.CloudApplianceConfiguration[]'
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: >-
       @azure/arm-storsimple8000series.CloudApplianceConfigurationList.toLocaleString
@@ -1072,6 +1125,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.toString'
     name: toString()
@@ -1086,6 +1140,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.unshift'
     name: 'unshift(CloudApplianceConfiguration[])'
@@ -1105,6 +1160,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-storsimple8000series'
   - uid: '@azure/arm-storsimple8000series.CloudApplianceConfigurationList.values'
     name: values()
@@ -1120,6 +1176,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-storsimple8000series.CloudApplianceConfiguration>
+        description: ''
     package: '@azure/arm-storsimple8000series'
 references:
   - uid: Array<@azure/arm-storsimple8000series.CloudApplianceConfiguration>

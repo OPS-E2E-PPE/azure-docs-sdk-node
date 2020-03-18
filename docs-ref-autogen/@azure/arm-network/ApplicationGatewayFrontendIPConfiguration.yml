@@ -31,13 +31,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFrontendIPConfiguration.id'
     name: id
@@ -53,6 +58,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFrontendIPConfiguration.name'
     name: name
@@ -70,6 +76,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayFrontendIPConfiguration.privateIPAddress
@@ -86,6 +93,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayFrontendIPConfiguration.privateIPAllocationMethod
@@ -104,6 +112,7 @@ items:
       return:
         type:
           - '@azure/arm-network.IPAllocationMethod'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayFrontendIPConfiguration.provisioningState
@@ -114,16 +123,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Provisioning state of the public IP resource. Possible values are:
-      'Updating', 'Deleting', and
+      The provisioning state of the frontend IP configuration resource. Possible
+      values include:
 
-      'Failed'.
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayFrontendIPConfiguration.publicIPAddress
@@ -140,6 +153,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFrontendIPConfiguration.subnet'
     name: subnet
@@ -155,6 +169,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayFrontendIPConfiguration.type'
     name: type
@@ -163,13 +178,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Type of the resource.
+    summary: >-
+      Type of the resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -184,3 +204,9 @@ references:
       - name: IPAllocationMethod
         fullName: IPAllocationMethod
         uid: '@azure/arm-network.IPAllocationMethod'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

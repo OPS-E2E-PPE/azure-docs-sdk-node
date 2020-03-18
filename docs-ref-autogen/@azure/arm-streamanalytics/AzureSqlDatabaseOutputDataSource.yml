@@ -13,7 +13,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Describes an Azure SQL database output data source.
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.database'
     name: database
@@ -22,13 +22,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the Azure SQL database. Required on PUT (CreateOrReplace)
+      requests.
     optional: true
     syntax:
       content: 'database?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.password'
     name: password
@@ -37,13 +40,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The password that will be used to connect to the Azure SQL database.
+      Required on PUT
+
+      (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'password?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.server'
     name: server
@@ -52,13 +60,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the SQL server containing the Azure SQL database. Required on
+      PUT
+
+      (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'server?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.table'
     name: table
@@ -67,13 +80,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the table in the Azure SQL database. Required on PUT
+      (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'table?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.type'
     name: type
@@ -82,12 +98,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Microsoft.Sql/Server/Database"'
       return:
         type:
           - '"Microsoft.Sql/Server/Database"'
+        description: ''
     package: '@azure/arm-streamanalytics'
   - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.user'
     name: user
@@ -96,11 +113,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The user name that will be used to connect to the Azure SQL database.
+      Required on PUT
+
+      (CreateOrReplace) requests.
     optional: true
     syntax:
       content: 'user?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-streamanalytics'

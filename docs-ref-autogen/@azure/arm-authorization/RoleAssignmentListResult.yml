@@ -11,12 +11,13 @@ items:
       - '@azure/arm-authorization.RoleAssignmentListResult.entries'
       - '@azure/arm-authorization.RoleAssignmentListResult.every'
       - '@azure/arm-authorization.RoleAssignmentListResult.fill'
-      - '@azure/arm-authorization.RoleAssignmentListResult.filter_1'
       - '@azure/arm-authorization.RoleAssignmentListResult.filter'
+      - '@azure/arm-authorization.RoleAssignmentListResult.filter_1'
       - '@azure/arm-authorization.RoleAssignmentListResult.find'
       - '@azure/arm-authorization.RoleAssignmentListResult.find_1'
       - '@azure/arm-authorization.RoleAssignmentListResult.findIndex'
       - '@azure/arm-authorization.RoleAssignmentListResult.forEach'
+      - '@azure/arm-authorization.RoleAssignmentListResult.includes'
       - '@azure/arm-authorization.RoleAssignmentListResult.indexOf'
       - '@azure/arm-authorization.RoleAssignmentListResult.join'
       - '@azure/arm-authorization.RoleAssignmentListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.concat'
     name: 'concat(ConcatArray<RoleAssignment>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment[]'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment[]'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.every'
     name: >-
       every((value: RoleAssignment, index: number, array: RoleAssignment[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: RoleAssignment, index: number, array:
-        RoleAssignment[]) => boolean, thisArg?: any)
+        RoleAssignment[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: RoleAssignment, index: number, array: RoleAssignment[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.fill'
     name: 'fill(RoleAssignment, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-authorization'
-  - uid: '@azure/arm-authorization.RoleAssignmentListResult.filter_1'
-    name: >-
-      filter((value: RoleAssignment, index: number, array: RoleAssignment[]) =>
-      any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: RoleAssignment, index: number,
-        array: RoleAssignment[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: RoleAssignment, index: number, array: RoleAssignment[]) =>
-              any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-authorization.RoleAssignment[]'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-authorization'
+  - uid: '@azure/arm-authorization.RoleAssignmentListResult.filter_1'
+    name: >-
+      filter((value: RoleAssignment, index: number, array: RoleAssignment[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: RoleAssignment, index: number,
+        array: RoleAssignment[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: RoleAssignment, index: number, array: RoleAssignment[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-authorization.RoleAssignment[]'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.find_1'
     name: >-
       find((value: RoleAssignment, index: number, obj: RoleAssignment[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: RoleAssignment, index: number, obj:
-        RoleAssignment[]) => boolean, thisArg?: any)
+        RoleAssignment[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: RoleAssignment, index: number, obj: RoleAssignment[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment | undefined'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.findIndex'
     name: >-
       findIndex((value: RoleAssignment, index: number, obj: RoleAssignment[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: RoleAssignment, index: number,
-        obj: RoleAssignment[]) => boolean, thisArg?: any)
+        obj: RoleAssignment[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: RoleAssignment, index: number, obj: RoleAssignment[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-authorization'
+  - uid: '@azure/arm-authorization.RoleAssignmentListResult.includes'
+    name: 'includes(RoleAssignment, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: RoleAssignment, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-authorization.RoleAssignment'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.indexOf'
     name: 'indexOf(RoleAssignment, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.lastIndexOf'
     name: 'lastIndexOf(RoleAssignment, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.nextLink'
     name: nextLink
@@ -620,6 +665,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.pop'
     name: pop()
@@ -634,6 +680,7 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment | undefined'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.push'
     name: 'push(RoleAssignment[])'
@@ -653,6 +700,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.reduce'
     name: >-
@@ -684,6 +732,7 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.reduce_1'
     name: >-
@@ -694,10 +743,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: RoleAssignment,
@@ -717,6 +763,7 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.reduce_2'
     name: >-
@@ -755,6 +802,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.reduceRight'
     name: >-
@@ -787,6 +835,7 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.reduceRight_1'
     name: >-
@@ -797,11 +846,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: RoleAssignment,
@@ -821,6 +866,7 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.reduceRight_2'
     name: >-
@@ -860,6 +906,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.reverse'
     name: reverse()
@@ -874,6 +921,7 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment[]'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.shift'
     name: shift()
@@ -888,6 +936,7 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment | undefined'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -913,11 +962,12 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment[]'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.some'
     name: >-
       some((value: RoleAssignment, index: number, array: RoleAssignment[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -928,13 +978,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: RoleAssignment, index: number, array:
-        RoleAssignment[]) => boolean, thisArg?: any)
+        RoleAssignment[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: RoleAssignment, index: number, array: RoleAssignment[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -950,6 +1000,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.sort'
     name: 'sort(undefined | (a: RoleAssignment, b: RoleAssignment) => number)'
@@ -974,6 +1025,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.splice_1'
     name: 'splice(number, number, RoleAssignment[])'
@@ -1007,6 +1059,7 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment[]'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1035,6 +1088,7 @@ items:
       return:
         type:
           - '@azure/arm-authorization.RoleAssignment[]'
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.toLocaleString'
     name: toLocaleString()
@@ -1051,6 +1105,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.toString'
     name: toString()
@@ -1065,6 +1120,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.unshift'
     name: 'unshift(RoleAssignment[])'
@@ -1084,6 +1140,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-authorization'
   - uid: '@azure/arm-authorization.RoleAssignmentListResult.values'
     name: values()
@@ -1098,6 +1155,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-authorization.RoleAssignment>
+        description: ''
     package: '@azure/arm-authorization'
 references:
   - uid: Array<@azure/arm-authorization.RoleAssignment>

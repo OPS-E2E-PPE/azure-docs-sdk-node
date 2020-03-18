@@ -11,12 +11,13 @@ items:
       - '@azure/arm-cdn.OriginListResult.entries'
       - '@azure/arm-cdn.OriginListResult.every'
       - '@azure/arm-cdn.OriginListResult.fill'
-      - '@azure/arm-cdn.OriginListResult.filter_1'
       - '@azure/arm-cdn.OriginListResult.filter'
+      - '@azure/arm-cdn.OriginListResult.filter_1'
       - '@azure/arm-cdn.OriginListResult.find'
       - '@azure/arm-cdn.OriginListResult.find_1'
       - '@azure/arm-cdn.OriginListResult.findIndex'
       - '@azure/arm-cdn.OriginListResult.forEach'
+      - '@azure/arm-cdn.OriginListResult.includes'
       - '@azure/arm-cdn.OriginListResult.indexOf'
       - '@azure/arm-cdn.OriginListResult.join'
       - '@azure/arm-cdn.OriginListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.concat'
     name: 'concat(ConcatArray<Origin>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.entries'
     name: entries()
@@ -158,9 +163,10 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.every'
-    name: 'every((value: Origin, index: number, array: Origin[]) => boolean, any)'
+    name: 'every((value: Origin, index: number, array: Origin[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -169,11 +175,11 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: Origin, index: number, array:
-        Origin[]) => boolean, thisArg?: any)
+        Origin[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Origin, index: number, array: Origin[]) => boolean'
+            - '(value: Origin, index: number, array: Origin[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -189,6 +195,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.fill'
     name: 'fill(Origin, undefined | number, undefined | number)'
@@ -229,39 +236,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-cdn'
-  - uid: '@azure/arm-cdn.OriginListResult.filter_1'
-    name: 'filter((value: Origin, index: number, array: Origin[]) => any, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: Origin, index: number, array:
-        Origin[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: Origin, index: number, array: Origin[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-cdn.Origin[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.filter'
     name: 'filter((value: Origin, index: number, array: Origin[]) => boolean, any)'
@@ -295,6 +270,41 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.OriginListResult.filter_1'
+    name: 'filter((value: Origin, index: number, array: Origin[]) => unknown, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: Origin, index: number, array:
+        Origin[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: Origin, index: number, array: Origin[]) => unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-cdn.Origin[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.find'
     name: >-
@@ -340,26 +350,23 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.find_1'
-    name: 'find((value: Origin, index: number, obj: Origin[]) => boolean, any)'
+    name: 'find((value: Origin, index: number, obj: Origin[]) => unknown, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: Origin, index: number, obj: Origin[])
-        => boolean, thisArg?: any)
+        => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Origin, index: number, obj: Origin[]) => boolean'
+            - '(value: Origin, index: number, obj: Origin[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -369,9 +376,10 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.findIndex'
-    name: 'findIndex((value: Origin, index: number, obj: Origin[]) => boolean, any)'
+    name: 'findIndex((value: Origin, index: number, obj: Origin[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -384,11 +392,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: Origin, index: number, obj:
-        Origin[]) => boolean, thisArg?: any)
+        Origin[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: Origin, index: number, obj: Origin[]) => boolean'
+            - '(value: Origin, index: number, obj: Origin[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -410,6 +418,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.forEach'
     name: 'forEach((value: Origin, index: number, array: Origin[]) => void, any)'
@@ -438,6 +447,34 @@ items:
             value.
           optional: true
     package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.OriginListResult.includes'
+    name: 'includes(Origin, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: 'function includes(searchElement: Origin, fromIndex?: undefined | number)'
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-cdn.Origin'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.indexOf'
     name: 'indexOf(Origin, undefined | number)'
     children: []
@@ -462,6 +499,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.join'
     name: join(undefined | string)
@@ -486,6 +524,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.keys'
     name: keys()
@@ -500,6 +539,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.lastIndexOf'
     name: 'lastIndexOf(Origin, undefined | number)'
@@ -527,6 +567,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.length'
     name: length
@@ -543,6 +584,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.map'
     name: 'map((value: Origin, index: number, array: Origin[]) => U, any)'
@@ -575,6 +617,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.nextLink'
     name: nextLink
@@ -590,6 +633,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.pop'
     name: pop()
@@ -604,6 +648,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.push'
     name: 'push(Origin[])'
@@ -623,6 +668,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.reduce'
     name: >-
@@ -653,6 +699,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.reduce_1'
     name: >-
@@ -662,10 +709,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Origin, currentValue:
@@ -685,6 +729,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.reduce_2'
     name: >-
@@ -722,6 +767,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.reduceRight'
     name: >-
@@ -753,6 +799,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.reduceRight_1'
     name: >-
@@ -762,11 +809,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Origin, currentValue:
@@ -786,6 +829,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.reduceRight_2'
     name: >-
@@ -824,6 +868,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.reverse'
     name: reverse()
@@ -838,6 +883,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.shift'
     name: shift()
@@ -852,6 +898,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin | undefined'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -877,9 +924,10 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.some'
-    name: 'some((value: Origin, index: number, array: Origin[]) => boolean, any)'
+    name: 'some((value: Origin, index: number, array: Origin[]) => unknown, any)'
     children: []
     type: method
     langs:
@@ -890,11 +938,11 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: Origin, index: number, array:
-        Origin[]) => boolean, thisArg?: any)
+        Origin[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
-            - '(value: Origin, index: number, array: Origin[]) => boolean'
+            - '(value: Origin, index: number, array: Origin[]) => unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -910,6 +958,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.sort'
     name: 'sort(undefined | (a: Origin, b: Origin) => number)'
@@ -932,6 +981,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.splice_1'
     name: 'splice(number, number, Origin[])'
@@ -963,6 +1013,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -991,6 +1042,7 @@ items:
       return:
         type:
           - '@azure/arm-cdn.Origin[]'
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.toLocaleString'
     name: toLocaleString()
@@ -1007,6 +1059,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.toString'
     name: toString()
@@ -1021,6 +1074,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.unshift'
     name: 'unshift(Origin[])'
@@ -1040,6 +1094,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-cdn'
   - uid: '@azure/arm-cdn.OriginListResult.values'
     name: values()
@@ -1054,6 +1109,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-cdn.Origin>
+        description: ''
     package: '@azure/arm-cdn'
 references:
   - uid: Array<@azure/arm-cdn.Origin>

@@ -20,9 +20,9 @@ items:
       - >-
         @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.fill
       - >-
-        @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.filter_1
-      - >-
         @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.filter
+      - >-
+        @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.filter_1
       - >-
         @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.find
       - >-
@@ -31,6 +31,8 @@ items:
         @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.findIndex
       - >-
         @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.forEach
+      - >-
+        @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.includes
       - >-
         @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.indexOf
       - >-
@@ -105,6 +107,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.concat
@@ -127,6 +130,7 @@ items:
         type:
           - >-
             @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription[]
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.concat_1
@@ -148,6 +152,7 @@ items:
         type:
           - >-
             @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription[]
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.copyWithin
@@ -192,6 +197,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.entries
@@ -207,12 +213,13 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.every
     name: >-
       every((value: ProvisioningServiceDescription, index: number, array:
-      ProvisioningServiceDescription[]) => boolean, any)
+      ProvisioningServiceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -221,14 +228,14 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ProvisioningServiceDescription,
-        index: number, array: ProvisioningServiceDescription[]) => boolean,
+        index: number, array: ProvisioningServiceDescription[]) => unknown,
         thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ProvisioningServiceDescription, index: number, array:
-              ProvisioningServiceDescription[]) => boolean
+              ProvisioningServiceDescription[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -244,6 +251,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.fill
@@ -288,46 +296,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-deviceprovisioningservices'
-  - uid: >-
-      @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.filter_1
-    name: >-
-      filter((value: ProvisioningServiceDescription, index: number, array:
-      ProvisioningServiceDescription[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ProvisioningServiceDescription,
-        index: number, array: ProvisioningServiceDescription[]) => any,
-        thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ProvisioningServiceDescription, index: number, array:
-              ProvisioningServiceDescription[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - >-
-            @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription[]
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.filter
@@ -367,6 +336,48 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-deviceprovisioningservices'
+  - uid: >-
+      @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.filter_1
+    name: >-
+      filter((value: ProvisioningServiceDescription, index: number, array:
+      ProvisioningServiceDescription[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ProvisioningServiceDescription,
+        index: number, array: ProvisioningServiceDescription[]) => unknown,
+        thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ProvisioningServiceDescription, index: number, array:
+              ProvisioningServiceDescription[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - >-
+            @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription[]
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.find
@@ -414,32 +425,29 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.find_1
     name: >-
       find((value: ProvisioningServiceDescription, index: number, obj:
-      ProvisioningServiceDescription[]) => boolean, any)
+      ProvisioningServiceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ProvisioningServiceDescription, index:
-        number, obj: ProvisioningServiceDescription[]) => boolean, thisArg?:
+        number, obj: ProvisioningServiceDescription[]) => unknown, thisArg?:
         any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ProvisioningServiceDescription, index: number, obj:
-              ProvisioningServiceDescription[]) => boolean
+              ProvisioningServiceDescription[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -451,12 +459,13 @@ items:
           - >-
             @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription
             | undefined
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.findIndex
     name: >-
       findIndex((value: ProvisioningServiceDescription, index: number, obj:
-      ProvisioningServiceDescription[]) => boolean, any)
+      ProvisioningServiceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -469,14 +478,14 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ProvisioningServiceDescription,
-        index: number, obj: ProvisioningServiceDescription[]) => boolean,
+        index: number, obj: ProvisioningServiceDescription[]) => unknown,
         thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ProvisioningServiceDescription, index: number, obj:
-              ProvisioningServiceDescription[]) => boolean
+              ProvisioningServiceDescription[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -498,6 +507,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.forEach
@@ -533,6 +543,38 @@ items:
           optional: true
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
+      @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.includes
+    name: 'includes(ProvisioningServiceDescription, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ProvisioningServiceDescription,
+        fromIndex?: undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - >-
+              @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-deviceprovisioningservices'
+  - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.indexOf
     name: 'indexOf(ProvisioningServiceDescription, undefined | number)'
     children: []
@@ -560,6 +602,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.join
@@ -585,6 +628,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.keys
@@ -600,6 +644,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.lastIndexOf
@@ -629,6 +674,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.length
@@ -646,6 +692,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.map
@@ -684,6 +731,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.nextLink
@@ -700,6 +748,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.pop
@@ -717,6 +766,7 @@ items:
           - >-
             @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription
             | undefined
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.push
@@ -738,6 +788,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.reduce
@@ -774,6 +825,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.ProvisioningServiceDescription'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.reduce_1
@@ -786,10 +838,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue:
@@ -814,6 +863,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.ProvisioningServiceDescription'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.reduce_2
@@ -854,6 +904,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.reduceRight
@@ -891,6 +942,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.ProvisioningServiceDescription'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.reduceRight_1
@@ -903,11 +955,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -932,6 +980,7 @@ items:
       return:
         type:
           - '@azure/arm-deviceprovisioningservices.ProvisioningServiceDescription'
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.reduceRight_2
@@ -974,6 +1023,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.reverse
@@ -990,6 +1040,7 @@ items:
         type:
           - >-
             @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription[]
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.shift
@@ -1007,6 +1058,7 @@ items:
           - >-
             @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription
             | undefined
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.slice
@@ -1034,12 +1086,13 @@ items:
         type:
           - >-
             @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription[]
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.some
     name: >-
       some((value: ProvisioningServiceDescription, index: number, array:
-      ProvisioningServiceDescription[]) => boolean, any)
+      ProvisioningServiceDescription[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -1050,14 +1103,14 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ProvisioningServiceDescription, index:
-        number, array: ProvisioningServiceDescription[]) => boolean, thisArg?:
+        number, array: ProvisioningServiceDescription[]) => unknown, thisArg?:
         any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ProvisioningServiceDescription, index: number, array:
-              ProvisioningServiceDescription[]) => boolean
+              ProvisioningServiceDescription[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -1073,6 +1126,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.sort
@@ -1103,6 +1157,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.splice_1
@@ -1139,6 +1194,7 @@ items:
         type:
           - >-
             @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription[]
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.splice
@@ -1169,6 +1225,7 @@ items:
         type:
           - >-
             @azure/arm-deviceprovisioningservices.ProvisioningServiceDescription[]
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.toLocaleString
@@ -1186,6 +1243,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.toString
@@ -1201,6 +1259,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.unshift
@@ -1222,6 +1281,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
   - uid: >-
       @azure/arm-deviceprovisioningservices.ProvisioningServiceDescriptionListResult.values
@@ -1238,6 +1298,7 @@ items:
         type:
           - >-
             IterableIterator<@azure/arm-deviceprovisioningservices.ProvisioningServiceDescription>
+        description: ''
     package: '@azure/arm-deviceprovisioningservices'
 references:
   - uid: >-

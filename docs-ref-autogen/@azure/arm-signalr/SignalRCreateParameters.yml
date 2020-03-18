@@ -11,7 +11,9 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: |
+      Parameters for SignalR service create/update operation.
+      Keep the same schema as AzSignalR.Models.SignalRResource
     extends:
       name: '@azure/arm-signalr.SignalRUpdateParameters'
     package: '@azure/arm-signalr'
@@ -22,12 +24,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Azure GEO region: e.g. West US | East US | North Central US | South
+      Central US | West Europe |
+
+      North Europe | East Asia | Southeast Asia | etc.
+
+      The geo region of a resource never changes after it is created.
     syntax:
       content: 'location: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-signalr'
   - uid: '@azure/arm-signalr.SignalRCreateParameters.properties'
     name: properties
@@ -36,13 +45,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Settings used to provision or configure the resource
     optional: true
     syntax:
       content: 'properties?: SignalRCreateOrUpdateProperties'
       return:
         type:
           - '@azure/arm-signalr.SignalRCreateOrUpdateProperties'
+        description: ''
     package: '@azure/arm-signalr'
   - uid: '@azure/arm-signalr.SignalRCreateParameters.sku'
     name: sku
@@ -51,13 +61,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The billing information of the resource.(e.g. basic vs. standard)
     optional: true
     syntax:
       content: 'sku?: ResourceSku'
       return:
         type:
           - '@azure/arm-signalr.ResourceSku'
+        description: ''
     package: '@azure/arm-signalr'
   - uid: '@azure/arm-signalr.SignalRCreateParameters.tags'
     name: tags
@@ -66,13 +77,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A list of key value pairs that describe the resource.
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-signalr'
 references:
   - uid: '@azure/arm-signalr.SignalRUpdateParameters'

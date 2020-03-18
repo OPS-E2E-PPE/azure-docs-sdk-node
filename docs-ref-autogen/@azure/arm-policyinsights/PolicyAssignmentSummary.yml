@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-policyinsights.PolicyAssignmentSummary.policyAssignmentId'
       - '@azure/arm-policyinsights.PolicyAssignmentSummary.policyDefinitions'
+      - '@azure/arm-policyinsights.PolicyAssignmentSummary.policyGroups'
       - '@azure/arm-policyinsights.PolicyAssignmentSummary.policySetDefinitionId'
       - '@azure/arm-policyinsights.PolicyAssignmentSummary.results'
     langs:
@@ -27,6 +28,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyAssignmentSummary.policyDefinitions'
     name: policyDefinitions
@@ -42,6 +44,23 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyDefinitionSummary[]'
+        description: ''
+    package: '@azure/arm-policyinsights'
+  - uid: '@azure/arm-policyinsights.PolicyAssignmentSummary.policyGroups'
+    name: policyGroups
+    fullName: policyGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Policy definition group summary.
+    optional: true
+    syntax:
+      content: 'policyGroups?: PolicyGroupSummary[]'
+      return:
+        type:
+          - '@azure/arm-policyinsights.PolicyGroupSummary[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyAssignmentSummary.policySetDefinitionId'
     name: policySetDefinitionId
@@ -57,6 +76,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyAssignmentSummary.results'
     name: results
@@ -65,13 +85,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Non-compliance summary for the policy assignment.
+    summary: Compliance summary for the policy assignment.
     optional: true
     syntax:
       content: 'results?: SummaryResults'
       return:
         type:
           - '@azure/arm-policyinsights.SummaryResults'
+        description: ''
     package: '@azure/arm-policyinsights'
 references:
   - uid: '@azure/arm-policyinsights.PolicyDefinitionSummary[]'
@@ -80,6 +101,14 @@ references:
       - name: PolicyDefinitionSummary
         fullName: PolicyDefinitionSummary
         uid: '@azure/arm-policyinsights.PolicyDefinitionSummary'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-policyinsights.PolicyGroupSummary[]'
+    name: 'PolicyGroupSummary[]'
+    spec.typeScript:
+      - name: PolicyGroupSummary
+        fullName: PolicyGroupSummary
+        uid: '@azure/arm-policyinsights.PolicyGroupSummary'
       - name: '[]'
         fullName: '[]'
   - uid: '@azure/arm-policyinsights.SummaryResults'

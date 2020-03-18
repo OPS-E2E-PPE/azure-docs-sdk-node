@@ -11,21 +11,26 @@ items:
       - '@azure/arm-datafactory.CopyActivity.enableStaging'
       - '@azure/arm-datafactory.CopyActivity.inputs'
       - '@azure/arm-datafactory.CopyActivity.linkedServiceName'
+      - '@azure/arm-datafactory.CopyActivity.logStorageSettings'
       - '@azure/arm-datafactory.CopyActivity.name'
       - '@azure/arm-datafactory.CopyActivity.outputs'
       - '@azure/arm-datafactory.CopyActivity.parallelCopies'
       - '@azure/arm-datafactory.CopyActivity.policy'
+      - '@azure/arm-datafactory.CopyActivity.preserve'
+      - '@azure/arm-datafactory.CopyActivity.preserveRules'
       - '@azure/arm-datafactory.CopyActivity.redirectIncompatibleRowSettings'
       - '@azure/arm-datafactory.CopyActivity.sink'
+      - '@azure/arm-datafactory.CopyActivity.skipErrorFile'
       - '@azure/arm-datafactory.CopyActivity.source'
       - '@azure/arm-datafactory.CopyActivity.stagingSettings'
       - '@azure/arm-datafactory.CopyActivity.translator'
       - '@azure/arm-datafactory.CopyActivity.type'
       - '@azure/arm-datafactory.CopyActivity.userProperties'
+      - '@azure/arm-datafactory.CopyActivity.validateDataConsistency'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Copy activity.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.dataIntegrationUnits'
     name: dataIntegrationUnits
@@ -34,13 +39,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Maximum number of data integration units that can be used to perform this
+      data movement. Type:
+
+      integer (or Expression with resultType integer), minimum: 0.
     optional: true
     syntax:
       content: 'dataIntegrationUnits?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.dependsOn'
     name: dependsOn
@@ -49,13 +59,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity depends on condition.
     optional: true
     syntax:
       content: 'dependsOn?: ActivityDependency[]'
       return:
         type:
           - '@azure/arm-datafactory.ActivityDependency[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.description'
     name: description
@@ -64,13 +75,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.enableSkipIncompatibleRow'
     name: enableSkipIncompatibleRow
@@ -79,13 +91,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Whether to skip incompatible row. Default value is false. Type: boolean
+      (or Expression with
+
+      resultType boolean).
     optional: true
     syntax:
       content: 'enableSkipIncompatibleRow?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.enableStaging'
     name: enableStaging
@@ -94,13 +111,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies whether to copy data via an interim staging. Default value is
+      false. Type: boolean
+
+      (or Expression with resultType boolean).
     optional: true
     syntax:
       content: 'enableStaging?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.inputs'
     name: inputs
@@ -109,13 +131,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of inputs for the activity.
     optional: true
     syntax:
       content: 'inputs?: DatasetReference[]'
       return:
         type:
           - '@azure/arm-datafactory.DatasetReference[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.linkedServiceName'
     name: linkedServiceName
@@ -124,13 +147,30 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     optional: true
     syntax:
       content: 'linkedServiceName?: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.CopyActivity.logStorageSettings'
+    name: logStorageSettings
+    fullName: logStorageSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Log storage settings customer need to provide when enabling session log.
+    optional: true
+    syntax:
+      content: 'logStorageSettings?: LogStorageSettings'
+      return:
+        type:
+          - '@azure/arm-datafactory.LogStorageSettings'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.name'
     name: name
@@ -139,12 +179,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity name.
     syntax:
       content: 'name: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.outputs'
     name: outputs
@@ -153,13 +194,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of outputs for the activity.
     optional: true
     syntax:
       content: 'outputs?: DatasetReference[]'
       return:
         type:
           - '@azure/arm-datafactory.DatasetReference[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.parallelCopies'
     name: parallelCopies
@@ -168,13 +210,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Maximum number of concurrent sessions opened on the source or sink to
+      avoid overloading the
+
+      data store. Type: integer (or Expression with resultType integer),
+      minimum: 0.
     optional: true
     syntax:
       content: 'parallelCopies?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.policy'
     name: policy
@@ -183,13 +231,46 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity policy.
     optional: true
     syntax:
       content: 'policy?: ActivityPolicy'
       return:
         type:
           - '@azure/arm-datafactory.ActivityPolicy'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.CopyActivity.preserve'
+    name: preserve
+    fullName: preserve
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Preserve rules.
+    optional: true
+    syntax:
+      content: 'preserve?: any[]'
+      return:
+        type:
+          - 'any[]'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.CopyActivity.preserveRules'
+    name: preserveRules
+    fullName: preserveRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Preserve Rules.
+    optional: true
+    syntax:
+      content: 'preserveRules?: any[]'
+      return:
+        type:
+          - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.redirectIncompatibleRowSettings'
     name: redirectIncompatibleRowSettings
@@ -198,13 +279,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
     optional: true
     syntax:
       content: 'redirectIncompatibleRowSettings?: RedirectIncompatibleRowSettings'
       return:
         type:
           - '@azure/arm-datafactory.RedirectIncompatibleRowSettings'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.sink'
     name: sink
@@ -213,12 +295,29 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Copy activity sink.
     syntax:
       content: 'sink: CopySinkUnion'
       return:
         type:
           - '@azure/arm-datafactory.CopySinkUnion'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.CopyActivity.skipErrorFile'
+    name: skipErrorFile
+    fullName: skipErrorFile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specify the fault tolerance for data consistency.
+    optional: true
+    syntax:
+      content: 'skipErrorFile?: SkipErrorFile'
+      return:
+        type:
+          - '@azure/arm-datafactory.SkipErrorFile'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.source'
     name: source
@@ -227,12 +326,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Copy activity source.
     syntax:
       content: 'source: CopySourceUnion'
       return:
         type:
           - '@azure/arm-datafactory.CopySourceUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.stagingSettings'
     name: stagingSettings
@@ -241,13 +341,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Specifies interim staging settings when EnableStaging is true.
     optional: true
     syntax:
       content: 'stagingSettings?: StagingSettings'
       return:
         type:
           - '@azure/arm-datafactory.StagingSettings'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.translator'
     name: translator
@@ -256,13 +357,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Copy activity translator. If not specified, tabular translator is used.'
     optional: true
     syntax:
-      content: 'translator?: CopyTranslatorUnion'
+      content: 'translator?: any'
       return:
         type:
-          - '@azure/arm-datafactory.CopyTranslatorUnion'
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.type'
     name: type
@@ -271,12 +373,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "Copy"'
       return:
         type:
           - '"Copy"'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.CopyActivity.userProperties'
     name: userProperties
@@ -285,13 +388,34 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Activity user properties.
     optional: true
     syntax:
       content: 'userProperties?: UserProperty[]'
       return:
         type:
           - '@azure/arm-datafactory.UserProperty[]'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.CopyActivity.validateDataConsistency'
+    name: validateDataConsistency
+    fullName: validateDataConsistency
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether to enable Data Consistency validation. Type: boolean (or
+      Expression with resultType
+
+      boolean).
+    optional: true
+    syntax:
+      content: 'validateDataConsistency?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.ActivityDependency[]'
@@ -316,6 +440,12 @@ references:
       - name: LinkedServiceReference
         fullName: LinkedServiceReference
         uid: '@azure/arm-datafactory.LinkedServiceReference'
+  - uid: '@azure/arm-datafactory.LogStorageSettings'
+    name: LogStorageSettings
+    spec.typeScript:
+      - name: LogStorageSettings
+        fullName: LogStorageSettings
+        uid: '@azure/arm-datafactory.LogStorageSettings'
   - uid: '@azure/arm-datafactory.ActivityPolicy'
     name: ActivityPolicy
     spec.typeScript:
@@ -334,6 +464,12 @@ references:
       - name: CopySinkUnion
         fullName: CopySinkUnion
         uid: '@azure/arm-datafactory.CopySinkUnion'
+  - uid: '@azure/arm-datafactory.SkipErrorFile'
+    name: SkipErrorFile
+    spec.typeScript:
+      - name: SkipErrorFile
+        fullName: SkipErrorFile
+        uid: '@azure/arm-datafactory.SkipErrorFile'
   - uid: '@azure/arm-datafactory.CopySourceUnion'
     name: CopySourceUnion
     spec.typeScript:
@@ -346,12 +482,6 @@ references:
       - name: StagingSettings
         fullName: StagingSettings
         uid: '@azure/arm-datafactory.StagingSettings'
-  - uid: '@azure/arm-datafactory.CopyTranslatorUnion'
-    name: CopyTranslatorUnion
-    spec.typeScript:
-      - name: CopyTranslatorUnion
-        fullName: CopyTranslatorUnion
-        uid: '@azure/arm-datafactory.CopyTranslatorUnion'
   - uid: '@azure/arm-datafactory.UserProperty[]'
     name: 'UserProperty[]'
     spec.typeScript:

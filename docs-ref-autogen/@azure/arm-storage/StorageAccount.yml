@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-storage.StorageAccount.accessTier'
       - '@azure/arm-storage.StorageAccount.azureFilesIdentityBasedAuthentication'
+      - '@azure/arm-storage.StorageAccount.blobRestoreStatus'
       - '@azure/arm-storage.StorageAccount.creationTime'
       - '@azure/arm-storage.StorageAccount.customDomain'
       - '@azure/arm-storage.StorageAccount.enableHttpsTrafficOnly'
@@ -16,13 +17,16 @@ items:
       - '@azure/arm-storage.StorageAccount.identity'
       - '@azure/arm-storage.StorageAccount.isHnsEnabled'
       - '@azure/arm-storage.StorageAccount.kind'
+      - '@azure/arm-storage.StorageAccount.largeFileSharesState'
       - '@azure/arm-storage.StorageAccount.lastGeoFailoverTime'
       - '@azure/arm-storage.StorageAccount.location'
       - '@azure/arm-storage.StorageAccount.name'
       - '@azure/arm-storage.StorageAccount.networkRuleSet'
       - '@azure/arm-storage.StorageAccount.primaryEndpoints'
       - '@azure/arm-storage.StorageAccount.primaryLocation'
+      - '@azure/arm-storage.StorageAccount.privateEndpointConnections'
       - '@azure/arm-storage.StorageAccount.provisioningState'
+      - '@azure/arm-storage.StorageAccount.routingPreference'
       - '@azure/arm-storage.StorageAccount.secondaryEndpoints'
       - '@azure/arm-storage.StorageAccount.secondaryLocation'
       - '@azure/arm-storage.StorageAccount.sku'
@@ -58,6 +62,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.AccessTier'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.azureFilesIdentityBasedAuthentication'
     name: azureFilesIdentityBasedAuthentication
@@ -75,6 +80,27 @@ items:
       return:
         type:
           - '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccount.blobRestoreStatus'
+    name: blobRestoreStatus
+    fullName: blobRestoreStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Blob restore status
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'blobRestoreStatus?: BlobRestoreStatus'
+      return:
+        type:
+          - '@azure/arm-storage.BlobRestoreStatus'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.creationTime'
     name: creationTime
@@ -94,6 +120,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.customDomain'
     name: customDomain
@@ -113,6 +140,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.CustomDomain'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.enableHttpsTrafficOnly'
     name: enableHttpsTrafficOnly
@@ -128,6 +156,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.encryption'
     name: encryption
@@ -148,6 +177,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Encryption'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.failoverInProgress'
     name: failoverInProgress
@@ -168,6 +198,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.geoReplicationStats'
     name: geoReplicationStats
@@ -187,6 +218,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.GeoReplicationStats'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.id'
     name: id
@@ -208,6 +240,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.identity'
     name: identity
@@ -223,6 +256,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Identity'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.isHnsEnabled'
     name: isHnsEnabled
@@ -238,6 +272,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.kind'
     name: kind
@@ -260,6 +295,27 @@ items:
       return:
         type:
           - '@azure/arm-storage.Kind'
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccount.largeFileSharesState'
+    name: largeFileSharesState
+    fullName: largeFileSharesState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Allow large file shares if sets to Enabled. It cannot be disabled once it
+      is enabled. Possible
+
+      values include: 'Disabled', 'Enabled'
+    optional: true
+    syntax:
+      content: 'largeFileSharesState?: LargeFileSharesState'
+      return:
+        type:
+          - '@azure/arm-storage.LargeFileSharesState'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.lastGeoFailoverTime'
     name: lastGeoFailoverTime
@@ -286,6 +342,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.location'
     name: location
@@ -300,6 +357,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.name'
     name: name
@@ -319,6 +377,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.networkRuleSet'
     name: networkRuleSet
@@ -338,6 +397,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.NetworkRuleSet'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.primaryEndpoints'
     name: primaryEndpoints
@@ -361,6 +421,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Endpoints'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.primaryLocation'
     name: primaryLocation
@@ -380,6 +441,28 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccount.privateEndpointConnections'
+    name: privateEndpointConnections
+    fullName: privateEndpointConnections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      List of private endpoint connection associated with the specified storage
+      account
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    optional: true
+    syntax:
+      content: 'privateEndpointConnections?: PrivateEndpointConnection[]'
+      return:
+        type:
+          - '@azure/arm-storage.PrivateEndpointConnection[]'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.provisioningState'
     name: provisioningState
@@ -402,6 +485,25 @@ items:
       return:
         type:
           - '@azure/arm-storage.ProvisioningState'
+        description: ''
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccount.routingPreference'
+    name: routingPreference
+    fullName: routingPreference
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Maintains information about the network routing choice opted by the user
+      for data transfer
+    optional: true
+    syntax:
+      content: 'routingPreference?: RoutingPreference'
+      return:
+        type:
+          - '@azure/arm-storage.RoutingPreference'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.secondaryEndpoints'
     name: secondaryEndpoints
@@ -427,6 +529,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Endpoints'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.secondaryLocation'
     name: secondaryLocation
@@ -449,6 +552,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.sku'
     name: sku
@@ -468,6 +572,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.Sku'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.statusOfPrimary'
     name: statusOfPrimary
@@ -490,6 +595,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.AccountStatus'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.statusOfSecondary'
     name: statusOfSecondary
@@ -515,6 +621,7 @@ items:
       return:
         type:
           - '@azure/arm-storage.AccountStatus'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.tags'
     name: tags
@@ -530,6 +637,7 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.type'
     name: type
@@ -551,6 +659,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-storage'
 references:
   - uid: '@azure/arm-storage.TrackedResource'
@@ -571,6 +680,12 @@ references:
       - name: AzureFilesIdentityBasedAuthentication
         fullName: AzureFilesIdentityBasedAuthentication
         uid: '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
+  - uid: '@azure/arm-storage.BlobRestoreStatus'
+    name: BlobRestoreStatus
+    spec.typeScript:
+      - name: BlobRestoreStatus
+        fullName: BlobRestoreStatus
+        uid: '@azure/arm-storage.BlobRestoreStatus'
   - uid: '@azure/arm-storage.CustomDomain'
     name: CustomDomain
     spec.typeScript:
@@ -601,6 +716,12 @@ references:
       - name: Kind
         fullName: Kind
         uid: '@azure/arm-storage.Kind'
+  - uid: '@azure/arm-storage.LargeFileSharesState'
+    name: LargeFileSharesState
+    spec.typeScript:
+      - name: LargeFileSharesState
+        fullName: LargeFileSharesState
+        uid: '@azure/arm-storage.LargeFileSharesState'
   - uid: '@azure/arm-storage.NetworkRuleSet'
     name: NetworkRuleSet
     spec.typeScript:
@@ -613,12 +734,26 @@ references:
       - name: Endpoints
         fullName: Endpoints
         uid: '@azure/arm-storage.Endpoints'
+  - uid: '@azure/arm-storage.PrivateEndpointConnection[]'
+    name: 'PrivateEndpointConnection[]'
+    spec.typeScript:
+      - name: PrivateEndpointConnection
+        fullName: PrivateEndpointConnection
+        uid: '@azure/arm-storage.PrivateEndpointConnection'
+      - name: '[]'
+        fullName: '[]'
   - uid: '@azure/arm-storage.ProvisioningState'
     name: ProvisioningState
     spec.typeScript:
       - name: ProvisioningState
         fullName: ProvisioningState
         uid: '@azure/arm-storage.ProvisioningState'
+  - uid: '@azure/arm-storage.RoutingPreference'
+    name: RoutingPreference
+    spec.typeScript:
+      - name: RoutingPreference
+        fullName: RoutingPreference
+        uid: '@azure/arm-storage.RoutingPreference'
   - uid: '@azure/arm-storage.Sku'
     name: Sku
     spec.typeScript:

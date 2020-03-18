@@ -5,14 +5,12 @@ items:
     fullName: Resource
     children:
       - '@azure/arm-cosmosdb.Resource.id'
-      - '@azure/arm-cosmosdb.Resource.location'
       - '@azure/arm-cosmosdb.Resource.name'
-      - '@azure/arm-cosmosdb.Resource.tags'
       - '@azure/arm-cosmosdb.Resource.type'
     langs:
       - typeScript
     type: interface
-    summary: The core properties of ARM resources.
+    summary: An interface representing Resource.
     extends:
       name: BaseResource
     package: '@azure/arm-cosmosdb'
@@ -24,7 +22,9 @@ items:
       - typeScript
     type: property
     summary: >-
-      The unique resource identifier of the database account.
+      Fully qualified resource Id for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -34,21 +34,7 @@ items:
       return:
         type:
           - undefined | string
-    package: '@azure/arm-cosmosdb'
-  - uid: '@azure/arm-cosmosdb.Resource.location'
-    name: location
-    fullName: location
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The location of the resource group to which the resource belongs.
-    optional: true
-    syntax:
-      content: 'location?: undefined | string'
-      return:
-        type:
-          - undefined | string
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.Resource.name'
     name: name
@@ -58,7 +44,7 @@ items:
       - typeScript
     type: property
     summary: >-
-      The name of the database account.
+      The name of the resource
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -68,21 +54,7 @@ items:
       return:
         type:
           - undefined | string
-    package: '@azure/arm-cosmosdb'
-  - uid: '@azure/arm-cosmosdb.Resource.tags'
-    name: tags
-    fullName: tags
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'tags?: undefined | [key: string]: string'
-      return:
-        type:
-          - 'undefined | [key: string]: string'
+        description: ''
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.Resource.type'
     name: type
@@ -92,7 +64,9 @@ items:
       - typeScript
     type: property
     summary: >-
-      The type of Azure resource.
+      The type of the resource. Ex- Microsoft.Compute/virtualMachines or
+
+      Microsoft.Storage/storageAccounts.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -102,4 +76,5 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-cosmosdb'

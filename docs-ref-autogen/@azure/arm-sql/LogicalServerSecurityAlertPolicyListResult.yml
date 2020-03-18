@@ -11,12 +11,13 @@ items:
       - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.entries'
       - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.every'
       - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.fill'
-      - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.filter_1'
       - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.filter'
+      - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.filter_1'
       - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.find'
       - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.find_1'
       - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.findIndex'
       - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.forEach'
+      - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.includes'
       - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.indexOf'
       - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.join'
       - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.concat'
     name: 'concat(ConcatArray<ServerSecurityAlertPolicy>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.every'
     name: >-
       every((value: ServerSecurityAlertPolicy, index: number, array:
-      ServerSecurityAlertPolicy[]) => boolean, any)
+      ServerSecurityAlertPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: ServerSecurityAlertPolicy, index:
-        number, array: ServerSecurityAlertPolicy[]) => boolean, thisArg?: any)
+        number, array: ServerSecurityAlertPolicy[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ServerSecurityAlertPolicy, index: number, array:
-              ServerSecurityAlertPolicy[]) => boolean
+              ServerSecurityAlertPolicy[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.fill'
     name: 'fill(ServerSecurityAlertPolicy, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-sql'
-  - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.filter_1'
-    name: >-
-      filter((value: ServerSecurityAlertPolicy, index: number, array:
-      ServerSecurityAlertPolicy[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: ServerSecurityAlertPolicy, index:
-        number, array: ServerSecurityAlertPolicy[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: ServerSecurityAlertPolicy, index: number, array:
-              ServerSecurityAlertPolicy[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-sql.ServerSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.filter_1'
+    name: >-
+      filter((value: ServerSecurityAlertPolicy, index: number, array:
+      ServerSecurityAlertPolicy[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: ServerSecurityAlertPolicy, index:
+        number, array: ServerSecurityAlertPolicy[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: ServerSecurityAlertPolicy, index: number, array:
+              ServerSecurityAlertPolicy[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-sql.ServerSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.find'
     name: >-
@@ -353,30 +363,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.find_1'
     name: >-
       find((value: ServerSecurityAlertPolicy, index: number, obj:
-      ServerSecurityAlertPolicy[]) => boolean, any)
+      ServerSecurityAlertPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: ServerSecurityAlertPolicy, index:
-        number, obj: ServerSecurityAlertPolicy[]) => boolean, thisArg?: any)
+        number, obj: ServerSecurityAlertPolicy[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ServerSecurityAlertPolicy, index: number, obj:
-              ServerSecurityAlertPolicy[]) => boolean
+              ServerSecurityAlertPolicy[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -386,11 +393,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.findIndex'
     name: >-
       findIndex((value: ServerSecurityAlertPolicy, index: number, obj:
-      ServerSecurityAlertPolicy[]) => boolean, any)
+      ServerSecurityAlertPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -403,13 +411,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: ServerSecurityAlertPolicy, index:
-        number, obj: ServerSecurityAlertPolicy[]) => boolean, thisArg?: any)
+        number, obj: ServerSecurityAlertPolicy[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: ServerSecurityAlertPolicy, index: number, obj:
-              ServerSecurityAlertPolicy[]) => boolean
+              ServerSecurityAlertPolicy[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -431,6 +439,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.forEach'
     name: >-
@@ -463,6 +472,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.includes'
+    name: 'includes(ServerSecurityAlertPolicy, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: ServerSecurityAlertPolicy, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-sql.ServerSecurityAlertPolicy'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.indexOf'
     name: 'indexOf(ServerSecurityAlertPolicy, undefined | number)'
     children: []
@@ -489,6 +528,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.join'
     name: join(undefined | string)
@@ -513,6 +553,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.keys'
     name: keys()
@@ -527,6 +568,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.lastIndexOf'
     name: 'lastIndexOf(ServerSecurityAlertPolicy, undefined | number)'
@@ -554,6 +596,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.length'
     name: length
@@ -570,6 +613,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.map'
     name: >-
@@ -606,6 +650,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.nextLink'
     name: nextLink
@@ -625,6 +670,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.pop'
     name: pop()
@@ -639,6 +685,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.push'
     name: 'push(ServerSecurityAlertPolicy[])'
@@ -658,6 +705,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.reduce'
     name: >-
@@ -691,6 +739,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.reduce_1'
     name: >-
@@ -702,10 +751,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: ServerSecurityAlertPolicy,
@@ -727,6 +773,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.reduce_2'
     name: >-
@@ -765,6 +812,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.reduceRight'
     name: >-
@@ -800,6 +848,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.reduceRight_1'
     name: >-
@@ -811,11 +860,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -837,6 +882,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.reduceRight_2'
     name: >-
@@ -876,6 +922,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.reverse'
     name: reverse()
@@ -890,6 +937,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.shift'
     name: shift()
@@ -904,6 +952,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy | undefined'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -929,11 +978,12 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.some'
     name: >-
       some((value: ServerSecurityAlertPolicy, index: number, array:
-      ServerSecurityAlertPolicy[]) => boolean, any)
+      ServerSecurityAlertPolicy[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -944,13 +994,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: ServerSecurityAlertPolicy, index:
-        number, array: ServerSecurityAlertPolicy[]) => boolean, thisArg?: any)
+        number, array: ServerSecurityAlertPolicy[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: ServerSecurityAlertPolicy, index: number, array:
-              ServerSecurityAlertPolicy[]) => boolean
+              ServerSecurityAlertPolicy[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -966,6 +1016,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.sort'
     name: >-
@@ -994,6 +1045,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.splice_1'
     name: 'splice(number, number, ServerSecurityAlertPolicy[])'
@@ -1027,6 +1079,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1055,6 +1108,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicy[]'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.toLocaleString'
     name: toLocaleString()
@@ -1071,6 +1125,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.toString'
     name: toString()
@@ -1085,6 +1140,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.unshift'
     name: 'unshift(ServerSecurityAlertPolicy[])'
@@ -1104,6 +1160,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult.values'
     name: values()
@@ -1118,6 +1175,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-sql.ServerSecurityAlertPolicy>
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: Array<@azure/arm-sql.ServerSecurityAlertPolicy>

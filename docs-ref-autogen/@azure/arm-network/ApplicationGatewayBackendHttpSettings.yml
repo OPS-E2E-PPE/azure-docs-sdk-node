@@ -51,6 +51,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayBackendHttpSettings.authenticationCertificates
@@ -67,6 +68,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayBackendHttpSettings.connectionDraining
@@ -83,6 +85,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewayConnectionDraining'
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayBackendHttpSettings.cookieBasedAffinity
@@ -99,6 +102,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewayCookieBasedAffinity'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.etag'
     name: etag
@@ -107,13 +111,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A unique read-only string that changes whenever the resource is updated.
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'etag?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.hostName'
     name: hostName
@@ -129,6 +138,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.id'
     name: id
@@ -144,6 +154,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.name'
     name: name
@@ -161,6 +172,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.path'
     name: path
@@ -180,6 +192,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayBackendHttpSettings.pickHostNameFromBackendAddress
@@ -200,6 +213,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.port'
     name: port
@@ -215,6 +229,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.probe'
     name: probe
@@ -230,6 +245,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.probeEnabled'
     name: probeEnabled
@@ -245,6 +261,7 @@ items:
       return:
         type:
           - undefined | false | true
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.protocol'
     name: protocol
@@ -262,6 +279,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewayProtocol'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.provisioningState'
     name: provisioningState
@@ -271,16 +289,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Provisioning state of the backend http settings resource. Possible values
-      are: 'Updating',
+      The provisioning state of the backend HTTP settings resource. Possible
+      values include:
 
-      'Deleting', and 'Failed'.
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.requestTimeout'
     name: requestTimeout
@@ -301,6 +323,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-network'
   - uid: >-
       @azure/arm-network.ApplicationGatewayBackendHttpSettings.trustedRootCertificates
@@ -317,6 +340,7 @@ items:
       return:
         type:
           - '@azure/arm-network.SubResource[]'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayBackendHttpSettings.type'
     name: type
@@ -325,13 +349,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Type of the resource.
+    summary: >-
+      Type of the resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -366,3 +395,9 @@ references:
       - name: ApplicationGatewayProtocol
         fullName: ApplicationGatewayProtocol
         uid: '@azure/arm-network.ApplicationGatewayProtocol'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'

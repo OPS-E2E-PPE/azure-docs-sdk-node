@@ -18,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Filters to list backup items.
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.backupEngineName
@@ -28,13 +28,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Backup Engine name
     optional: true
     syntax:
       content: 'backupEngineName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: >-
       @azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.backupManagementType
@@ -44,13 +45,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Backup management type for the backed up item. Possible values include:
+      'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     optional: true
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.backupSetName'
     name: backupSetName
@@ -59,13 +68,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Name of the backup set.
     optional: true
     syntax:
       content: 'backupSetName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.containerName'
     name: containerName
@@ -74,13 +84,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Name of the container.
     optional: true
     syntax:
       content: 'containerName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.fabricName'
     name: fabricName
@@ -89,13 +100,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Name of the fabric.
     optional: true
     syntax:
       content: 'fabricName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.friendlyName'
     name: friendlyName
@@ -104,13 +116,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Friendly name of protected item
     optional: true
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.healthState'
     name: healthState
@@ -119,13 +132,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Health State for the backed up item. Possible values include: 'Passed',
+      'ActionRequired',
+
+      'ActionSuggested', 'Invalid'
     optional: true
     syntax:
       content: 'healthState?: HealthState'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.HealthState'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.itemType'
     name: itemType
@@ -134,13 +152,22 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type of workload this item represents. Possible values include: 'Invalid',
+      'VM', 'FileFolder',
+
+      'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM',
+      'SystemState', 'Client',
+
+      'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase',
+      'SAPAseDatabase'
     optional: true
     syntax:
       content: 'itemType?: DataSourceType'
       return:
         type:
           - '@azure/arm-recoveryservicesbackup.DataSourceType'
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
   - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.policyName'
     name: policyName
@@ -149,13 +176,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Backup policy name associated with the backup item.
     optional: true
     syntax:
       content: 'policyName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-recoveryservicesbackup'
 references:
   - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'

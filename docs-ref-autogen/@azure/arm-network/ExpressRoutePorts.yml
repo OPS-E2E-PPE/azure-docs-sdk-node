@@ -6,7 +6,6 @@ items:
     children:
       - '@azure/arm-network.ExpressRoutePorts.beginCreateOrUpdate'
       - '@azure/arm-network.ExpressRoutePorts.beginDeleteMethod'
-      - '@azure/arm-network.ExpressRoutePorts.beginUpdateTags'
       - '@azure/arm-network.ExpressRoutePorts.createOrUpdate'
       - '@azure/arm-network.ExpressRoutePorts.deleteMethod'
       - '@azure/arm-network.ExpressRoutePorts.constructor'
@@ -26,6 +25,8 @@ items:
       - '@azure/arm-network.ExpressRoutePorts.listNext_2'
       - '@azure/arm-network.ExpressRoutePorts.listNext_1'
       - '@azure/arm-network.ExpressRoutePorts.updateTags'
+      - '@azure/arm-network.ExpressRoutePorts.updateTags_2'
+      - '@azure/arm-network.ExpressRoutePorts.updateTags_1'
     langs:
       - typeScript
     type: class
@@ -66,6 +67,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.beginDeleteMethod'
     name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -95,40 +97,7 @@ items:
       return:
         type:
           - Promise<LROPoller>
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ExpressRoutePorts.beginUpdateTags'
-    name: 'beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Update ExpressRoutePort tags.
-    syntax:
-      content: >-
-        function beginUpdateTags(resourceGroupName: string,
-        expressRoutePortName: string, parameters: TagsObject, options?:
-        msRest.RequestOptionsBase)
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: The name of the resource group.
-        - id: expressRoutePortName
-          type:
-            - string
-          description: The name of the ExpressRoutePort resource.
-        - id: parameters
-          type:
-            - '@azure/arm-network.TagsObject'
-          description: Parameters supplied to update ExpressRoutePort resource tags.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<LROPoller>
+        description: Promise<msRestAzure.LROPoller>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.createOrUpdate'
     name: >-
@@ -165,6 +134,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRoutePortsCreateOrUpdateResponse>
+        description: Promise<Models.ExpressRoutePortsCreateOrUpdateResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.deleteMethod'
     name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
@@ -194,6 +164,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.constructor'
     name: ExpressRoutePorts(NetworkManagementClientContext)
@@ -239,6 +210,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRoutePortsGetResponse>
+        description: Promise<Models.ExpressRoutePortsGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.get_2'
     name: 'get(string, string, RequestOptionsBase, ServiceCallback<ExpressRoutePort>)'
@@ -270,9 +242,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRoutePort>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRoutePortsGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.get_1'
     name: 'get(string, string, ServiceCallback<ExpressRoutePort>)'
@@ -299,9 +268,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRoutePort>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRoutePortsGetResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.list'
     name: list(msRest.RequestOptionsBase)
@@ -321,6 +287,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRoutePortsListResponse>
+        description: Promise<Models.ExpressRoutePortsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.list_2'
     name: 'list(RequestOptionsBase, ServiceCallback<ExpressRoutePortListResult>)'
@@ -343,9 +310,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRoutePortListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRoutePortsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.list_1'
     name: list(ServiceCallback<ExpressRoutePortListResult>)
@@ -362,9 +326,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRoutePortListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRoutePortsListResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.listByResourceGroup'
     name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
@@ -390,6 +351,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRoutePortsListByResourceGroupResponse>
+        description: Promise<Models.ExpressRoutePortsListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.listByResourceGroup_2'
     name: >-
@@ -419,9 +381,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRoutePortListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRoutePortsListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.listByResourceGroup_1'
     name: 'listByResourceGroup(string, ServiceCallback<ExpressRoutePortListResult>)'
@@ -444,9 +403,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRoutePortListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRoutePortsListByResourceGroupResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.listByResourceGroupNext'
     name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
@@ -472,6 +428,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRoutePortsListByResourceGroupNextResponse>
+        description: Promise<Models.ExpressRoutePortsListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.listByResourceGroupNext_2'
     name: >-
@@ -501,9 +458,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRoutePortListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRoutePortsListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.listByResourceGroupNext_1'
     name: >-
@@ -528,9 +482,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRoutePortListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRoutePortsListByResourceGroupNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -556,6 +507,7 @@ items:
       return:
         type:
           - Promise<Models.ExpressRoutePortsListNextResponse>
+        description: Promise<Models.ExpressRoutePortsListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.listNext_2'
     name: >-
@@ -584,9 +536,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRoutePortListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRoutePortsListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.listNext_1'
     name: 'listNext(string, ServiceCallback<ExpressRoutePortListResult>)'
@@ -609,9 +558,6 @@ items:
             - ServiceCallback<@azure/arm-network.ExpressRoutePortListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ExpressRoutePortsListNextResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRoutePorts.updateTags'
     name: 'updateTags(string, string, TagsObject, msRest.RequestOptionsBase)'
@@ -645,6 +591,75 @@ items:
       return:
         type:
           - Promise<Models.ExpressRoutePortsUpdateTagsResponse>
+        description: Promise<Models.ExpressRoutePortsUpdateTagsResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRoutePorts.updateTags_2'
+    name: >-
+      updateTags(string, string, TagsObject, RequestOptionsBase,
+      ServiceCallback<ExpressRoutePort>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, expressRoutePortName:
+        string, parameters: TagsObject, options: RequestOptionsBase, callback:
+        ServiceCallback<ExpressRoutePort>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: expressRoutePortName
+          type:
+            - string
+          description: The name of the ExpressRoutePort resource.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update ExpressRoutePort resource tags.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.ExpressRoutePort>
+          description: |
+            The callback
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRoutePorts.updateTags_1'
+    name: 'updateTags(string, string, TagsObject, ServiceCallback<ExpressRoutePort>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTags(resourceGroupName: string, expressRoutePortName:
+        string, parameters: TagsObject, callback:
+        ServiceCallback<ExpressRoutePort>)
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: The name of the resource group.
+        - id: expressRoutePortName
+          type:
+            - string
+          description: The name of the ExpressRoutePort resource.
+        - id: parameters
+          type:
+            - '@azure/arm-network.TagsObject'
+          description: Parameters supplied to update ExpressRoutePort resource tags.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-network.ExpressRoutePort>
+          description: |
+            The callback
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -659,12 +674,6 @@ references:
       - name: ExpressRoutePort
         fullName: ExpressRoutePort
         uid: '@azure/arm-network.ExpressRoutePort'
-  - uid: '@azure/arm-network.TagsObject'
-    name: TagsObject
-    spec.typeScript:
-      - name: TagsObject
-        fullName: TagsObject
-        uid: '@azure/arm-network.TagsObject'
   - uid: ServiceCallback<@azure/arm-network.ExpressRoutePort>
     name: ExpressRoutePort>
     spec.typeScript:
@@ -685,3 +694,9 @@ references:
         uid: '@azure/arm-network.ExpressRoutePortListResult'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-network.TagsObject'
+    name: TagsObject
+    spec.typeScript:
+      - name: TagsObject
+        fullName: TagsObject
+        uid: '@azure/arm-network.TagsObject'

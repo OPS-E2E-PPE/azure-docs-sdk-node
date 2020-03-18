@@ -11,12 +11,13 @@ items:
       - '@azure/arm-monitor.EventCategoryCollection.entries'
       - '@azure/arm-monitor.EventCategoryCollection.every'
       - '@azure/arm-monitor.EventCategoryCollection.fill'
-      - '@azure/arm-monitor.EventCategoryCollection.filter_1'
       - '@azure/arm-monitor.EventCategoryCollection.filter'
+      - '@azure/arm-monitor.EventCategoryCollection.filter_1'
       - '@azure/arm-monitor.EventCategoryCollection.find'
       - '@azure/arm-monitor.EventCategoryCollection.find_1'
       - '@azure/arm-monitor.EventCategoryCollection.findIndex'
       - '@azure/arm-monitor.EventCategoryCollection.forEach'
+      - '@azure/arm-monitor.EventCategoryCollection.includes'
       - '@azure/arm-monitor.EventCategoryCollection.indexOf'
       - '@azure/arm-monitor.EventCategoryCollection.join'
       - '@azure/arm-monitor.EventCategoryCollection.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.concat'
     name: 'concat(ConcatArray<LocalizableString>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.every'
     name: >-
       every((value: LocalizableString, index: number, array:
-      LocalizableString[]) => boolean, any)
+      LocalizableString[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -170,13 +176,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: LocalizableString, index: number,
-        array: LocalizableString[]) => boolean, thisArg?: any)
+        array: LocalizableString[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: LocalizableString, index: number, array:
-              LocalizableString[]) => boolean
+              LocalizableString[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.fill'
     name: 'fill(LocalizableString, undefined | number, undefined | number)'
@@ -232,43 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-monitor'
-  - uid: '@azure/arm-monitor.EventCategoryCollection.filter_1'
-    name: >-
-      filter((value: LocalizableString, index: number, array:
-      LocalizableString[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: LocalizableString, index: number,
-        array: LocalizableString[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: LocalizableString, index: number, array:
-              LocalizableString[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-monitor.LocalizableString[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.filter'
     name: >-
@@ -306,6 +277,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventCategoryCollection.filter_1'
+    name: >-
+      filter((value: LocalizableString, index: number, array:
+      LocalizableString[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: LocalizableString, index: number,
+        array: LocalizableString[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: LocalizableString, index: number, array:
+              LocalizableString[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.find'
     name: >-
@@ -351,30 +361,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.find_1'
     name: >-
       find((value: LocalizableString, index: number, obj: LocalizableString[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: LocalizableString, index: number, obj:
-        LocalizableString[]) => boolean, thisArg?: any)
+        LocalizableString[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: LocalizableString, index: number, obj:
-              LocalizableString[]) => boolean
+              LocalizableString[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -384,11 +391,12 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString | undefined'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.findIndex'
     name: >-
       findIndex((value: LocalizableString, index: number, obj:
-      LocalizableString[]) => boolean, any)
+      LocalizableString[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -401,13 +409,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: LocalizableString, index: number,
-        obj: LocalizableString[]) => boolean, thisArg?: any)
+        obj: LocalizableString[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: LocalizableString, index: number, obj:
-              LocalizableString[]) => boolean
+              LocalizableString[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -429,6 +437,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.forEach'
     name: >-
@@ -461,6 +470,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventCategoryCollection.includes'
+    name: 'includes(LocalizableString, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: LocalizableString, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-monitor.LocalizableString'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.indexOf'
     name: 'indexOf(LocalizableString, undefined | number)'
     children: []
@@ -487,6 +526,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.join'
     name: join(undefined | string)
@@ -511,6 +551,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.keys'
     name: keys()
@@ -525,6 +566,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.lastIndexOf'
     name: 'lastIndexOf(LocalizableString, undefined | number)'
@@ -552,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.length'
     name: length
@@ -568,6 +611,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.map'
     name: >-
@@ -604,6 +648,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.pop'
     name: pop()
@@ -618,6 +663,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString | undefined'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.push'
     name: 'push(LocalizableString[])'
@@ -637,6 +683,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.reduce'
     name: >-
@@ -669,6 +716,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.reduce_1'
     name: >-
@@ -679,10 +727,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: LocalizableString,
@@ -704,6 +749,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.reduce_2'
     name: >-
@@ -742,6 +788,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.reduceRight'
     name: >-
@@ -776,6 +823,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.reduceRight_1'
     name: >-
@@ -786,11 +834,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: LocalizableString,
@@ -812,6 +856,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.reduceRight_2'
     name: >-
@@ -851,6 +896,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.reverse'
     name: reverse()
@@ -865,6 +911,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.shift'
     name: shift()
@@ -879,6 +926,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString | undefined'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -904,11 +952,12 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.some'
     name: >-
       some((value: LocalizableString, index: number, array: LocalizableString[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -919,13 +968,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: LocalizableString, index: number,
-        array: LocalizableString[]) => boolean, thisArg?: any)
+        array: LocalizableString[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: LocalizableString, index: number, array:
-              LocalizableString[]) => boolean
+              LocalizableString[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -941,6 +990,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.sort'
     name: 'sort(undefined | (a: LocalizableString, b: LocalizableString) => number)'
@@ -965,6 +1015,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.splice_1'
     name: 'splice(number, number, LocalizableString[])'
@@ -998,6 +1049,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1026,6 +1078,7 @@ items:
       return:
         type:
           - '@azure/arm-monitor.LocalizableString[]'
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.toLocaleString'
     name: toLocaleString()
@@ -1042,6 +1095,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.toString'
     name: toString()
@@ -1056,6 +1110,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.unshift'
     name: 'unshift(LocalizableString[])'
@@ -1075,6 +1130,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-monitor'
   - uid: '@azure/arm-monitor.EventCategoryCollection.values'
     name: values()
@@ -1089,6 +1145,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-monitor.LocalizableString>
+        description: ''
     package: '@azure/arm-monitor'
 references:
   - uid: Array<@azure/arm-monitor.LocalizableString>

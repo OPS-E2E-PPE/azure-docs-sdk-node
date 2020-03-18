@@ -11,12 +11,13 @@ items:
       - '@azure/arm-logic.IntegrationAccountSessionListResult.entries'
       - '@azure/arm-logic.IntegrationAccountSessionListResult.every'
       - '@azure/arm-logic.IntegrationAccountSessionListResult.fill'
-      - '@azure/arm-logic.IntegrationAccountSessionListResult.filter_1'
       - '@azure/arm-logic.IntegrationAccountSessionListResult.filter'
+      - '@azure/arm-logic.IntegrationAccountSessionListResult.filter_1'
       - '@azure/arm-logic.IntegrationAccountSessionListResult.find'
       - '@azure/arm-logic.IntegrationAccountSessionListResult.find_1'
       - '@azure/arm-logic.IntegrationAccountSessionListResult.findIndex'
       - '@azure/arm-logic.IntegrationAccountSessionListResult.forEach'
+      - '@azure/arm-logic.IntegrationAccountSessionListResult.includes'
       - '@azure/arm-logic.IntegrationAccountSessionListResult.indexOf'
       - '@azure/arm-logic.IntegrationAccountSessionListResult.join'
       - '@azure/arm-logic.IntegrationAccountSessionListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.concat'
     name: 'concat(ConcatArray<IntegrationAccountSession>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.every'
     name: >-
       every((value: IntegrationAccountSession, index: number, array:
-      IntegrationAccountSession[]) => boolean, any)
+      IntegrationAccountSession[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: IntegrationAccountSession, index:
-        number, array: IntegrationAccountSession[]) => boolean, thisArg?: any)
+        number, array: IntegrationAccountSession[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: IntegrationAccountSession, index: number, array:
-              IntegrationAccountSession[]) => boolean
+              IntegrationAccountSession[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.fill'
     name: 'fill(IntegrationAccountSession, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-logic'
-  - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.filter_1'
-    name: >-
-      filter((value: IntegrationAccountSession, index: number, array:
-      IntegrationAccountSession[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: IntegrationAccountSession, index:
-        number, array: IntegrationAccountSession[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: IntegrationAccountSession, index: number, array:
-              IntegrationAccountSession[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-logic.IntegrationAccountSession[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-logic'
+  - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.filter_1'
+    name: >-
+      filter((value: IntegrationAccountSession, index: number, array:
+      IntegrationAccountSession[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: IntegrationAccountSession, index:
+        number, array: IntegrationAccountSession[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: IntegrationAccountSession, index: number, array:
+              IntegrationAccountSession[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-logic.IntegrationAccountSession[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.find'
     name: >-
@@ -353,30 +363,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.find_1'
     name: >-
       find((value: IntegrationAccountSession, index: number, obj:
-      IntegrationAccountSession[]) => boolean, any)
+      IntegrationAccountSession[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: IntegrationAccountSession, index:
-        number, obj: IntegrationAccountSession[]) => boolean, thisArg?: any)
+        number, obj: IntegrationAccountSession[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: IntegrationAccountSession, index: number, obj:
-              IntegrationAccountSession[]) => boolean
+              IntegrationAccountSession[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -386,11 +393,12 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.findIndex'
     name: >-
       findIndex((value: IntegrationAccountSession, index: number, obj:
-      IntegrationAccountSession[]) => boolean, any)
+      IntegrationAccountSession[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -403,13 +411,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: IntegrationAccountSession, index:
-        number, obj: IntegrationAccountSession[]) => boolean, thisArg?: any)
+        number, obj: IntegrationAccountSession[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: IntegrationAccountSession, index: number, obj:
-              IntegrationAccountSession[]) => boolean
+              IntegrationAccountSession[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -431,6 +439,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.forEach'
     name: >-
@@ -463,6 +472,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-logic'
+  - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.includes'
+    name: 'includes(IntegrationAccountSession, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: IntegrationAccountSession, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-logic.IntegrationAccountSession'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.indexOf'
     name: 'indexOf(IntegrationAccountSession, undefined | number)'
     children: []
@@ -489,6 +528,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.join'
     name: join(undefined | string)
@@ -513,6 +553,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.keys'
     name: keys()
@@ -527,6 +568,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.lastIndexOf'
     name: 'lastIndexOf(IntegrationAccountSession, undefined | number)'
@@ -554,6 +596,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.length'
     name: length
@@ -570,6 +613,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.map'
     name: >-
@@ -606,6 +650,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.nextLink'
     name: nextLink
@@ -621,6 +666,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.pop'
     name: pop()
@@ -635,6 +681,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.push'
     name: 'push(IntegrationAccountSession[])'
@@ -654,6 +701,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.reduce'
     name: >-
@@ -687,6 +735,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.reduce_1'
     name: >-
@@ -698,10 +747,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: IntegrationAccountSession,
@@ -723,6 +769,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.reduce_2'
     name: >-
@@ -761,6 +808,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.reduceRight'
     name: >-
@@ -796,6 +844,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.reduceRight_1'
     name: >-
@@ -807,11 +856,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue:
@@ -833,6 +878,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.reduceRight_2'
     name: >-
@@ -872,6 +918,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.reverse'
     name: reverse()
@@ -886,6 +933,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.shift'
     name: shift()
@@ -900,6 +948,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession | undefined'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -925,11 +974,12 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.some'
     name: >-
       some((value: IntegrationAccountSession, index: number, array:
-      IntegrationAccountSession[]) => boolean, any)
+      IntegrationAccountSession[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -940,13 +990,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: IntegrationAccountSession, index:
-        number, array: IntegrationAccountSession[]) => boolean, thisArg?: any)
+        number, array: IntegrationAccountSession[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: IntegrationAccountSession, index: number, array:
-              IntegrationAccountSession[]) => boolean
+              IntegrationAccountSession[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -962,6 +1012,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.sort'
     name: >-
@@ -990,6 +1041,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.splice_1'
     name: 'splice(number, number, IntegrationAccountSession[])'
@@ -1023,6 +1075,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1051,6 +1104,7 @@ items:
       return:
         type:
           - '@azure/arm-logic.IntegrationAccountSession[]'
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.toLocaleString'
     name: toLocaleString()
@@ -1067,6 +1121,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.toString'
     name: toString()
@@ -1081,6 +1136,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.unshift'
     name: 'unshift(IntegrationAccountSession[])'
@@ -1100,6 +1156,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-logic'
   - uid: '@azure/arm-logic.IntegrationAccountSessionListResult.values'
     name: values()
@@ -1114,6 +1171,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-logic.IntegrationAccountSession>
+        description: ''
     package: '@azure/arm-logic'
 references:
   - uid: Array<@azure/arm-logic.IntegrationAccountSession>

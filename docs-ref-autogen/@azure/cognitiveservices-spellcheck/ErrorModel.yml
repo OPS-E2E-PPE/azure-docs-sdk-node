@@ -13,7 +13,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Defines the error that occurred.
     package: '@azure/cognitiveservices-spellcheck'
   - uid: '@azure/cognitiveservices-spellcheck.ErrorModel.code'
     name: code
@@ -22,12 +22,20 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The error code that identifies the category of error. Possible values
+      include: 'None',
+
+      'ServerError', 'InvalidRequest', 'RateLimitExceeded',
+      'InvalidAuthorization',
+
+      'InsufficientAuthorization'. Default value: 'None'.
     syntax:
       content: 'code: ErrorCode'
       return:
         type:
           - '@azure/cognitiveservices-spellcheck.ErrorCode'
+        description: ''
     package: '@azure/cognitiveservices-spellcheck'
   - uid: '@azure/cognitiveservices-spellcheck.ErrorModel.message'
     name: message
@@ -36,12 +44,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A description of the error.
     syntax:
       content: 'message: string'
       return:
         type:
           - string
+        description: ''
     package: '@azure/cognitiveservices-spellcheck'
   - uid: '@azure/cognitiveservices-spellcheck.ErrorModel.moreDetails'
     name: moreDetails
@@ -50,13 +59,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A description that provides additional information about the error.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'moreDetails?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-spellcheck'
   - uid: '@azure/cognitiveservices-spellcheck.ErrorModel.parameter'
     name: parameter
@@ -65,13 +79,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The parameter in the request that caused the error.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'parameter?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-spellcheck'
   - uid: '@azure/cognitiveservices-spellcheck.ErrorModel.subCode'
     name: subCode
@@ -80,13 +99,26 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The error code that further helps to identify the error. Possible values
+      include:
+
+      'UnexpectedError', 'ResourceError', 'NotImplemented', 'ParameterMissing',
+
+      'ParameterInvalidValue', 'HttpNotAllowed', 'Blocked',
+      'AuthorizationMissing',
+
+      'AuthorizationRedundancy', 'AuthorizationDisabled', 'AuthorizationExpired'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'subCode?: ErrorSubCode'
       return:
         type:
           - '@azure/cognitiveservices-spellcheck.ErrorSubCode'
+        description: ''
     package: '@azure/cognitiveservices-spellcheck'
   - uid: '@azure/cognitiveservices-spellcheck.ErrorModel.value'
     name: value
@@ -95,13 +127,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The parameter's value in the request that was not valid.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'value?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/cognitiveservices-spellcheck'
 references:
   - uid: '@azure/cognitiveservices-spellcheck.ErrorCode'

@@ -6,6 +6,8 @@ items:
     children:
       - '@azure/arm-compute.EncryptionSettingsCollection.enabled'
       - '@azure/arm-compute.EncryptionSettingsCollection.encryptionSettings'
+      - >-
+        @azure/arm-compute.EncryptionSettingsCollection.encryptionSettingsVersion
     langs:
       - typeScript
     type: interface
@@ -34,6 +36,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-compute'
   - uid: '@azure/arm-compute.EncryptionSettingsCollection.encryptionSettings'
     name: encryptionSettings
@@ -49,6 +52,30 @@ items:
       return:
         type:
           - '@azure/arm-compute.EncryptionSettingsElement[]'
+        description: ''
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.EncryptionSettingsCollection.encryptionSettingsVersion'
+    name: encryptionSettingsVersion
+    fullName: encryptionSettingsVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Describes what type of encryption is used for the disks. Once this field
+      is set, it cannot be
+
+      overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1'
+      corresponds to
+
+      Azure Disk Encryption.
+    optional: true
+    syntax:
+      content: 'encryptionSettingsVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+        description: ''
     package: '@azure/arm-compute'
 references:
   - uid: '@azure/arm-compute.EncryptionSettingsElement[]'

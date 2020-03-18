@@ -11,12 +11,13 @@ items:
       - '@azure/arm-apimanagement.SchemaCollection.entries'
       - '@azure/arm-apimanagement.SchemaCollection.every'
       - '@azure/arm-apimanagement.SchemaCollection.fill'
-      - '@azure/arm-apimanagement.SchemaCollection.filter_1'
       - '@azure/arm-apimanagement.SchemaCollection.filter'
+      - '@azure/arm-apimanagement.SchemaCollection.filter_1'
       - '@azure/arm-apimanagement.SchemaCollection.find'
       - '@azure/arm-apimanagement.SchemaCollection.find_1'
       - '@azure/arm-apimanagement.SchemaCollection.findIndex'
       - '@azure/arm-apimanagement.SchemaCollection.forEach'
+      - '@azure/arm-apimanagement.SchemaCollection.includes'
       - '@azure/arm-apimanagement.SchemaCollection.indexOf'
       - '@azure/arm-apimanagement.SchemaCollection.join'
       - '@azure/arm-apimanagement.SchemaCollection.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.concat'
     name: 'concat(ConcatArray<SchemaContract>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.every'
     name: >-
       every((value: SchemaContract, index: number, array: SchemaContract[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: SchemaContract, index: number, array:
-        SchemaContract[]) => boolean, thisArg?: any)
+        SchemaContract[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SchemaContract, index: number, array: SchemaContract[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.fill'
     name: 'fill(SchemaContract, undefined | number, undefined | number)'
@@ -233,43 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.SchemaCollection.filter_1'
-    name: >-
-      filter((value: SchemaContract, index: number, array: SchemaContract[]) =>
-      any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: SchemaContract, index: number,
-        array: SchemaContract[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: SchemaContract, index: number, array: SchemaContract[]) =>
-              any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-apimanagement.SchemaContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.filter'
     name: >-
@@ -307,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.SchemaCollection.filter_1'
+    name: >-
+      filter((value: SchemaContract, index: number, array: SchemaContract[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: SchemaContract, index: number,
+        array: SchemaContract[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: SchemaContract, index: number, array: SchemaContract[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-apimanagement.SchemaContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.find'
     name: >-
@@ -352,30 +362,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.find_1'
     name: >-
       find((value: SchemaContract, index: number, obj: SchemaContract[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: SchemaContract, index: number, obj:
-        SchemaContract[]) => boolean, thisArg?: any)
+        SchemaContract[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SchemaContract, index: number, obj: SchemaContract[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -385,11 +392,12 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract | undefined'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.findIndex'
     name: >-
       findIndex((value: SchemaContract, index: number, obj: SchemaContract[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -402,13 +410,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: SchemaContract, index: number,
-        obj: SchemaContract[]) => boolean, thisArg?: any)
+        obj: SchemaContract[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: SchemaContract, index: number, obj: SchemaContract[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -430,6 +438,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.forEach'
     name: >-
@@ -462,6 +471,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.SchemaCollection.includes'
+    name: 'includes(SchemaContract, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: SchemaContract, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-apimanagement.SchemaContract'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.indexOf'
     name: 'indexOf(SchemaContract, undefined | number)'
     children: []
@@ -488,6 +527,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.join'
     name: join(undefined | string)
@@ -512,6 +552,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.keys'
     name: keys()
@@ -526,6 +567,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.lastIndexOf'
     name: 'lastIndexOf(SchemaContract, undefined | number)'
@@ -553,6 +595,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.length'
     name: length
@@ -569,6 +612,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.map'
     name: >-
@@ -605,6 +649,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.nextLink'
     name: nextLink
@@ -624,6 +669,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.pop'
     name: pop()
@@ -638,6 +684,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract | undefined'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.push'
     name: 'push(SchemaContract[])'
@@ -657,6 +704,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.reduce'
     name: >-
@@ -688,6 +736,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.reduce_1'
     name: >-
@@ -698,10 +747,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: SchemaContract,
@@ -721,6 +767,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.reduce_2'
     name: >-
@@ -759,6 +806,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.reduceRight'
     name: >-
@@ -791,6 +839,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.reduceRight_1'
     name: >-
@@ -801,11 +850,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: SchemaContract,
@@ -825,6 +870,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.reduceRight_2'
     name: >-
@@ -864,6 +910,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.reverse'
     name: reverse()
@@ -878,6 +925,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.shift'
     name: shift()
@@ -892,6 +940,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract | undefined'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -917,11 +966,12 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.some'
     name: >-
       some((value: SchemaContract, index: number, array: SchemaContract[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -932,13 +982,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: SchemaContract, index: number, array:
-        SchemaContract[]) => boolean, thisArg?: any)
+        SchemaContract[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: SchemaContract, index: number, array: SchemaContract[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -954,6 +1004,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.sort'
     name: 'sort(undefined | (a: SchemaContract, b: SchemaContract) => number)'
@@ -978,6 +1029,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.splice_1'
     name: 'splice(number, number, SchemaContract[])'
@@ -1011,6 +1063,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.splice'
     name: 'splice(number, undefined | number)'
@@ -1039,6 +1092,7 @@ items:
       return:
         type:
           - '@azure/arm-apimanagement.SchemaContract[]'
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.toLocaleString'
     name: toLocaleString()
@@ -1055,6 +1109,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.toString'
     name: toString()
@@ -1069,6 +1124,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.unshift'
     name: 'unshift(SchemaContract[])'
@@ -1088,6 +1144,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-apimanagement'
   - uid: '@azure/arm-apimanagement.SchemaCollection.values'
     name: values()
@@ -1102,6 +1159,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-apimanagement.SchemaContract>
+        description: ''
     package: '@azure/arm-apimanagement'
 references:
   - uid: Array<@azure/arm-apimanagement.SchemaContract>

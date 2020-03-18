@@ -13,13 +13,16 @@ items:
       - '@azure/arm-datafactory.FileShareDataset.folderPath'
       - '@azure/arm-datafactory.FileShareDataset.format'
       - '@azure/arm-datafactory.FileShareDataset.linkedServiceName'
+      - '@azure/arm-datafactory.FileShareDataset.modifiedDatetimeEnd'
+      - '@azure/arm-datafactory.FileShareDataset.modifiedDatetimeStart'
       - '@azure/arm-datafactory.FileShareDataset.parameters'
+      - '@azure/arm-datafactory.FileShareDataset.schema'
       - '@azure/arm-datafactory.FileShareDataset.structure'
       - '@azure/arm-datafactory.FileShareDataset.type'
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: An on-premises file system dataset.
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.annotations'
     name: annotations
@@ -28,13 +31,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of tags that can be used for describing the Dataset.
     optional: true
     syntax:
       content: 'annotations?: any[]'
       return:
         type:
           - 'any[]'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.compression'
     name: compression
@@ -43,13 +47,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The data compression method used for the file system.
     optional: true
     syntax:
       content: 'compression?: DatasetCompressionUnion'
       return:
         type:
           - '@azure/arm-datafactory.DatasetCompressionUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.description'
     name: description
@@ -58,13 +63,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Dataset description.
     optional: true
     syntax:
       content: 'description?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.fileFilter'
     name: fileFilter
@@ -73,13 +79,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specify a filter to be used to select a subset of files in the folderPath
+      rather than all
+
+      files. Type: string (or Expression with resultType string).
     optional: true
     syntax:
       content: 'fileFilter?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.fileName'
     name: fileName
@@ -88,13 +99,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The name of the on-premises file system. Type: string (or Expression with
+      resultType string).
     optional: true
     syntax:
       content: 'fileName?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.folder'
     name: folder
@@ -103,13 +117,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The folder that this Dataset is in. If not specified, Dataset will appear
+      at the root level.
     optional: true
     syntax:
       content: 'folder?: DatasetFolder'
       return:
         type:
           - '@azure/arm-datafactory.DatasetFolder'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.folderPath'
     name: folderPath
@@ -118,13 +135,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The path of the on-premises file system. Type: string (or Expression with
+      resultType string).
     optional: true
     syntax:
       content: 'folderPath?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.format'
     name: format
@@ -133,13 +153,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The format of the files.
     optional: true
     syntax:
       content: 'format?: DatasetStorageFormatUnion'
       return:
         type:
           - '@azure/arm-datafactory.DatasetStorageFormatUnion'
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.linkedServiceName'
     name: linkedServiceName
@@ -148,12 +169,49 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Linked service reference.
     syntax:
       content: 'linkedServiceName: LinkedServiceReference'
       return:
         type:
           - '@azure/arm-datafactory.LinkedServiceReference'
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.FileShareDataset.modifiedDatetimeEnd'
+    name: modifiedDatetimeEnd
+    fullName: modifiedDatetimeEnd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The end of file's modified datetime. Type: string (or Expression with
+      resultType string).
+    optional: true
+    syntax:
+      content: 'modifiedDatetimeEnd?: any'
+      return:
+        type:
+          - any
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.FileShareDataset.modifiedDatetimeStart'
+    name: modifiedDatetimeStart
+    fullName: modifiedDatetimeStart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The start of file's modified datetime. Type: string (or Expression with
+      resultType string).
+    optional: true
+    syntax:
+      content: 'modifiedDatetimeStart?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.parameters'
     name: parameters
@@ -162,7 +220,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Parameters for dataset.
     optional: true
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
@@ -171,6 +229,27 @@ items:
           - >-
             undefined | [key: string]:
             @azure/arm-datafactory.ParameterSpecification
+        description: ''
+    package: '@azure/arm-datafactory'
+  - uid: '@azure/arm-datafactory.FileShareDataset.schema'
+    name: schema
+    fullName: schema
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Columns that define the physical type schema of the dataset. Type: array
+      (or Expression with
+
+      resultType array), itemType: DatasetSchemaDataElement.
+    optional: true
+    syntax:
+      content: 'schema?: any'
+      return:
+        type:
+          - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.structure'
     name: structure
@@ -179,13 +258,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Columns that define the structure of the dataset. Type: array (or
+      Expression with resultType
+
+      array), itemType: DatasetDataElement.
     optional: true
     syntax:
       content: 'structure?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-datafactory'
   - uid: '@azure/arm-datafactory.FileShareDataset.type'
     name: type
@@ -194,12 +278,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Polymorphic Discriminator
     syntax:
       content: 'type: "FileShare"'
       return:
         type:
           - '"FileShare"'
+        description: ''
     package: '@azure/arm-datafactory'
 references:
   - uid: '@azure/arm-datafactory.DatasetCompressionUnion'

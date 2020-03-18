@@ -17,6 +17,9 @@ items:
       - '@azure/graph.Applications.get'
       - '@azure/graph.Applications.get_2'
       - '@azure/graph.Applications.get_1'
+      - '@azure/graph.Applications.getServicePrincipalsIdByAppId'
+      - '@azure/graph.Applications.getServicePrincipalsIdByAppId_2'
+      - '@azure/graph.Applications.getServicePrincipalsIdByAppId_1'
       - '@azure/graph.Applications.list_2'
       - '@azure/graph.Applications.list'
       - '@azure/graph.Applications.list_1'
@@ -83,6 +86,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.addOwner_2'
     name: >-
@@ -119,9 +123,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.addOwner_1'
     name: 'addOwner(string, AddOwnerParameters, ServiceCallback<void>)'
@@ -151,9 +152,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.constructor'
     name: Applications(GraphRbacManagementClientContext)
@@ -195,6 +193,7 @@ items:
       return:
         type:
           - Promise<Models.ApplicationsCreateResponse>
+        description: Promise<Models.ApplicationsCreateResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.create_2'
     name: >-
@@ -223,9 +222,6 @@ items:
             - ServiceCallback<@azure/graph.Application>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsCreateResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.create_1'
     name: 'create(ApplicationCreateParameters, ServiceCallback<Application>)'
@@ -248,9 +244,6 @@ items:
             - ServiceCallback<@azure/graph.Application>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsCreateResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.deleteMethod'
     name: 'deleteMethod(string, msRest.RequestOptionsBase)'
@@ -276,6 +269,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.deleteMethod_2'
     name: 'deleteMethod(string, RequestOptionsBase, ServiceCallback<void>)'
@@ -302,9 +296,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.deleteMethod_1'
     name: 'deleteMethod(string, ServiceCallback<void>)'
@@ -327,9 +318,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.get'
     name: 'get(string, msRest.RequestOptionsBase)'
@@ -355,6 +343,7 @@ items:
       return:
         type:
           - Promise<Models.ApplicationsGetResponse>
+        description: Promise<Models.ApplicationsGetResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.get_2'
     name: 'get(string, RequestOptionsBase, ServiceCallback<Application>)'
@@ -381,9 +370,6 @@ items:
             - ServiceCallback<@azure/graph.Application>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsGetResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.get_1'
     name: 'get(string, ServiceCallback<Application>)'
@@ -406,9 +392,85 @@ items:
             - ServiceCallback<@azure/graph.Application>
           description: |
             The callback
+    package: '@azure/graph'
+  - uid: '@azure/graph.Applications.getServicePrincipalsIdByAppId'
+    name: 'getServicePrincipalsIdByAppId(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets an object id for a given application id from the current tenant.
+    syntax:
+      content: >-
+        function getServicePrincipalsIdByAppId(applicationID: string, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: applicationID
+          type:
+            - string
+          description: The application ID.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
       return:
         type:
-          - Promise<Models.ApplicationsGetResponse>
+          - Promise<Models.ApplicationsGetServicePrincipalsIdByAppIdResponse>
+        description: Promise<Models.ApplicationsGetServicePrincipalsIdByAppIdResponse>
+    package: '@azure/graph'
+  - uid: '@azure/graph.Applications.getServicePrincipalsIdByAppId_2'
+    name: >-
+      getServicePrincipalsIdByAppId(string, RequestOptionsBase,
+      ServiceCallback<ServicePrincipalObjectResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getServicePrincipalsIdByAppId(applicationID: string, options:
+        RequestOptionsBase, callback:
+        ServiceCallback<ServicePrincipalObjectResult>)
+      parameters:
+        - id: applicationID
+          type:
+            - string
+          description: The application ID.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type:
+            - ServiceCallback<@azure/graph.ServicePrincipalObjectResult>
+          description: |
+            The callback
+    package: '@azure/graph'
+  - uid: '@azure/graph.Applications.getServicePrincipalsIdByAppId_1'
+    name: >-
+      getServicePrincipalsIdByAppId(string,
+      ServiceCallback<ServicePrincipalObjectResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getServicePrincipalsIdByAppId(applicationID: string, callback:
+        ServiceCallback<ServicePrincipalObjectResult>)
+      parameters:
+        - id: applicationID
+          type:
+            - string
+          description: The application ID.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/graph.ServicePrincipalObjectResult>
+          description: |
+            The callback
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.list_2'
     name: >-
@@ -433,9 +495,6 @@ items:
             - ServiceCallback<@azure/graph.ApplicationListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.list'
     name: list(Models.ApplicationsListOptionalParams)
@@ -455,6 +514,7 @@ items:
       return:
         type:
           - Promise<Models.ApplicationsListResponse>
+        description: Promise<Models.ApplicationsListResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.list_1'
     name: list(ServiceCallback<ApplicationListResult>)
@@ -471,9 +531,6 @@ items:
             - ServiceCallback<@azure/graph.ApplicationListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listKeyCredentials'
     name: 'listKeyCredentials(string, msRest.RequestOptionsBase)'
@@ -499,6 +556,7 @@ items:
       return:
         type:
           - Promise<Models.ApplicationsListKeyCredentialsResponse>
+        description: Promise<Models.ApplicationsListKeyCredentialsResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listKeyCredentials_2'
     name: >-
@@ -527,9 +585,6 @@ items:
             - ServiceCallback<@azure/graph.KeyCredentialListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListKeyCredentialsResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listKeyCredentials_1'
     name: 'listKeyCredentials(string, ServiceCallback<KeyCredentialListResult>)'
@@ -552,9 +607,6 @@ items:
             - ServiceCallback<@azure/graph.KeyCredentialListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListKeyCredentialsResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listNext'
     name: 'listNext(string, msRest.RequestOptionsBase)'
@@ -578,6 +630,7 @@ items:
       return:
         type:
           - Promise<Models.ApplicationsListNextResponse>
+        description: Promise<Models.ApplicationsListNextResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listNext_2'
     name: >-
@@ -606,9 +659,6 @@ items:
             - ServiceCallback<@azure/graph.ApplicationListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListNextResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listNext_1'
     name: 'listNext(string, ServiceCallback<ApplicationListResult>)'
@@ -631,9 +681,6 @@ items:
             - ServiceCallback<@azure/graph.ApplicationListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListNextResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listOwners'
     name: 'listOwners(string, msRest.RequestOptionsBase)'
@@ -661,6 +708,7 @@ items:
       return:
         type:
           - Promise<Models.ApplicationsListOwnersResponse>
+        description: Promise<Models.ApplicationsListOwnersResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listOwners_2'
     name: >-
@@ -690,9 +738,6 @@ items:
             - ServiceCallback<@azure/graph.DirectoryObjectListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListOwnersResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listOwners_1'
     name: 'listOwners(string, ServiceCallback<DirectoryObjectListResult>)'
@@ -715,9 +760,6 @@ items:
             - ServiceCallback<@azure/graph.DirectoryObjectListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListOwnersResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listOwnersNext'
     name: 'listOwnersNext(string, msRest.RequestOptionsBase)'
@@ -745,6 +787,7 @@ items:
       return:
         type:
           - Promise<Models.ApplicationsListOwnersNextResponse>
+        description: Promise<Models.ApplicationsListOwnersNextResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listOwnersNext_2'
     name: >-
@@ -774,9 +817,6 @@ items:
             - ServiceCallback<@azure/graph.DirectoryObjectListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListOwnersNextResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listOwnersNext_1'
     name: 'listOwnersNext(string, ServiceCallback<DirectoryObjectListResult>)'
@@ -799,9 +839,6 @@ items:
             - ServiceCallback<@azure/graph.DirectoryObjectListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListOwnersNextResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listPasswordCredentials'
     name: 'listPasswordCredentials(string, msRest.RequestOptionsBase)'
@@ -827,6 +864,7 @@ items:
       return:
         type:
           - Promise<Models.ApplicationsListPasswordCredentialsResponse>
+        description: Promise<Models.ApplicationsListPasswordCredentialsResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listPasswordCredentials_2'
     name: >-
@@ -856,9 +894,6 @@ items:
             - ServiceCallback<@azure/graph.PasswordCredentialListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListPasswordCredentialsResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.listPasswordCredentials_1'
     name: >-
@@ -883,9 +918,6 @@ items:
             - ServiceCallback<@azure/graph.PasswordCredentialListResult>
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApplicationsListPasswordCredentialsResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.patch'
     name: 'patch(string, ApplicationUpdateParameters, msRest.RequestOptionsBase)'
@@ -915,6 +947,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.patch_2'
     name: >-
@@ -948,9 +981,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.patch_1'
     name: 'patch(string, ApplicationUpdateParameters, ServiceCallback<void>)'
@@ -977,9 +1007,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.removeOwner'
     name: 'removeOwner(string, string, msRest.RequestOptionsBase)'
@@ -1009,6 +1036,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.removeOwner_2'
     name: 'removeOwner(string, string, RequestOptionsBase, ServiceCallback<void>)'
@@ -1039,9 +1067,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.removeOwner_1'
     name: 'removeOwner(string, string, ServiceCallback<void>)'
@@ -1068,9 +1093,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.updateKeyCredentials'
     name: 'updateKeyCredentials(string, KeyCredential[], msRest.RequestOptionsBase)'
@@ -1100,6 +1122,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.updateKeyCredentials_2'
     name: >-
@@ -1133,9 +1156,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.updateKeyCredentials_1'
     name: 'updateKeyCredentials(string, KeyCredential[], ServiceCallback<void>)'
@@ -1162,9 +1182,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.updatePasswordCredentials'
     name: >-
@@ -1196,6 +1213,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: Promise<msRest.RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.updatePasswordCredentials_2'
     name: >-
@@ -1229,9 +1247,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
   - uid: '@azure/graph.Applications.updatePasswordCredentials_1'
     name: >-
@@ -1260,9 +1275,6 @@ items:
             - ServiceCallback<void>
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
     package: '@azure/graph'
 references:
   - uid: '@azure/graph.GraphRbacManagementClientContext'
@@ -1291,6 +1303,16 @@ references:
       - name: Application
         fullName: Application
         uid: '@azure/graph.Application'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/graph.ServicePrincipalObjectResult>
+    name: ServicePrincipalObjectResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ServicePrincipalObjectResult
+        fullName: ServicePrincipalObjectResult
+        uid: '@azure/graph.ServicePrincipalObjectResult'
       - name: '>'
         fullName: '>'
   - uid: ServiceCallback<@azure/graph.ApplicationListResult>

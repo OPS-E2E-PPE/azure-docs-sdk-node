@@ -33,6 +33,7 @@ items:
       - '@azure/arm-sql.SqlManagementClient.firewallRules'
       - '@azure/arm-sql.SqlManagementClient.geoBackupPolicies'
       - '@azure/arm-sql.SqlManagementClient.instanceFailoverGroups'
+      - '@azure/arm-sql.SqlManagementClient.instancePools'
       - '@azure/arm-sql.SqlManagementClient.jobAgents'
       - '@azure/arm-sql.SqlManagementClient.jobCredentials'
       - '@azure/arm-sql.SqlManagementClient.jobExecutions'
@@ -46,6 +47,7 @@ items:
       - '@azure/arm-sql.SqlManagementClient.longTermRetentionBackups'
       - >-
         @azure/arm-sql.SqlManagementClient.managedBackupShortTermRetentionPolicies
+      - '@azure/arm-sql.SqlManagementClient.managedDatabaseRestoreDetails'
       - '@azure/arm-sql.SqlManagementClient.managedDatabases'
       - '@azure/arm-sql.SqlManagementClient.managedDatabaseSecurityAlertPolicies'
       - '@azure/arm-sql.SqlManagementClient.managedDatabaseSensitivityLabels'
@@ -55,6 +57,7 @@ items:
         @azure/arm-sql.SqlManagementClient.managedDatabaseVulnerabilityAssessments
       - >-
         @azure/arm-sql.SqlManagementClient.managedDatabaseVulnerabilityAssessmentScans
+      - '@azure/arm-sql.SqlManagementClient.managedInstanceAdministrators'
       - '@azure/arm-sql.SqlManagementClient.managedInstanceEncryptionProtectors'
       - '@azure/arm-sql.SqlManagementClient.managedInstanceKeys'
       - '@azure/arm-sql.SqlManagementClient.managedInstances'
@@ -65,6 +68,8 @@ items:
         @azure/arm-sql.SqlManagementClient.managedRestorableDroppedDatabaseBackupShortTermRetentionPolicies
       - '@azure/arm-sql.SqlManagementClient.managedServerSecurityAlertPolicies'
       - '@azure/arm-sql.SqlManagementClient.operations'
+      - '@azure/arm-sql.SqlManagementClient.privateEndpointConnections'
+      - '@azure/arm-sql.SqlManagementClient.privateLinkResources'
       - '@azure/arm-sql.SqlManagementClient.recommendedElasticPools'
       - '@azure/arm-sql.SqlManagementClient.recoverableDatabases'
       - '@azure/arm-sql.SqlManagementClient.recoverableManagedDatabases'
@@ -100,6 +105,7 @@ items:
       - '@azure/arm-sql.SqlManagementClient.tdeCertificates'
       - '@azure/arm-sql.SqlManagementClient.transparentDataEncryptionActivities'
       - '@azure/arm-sql.SqlManagementClient.transparentDataEncryptions'
+      - '@azure/arm-sql.SqlManagementClient.usages'
       - '@azure/arm-sql.SqlManagementClient.virtualClusters'
       - '@azure/arm-sql.SqlManagementClient.virtualNetworkRules'
     langs:
@@ -122,6 +128,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.backupLongTermRetentionPolicies'
     name: backupLongTermRetentionPolicies
@@ -136,6 +143,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.BackupLongTermRetentionPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.backupShortTermRetentionPolicies'
     name: backupShortTermRetentionPolicies
@@ -150,6 +158,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.BackupShortTermRetentionPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.beginLongRunningRequest'
     name: >-
@@ -183,6 +192,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: |-
+          The HttpLongRunningOperationResponse
+          that provides methods for interacting with the LRO.
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.capabilities'
     name: capabilities
@@ -197,6 +209,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.Capabilities'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.credentials'
     name: credentials
@@ -211,6 +224,7 @@ items:
       return:
         type:
           - ServiceClientCredentials
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.databaseAutomaticTuning'
     name: databaseAutomaticTuning
@@ -225,6 +239,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DatabaseAutomaticTuningOperations'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.databaseBlobAuditingPolicies'
     name: databaseBlobAuditingPolicies
@@ -239,6 +254,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DatabaseBlobAuditingPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.databaseOperations'
     name: databaseOperations
@@ -253,6 +269,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DatabaseOperations'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.databases'
     name: databases
@@ -267,6 +284,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.Databases'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.databaseThreatDetectionPolicies'
     name: databaseThreatDetectionPolicies
@@ -281,6 +299,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DatabaseThreatDetectionPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.databaseUsages'
     name: databaseUsages
@@ -295,6 +314,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DatabaseUsages'
+        description: ''
     package: '@azure/arm-sql'
   - uid: >-
       @azure/arm-sql.SqlManagementClient.databaseVulnerabilityAssessmentRuleBaselines
@@ -312,6 +332,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DatabaseVulnerabilityAssessmentRuleBaselines'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.databaseVulnerabilityAssessments'
     name: databaseVulnerabilityAssessments
@@ -326,6 +347,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DatabaseVulnerabilityAssessments'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.databaseVulnerabilityAssessmentScans'
     name: databaseVulnerabilityAssessmentScans
@@ -342,6 +364,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DatabaseVulnerabilityAssessmentScans'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.dataMaskingPolicies'
     name: dataMaskingPolicies
@@ -356,6 +379,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DataMaskingPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.dataMaskingRules'
     name: dataMaskingRules
@@ -370,6 +394,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.DataMaskingRules'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.elasticPoolActivities'
     name: elasticPoolActivities
@@ -384,6 +409,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ElasticPoolActivities'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.elasticPoolDatabaseActivities'
     name: elasticPoolDatabaseActivities
@@ -398,6 +424,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ElasticPoolDatabaseActivities'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.elasticPoolOperations'
     name: elasticPoolOperations
@@ -412,6 +439,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ElasticPoolOperations'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.elasticPools'
     name: elasticPools
@@ -426,6 +454,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ElasticPools'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.encryptionProtectors'
     name: encryptionProtectors
@@ -440,6 +469,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.EncryptionProtectors'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.extendedDatabaseBlobAuditingPolicies'
     name: extendedDatabaseBlobAuditingPolicies
@@ -456,6 +486,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ExtendedDatabaseBlobAuditingPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.extendedServerBlobAuditingPolicies'
     name: extendedServerBlobAuditingPolicies
@@ -470,6 +501,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ExtendedServerBlobAuditingPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.failoverGroups'
     name: failoverGroups
@@ -484,6 +516,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.FailoverGroups'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.firewallRules'
     name: firewallRules
@@ -498,6 +531,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.FirewallRules'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.geoBackupPolicies'
     name: geoBackupPolicies
@@ -512,6 +546,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.GeoBackupPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.instanceFailoverGroups'
     name: instanceFailoverGroups
@@ -526,6 +561,22 @@ items:
       return:
         type:
           - '@azure/arm-sql.InstanceFailoverGroups'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SqlManagementClient.instancePools'
+    name: instancePools
+    fullName: instancePools
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'instancePools: InstancePools'
+      return:
+        type:
+          - '@azure/arm-sql.InstancePools'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.jobAgents'
     name: jobAgents
@@ -540,6 +591,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.JobAgents'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.jobCredentials'
     name: jobCredentials
@@ -554,6 +606,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.JobCredentials'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.jobExecutions'
     name: jobExecutions
@@ -568,6 +621,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.JobExecutions'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.jobs'
     name: jobs
@@ -582,6 +636,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.Jobs'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.jobStepExecutions'
     name: jobStepExecutions
@@ -596,6 +651,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.JobStepExecutions'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.jobSteps'
     name: jobSteps
@@ -610,6 +666,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.JobSteps'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.jobTargetExecutions'
     name: jobTargetExecutions
@@ -624,6 +681,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.JobTargetExecutions'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.jobTargetGroups'
     name: jobTargetGroups
@@ -638,6 +696,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.JobTargetGroups'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.jobVersions'
     name: jobVersions
@@ -652,6 +711,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.JobVersions'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.longRunningOperationRetryTimeout'
     name: longRunningOperationRetryTimeout
@@ -669,6 +729,7 @@ items:
       return:
         type:
           - undefined | number
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.longTermRetentionBackups'
     name: longTermRetentionBackups
@@ -683,6 +744,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.LongTermRetentionBackups'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.managedBackupShortTermRetentionPolicies'
     name: managedBackupShortTermRetentionPolicies
@@ -699,6 +761,22 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedBackupShortTermRetentionPolicies'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SqlManagementClient.managedDatabaseRestoreDetails'
+    name: managedDatabaseRestoreDetails
+    fullName: managedDatabaseRestoreDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'managedDatabaseRestoreDetails: ManagedDatabaseRestoreDetails'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseRestoreDetails'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.managedDatabases'
     name: managedDatabases
@@ -713,6 +791,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabases'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.managedDatabaseSecurityAlertPolicies'
     name: managedDatabaseSecurityAlertPolicies
@@ -729,6 +808,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.managedDatabaseSensitivityLabels'
     name: managedDatabaseSensitivityLabels
@@ -743,6 +823,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseSensitivityLabels'
+        description: ''
     package: '@azure/arm-sql'
   - uid: >-
       @azure/arm-sql.SqlManagementClient.managedDatabaseVulnerabilityAssessmentRuleBaselines
@@ -760,6 +841,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentRuleBaselines'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.managedDatabaseVulnerabilityAssessments'
     name: managedDatabaseVulnerabilityAssessments
@@ -776,6 +858,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseVulnerabilityAssessments'
+        description: ''
     package: '@azure/arm-sql'
   - uid: >-
       @azure/arm-sql.SqlManagementClient.managedDatabaseVulnerabilityAssessmentScans
@@ -793,6 +876,22 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentScans'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SqlManagementClient.managedInstanceAdministrators'
+    name: managedInstanceAdministrators
+    fullName: managedInstanceAdministrators
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'managedInstanceAdministrators: ManagedInstanceAdministrators'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedInstanceAdministrators'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.managedInstanceEncryptionProtectors'
     name: managedInstanceEncryptionProtectors
@@ -807,6 +906,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceEncryptionProtectors'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.managedInstanceKeys'
     name: managedInstanceKeys
@@ -821,6 +921,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceKeys'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.managedInstances'
     name: managedInstances
@@ -835,6 +936,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstances'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.managedInstanceTdeCertificates'
     name: managedInstanceTdeCertificates
@@ -849,6 +951,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceTdeCertificates'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.managedInstanceVulnerabilityAssessments'
     name: managedInstanceVulnerabilityAssessments
@@ -865,6 +968,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedInstanceVulnerabilityAssessments'
+        description: ''
     package: '@azure/arm-sql'
   - uid: >-
       @azure/arm-sql.SqlManagementClient.managedRestorableDroppedDatabaseBackupShortTermRetentionPolicies
@@ -883,6 +987,7 @@ items:
         type:
           - >-
             @azure/arm-sql.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPolicies
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.managedServerSecurityAlertPolicies'
     name: managedServerSecurityAlertPolicies
@@ -897,6 +1002,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ManagedServerSecurityAlertPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.operations'
     name: operations
@@ -911,6 +1017,37 @@ items:
       return:
         type:
           - '@azure/arm-sql.Operations'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SqlManagementClient.privateEndpointConnections'
+    name: privateEndpointConnections
+    fullName: privateEndpointConnections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'privateEndpointConnections: PrivateEndpointConnections'
+      return:
+        type:
+          - '@azure/arm-sql.PrivateEndpointConnections'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SqlManagementClient.privateLinkResources'
+    name: privateLinkResources
+    fullName: privateLinkResources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'privateLinkResources: PrivateLinkResources'
+      return:
+        type:
+          - '@azure/arm-sql.PrivateLinkResources'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.recommendedElasticPools'
     name: recommendedElasticPools
@@ -925,6 +1062,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RecommendedElasticPools'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.recoverableDatabases'
     name: recoverableDatabases
@@ -939,6 +1077,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RecoverableDatabases'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.recoverableManagedDatabases'
     name: recoverableManagedDatabases
@@ -953,6 +1092,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RecoverableManagedDatabases'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.replicationLinks'
     name: replicationLinks
@@ -967,6 +1107,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ReplicationLinks'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.restorableDroppedDatabases'
     name: restorableDroppedDatabases
@@ -981,6 +1122,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedDatabases'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.restorableDroppedManagedDatabases'
     name: restorableDroppedManagedDatabases
@@ -995,6 +1137,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorableDroppedManagedDatabases'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.restoreLROPoller'
     name: restoreLROPoller(LROPollState)
@@ -1017,6 +1160,7 @@ items:
       return:
         type:
           - LROPoller
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.restorePoints'
     name: restorePoints
@@ -1031,6 +1175,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.RestorePoints'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.sendLongRunningRequest'
     name: >-
@@ -1060,6 +1205,9 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: >-
+          The HttpOperationResponse containing the final polling request,
+          response and the responseBody.
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.sendLRORequest'
     name: 'sendLRORequest(OperationArguments, OperationSpec, RequestOptionsBase)'
@@ -1093,6 +1241,9 @@ items:
       return:
         type:
           - Promise<LROPoller>
+        description: >-
+          The LROPoller object that provides methods for interacting with the
+          LRO.
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.sendOperationRequest'
     name: >-
@@ -1127,6 +1278,7 @@ items:
       return:
         type:
           - Promise<RestResponse>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.sendRequest'
     name: sendRequest(RequestPrepareOptions | WebResource)
@@ -1145,6 +1297,7 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.sensitivityLabels'
     name: sensitivityLabels
@@ -1159,6 +1312,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SensitivityLabels'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serverAutomaticTuning'
     name: serverAutomaticTuning
@@ -1173,6 +1327,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAutomaticTuningOperations'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serverAzureADAdministrators'
     name: serverAzureADAdministrators
@@ -1187,6 +1342,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerAzureADAdministrators'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serverBlobAuditingPolicies'
     name: serverBlobAuditingPolicies
@@ -1201,6 +1357,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerBlobAuditingPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serverCommunicationLinks'
     name: serverCommunicationLinks
@@ -1215,6 +1372,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerCommunicationLinks'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serverConnectionPolicies'
     name: serverConnectionPolicies
@@ -1229,6 +1387,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerConnectionPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serverDnsAliases'
     name: serverDnsAliases
@@ -1243,6 +1402,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerDnsAliases'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serverKeys'
     name: serverKeys
@@ -1257,6 +1417,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerKeys'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.servers'
     name: servers
@@ -1271,6 +1432,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.Servers'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serverSecurityAlertPolicies'
     name: serverSecurityAlertPolicies
@@ -1285,6 +1447,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerSecurityAlertPolicies'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serverUsages'
     name: serverUsages
@@ -1299,6 +1462,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerUsages'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serverVulnerabilityAssessments'
     name: serverVulnerabilityAssessments
@@ -1313,6 +1477,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServerVulnerabilityAssessments'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serviceObjectives'
     name: serviceObjectives
@@ -1327,6 +1492,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServiceObjectives'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.serviceTierAdvisors'
     name: serviceTierAdvisors
@@ -1341,6 +1507,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.ServiceTierAdvisors'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.constructor'
     name: >-
@@ -1383,6 +1550,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.subscriptionUsages'
     name: subscriptionUsages
@@ -1397,6 +1565,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SubscriptionUsages'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.syncAgents'
     name: syncAgents
@@ -1411,6 +1580,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncAgents'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.syncGroups'
     name: syncGroups
@@ -1425,6 +1595,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncGroups'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.syncMembers'
     name: syncMembers
@@ -1439,6 +1610,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.SyncMembers'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.tdeCertificates'
     name: tdeCertificates
@@ -1453,6 +1625,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TdeCertificates'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.transparentDataEncryptionActivities'
     name: transparentDataEncryptionActivities
@@ -1467,6 +1640,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptionActivities'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.transparentDataEncryptions'
     name: transparentDataEncryptions
@@ -1481,6 +1655,22 @@ items:
       return:
         type:
           - '@azure/arm-sql.TransparentDataEncryptions'
+        description: ''
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.SqlManagementClient.usages'
+    name: usages
+    fullName: usages
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'usages: Usages'
+      return:
+        type:
+          - '@azure/arm-sql.Usages'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.virtualClusters'
     name: virtualClusters
@@ -1495,6 +1685,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.VirtualClusters'
+        description: ''
     package: '@azure/arm-sql'
   - uid: '@azure/arm-sql.SqlManagementClient.virtualNetworkRules'
     name: virtualNetworkRules
@@ -1509,6 +1700,7 @@ items:
       return:
         type:
           - '@azure/arm-sql.VirtualNetworkRules'
+        description: ''
     package: '@azure/arm-sql'
 references:
   - uid: '@azure/arm-sql.SqlManagementClientContext'
@@ -1667,6 +1859,12 @@ references:
       - name: InstanceFailoverGroups
         fullName: InstanceFailoverGroups
         uid: '@azure/arm-sql.InstanceFailoverGroups'
+  - uid: '@azure/arm-sql.InstancePools'
+    name: InstancePools
+    spec.typeScript:
+      - name: InstancePools
+        fullName: InstancePools
+        uid: '@azure/arm-sql.InstancePools'
   - uid: '@azure/arm-sql.JobAgents'
     name: JobAgents
     spec.typeScript:
@@ -1733,6 +1931,12 @@ references:
       - name: ManagedBackupShortTermRetentionPolicies
         fullName: ManagedBackupShortTermRetentionPolicies
         uid: '@azure/arm-sql.ManagedBackupShortTermRetentionPolicies'
+  - uid: '@azure/arm-sql.ManagedDatabaseRestoreDetails'
+    name: ManagedDatabaseRestoreDetails
+    spec.typeScript:
+      - name: ManagedDatabaseRestoreDetails
+        fullName: ManagedDatabaseRestoreDetails
+        uid: '@azure/arm-sql.ManagedDatabaseRestoreDetails'
   - uid: '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicies'
     name: ManagedDatabaseSecurityAlertPolicies
     spec.typeScript:
@@ -1769,6 +1973,12 @@ references:
       - name: ManagedDatabases
         fullName: ManagedDatabases
         uid: '@azure/arm-sql.ManagedDatabases'
+  - uid: '@azure/arm-sql.ManagedInstanceAdministrators'
+    name: ManagedInstanceAdministrators
+    spec.typeScript:
+      - name: ManagedInstanceAdministrators
+        fullName: ManagedInstanceAdministrators
+        uid: '@azure/arm-sql.ManagedInstanceAdministrators'
   - uid: '@azure/arm-sql.ManagedInstanceEncryptionProtectors'
     name: ManagedInstanceEncryptionProtectors
     spec.typeScript:
@@ -1819,6 +2029,18 @@ references:
       - name: Operations
         fullName: Operations
         uid: '@azure/arm-sql.Operations'
+  - uid: '@azure/arm-sql.PrivateEndpointConnections'
+    name: PrivateEndpointConnections
+    spec.typeScript:
+      - name: PrivateEndpointConnections
+        fullName: PrivateEndpointConnections
+        uid: '@azure/arm-sql.PrivateEndpointConnections'
+  - uid: '@azure/arm-sql.PrivateLinkResources'
+    name: PrivateLinkResources
+    spec.typeScript:
+      - name: PrivateLinkResources
+        fullName: PrivateLinkResources
+        uid: '@azure/arm-sql.PrivateLinkResources'
   - uid: '@azure/arm-sql.RecommendedElasticPools'
     name: RecommendedElasticPools
     spec.typeScript:
@@ -1987,6 +2209,12 @@ references:
       - name: TransparentDataEncryptions
         fullName: TransparentDataEncryptions
         uid: '@azure/arm-sql.TransparentDataEncryptions'
+  - uid: '@azure/arm-sql.Usages'
+    name: Usages
+    spec.typeScript:
+      - name: Usages
+        fullName: Usages
+        uid: '@azure/arm-sql.Usages'
   - uid: '@azure/arm-sql.VirtualClusters'
     name: VirtualClusters
     spec.typeScript:

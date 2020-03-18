@@ -11,12 +11,13 @@ items:
       - '@azure/arm-eventgrid.DomainTopicsListResult.entries'
       - '@azure/arm-eventgrid.DomainTopicsListResult.every'
       - '@azure/arm-eventgrid.DomainTopicsListResult.fill'
-      - '@azure/arm-eventgrid.DomainTopicsListResult.filter_1'
       - '@azure/arm-eventgrid.DomainTopicsListResult.filter'
+      - '@azure/arm-eventgrid.DomainTopicsListResult.filter_1'
       - '@azure/arm-eventgrid.DomainTopicsListResult.find'
       - '@azure/arm-eventgrid.DomainTopicsListResult.find_1'
       - '@azure/arm-eventgrid.DomainTopicsListResult.findIndex'
       - '@azure/arm-eventgrid.DomainTopicsListResult.forEach'
+      - '@azure/arm-eventgrid.DomainTopicsListResult.includes'
       - '@azure/arm-eventgrid.DomainTopicsListResult.indexOf'
       - '@azure/arm-eventgrid.DomainTopicsListResult.join'
       - '@azure/arm-eventgrid.DomainTopicsListResult.keys'
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.concat'
     name: 'concat(ConcatArray<DomainTopic>[])'
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.entries'
     name: entries()
@@ -158,11 +163,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.every'
     name: >-
       every((value: DomainTopic, index: number, array: DomainTopic[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -171,13 +177,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: DomainTopic, index: number, array:
-        DomainTopic[]) => boolean, thisArg?: any)
+        DomainTopic[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: DomainTopic, index: number, array: DomainTopic[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -193,6 +199,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.fill'
     name: 'fill(DomainTopic, undefined | number, undefined | number)'
@@ -233,41 +240,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-eventgrid'
-  - uid: '@azure/arm-eventgrid.DomainTopicsListResult.filter_1'
-    name: >-
-      filter((value: DomainTopic, index: number, array: DomainTopic[]) => any,
-      any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: DomainTopic, index: number, array:
-        DomainTopic[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: DomainTopic, index: number, array: DomainTopic[]) => any'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-eventgrid.DomainTopic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.filter'
     name: >-
@@ -305,6 +278,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-eventgrid'
+  - uid: '@azure/arm-eventgrid.DomainTopicsListResult.filter_1'
+    name: >-
+      filter((value: DomainTopic, index: number, array: DomainTopic[]) =>
+      unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: DomainTopic, index: number, array:
+        DomainTopic[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: DomainTopic, index: number, array: DomainTopic[]) =>
+              unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-eventgrid.DomainTopic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.find'
     name: >-
@@ -350,28 +362,25 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.find_1'
     name: >-
-      find((value: DomainTopic, index: number, obj: DomainTopic[]) => boolean,
+      find((value: DomainTopic, index: number, obj: DomainTopic[]) => unknown,
       any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: DomainTopic, index: number, obj:
-        DomainTopic[]) => boolean, thisArg?: any)
+        DomainTopic[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: DomainTopic, index: number, obj: DomainTopic[]) => boolean'
+            - '(value: DomainTopic, index: number, obj: DomainTopic[]) => unknown'
           description: ''
         - id: thisArg
           type:
@@ -381,11 +390,12 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic | undefined'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.findIndex'
     name: >-
       findIndex((value: DomainTopic, index: number, obj: DomainTopic[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -398,11 +408,11 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: DomainTopic, index: number, obj:
-        DomainTopic[]) => boolean, thisArg?: any)
+        DomainTopic[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
-            - '(value: DomainTopic, index: number, obj: DomainTopic[]) => boolean'
+            - '(value: DomainTopic, index: number, obj: DomainTopic[]) => unknown'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -424,6 +434,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.forEach'
     name: >-
@@ -454,6 +465,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-eventgrid'
+  - uid: '@azure/arm-eventgrid.DomainTopicsListResult.includes'
+    name: 'includes(DomainTopic, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: DomainTopic, fromIndex?: undefined |
+        number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-eventgrid.DomainTopic'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.indexOf'
     name: 'indexOf(DomainTopic, undefined | number)'
     children: []
@@ -480,6 +521,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.join'
     name: join(undefined | string)
@@ -504,6 +546,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.keys'
     name: keys()
@@ -518,6 +561,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.lastIndexOf'
     name: 'lastIndexOf(DomainTopic, undefined | number)'
@@ -545,6 +589,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.length'
     name: length
@@ -561,6 +606,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.map'
     name: 'map((value: DomainTopic, index: number, array: DomainTopic[]) => U, any)'
@@ -593,6 +639,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.nextLink'
     name: nextLink
@@ -601,13 +648,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: A link for the next page of domain topics.
+    summary: A link for the next page of domain topics
     optional: true
     syntax:
       content: 'nextLink?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.pop'
     name: pop()
@@ -622,6 +670,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic | undefined'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.push'
     name: 'push(DomainTopic[])'
@@ -641,6 +690,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.reduce'
     name: >-
@@ -671,6 +721,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.reduce_1'
     name: >-
@@ -680,10 +731,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: DomainTopic, currentValue:
@@ -703,6 +751,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.reduce_2'
     name: >-
@@ -741,6 +790,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.reduceRight'
     name: >-
@@ -773,6 +823,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.reduceRight_1'
     name: >-
@@ -782,11 +833,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: DomainTopic,
@@ -806,6 +853,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.reduceRight_2'
     name: >-
@@ -845,6 +893,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.reverse'
     name: reverse()
@@ -859,6 +908,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.shift'
     name: shift()
@@ -873,6 +923,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic | undefined'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -898,10 +949,11 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.some'
     name: >-
-      some((value: DomainTopic, index: number, array: DomainTopic[]) => boolean,
+      some((value: DomainTopic, index: number, array: DomainTopic[]) => unknown,
       any)
     children: []
     type: method
@@ -913,13 +965,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: DomainTopic, index: number, array:
-        DomainTopic[]) => boolean, thisArg?: any)
+        DomainTopic[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: DomainTopic, index: number, array: DomainTopic[]) =>
-              boolean
+              unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -935,6 +987,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.sort'
     name: 'sort(undefined | (a: DomainTopic, b: DomainTopic) => number)'
@@ -959,6 +1012,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.splice_1'
     name: 'splice(number, number, DomainTopic[])'
@@ -992,6 +1046,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.splice'
     name: 'splice(number, undefined | number)'
@@ -1020,6 +1075,7 @@ items:
       return:
         type:
           - '@azure/arm-eventgrid.DomainTopic[]'
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.toLocaleString'
     name: toLocaleString()
@@ -1036,6 +1092,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.toString'
     name: toString()
@@ -1050,6 +1107,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.unshift'
     name: 'unshift(DomainTopic[])'
@@ -1069,6 +1127,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-eventgrid'
   - uid: '@azure/arm-eventgrid.DomainTopicsListResult.values'
     name: values()
@@ -1083,6 +1142,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-eventgrid.DomainTopic>
+        description: ''
     package: '@azure/arm-eventgrid'
 references:
   - uid: Array<@azure/arm-eventgrid.DomainTopic>

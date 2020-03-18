@@ -11,12 +11,13 @@ items:
       - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.entries'
       - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.every'
       - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.fill'
-      - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.filter_1'
       - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.filter'
+      - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.filter_1'
       - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.find'
       - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.find_1'
       - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.findIndex'
       - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.forEach'
+      - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.includes'
       - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.indexOf'
       - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.join'
       - '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.keys'
@@ -66,6 +67,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.concat'
     name: 'concat(ConcatArray<PolicyTrackedResource>[])'
@@ -85,6 +87,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -104,6 +107,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -147,6 +151,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.entries'
     name: entries()
@@ -161,11 +166,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.every'
     name: >-
       every((value: PolicyTrackedResource, index: number, array:
-      PolicyTrackedResource[]) => boolean, any)
+      PolicyTrackedResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -174,13 +180,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: PolicyTrackedResource, index: number,
-        array: PolicyTrackedResource[]) => boolean, thisArg?: any)
+        array: PolicyTrackedResource[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: PolicyTrackedResource, index: number, array:
-              PolicyTrackedResource[]) => boolean
+              PolicyTrackedResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -196,6 +202,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.fill'
     name: 'fill(PolicyTrackedResource, undefined | number, undefined | number)'
@@ -236,43 +243,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-policyinsights'
-  - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.filter_1'
-    name: >-
-      filter((value: PolicyTrackedResource, index: number, array:
-      PolicyTrackedResource[]) => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: PolicyTrackedResource, index:
-        number, array: PolicyTrackedResource[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: PolicyTrackedResource, index: number, array:
-              PolicyTrackedResource[]) => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-policyinsights.PolicyTrackedResource[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.filter'
     name: >-
@@ -310,6 +281,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-policyinsights'
+  - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.filter_1'
+    name: >-
+      filter((value: PolicyTrackedResource, index: number, array:
+      PolicyTrackedResource[]) => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: PolicyTrackedResource, index:
+        number, array: PolicyTrackedResource[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: PolicyTrackedResource, index: number, array:
+              PolicyTrackedResource[]) => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-policyinsights.PolicyTrackedResource[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.find'
     name: >-
@@ -355,30 +365,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.find_1'
     name: >-
       find((value: PolicyTrackedResource, index: number, obj:
-      PolicyTrackedResource[]) => boolean, any)
+      PolicyTrackedResource[]) => unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: PolicyTrackedResource, index: number,
-        obj: PolicyTrackedResource[]) => boolean, thisArg?: any)
+        obj: PolicyTrackedResource[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: PolicyTrackedResource, index: number, obj:
-              PolicyTrackedResource[]) => boolean
+              PolicyTrackedResource[]) => unknown
           description: ''
         - id: thisArg
           type:
@@ -388,11 +395,12 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource | undefined'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.findIndex'
     name: >-
       findIndex((value: PolicyTrackedResource, index: number, obj:
-      PolicyTrackedResource[]) => boolean, any)
+      PolicyTrackedResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -405,13 +413,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: PolicyTrackedResource, index:
-        number, obj: PolicyTrackedResource[]) => boolean, thisArg?: any)
+        number, obj: PolicyTrackedResource[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: PolicyTrackedResource, index: number, obj:
-              PolicyTrackedResource[]) => boolean
+              PolicyTrackedResource[]) => unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -433,6 +441,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.forEach'
     name: >-
@@ -465,6 +474,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-policyinsights'
+  - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.includes'
+    name: 'includes(PolicyTrackedResource, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: PolicyTrackedResource, fromIndex?:
+        undefined | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-policyinsights.PolicyTrackedResource'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.indexOf'
     name: 'indexOf(PolicyTrackedResource, undefined | number)'
     children: []
@@ -491,6 +530,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.join'
     name: join(undefined | string)
@@ -515,6 +555,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.keys'
     name: keys()
@@ -529,6 +570,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.lastIndexOf'
     name: 'lastIndexOf(PolicyTrackedResource, undefined | number)'
@@ -556,6 +598,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.length'
     name: length
@@ -572,6 +615,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.map'
     name: >-
@@ -608,6 +652,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.nextLink'
     name: nextLink
@@ -627,6 +672,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.pop'
     name: pop()
@@ -641,6 +687,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource | undefined'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.push'
     name: 'push(PolicyTrackedResource[])'
@@ -660,6 +707,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.reduce'
     name: >-
@@ -693,6 +741,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.reduce_1'
     name: >-
@@ -703,10 +752,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: PolicyTrackedResource,
@@ -728,6 +774,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.reduce_2'
     name: >-
@@ -766,6 +813,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.reduceRight'
     name: >-
@@ -800,6 +848,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.reduceRight_1'
     name: >-
@@ -810,11 +859,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: PolicyTrackedResource,
@@ -836,6 +881,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.reduceRight_2'
     name: >-
@@ -875,6 +921,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.reverse'
     name: reverse()
@@ -889,6 +936,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.shift'
     name: shift()
@@ -903,6 +951,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource | undefined'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -928,11 +977,12 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.some'
     name: >-
       some((value: PolicyTrackedResource, index: number, array:
-      PolicyTrackedResource[]) => boolean, any)
+      PolicyTrackedResource[]) => unknown, any)
     children: []
     type: method
     langs:
@@ -943,13 +993,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: PolicyTrackedResource, index: number,
-        array: PolicyTrackedResource[]) => boolean, thisArg?: any)
+        array: PolicyTrackedResource[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: PolicyTrackedResource, index: number, array:
-              PolicyTrackedResource[]) => boolean
+              PolicyTrackedResource[]) => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -965,6 +1015,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.sort'
     name: >-
@@ -993,6 +1044,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.splice_1'
     name: 'splice(number, number, PolicyTrackedResource[])'
@@ -1026,6 +1078,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.splice'
     name: 'splice(number, undefined | number)'
@@ -1054,6 +1107,7 @@ items:
       return:
         type:
           - '@azure/arm-policyinsights.PolicyTrackedResource[]'
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: >-
       @azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.toLocaleString
@@ -1071,6 +1125,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.toString'
     name: toString()
@@ -1085,6 +1140,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.unshift'
     name: 'unshift(PolicyTrackedResource[])'
@@ -1104,6 +1160,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-policyinsights'
   - uid: '@azure/arm-policyinsights.PolicyTrackedResourcesQueryResults.values'
     name: values()
@@ -1118,6 +1175,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-policyinsights.PolicyTrackedResource>
+        description: ''
     package: '@azure/arm-policyinsights'
 references:
   - uid: Array<@azure/arm-policyinsights.PolicyTrackedResource>

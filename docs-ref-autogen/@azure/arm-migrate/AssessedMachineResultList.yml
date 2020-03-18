@@ -11,12 +11,13 @@ items:
       - '@azure/arm-migrate.AssessedMachineResultList.entries'
       - '@azure/arm-migrate.AssessedMachineResultList.every'
       - '@azure/arm-migrate.AssessedMachineResultList.fill'
-      - '@azure/arm-migrate.AssessedMachineResultList.filter_1'
       - '@azure/arm-migrate.AssessedMachineResultList.filter'
+      - '@azure/arm-migrate.AssessedMachineResultList.filter_1'
       - '@azure/arm-migrate.AssessedMachineResultList.find'
       - '@azure/arm-migrate.AssessedMachineResultList.find_1'
       - '@azure/arm-migrate.AssessedMachineResultList.findIndex'
       - '@azure/arm-migrate.AssessedMachineResultList.forEach'
+      - '@azure/arm-migrate.AssessedMachineResultList.includes'
       - '@azure/arm-migrate.AssessedMachineResultList.indexOf'
       - '@azure/arm-migrate.AssessedMachineResultList.join'
       - '@azure/arm-migrate.AssessedMachineResultList.keys'
@@ -62,6 +63,7 @@ items:
       return:
         type:
           - ArrayConstructor
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.concat'
     name: 'concat(ConcatArray<AssessedMachine>[])'
@@ -81,6 +83,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.concat_1'
     name: 'concat(T | ConcatArray<T>[])'
@@ -100,6 +103,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.copyWithin'
     name: 'copyWithin(number, number, undefined | number)'
@@ -143,6 +147,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.entries'
     name: entries()
@@ -157,11 +162,12 @@ items:
       return:
         type:
           - IterableIterator<Object>
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.every'
     name: >-
       every((value: AssessedMachine, index: number, array: AssessedMachine[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -170,13 +176,13 @@ items:
     syntax:
       content: >-
         function every(callbackfn: (value: AssessedMachine, index: number,
-        array: AssessedMachine[]) => boolean, thisArg?: any)
+        array: AssessedMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: AssessedMachine, index: number, array: AssessedMachine[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The every method
             calls the callbackfn function for each element in array1 until the
@@ -192,6 +198,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.fill'
     name: 'fill(AssessedMachine, undefined | number, undefined | number)'
@@ -232,43 +239,7 @@ items:
       return:
         type:
           - this
-    package: '@azure/arm-migrate'
-  - uid: '@azure/arm-migrate.AssessedMachineResultList.filter_1'
-    name: >-
-      filter((value: AssessedMachine, index: number, array: AssessedMachine[])
-      => any, any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter(callbackfn: (value: AssessedMachine, index: number,
-        array: AssessedMachine[]) => any, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - >-
-              (value: AssessedMachine, index: number, array: AssessedMachine[])
-              => any
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - '@azure/arm-migrate.AssessedMachine[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.filter'
     name: >-
@@ -306,6 +277,45 @@ items:
       return:
         type:
           - 'S[]'
+        description: ''
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachineResultList.filter_1'
+    name: >-
+      filter((value: AssessedMachine, index: number, array: AssessedMachine[])
+      => unknown, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: AssessedMachine, index: number,
+        array: AssessedMachine[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (value: AssessedMachine, index: number, array: AssessedMachine[])
+              => unknown
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - '@azure/arm-migrate.AssessedMachine[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.find'
     name: >-
@@ -351,30 +361,27 @@ items:
       return:
         type:
           - S | undefined
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.find_1'
     name: >-
       find((value: AssessedMachine, index: number, obj: AssessedMachine[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+    summary: ''
     syntax:
       content: >-
         function find(predicate: (value: AssessedMachine, index: number, obj:
-        AssessedMachine[]) => boolean, thisArg?: any)
+        AssessedMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: AssessedMachine, index: number, obj: AssessedMachine[]) =>
-              boolean
+              unknown
           description: ''
         - id: thisArg
           type:
@@ -384,11 +391,12 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine | undefined'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.findIndex'
     name: >-
       findIndex((value: AssessedMachine, index: number, obj: AssessedMachine[])
-      => boolean, any)
+      => unknown, any)
     children: []
     type: method
     langs:
@@ -401,13 +409,13 @@ items:
     syntax:
       content: >-
         function findIndex(predicate: (value: AssessedMachine, index: number,
-        obj: AssessedMachine[]) => boolean, thisArg?: any)
+        obj: AssessedMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: predicate
           type:
             - >-
               (value: AssessedMachine, index: number, obj: AssessedMachine[]) =>
-              boolean
+              unknown
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -429,6 +437,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.forEach'
     name: >-
@@ -461,6 +470,36 @@ items:
             value.
           optional: true
     package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachineResultList.includes'
+    name: 'includes(AssessedMachine, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
+    syntax:
+      content: >-
+        function includes(searchElement: AssessedMachine, fromIndex?: undefined
+        | number)
+      parameters:
+        - id: searchElement
+          type:
+            - '@azure/arm-migrate.AssessedMachine'
+          description: The element to search for.
+        - id: fromIndex
+          type:
+            - undefined | number
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
+      return:
+        type:
+          - boolean
+        description: ''
+    package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.indexOf'
     name: 'indexOf(AssessedMachine, undefined | number)'
     children: []
@@ -487,6 +526,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.join'
     name: join(undefined | string)
@@ -511,6 +551,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.keys'
     name: keys()
@@ -525,6 +566,7 @@ items:
       return:
         type:
           - IterableIterator<number>
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.lastIndexOf'
     name: 'lastIndexOf(AssessedMachine, undefined | number)'
@@ -552,6 +594,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.length'
     name: length
@@ -568,6 +611,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.map'
     name: >-
@@ -604,6 +648,7 @@ items:
       return:
         type:
           - 'U[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.pop'
     name: pop()
@@ -618,6 +663,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine | undefined'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.push'
     name: 'push(AssessedMachine[])'
@@ -637,6 +683,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.reduce'
     name: >-
@@ -668,6 +715,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.reduce_1'
     name: >-
@@ -678,10 +726,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: AssessedMachine,
@@ -701,6 +746,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.reduce_2'
     name: >-
@@ -739,6 +785,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.reduceRight'
     name: >-
@@ -772,6 +819,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.reduceRight_1'
     name: >-
@@ -782,11 +830,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: AssessedMachine,
@@ -806,6 +850,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.reduceRight_2'
     name: >-
@@ -845,6 +890,7 @@ items:
       return:
         type:
           - U
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.reverse'
     name: reverse()
@@ -859,6 +905,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.shift'
     name: shift()
@@ -873,6 +920,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine | undefined'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.slice'
     name: 'slice(undefined | number, undefined | number)'
@@ -898,11 +946,12 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.some'
     name: >-
       some((value: AssessedMachine, index: number, array: AssessedMachine[]) =>
-      boolean, any)
+      unknown, any)
     children: []
     type: method
     langs:
@@ -913,13 +962,13 @@ items:
     syntax:
       content: >-
         function some(callbackfn: (value: AssessedMachine, index: number, array:
-        AssessedMachine[]) => boolean, thisArg?: any)
+        AssessedMachine[]) => unknown, thisArg?: any)
       parameters:
         - id: callbackfn
           type:
             - >-
               (value: AssessedMachine, index: number, array: AssessedMachine[])
-              => boolean
+              => unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
             the callbackfn function for each element in array1 until the
@@ -935,6 +984,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.sort'
     name: 'sort(undefined | (a: AssessedMachine, b: AssessedMachine) => number)'
@@ -959,6 +1009,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.splice_1'
     name: 'splice(number, number, AssessedMachine[])'
@@ -992,6 +1043,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.splice'
     name: 'splice(number, undefined | number)'
@@ -1020,6 +1072,7 @@ items:
       return:
         type:
           - '@azure/arm-migrate.AssessedMachine[]'
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.toLocaleString'
     name: toLocaleString()
@@ -1036,6 +1089,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.toString'
     name: toString()
@@ -1050,6 +1104,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.unshift'
     name: 'unshift(AssessedMachine[])'
@@ -1069,6 +1124,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: '@azure/arm-migrate'
   - uid: '@azure/arm-migrate.AssessedMachineResultList.values'
     name: values()
@@ -1083,6 +1139,7 @@ items:
       return:
         type:
           - IterableIterator<@azure/arm-migrate.AssessedMachine>
+        description: ''
     package: '@azure/arm-migrate'
 references:
   - uid: Array<@azure/arm-migrate.AssessedMachine>

@@ -34,6 +34,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRewriteRuleSet.id'
     name: id
@@ -49,6 +50,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRewriteRuleSet.name'
     name: name
@@ -64,6 +66,7 @@ items:
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRewriteRuleSet.provisioningState'
     name: provisioningState
@@ -73,19 +76,20 @@ items:
       - typeScript
     type: property
     summary: >-
-      Provisioning state of the rewrite rule set resource. Possible values are:
-      'Updating',
+      The provisioning state of the rewrite rule set resource. Possible values
+      include: 'Succeeded',
 
-      'Deleting', and 'Failed'.
+      'Updating', 'Deleting', 'Failed'
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
     optional: true
     syntax:
-      content: 'provisioningState?: undefined | string'
+      content: 'provisioningState?: ProvisioningState'
       return:
         type:
-          - undefined | string
+          - '@azure/arm-network.ProvisioningState'
+        description: ''
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayRewriteRuleSet.rewriteRules'
     name: rewriteRules
@@ -101,6 +105,7 @@ items:
       return:
         type:
           - '@azure/arm-network.ApplicationGatewayRewriteRule[]'
+        description: ''
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.SubResource'
@@ -109,6 +114,12 @@ references:
       - name: SubResource
         fullName: SubResource
         uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-network.ProvisioningState'
   - uid: '@azure/arm-network.ApplicationGatewayRewriteRule[]'
     name: 'ApplicationGatewayRewriteRule[]'
     spec.typeScript:

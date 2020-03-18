@@ -13,7 +13,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Job stages.
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobStages.displayName'
     name: displayName
@@ -22,13 +22,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Display name of the job stage.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'displayName?: undefined | string'
       return:
         type:
           - undefined | string
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobStages.errorDetails'
     name: errorDetails
@@ -37,13 +42,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Error details for the stage.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'errorDetails?: JobErrorDetails[]'
       return:
         type:
           - '@azure/arm-databox.JobErrorDetails[]'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobStages.jobStageDetails'
     name: jobStageDetails
@@ -52,13 +62,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Job Stage Details
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'jobStageDetails?: any'
       return:
         type:
           - any
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobStages.stageName'
     name: stageName
@@ -67,13 +82,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Name of the job stage. Possible values include: 'DeviceOrdered',
+      'DevicePrepared',
+
+      'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy',
+      'Completed',
+
+      'CompletedWithErrors', 'Cancelled', 'Failed_IssueReportedAtCustomer',
+
+      'Failed_IssueDetectedAtAzureDC', 'Aborted', 'CompletedWithWarnings',
+
+      'ReadyToDispatchFromAzureDC', 'ReadyToReceiveAtAzureDC'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'stageName?: StageName'
       return:
         type:
           - '@azure/arm-databox.StageName'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobStages.stageStatus'
     name: stageStatus
@@ -82,13 +112,21 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Status of the job stage. Possible values include: 'None', 'InProgress',
+      'Succeeded', 'Failed',
+
+      'Cancelled', 'Cancelling', 'SucceededWithErrors'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'stageStatus?: StageStatus'
       return:
         type:
           - '@azure/arm-databox.StageStatus'
+        description: ''
     package: '@azure/arm-databox'
   - uid: '@azure/arm-databox.JobStages.stageTime'
     name: stageTime
@@ -97,13 +135,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Time for the job stage in UTC ISO 8601 format.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'stageTime?: Date'
       return:
         type:
           - Date
+        description: ''
     package: '@azure/arm-databox'
 references:
   - uid: '@azure/arm-databox.JobErrorDetails[]'
