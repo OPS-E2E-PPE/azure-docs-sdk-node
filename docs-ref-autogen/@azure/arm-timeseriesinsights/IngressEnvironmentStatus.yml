@@ -1,56 +1,44 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-timeseriesinsights.IngressEnvironmentStatus'
-    name: IngressEnvironmentStatus
-    fullName: IngressEnvironmentStatus
-    children:
-      - '@azure/arm-timeseriesinsights.IngressEnvironmentStatus.state'
-      - '@azure/arm-timeseriesinsights.IngressEnvironmentStatus.stateDetails'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: IngressEnvironmentStatus
+uid: '@azure/arm-timeseriesinsights.IngressEnvironmentStatus'
+package: '@azure/arm-timeseriesinsights'
+summary: An object that represents the status of ingress on an environment.
+fullName: IngressEnvironmentStatus
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: state
+    uid: '@azure/arm-timeseriesinsights.IngressEnvironmentStatus.state'
     package: '@azure/arm-timeseriesinsights'
-  - uid: '@azure/arm-timeseriesinsights.IngressEnvironmentStatus.state'
-    name: state
+    summary: >-
+      This string represents the state of ingress operations on an environment.
+      It can be
+
+      "Disabled", "Ready", "Running", "Paused" or "Unknown". Possible values
+      include: 'Disabled',
+
+      'Ready', 'Running', 'Paused', 'Unknown'
     fullName: state
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'state?: IngressState'
       return:
-        type:
-          - '@azure/arm-timeseriesinsights.IngressState'
+        type: <xref uid="@azure/arm-timeseriesinsights.IngressState" />
+        description: ''
+  - name: stateDetails
+    uid: '@azure/arm-timeseriesinsights.IngressEnvironmentStatus.stateDetails'
     package: '@azure/arm-timeseriesinsights'
-  - uid: '@azure/arm-timeseriesinsights.IngressEnvironmentStatus.stateDetails'
-    name: stateDetails
+    summary: An object that contains the details about an environment's state.
     fullName: stateDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'stateDetails?: EnvironmentStateDetails'
       return:
-        type:
-          - '@azure/arm-timeseriesinsights.EnvironmentStateDetails'
-    package: '@azure/arm-timeseriesinsights'
-references:
-  - uid: '@azure/arm-timeseriesinsights.IngressState'
-    name: IngressState
-    spec.typeScript:
-      - name: IngressState
-        fullName: IngressState
-        uid: '@azure/arm-timeseriesinsights.IngressState'
-  - uid: '@azure/arm-timeseriesinsights.EnvironmentStateDetails'
-    name: EnvironmentStateDetails
-    spec.typeScript:
-      - name: EnvironmentStateDetails
-        fullName: EnvironmentStateDetails
-        uid: '@azure/arm-timeseriesinsights.EnvironmentStateDetails'
+        type: <xref uid="@azure/arm-timeseriesinsights.EnvironmentStateDetails" />
+        description: ''

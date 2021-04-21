@@ -1,335 +1,267 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster'
-    name: OperationalizationCluster
-    fullName: OperationalizationCluster
-    children:
-      - '@azure/arm-machinelearningcompute.OperationalizationCluster.appInsights'
-      - '@azure/arm-machinelearningcompute.OperationalizationCluster.clusterType'
-      - >-
-        @azure/arm-machinelearningcompute.OperationalizationCluster.containerRegistry
-      - >-
-        @azure/arm-machinelearningcompute.OperationalizationCluster.containerService
-      - '@azure/arm-machinelearningcompute.OperationalizationCluster.createdOn'
-      - '@azure/arm-machinelearningcompute.OperationalizationCluster.description'
-      - >-
-        @azure/arm-machinelearningcompute.OperationalizationCluster.globalServiceConfiguration
-      - '@azure/arm-machinelearningcompute.OperationalizationCluster.id'
-      - '@azure/arm-machinelearningcompute.OperationalizationCluster.location'
-      - '@azure/arm-machinelearningcompute.OperationalizationCluster.modifiedOn'
-      - '@azure/arm-machinelearningcompute.OperationalizationCluster.name'
-      - >-
-        @azure/arm-machinelearningcompute.OperationalizationCluster.provisioningErrors
-      - >-
-        @azure/arm-machinelearningcompute.OperationalizationCluster.provisioningState
-      - >-
-        @azure/arm-machinelearningcompute.OperationalizationCluster.storageAccount
-      - '@azure/arm-machinelearningcompute.OperationalizationCluster.tags'
-      - '@azure/arm-machinelearningcompute.OperationalizationCluster.type'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: '@azure/arm-machinelearningcompute.Resource'
+### YamlMime:TSType
+name: OperationalizationCluster
+uid: '@azure/arm-machinelearningcompute.OperationalizationCluster'
+package: '@azure/arm-machinelearningcompute'
+summary: Instance of an Azure ML Operationalization Cluster resource.
+fullName: OperationalizationCluster
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: appInsights
+    uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.appInsights'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.appInsights'
-    name: appInsights
+    summary: AppInsights configuration.
     fullName: appInsights
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'appInsights?: AppInsightsProperties'
       return:
-        type:
-          - '@azure/arm-machinelearningcompute.AppInsightsProperties'
+        type: <xref uid="@azure/arm-machinelearningcompute.AppInsightsProperties" />
+        description: ''
+  - name: clusterType
+    uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.clusterType'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.clusterType'
-    name: clusterType
+    summary: 'The cluster type. Possible values include: ''ACS'', ''Local'''
     fullName: clusterType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'clusterType: ClusterType'
       return:
-        type:
-          - '@azure/arm-machinelearningcompute.ClusterType'
-    package: '@azure/arm-machinelearningcompute'
-  - uid: >-
+        type: <xref uid="@azure/arm-machinelearningcompute.ClusterType" />
+        description: ''
+  - name: containerRegistry
+    uid: >-
       @azure/arm-machinelearningcompute.OperationalizationCluster.containerRegistry
-    name: containerRegistry
+    package: '@azure/arm-machinelearningcompute'
+    summary: Container Registry properties.
     fullName: containerRegistry
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'containerRegistry?: ContainerRegistryProperties'
       return:
-        type:
-          - '@azure/arm-machinelearningcompute.ContainerRegistryProperties'
-    package: '@azure/arm-machinelearningcompute'
-  - uid: >-
+        type: >-
+          <xref
+          uid="@azure/arm-machinelearningcompute.ContainerRegistryProperties" />
+        description: ''
+  - name: containerService
+    uid: >-
       @azure/arm-machinelearningcompute.OperationalizationCluster.containerService
-    name: containerService
+    package: '@azure/arm-machinelearningcompute'
+    summary: Parameters for the Azure Container Service cluster.
     fullName: containerService
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'containerService?: AcsClusterProperties'
       return:
-        type:
-          - '@azure/arm-machinelearningcompute.AcsClusterProperties'
+        type: <xref uid="@azure/arm-machinelearningcompute.AcsClusterProperties" />
+        description: ''
+  - name: createdOn
+    uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.createdOn'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.createdOn'
-    name: createdOn
+    summary: >-
+      The date and time when the cluster was created.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: createdOn
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'createdOn?: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: description
+    uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.description'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.description'
-    name: description
+    summary: The description of the cluster.
     fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-machinelearningcompute'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: globalServiceConfiguration
+    uid: >-
       @azure/arm-machinelearningcompute.OperationalizationCluster.globalServiceConfiguration
-    name: globalServiceConfiguration
+    package: '@azure/arm-machinelearningcompute'
+    summary: Contains global configuration for the web services in the cluster.
     fullName: globalServiceConfiguration
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'globalServiceConfiguration?: GlobalServiceConfiguration'
       return:
-        type:
-          - '@azure/arm-machinelearningcompute.GlobalServiceConfiguration'
+        type: >-
+          <xref
+          uid="@azure/arm-machinelearningcompute.GlobalServiceConfiguration" />
+        description: ''
+  - name: id
+    uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.id'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.id'
-    name: id
+    summary: >-
+      Specifies the resource ID.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: location
+    uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.location'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.location'
-    name: location
+    summary: Specifies the location of the resource.
     fullName: location
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'location: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: modifiedOn
+    uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.modifiedOn'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.modifiedOn'
-    name: modifiedOn
+    summary: >-
+      The date and time when the cluster was last modified.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: modifiedOn
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'modifiedOn?: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: name
+    uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.name'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.name'
-    name: name
+    summary: >-
+      Specifies the name of the resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'name?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-machinelearningcompute'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: provisioningErrors
+    uid: >-
       @azure/arm-machinelearningcompute.OperationalizationCluster.provisioningErrors
-    name: provisioningErrors
+    package: '@azure/arm-machinelearningcompute'
+    summary: >-
+      List of provisioning errors reported by the resource provider.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: provisioningErrors
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'provisioningErrors?: ErrorResponseWrapper[]'
       return:
-        type:
-          - '@azure/arm-machinelearningcompute.ErrorResponseWrapper[]'
-    package: '@azure/arm-machinelearningcompute'
-  - uid: >-
+        type: >-
+          <xref uid="@azure/arm-machinelearningcompute.ErrorResponseWrapper"
+          />[]
+        description: ''
+  - name: provisioningState
+    uid: >-
       @azure/arm-machinelearningcompute.OperationalizationCluster.provisioningState
-    name: provisioningState
+    package: '@azure/arm-machinelearningcompute'
+    summary: >-
+      The provision state of the cluster. Valid values are Unknown, Updating,
+      Provisioning,
+
+      Succeeded, and Failed. Possible values include: 'Unknown', 'Updating',
+      'Creating', 'Deleting',
+
+      'Succeeded', 'Failed', 'Canceled'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: provisioningState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'provisioningState?: OperationStatus'
       return:
-        type:
-          - '@azure/arm-machinelearningcompute.OperationStatus'
+        type: <xref uid="@azure/arm-machinelearningcompute.OperationStatus" />
+        description: ''
+  - name: storageAccount
+    uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.storageAccount'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.storageAccount'
-    name: storageAccount
+    summary: Storage Account properties.
     fullName: storageAccount
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'storageAccount?: StorageAccountProperties'
       return:
-        type:
-          - '@azure/arm-machinelearningcompute.StorageAccountProperties'
+        type: >-
+          <xref uid="@azure/arm-machinelearningcompute.StorageAccountProperties"
+          />
+        description: ''
+  - name: tags
+    uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.tags'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.tags'
-    name: tags
+    summary: Contains resource tags defined as key/value pairs.
     fullName: tags
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
-        type:
-          - 'undefined | [key: string]: string'
+        type: 'undefined | [key: string]: string'
+        description: ''
+  - name: type
+    uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.type'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.OperationalizationCluster.type'
-    name: type
+    summary: >-
+      Specifies the type of the resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-machinelearningcompute'
-references:
-  - uid: '@azure/arm-machinelearningcompute.Resource'
-    name: Resource
-    spec.typeScript:
-      - name: Resource
-        fullName: Resource
-        uid: '@azure/arm-machinelearningcompute.Resource'
-  - uid: '@azure/arm-machinelearningcompute.AppInsightsProperties'
-    name: AppInsightsProperties
-    spec.typeScript:
-      - name: AppInsightsProperties
-        fullName: AppInsightsProperties
-        uid: '@azure/arm-machinelearningcompute.AppInsightsProperties'
-  - uid: '@azure/arm-machinelearningcompute.ClusterType'
-    name: ClusterType
-    spec.typeScript:
-      - name: ClusterType
-        fullName: ClusterType
-        uid: '@azure/arm-machinelearningcompute.ClusterType'
-  - uid: '@azure/arm-machinelearningcompute.ContainerRegistryProperties'
-    name: ContainerRegistryProperties
-    spec.typeScript:
-      - name: ContainerRegistryProperties
-        fullName: ContainerRegistryProperties
-        uid: '@azure/arm-machinelearningcompute.ContainerRegistryProperties'
-  - uid: '@azure/arm-machinelearningcompute.AcsClusterProperties'
-    name: AcsClusterProperties
-    spec.typeScript:
-      - name: AcsClusterProperties
-        fullName: AcsClusterProperties
-        uid: '@azure/arm-machinelearningcompute.AcsClusterProperties'
-  - uid: '@azure/arm-machinelearningcompute.GlobalServiceConfiguration'
-    name: GlobalServiceConfiguration
-    spec.typeScript:
-      - name: GlobalServiceConfiguration
-        fullName: GlobalServiceConfiguration
-        uid: '@azure/arm-machinelearningcompute.GlobalServiceConfiguration'
-  - uid: '@azure/arm-machinelearningcompute.ErrorResponseWrapper[]'
-    name: 'ErrorResponseWrapper[]'
-    spec.typeScript:
-      - name: ErrorResponseWrapper
-        fullName: ErrorResponseWrapper
-        uid: '@azure/arm-machinelearningcompute.ErrorResponseWrapper'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-machinelearningcompute.OperationStatus'
-    name: OperationStatus
-    spec.typeScript:
-      - name: OperationStatus
-        fullName: OperationStatus
-        uid: '@azure/arm-machinelearningcompute.OperationStatus'
-  - uid: '@azure/arm-machinelearningcompute.StorageAccountProperties'
-    name: StorageAccountProperties
-    spec.typeScript:
-      - name: StorageAccountProperties
-        fullName: StorageAccountProperties
-        uid: '@azure/arm-machinelearningcompute.StorageAccountProperties'
+        type: undefined | string
+        description: ''
+extends: <xref uid="@azure/arm-machinelearningcompute.Resource" />

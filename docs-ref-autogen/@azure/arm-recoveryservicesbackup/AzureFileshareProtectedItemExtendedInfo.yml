@@ -1,65 +1,94 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureFileshareProtectedItemExtendedInfo'
-    name: AzureFileshareProtectedItemExtendedInfo
-    fullName: AzureFileshareProtectedItemExtendedInfo
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileshareProtectedItemExtendedInfo.oldestRecoveryPoint
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileshareProtectedItemExtendedInfo.policyState
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileshareProtectedItemExtendedInfo.recoveryPointCount
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureFileshareProtectedItemExtendedInfo
+uid: '@azure/arm-recoveryservicesbackup.AzureFileshareProtectedItemExtendedInfo'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Additional information about Azure File Share backup item.
+fullName: AzureFileshareProtectedItemExtendedInfo
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: oldestRecoveryPoint
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileshareProtectedItemExtendedInfo.oldestRecoveryPoint
-    name: oldestRecoveryPoint
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: The oldest backup copy available for this item in the service.
     fullName: oldestRecoveryPoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'oldestRecoveryPoint?: Date'
       return:
-        type:
-          - Date
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: Date
+        description: ''
+  - name: policyState
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileshareProtectedItemExtendedInfo.policyState
-    name: policyState
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Indicates consistency of policy object and policy applied to this backup
+      item.
     fullName: policyState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'policyState?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: recoveryPointCount
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileshareProtectedItemExtendedInfo.recoveryPointCount
-    name: recoveryPointCount
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Number of available backup copies associated with this backup item.
     fullName: recoveryPointCount
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'recoveryPointCount?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: resourceState
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureFileshareProtectedItemExtendedInfo.resourceState
     package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Indicates the state of this resource. Possible values are from enum
+      ResourceState {Invalid,
+
+      Active, SoftDeleted, Deleted}
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: resourceState
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'resourceState?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: resourceStateSyncTime
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureFileshareProtectedItemExtendedInfo.resourceStateSyncTime
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      The resource state sync time for this backup item.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: resourceStateSyncTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'resourceStateSyncTime?: Date'
+      return:
+        type: Date
+        description: ''

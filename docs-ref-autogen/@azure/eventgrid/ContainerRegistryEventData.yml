@@ -1,148 +1,106 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/eventgrid.ContainerRegistryEventData'
-    name: ContainerRegistryEventData
-    fullName: ContainerRegistryEventData
-    children:
-      - '@azure/eventgrid.ContainerRegistryEventData.action'
-      - '@azure/eventgrid.ContainerRegistryEventData.actor'
-      - '@azure/eventgrid.ContainerRegistryEventData.id'
-      - '@azure/eventgrid.ContainerRegistryEventData.request'
-      - '@azure/eventgrid.ContainerRegistryEventData.source'
-      - '@azure/eventgrid.ContainerRegistryEventData.target'
-      - '@azure/eventgrid.ContainerRegistryEventData.timestamp'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: ContainerRegistryEventData
+uid: '@azure/eventgrid.ContainerRegistryEventData'
+package: '@azure/eventgrid'
+summary: The content of the event request message.
+fullName: ContainerRegistryEventData
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: action
+    uid: '@azure/eventgrid.ContainerRegistryEventData.action'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.ContainerRegistryEventData.action'
-    name: action
+    summary: The action that encompasses the provided event.
     fullName: action
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'action?: undefined | string'
+      content: 'action: string'
       return:
-        type:
-          - undefined | string
+        type: string
+        description: ''
+  - name: actor
+    uid: '@azure/eventgrid.ContainerRegistryEventData.actor'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.ContainerRegistryEventData.actor'
-    name: actor
+    summary: >-
+      The agent that initiated the event. For most situations, this could be
+      from the authorization context of the request.
     fullName: actor
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'actor?: ContainerRegistryEventActor'
+      content: 'actor: ContainerRegistryEventActor'
       return:
-        type:
-          - '@azure/eventgrid.ContainerRegistryEventActor'
+        type: <xref uid="@azure/eventgrid.ContainerRegistryEventActor" />
+        description: ''
+  - name: id
+    uid: '@azure/eventgrid.ContainerRegistryEventData.id'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.ContainerRegistryEventData.id'
-    name: id
+    summary: The event ID.
     fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'id?: undefined | string'
+      content: 'id: string'
       return:
-        type:
-          - undefined | string
+        type: string
+        description: ''
+  - name: request
+    uid: '@azure/eventgrid.ContainerRegistryEventData.request'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.ContainerRegistryEventData.request'
-    name: request
+    summary: The request that generated the event.
     fullName: request
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'request?: ContainerRegistryEventRequest'
+      content: 'request: ContainerRegistryEventRequest'
       return:
-        type:
-          - '@azure/eventgrid.ContainerRegistryEventRequest'
+        type: <xref uid="@azure/eventgrid.ContainerRegistryEventRequest" />
+        description: ''
+  - name: source
+    uid: '@azure/eventgrid.ContainerRegistryEventData.source'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.ContainerRegistryEventData.source'
-    name: source
+    summary: >-
+      The registry node that generated the event. Put differently, while the
+      actor initiates the event, the source generates it.
     fullName: source
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'source?: ContainerRegistryEventSource'
+      content: 'source: ContainerRegistryEventSource'
       return:
-        type:
-          - '@azure/eventgrid.ContainerRegistryEventSource'
+        type: <xref uid="@azure/eventgrid.ContainerRegistryEventSource" />
+        description: ''
+  - name: target
+    uid: '@azure/eventgrid.ContainerRegistryEventData.target'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.ContainerRegistryEventData.target'
-    name: target
+    summary: The target of the event.
     fullName: target
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'target?: ContainerRegistryEventTarget'
+      content: 'target: ContainerRegistryEventTarget'
       return:
-        type:
-          - '@azure/eventgrid.ContainerRegistryEventTarget'
+        type: <xref uid="@azure/eventgrid.ContainerRegistryEventTarget" />
+        description: ''
+  - name: timestamp
+    uid: '@azure/eventgrid.ContainerRegistryEventData.timestamp'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.ContainerRegistryEventData.timestamp'
-    name: timestamp
+    summary: The time at which the event occurred.
     fullName: timestamp
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'timestamp?: Date'
+      content: 'timestamp: string'
       return:
-        type:
-          - Date
-    package: '@azure/eventgrid'
-references:
-  - uid: '@azure/eventgrid.ContainerRegistryEventActor'
-    name: ContainerRegistryEventActor
-    spec.typeScript:
-      - name: ContainerRegistryEventActor
-        fullName: ContainerRegistryEventActor
-        uid: '@azure/eventgrid.ContainerRegistryEventActor'
-  - uid: '@azure/eventgrid.ContainerRegistryEventRequest'
-    name: ContainerRegistryEventRequest
-    spec.typeScript:
-      - name: ContainerRegistryEventRequest
-        fullName: ContainerRegistryEventRequest
-        uid: '@azure/eventgrid.ContainerRegistryEventRequest'
-  - uid: '@azure/eventgrid.ContainerRegistryEventSource'
-    name: ContainerRegistryEventSource
-    spec.typeScript:
-      - name: ContainerRegistryEventSource
-        fullName: ContainerRegistryEventSource
-        uid: '@azure/eventgrid.ContainerRegistryEventSource'
-  - uid: '@azure/eventgrid.ContainerRegistryEventTarget'
-    name: ContainerRegistryEventTarget
-    spec.typeScript:
-      - name: ContainerRegistryEventTarget
-        fullName: ContainerRegistryEventTarget
-        uid: '@azure/eventgrid.ContainerRegistryEventTarget'
+        type: string
+        description: ''

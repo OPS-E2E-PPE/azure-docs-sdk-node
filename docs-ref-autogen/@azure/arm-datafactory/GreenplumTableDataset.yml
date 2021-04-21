@@ -1,160 +1,172 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-datafactory.GreenplumTableDataset'
-    name: GreenplumTableDataset
-    fullName: GreenplumTableDataset
-    children:
-      - '@azure/arm-datafactory.GreenplumTableDataset.annotations'
-      - '@azure/arm-datafactory.GreenplumTableDataset.description'
-      - '@azure/arm-datafactory.GreenplumTableDataset.folder'
-      - '@azure/arm-datafactory.GreenplumTableDataset.linkedServiceName'
-      - '@azure/arm-datafactory.GreenplumTableDataset.parameters'
-      - '@azure/arm-datafactory.GreenplumTableDataset.structure'
-      - '@azure/arm-datafactory.GreenplumTableDataset.tableName'
-      - '@azure/arm-datafactory.GreenplumTableDataset.type'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: GreenplumTableDataset
+uid: '@azure/arm-datafactory.GreenplumTableDataset'
+package: '@azure/arm-datafactory'
+summary: Greenplum Database dataset.
+fullName: GreenplumTableDataset
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: annotations
+    uid: '@azure/arm-datafactory.GreenplumTableDataset.annotations'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.GreenplumTableDataset.annotations'
-    name: annotations
+    summary: List of tags that can be used for describing the Dataset.
     fullName: annotations
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'annotations?: any[]'
       return:
-        type:
-          - 'any[]'
+        type: 'any[]'
+        description: ''
+  - name: description
+    uid: '@azure/arm-datafactory.GreenplumTableDataset.description'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.GreenplumTableDataset.description'
-    name: description
+    summary: Dataset description.
     fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: folder
+    uid: '@azure/arm-datafactory.GreenplumTableDataset.folder'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.GreenplumTableDataset.folder'
-    name: folder
+    summary: >-
+      The folder that this Dataset is in. If not specified, Dataset will appear
+      at the root level.
     fullName: folder
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'folder?: DatasetFolder'
       return:
-        type:
-          - '@azure/arm-datafactory.DatasetFolder'
+        type: <xref uid="@azure/arm-datafactory.DatasetFolder" />
+        description: ''
+  - name: greenplumTableDatasetSchema
+    uid: '@azure/arm-datafactory.GreenplumTableDataset.greenplumTableDatasetSchema'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.GreenplumTableDataset.linkedServiceName'
-    name: linkedServiceName
+    summary: >-
+      The schema name of Greenplum. Type: string (or Expression with resultType
+      string).
+    fullName: greenplumTableDatasetSchema
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'greenplumTableDatasetSchema?: any'
+      return:
+        type: any
+        description: ''
+  - name: linkedServiceName
+    uid: '@azure/arm-datafactory.GreenplumTableDataset.linkedServiceName'
+    package: '@azure/arm-datafactory'
+    summary: Linked service reference.
     fullName: linkedServiceName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'linkedServiceName: LinkedServiceReference'
       return:
-        type:
-          - '@azure/arm-datafactory.LinkedServiceReference'
+        type: <xref uid="@azure/arm-datafactory.LinkedServiceReference" />
+        description: ''
+  - name: parameters
+    uid: '@azure/arm-datafactory.GreenplumTableDataset.parameters'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.GreenplumTableDataset.parameters'
-    name: parameters
+    summary: Parameters for dataset.
     fullName: parameters
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
       return:
-        type:
-          - >-
-            undefined | [key: string]:
-            @azure/arm-datafactory.ParameterSpecification
+        type: >-
+          undefined | [key: string]: <xref
+          uid="@azure/arm-datafactory.ParameterSpecification" />
+        description: ''
+  - name: schema
+    uid: '@azure/arm-datafactory.GreenplumTableDataset.schema'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.GreenplumTableDataset.structure'
-    name: structure
+    summary: >-
+      Columns that define the physical type schema of the dataset. Type: array
+      (or Expression with
+
+      resultType array), itemType: DatasetSchemaDataElement.
+    fullName: schema
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'schema?: any'
+      return:
+        type: any
+        description: ''
+  - name: structure
+    uid: '@azure/arm-datafactory.GreenplumTableDataset.structure'
+    package: '@azure/arm-datafactory'
+    summary: >-
+      Columns that define the structure of the dataset. Type: array (or
+      Expression with resultType
+
+      array), itemType: DatasetDataElement.
     fullName: structure
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'structure?: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: table
+    uid: '@azure/arm-datafactory.GreenplumTableDataset.table'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.GreenplumTableDataset.tableName'
-    name: tableName
+    summary: >-
+      The table name of Greenplum. Type: string (or Expression with resultType
+      string).
+    fullName: table
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'table?: any'
+      return:
+        type: any
+        description: ''
+  - name: tableName
+    uid: '@azure/arm-datafactory.GreenplumTableDataset.tableName'
+    package: '@azure/arm-datafactory'
+    summary: >-
+      This property will be retired. Please consider using schema + table
+      properties instead.
     fullName: tableName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tableName?: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: type
+    uid: '@azure/arm-datafactory.GreenplumTableDataset.type'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.GreenplumTableDataset.type'
-    name: type
+    summary: Polymorphic Discriminator
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: "GreenplumTable"'
       return:
-        type:
-          - '"GreenplumTable"'
-    package: '@azure/arm-datafactory'
-references:
-  - uid: '@azure/arm-datafactory.DatasetFolder'
-    name: DatasetFolder
-    spec.typeScript:
-      - name: DatasetFolder
-        fullName: DatasetFolder
-        uid: '@azure/arm-datafactory.DatasetFolder'
-  - uid: '@azure/arm-datafactory.LinkedServiceReference'
-    name: LinkedServiceReference
-    spec.typeScript:
-      - name: LinkedServiceReference
-        fullName: LinkedServiceReference
-        uid: '@azure/arm-datafactory.LinkedServiceReference'
-  - uid: 'undefined | [key: string]: @azure/arm-datafactory.ParameterSpecification'
-    name: ParameterSpecification
-    spec.typeScript:
-      - name: 'undefined | [key: string]: '
-        fullName: 'undefined | [key: string]: '
-      - name: ParameterSpecification
-        fullName: ParameterSpecification
-        uid: '@azure/arm-datafactory.ParameterSpecification'
+        type: '"GreenplumTable"'
+        description: ''

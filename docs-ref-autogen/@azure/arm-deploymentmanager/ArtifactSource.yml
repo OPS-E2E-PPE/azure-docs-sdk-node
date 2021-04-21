@@ -1,151 +1,148 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-deploymentmanager.ArtifactSource'
-    name: ArtifactSource
-    fullName: ArtifactSource
-    children:
-      - '@azure/arm-deploymentmanager.ArtifactSource.artifactRoot'
-      - '@azure/arm-deploymentmanager.ArtifactSource.authentication'
-      - '@azure/arm-deploymentmanager.ArtifactSource.id'
-      - '@azure/arm-deploymentmanager.ArtifactSource.location'
-      - '@azure/arm-deploymentmanager.ArtifactSource.name'
-      - '@azure/arm-deploymentmanager.ArtifactSource.sourceType'
-      - '@azure/arm-deploymentmanager.ArtifactSource.tags'
-      - '@azure/arm-deploymentmanager.ArtifactSource.type'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: '@azure/arm-deploymentmanager.TrackedResource'
+### YamlMime:TSType
+name: ArtifactSource
+uid: '@azure/arm-deploymentmanager.ArtifactSource'
+package: '@azure/arm-deploymentmanager'
+summary: The resource that defines the source location where the artifacts are located.
+fullName: ArtifactSource
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: artifactRoot
+    uid: '@azure/arm-deploymentmanager.ArtifactSource.artifactRoot'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.ArtifactSource.artifactRoot'
-    name: artifactRoot
+    summary: >-
+      The path from the location that the 'authentication' property [say, a SAS
+      URI to the blob
+
+      container] refers to, to the location of the artifacts. This can be used
+      to differentiate
+
+      different versions of the artifacts. Or, different types of artifacts like
+      binaries or
+
+      templates. The location referenced by the authentication property
+      concatenated with this
+
+      optional artifactRoot path forms the artifact source location where the
+      artifacts are expected
+
+      to be found.
     fullName: artifactRoot
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'artifactRoot?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: authentication
+    uid: '@azure/arm-deploymentmanager.ArtifactSource.authentication'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.ArtifactSource.authentication'
-    name: authentication
+    summary: The authentication method to use to access the artifact source.
     fullName: authentication
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'authentication: AuthenticationUnion'
       return:
-        type:
-          - '@azure/arm-deploymentmanager.AuthenticationUnion'
+        type: <xref uid="@azure/arm-deploymentmanager.AuthenticationUnion" />
+        description: ''
+  - name: id
+    uid: '@azure/arm-deploymentmanager.ArtifactSource.id'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.ArtifactSource.id'
-    name: id
+    summary: >-
+      Fully qualified resource Id for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: location
+    uid: '@azure/arm-deploymentmanager.ArtifactSource.location'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.ArtifactSource.location'
-    name: location
+    summary: The geo-location where the resource lives
     fullName: location
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'location: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: name
+    uid: '@azure/arm-deploymentmanager.ArtifactSource.name'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.ArtifactSource.name'
-    name: name
+    summary: >-
+      The name of the resource
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'name?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: sourceType
+    uid: '@azure/arm-deploymentmanager.ArtifactSource.sourceType'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.ArtifactSource.sourceType'
-    name: sourceType
+    summary: The type of artifact source used.
     fullName: sourceType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceType: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: tags
+    uid: '@azure/arm-deploymentmanager.ArtifactSource.tags'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.ArtifactSource.tags'
-    name: tags
+    summary: Resource tags.
     fullName: tags
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
-        type:
-          - 'undefined | [key: string]: string'
+        type: 'undefined | [key: string]: string'
+        description: ''
+  - name: type
+    uid: '@azure/arm-deploymentmanager.ArtifactSource.type'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.ArtifactSource.type'
-    name: type
+    summary: >-
+      The type of the resource. Ex- Microsoft.Compute/virtualMachines or
+
+      Microsoft.Storage/storageAccounts.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-deploymentmanager'
-references:
-  - uid: '@azure/arm-deploymentmanager.TrackedResource'
-    name: TrackedResource
-    spec.typeScript:
-      - name: TrackedResource
-        fullName: TrackedResource
-        uid: '@azure/arm-deploymentmanager.TrackedResource'
-  - uid: '@azure/arm-deploymentmanager.AuthenticationUnion'
-    name: AuthenticationUnion
-    spec.typeScript:
-      - name: AuthenticationUnion
-        fullName: AuthenticationUnion
-        uid: '@azure/arm-deploymentmanager.AuthenticationUnion'
+        type: undefined | string
+        description: ''
+extends: <xref uid="@azure/arm-deploymentmanager.TrackedResource" />

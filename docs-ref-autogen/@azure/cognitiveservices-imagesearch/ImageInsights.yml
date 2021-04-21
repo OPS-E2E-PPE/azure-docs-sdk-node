@@ -1,309 +1,339 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights'
-    name: ImageInsights
-    fullName: ImageInsights
-    children:
-      - >-
-        @azure/cognitiveservices-imagesearch.ImageInsights.bestRepresentativeQuery
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.id'
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.imageCaption'
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.imageInsightsToken'
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.imageTags'
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.pagesIncluding'
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.readLink'
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.recipes'
-      - >-
-        @azure/cognitiveservices-imagesearch.ImageInsights.recognizedEntityGroups
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.relatedCollections'
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.relatedSearches'
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.shoppingSources'
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.visuallySimilarImages'
-      - >-
-        @azure/cognitiveservices-imagesearch.ImageInsights.visuallySimilarProducts
-      - '@azure/cognitiveservices-imagesearch.ImageInsights.webSearchUrl'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: ImageInsights
+uid: '@azure/cognitiveservices-imagesearch.ImageInsights'
+package: '@azure/cognitiveservices-imagesearch'
+summary: >-
+  The top-level object that the response includes when an image insights request
+  succeeds. For
+
+  information about requesting image insights, see the
+
+  [insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken)
+
+  query parameter. The modules query parameter affects the fields that Bing
+  includes in the
+
+  response. If you set
+
+  [modules](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#modulesrequested)
+
+  to only Caption, then this object includes only the imageCaption field.
+fullName: ImageInsights
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: bestRepresentativeQuery
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.bestRepresentativeQuery'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.bestRepresentativeQuery'
-    name: bestRepresentativeQuery
+    summary: >-
+      The query term that best represents the image. Clicking the link in the
+      Query object, takes
+
+      the user to a webpage with more pictures of the image.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: bestRepresentativeQuery
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'bestRepresentativeQuery?: Query'
       return:
-        type:
-          - '@azure/cognitiveservices-imagesearch.Query'
+        type: <xref uid="@azure/cognitiveservices-imagesearch.Query" />
+        description: ''
+  - name: id
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.id'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.id'
-    name: id
+    summary: >-
+      A String identifier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: imageCaption
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.imageCaption'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.imageCaption'
-    name: imageCaption
+    summary: >-
+      The caption to use for the image.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: imageCaption
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'imageCaption?: ImageInsightsImageCaption'
       return:
-        type:
-          - '@azure/cognitiveservices-imagesearch.ImageInsightsImageCaption'
+        type: >-
+          <xref
+          uid="@azure/cognitiveservices-imagesearch.ImageInsightsImageCaption"
+          />
+        description: ''
+  - name: imageInsightsToken
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.imageInsightsToken'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.imageInsightsToken'
-    name: imageInsightsToken
+    summary: >-
+      A token that you use in a subsequent call to the Image Search API to get
+      more information
+
+      about the image. For information about using this token, see the
+      insightsToken query
+
+      parameter. This token has the same usage as the token in the Image object.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: imageInsightsToken
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'imageInsightsToken?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: imageTags
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.imageTags'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.imageTags'
-    name: imageTags
+    summary: >-
+      A list of characteristics of the content found in the image. For example,
+      if the image is of a
+
+      person, the tags might indicate the person's gender and the type of
+      clothes they're wearing.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: imageTags
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'imageTags?: ImageTagsModule'
       return:
-        type:
-          - '@azure/cognitiveservices-imagesearch.ImageTagsModule'
+        type: <xref uid="@azure/cognitiveservices-imagesearch.ImageTagsModule" />
+        description: ''
+  - name: pagesIncluding
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.pagesIncluding'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.pagesIncluding'
-    name: pagesIncluding
+    summary: >-
+      A list of webpages that contain the image. To access the webpage, use the
+      URL in the image's
+
+      hostPageUrl field.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: pagesIncluding
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'pagesIncluding?: ImagesModule'
       return:
-        type:
-          - '@azure/cognitiveservices-imagesearch.ImagesModule'
+        type: <xref uid="@azure/cognitiveservices-imagesearch.ImagesModule" />
+        description: ''
+  - name: readLink
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.readLink'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.readLink'
-    name: readLink
+    summary: >-
+      The URL that returns this resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: readLink
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'readLink?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: recipes
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.recipes'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.recipes'
-    name: recipes
+    summary: >-
+      A list of recipes related to the image. For example, if the image is of an
+      apple pie, the list
+
+      contains recipes for making an apple pie.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: recipes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'recipes?: RecipesModule'
       return:
-        type:
-          - '@azure/cognitiveservices-imagesearch.RecipesModule'
+        type: <xref uid="@azure/cognitiveservices-imagesearch.RecipesModule" />
+        description: ''
+  - name: recognizedEntityGroups
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.recognizedEntityGroups'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.recognizedEntityGroups'
-    name: recognizedEntityGroups
+    summary: >-
+      A list of groups that contain images of entities that match the entity
+      found in the specified
+
+      image. For example, the response might include images from the general
+      celebrity group if the
+
+      entity was recognized in that group.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: recognizedEntityGroups
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'recognizedEntityGroups?: RecognizedEntitiesModule'
       return:
-        type:
-          - '@azure/cognitiveservices-imagesearch.RecognizedEntitiesModule'
+        type: >-
+          <xref
+          uid="@azure/cognitiveservices-imagesearch.RecognizedEntitiesModule" />
+        description: ''
+  - name: relatedCollections
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.relatedCollections'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.relatedCollections'
-    name: relatedCollections
+    summary: >-
+      A list of links to webpages that contain related images.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: relatedCollections
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'relatedCollections?: RelatedCollectionsModule'
       return:
-        type:
-          - '@azure/cognitiveservices-imagesearch.RelatedCollectionsModule'
+        type: >-
+          <xref
+          uid="@azure/cognitiveservices-imagesearch.RelatedCollectionsModule" />
+        description: ''
+  - name: relatedSearches
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.relatedSearches'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.relatedSearches'
-    name: relatedSearches
+    summary: >-
+      A list of related queries made by others.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: relatedSearches
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'relatedSearches?: RelatedSearchesModule'
       return:
-        type:
-          - '@azure/cognitiveservices-imagesearch.RelatedSearchesModule'
+        type: >-
+          <xref uid="@azure/cognitiveservices-imagesearch.RelatedSearchesModule"
+          />
+        description: ''
+  - name: shoppingSources
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.shoppingSources'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.shoppingSources'
-    name: shoppingSources
+    summary: >-
+      A list of merchants that offer items related to the image. For example, if
+      the image is of an
+
+      apple pie, the list contains merchants that are selling apple pies.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: shoppingSources
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'shoppingSources?: AggregateOffer'
       return:
-        type:
-          - '@azure/cognitiveservices-imagesearch.AggregateOffer'
+        type: <xref uid="@azure/cognitiveservices-imagesearch.AggregateOffer" />
+        description: ''
+  - name: visuallySimilarImages
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.visuallySimilarImages'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.visuallySimilarImages'
-    name: visuallySimilarImages
+    summary: >-
+      A list of images that are visually similar to the original image. For
+      example, if the
+
+      specified image is of a sunset over a body of water, the list of similar
+      images are of a
+
+      sunset over a body of water. If the specified image is of a person,
+      similar images might be of
+
+      the same person or they might be of persons dressed similarly or in a
+      similar setting. The
+
+      criteria for similarity continues to evolve.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: visuallySimilarImages
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'visuallySimilarImages?: ImagesModule'
       return:
-        type:
-          - '@azure/cognitiveservices-imagesearch.ImagesModule'
+        type: <xref uid="@azure/cognitiveservices-imagesearch.ImagesModule" />
+        description: ''
+  - name: visuallySimilarProducts
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.visuallySimilarProducts'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.visuallySimilarProducts'
-    name: visuallySimilarProducts
+    summary: >-
+      A list of images that contain products that are visually similar to
+      products found in the
+
+      original image. For example, if the specified image contains a dress, the
+      list of similar
+
+      images contain a dress. The image provides summary information about
+      offers that Bing found
+
+      online for the product.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: visuallySimilarProducts
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'visuallySimilarProducts?: ImagesModule'
       return:
-        type:
-          - '@azure/cognitiveservices-imagesearch.ImagesModule'
+        type: <xref uid="@azure/cognitiveservices-imagesearch.ImagesModule" />
+        description: ''
+  - name: webSearchUrl
+    uid: '@azure/cognitiveservices-imagesearch.ImageInsights.webSearchUrl'
     package: '@azure/cognitiveservices-imagesearch'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsights.webSearchUrl'
-    name: webSearchUrl
+    summary: >-
+      The URL To Bing's search result for this item.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: webSearchUrl
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'webSearchUrl?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/cognitiveservices-imagesearch'
-references:
-  - uid: '@azure/cognitiveservices-imagesearch.Query'
-    name: Query
-    spec.typeScript:
-      - name: Query
-        fullName: Query
-        uid: '@azure/cognitiveservices-imagesearch.Query'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageInsightsImageCaption'
-    name: ImageInsightsImageCaption
-    spec.typeScript:
-      - name: ImageInsightsImageCaption
-        fullName: ImageInsightsImageCaption
-        uid: '@azure/cognitiveservices-imagesearch.ImageInsightsImageCaption'
-  - uid: '@azure/cognitiveservices-imagesearch.ImageTagsModule'
-    name: ImageTagsModule
-    spec.typeScript:
-      - name: ImageTagsModule
-        fullName: ImageTagsModule
-        uid: '@azure/cognitiveservices-imagesearch.ImageTagsModule'
-  - uid: '@azure/cognitiveservices-imagesearch.ImagesModule'
-    name: ImagesModule
-    spec.typeScript:
-      - name: ImagesModule
-        fullName: ImagesModule
-        uid: '@azure/cognitiveservices-imagesearch.ImagesModule'
-  - uid: '@azure/cognitiveservices-imagesearch.RecipesModule'
-    name: RecipesModule
-    spec.typeScript:
-      - name: RecipesModule
-        fullName: RecipesModule
-        uid: '@azure/cognitiveservices-imagesearch.RecipesModule'
-  - uid: '@azure/cognitiveservices-imagesearch.RecognizedEntitiesModule'
-    name: RecognizedEntitiesModule
-    spec.typeScript:
-      - name: RecognizedEntitiesModule
-        fullName: RecognizedEntitiesModule
-        uid: '@azure/cognitiveservices-imagesearch.RecognizedEntitiesModule'
-  - uid: '@azure/cognitiveservices-imagesearch.RelatedCollectionsModule'
-    name: RelatedCollectionsModule
-    spec.typeScript:
-      - name: RelatedCollectionsModule
-        fullName: RelatedCollectionsModule
-        uid: '@azure/cognitiveservices-imagesearch.RelatedCollectionsModule'
-  - uid: '@azure/cognitiveservices-imagesearch.RelatedSearchesModule'
-    name: RelatedSearchesModule
-    spec.typeScript:
-      - name: RelatedSearchesModule
-        fullName: RelatedSearchesModule
-        uid: '@azure/cognitiveservices-imagesearch.RelatedSearchesModule'
-  - uid: '@azure/cognitiveservices-imagesearch.AggregateOffer'
-    name: AggregateOffer
-    spec.typeScript:
-      - name: AggregateOffer
-        fullName: AggregateOffer
-        uid: '@azure/cognitiveservices-imagesearch.AggregateOffer'
+        type: undefined | string
+        description: ''

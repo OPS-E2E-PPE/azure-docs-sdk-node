@@ -1,41 +1,52 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-apimanagement.CertificateCreateOrUpdateParameters'
-    name: CertificateCreateOrUpdateParameters
-    fullName: CertificateCreateOrUpdateParameters
-    children:
-      - '@azure/arm-apimanagement.CertificateCreateOrUpdateParameters.data'
-      - '@azure/arm-apimanagement.CertificateCreateOrUpdateParameters.password'
-    langs:
-      - typeScript
-    type: interface
-    summary: Certificate create or update details.
+### YamlMime:TSType
+name: CertificateCreateOrUpdateParameters
+uid: '@azure/arm-apimanagement.CertificateCreateOrUpdateParameters'
+package: '@azure/arm-apimanagement'
+summary: Certificate create or update details.
+fullName: CertificateCreateOrUpdateParameters
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: data
+    uid: '@azure/arm-apimanagement.CertificateCreateOrUpdateParameters.data'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.CertificateCreateOrUpdateParameters.data'
-    name: data
-    fullName: data
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Base 64 encoded certificate using the application/x-pkcs12 representation.
+    fullName: data
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'data: string'
+      content: 'data?: undefined | string'
       return:
-        type:
-          - string
+        type: undefined | string
+        description: ''
+  - name: keyVault
+    uid: '@azure/arm-apimanagement.CertificateCreateOrUpdateParameters.keyVault'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.CertificateCreateOrUpdateParameters.password'
-    name: password
-    fullName: password
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: KeyVault location details of the certificate.
+    fullName: keyVault
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'keyVault?: KeyVaultContractCreateProperties'
+      return:
+        type: >-
+          <xref uid="@azure/arm-apimanagement.KeyVaultContractCreateProperties"
+          />
+        description: ''
+  - name: password
+    uid: '@azure/arm-apimanagement.CertificateCreateOrUpdateParameters.password'
+    package: '@azure/arm-apimanagement'
     summary: Password for the Certificate
+    fullName: password
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'password: string'
+      content: 'password?: undefined | string'
       return:
-        type:
-          - string
-    package: '@azure/arm-apimanagement'
+        type: undefined | string
+        description: ''

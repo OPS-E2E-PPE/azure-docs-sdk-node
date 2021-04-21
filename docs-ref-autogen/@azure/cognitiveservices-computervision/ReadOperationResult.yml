@@ -1,64 +1,71 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/cognitiveservices-computervision.ReadOperationResult'
-    name: ReadOperationResult
-    fullName: ReadOperationResult
-    children:
-      - >-
-        @azure/cognitiveservices-computervision.ReadOperationResult.recognitionResults
-      - '@azure/cognitiveservices-computervision.ReadOperationResult.status'
-    langs:
-      - typeScript
-    type: interface
-    summary: OCR result of the read operation.
+### YamlMime:TSType
+name: ReadOperationResult
+uid: '@azure/cognitiveservices-computervision.ReadOperationResult'
+package: '@azure/cognitiveservices-computervision'
+summary: OCR result of the read operation.
+fullName: ReadOperationResult
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: analyzeResult
+    uid: '@azure/cognitiveservices-computervision.ReadOperationResult.analyzeResult'
     package: '@azure/cognitiveservices-computervision'
-  - uid: >-
-      @azure/cognitiveservices-computervision.ReadOperationResult.recognitionResults
-    name: recognitionResults
-    fullName: recognitionResults
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: An array of text recognition result of the read operation.
-    optional: true
+    summary: Analyze batch operation result.
+    fullName: analyzeResult
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'recognitionResults?: TextRecognitionResult[]'
+      content: 'analyzeResult?: AnalyzeResults'
       return:
-        type:
-          - '@azure/cognitiveservices-computervision.TextRecognitionResult[]'
+        type: <xref uid="@azure/cognitiveservices-computervision.AnalyzeResults" />
+        description: ''
+  - name: createdDateTime
+    uid: >-
+      @azure/cognitiveservices-computervision.ReadOperationResult.createdDateTime
     package: '@azure/cognitiveservices-computervision'
-  - uid: '@azure/cognitiveservices-computervision.ReadOperationResult.status'
-    name: status
-    fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Get UTC date time the batch operation was submitted.
+    fullName: createdDateTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'createdDateTime?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: lastUpdatedDateTime
+    uid: >-
+      @azure/cognitiveservices-computervision.ReadOperationResult.lastUpdatedDateTime
+    package: '@azure/cognitiveservices-computervision'
+    summary: Get last updated UTC date time of this batch operation.
+    fullName: lastUpdatedDateTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lastUpdatedDateTime?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: status
+    uid: '@azure/cognitiveservices-computervision.ReadOperationResult.status'
+    package: '@azure/cognitiveservices-computervision'
     summary: >-
-      Status of the read operation. Possible values include: 'NotStarted',
-      'Running', 'Failed',
+      Status of the read operation. Possible values include: 'notStarted',
+      'running', 'failed',
 
-      'Succeeded'
-    optional: true
+      'succeeded'
+    fullName: status
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'status?: TextOperationStatusCodes'
+      content: 'status?: OperationStatusCodes'
       return:
-        type:
-          - '@azure/cognitiveservices-computervision.TextOperationStatusCodes'
-    package: '@azure/cognitiveservices-computervision'
-references:
-  - uid: '@azure/cognitiveservices-computervision.TextRecognitionResult[]'
-    name: 'TextRecognitionResult[]'
-    spec.typeScript:
-      - name: TextRecognitionResult
-        fullName: TextRecognitionResult
-        uid: '@azure/cognitiveservices-computervision.TextRecognitionResult'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/cognitiveservices-computervision.TextOperationStatusCodes'
-    name: TextOperationStatusCodes
-    spec.typeScript:
-      - name: TextOperationStatusCodes
-        fullName: TextOperationStatusCodes
-        uid: '@azure/cognitiveservices-computervision.TextOperationStatusCodes'
+        type: >-
+          <xref
+          uid="@azure/cognitiveservices-computervision.OperationStatusCodes" />
+        description: ''

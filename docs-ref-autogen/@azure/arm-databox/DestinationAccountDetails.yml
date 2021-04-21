@@ -1,26 +1,50 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-databox.DestinationAccountDetails'
-    name: DestinationAccountDetails
-    fullName: DestinationAccountDetails
-    children:
-      - '@azure/arm-databox.DestinationAccountDetails.accountId'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: DestinationAccountDetails
+uid: '@azure/arm-databox.DestinationAccountDetails'
+package: '@azure/arm-databox'
+summary: Details of the destination storage accounts.
+fullName: DestinationAccountDetails
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: accountId
+    uid: '@azure/arm-databox.DestinationAccountDetails.accountId'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DestinationAccountDetails.accountId'
-    name: accountId
+    summary: Arm Id of the destination where the data has to be moved.
     fullName: accountId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'accountId: string'
+      content: 'accountId?: undefined | string'
       return:
-        type:
-          - string
+        type: undefined | string
+        description: ''
+  - name: dataDestinationType
+    uid: '@azure/arm-databox.DestinationAccountDetails.dataDestinationType'
     package: '@azure/arm-databox'
+    summary: Polymorphic Discriminator
+    fullName: dataDestinationType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'dataDestinationType: "DestinationAccountDetails"'
+      return:
+        type: '"DestinationAccountDetails"'
+        description: ''
+  - name: sharePassword
+    uid: '@azure/arm-databox.DestinationAccountDetails.sharePassword'
+    package: '@azure/arm-databox'
+    summary: Share password to be shared by all shares in SA.
+    fullName: sharePassword
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sharePassword?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''

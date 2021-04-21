@@ -1,104 +1,124 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-datafactory.IntegrationRuntimeSsisProperties'
-    name: IntegrationRuntimeSsisProperties
-    fullName: IntegrationRuntimeSsisProperties
-    children:
-      - '@azure/arm-datafactory.IntegrationRuntimeSsisProperties.catalogInfo'
-      - >-
-        @azure/arm-datafactory.IntegrationRuntimeSsisProperties.customSetupScriptProperties
-      - '@azure/arm-datafactory.IntegrationRuntimeSsisProperties.edition'
-      - '@azure/arm-datafactory.IntegrationRuntimeSsisProperties.licenseType'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: IntegrationRuntimeSsisProperties
+uid: '@azure/arm-datafactory.IntegrationRuntimeSsisProperties'
+package: '@azure/arm-datafactory'
+summary: SSIS properties for managed integration runtime.
+fullName: IntegrationRuntimeSsisProperties
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: catalogInfo
+    uid: '@azure/arm-datafactory.IntegrationRuntimeSsisProperties.catalogInfo'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.IntegrationRuntimeSsisProperties.catalogInfo'
-    name: catalogInfo
+    summary: Catalog information for managed dedicated integration runtime.
     fullName: catalogInfo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'catalogInfo?: IntegrationRuntimeSsisCatalogInfo'
       return:
-        type:
-          - '@azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo'
-    package: '@azure/arm-datafactory'
-  - uid: >-
+        type: >-
+          <xref uid="@azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo"
+          />
+        description: ''
+  - name: customSetupScriptProperties
+    uid: >-
       @azure/arm-datafactory.IntegrationRuntimeSsisProperties.customSetupScriptProperties
-    name: customSetupScriptProperties
+    package: '@azure/arm-datafactory'
+    summary: >-
+      Custom setup script properties for a managed dedicated integration
+      runtime.
     fullName: customSetupScriptProperties
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         customSetupScriptProperties?:
         IntegrationRuntimeCustomSetupScriptProperties
       return:
-        type:
-          - '@azure/arm-datafactory.IntegrationRuntimeCustomSetupScriptProperties'
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.IntegrationRuntimeCustomSetupScriptProperties"
+          />
+        description: ''
+  - name: dataProxyProperties
+    uid: >-
+      @azure/arm-datafactory.IntegrationRuntimeSsisProperties.dataProxyProperties
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.IntegrationRuntimeSsisProperties.edition'
-    name: edition
+    summary: Data proxy properties for a managed dedicated integration runtime.
+    fullName: dataProxyProperties
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'dataProxyProperties?: IntegrationRuntimeDataProxyProperties'
+      return:
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.IntegrationRuntimeDataProxyProperties" />
+        description: ''
+  - name: edition
+    uid: '@azure/arm-datafactory.IntegrationRuntimeSsisProperties.edition'
+    package: '@azure/arm-datafactory'
+    summary: >-
+      The edition for the SSIS Integration Runtime. Possible values include:
+      'Standard',
+
+      'Enterprise'
     fullName: edition
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'edition?: IntegrationRuntimeEdition'
       return:
-        type:
-          - '@azure/arm-datafactory.IntegrationRuntimeEdition'
+        type: <xref uid="@azure/arm-datafactory.IntegrationRuntimeEdition" />
+        description: ''
+  - name: expressCustomSetupProperties
+    uid: >-
+      @azure/arm-datafactory.IntegrationRuntimeSsisProperties.expressCustomSetupProperties
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.IntegrationRuntimeSsisProperties.licenseType'
-    name: licenseType
+    summary: Custom setup without script properties for a SSIS integration runtime.
+    fullName: expressCustomSetupProperties
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'expressCustomSetupProperties?: CustomSetupBaseUnion[]'
+      return:
+        type: '<xref uid="@azure/arm-datafactory.CustomSetupBaseUnion" />[]'
+        description: ''
+  - name: licenseType
+    uid: '@azure/arm-datafactory.IntegrationRuntimeSsisProperties.licenseType'
+    package: '@azure/arm-datafactory'
+    summary: >-
+      License type for bringing your own license scenario. Possible values
+      include: 'BasePrice',
+
+      'LicenseIncluded'
     fullName: licenseType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'licenseType?: IntegrationRuntimeLicenseType'
       return:
-        type:
-          - '@azure/arm-datafactory.IntegrationRuntimeLicenseType'
+        type: <xref uid="@azure/arm-datafactory.IntegrationRuntimeLicenseType" />
+        description: ''
+  - name: packageStores
+    uid: '@azure/arm-datafactory.IntegrationRuntimeSsisProperties.packageStores'
     package: '@azure/arm-datafactory'
-references:
-  - uid: '@azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo'
-    name: IntegrationRuntimeSsisCatalogInfo
-    spec.typeScript:
-      - name: IntegrationRuntimeSsisCatalogInfo
-        fullName: IntegrationRuntimeSsisCatalogInfo
-        uid: '@azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo'
-  - uid: '@azure/arm-datafactory.IntegrationRuntimeCustomSetupScriptProperties'
-    name: IntegrationRuntimeCustomSetupScriptProperties
-    spec.typeScript:
-      - name: IntegrationRuntimeCustomSetupScriptProperties
-        fullName: IntegrationRuntimeCustomSetupScriptProperties
-        uid: '@azure/arm-datafactory.IntegrationRuntimeCustomSetupScriptProperties'
-  - uid: '@azure/arm-datafactory.IntegrationRuntimeEdition'
-    name: IntegrationRuntimeEdition
-    spec.typeScript:
-      - name: IntegrationRuntimeEdition
-        fullName: IntegrationRuntimeEdition
-        uid: '@azure/arm-datafactory.IntegrationRuntimeEdition'
-  - uid: '@azure/arm-datafactory.IntegrationRuntimeLicenseType'
-    name: IntegrationRuntimeLicenseType
-    spec.typeScript:
-      - name: IntegrationRuntimeLicenseType
-        fullName: IntegrationRuntimeLicenseType
-        uid: '@azure/arm-datafactory.IntegrationRuntimeLicenseType'
+    summary: Package stores for the SSIS Integration Runtime.
+    fullName: packageStores
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'packageStores?: PackageStore[]'
+      return:
+        type: '<xref uid="@azure/arm-datafactory.PackageStore" />[]'
+        description: ''

@@ -1,128 +1,126 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-databox.JobStages'
-    name: JobStages
-    fullName: JobStages
-    children:
-      - '@azure/arm-databox.JobStages.displayName'
-      - '@azure/arm-databox.JobStages.errorDetails'
-      - '@azure/arm-databox.JobStages.jobStageDetails'
-      - '@azure/arm-databox.JobStages.stageName'
-      - '@azure/arm-databox.JobStages.stageStatus'
-      - '@azure/arm-databox.JobStages.stageTime'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: JobStages
+uid: '@azure/arm-databox.JobStages'
+package: '@azure/arm-databox'
+summary: Job stages.
+fullName: JobStages
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: displayName
+    uid: '@azure/arm-databox.JobStages.displayName'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.JobStages.displayName'
-    name: displayName
+    summary: >-
+      Display name of the job stage.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: displayName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'displayName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: errorDetails
+    uid: '@azure/arm-databox.JobStages.errorDetails'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.JobStages.errorDetails'
-    name: errorDetails
+    summary: >-
+      Error details for the stage.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: errorDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'errorDetails?: JobErrorDetails[]'
       return:
-        type:
-          - '@azure/arm-databox.JobErrorDetails[]'
+        type: '<xref uid="@azure/arm-databox.JobErrorDetails" />[]'
+        description: ''
+  - name: jobStageDetails
+    uid: '@azure/arm-databox.JobStages.jobStageDetails'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.JobStages.jobStageDetails'
-    name: jobStageDetails
+    summary: >-
+      Job Stage Details
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: jobStageDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'jobStageDetails?: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: stageName
+    uid: '@azure/arm-databox.JobStages.stageName'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.JobStages.stageName'
-    name: stageName
+    summary: >-
+      Name of the job stage. Possible values include: 'DeviceOrdered',
+      'DevicePrepared',
+
+      'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy',
+      'Completed',
+
+      'CompletedWithErrors', 'Cancelled', 'Failed_IssueReportedAtCustomer',
+
+      'Failed_IssueDetectedAtAzureDC', 'Aborted', 'CompletedWithWarnings',
+
+      'ReadyToDispatchFromAzureDC', 'ReadyToReceiveAtAzureDC'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: stageName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'stageName?: StageName'
       return:
-        type:
-          - '@azure/arm-databox.StageName'
+        type: <xref uid="@azure/arm-databox.StageName" />
+        description: ''
+  - name: stageStatus
+    uid: '@azure/arm-databox.JobStages.stageStatus'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.JobStages.stageStatus'
-    name: stageStatus
+    summary: >-
+      Status of the job stage. Possible values include: 'None', 'InProgress',
+      'Succeeded', 'Failed',
+
+      'Cancelled', 'Cancelling', 'SucceededWithErrors'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: stageStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'stageStatus?: StageStatus'
       return:
-        type:
-          - '@azure/arm-databox.StageStatus'
+        type: <xref uid="@azure/arm-databox.StageStatus" />
+        description: ''
+  - name: stageTime
+    uid: '@azure/arm-databox.JobStages.stageTime'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.JobStages.stageTime'
-    name: stageTime
+    summary: >-
+      Time for the job stage in UTC ISO 8601 format.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: stageTime
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'stageTime?: Date'
       return:
-        type:
-          - Date
-    package: '@azure/arm-databox'
-references:
-  - uid: '@azure/arm-databox.JobErrorDetails[]'
-    name: 'JobErrorDetails[]'
-    spec.typeScript:
-      - name: JobErrorDetails
-        fullName: JobErrorDetails
-        uid: '@azure/arm-databox.JobErrorDetails'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-databox.StageName'
-    name: StageName
-    spec.typeScript:
-      - name: StageName
-        fullName: StageName
-        uid: '@azure/arm-databox.StageName'
-  - uid: '@azure/arm-databox.StageStatus'
-    name: StageStatus
-    spec.typeScript:
-      - name: StageStatus
-        fullName: StageStatus
-        uid: '@azure/arm-databox.StageStatus'
+        type: Date
+        description: ''

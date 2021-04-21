@@ -1,108 +1,131 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource'
-    name: EventHubOutputDataSource
-    fullName: EventHubOutputDataSource
-    children:
-      - '@azure/arm-streamanalytics.EventHubOutputDataSource.eventHubName'
-      - '@azure/arm-streamanalytics.EventHubOutputDataSource.partitionKey'
-      - '@azure/arm-streamanalytics.EventHubOutputDataSource.serviceBusNamespace'
-      - >-
-        @azure/arm-streamanalytics.EventHubOutputDataSource.sharedAccessPolicyKey
-      - >-
-        @azure/arm-streamanalytics.EventHubOutputDataSource.sharedAccessPolicyName
-      - '@azure/arm-streamanalytics.EventHubOutputDataSource.type'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: EventHubOutputDataSource
+uid: '@azure/arm-streamanalytics.EventHubOutputDataSource'
+package: '@azure/arm-streamanalytics'
+summary: Describes an Event Hub output data source.
+fullName: EventHubOutputDataSource
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: authenticationMode
+    uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.authenticationMode'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.eventHubName'
-    name: eventHubName
+    summary: >-
+      Authentication Mode. Possible values include: 'Msi', 'UserToken',
+      'ConnectionString'
+    fullName: authenticationMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authenticationMode?: AuthenticationMode'
+      return:
+        type: <xref uid="@azure/arm-streamanalytics.AuthenticationMode" />
+        description: ''
+  - name: eventHubName
+    uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.eventHubName'
+    package: '@azure/arm-streamanalytics'
+    summary: The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
     fullName: eventHubName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'eventHubName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: partitionKey
+    uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.partitionKey'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.partitionKey'
-    name: partitionKey
+    summary: >-
+      The key/column that is used to determine to which partition to send event
+      data.
     fullName: partitionKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'partitionKey?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: propertyColumns
+    uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.propertyColumns'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.serviceBusNamespace'
-    name: serviceBusNamespace
-    fullName: serviceBusNamespace
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
-    optional: true
+    fullName: propertyColumns
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'propertyColumns?: string[]'
+      return:
+        type: 'string[]'
+        description: ''
+  - name: serviceBusNamespace
+    uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.serviceBusNamespace'
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The namespace that is associated with the desired Event Hub, Service Bus
+      Queue, Service Bus
+
+      Topic, etc. Required on PUT (CreateOrReplace) requests.
+    fullName: serviceBusNamespace
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'serviceBusNamespace?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: sharedAccessPolicyKey
+    uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.sharedAccessPolicyKey'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.sharedAccessPolicyKey'
-    name: sharedAccessPolicyKey
+    summary: >-
+      The shared access policy key for the specified shared access policy.
+      Required on PUT
+
+      (CreateOrReplace) requests.
     fullName: sharedAccessPolicyKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sharedAccessPolicyKey?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: sharedAccessPolicyName
+    uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.sharedAccessPolicyName'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.sharedAccessPolicyName'
-    name: sharedAccessPolicyName
+    summary: >-
+      The shared access policy name for the Event Hub, Service Bus Queue,
+      Service Bus Topic, etc.
+
+      Required on PUT (CreateOrReplace) requests.
     fullName: sharedAccessPolicyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sharedAccessPolicyName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: type
+    uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.type'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.EventHubOutputDataSource.type'
-    name: type
+    summary: Polymorphic Discriminator
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: "Microsoft.ServiceBus/EventHub"'
       return:
-        type:
-          - '"Microsoft.ServiceBus/EventHub"'
-    package: '@azure/arm-streamanalytics'
+        type: '"<xref uid="Microsoft.ServiceBus/EventHub" />"'
+        description: ''

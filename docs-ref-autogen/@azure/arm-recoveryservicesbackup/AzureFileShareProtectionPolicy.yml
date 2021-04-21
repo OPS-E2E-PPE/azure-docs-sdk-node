@@ -1,136 +1,106 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy'
-    name: AzureFileShareProtectionPolicy
-    fullName: AzureFileShareProtectionPolicy
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.backupManagementType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.protectedItemsCount
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.retentionPolicy
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.schedulePolicy
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.timeZone
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.workLoadType
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureFileShareProtectionPolicy
+uid: '@azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy'
+package: '@azure/arm-recoveryservicesbackup'
+summary: AzureStorage backup policy.
+fullName: AzureFileShareProtectionPolicy
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType: "AzureStorage"'
       return:
-        type:
-          - '"AzureStorage"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"AzureStorage"'
+        description: ''
+  - name: protectedItemsCount
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.protectedItemsCount
-    name: protectedItemsCount
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Number of items associated with this policy.
     fullName: protectedItemsCount
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectedItemsCount?: undefined | number'
       return:
-        type:
-          - undefined | number
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | number
+        description: ''
+  - name: retentionPolicy
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.retentionPolicy
-    name: retentionPolicy
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Retention policy with the details on backup copy retention ranges.
     fullName: retentionPolicy
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'retentionPolicy?: RetentionPolicyUnion'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.RetentionPolicyUnion'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.RetentionPolicyUnion" />
+        description: ''
+  - name: schedulePolicy
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.schedulePolicy
-    name: schedulePolicy
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Backup schedule specified as part of backup policy.
     fullName: schedulePolicy
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'schedulePolicy?: SchedulePolicyUnion'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.SchedulePolicyUnion'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.SchedulePolicyUnion" />
+        description: ''
+  - name: timeZone
+    uid: '@azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.timeZone'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.timeZone'
-    name: timeZone
+    summary: >-
+      TimeZone optional input as string. For example: TimeZone = "Pacific
+      Standard Time".
     fullName: timeZone
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'timeZone?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: workLoadType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectionPolicy.workLoadType
-    name: workLoadType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Type of workload for the backup management. Possible values include:
+      'Invalid', 'VM',
+
+      'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM',
+      'SystemState',
+
+      'Client', 'GenericDataSource', 'SQLDataBase', 'AzureFileShare',
+      'SAPHanaDatabase',
+
+      'SAPAseDatabase'
     fullName: workLoadType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workLoadType?: WorkloadType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.WorkloadType'
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.RetentionPolicyUnion'
-    name: RetentionPolicyUnion
-    spec.typeScript:
-      - name: RetentionPolicyUnion
-        fullName: RetentionPolicyUnion
-        uid: '@azure/arm-recoveryservicesbackup.RetentionPolicyUnion'
-  - uid: '@azure/arm-recoveryservicesbackup.SchedulePolicyUnion'
-    name: SchedulePolicyUnion
-    spec.typeScript:
-      - name: SchedulePolicyUnion
-        fullName: SchedulePolicyUnion
-        uid: '@azure/arm-recoveryservicesbackup.SchedulePolicyUnion'
-  - uid: '@azure/arm-recoveryservicesbackup.WorkloadType'
-    name: WorkloadType
-    spec.typeScript:
-      - name: WorkloadType
-        fullName: WorkloadType
-        uid: '@azure/arm-recoveryservicesbackup.WorkloadType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.WorkloadType" />
+        description: ''

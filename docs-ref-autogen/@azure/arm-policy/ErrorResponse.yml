@@ -1,63 +1,96 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-policy.ErrorResponse'
-    name: ErrorResponse
-    fullName: ErrorResponse
-    children:
-      - '@azure/arm-policy.ErrorResponse.errorCode'
-      - '@azure/arm-policy.ErrorResponse.errorMessage'
-      - '@azure/arm-policy.ErrorResponse.httpStatus'
-    langs:
-      - typeScript
-    type: interface
+### YamlMime:TSType
+name: ErrorResponse
+uid: '@azure/arm-policy.ErrorResponse'
+package: '@azure/arm-policy'
+summary: The resource management error response.
+fullName: ErrorResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: additionalInfo
+    uid: '@azure/arm-policy.ErrorResponse.additionalInfo'
+    package: '@azure/arm-policy'
     summary: >-
-      Error response indicates Azure Resource Manager is not able to process the
-      incoming request. The
+      The error additional info.
 
-      reason is provided in the error message.
-    package: '@azure/arm-policy'
-  - uid: '@azure/arm-policy.ErrorResponse.errorCode'
-    name: errorCode
-    fullName: errorCode
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Error code.
-    optional: true
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: additionalInfo
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'errorCode?: undefined | string'
+      content: 'additionalInfo?: ErrorAdditionalInfo[]'
       return:
-        type:
-          - undefined | string
+        type: '<xref uid="@azure/arm-policy.ErrorAdditionalInfo" />[]'
+        description: ''
+  - name: code
+    uid: '@azure/arm-policy.ErrorResponse.code'
     package: '@azure/arm-policy'
-  - uid: '@azure/arm-policy.ErrorResponse.errorMessage'
-    name: errorMessage
-    fullName: errorMessage
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Error message indicating why the operation failed.
-    optional: true
+    summary: >-
+      The error code.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: code
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'errorMessage?: undefined | string'
+      content: 'code?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: details
+    uid: '@azure/arm-policy.ErrorResponse.details'
     package: '@azure/arm-policy'
-  - uid: '@azure/arm-policy.ErrorResponse.httpStatus'
-    name: httpStatus
-    fullName: httpStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Http status code.
-    optional: true
+    summary: >-
+      The error details.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: details
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'httpStatus?: undefined | string'
+      content: 'details?: ErrorResponse[]'
       return:
-        type:
-          - undefined | string
+        type: '<xref uid="@azure/arm-policy.ErrorResponse" />[]'
+        description: ''
+  - name: message
+    uid: '@azure/arm-policy.ErrorResponse.message'
     package: '@azure/arm-policy'
+    summary: >-
+      The error message.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: target
+    uid: '@azure/arm-policy.ErrorResponse.target'
+    package: '@azure/arm-policy'
+    summary: >-
+      The error target.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: target
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'target?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''

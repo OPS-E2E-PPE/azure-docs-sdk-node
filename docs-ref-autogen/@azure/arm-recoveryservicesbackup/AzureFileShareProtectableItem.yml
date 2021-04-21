@@ -1,167 +1,131 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem'
-    name: AzureFileShareProtectableItem
-    fullName: AzureFileShareProtectableItem
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.azureFileShareType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.backupManagementType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.friendlyName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.parentContainerFabricId
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.parentContainerFriendlyName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.protectableItemType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.protectionState
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.workloadType
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureFileShareProtectableItem
+uid: '@azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Protectable item for Azure Fileshare workloads.
+fullName: AzureFileShareProtectableItem
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: azureFileShareType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.azureFileShareType
-    name: azureFileShareType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      File Share type XSync or XSMB. Possible values include: 'Invalid', 'XSMB',
+      'XSync'
     fullName: azureFileShareType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'azureFileShareType?: AzureFileShareType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.AzureFileShareType'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.AzureFileShareType" />
+        description: ''
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Type of backup management to backup an item.
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: friendlyName
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.friendlyName
-    name: friendlyName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Friendly name of the backup item.
     fullName: friendlyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: parentContainerFabricId
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.parentContainerFabricId
-    name: parentContainerFabricId
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Full Fabric ID of container to which this protectable item belongs. For
+      example, ARM ID.
     fullName: parentContainerFabricId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'parentContainerFabricId?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: parentContainerFriendlyName
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.parentContainerFriendlyName
-    name: parentContainerFriendlyName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Friendly name of container to which this protectable item belongs.
     fullName: parentContainerFriendlyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'parentContainerFriendlyName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: protectableItemType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.protectableItemType
-    name: protectableItemType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: protectableItemType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectableItemType: "AzureFileShare"'
       return:
-        type:
-          - '"AzureFileShare"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"AzureFileShare"'
+        description: ''
+  - name: protectionState
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.protectionState
-    name: protectionState
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      State of the back up item. Possible values include: 'Invalid',
+      'NotProtected', 'Protecting',
+
+      'Protected', 'ProtectionFailed'
     fullName: protectionState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectionState?: ProtectionStatus'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.ProtectionStatus'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.ProtectionStatus" />
+        description: ''
+  - name: workloadType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareProtectableItem.workloadType
-    name: workloadType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Type of workload for the backup management
     fullName: workloadType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workloadType?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureFileShareType'
-    name: AzureFileShareType
-    spec.typeScript:
-      - name: AzureFileShareType
-        fullName: AzureFileShareType
-        uid: '@azure/arm-recoveryservicesbackup.AzureFileShareType'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectionStatus'
-    name: ProtectionStatus
-    spec.typeScript:
-      - name: ProtectionStatus
-        fullName: ProtectionStatus
-        uid: '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        type: undefined | string
+        description: ''

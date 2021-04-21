@@ -1,96 +1,93 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo'
-    name: IntegrationRuntimeSsisCatalogInfo
-    fullName: IntegrationRuntimeSsisCatalogInfo
-    children:
-      - >-
-        @azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo.catalogAdminPassword
-      - >-
-        @azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo.catalogAdminUserName
-      - >-
-        @azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo.catalogPricingTier
-      - >-
-        @azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo.catalogServerEndpoint
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-datafactory'
-  - uid: >-
+### YamlMime:TSType
+name: IntegrationRuntimeSsisCatalogInfo
+uid: '@azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo'
+package: '@azure/arm-datafactory'
+summary: Catalog information for managed dedicated integration runtime.
+fullName: IntegrationRuntimeSsisCatalogInfo
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: catalogAdminPassword
+    uid: >-
       @azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo.catalogAdminPassword
-    name: catalogAdminPassword
+    package: '@azure/arm-datafactory'
+    summary: The password of the administrator user account of the catalog database.
     fullName: catalogAdminPassword
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'catalogAdminPassword?: SecureString'
       return:
-        type:
-          - '@azure/arm-datafactory.SecureString'
-    package: '@azure/arm-datafactory'
-  - uid: >-
+        type: <xref uid="@azure/arm-datafactory.SecureString" />
+        description: ''
+  - name: catalogAdminUserName
+    uid: >-
       @azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo.catalogAdminUserName
-    name: catalogAdminUserName
+    package: '@azure/arm-datafactory'
+    summary: The administrator user name of catalog database.
     fullName: catalogAdminUserName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'catalogAdminUserName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-datafactory'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: catalogPricingTier
+    uid: >-
       @azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo.catalogPricingTier
-    name: catalogPricingTier
+    package: '@azure/arm-datafactory'
+    summary: >-
+      The pricing tier for the catalog database. The valid values could be found
+      in
+
+      https://azure.microsoft.com/en-us/pricing/details/sql-database/. Possible
+      values include:
+
+      'Basic', 'Standard', 'Premium', 'PremiumRS'
     fullName: catalogPricingTier
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'catalogPricingTier?: IntegrationRuntimeSsisCatalogPricingTier'
       return:
-        type:
-          - '@azure/arm-datafactory.IntegrationRuntimeSsisCatalogPricingTier'
-    package: '@azure/arm-datafactory'
-  - uid: >-
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.IntegrationRuntimeSsisCatalogPricingTier"
+          />
+        description: ''
+  - name: catalogServerEndpoint
+    uid: >-
       @azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo.catalogServerEndpoint
-    name: catalogServerEndpoint
+    package: '@azure/arm-datafactory'
+    summary: The catalog database server URL.
     fullName: catalogServerEndpoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'catalogServerEndpoint?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: dualStandbyPairName
+    uid: >-
+      @azure/arm-datafactory.IntegrationRuntimeSsisCatalogInfo.dualStandbyPairName
     package: '@azure/arm-datafactory'
-references:
-  - uid: '@azure/arm-datafactory.SecureString'
-    name: SecureString
-    spec.typeScript:
-      - name: SecureString
-        fullName: SecureString
-        uid: '@azure/arm-datafactory.SecureString'
-  - uid: '@azure/arm-datafactory.IntegrationRuntimeSsisCatalogPricingTier'
-    name: IntegrationRuntimeSsisCatalogPricingTier
-    spec.typeScript:
-      - name: IntegrationRuntimeSsisCatalogPricingTier
-        fullName: IntegrationRuntimeSsisCatalogPricingTier
-        uid: '@azure/arm-datafactory.IntegrationRuntimeSsisCatalogPricingTier'
+    summary: >-
+      The dual standby pair name of Azure-SSIS Integration Runtimes to support
+      SSISDB failover.
+    fullName: dualStandbyPairName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'dualStandbyPairName?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''

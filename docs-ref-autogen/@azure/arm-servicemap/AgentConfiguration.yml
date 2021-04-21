@@ -1,113 +1,93 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-servicemap.AgentConfiguration'
-    name: AgentConfiguration
-    fullName: AgentConfiguration
-    children:
-      - '@azure/arm-servicemap.AgentConfiguration.agentId'
-      - '@azure/arm-servicemap.AgentConfiguration.clockGranularity'
-      - '@azure/arm-servicemap.AgentConfiguration.dependencyAgentId'
-      - '@azure/arm-servicemap.AgentConfiguration.dependencyAgentRevision'
-      - '@azure/arm-servicemap.AgentConfiguration.dependencyAgentVersion'
-      - '@azure/arm-servicemap.AgentConfiguration.rebootStatus'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: AgentConfiguration
+uid: '@azure/arm-servicemap.AgentConfiguration'
+package: '@azure/arm-servicemap'
+summary: Describes the configuration of the Dependency Agent installed on a machine.
+fullName: AgentConfiguration
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: agentId
+    uid: '@azure/arm-servicemap.AgentConfiguration.agentId'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.AgentConfiguration.agentId'
-    name: agentId
+    summary: Health Service Agent unique identifier.
     fullName: agentId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'agentId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: clockGranularity
+    uid: '@azure/arm-servicemap.AgentConfiguration.clockGranularity'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.AgentConfiguration.clockGranularity'
-    name: clockGranularity
+    summary: Machine clock granularity in milliseconds.
     fullName: clockGranularity
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'clockGranularity?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: dependencyAgentId
+    uid: '@azure/arm-servicemap.AgentConfiguration.dependencyAgentId'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.AgentConfiguration.dependencyAgentId'
-    name: dependencyAgentId
+    summary: Dependency Agent unique identifier.
     fullName: dependencyAgentId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'dependencyAgentId?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: dependencyAgentRevision
+    uid: '@azure/arm-servicemap.AgentConfiguration.dependencyAgentRevision'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.AgentConfiguration.dependencyAgentRevision'
-    name: dependencyAgentRevision
+    summary: Dependency Agent revision number.
     fullName: dependencyAgentRevision
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'dependencyAgentRevision?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: dependencyAgentVersion
+    uid: '@azure/arm-servicemap.AgentConfiguration.dependencyAgentVersion'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.AgentConfiguration.dependencyAgentVersion'
-    name: dependencyAgentVersion
+    summary: Dependency Agent version number.
     fullName: dependencyAgentVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'dependencyAgentVersion?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: rebootStatus
+    uid: '@azure/arm-servicemap.AgentConfiguration.rebootStatus'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.AgentConfiguration.rebootStatus'
-    name: rebootStatus
+    summary: >-
+      Specifies whether the machine has been rebooted since the Dependency Agent
+      installation.
+
+      Possible values include: 'unknown', 'rebooted', 'notRebooted'
     fullName: rebootStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'rebootStatus?: MachineRebootStatus'
       return:
-        type:
-          - '@azure/arm-servicemap.MachineRebootStatus'
-    package: '@azure/arm-servicemap'
-references:
-  - uid: '@azure/arm-servicemap.MachineRebootStatus'
-    name: MachineRebootStatus
-    spec.typeScript:
-      - name: MachineRebootStatus
-        fullName: MachineRebootStatus
-        uid: '@azure/arm-servicemap.MachineRebootStatus'
+        type: <xref uid="@azure/arm-servicemap.MachineRebootStatus" />
+        description: ''

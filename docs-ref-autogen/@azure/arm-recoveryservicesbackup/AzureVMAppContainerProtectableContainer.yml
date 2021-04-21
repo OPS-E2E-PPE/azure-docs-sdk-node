@@ -1,107 +1,88 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer'
-    name: AzureVMAppContainerProtectableContainer
-    fullName: AzureVMAppContainerProtectableContainer
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer.backupManagementType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer.containerId
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer.friendlyName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer.healthStatus
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer.protectableContainerType
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureVMAppContainerProtectableContainer
+uid: '@azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Azure workload-specific container
+fullName: AzureVMAppContainerProtectableContainer
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Type of backup management for the container. Possible values include:
+      'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.BackupManagementType'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.BackupManagementType" />
+        description: ''
+  - name: containerId
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer.containerId
-    name: containerId
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Fabric Id of the container such as ARM Id.
     fullName: containerId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'containerId?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: friendlyName
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer.friendlyName
-    name: friendlyName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Friendly name of the container.
     fullName: friendlyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: healthStatus
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer.healthStatus
-    name: healthStatus
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Status of health of the container.
     fullName: healthStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'healthStatus?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: protectableContainerType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVMAppContainerProtectableContainer.protectableContainerType
-    name: protectableContainerType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: protectableContainerType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectableContainerType: "VMAppContainer"'
       return:
-        type:
-          - '"VMAppContainer"'
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-    name: BackupManagementType
-    spec.typeScript:
-      - name: BackupManagementType
-        fullName: BackupManagementType
-        uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        type: '"VMAppContainer"'
+        description: ''

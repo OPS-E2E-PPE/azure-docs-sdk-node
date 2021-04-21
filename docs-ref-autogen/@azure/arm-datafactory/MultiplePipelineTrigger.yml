@@ -1,89 +1,85 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-datafactory.MultiplePipelineTrigger'
-    name: MultiplePipelineTrigger
-    fullName: MultiplePipelineTrigger
-    children:
-      - '@azure/arm-datafactory.MultiplePipelineTrigger.description'
-      - '@azure/arm-datafactory.MultiplePipelineTrigger.pipelines'
-      - '@azure/arm-datafactory.MultiplePipelineTrigger.runtimeState'
-      - '@azure/arm-datafactory.MultiplePipelineTrigger.type'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: MultiplePipelineTrigger
+uid: '@azure/arm-datafactory.MultiplePipelineTrigger'
+package: '@azure/arm-datafactory'
+summary: >-
+  Base class for all triggers that support one to many model for trigger to
+  pipeline.
+fullName: MultiplePipelineTrigger
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: annotations
+    uid: '@azure/arm-datafactory.MultiplePipelineTrigger.annotations'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.MultiplePipelineTrigger.description'
-    name: description
+    summary: List of tags that can be used for describing the trigger.
+    fullName: annotations
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'annotations?: any[]'
+      return:
+        type: 'any[]'
+        description: ''
+  - name: description
+    uid: '@azure/arm-datafactory.MultiplePipelineTrigger.description'
+    package: '@azure/arm-datafactory'
+    summary: Trigger description.
     fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: pipelines
+    uid: '@azure/arm-datafactory.MultiplePipelineTrigger.pipelines'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.MultiplePipelineTrigger.pipelines'
-    name: pipelines
+    summary: Pipelines that need to be started.
     fullName: pipelines
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'pipelines?: TriggerPipelineReference[]'
       return:
-        type:
-          - '@azure/arm-datafactory.TriggerPipelineReference[]'
+        type: '<xref uid="@azure/arm-datafactory.TriggerPipelineReference" />[]'
+        description: ''
+  - name: runtimeState
+    uid: '@azure/arm-datafactory.MultiplePipelineTrigger.runtimeState'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.MultiplePipelineTrigger.runtimeState'
-    name: runtimeState
+    summary: >-
+      Indicates if trigger is running or not. Updated when Start/Stop APIs are
+      called on the
+
+      Trigger. Possible values include: 'Started', 'Stopped', 'Disabled'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: runtimeState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'runtimeState?: TriggerRuntimeState'
       return:
-        type:
-          - '@azure/arm-datafactory.TriggerRuntimeState'
+        type: <xref uid="@azure/arm-datafactory.TriggerRuntimeState" />
+        description: ''
+  - name: type
+    uid: '@azure/arm-datafactory.MultiplePipelineTrigger.type'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.MultiplePipelineTrigger.type'
-    name: type
+    summary: Polymorphic Discriminator
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: "MultiplePipelineTrigger"'
       return:
-        type:
-          - '"MultiplePipelineTrigger"'
-    package: '@azure/arm-datafactory'
-references:
-  - uid: '@azure/arm-datafactory.TriggerPipelineReference[]'
-    name: 'TriggerPipelineReference[]'
-    spec.typeScript:
-      - name: TriggerPipelineReference
-        fullName: TriggerPipelineReference
-        uid: '@azure/arm-datafactory.TriggerPipelineReference'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-datafactory.TriggerRuntimeState'
-    name: TriggerRuntimeState
-    spec.typeScript:
-      - name: TriggerRuntimeState
-        fullName: TriggerRuntimeState
-        uid: '@azure/arm-datafactory.TriggerRuntimeState'
+        type: '"MultiplePipelineTrigger"'
+        description: ''

@@ -1,130 +1,166 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-frontdoor.Backend'
-    name: Backend
-    fullName: Backend
-    children:
-      - '@azure/arm-frontdoor.Backend.address'
-      - '@azure/arm-frontdoor.Backend.backendHostHeader'
-      - '@azure/arm-frontdoor.Backend.enabledState'
-      - '@azure/arm-frontdoor.Backend.httpPort'
-      - '@azure/arm-frontdoor.Backend.httpsPort'
-      - '@azure/arm-frontdoor.Backend.priority'
-      - '@azure/arm-frontdoor.Backend.weight'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: Backend
+uid: '@azure/arm-frontdoor.Backend'
+package: '@azure/arm-frontdoor'
+summary: Backend address of a frontDoor load balancer.
+fullName: Backend
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: address
+    uid: '@azure/arm-frontdoor.Backend.address'
     package: '@azure/arm-frontdoor'
-  - uid: '@azure/arm-frontdoor.Backend.address'
-    name: address
+    summary: Location of the backend (IP address or FQDN)
     fullName: address
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'address?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: backendHostHeader
+    uid: '@azure/arm-frontdoor.Backend.backendHostHeader'
     package: '@azure/arm-frontdoor'
-  - uid: '@azure/arm-frontdoor.Backend.backendHostHeader'
-    name: backendHostHeader
+    summary: >-
+      The value to use as the host header sent to the backend. If blank or
+      unspecified, this
+
+      defaults to the incoming host.
     fullName: backendHostHeader
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backendHostHeader?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: enabledState
+    uid: '@azure/arm-frontdoor.Backend.enabledState'
     package: '@azure/arm-frontdoor'
-  - uid: '@azure/arm-frontdoor.Backend.enabledState'
-    name: enabledState
+    summary: >-
+      Whether to enable use of this backend. Permitted values are 'Enabled' or
+      'Disabled'. Possible
+
+      values include: 'Enabled', 'Disabled'
     fullName: enabledState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'enabledState?: FrontDoorEnabledState'
+      content: 'enabledState?: BackendEnabledState'
       return:
-        type:
-          - '@azure/arm-frontdoor.FrontDoorEnabledState'
+        type: <xref uid="@azure/arm-frontdoor.BackendEnabledState" />
+        description: ''
+  - name: httpPort
+    uid: '@azure/arm-frontdoor.Backend.httpPort'
     package: '@azure/arm-frontdoor'
-  - uid: '@azure/arm-frontdoor.Backend.httpPort'
-    name: httpPort
+    summary: The HTTP TCP port number. Must be between 1 and 65535.
     fullName: httpPort
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'httpPort?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: httpsPort
+    uid: '@azure/arm-frontdoor.Backend.httpsPort'
     package: '@azure/arm-frontdoor'
-  - uid: '@azure/arm-frontdoor.Backend.httpsPort'
-    name: httpsPort
+    summary: The HTTPS TCP port number. Must be between 1 and 65535.
     fullName: httpsPort
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'httpsPort?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: priority
+    uid: '@azure/arm-frontdoor.Backend.priority'
     package: '@azure/arm-frontdoor'
-  - uid: '@azure/arm-frontdoor.Backend.priority'
-    name: priority
+    summary: >-
+      Priority to use for load balancing. Higher priorities will not be used for
+      load balancing if
+
+      any lower priority backend is healthy.
     fullName: priority
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'priority?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: privateEndpointStatus
+    uid: '@azure/arm-frontdoor.Backend.privateEndpointStatus'
     package: '@azure/arm-frontdoor'
-  - uid: '@azure/arm-frontdoor.Backend.weight'
-    name: weight
+    summary: >-
+      The Approval status for the connection to the Private Link. Possible
+      values include:
+
+      'Pending', 'Approved', 'Rejected', 'Disconnected', 'Timeout'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: privateEndpointStatus
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'privateEndpointStatus?: PrivateEndpointStatus'
+      return:
+        type: <xref uid="@azure/arm-frontdoor.PrivateEndpointStatus" />
+        description: ''
+  - name: privateLinkAlias
+    uid: '@azure/arm-frontdoor.Backend.privateLinkAlias'
+    package: '@azure/arm-frontdoor'
+    summary: >-
+      The Alias of the Private Link resource. Populating this optional field
+      indicates that this
+
+      backend is 'Private'
+    fullName: privateLinkAlias
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'privateLinkAlias?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: privateLinkApprovalMessage
+    uid: '@azure/arm-frontdoor.Backend.privateLinkApprovalMessage'
+    package: '@azure/arm-frontdoor'
+    summary: >-
+      A custom message to be included in the approval request to connect to the
+      Private Link
+    fullName: privateLinkApprovalMessage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'privateLinkApprovalMessage?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: weight
+    uid: '@azure/arm-frontdoor.Backend.weight'
+    package: '@azure/arm-frontdoor'
+    summary: Weight of this endpoint for load balancing purposes.
     fullName: weight
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'weight?: undefined | number'
       return:
-        type:
-          - undefined | number
-    package: '@azure/arm-frontdoor'
-references:
-  - uid: '@azure/arm-frontdoor.FrontDoorEnabledState'
-    name: FrontDoorEnabledState
-    spec.typeScript:
-      - name: FrontDoorEnabledState
-        fullName: FrontDoorEnabledState
-        uid: '@azure/arm-frontdoor.FrontDoorEnabledState'
+        type: undefined | number
+        description: ''

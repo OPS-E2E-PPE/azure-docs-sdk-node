@@ -1,64 +1,53 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureVMResourceFeatureSupportRequest'
-    name: AzureVMResourceFeatureSupportRequest
-    fullName: AzureVMResourceFeatureSupportRequest
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVMResourceFeatureSupportRequest.featureType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVMResourceFeatureSupportRequest.vmSize
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVMResourceFeatureSupportRequest.vmSku
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureVMResourceFeatureSupportRequest
+uid: '@azure/arm-recoveryservicesbackup.AzureVMResourceFeatureSupportRequest'
+package: '@azure/arm-recoveryservicesbackup'
+summary: AzureResource(IaaS VM) Specific feature support request
+fullName: AzureVMResourceFeatureSupportRequest
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: featureType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVMResourceFeatureSupportRequest.featureType
-    name: featureType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: featureType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'featureType: "AzureVMResourceBackup"'
       return:
-        type:
-          - '"AzureVMResourceBackup"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"AzureVMResourceBackup"'
+        description: ''
+  - name: vmSize
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVMResourceFeatureSupportRequest.vmSize
-    name: vmSize
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: 'Size of the resource: VM size(A/D series etc) in case of IaasVM'
     fullName: vmSize
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'vmSize?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: vmSku
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVMResourceFeatureSupportRequest.vmSku
-    name: vmSku
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: SKUs (Premium/Managed etc) in case of IaasVM
     fullName: vmSku
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'vmSku?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
+        type: undefined | string
+        description: ''

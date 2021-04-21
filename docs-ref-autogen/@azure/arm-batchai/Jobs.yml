@@ -1,51 +1,38 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-batchai.Jobs'
-    name: Jobs
-    fullName: Jobs
-    children:
-      - '@azure/arm-batchai.Jobs.beginCreate'
-      - '@azure/arm-batchai.Jobs.beginDeleteMethod'
-      - '@azure/arm-batchai.Jobs.beginTerminate'
-      - '@azure/arm-batchai.Jobs.create'
-      - '@azure/arm-batchai.Jobs.deleteMethod'
-      - '@azure/arm-batchai.Jobs.get'
-      - '@azure/arm-batchai.Jobs.get_2'
-      - '@azure/arm-batchai.Jobs.get_1'
-      - '@azure/arm-batchai.Jobs.constructor'
-      - '@azure/arm-batchai.Jobs.listByExperiment_2'
-      - '@azure/arm-batchai.Jobs.listByExperiment'
-      - '@azure/arm-batchai.Jobs.listByExperiment_1'
-      - '@azure/arm-batchai.Jobs.listByExperimentNext'
-      - '@azure/arm-batchai.Jobs.listByExperimentNext_2'
-      - '@azure/arm-batchai.Jobs.listByExperimentNext_1'
-      - '@azure/arm-batchai.Jobs.listOutputFiles'
-      - '@azure/arm-batchai.Jobs.listOutputFiles_2'
-      - '@azure/arm-batchai.Jobs.listOutputFiles_1'
-      - '@azure/arm-batchai.Jobs.listOutputFilesNext'
-      - '@azure/arm-batchai.Jobs.listOutputFilesNext_2'
-      - '@azure/arm-batchai.Jobs.listOutputFilesNext_1'
-      - '@azure/arm-batchai.Jobs.listRemoteLoginInformation'
-      - '@azure/arm-batchai.Jobs.listRemoteLoginInformation_2'
-      - '@azure/arm-batchai.Jobs.listRemoteLoginInformation_1'
-      - '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext'
-      - '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_2'
-      - '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_1'
-      - '@azure/arm-batchai.Jobs.terminate'
-    langs:
-      - typeScript
-    type: class
-    summary: Class representing a Jobs.
+### YamlMime:TSType
+name: Jobs
+uid: '@azure/arm-batchai.Jobs'
+package: '@azure/arm-batchai'
+summary: Class representing a Jobs.
+fullName: Jobs
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: Jobs(BatchAIManagementClientContext)
+    uid: '@azure/arm-batchai.Jobs.constructor'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.beginCreate'
-    name: >-
+    summary: Create a Jobs.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new Jobs(client: BatchAIManagementClientContext)'
+      parameters:
+        - id: client
+          type: <xref uid="@azure/arm-batchai.BatchAIManagementClientContext" />
+          description: |
+            Reference to the service client.
+methods:
+  - name: >-
       beginCreate(string, string, string, string, JobCreateParameters,
       msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.beginCreate'
+    package: '@azure/arm-batchai'
     summary: Creates a Job in the given Experiment.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function beginCreate(resourceGroupName: string, workspaceName: string,
@@ -53,12 +40,10 @@ items:
         JobCreateParameters, options?: msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -68,8 +53,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -78,8 +62,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -89,27 +72,23 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: parameters
-          type:
-            - '@azure/arm-batchai.JobCreateParameters'
+          type: <xref uid="@azure/arm-batchai.JobCreateParameters" />
           description: The parameters to provide for job creation.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<LROPoller>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.beginDeleteMethod'
-    name: >-
+        type: Promise&lt;LROPoller&gt;
+        description: Promise<msRestAzure.LROPoller>
+  - name: >-
       beginDeleteMethod(string, string, string, string,
       msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.beginDeleteMethod'
+    package: '@azure/arm-batchai'
     summary: Deletes a Job.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function beginDeleteMethod(resourceGroupName: string, workspaceName:
@@ -117,12 +96,10 @@ items:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -132,8 +109,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -142,8 +118,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -153,21 +128,18 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<LROPoller>
+        type: Promise&lt;LROPoller&gt;
+        description: Promise<msRestAzure.LROPoller>
+  - name: 'beginTerminate(string, string, string, string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-batchai.Jobs.beginTerminate'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.beginTerminate'
-    name: 'beginTerminate(string, string, string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Terminates a job.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function beginTerminate(resourceGroupName: string, workspaceName:
@@ -175,12 +147,10 @@ items:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -190,8 +160,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -200,8 +169,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -211,23 +179,20 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<LROPoller>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.create'
-    name: >-
+        type: Promise&lt;LROPoller&gt;
+        description: Promise<msRestAzure.LROPoller>
+  - name: >-
       create(string, string, string, string, JobCreateParameters,
       msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.create'
+    package: '@azure/arm-batchai'
     summary: Creates a Job in the given Experiment.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function create(resourceGroupName: string, workspaceName: string,
@@ -235,12 +200,10 @@ items:
         JobCreateParameters, options?: msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -250,8 +213,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -260,8 +222,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -271,25 +232,21 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: parameters
-          type:
-            - '@azure/arm-batchai.JobCreateParameters'
+          type: <xref uid="@azure/arm-batchai.JobCreateParameters" />
           description: The parameters to provide for job creation.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.JobsCreateResponse>
+        type: Promise&lt;<xref uid="Models.JobsCreateResponse" />&gt;
+        description: Promise<Models.JobsCreateResponse>
+  - name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-batchai.Jobs.deleteMethod'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.deleteMethod'
-    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Deletes a Job.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function deleteMethod(resourceGroupName: string, workspaceName: string,
@@ -297,12 +254,10 @@ items:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -312,8 +267,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -322,8 +276,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -333,21 +286,18 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<RestResponse>
+        type: Promise&lt;RestResponse&gt;
+        description: Promise<msRest.RestResponse>
+  - name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-batchai.Jobs.get'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.get'
-    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets information about a Job.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function get(resourceGroupName: string, workspaceName: string,
@@ -355,12 +305,10 @@ items:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -370,8 +318,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -380,8 +327,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -391,23 +337,20 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.JobsGetResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.get_2'
-    name: >-
+        type: Promise&lt;<xref uid="Models.JobsGetResponse" />&gt;
+        description: Promise<Models.JobsGetResponse>
+  - name: >-
       get(string, string, string, string, RequestOptionsBase,
       ServiceCallback<Job>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.get_2'
+    package: '@azure/arm-batchai'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function get(resourceGroupName: string, workspaceName: string,
@@ -415,12 +358,10 @@ items:
         callback: ServiceCallback<Job>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -430,8 +371,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -440,8 +380,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -451,37 +390,29 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-batchai.Job>
+          type: ServiceCallback&lt;<xref uid="@azure/arm-batchai.Job" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsGetResponse>
+  - name: 'get(string, string, string, string, ServiceCallback<Job>)'
+    uid: '@azure/arm-batchai.Jobs.get_1'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.get_1'
-    name: 'get(string, string, string, string, ServiceCallback<Job>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function get(resourceGroupName: string, workspaceName: string,
         experimentName: string, jobName: string, callback: ServiceCallback<Job>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -491,8 +422,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -501,8 +431,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -512,39 +441,18 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-batchai.Job>
+          type: ServiceCallback&lt;<xref uid="@azure/arm-batchai.Job" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsGetResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.constructor'
-    name: Jobs(BatchAIManagementClientContext)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Create a Jobs.
-    syntax:
-      content: 'new Jobs(client: BatchAIManagementClientContext)'
-      parameters:
-        - id: client
-          type:
-            - '@azure/arm-batchai.BatchAIManagementClientContext'
-          description: |
-            Reference to the service client.
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listByExperiment_2'
-    name: >-
+  - name: >-
       listByExperiment(string, string, string,
       JobsListByExperimentOptionalParams, ServiceCallback<JobListResult>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listByExperiment_2'
+    package: '@azure/arm-batchai'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listByExperiment(resourceGroupName: string, workspaceName:
@@ -553,12 +461,10 @@ items:
         ServiceCallback<JobListResult>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -568,8 +474,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -578,27 +483,23 @@ items:
 
             from 1 through 64 characters long.
         - id: options
-          type:
-            - '@azure/arm-batchai.JobsListByExperimentOptionalParams'
+          type: <xref uid="@azure/arm-batchai.JobsListByExperimentOptionalParams" />
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-batchai.JobListResult>
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/arm-batchai.JobListResult"
+            />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListByExperimentResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listByExperiment'
-    name: >-
+  - name: >-
       listByExperiment(string, string, string,
       Models.JobsListByExperimentOptionalParams)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listByExperiment'
+    package: '@azure/arm-batchai'
     summary: Gets a list of Jobs within the specified Experiment.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listByExperiment(resourceGroupName: string, workspaceName:
@@ -606,12 +507,10 @@ items:
         Models.JobsListByExperimentOptionalParams)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -621,8 +520,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -631,21 +529,18 @@ items:
 
             from 1 through 64 characters long.
         - id: options
-          type:
-            - Models.JobsListByExperimentOptionalParams
+          type: <xref uid="Models.JobsListByExperimentOptionalParams" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.JobsListByExperimentResponse>
+        type: Promise&lt;<xref uid="Models.JobsListByExperimentResponse" />&gt;
+        description: Promise<Models.JobsListByExperimentResponse>
+  - name: 'listByExperiment(string, string, string, ServiceCallback<JobListResult>)'
+    uid: '@azure/arm-batchai.Jobs.listByExperiment_1'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listByExperiment_1'
-    name: 'listByExperiment(string, string, string, ServiceCallback<JobListResult>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listByExperiment(resourceGroupName: string, workspaceName:
@@ -653,12 +548,10 @@ items:
         ServiceCallback<JobListResult>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -668,8 +561,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -678,108 +570,92 @@ items:
 
             from 1 through 64 characters long.
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-batchai.JobListResult>
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/arm-batchai.JobListResult"
+            />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListByExperimentResponse>
+  - name: 'listByExperimentNext(string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-batchai.Jobs.listByExperimentNext'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listByExperimentNext'
-    name: 'listByExperimentNext(string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets a list of Jobs within the specified Experiment.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listByExperimentNext(nextPageLink: string, options?:
         msRest.RequestOptionsBase)
       parameters:
         - id: nextPageLink
-          type:
-            - string
+          type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.JobsListByExperimentNextResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listByExperimentNext_2'
-    name: >-
+        type: Promise&lt;<xref uid="Models.JobsListByExperimentNextResponse" />&gt;
+        description: Promise<Models.JobsListByExperimentNextResponse>
+  - name: >-
       listByExperimentNext(string, RequestOptionsBase,
       ServiceCallback<JobListResult>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listByExperimentNext_2'
+    package: '@azure/arm-batchai'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listByExperimentNext(nextPageLink: string, options:
         RequestOptionsBase, callback: ServiceCallback<JobListResult>)
       parameters:
         - id: nextPageLink
-          type:
-            - string
+          type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-batchai.JobListResult>
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/arm-batchai.JobListResult"
+            />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListByExperimentNextResponse>
+  - name: 'listByExperimentNext(string, ServiceCallback<JobListResult>)'
+    uid: '@azure/arm-batchai.Jobs.listByExperimentNext_1'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listByExperimentNext_1'
-    name: 'listByExperimentNext(string, ServiceCallback<JobListResult>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listByExperimentNext(nextPageLink: string, callback:
         ServiceCallback<JobListResult>)
       parameters:
         - id: nextPageLink
-          type:
-            - string
+          type: string
           description: The NextLink from the previous successful call to List operation.
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-batchai.JobListResult>
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/arm-batchai.JobListResult"
+            />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListByExperimentNextResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listOutputFiles'
-    name: >-
+  - name: >-
       listOutputFiles(string, string, string, string,
       JobsListOutputFilesOptions, msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listOutputFiles'
+    package: '@azure/arm-batchai'
     summary: >-
       List all directories and files inside the given directory of the Job's
       output directory (if the
 
       output directory is on Azure File Share or Azure Storage Container).
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listOutputFiles(resourceGroupName: string, workspaceName:
@@ -788,12 +664,10 @@ items:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -803,8 +677,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -813,8 +686,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -824,28 +696,24 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: jobsListOutputFilesOptions
-          type:
-            - '@azure/arm-batchai.JobsListOutputFilesOptions'
+          type: <xref uid="@azure/arm-batchai.JobsListOutputFilesOptions" />
           description: Additional parameters for the operation
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.JobsListOutputFilesResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listOutputFiles_2'
-    name: >-
+        type: Promise&lt;<xref uid="Models.JobsListOutputFilesResponse" />&gt;
+        description: Promise<Models.JobsListOutputFilesResponse>
+  - name: >-
       listOutputFiles(string, string, string, string,
       JobsListOutputFilesOptions, RequestOptionsBase,
       ServiceCallback<FileListResult>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listOutputFiles_2'
+    package: '@azure/arm-batchai'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listOutputFiles(resourceGroupName: string, workspaceName:
@@ -854,12 +722,10 @@ items:
         RequestOptionsBase, callback: ServiceCallback<FileListResult>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -869,8 +735,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -879,8 +744,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -890,31 +754,26 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: jobsListOutputFilesOptions
-          type:
-            - '@azure/arm-batchai.JobsListOutputFilesOptions'
+          type: <xref uid="@azure/arm-batchai.JobsListOutputFilesOptions" />
           description: Additional parameters for the operation
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-batchai.FileListResult>
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/arm-batchai.FileListResult"
+            />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListOutputFilesResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listOutputFiles_1'
-    name: >-
+  - name: >-
       listOutputFiles(string, string, string, string,
       JobsListOutputFilesOptions, ServiceCallback<FileListResult>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listOutputFiles_1'
+    package: '@azure/arm-batchai'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listOutputFiles(resourceGroupName: string, workspaceName:
@@ -923,12 +782,10 @@ items:
         ServiceCallback<FileListResult>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -938,8 +795,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -948,8 +804,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -959,116 +814,99 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: jobsListOutputFilesOptions
-          type:
-            - '@azure/arm-batchai.JobsListOutputFilesOptions'
+          type: <xref uid="@azure/arm-batchai.JobsListOutputFilesOptions" />
           description: Additional parameters for the operation
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-batchai.FileListResult>
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/arm-batchai.FileListResult"
+            />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListOutputFilesResponse>
+  - name: 'listOutputFilesNext(string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-batchai.Jobs.listOutputFilesNext'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listOutputFilesNext'
-    name: 'listOutputFilesNext(string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       List all directories and files inside the given directory of the Job's
       output directory (if the
 
       output directory is on Azure File Share or Azure Storage Container).
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listOutputFilesNext(nextPageLink: string, options?:
         msRest.RequestOptionsBase)
       parameters:
         - id: nextPageLink
-          type:
-            - string
+          type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.JobsListOutputFilesNextResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listOutputFilesNext_2'
-    name: >-
+        type: Promise&lt;<xref uid="Models.JobsListOutputFilesNextResponse" />&gt;
+        description: Promise<Models.JobsListOutputFilesNextResponse>
+  - name: >-
       listOutputFilesNext(string, RequestOptionsBase,
       ServiceCallback<FileListResult>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listOutputFilesNext_2'
+    package: '@azure/arm-batchai'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listOutputFilesNext(nextPageLink: string, options:
         RequestOptionsBase, callback: ServiceCallback<FileListResult>)
       parameters:
         - id: nextPageLink
-          type:
-            - string
+          type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-batchai.FileListResult>
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/arm-batchai.FileListResult"
+            />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListOutputFilesNextResponse>
+  - name: 'listOutputFilesNext(string, ServiceCallback<FileListResult>)'
+    uid: '@azure/arm-batchai.Jobs.listOutputFilesNext_1'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listOutputFilesNext_1'
-    name: 'listOutputFilesNext(string, ServiceCallback<FileListResult>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listOutputFilesNext(nextPageLink: string, callback:
         ServiceCallback<FileListResult>)
       parameters:
         - id: nextPageLink
-          type:
-            - string
+          type: string
           description: The NextLink from the previous successful call to List operation.
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-batchai.FileListResult>
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/arm-batchai.FileListResult"
+            />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListOutputFilesNextResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation'
-    name: >-
+  - name: >-
       listRemoteLoginInformation(string, string, string, string,
       msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation'
+    package: '@azure/arm-batchai'
     summary: >-
       Gets a list of currently existing nodes which were used for the Job
       execution. The returned
 
       information contains the node ID, its public IP and SSH port.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listRemoteLoginInformation(resourceGroupName: string,
@@ -1076,12 +914,10 @@ items:
         options?: msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -1091,8 +927,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -1101,8 +936,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -1112,23 +946,22 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.JobsListRemoteLoginInformationResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation_2'
-    name: >-
+        type: >-
+          Promise&lt;<xref uid="Models.JobsListRemoteLoginInformationResponse"
+          />&gt;
+        description: Promise<Models.JobsListRemoteLoginInformationResponse>
+  - name: >-
       listRemoteLoginInformation(string, string, string, string,
       RequestOptionsBase, ServiceCallback<RemoteLoginInformationListResult>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation_2'
+    package: '@azure/arm-batchai'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listRemoteLoginInformation(resourceGroupName: string,
@@ -1137,12 +970,10 @@ items:
         ServiceCallback<RemoteLoginInformationListResult>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -1152,8 +983,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -1162,8 +992,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -1173,28 +1002,23 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - >-
-              ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.RemoteLoginInformationListResult" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListRemoteLoginInformationResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation_1'
-    name: >-
+  - name: >-
       listRemoteLoginInformation(string, string, string, string,
       ServiceCallback<RemoteLoginInformationListResult>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation_1'
+    package: '@azure/arm-batchai'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listRemoteLoginInformation(resourceGroupName: string,
@@ -1202,12 +1026,10 @@ items:
         callback: ServiceCallback<RemoteLoginInformationListResult>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -1217,8 +1039,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -1227,8 +1048,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -1238,53 +1058,47 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: callback
-          type:
-            - >-
-              ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.RemoteLoginInformationListResult" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListRemoteLoginInformationResponse>
+  - name: 'listRemoteLoginInformationNext(string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext'
-    name: 'listRemoteLoginInformationNext(string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Gets a list of currently existing nodes which were used for the Job
       execution. The returned
 
       information contains the node ID, its public IP and SSH port.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listRemoteLoginInformationNext(nextPageLink: string, options?:
         msRest.RequestOptionsBase)
       parameters:
         - id: nextPageLink
-          type:
-            - string
+          type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.JobsListRemoteLoginInformationNextResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_2'
-    name: >-
+        type: >-
+          Promise&lt;<xref
+          uid="Models.JobsListRemoteLoginInformationNextResponse" />&gt;
+        description: Promise<Models.JobsListRemoteLoginInformationNextResponse>
+  - name: >-
       listRemoteLoginInformationNext(string, RequestOptionsBase,
       ServiceCallback<RemoteLoginInformationListResult>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_2'
+    package: '@azure/arm-batchai'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listRemoteLoginInformationNext(nextPageLink: string, options:
@@ -1292,58 +1106,47 @@ items:
         ServiceCallback<RemoteLoginInformationListResult>)
       parameters:
         - id: nextPageLink
-          type:
-            - string
+          type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - >-
-              ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.RemoteLoginInformationListResult" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListRemoteLoginInformationNextResponse>
-    package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_1'
-    name: >-
+  - name: >-
       listRemoteLoginInformationNext(string,
       ServiceCallback<RemoteLoginInformationListResult>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_1'
+    package: '@azure/arm-batchai'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listRemoteLoginInformationNext(nextPageLink: string, callback:
         ServiceCallback<RemoteLoginInformationListResult>)
       parameters:
         - id: nextPageLink
-          type:
-            - string
+          type: string
           description: The NextLink from the previous successful call to List operation.
         - id: callback
-          type:
-            - >-
-              ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.RemoteLoginInformationListResult" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.JobsListRemoteLoginInformationNextResponse>
+  - name: 'terminate(string, string, string, string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-batchai.Jobs.terminate'
     package: '@azure/arm-batchai'
-  - uid: '@azure/arm-batchai.Jobs.terminate'
-    name: 'terminate(string, string, string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Terminates a job.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function terminate(resourceGroupName: string, workspaceName: string,
@@ -1351,12 +1154,10 @@ items:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: Name of the resource group to which the resource belongs.
         - id: workspaceName
-          type:
-            - string
+          type: string
           description: >-
             The name of the workspace. Workspace names can only contain a
             combination
@@ -1366,8 +1167,7 @@ items:
 
             through 64 characters long.
         - id: experimentName
-          type:
-            - string
+          type: string
           description: >-
             The name of the experiment. Experiment names can only contain a
 
@@ -1376,8 +1176,7 @@ items:
 
             from 1 through 64 characters long.
         - id: jobName
-          type:
-            - string
+          type: string
           description: >-
             The name of the job within the specified resource group. Job names
             can only
@@ -1387,76 +1186,8 @@ items:
 
             name must be from 1 through 64 characters long.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<RestResponse>
-    package: '@azure/arm-batchai'
-references:
-  - uid: '@azure/arm-batchai.BatchAIManagementClientContext'
-    name: BatchAIManagementClientContext
-    spec.typeScript:
-      - name: BatchAIManagementClientContext
-        fullName: BatchAIManagementClientContext
-        uid: '@azure/arm-batchai.BatchAIManagementClientContext'
-  - uid: '@azure/arm-batchai.JobCreateParameters'
-    name: JobCreateParameters
-    spec.typeScript:
-      - name: JobCreateParameters
-        fullName: JobCreateParameters
-        uid: '@azure/arm-batchai.JobCreateParameters'
-  - uid: ServiceCallback<@azure/arm-batchai.Job>
-    name: Job>
-    spec.typeScript:
-      - name: ServiceCallback<
-        fullName: ServiceCallback<
-      - name: Job
-        fullName: Job
-        uid: '@azure/arm-batchai.Job'
-      - name: '>'
-        fullName: '>'
-  - uid: ServiceCallback<@azure/arm-batchai.JobListResult>
-    name: JobListResult>
-    spec.typeScript:
-      - name: ServiceCallback<
-        fullName: ServiceCallback<
-      - name: JobListResult
-        fullName: JobListResult
-        uid: '@azure/arm-batchai.JobListResult'
-      - name: '>'
-        fullName: '>'
-  - uid: '@azure/arm-batchai.JobsListByExperimentOptionalParams'
-    name: JobsListByExperimentOptionalParams
-    spec.typeScript:
-      - name: JobsListByExperimentOptionalParams
-        fullName: JobsListByExperimentOptionalParams
-        uid: '@azure/arm-batchai.JobsListByExperimentOptionalParams'
-  - uid: '@azure/arm-batchai.JobsListOutputFilesOptions'
-    name: JobsListOutputFilesOptions
-    spec.typeScript:
-      - name: JobsListOutputFilesOptions
-        fullName: JobsListOutputFilesOptions
-        uid: '@azure/arm-batchai.JobsListOutputFilesOptions'
-  - uid: ServiceCallback<@azure/arm-batchai.FileListResult>
-    name: FileListResult>
-    spec.typeScript:
-      - name: ServiceCallback<
-        fullName: ServiceCallback<
-      - name: FileListResult
-        fullName: FileListResult
-        uid: '@azure/arm-batchai.FileListResult'
-      - name: '>'
-        fullName: '>'
-  - uid: ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
-    name: RemoteLoginInformationListResult>
-    spec.typeScript:
-      - name: ServiceCallback<
-        fullName: ServiceCallback<
-      - name: RemoteLoginInformationListResult
-        fullName: RemoteLoginInformationListResult
-        uid: '@azure/arm-batchai.RemoteLoginInformationListResult'
-      - name: '>'
-        fullName: '>'
+        type: Promise&lt;RestResponse&gt;
+        description: Promise<msRest.RestResponse>

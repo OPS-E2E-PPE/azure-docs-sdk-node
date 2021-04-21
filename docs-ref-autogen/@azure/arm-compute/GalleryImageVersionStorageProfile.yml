@@ -1,64 +1,50 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-compute.GalleryImageVersionStorageProfile'
-    name: GalleryImageVersionStorageProfile
-    fullName: GalleryImageVersionStorageProfile
-    children:
-      - '@azure/arm-compute.GalleryImageVersionStorageProfile.dataDiskImages'
-      - '@azure/arm-compute.GalleryImageVersionStorageProfile.osDiskImage'
-    langs:
-      - typeScript
-    type: interface
-    summary: This is the storage profile of a gallery Image Version.
+### YamlMime:TSType
+name: GalleryImageVersionStorageProfile
+uid: '@azure/arm-compute.GalleryImageVersionStorageProfile'
+package: '@azure/arm-compute'
+summary: This is the storage profile of a Gallery Image Version.
+fullName: GalleryImageVersionStorageProfile
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: dataDiskImages
+    uid: '@azure/arm-compute.GalleryImageVersionStorageProfile.dataDiskImages'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.GalleryImageVersionStorageProfile.dataDiskImages'
-    name: dataDiskImages
+    summary: A list of data disk images.
     fullName: dataDiskImages
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      A list of data disk images.
-
-      **NOTE: This property will not be serialized. It can only be populated by
-      the server.**
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'dataDiskImages?: GalleryDataDiskImage[]'
       return:
-        type:
-          - '@azure/arm-compute.GalleryDataDiskImage[]'
+        type: '<xref uid="@azure/arm-compute.GalleryDataDiskImage" />[]'
+        description: ''
+  - name: osDiskImage
+    uid: '@azure/arm-compute.GalleryImageVersionStorageProfile.osDiskImage'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.GalleryImageVersionStorageProfile.osDiskImage'
-    name: osDiskImage
+    summary: ''
     fullName: osDiskImage
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      **NOTE: This property will not be serialized. It can only be populated by
-      the server.**
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'osDiskImage?: GalleryOSDiskImage'
       return:
-        type:
-          - '@azure/arm-compute.GalleryOSDiskImage'
+        type: <xref uid="@azure/arm-compute.GalleryOSDiskImage" />
+        description: ''
+  - name: source
+    uid: '@azure/arm-compute.GalleryImageVersionStorageProfile.source'
     package: '@azure/arm-compute'
-references:
-  - uid: '@azure/arm-compute.GalleryDataDiskImage[]'
-    name: 'GalleryDataDiskImage[]'
-    spec.typeScript:
-      - name: GalleryDataDiskImage
-        fullName: GalleryDataDiskImage
-        uid: '@azure/arm-compute.GalleryDataDiskImage'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-compute.GalleryOSDiskImage'
-    name: GalleryOSDiskImage
-    spec.typeScript:
-      - name: GalleryOSDiskImage
-        fullName: GalleryOSDiskImage
-        uid: '@azure/arm-compute.GalleryOSDiskImage'
+    summary: ''
+    fullName: source
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'source?: GalleryArtifactVersionSource'
+      return:
+        type: <xref uid="@azure/arm-compute.GalleryArtifactVersionSource" />
+        description: ''

@@ -1,89 +1,84 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-servicemap.MachineListMapRequest'
-    name: MachineListMapRequest
-    fullName: MachineListMapRequest
-    children:
-      - '@azure/arm-servicemap.MachineListMapRequest.endTime'
-      - '@azure/arm-servicemap.MachineListMapRequest.filterProcesses'
-      - '@azure/arm-servicemap.MachineListMapRequest.kind'
-      - '@azure/arm-servicemap.MachineListMapRequest.machineIds'
-      - '@azure/arm-servicemap.MachineListMapRequest.startTime'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: MachineListMapRequest
+uid: '@azure/arm-servicemap.MachineListMapRequest'
+package: '@azure/arm-servicemap'
+summary: >-
+  Specifies the computation of a one hope dependency map for a list of machines.
+  The resulting map
+
+  includes all direct dependencies for the specified machines.
+fullName: MachineListMapRequest
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: endTime
+    uid: '@azure/arm-servicemap.MachineListMapRequest.endTime'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.MachineListMapRequest.endTime'
-    name: endTime
+    summary: Map interval end time.
     fullName: endTime
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'endTime?: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: filterProcesses
+    uid: '@azure/arm-servicemap.MachineListMapRequest.filterProcesses'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.MachineListMapRequest.filterProcesses'
-    name: filterProcesses
+    summary: >-
+      If true, only processes between specified machines will be included. Any
+      connections in or out
+
+      of those processes will be included.
     fullName: filterProcesses
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'filterProcesses?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
+        type: undefined | false | true
+        description: ''
+  - name: kind
+    uid: '@azure/arm-servicemap.MachineListMapRequest.kind'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.MachineListMapRequest.kind'
-    name: kind
+    summary: Polymorphic Discriminator
     fullName: kind
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'kind: "map:machine-list-dependency"'
       return:
-        type:
-          - '"map:machine-list-dependency"'
+        type: '"map:machine-list-dependency"'
+        description: ''
+  - name: machineIds
+    uid: '@azure/arm-servicemap.MachineListMapRequest.machineIds'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.MachineListMapRequest.machineIds'
-    name: machineIds
+    summary: a list of URIs of machine resources for which to generate the map.
     fullName: machineIds
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'machineIds: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: startTime
+    uid: '@azure/arm-servicemap.MachineListMapRequest.startTime'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.MachineListMapRequest.startTime'
-    name: startTime
+    summary: Map interval start time.
     fullName: startTime
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'startTime?: Date'
       return:
-        type:
-          - Date
-    package: '@azure/arm-servicemap'
+        type: Date
+        description: ''

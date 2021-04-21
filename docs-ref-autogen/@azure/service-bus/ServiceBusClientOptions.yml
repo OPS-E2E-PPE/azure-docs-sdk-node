@@ -1,76 +1,72 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/service-bus.ServiceBusClientOptions'
-    name: ServiceBusClientOptions
-    fullName: ServiceBusClientOptions
-    children:
-      - '@azure/service-bus.ServiceBusClientOptions.dataTransformer'
-      - '@azure/service-bus.ServiceBusClientOptions.webSocket'
-      - '@azure/service-bus.ServiceBusClientOptions.webSocketConstructorOptions'
-    langs:
-      - typeScript
-    type: interface
+### YamlMime:TSType
+name: ServiceBusClientOptions
+uid: '@azure/service-bus.ServiceBusClientOptions'
+package: '@azure/service-bus'
+summary: >
+  Describes the options that can be provided while creating the
+  ServiceBusClient.
+
+  - `webSocketOptions` : Options to configure the channelling of the AMQP
+  connection over Web Sockets.
+     - `websocket`     : The WebSocket constructor used to create an AMQP connection if you choose to make the connection
+  over a WebSocket.
+     - `webSocketConstructorOptions` : Options to pass to the Websocket constructor when you choose to make the connection
+  over a WebSocket.
+
+  - `retryOptions`     : The retry options for all the operations on the client.
+     - `maxRetries` : The number of times the operation can be retried in case of a retryable error.
+     - `maxRetryDelayInMs`: The maximum delay between retries. Applicable only when performing exponential retries.
+     - `mode`: Which retry mode to apply, specified by the `RetryMode` enum. Options are `Exponential` and `Fixed`. Defaults to `Fixed`.
+     - `retryDelayInMs`: Amount of time to wait in milliseconds before making the next attempt. When `mode` is set to `Exponential`,
+        this is used to compute the exponentially increasing delays between retries. Default: 30000 milliseconds.
+     - `timeoutInMs`: Amount of time in milliseconds to wait before the operation times out. This will trigger a retry if there are any
+        retry attempts remaining. Minimum value: 60000 milliseconds.
+fullName: ServiceBusClientOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: retryOptions
+    uid: '@azure/service-bus.ServiceBusClientOptions.retryOptions'
+    package: '@azure/service-bus'
     summary: >-
-      Describes the options that can be provided while creating the
-      ServiceBusClient.
+      Retry policy options that determine the mode, number of retries, retry
+      interval etc.
+    fullName: retryOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'retryOptions?: RetryOptions'
+      return:
+        type: RetryOptions
+        description: ''
+  - name: userAgentOptions
+    uid: '@azure/service-bus.ServiceBusClientOptions.userAgentOptions'
     package: '@azure/service-bus'
-  - uid: '@azure/service-bus.ServiceBusClientOptions.dataTransformer'
-    name: dataTransformer
-    fullName: dataTransformer
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Options for adding user agent details to outgoing requests.
+    fullName: userAgentOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'userAgentOptions?: UserAgentOptions'
+      return:
+        type: UserAgentOptions
+        description: ''
+  - name: webSocketOptions
+    uid: '@azure/service-bus.ServiceBusClientOptions.webSocketOptions'
+    package: '@azure/service-bus'
     summary: >-
-      The data transformer that will be used to encode
-
-      and decode the sent and received messages respectively. If not provided
-      then we will use the
-
-      DefaultDataTransformer. The default transformer should handle majority of
-      the cases. This
-
-      option needs to be used only for specialized scenarios.
-    optional: true
+      Options to configure the channelling of the AMQP connection over Web
+      Sockets.
+    fullName: webSocketOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'dataTransformer?: DataTransformer'
+      content: 'webSocketOptions?: WebSocketOptions'
       return:
-        type:
-          - DataTransformer
-    package: '@azure/service-bus'
-  - uid: '@azure/service-bus.ServiceBusClientOptions.webSocket'
-    name: webSocket
-    fullName: webSocket
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The WebSocket constructor used to create an AMQP connection
-
-      over a WebSocket. In browsers, the built-in WebSocket will be  used by
-      default. In Node, a
-
-      TCP socket will be used if a WebSocket constructor is not provided.
-    optional: true
-    syntax:
-      content: 'webSocket?: WebSocketImpl'
-      return:
-        type:
-          - WebSocketImpl
-    package: '@azure/service-bus'
-  - uid: '@azure/service-bus.ServiceBusClientOptions.webSocketConstructorOptions'
-    name: webSocketConstructorOptions
-    fullName: webSocketConstructorOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Options to be passed to the WebSocket constructor
-    optional: true
-    syntax:
-      content: 'webSocketConstructorOptions?: any'
-      return:
-        type:
-          - any
-    package: '@azure/service-bus'
+        type: WebSocketOptions
+        description: ''

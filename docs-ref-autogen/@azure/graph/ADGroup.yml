@@ -1,138 +1,127 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/graph.ADGroup'
-    name: ADGroup
-    fullName: ADGroup
-    children:
-      - '@azure/graph.ADGroup.deletionTimestamp'
-      - '@azure/graph.ADGroup.displayName'
-      - '@azure/graph.ADGroup.mail'
-      - '@azure/graph.ADGroup.mailEnabled'
-      - '@azure/graph.ADGroup.mailNickname'
-      - '@azure/graph.ADGroup.objectId'
-      - '@azure/graph.ADGroup.objectType'
-      - '@azure/graph.ADGroup.securityEnabled'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: ADGroup
+uid: '@azure/graph.ADGroup'
+package: '@azure/graph'
+summary: Active Directory group information.
+fullName: ADGroup
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: deletionTimestamp
+    uid: '@azure/graph.ADGroup.deletionTimestamp'
     package: '@azure/graph'
-  - uid: '@azure/graph.ADGroup.deletionTimestamp'
-    name: deletionTimestamp
+    summary: >-
+      The time at which the directory object was deleted.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: deletionTimestamp
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deletionTimestamp?: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: displayName
+    uid: '@azure/graph.ADGroup.displayName'
     package: '@azure/graph'
-  - uid: '@azure/graph.ADGroup.displayName'
-    name: displayName
+    summary: The display name of the group.
     fullName: displayName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'displayName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: mail
+    uid: '@azure/graph.ADGroup.mail'
     package: '@azure/graph'
-  - uid: '@azure/graph.ADGroup.mail'
-    name: mail
+    summary: The primary email address of the group.
     fullName: mail
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'mail?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: mailEnabled
+    uid: '@azure/graph.ADGroup.mailEnabled'
     package: '@azure/graph'
-  - uid: '@azure/graph.ADGroup.mailEnabled'
-    name: mailEnabled
+    summary: >-
+      Whether the group is mail-enabled. Must be false. This is because only
+      pure security groups
+
+      can be created using the Graph API.
     fullName: mailEnabled
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'mailEnabled?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
+        type: undefined | false | true
+        description: ''
+  - name: mailNickname
+    uid: '@azure/graph.ADGroup.mailNickname'
     package: '@azure/graph'
-  - uid: '@azure/graph.ADGroup.mailNickname'
-    name: mailNickname
+    summary: The mail alias for the group.
     fullName: mailNickname
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'mailNickname?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: objectId
+    uid: '@azure/graph.ADGroup.objectId'
     package: '@azure/graph'
-  - uid: '@azure/graph.ADGroup.objectId'
-    name: objectId
+    summary: >-
+      The object ID.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: objectId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'objectId?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: objectType
+    uid: '@azure/graph.ADGroup.objectType'
     package: '@azure/graph'
-  - uid: '@azure/graph.ADGroup.objectType'
-    name: objectType
+    summary: Polymorphic Discriminator
     fullName: objectType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'objectType: "Group"'
       return:
-        type:
-          - '"Group"'
+        type: '"Group"'
+        description: ''
+  - name: securityEnabled
+    uid: '@azure/graph.ADGroup.securityEnabled'
     package: '@azure/graph'
-  - uid: '@azure/graph.ADGroup.securityEnabled'
-    name: securityEnabled
+    summary: Whether the group is security-enable.
     fullName: securityEnabled
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'securityEnabled?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
-    package: '@azure/graph'
+        type: undefined | false | true
+        description: ''

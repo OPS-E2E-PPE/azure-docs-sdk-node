@@ -1,245 +1,229 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint'
-    name: IaasVMRecoveryPoint
-    fullName: IaasVMRecoveryPoint
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.isInstantIlrSessionActive
-      - >-
-        @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.isManagedVirtualMachine
-      - >-
-        @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.isSourceVMEncrypted
-      - '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.keyAndSecret'
-      - '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.objectType'
-      - >-
-        @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.originalStorageAccountOption
-      - '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.osType'
-      - >-
-        @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.recoveryPointAdditionalInfo
-      - >-
-        @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.recoveryPointTierDetails
-      - '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.recoveryPointTime'
-      - '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.recoveryPointType'
-      - >-
-        @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.sourceVMStorageType
-      - '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.virtualMachineSize'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: IaasVMRecoveryPoint
+uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint'
+package: '@azure/arm-recoveryservicesbackup'
+summary: IaaS VM workload specific backup copy.
+fullName: IaasVMRecoveryPoint
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: isInstantIlrSessionActive
+    uid: >-
       @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.isInstantIlrSessionActive
-    name: isInstantIlrSessionActive
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Is the session to recover items from this backup copy still active.
     fullName: isInstantIlrSessionActive
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isInstantIlrSessionActive?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | false | true
+        description: ''
+  - name: isManagedVirtualMachine
+    uid: >-
       @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.isManagedVirtualMachine
-    name: isManagedVirtualMachine
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Whether VM is with Managed Disks
     fullName: isManagedVirtualMachine
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isManagedVirtualMachine?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
+        type: undefined | false | true
+        description: ''
+  - name: isSourceVMEncrypted
+    uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.isSourceVMEncrypted'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.isSourceVMEncrypted'
-    name: isSourceVMEncrypted
+    summary: >-
+      Identifies whether the VM was encrypted when the backup copy is created.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: isSourceVMEncrypted
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isSourceVMEncrypted?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
+        type: undefined | false | true
+        description: ''
+  - name: keyAndSecret
+    uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.keyAndSecret'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.keyAndSecret'
-    name: keyAndSecret
+    summary: >-
+      Required details for recovering an encrypted VM. Applicable only when
+      IsSourceVMEncrypted is
+
+      true.
     fullName: keyAndSecret
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'keyAndSecret?: KeyAndSecretDetails'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.KeyAndSecretDetails'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.KeyAndSecretDetails" />
+        description: ''
+  - name: objectType
+    uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.objectType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.objectType'
-    name: objectType
+    summary: Polymorphic Discriminator
     fullName: objectType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'objectType: "IaasVMRecoveryPoint"'
       return:
-        type:
-          - '"IaasVMRecoveryPoint"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"IaasVMRecoveryPoint"'
+        description: ''
+  - name: originalStorageAccountOption
+    uid: >-
       @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.originalStorageAccountOption
-    name: originalStorageAccountOption
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Original Storage Account Option
     fullName: originalStorageAccountOption
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'originalStorageAccountOption?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
+        type: undefined | false | true
+        description: ''
+  - name: osType
+    uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.osType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.osType'
-    name: osType
+    summary: OS type
     fullName: osType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'osType?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: recoveryPointAdditionalInfo
+    uid: >-
       @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.recoveryPointAdditionalInfo
-    name: recoveryPointAdditionalInfo
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Additional information associated with this backup copy.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: recoveryPointAdditionalInfo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'recoveryPointAdditionalInfo?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: recoveryPointDiskConfiguration
+    uid: >-
+      @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.recoveryPointDiskConfiguration
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+    summary: Disk configuration
+    fullName: recoveryPointDiskConfiguration
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'recoveryPointDiskConfiguration?: RecoveryPointDiskConfiguration'
+      return:
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservicesbackup.RecoveryPointDiskConfiguration"
+          />
+        description: ''
+  - name: recoveryPointTierDetails
+    uid: >-
       @azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.recoveryPointTierDetails
-    name: recoveryPointTierDetails
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Recovery point tier information.
     fullName: recoveryPointTierDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'recoveryPointTierDetails?: RecoveryPointTierInformation[]'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.RecoveryPointTierInformation[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservicesbackup.RecoveryPointTierInformation"
+          />[]
+        description: ''
+  - name: recoveryPointTime
+    uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.recoveryPointTime'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.recoveryPointTime'
-    name: recoveryPointTime
+    summary: >-
+      Time at which this backup copy was created.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: recoveryPointTime
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'recoveryPointTime?: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: recoveryPointType
+    uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.recoveryPointType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.recoveryPointType'
-    name: recoveryPointType
+    summary: >-
+      Type of the backup copy.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: recoveryPointType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'recoveryPointType?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: sourceVMStorageType
+    uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.sourceVMStorageType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.sourceVMStorageType'
-    name: sourceVMStorageType
+    summary: >-
+      Storage type of the VM whose backup copy is created.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: sourceVMStorageType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceVMStorageType?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: virtualMachineSize
+    uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.virtualMachineSize'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.IaasVMRecoveryPoint.virtualMachineSize'
-    name: virtualMachineSize
+    summary: Virtual Machine Size
     fullName: virtualMachineSize
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'virtualMachineSize?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.KeyAndSecretDetails'
-    name: KeyAndSecretDetails
-    spec.typeScript:
-      - name: KeyAndSecretDetails
-        fullName: KeyAndSecretDetails
-        uid: '@azure/arm-recoveryservicesbackup.KeyAndSecretDetails'
-  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPointTierInformation[]'
-    name: 'RecoveryPointTierInformation[]'
-    spec.typeScript:
-      - name: RecoveryPointTierInformation
-        fullName: RecoveryPointTierInformation
-        uid: '@azure/arm-recoveryservicesbackup.RecoveryPointTierInformation'
-      - name: '[]'
-        fullName: '[]'
+        type: undefined | string
+        description: ''

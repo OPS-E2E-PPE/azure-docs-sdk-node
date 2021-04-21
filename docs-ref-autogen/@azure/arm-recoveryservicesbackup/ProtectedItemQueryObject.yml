@@ -1,178 +1,149 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject'
-    name: ProtectedItemQueryObject
-    fullName: ProtectedItemQueryObject
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.backupEngineName
-      - >-
-        @azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.backupManagementType
-      - '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.backupSetName'
-      - '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.containerName'
-      - '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.fabricName'
-      - '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.friendlyName'
-      - '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.healthState'
-      - '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.itemType'
-      - '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.policyName'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: ProtectedItemQueryObject
+uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Filters to list backup items.
+fullName: ProtectedItemQueryObject
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backupEngineName
+    uid: >-
       @azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.backupEngineName
-    name: backupEngineName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Backup Engine name
     fullName: backupEngineName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupEngineName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Backup management type for the backed up item. Possible values include:
+      'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.BackupManagementType" />
+        description: ''
+  - name: backupSetName
+    uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.backupSetName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.backupSetName'
-    name: backupSetName
+    summary: Name of the backup set.
     fullName: backupSetName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupSetName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: containerName
+    uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.containerName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.containerName'
-    name: containerName
+    summary: Name of the container.
     fullName: containerName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'containerName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: fabricName
+    uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.fabricName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.fabricName'
-    name: fabricName
+    summary: Name of the fabric.
     fullName: fabricName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'fabricName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: friendlyName
+    uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.friendlyName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.friendlyName'
-    name: friendlyName
+    summary: Friendly name of protected item
     fullName: friendlyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: healthState
+    uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.healthState'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.healthState'
-    name: healthState
+    summary: >-
+      Health State for the backed up item. Possible values include: 'Passed',
+      'ActionRequired',
+
+      'ActionSuggested', 'Invalid'
     fullName: healthState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'healthState?: HealthState'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.HealthState'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.HealthState" />
+        description: ''
+  - name: itemType
+    uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.itemType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.itemType'
-    name: itemType
+    summary: >-
+      Type of workload this item represents. Possible values include: 'Invalid',
+      'VM', 'FileFolder',
+
+      'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM',
+      'SystemState', 'Client',
+
+      'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase',
+      'SAPAseDatabase'
     fullName: itemType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'itemType?: DataSourceType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.DataSourceType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.DataSourceType" />
+        description: ''
+  - name: policyName
+    uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.policyName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemQueryObject.policyName'
-    name: policyName
+    summary: Backup policy name associated with the backup item.
     fullName: policyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'policyName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-    name: BackupManagementType
-    spec.typeScript:
-      - name: BackupManagementType
-        fullName: BackupManagementType
-        uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-  - uid: '@azure/arm-recoveryservicesbackup.HealthState'
-    name: HealthState
-    spec.typeScript:
-      - name: HealthState
-        fullName: HealthState
-        uid: '@azure/arm-recoveryservicesbackup.HealthState'
-  - uid: '@azure/arm-recoveryservicesbackup.DataSourceType'
-    name: DataSourceType
-    spec.typeScript:
-      - name: DataSourceType
-        fullName: DataSourceType
-        uid: '@azure/arm-recoveryservicesbackup.DataSourceType'
+        type: undefined | string
+        description: ''

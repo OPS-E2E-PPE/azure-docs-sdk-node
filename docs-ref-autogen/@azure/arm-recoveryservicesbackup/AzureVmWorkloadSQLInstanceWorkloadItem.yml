@@ -1,223 +1,169 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem'
-    name: AzureVmWorkloadSQLInstanceWorkloadItem
-    fullName: AzureVmWorkloadSQLInstanceWorkloadItem
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.backupManagementType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.dataDirectoryPaths
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.friendlyName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.isAutoProtectable
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.parentName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.protectionState
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.serverName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.subinquireditemcount
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.subWorkloadItemCount
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.workloadItemType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.workloadType
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureVmWorkloadSQLInstanceWorkloadItem
+uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Azure VM workload-specific workload item representing SQL Instance.
+fullName: AzureVmWorkloadSQLInstanceWorkloadItem
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Type of backup management to backup an item.
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: dataDirectoryPaths
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.dataDirectoryPaths
-    name: dataDirectoryPaths
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Data Directory Paths for default directories
     fullName: dataDirectoryPaths
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'dataDirectoryPaths?: SQLDataDirectory[]'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.SQLDataDirectory[]'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '<xref uid="@azure/arm-recoveryservicesbackup.SQLDataDirectory" />[]'
+        description: ''
+  - name: friendlyName
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.friendlyName
-    name: friendlyName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Friendly name of the backup item.
     fullName: friendlyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: isAutoProtectable
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.isAutoProtectable
-    name: isAutoProtectable
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Indicates if workload item is auto-protectable
     fullName: isAutoProtectable
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isAutoProtectable?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | false | true
+        description: ''
+  - name: parentName
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.parentName
-    name: parentName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Name for instance or AG
     fullName: parentName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'parentName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: protectionState
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.protectionState
-    name: protectionState
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      State of the back up item. Possible values include: 'Invalid',
+      'NotProtected', 'Protecting',
+
+      'Protected', 'ProtectionFailed'
     fullName: protectionState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectionState?: ProtectionStatus'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.ProtectionStatus'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.ProtectionStatus" />
+        description: ''
+  - name: serverName
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.serverName
-    name: serverName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Host/Cluster Name for instance or AG
     fullName: serverName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'serverName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: subinquireditemcount
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.subinquireditemcount
-    name: subinquireditemcount
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: 'For instance or AG, indicates number of DB''s present'
     fullName: subinquireditemcount
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'subinquireditemcount?: undefined | number'
       return:
-        type:
-          - undefined | number
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | number
+        description: ''
+  - name: subWorkloadItemCount
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.subWorkloadItemCount
-    name: subWorkloadItemCount
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: 'For instance or AG, indicates number of DB''s to be protected'
     fullName: subWorkloadItemCount
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'subWorkloadItemCount?: undefined | number'
       return:
-        type:
-          - undefined | number
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | number
+        description: ''
+  - name: workloadItemType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.workloadItemType
-    name: workloadItemType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: workloadItemType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workloadItemType: "SQLInstance"'
       return:
-        type:
-          - '"SQLInstance"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"SQLInstance"'
+        description: ''
+  - name: workloadType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadSQLInstanceWorkloadItem.workloadType
-    name: workloadType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Type of workload for the backup management
     fullName: workloadType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workloadType?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.SQLDataDirectory[]'
-    name: 'SQLDataDirectory[]'
-    spec.typeScript:
-      - name: SQLDataDirectory
-        fullName: SQLDataDirectory
-        uid: '@azure/arm-recoveryservicesbackup.SQLDataDirectory'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectionStatus'
-    name: ProtectionStatus
-    spec.typeScript:
-      - name: ProtectionStatus
-        fullName: ProtectionStatus
-        uid: '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        type: undefined | string
+        description: ''

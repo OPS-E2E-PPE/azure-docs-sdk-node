@@ -1,106 +1,76 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-datafactory.ControlActivity'
-    name: ControlActivity
-    fullName: ControlActivity
-    children:
-      - '@azure/arm-datafactory.ControlActivity.dependsOn'
-      - '@azure/arm-datafactory.ControlActivity.description'
-      - '@azure/arm-datafactory.ControlActivity.name'
-      - '@azure/arm-datafactory.ControlActivity.type'
-      - '@azure/arm-datafactory.ControlActivity.userProperties'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: ControlActivity
+uid: '@azure/arm-datafactory.ControlActivity'
+package: '@azure/arm-datafactory'
+summary: 'Base class for all control activities like IfCondition, ForEach , Until.'
+fullName: ControlActivity
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: dependsOn
+    uid: '@azure/arm-datafactory.ControlActivity.dependsOn'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.ControlActivity.dependsOn'
-    name: dependsOn
+    summary: Activity depends on condition.
     fullName: dependsOn
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'dependsOn?: ActivityDependency[]'
       return:
-        type:
-          - '@azure/arm-datafactory.ActivityDependency[]'
+        type: '<xref uid="@azure/arm-datafactory.ActivityDependency" />[]'
+        description: ''
+  - name: description
+    uid: '@azure/arm-datafactory.ControlActivity.description'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.ControlActivity.description'
-    name: description
+    summary: Activity description.
     fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: name
+    uid: '@azure/arm-datafactory.ControlActivity.name'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.ControlActivity.name'
-    name: name
+    summary: Activity name.
     fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'name: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: type
+    uid: '@azure/arm-datafactory.ControlActivity.type'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.ControlActivity.type'
-    name: type
+    summary: Polymorphic Discriminator
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: "Container"'
       return:
-        type:
-          - '"Container"'
+        type: '"Container"'
+        description: ''
+  - name: userProperties
+    uid: '@azure/arm-datafactory.ControlActivity.userProperties'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.ControlActivity.userProperties'
-    name: userProperties
+    summary: Activity user properties.
     fullName: userProperties
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'userProperties?: UserProperty[]'
       return:
-        type:
-          - '@azure/arm-datafactory.UserProperty[]'
-    package: '@azure/arm-datafactory'
-references:
-  - uid: '@azure/arm-datafactory.ActivityDependency[]'
-    name: 'ActivityDependency[]'
-    spec.typeScript:
-      - name: ActivityDependency
-        fullName: ActivityDependency
-        uid: '@azure/arm-datafactory.ActivityDependency'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-datafactory.UserProperty[]'
-    name: 'UserProperty[]'
-    spec.typeScript:
-      - name: UserProperty
-        fullName: UserProperty
-        uid: '@azure/arm-datafactory.UserProperty'
-      - name: '[]'
-        fullName: '[]'
+        type: '<xref uid="@azure/arm-datafactory.UserProperty" />[]'
+        description: ''

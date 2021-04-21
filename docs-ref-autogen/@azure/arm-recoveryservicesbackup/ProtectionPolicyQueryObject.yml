@@ -1,75 +1,66 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectionPolicyQueryObject'
-    name: ProtectionPolicyQueryObject
-    fullName: ProtectionPolicyQueryObject
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.ProtectionPolicyQueryObject.backupManagementType
-      - '@azure/arm-recoveryservicesbackup.ProtectionPolicyQueryObject.fabricName'
-      - >-
-        @azure/arm-recoveryservicesbackup.ProtectionPolicyQueryObject.workloadType
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: ProtectionPolicyQueryObject
+uid: '@azure/arm-recoveryservicesbackup.ProtectionPolicyQueryObject'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Filters the list backup policies API.
+fullName: ProtectionPolicyQueryObject
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.ProtectionPolicyQueryObject.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Backup management type for the backup policy. Possible values include:
+      'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.BackupManagementType" />
+        description: ''
+  - name: fabricName
+    uid: '@azure/arm-recoveryservicesbackup.ProtectionPolicyQueryObject.fabricName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectionPolicyQueryObject.fabricName'
-    name: fabricName
+    summary: Fabric name for filter
     fullName: fabricName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'fabricName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: workloadType
+    uid: '@azure/arm-recoveryservicesbackup.ProtectionPolicyQueryObject.workloadType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectionPolicyQueryObject.workloadType'
-    name: workloadType
+    summary: >-
+      Workload type for the backup policy. Possible values include: 'Invalid',
+      'VM', 'FileFolder',
+
+      'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM',
+      'SystemState', 'Client',
+
+      'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase',
+      'SAPAseDatabase'
     fullName: workloadType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workloadType?: WorkloadType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.WorkloadType'
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-    name: BackupManagementType
-    spec.typeScript:
-      - name: BackupManagementType
-        fullName: BackupManagementType
-        uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-  - uid: '@azure/arm-recoveryservicesbackup.WorkloadType'
-    name: WorkloadType
-    spec.typeScript:
-      - name: WorkloadType
-        fullName: WorkloadType
-        uid: '@azure/arm-recoveryservicesbackup.WorkloadType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.WorkloadType" />
+        description: ''

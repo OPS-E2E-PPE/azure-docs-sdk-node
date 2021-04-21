@@ -1,223 +1,196 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService'
-    name: AzureMLLinkedService
-    fullName: AzureMLLinkedService
-    children:
-      - '@azure/arm-datafactory.AzureMLLinkedService.annotations'
-      - '@azure/arm-datafactory.AzureMLLinkedService.apiKey'
-      - '@azure/arm-datafactory.AzureMLLinkedService.connectVia'
-      - '@azure/arm-datafactory.AzureMLLinkedService.description'
-      - '@azure/arm-datafactory.AzureMLLinkedService.encryptedCredential'
-      - '@azure/arm-datafactory.AzureMLLinkedService.mlEndpoint'
-      - '@azure/arm-datafactory.AzureMLLinkedService.parameters'
-      - '@azure/arm-datafactory.AzureMLLinkedService.servicePrincipalId'
-      - '@azure/arm-datafactory.AzureMLLinkedService.servicePrincipalKey'
-      - '@azure/arm-datafactory.AzureMLLinkedService.tenant'
-      - '@azure/arm-datafactory.AzureMLLinkedService.type'
-      - '@azure/arm-datafactory.AzureMLLinkedService.updateResourceEndpoint'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: AzureMLLinkedService
+uid: '@azure/arm-datafactory.AzureMLLinkedService'
+package: '@azure/arm-datafactory'
+summary: Azure ML Studio Web Service linked service.
+fullName: AzureMLLinkedService
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: annotations
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.annotations'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.annotations'
-    name: annotations
+    summary: List of tags that can be used for describing the linked service.
     fullName: annotations
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'annotations?: any[]'
       return:
-        type:
-          - 'any[]'
+        type: 'any[]'
+        description: ''
+  - name: apiKey
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.apiKey'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.apiKey'
-    name: apiKey
+    summary: The API key for accessing the Azure ML model endpoint.
     fullName: apiKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'apiKey: SecretBaseUnion'
       return:
-        type:
-          - '@azure/arm-datafactory.SecretBaseUnion'
+        type: <xref uid="@azure/arm-datafactory.SecretBaseUnion" />
+        description: ''
+  - name: connectVia
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.connectVia'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.connectVia'
-    name: connectVia
+    summary: The integration runtime reference.
     fullName: connectVia
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'connectVia?: IntegrationRuntimeReference'
       return:
-        type:
-          - '@azure/arm-datafactory.IntegrationRuntimeReference'
+        type: <xref uid="@azure/arm-datafactory.IntegrationRuntimeReference" />
+        description: ''
+  - name: description
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.description'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.description'
-    name: description
+    summary: Linked service description.
     fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: encryptedCredential
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.encryptedCredential'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.encryptedCredential'
-    name: encryptedCredential
+    summary: >-
+      The encrypted credential used for authentication. Credentials are
+      encrypted using the
+
+      integration runtime credential manager. Type: string (or Expression with
+      resultType string).
     fullName: encryptedCredential
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'encryptedCredential?: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: mlEndpoint
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.mlEndpoint'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.mlEndpoint'
-    name: mlEndpoint
+    summary: >-
+      The Batch Execution REST URL for an Azure ML Studio Web Service endpoint.
+      Type: string (or
+
+      Expression with resultType string).
     fullName: mlEndpoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'mlEndpoint: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: parameters
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.parameters'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.parameters'
-    name: parameters
+    summary: Parameters for linked service.
     fullName: parameters
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'parameters?: undefined | [key: string]: ParameterSpecification'
       return:
-        type:
-          - >-
-            undefined | [key: string]:
-            @azure/arm-datafactory.ParameterSpecification
+        type: >-
+          undefined | [key: string]: <xref
+          uid="@azure/arm-datafactory.ParameterSpecification" />
+        description: ''
+  - name: servicePrincipalId
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.servicePrincipalId'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.servicePrincipalId'
-    name: servicePrincipalId
+    summary: >-
+      The ID of the service principal used to authenticate against the ARM-based
+
+      updateResourceEndpoint of an Azure ML Studio web service. Type: string (or
+      Expression with
+
+      resultType string).
     fullName: servicePrincipalId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'servicePrincipalId?: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: servicePrincipalKey
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.servicePrincipalKey'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.servicePrincipalKey'
-    name: servicePrincipalKey
+    summary: >-
+      The key of the service principal used to authenticate against the
+      ARM-based
+
+      updateResourceEndpoint of an Azure ML Studio web service.
     fullName: servicePrincipalKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'servicePrincipalKey?: SecretBaseUnion'
       return:
-        type:
-          - '@azure/arm-datafactory.SecretBaseUnion'
+        type: <xref uid="@azure/arm-datafactory.SecretBaseUnion" />
+        description: ''
+  - name: tenant
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.tenant'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.tenant'
-    name: tenant
+    summary: >-
+      The name or ID of the tenant to which the service principal belongs. Type:
+      string (or
+
+      Expression with resultType string).
     fullName: tenant
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tenant?: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: type
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.type'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.type'
-    name: type
+    summary: Polymorphic Discriminator
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: "AzureML"'
       return:
-        type:
-          - '"AzureML"'
+        type: '"AzureML"'
+        description: ''
+  - name: updateResourceEndpoint
+    uid: '@azure/arm-datafactory.AzureMLLinkedService.updateResourceEndpoint'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureMLLinkedService.updateResourceEndpoint'
-    name: updateResourceEndpoint
+    summary: >-
+      The Update Resource REST URL for an Azure ML Studio Web Service endpoint.
+      Type: string (or
+
+      Expression with resultType string).
     fullName: updateResourceEndpoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'updateResourceEndpoint?: any'
       return:
-        type:
-          - any
-    package: '@azure/arm-datafactory'
-references:
-  - uid: '@azure/arm-datafactory.SecretBaseUnion'
-    name: SecretBaseUnion
-    spec.typeScript:
-      - name: SecretBaseUnion
-        fullName: SecretBaseUnion
-        uid: '@azure/arm-datafactory.SecretBaseUnion'
-  - uid: '@azure/arm-datafactory.IntegrationRuntimeReference'
-    name: IntegrationRuntimeReference
-    spec.typeScript:
-      - name: IntegrationRuntimeReference
-        fullName: IntegrationRuntimeReference
-        uid: '@azure/arm-datafactory.IntegrationRuntimeReference'
-  - uid: 'undefined | [key: string]: @azure/arm-datafactory.ParameterSpecification'
-    name: ParameterSpecification
-    spec.typeScript:
-      - name: 'undefined | [key: string]: '
-        fullName: 'undefined | [key: string]: '
-      - name: ParameterSpecification
-        fullName: ParameterSpecification
-        uid: '@azure/arm-datafactory.ParameterSpecification'
+        type: any
+        description: ''

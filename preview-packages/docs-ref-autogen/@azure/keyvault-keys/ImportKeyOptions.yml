@@ -1,107 +1,118 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/keyvault-keys.ImportKeyOptions'
-    name: ImportKeyOptions
-    fullName: ImportKeyOptions
-    children:
-      - '@azure/keyvault-keys.ImportKeyOptions.enabled'
-      - '@azure/keyvault-keys.ImportKeyOptions.expires'
-      - '@azure/keyvault-keys.ImportKeyOptions.hsm'
-      - '@azure/keyvault-keys.ImportKeyOptions.notBefore'
-      - '@azure/keyvault-keys.ImportKeyOptions.requestOptions'
-      - '@azure/keyvault-keys.ImportKeyOptions.tags'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: ImportKeyOptions
+uid: '@azure/keyvault-keys.ImportKeyOptions'
+package: '@azure/keyvault-keys'
+summary: |-
+  An interface representing the optional parameters that can be
+  passed to <xref:importKey>
+fullName: ImportKeyOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: abortSignal
+    uid: '@azure/keyvault-keys.ImportKeyOptions.abortSignal'
     package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.ImportKeyOptions.enabled'
-    name: enabled
+    summary: The signal which can be used to abort requests.
+    fullName: abortSignal
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        type: AbortSignalLike
+        description: ''
+  - name: enabled
+    uid: '@azure/keyvault-keys.ImportKeyOptions.enabled'
+    package: '@azure/keyvault-keys'
+    summary: Determines whether the object is enabled.
     fullName: enabled
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'enabled?: undefined | false | true'
+      content: 'enabled?: boolean'
       return:
-        type:
-          - undefined | false | true
+        type: boolean
+        description: ''
+  - name: expiresOn
+    uid: '@azure/keyvault-keys.ImportKeyOptions.expiresOn'
     package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.ImportKeyOptions.expires'
-    name: expires
-    fullName: expires
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    summary: Expiry date in UTC.
+    fullName: expiresOn
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'expires?: Date'
+      content: 'expiresOn?: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: hardwareProtected
+    uid: '@azure/keyvault-keys.ImportKeyOptions.hardwareProtected'
     package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.ImportKeyOptions.hsm'
-    name: hsm
-    fullName: hsm
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    summary: Whether to import as a hardware key (HSM) or software key.
+    fullName: hardwareProtected
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'hsm?: undefined | false | true'
+      content: 'hardwareProtected?: boolean'
       return:
-        type:
-          - undefined | false | true
+        type: boolean
+        description: ''
+  - name: notBefore
+    uid: '@azure/keyvault-keys.ImportKeyOptions.notBefore'
     package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.ImportKeyOptions.notBefore'
-    name: notBefore
+    summary: Not before date in UTC.
     fullName: notBefore
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'notBefore?: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: requestOptions
+    uid: '@azure/keyvault-keys.ImportKeyOptions.requestOptions'
     package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.ImportKeyOptions.requestOptions'
-    name: requestOptions
+    summary: Options used when creating and sending HTTP requests for this operation.
     fullName: requestOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'requestOptions?: msRest.RequestOptionsBase'
+      content: 'requestOptions?: OperationRequestOptions'
       return:
-        type:
-          - msRest.RequestOptionsBase
+        type: OperationRequestOptions
+        description: ''
+  - name: tags
+    uid: '@azure/keyvault-keys.ImportKeyOptions.tags'
     package: '@azure/keyvault-keys'
-  - uid: '@azure/keyvault-keys.ImportKeyOptions.tags'
-    name: tags
+    summary: Application specific metadata in the form of key-value pairs.
     fullName: tags
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'tags?: undefined | [key: string]: string'
+      content: 'tags?: [key: string]: string'
       return:
-        type:
-          - 'undefined | [key: string]: string'
+        type: '[key: string]\: string'
+        description: ''
+  - name: tracingOptions
+    uid: '@azure/keyvault-keys.ImportKeyOptions.tracingOptions'
     package: '@azure/keyvault-keys'
+    summary: Options used when tracing is enabled.
+    fullName: tracingOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tracingOptions?: OperationTracingOptions'
+      return:
+        type: OperationTracingOptions
+        description: ''
+extends: OperationOptions

@@ -1,102 +1,84 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItem'
-    name: WorkloadProtectableItem
-    fullName: WorkloadProtectableItem
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.WorkloadProtectableItem.backupManagementType
-      - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItem.friendlyName'
-      - >-
-        @azure/arm-recoveryservicesbackup.WorkloadProtectableItem.protectableItemType
-      - >-
-        @azure/arm-recoveryservicesbackup.WorkloadProtectableItem.protectionState
-      - '@azure/arm-recoveryservicesbackup.WorkloadProtectableItem.workloadType'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: WorkloadProtectableItem
+uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItem'
+package: '@azure/arm-recoveryservicesbackup'
+summary: >-
+  Base class for backup item. Workload-specific backup items are derived from
+  this class.
+fullName: WorkloadProtectableItem
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItem.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Type of backup management to backup an item.
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: friendlyName
+    uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItem.friendlyName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItem.friendlyName'
-    name: friendlyName
+    summary: Friendly name of the backup item.
     fullName: friendlyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: protectableItemType
+    uid: >-
       @azure/arm-recoveryservicesbackup.WorkloadProtectableItem.protectableItemType
-    name: protectableItemType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: protectableItemType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectableItemType: "WorkloadProtectableItem"'
       return:
-        type:
-          - '"WorkloadProtectableItem"'
+        type: '"WorkloadProtectableItem"'
+        description: ''
+  - name: protectionState
+    uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItem.protectionState'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItem.protectionState'
-    name: protectionState
+    summary: >-
+      State of the back up item. Possible values include: 'Invalid',
+      'NotProtected', 'Protecting',
+
+      'Protected', 'ProtectionFailed'
     fullName: protectionState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectionState?: ProtectionStatus'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.ProtectionStatus" />
+        description: ''
+  - name: workloadType
+    uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItem.workloadType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.WorkloadProtectableItem.workloadType'
-    name: workloadType
+    summary: Type of workload for the backup management
     fullName: workloadType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workloadType?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectionStatus'
-    name: ProtectionStatus
-    spec.typeScript:
-      - name: ProtectionStatus
-        fullName: ProtectionStatus
-        uid: '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        type: undefined | string
+        description: ''

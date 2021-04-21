@@ -1,64 +1,76 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-network.PolicySettings'
-    name: PolicySettings
-    fullName: PolicySettings
-    children:
-      - '@azure/arm-network.PolicySettings.enabledState'
-      - '@azure/arm-network.PolicySettings.mode'
-    langs:
-      - typeScript
-    type: interface
-    summary: Defines contents of a web application firewall global configuration.
+### YamlMime:TSType
+name: PolicySettings
+uid: '@azure/arm-network.PolicySettings'
+package: '@azure/arm-network'
+summary: Defines contents of a web application firewall global configuration.
+fullName: PolicySettings
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: fileUploadLimitInMb
+    uid: '@azure/arm-network.PolicySettings.fileUploadLimitInMb'
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.PolicySettings.enabledState'
-    name: enabledState
-    fullName: enabledState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Describes if the policy is in enabled state or disabled state. Possible
-      values include:
-
-      'Disabled', 'Enabled'
-    optional: true
+    summary: Maximum file upload size in Mb for WAF.
+    fullName: fileUploadLimitInMb
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'enabledState?: WebApplicationFirewallEnabledState'
+      content: 'fileUploadLimitInMb?: undefined | number'
       return:
-        type:
-          - '@azure/arm-network.WebApplicationFirewallEnabledState'
+        type: undefined | number
+        description: ''
+  - name: maxRequestBodySizeInKb
+    uid: '@azure/arm-network.PolicySettings.maxRequestBodySizeInKb'
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.PolicySettings.mode'
-    name: mode
+    summary: Maximum request body size in Kb for WAF.
+    fullName: maxRequestBodySizeInKb
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxRequestBodySizeInKb?: undefined | number'
+      return:
+        type: undefined | number
+        description: ''
+  - name: mode
+    uid: '@azure/arm-network.PolicySettings.mode'
+    package: '@azure/arm-network'
+    summary: 'The mode of the policy. Possible values include: ''Prevention'', ''Detection'''
     fullName: mode
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Describes if it is in detection mode or prevention mode at policy level.
-      Possible values
-
-      include: 'Prevention', 'Detection'
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'mode?: WebApplicationFirewallMode'
       return:
-        type:
-          - '@azure/arm-network.WebApplicationFirewallMode'
+        type: <xref uid="@azure/arm-network.WebApplicationFirewallMode" />
+        description: ''
+  - name: requestBodyCheck
+    uid: '@azure/arm-network.PolicySettings.requestBodyCheck'
     package: '@azure/arm-network'
-references:
-  - uid: '@azure/arm-network.WebApplicationFirewallEnabledState'
-    name: WebApplicationFirewallEnabledState
-    spec.typeScript:
-      - name: WebApplicationFirewallEnabledState
-        fullName: WebApplicationFirewallEnabledState
-        uid: '@azure/arm-network.WebApplicationFirewallEnabledState'
-  - uid: '@azure/arm-network.WebApplicationFirewallMode'
-    name: WebApplicationFirewallMode
-    spec.typeScript:
-      - name: WebApplicationFirewallMode
-        fullName: WebApplicationFirewallMode
-        uid: '@azure/arm-network.WebApplicationFirewallMode'
+    summary: Whether to allow WAF to check request Body.
+    fullName: requestBodyCheck
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'requestBodyCheck?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: state
+    uid: '@azure/arm-network.PolicySettings.state'
+    package: '@azure/arm-network'
+    summary: 'The state of the policy. Possible values include: ''Disabled'', ''Enabled'''
+    fullName: state
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'state?: WebApplicationFirewallEnabledState'
+      return:
+        type: <xref uid="@azure/arm-network.WebApplicationFirewallEnabledState" />
+        description: ''

@@ -1,86 +1,106 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-mediaservices.AudioAnalyzerPreset'
-    name: AudioAnalyzerPreset
-    fullName: AudioAnalyzerPreset
-    children:
-      - '@azure/arm-mediaservices.AudioAnalyzerPreset.audioLanguage'
-      - '@azure/arm-mediaservices.AudioAnalyzerPreset.odatatype'
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      The Audio Analyzer preset applies a pre-defined set of AI-based analysis
-      operations, including
+### YamlMime:TSType
+name: AudioAnalyzerPreset
+uid: '@azure/arm-mediaservices.AudioAnalyzerPreset'
+package: '@azure/arm-mediaservices'
+summary: >-
+  The Audio Analyzer preset applies a pre-defined set of AI-based analysis
+  operations, including
 
-      speech transcription. Currently, the preset supports processing of content
-      with a single audio
+  speech transcription. Currently, the preset supports processing of content
+  with a single audio
 
-      track.
+  track.
+fullName: AudioAnalyzerPreset
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: audioLanguage
+    uid: '@azure/arm-mediaservices.AudioAnalyzerPreset.audioLanguage'
     package: '@azure/arm-mediaservices'
-  - uid: '@azure/arm-mediaservices.AudioAnalyzerPreset.audioLanguage'
-    name: audioLanguage
-    fullName: audioLanguage
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The language for the audio payload in the input using the BCP-47 format of
       'language
 
-      tag-region' (e.g: 'en-US').  The list of supported languages are English
-      ('en-US' and
+      tag-region' (e.g: 'en-US').  If you know the language of your content, it
+      is recommended that
 
-      'en-GB'), Spanish ('es-ES' and 'es-MX'), French ('fr-FR'), Italian
-      ('it-IT'), Japanese
+      you specify it. The language must be specified explicitly for
+      AudioAnalysisMode::Basic, since
 
-      ('ja-JP'), Portuguese ('pt-BR'), Chinese ('zh-CN'), German ('de-DE'),
-      Arabic ('ar-EG' and
+      automatic language detection is not included in basic mode. If the
+      language isn't specified or
 
-      'ar-SY'), Russian ('ru-RU'), Hindi ('hi-IN'), and Korean ('ko-KR'). If you
-      know the language
+      set to null, automatic language detection will choose the first language
+      detected and process
 
-      of your content, it is recommended that you specify it. If the language
-      isn't specified or set
+      with the selected language for the duration of the file. It does not
+      currently support
 
-      to null, automatic language detection will choose the first language
-      detected and process with
+      dynamically switching between languages after the first language is
+      detected. The automatic
 
-      the selected language for the duration of the file. This language
-      detection feature currently
+      detection works best with audio recordings with clearly discernable
+      speech. If automatic
 
-      supports English, Chinese, French, German, Italian, Japanese, Spanish,
-      Russian, and
+      detection fails to find the language, transcription would fallback to
+      'en-US'." The list of
 
-      Portuguese. It does not currently support dynamically switching between
-      languages after the
-
-      first language is detected. The automatic detection works best with audio
-      recordings with
-
-      clearly discernable speech. If automatic detection fails to find the
-      language, transcription
-
-      would fallback to 'en-US'."
-    optional: true
+      supported languages is available here:
+      https://go.microsoft.com/fwlink/?linkid=2109463
+    fullName: audioLanguage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'audioLanguage?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: experimentalOptions
+    uid: '@azure/arm-mediaservices.AudioAnalyzerPreset.experimentalOptions'
     package: '@azure/arm-mediaservices'
-  - uid: '@azure/arm-mediaservices.AudioAnalyzerPreset.odatatype'
-    name: odatatype
-    fullName: odatatype
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      Dictionary containing key value pairs for parameters not exposed in the
+      preset itself
+    fullName: experimentalOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'experimentalOptions?: undefined | [key: string]: string'
+      return:
+        type: 'undefined | [key: string]: string'
+        description: ''
+  - name: mode
+    uid: '@azure/arm-mediaservices.AudioAnalyzerPreset.mode'
+    package: '@azure/arm-mediaservices'
+    summary: >-
+      Determines the set of audio analysis operations to be performed. If
+      unspecified, the Standard
+
+      AudioAnalysisMode would be chosen. Possible values include: 'Standard',
+      'Basic'
+    fullName: mode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'mode?: AudioAnalysisMode'
+      return:
+        type: <xref uid="@azure/arm-mediaservices.AudioAnalysisMode" />
+        description: ''
+  - name: odatatype
+    uid: '@azure/arm-mediaservices.AudioAnalyzerPreset.odatatype'
+    package: '@azure/arm-mediaservices'
     summary: Polymorphic Discriminator
+    fullName: odatatype
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'odatatype: "#Microsoft.Media.AudioAnalyzerPreset"'
       return:
-        type:
-          - '"#Microsoft.Media.AudioAnalyzerPreset"'
-    package: '@azure/arm-mediaservices'
+        type: '"#<xref uid="Microsoft.Media.AudioAnalyzerPreset" />"'
+        description: ''

@@ -1,26 +1,34 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-compute.RollingUpgradePolicy'
-    name: RollingUpgradePolicy
-    fullName: RollingUpgradePolicy
-    children:
-      - '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
-      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
-      - >-
-        @azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent
-      - '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
-    langs:
-      - typeScript
-    type: interface
-    summary: The configuration parameters used while performing a rolling upgrade.
+### YamlMime:TSType
+name: RollingUpgradePolicy
+uid: '@azure/arm-compute.RollingUpgradePolicy'
+package: '@azure/arm-compute'
+summary: The configuration parameters used while performing a rolling upgrade.
+fullName: RollingUpgradePolicy
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: enableCrossZoneUpgrade
+    uid: '@azure/arm-compute.RollingUpgradePolicy.enableCrossZoneUpgrade'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
-    name: maxBatchInstancePercent
-    fullName: maxBatchInstancePercent
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      Allow VMSS to ignore AZ boundaries when constructing upgrade batches. Take
+      into consideration
+
+      the Update Domain and maxBatchInstancePercent to determine the batch size.
+    fullName: enableCrossZoneUpgrade
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'enableCrossZoneUpgrade?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: maxBatchInstancePercent
+    uid: '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+    package: '@azure/arm-compute'
     summary: >-
       The maximum percent of total virtual machine instances that will be
       upgraded simultaneously by
@@ -32,20 +40,18 @@ items:
       decrease to ensure higher
 
       reliability. The default value for this parameter is 20%.
-    optional: true
+    fullName: maxBatchInstancePercent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'maxBatchInstancePercent?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: maxUnhealthyInstancePercent
+    uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
-    name: maxUnhealthyInstancePercent
-    fullName: maxUnhealthyInstancePercent
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The maximum percentage of the total virtual machine instances in the scale
       set that can be
@@ -60,21 +66,19 @@ items:
       for this parameter
 
       is 20%.
-    optional: true
+    fullName: maxUnhealthyInstancePercent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'maxUnhealthyInstancePercent?: undefined | number'
       return:
-        type:
-          - undefined | number
-    package: '@azure/arm-compute'
-  - uid: >-
+        type: undefined | number
+        description: ''
+  - name: maxUnhealthyUpgradedInstancePercent
+    uid: >-
       @azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent
-    name: maxUnhealthyUpgradedInstancePercent
-    fullName: maxUnhealthyUpgradedInstancePercent
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/arm-compute'
     summary: >-
       The maximum percentage of upgraded virtual machine instances that can be
       found to be in an
@@ -84,20 +88,18 @@ items:
 
       ever exceeded, the rolling update aborts. The default value for this
       parameter is 20%.
-    optional: true
+    fullName: maxUnhealthyUpgradedInstancePercent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'maxUnhealthyUpgradedInstancePercent?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: pauseTimeBetweenBatches
+    uid: '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
-    name: pauseTimeBetweenBatches
-    fullName: pauseTimeBetweenBatches
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The wait time between completing the update for all virtual machines in
       one batch and starting
@@ -106,10 +108,27 @@ items:
       The default value is
 
       0 seconds (PT0S).
-    optional: true
+    fullName: pauseTimeBetweenBatches
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'pauseTimeBetweenBatches?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: prioritizeUnhealthyInstances
+    uid: '@azure/arm-compute.RollingUpgradePolicy.prioritizeUnhealthyInstances'
     package: '@azure/arm-compute'
+    summary: >-
+      Upgrade all unhealthy instances in a scale set before any healthy
+      instances.
+    fullName: prioritizeUnhealthyInstances
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'prioritizeUnhealthyInstances?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''

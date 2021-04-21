@@ -1,62 +1,39 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-apimanagement.ApiOperation'
-    name: ApiOperation
-    fullName: ApiOperation
-    children:
-      - '@azure/arm-apimanagement.ApiOperation.constructor'
-      - '@azure/arm-apimanagement.ApiOperation.createOrUpdate_2'
-      - '@azure/arm-apimanagement.ApiOperation.createOrUpdate'
-      - '@azure/arm-apimanagement.ApiOperation.createOrUpdate_1'
-      - '@azure/arm-apimanagement.ApiOperation.deleteMethod'
-      - '@azure/arm-apimanagement.ApiOperation.deleteMethod_2'
-      - '@azure/arm-apimanagement.ApiOperation.deleteMethod_1'
-      - '@azure/arm-apimanagement.ApiOperation.get'
-      - '@azure/arm-apimanagement.ApiOperation.get_2'
-      - '@azure/arm-apimanagement.ApiOperation.get_1'
-      - '@azure/arm-apimanagement.ApiOperation.getEntityTag'
-      - '@azure/arm-apimanagement.ApiOperation.getEntityTag_2'
-      - '@azure/arm-apimanagement.ApiOperation.getEntityTag_1'
-      - '@azure/arm-apimanagement.ApiOperation.listByApi_2'
-      - '@azure/arm-apimanagement.ApiOperation.listByApi'
-      - '@azure/arm-apimanagement.ApiOperation.listByApi_1'
-      - '@azure/arm-apimanagement.ApiOperation.listByApiNext'
-      - '@azure/arm-apimanagement.ApiOperation.listByApiNext_2'
-      - '@azure/arm-apimanagement.ApiOperation.listByApiNext_1'
-      - '@azure/arm-apimanagement.ApiOperation.update'
-      - '@azure/arm-apimanagement.ApiOperation.update_2'
-      - '@azure/arm-apimanagement.ApiOperation.update_1'
-    langs:
-      - typeScript
-    type: class
-    summary: Class representing a ApiOperation.
+### YamlMime:TSType
+name: ApiOperation
+uid: '@azure/arm-apimanagement.ApiOperation'
+package: '@azure/arm-apimanagement'
+summary: Class representing a ApiOperation.
+fullName: ApiOperation
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: ApiOperation(ApiManagementClientContext)
+    uid: '@azure/arm-apimanagement.ApiOperation.constructor'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.constructor'
-    name: ApiOperation(ApiManagementClientContext)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
     summary: Create a ApiOperation.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'new ApiOperation(client: ApiManagementClientContext)'
       parameters:
         - id: client
-          type:
-            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          type: <xref uid="@azure/arm-apimanagement.ApiManagementClientContext" />
           description: |
             Reference to the service client.
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.createOrUpdate_2'
-    name: >-
+methods:
+  - name: >-
       createOrUpdate(string, string, string, string, OperationContract,
       ApiOperationCreateOrUpdateOptionalParams,
       ServiceCallback<OperationContract>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.createOrUpdate_2'
+    package: '@azure/arm-apimanagement'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createOrUpdate(resourceGroupName: string, serviceName: string,
@@ -65,16 +42,13 @@ items:
         ServiceCallback<OperationContract>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -82,39 +56,36 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: parameters
-          type:
-            - '@azure/arm-apimanagement.OperationContract'
+          type: <xref uid="@azure/arm-apimanagement.OperationContract" />
           description: Create parameters.
         - id: options
-          type:
-            - '@azure/arm-apimanagement.ApiOperationCreateOrUpdateOptionalParams'
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.ApiOperationCreateOrUpdateOptionalParams"
+            />
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-apimanagement.OperationContract>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-apimanagement.OperationContract" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApiOperationCreateOrUpdateResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.createOrUpdate'
-    name: >-
+  - name: >-
       createOrUpdate(string, string, string, string, OperationContract,
       Models.ApiOperationCreateOrUpdateOptionalParams)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.createOrUpdate'
+    package: '@azure/arm-apimanagement'
     summary: Creates a new operation in the API or updates an existing one.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createOrUpdate(resourceGroupName: string, serviceName: string,
@@ -122,16 +93,13 @@ items:
         options?: Models.ApiOperationCreateOrUpdateOptionalParams)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -139,35 +107,32 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: parameters
-          type:
-            - '@azure/arm-apimanagement.OperationContract'
+          type: <xref uid="@azure/arm-apimanagement.OperationContract" />
           description: Create parameters.
         - id: options
-          type:
-            - Models.ApiOperationCreateOrUpdateOptionalParams
+          type: <xref uid="Models.ApiOperationCreateOrUpdateOptionalParams" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.ApiOperationCreateOrUpdateResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.createOrUpdate_1'
-    name: >-
+        type: >-
+          Promise&lt;<xref uid="Models.ApiOperationCreateOrUpdateResponse"
+          />&gt;
+        description: Promise<Models.ApiOperationCreateOrUpdateResponse>
+  - name: >-
       createOrUpdate(string, string, string, string, OperationContract,
       ServiceCallback<OperationContract>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.createOrUpdate_1'
+    package: '@azure/arm-apimanagement'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createOrUpdate(resourceGroupName: string, serviceName: string,
@@ -175,16 +140,13 @@ items:
         callback: ServiceCallback<OperationContract>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -192,35 +154,30 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: parameters
-          type:
-            - '@azure/arm-apimanagement.OperationContract'
+          type: <xref uid="@azure/arm-apimanagement.OperationContract" />
           description: Create parameters.
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-apimanagement.OperationContract>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-apimanagement.OperationContract" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApiOperationCreateOrUpdateResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.deleteMethod'
-    name: >-
+  - name: >-
       deleteMethod(string, string, string, string, string,
       msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.deleteMethod'
+    package: '@azure/arm-apimanagement'
     summary: Deletes the specified operation in the API.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function deleteMethod(resourceGroupName: string, serviceName: string,
@@ -228,16 +185,13 @@ items:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -245,16 +199,14 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: ifMatch
-          type:
-            - string
+          type: string
           description: >-
             ETag of the Entity. ETag should match the current entity state from
             the header
@@ -262,23 +214,20 @@ items:
             response of the GET request or it should be * for unconditional
             update.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<RestResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.deleteMethod_2'
-    name: >-
+        type: Promise&lt;RestResponse&gt;
+        description: Promise<msRest.RestResponse>
+  - name: >-
       deleteMethod(string, string, string, string, string, RequestOptionsBase,
       ServiceCallback<void>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.deleteMethod_2'
+    package: '@azure/arm-apimanagement'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function deleteMethod(resourceGroupName: string, serviceName: string,
@@ -286,16 +235,13 @@ items:
         RequestOptionsBase, callback: ServiceCallback<void>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -303,16 +249,14 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: ifMatch
-          type:
-            - string
+          type: string
           description: >-
             ETag of the Entity. ETag should match the current entity state from
             the header
@@ -320,27 +264,21 @@ items:
             response of the GET request or it should be * for unconditional
             update.
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<void>
+          type: ServiceCallback&lt;void&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.deleteMethod_1'
-    name: >-
+  - name: >-
       deleteMethod(string, string, string, string, string,
       ServiceCallback<void>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.deleteMethod_1'
+    package: '@azure/arm-apimanagement'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function deleteMethod(resourceGroupName: string, serviceName: string,
@@ -348,16 +286,13 @@ items:
         ServiceCallback<void>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -365,16 +300,14 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: ifMatch
-          type:
-            - string
+          type: string
           description: >-
             ETag of the Entity. ETag should match the current entity state from
             the header
@@ -382,37 +315,29 @@ items:
             response of the GET request or it should be * for unconditional
             update.
         - id: callback
-          type:
-            - ServiceCallback<void>
+          type: ServiceCallback&lt;void&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
+  - name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-apimanagement.ApiOperation.get'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.get'
-    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets the details of the API Operation specified by its identifier.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function get(resourceGroupName: string, serviceName: string, apiId:
         string, operationId: string, options?: msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -420,31 +345,27 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.ApiOperationGetResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.get_2'
-    name: >-
+        type: Promise&lt;<xref uid="Models.ApiOperationGetResponse" />&gt;
+        description: Promise<Models.ApiOperationGetResponse>
+  - name: >-
       get(string, string, string, string, RequestOptionsBase,
       ServiceCallback<OperationContract>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.get_2'
+    package: '@azure/arm-apimanagement'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function get(resourceGroupName: string, serviceName: string, apiId:
@@ -452,16 +373,13 @@ items:
         ServiceCallback<OperationContract>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -469,33 +387,28 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-apimanagement.OperationContract>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-apimanagement.OperationContract" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApiOperationGetResponse>
+  - name: 'get(string, string, string, string, ServiceCallback<OperationContract>)'
+    uid: '@azure/arm-apimanagement.ApiOperation.get_1'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.get_1'
-    name: 'get(string, string, string, string, ServiceCallback<OperationContract>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function get(resourceGroupName: string, serviceName: string, apiId:
@@ -503,16 +416,13 @@ items:
         ServiceCallback<OperationContract>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -520,47 +430,40 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-apimanagement.OperationContract>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-apimanagement.OperationContract" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApiOperationGetResponse>
+  - name: 'getEntityTag(string, string, string, string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-apimanagement.ApiOperation.getEntityTag'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.getEntityTag'
-    name: 'getEntityTag(string, string, string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Gets the entity state (Etag) version of the API operation specified by its
       identifier.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getEntityTag(resourceGroupName: string, serviceName: string,
         apiId: string, operationId: string, options?: msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -568,31 +471,27 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.ApiOperationGetEntityTagResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.getEntityTag_2'
-    name: >-
+        type: Promise&lt;<xref uid="Models.ApiOperationGetEntityTagResponse" />&gt;
+        description: Promise<Models.ApiOperationGetEntityTagResponse>
+  - name: >-
       getEntityTag(string, string, string, string, RequestOptionsBase,
       ServiceCallback<void>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.getEntityTag_2'
+    package: '@azure/arm-apimanagement'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getEntityTag(resourceGroupName: string, serviceName: string,
@@ -600,16 +499,13 @@ items:
         callback: ServiceCallback<void>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -617,49 +513,39 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<void>
+          type: ServiceCallback&lt;void&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApiOperationGetEntityTagResponse>
+  - name: 'getEntityTag(string, string, string, string, ServiceCallback<void>)'
+    uid: '@azure/arm-apimanagement.ApiOperation.getEntityTag_1'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.getEntityTag_1'
-    name: 'getEntityTag(string, string, string, string, ServiceCallback<void>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getEntityTag(resourceGroupName: string, serviceName: string,
         apiId: string, operationId: string, callback: ServiceCallback<void>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -667,31 +553,25 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: callback
-          type:
-            - ServiceCallback<void>
+          type: ServiceCallback&lt;void&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApiOperationGetEntityTagResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.listByApi_2'
-    name: >-
+  - name: >-
       listByApi(string, string, string, ApiOperationListByApiOptionalParams,
       ServiceCallback<OperationCollection>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.listByApi_2'
+    package: '@azure/arm-apimanagement'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listByApi(resourceGroupName: string, serviceName: string,
@@ -699,16 +579,13 @@ items:
         ServiceCallback<OperationCollection>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -716,43 +593,39 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: options
-          type:
-            - '@azure/arm-apimanagement.ApiOperationListByApiOptionalParams'
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.ApiOperationListByApiOptionalParams"
+            />
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-apimanagement.OperationCollection>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-apimanagement.OperationCollection" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApiOperationListByApiResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.listByApi'
-    name: >-
+  - name: >-
       listByApi(string, string, string,
       Models.ApiOperationListByApiOptionalParams)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.listByApi'
+    package: '@azure/arm-apimanagement'
     summary: Lists a collection of the operations for the specified API.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listByApi(resourceGroupName: string, serviceName: string,
         apiId: string, options?: Models.ApiOperationListByApiOptionalParams)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -760,37 +633,31 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: options
-          type:
-            - Models.ApiOperationListByApiOptionalParams
+          type: <xref uid="Models.ApiOperationListByApiOptionalParams" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.ApiOperationListByApiResponse>
+        type: Promise&lt;<xref uid="Models.ApiOperationListByApiResponse" />&gt;
+        description: Promise<Models.ApiOperationListByApiResponse>
+  - name: 'listByApi(string, string, string, ServiceCallback<OperationCollection>)'
+    uid: '@azure/arm-apimanagement.ApiOperation.listByApi_1'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.listByApi_1'
-    name: 'listByApi(string, string, string, ServiceCallback<OperationCollection>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listByApi(resourceGroupName: string, serviceName: string,
         apiId: string, callback: ServiceCallback<OperationCollection>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -798,106 +665,94 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-apimanagement.OperationCollection>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-apimanagement.OperationCollection" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApiOperationListByApiResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.listByApiNext'
-    name: 'listByApiNext(string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Lists a collection of the operations for the specified API.
-    syntax:
-      content: >-
-        function listByApiNext(nextPageLink: string, options?:
-        msRest.RequestOptionsBase)
-      parameters:
-        - id: nextPageLink
-          type:
-            - string
-          description: The NextLink from the previous successful call to List operation.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<Models.ApiOperationListByApiNextResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.listByApiNext_2'
-    name: >-
-      listByApiNext(string, RequestOptionsBase,
+  - name: >-
+      listByApiNext(string, ApiOperationListByApiNextOptionalParams,
       ServiceCallback<OperationCollection>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.listByApiNext_2'
+    package: '@azure/arm-apimanagement'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listByApiNext(nextPageLink: string, options:
-        RequestOptionsBase, callback: ServiceCallback<OperationCollection>)
+        ApiOperationListByApiNextOptionalParams, callback:
+        ServiceCallback<OperationCollection>)
       parameters:
         - id: nextPageLink
-          type:
-            - string
+          type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type:
-            - RequestOptionsBase
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.ApiOperationListByApiNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-apimanagement.OperationCollection>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-apimanagement.OperationCollection" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApiOperationListByApiNextResponse>
+  - name: 'listByApiNext(string, Models.ApiOperationListByApiNextOptionalParams)'
+    uid: '@azure/arm-apimanagement.ApiOperation.listByApiNext'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.listByApiNext_1'
-    name: 'listByApiNext(string, ServiceCallback<OperationCollection>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
+    summary: Lists a collection of the operations for the specified API.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listByApiNext(nextPageLink: string, options?:
+        Models.ApiOperationListByApiNextOptionalParams)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type: <xref uid="Models.ApiOperationListByApiNextOptionalParams" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.ApiOperationListByApiNextResponse" />&gt;
+        description: Promise<Models.ApiOperationListByApiNextResponse>
+  - name: 'listByApiNext(string, ServiceCallback<OperationCollection>)'
+    uid: '@azure/arm-apimanagement.ApiOperation.listByApiNext_1'
+    package: '@azure/arm-apimanagement'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listByApiNext(nextPageLink: string, callback:
         ServiceCallback<OperationCollection>)
       parameters:
         - id: nextPageLink
-          type:
-            - string
+          type: string
           description: The NextLink from the previous successful call to List operation.
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-apimanagement.OperationCollection>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-apimanagement.OperationCollection" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ApiOperationListByApiNextResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.update'
-    name: >-
+  - name: >-
       update(string, string, string, string, OperationUpdateContract, string,
       msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-apimanagement.ApiOperation.update'
+    package: '@azure/arm-apimanagement'
     summary: >-
       Updates the details of the operation in the API specified by its
       identifier.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function update(resourceGroupName: string, serviceName: string, apiId:
@@ -905,16 +760,13 @@ items:
         ifMatch: string, options?: msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -922,20 +774,17 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: parameters
-          type:
-            - '@azure/arm-apimanagement.OperationUpdateContract'
+          type: <xref uid="@azure/arm-apimanagement.OperationUpdateContract" />
           description: API Operation Update parameters.
         - id: ifMatch
-          type:
-            - string
+          type: string
           description: >-
             ETag of the Entity. ETag should match the current entity state from
             the header
@@ -943,41 +792,35 @@ items:
             response of the GET request or it should be * for unconditional
             update.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<RestResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.update_2'
-    name: >-
+        type: Promise&lt;<xref uid="Models.ApiOperationUpdateResponse" />&gt;
+        description: Promise<Models.ApiOperationUpdateResponse>
+  - name: >-
       update(string, string, string, string, OperationUpdateContract, string,
-      RequestOptionsBase, ServiceCallback<void>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+      RequestOptionsBase, ServiceCallback<OperationContract>)
+    uid: '@azure/arm-apimanagement.ApiOperation.update_2'
+    package: '@azure/arm-apimanagement'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function update(resourceGroupName: string, serviceName: string, apiId:
         string, operationId: string, parameters: OperationUpdateContract,
         ifMatch: string, options: RequestOptionsBase, callback:
-        ServiceCallback<void>)
+        ServiceCallback<OperationContract>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -985,20 +828,17 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: parameters
-          type:
-            - '@azure/arm-apimanagement.OperationUpdateContract'
+          type: <xref uid="@azure/arm-apimanagement.OperationUpdateContract" />
           description: API Operation Update parameters.
         - id: ifMatch
-          type:
-            - string
+          type: string
           description: >-
             ETag of the Entity. ETag should match the current entity state from
             the header
@@ -1006,44 +846,37 @@ items:
             response of the GET request or it should be * for unconditional
             update.
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<void>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-apimanagement.OperationContract" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
-    package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.ApiOperation.update_1'
-    name: >-
+  - name: >-
       update(string, string, string, string, OperationUpdateContract, string,
-      ServiceCallback<void>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+      ServiceCallback<OperationContract>)
+    uid: '@azure/arm-apimanagement.ApiOperation.update_1'
+    package: '@azure/arm-apimanagement'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function update(resourceGroupName: string, serviceName: string, apiId:
         string, operationId: string, parameters: OperationUpdateContract,
-        ifMatch: string, callback: ServiceCallback<void>)
+        ifMatch: string, callback: ServiceCallback<OperationContract>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: The name of the resource group.
         - id: serviceName
-          type:
-            - string
+          type: string
           description: The name of the API Management service.
         - id: apiId
-          type:
-            - string
+          type: string
           description: >-
             API revision identifier. Must be unique in the current API
             Management service
@@ -1051,20 +884,17 @@ items:
             instance. Non-current revision has ;rev=n as a suffix where n is the
             revision number.
         - id: operationId
-          type:
-            - string
+          type: string
           description: >-
             Operation identifier within an API. Must be unique in the current
             API
 
             Management service instance.
         - id: parameters
-          type:
-            - '@azure/arm-apimanagement.OperationUpdateContract'
+          type: <xref uid="@azure/arm-apimanagement.OperationUpdateContract" />
           description: API Operation Update parameters.
         - id: ifMatch
-          type:
-            - string
+          type: string
           description: >-
             ETag of the Entity. ETag should match the current entity state from
             the header
@@ -1072,62 +902,8 @@ items:
             response of the GET request or it should be * for unconditional
             update.
         - id: callback
-          type:
-            - ServiceCallback<void>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-apimanagement.OperationContract" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<RestResponse>
-    package: '@azure/arm-apimanagement'
-references:
-  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
-    name: ApiManagementClientContext
-    spec.typeScript:
-      - name: ApiManagementClientContext
-        fullName: ApiManagementClientContext
-        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
-  - uid: '@azure/arm-apimanagement.OperationContract'
-    name: OperationContract
-    spec.typeScript:
-      - name: OperationContract
-        fullName: OperationContract
-        uid: '@azure/arm-apimanagement.OperationContract'
-  - uid: ServiceCallback<@azure/arm-apimanagement.OperationContract>
-    name: OperationContract>
-    spec.typeScript:
-      - name: ServiceCallback<
-        fullName: ServiceCallback<
-      - name: OperationContract
-        fullName: OperationContract
-        uid: '@azure/arm-apimanagement.OperationContract'
-      - name: '>'
-        fullName: '>'
-  - uid: '@azure/arm-apimanagement.ApiOperationCreateOrUpdateOptionalParams'
-    name: ApiOperationCreateOrUpdateOptionalParams
-    spec.typeScript:
-      - name: ApiOperationCreateOrUpdateOptionalParams
-        fullName: ApiOperationCreateOrUpdateOptionalParams
-        uid: '@azure/arm-apimanagement.ApiOperationCreateOrUpdateOptionalParams'
-  - uid: ServiceCallback<@azure/arm-apimanagement.OperationCollection>
-    name: OperationCollection>
-    spec.typeScript:
-      - name: ServiceCallback<
-        fullName: ServiceCallback<
-      - name: OperationCollection
-        fullName: OperationCollection
-        uid: '@azure/arm-apimanagement.OperationCollection'
-      - name: '>'
-        fullName: '>'
-  - uid: '@azure/arm-apimanagement.ApiOperationListByApiOptionalParams'
-    name: ApiOperationListByApiOptionalParams
-    spec.typeScript:
-      - name: ApiOperationListByApiOptionalParams
-        fullName: ApiOperationListByApiOptionalParams
-        uid: '@azure/arm-apimanagement.ApiOperationListByApiOptionalParams'
-  - uid: '@azure/arm-apimanagement.OperationUpdateContract'
-    name: OperationUpdateContract
-    spec.typeScript:
-      - name: OperationUpdateContract
-        fullName: OperationUpdateContract
-        uid: '@azure/arm-apimanagement.OperationUpdateContract'

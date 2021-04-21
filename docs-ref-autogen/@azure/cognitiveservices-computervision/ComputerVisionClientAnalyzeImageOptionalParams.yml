@@ -1,75 +1,65 @@
-### YamlMime:UniversalReference
-items:
-  - uid: >-
-      @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams
-    name: ComputerVisionClientAnalyzeImageOptionalParams
-    fullName: ComputerVisionClientAnalyzeImageOptionalParams
-    children:
-      - >-
-        @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.abortSignal
-      - >-
-        @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.customHeaders
-      - >-
-        @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.details
-      - >-
-        @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.language
-      - >-
-        @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.onDownloadProgress
-      - >-
-        @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.onUploadProgress
-      - >-
-        @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.timeout
-      - >-
-        @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.visualFeatures
-    langs:
-      - typeScript
-    type: interface
-    summary: Optional Parameters.
-    extends:
-      name: RequestOptionsBase
-    package: '@azure/cognitiveservices-computervision'
-  - uid: >-
+### YamlMime:TSType
+name: ComputerVisionClientAnalyzeImageOptionalParams
+uid: >-
+  @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams
+package: '@azure/cognitiveservices-computervision'
+summary: Optional Parameters.
+fullName: ComputerVisionClientAnalyzeImageOptionalParams
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: abortSignal
+    uid: >-
       @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.abortSignal
-    name: abortSignal
-    fullName: abortSignal
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/cognitiveservices-computervision'
     summary: The signal which can be used to abort requests.
-    optional: true
+    fullName: abortSignal
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'abortSignal?: AbortSignalLike'
       return:
-        type:
-          - AbortSignalLike
-    package: '@azure/cognitiveservices-computervision'
-  - uid: >-
+        type: AbortSignalLike
+        description: ''
+  - name: customHeaders
+    uid: >-
       @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.customHeaders
-    name: customHeaders
-    fullName: customHeaders
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/cognitiveservices-computervision'
     summary: |-
       {object} [customHeaders] User defined custom request headers that
       will be applied before the request is sent.
-    optional: true
+    fullName: customHeaders
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
       return:
-        type:
-          - 'undefined | [key: string]: string'
+        type: 'undefined | [key: string]: string'
+        description: ''
+  - name: descriptionExclude
+    uid: >-
+      @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.descriptionExclude
     package: '@azure/cognitiveservices-computervision'
-  - uid: >-
+    summary: Turn off specified domain models when generating the description.
+    fullName: descriptionExclude
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'descriptionExclude?: DescriptionExclude[]'
+      return:
+        type: >-
+          <xref uid="@azure/cognitiveservices-computervision.DescriptionExclude"
+          />[]
+        description: ''
+  - name: details
+    uid: >-
       @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.details
-    name: details
-    fullName: details
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/cognitiveservices-computervision'
     summary: >-
       A string indicating which domain-specific details to return. Multiple
       values should be
@@ -79,21 +69,19 @@ items:
 
       detected in the image, Landmarks - identifies notable landmarks in the
       image.
-    optional: true
+    fullName: details
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'details?: Details[]'
       return:
-        type:
-          - '@azure/cognitiveservices-computervision.Details[]'
-    package: '@azure/cognitiveservices-computervision'
-  - uid: >-
+        type: '<xref uid="@azure/cognitiveservices-computervision.Details" />[]'
+        description: ''
+  - name: language
+    uid: >-
       @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.language
-    name: language
-    fullName: language
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/cognitiveservices-computervision'
     summary: >-
       The desired language for output generation. If this parameter is not
       specified, the default
@@ -105,73 +93,83 @@ items:
       include: 'en', 'es', 'ja',
 
       'pt', 'zh'. Default value: 'en'.
-    optional: true
+    fullName: language
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'language?: Language'
       return:
-        type:
-          - '@azure/cognitiveservices-computervision.Language'
+        type: <xref uid="@azure/cognitiveservices-computervision.Language" />
+        description: ''
+  - name: modelVersion
+    uid: >-
+      @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.modelVersion
     package: '@azure/cognitiveservices-computervision'
-  - uid: >-
+    summary: >-
+      Optional parameter to specify the version of the AI model. Accepted values
+      are: "latest",
+
+      "2021-04-01". Defaults to "latest". Default value: 'latest'.
+    fullName: modelVersion
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'modelVersion?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: onDownloadProgress
+    uid: >-
       @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.onDownloadProgress
-    name: onDownloadProgress
-    fullName: onDownloadProgress
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/cognitiveservices-computervision'
     summary: Callback which fires upon download progress.
-    optional: true
+    fullName: onDownloadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         onDownloadProgress?: undefined | (progress: TransferProgressEvent) =>
         void
       return:
-        type:
-          - 'undefined | (progress: TransferProgressEvent) => void'
-    package: '@azure/cognitiveservices-computervision'
-  - uid: >-
+        type: 'undefined | (progress: TransferProgressEvent) =&gt; void'
+        description: ''
+  - name: onUploadProgress
+    uid: >-
       @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.onUploadProgress
-    name: onUploadProgress
-    fullName: onUploadProgress
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/cognitiveservices-computervision'
     summary: Callback which fires upon upload progress.
-    optional: true
+    fullName: onUploadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
       return:
-        type:
-          - 'undefined | (progress: TransferProgressEvent) => void'
-    package: '@azure/cognitiveservices-computervision'
-  - uid: >-
+        type: 'undefined | (progress: TransferProgressEvent) =&gt; void'
+        description: ''
+  - name: timeout
+    uid: >-
       @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.timeout
-    name: timeout
-    fullName: timeout
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/cognitiveservices-computervision'
     summary: >-
       The number of milliseconds a request can take before automatically being
       terminated.
-    optional: true
+    fullName: timeout
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'timeout?: undefined | number'
       return:
-        type:
-          - undefined | number
-    package: '@azure/cognitiveservices-computervision'
-  - uid: >-
+        type: undefined | number
+        description: ''
+  - name: visualFeatures
+    uid: >-
       @azure/cognitiveservices-computervision.ComputerVisionClientAnalyzeImageOptionalParams.visualFeatures
-    name: visualFeatures
-    fullName: visualFeatures
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/cognitiveservices-computervision'
     summary: >-
       A string indicating what visual feature types to return. Multiple values
       should be
@@ -195,45 +193,30 @@ items:
       black&white. Adult -
 
       detects if the image is pornographic in nature (depicts nudity or a sex
-      act).  Sexually
+      act), or is gory
 
-      suggestive content is also detected. Objects - detects various objects
-      within an image,
+      (depicts extreme violence or blood). Sexually suggestive content (aka racy
+      content) is also
 
-      including the approximate location. The Objects argument is only available
-      in English. Brands
+      detected. Objects - detects various objects within an image, including the
+      approximate
 
-      - detects various brands within an image, including the approximate
-      location. The Brands
+      location. The Objects argument is only available in English. Brands -
+      detects various brands
 
-      argument is only available in English.
-    optional: true
+      within an image, including the approximate location. The Brands argument
+      is only available in
+
+      English.
+    fullName: visualFeatures
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'visualFeatures?: VisualFeatureTypes[]'
       return:
-        type:
-          - '@azure/cognitiveservices-computervision.VisualFeatureTypes[]'
-    package: '@azure/cognitiveservices-computervision'
-references:
-  - uid: '@azure/cognitiveservices-computervision.Details[]'
-    name: 'Details[]'
-    spec.typeScript:
-      - name: Details
-        fullName: Details
-        uid: '@azure/cognitiveservices-computervision.Details'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/cognitiveservices-computervision.Language'
-    name: Language
-    spec.typeScript:
-      - name: Language
-        fullName: Language
-        uid: '@azure/cognitiveservices-computervision.Language'
-  - uid: '@azure/cognitiveservices-computervision.VisualFeatureTypes[]'
-    name: 'VisualFeatureTypes[]'
-    spec.typeScript:
-      - name: VisualFeatureTypes
-        fullName: VisualFeatureTypes
-        uid: '@azure/cognitiveservices-computervision.VisualFeatureTypes'
-      - name: '[]'
-        fullName: '[]'
+        type: >-
+          <xref uid="@azure/cognitiveservices-computervision.VisualFeatureTypes"
+          />[]
+        description: ''
+extends: RequestOptionsBase

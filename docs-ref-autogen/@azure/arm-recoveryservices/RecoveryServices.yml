@@ -1,27 +1,40 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservices.RecoveryServices'
-    name: RecoveryServices
-    fullName: RecoveryServices
-    children:
-      - '@azure/arm-recoveryservices.RecoveryServices.checkNameAvailability'
-      - '@azure/arm-recoveryservices.RecoveryServices.checkNameAvailability_2'
-      - '@azure/arm-recoveryservices.RecoveryServices.checkNameAvailability_1'
-      - '@azure/arm-recoveryservices.RecoveryServices.constructor'
-    langs:
-      - typeScript
-    type: class
-    summary: Class representing a RecoveryServices.
+### YamlMime:TSType
+name: RecoveryServices
+uid: '@azure/arm-recoveryservices.RecoveryServices'
+package: '@azure/arm-recoveryservices'
+summary: Class representing a RecoveryServices.
+fullName: RecoveryServices
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: RecoveryServices(RecoveryServicesClientContext)
+    uid: '@azure/arm-recoveryservices.RecoveryServices.constructor'
     package: '@azure/arm-recoveryservices'
-  - uid: '@azure/arm-recoveryservices.RecoveryServices.checkNameAvailability'
-    name: >-
+    summary: Create a RecoveryServices.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new RecoveryServices(client: RecoveryServicesClientContext)'
+      parameters:
+        - id: client
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices.RecoveryServicesClientContext" />
+          description: |
+            Reference to the service client.
+methods:
+  - name: >-
       checkNameAvailability(string, string, CheckNameAvailabilityParameters,
       msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-recoveryservices.RecoveryServices.checkNameAvailability'
+    package: '@azure/arm-recoveryservices'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function checkNameAvailability(resourceGroupName: string, location:
@@ -29,148 +42,95 @@ items:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: |-
             The name of the resource group where the recovery services vault is
             present.
         - id: location
-          type:
-            - string
+          type: string
           description: Location of the resource
         - id: input
-          type:
-            - '@azure/arm-recoveryservices.CheckNameAvailabilityParameters'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices.CheckNameAvailabilityParameters" />
           description: Contains information about Resource type and Resource name
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.RecoveryServicesCheckNameAvailabilityResponse>
-    package: '@azure/arm-recoveryservices'
-  - uid: '@azure/arm-recoveryservices.RecoveryServices.checkNameAvailability_2'
-    name: >-
+        type: >-
+          Promise&lt;<xref
+          uid="Models.RecoveryServicesCheckNameAvailabilityResponse" />&gt;
+        description: Promise<Models.RecoveryServicesCheckNameAvailabilityResponse>
+  - name: >-
       checkNameAvailability(string, string, CheckNameAvailabilityParameters,
-      RequestOptionsBase, ServiceCallback<CheckNameAvailabilityResultResource>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+      RequestOptionsBase, ServiceCallback<CheckNameAvailabilityResult>)
+    uid: '@azure/arm-recoveryservices.RecoveryServices.checkNameAvailability_2'
+    package: '@azure/arm-recoveryservices'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function checkNameAvailability(resourceGroupName: string, location:
         string, input: CheckNameAvailabilityParameters, options:
         RequestOptionsBase, callback:
-        ServiceCallback<CheckNameAvailabilityResultResource>)
+        ServiceCallback<CheckNameAvailabilityResult>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: |-
             The name of the resource group where the recovery services vault is
             present.
         - id: location
-          type:
-            - string
+          type: string
           description: Location of the resource
         - id: input
-          type:
-            - '@azure/arm-recoveryservices.CheckNameAvailabilityParameters'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices.CheckNameAvailabilityParameters" />
           description: Contains information about Resource type and Resource name
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - >-
-              ServiceCallback<@azure/arm-recoveryservices.CheckNameAvailabilityResultResource>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-recoveryservices.CheckNameAvailabilityResult" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RecoveryServicesCheckNameAvailabilityResponse>
-    package: '@azure/arm-recoveryservices'
-  - uid: '@azure/arm-recoveryservices.RecoveryServices.checkNameAvailability_1'
-    name: >-
+  - name: >-
       checkNameAvailability(string, string, CheckNameAvailabilityParameters,
-      ServiceCallback<CheckNameAvailabilityResultResource>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+      ServiceCallback<CheckNameAvailabilityResult>)
+    uid: '@azure/arm-recoveryservices.RecoveryServices.checkNameAvailability_1'
+    package: '@azure/arm-recoveryservices'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function checkNameAvailability(resourceGroupName: string, location:
         string, input: CheckNameAvailabilityParameters, callback:
-        ServiceCallback<CheckNameAvailabilityResultResource>)
+        ServiceCallback<CheckNameAvailabilityResult>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
+          type: string
           description: |-
             The name of the resource group where the recovery services vault is
             present.
         - id: location
-          type:
-            - string
+          type: string
           description: Location of the resource
         - id: input
-          type:
-            - '@azure/arm-recoveryservices.CheckNameAvailabilityParameters'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices.CheckNameAvailabilityParameters" />
           description: Contains information about Resource type and Resource name
         - id: callback
-          type:
-            - >-
-              ServiceCallback<@azure/arm-recoveryservices.CheckNameAvailabilityResultResource>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-recoveryservices.CheckNameAvailabilityResult" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.RecoveryServicesCheckNameAvailabilityResponse>
-    package: '@azure/arm-recoveryservices'
-  - uid: '@azure/arm-recoveryservices.RecoveryServices.constructor'
-    name: RecoveryServices(RecoveryServicesClientContext)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Create a RecoveryServices.
-    syntax:
-      content: 'new RecoveryServices(client: RecoveryServicesClientContext)'
-      parameters:
-        - id: client
-          type:
-            - '@azure/arm-recoveryservices.RecoveryServicesClientContext'
-          description: |
-            Reference to the service client.
-    package: '@azure/arm-recoveryservices'
-references:
-  - uid: '@azure/arm-recoveryservices.RecoveryServicesClientContext'
-    name: RecoveryServicesClientContext
-    spec.typeScript:
-      - name: RecoveryServicesClientContext
-        fullName: RecoveryServicesClientContext
-        uid: '@azure/arm-recoveryservices.RecoveryServicesClientContext'
-  - uid: '@azure/arm-recoveryservices.CheckNameAvailabilityParameters'
-    name: CheckNameAvailabilityParameters
-    spec.typeScript:
-      - name: CheckNameAvailabilityParameters
-        fullName: CheckNameAvailabilityParameters
-        uid: '@azure/arm-recoveryservices.CheckNameAvailabilityParameters'
-  - uid: >-
-      ServiceCallback<@azure/arm-recoveryservices.CheckNameAvailabilityResultResource>
-    name: CheckNameAvailabilityResultResource>
-    spec.typeScript:
-      - name: ServiceCallback<
-        fullName: ServiceCallback<
-      - name: CheckNameAvailabilityResultResource
-        fullName: CheckNameAvailabilityResultResource
-        uid: '@azure/arm-recoveryservices.CheckNameAvailabilityResultResource'
-      - name: '>'
-        fullName: '>'

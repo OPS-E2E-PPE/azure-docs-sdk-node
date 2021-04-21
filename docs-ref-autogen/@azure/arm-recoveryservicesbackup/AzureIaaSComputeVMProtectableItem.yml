@@ -1,125 +1,101 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem'
-    name: AzureIaaSComputeVMProtectableItem
-    fullName: AzureIaaSComputeVMProtectableItem
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.backupManagementType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.friendlyName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.protectableItemType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.protectionState
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.virtualMachineId
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.workloadType
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureIaaSComputeVMProtectableItem
+uid: '@azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem'
+package: '@azure/arm-recoveryservicesbackup'
+summary: >-
+  IaaS VM workload-specific backup item representing the Azure Resource Manager
+  VM.
+fullName: AzureIaaSComputeVMProtectableItem
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Type of backup management to backup an item.
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: friendlyName
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.friendlyName
-    name: friendlyName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Friendly name of the backup item.
     fullName: friendlyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: protectableItemType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.protectableItemType
-    name: protectableItemType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: protectableItemType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectableItemType: "Microsoft.Compute/virtualMachines"'
       return:
-        type:
-          - '"Microsoft.Compute/virtualMachines"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"<xref uid="Microsoft.Compute/virtualMachines" />"'
+        description: ''
+  - name: protectionState
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.protectionState
-    name: protectionState
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      State of the back up item. Possible values include: 'Invalid',
+      'NotProtected', 'Protecting',
+
+      'Protected', 'ProtectionFailed'
     fullName: protectionState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectionState?: ProtectionStatus'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.ProtectionStatus'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.ProtectionStatus" />
+        description: ''
+  - name: virtualMachineId
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.virtualMachineId
-    name: virtualMachineId
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Fully qualified ARM ID of the virtual machine.
     fullName: virtualMachineId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'virtualMachineId?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: workloadType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSComputeVMProtectableItem.workloadType
-    name: workloadType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Type of workload for the backup management
     fullName: workloadType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workloadType?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectionStatus'
-    name: ProtectionStatus
-    spec.typeScript:
-      - name: ProtectionStatus
-        fullName: ProtectionStatus
-        uid: '@azure/arm-recoveryservicesbackup.ProtectionStatus'
+        type: undefined | string
+        description: ''

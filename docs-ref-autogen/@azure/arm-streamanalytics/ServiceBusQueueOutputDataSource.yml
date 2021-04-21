@@ -1,113 +1,140 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource'
-    name: ServiceBusQueueOutputDataSource
-    fullName: ServiceBusQueueOutputDataSource
-    children:
-      - >-
-        @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.propertyColumns
-      - '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.queueName'
-      - >-
-        @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.serviceBusNamespace
-      - >-
-        @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.sharedAccessPolicyKey
-      - >-
-        @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.sharedAccessPolicyName
-      - '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.type'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: ServiceBusQueueOutputDataSource
+uid: '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource'
+package: '@azure/arm-streamanalytics'
+summary: Describes a Service Bus Queue output data source.
+fullName: ServiceBusQueueOutputDataSource
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: authenticationMode
+    uid: >-
+      @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.authenticationMode
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.propertyColumns'
-    name: propertyColumns
+    summary: >-
+      Authentication Mode. Possible values include: 'Msi', 'UserToken',
+      'ConnectionString'
+    fullName: authenticationMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authenticationMode?: AuthenticationMode'
+      return:
+        type: <xref uid="@azure/arm-streamanalytics.AuthenticationMode" />
+        description: ''
+  - name: propertyColumns
+    uid: '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.propertyColumns'
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      A string array of the names of output columns to be attached to Service
+      Bus messages as custom
+
+      properties.
     fullName: propertyColumns
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'propertyColumns?: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: queueName
+    uid: '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.queueName'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.queueName'
-    name: queueName
+    summary: >-
+      The name of the Service Bus Queue. Required on PUT (CreateOrReplace)
+      requests.
     fullName: queueName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queueName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-streamanalytics'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: serviceBusNamespace
+    uid: >-
       @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.serviceBusNamespace
-    name: serviceBusNamespace
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The namespace that is associated with the desired Event Hub, Service Bus
+      Queue, Service Bus
+
+      Topic, etc. Required on PUT (CreateOrReplace) requests.
     fullName: serviceBusNamespace
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'serviceBusNamespace?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-streamanalytics'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: sharedAccessPolicyKey
+    uid: >-
       @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.sharedAccessPolicyKey
-    name: sharedAccessPolicyKey
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The shared access policy key for the specified shared access policy.
+      Required on PUT
+
+      (CreateOrReplace) requests.
     fullName: sharedAccessPolicyKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sharedAccessPolicyKey?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-streamanalytics'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: sharedAccessPolicyName
+    uid: >-
       @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.sharedAccessPolicyName
-    name: sharedAccessPolicyName
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The shared access policy name for the Event Hub, Service Bus Queue,
+      Service Bus Topic, etc.
+
+      Required on PUT (CreateOrReplace) requests.
     fullName: sharedAccessPolicyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sharedAccessPolicyName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: systemPropertyColumns
+    uid: >-
+      @azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.systemPropertyColumns
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.type'
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: systemPropertyColumns
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'systemPropertyColumns?: undefined | [key: string]: string'
+      return:
+        type: 'undefined | [key: string]: string'
+        description: ''
+  - name: type
+    uid: '@azure/arm-streamanalytics.ServiceBusQueueOutputDataSource.type'
+    package: '@azure/arm-streamanalytics'
+    summary: Polymorphic Discriminator
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: "Microsoft.ServiceBus/Queue"'
       return:
-        type:
-          - '"Microsoft.ServiceBus/Queue"'
-    package: '@azure/arm-streamanalytics'
+        type: '"<xref uid="Microsoft.ServiceBus/Queue" />"'
+        description: ''

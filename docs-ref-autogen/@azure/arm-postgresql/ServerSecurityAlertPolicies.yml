@@ -1,29 +1,42 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies'
-    name: ServerSecurityAlertPolicies
-    fullName: ServerSecurityAlertPolicies
-    children:
-      - '@azure/arm-postgresql.ServerSecurityAlertPolicies.beginCreateOrUpdate'
-      - '@azure/arm-postgresql.ServerSecurityAlertPolicies.createOrUpdate'
-      - '@azure/arm-postgresql.ServerSecurityAlertPolicies.get'
-      - '@azure/arm-postgresql.ServerSecurityAlertPolicies.get_2'
-      - '@azure/arm-postgresql.ServerSecurityAlertPolicies.get_1'
-      - '@azure/arm-postgresql.ServerSecurityAlertPolicies.constructor'
-    langs:
-      - typeScript
-    type: class
-    summary: Class representing a ServerSecurityAlertPolicies.
+### YamlMime:TSType
+name: ServerSecurityAlertPolicies
+uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies'
+package: '@azure/arm-postgresql'
+summary: Class representing a ServerSecurityAlertPolicies.
+fullName: ServerSecurityAlertPolicies
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: ServerSecurityAlertPolicies(PostgreSQLManagementClientContext)
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.constructor'
     package: '@azure/arm-postgresql'
-  - uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.beginCreateOrUpdate'
-    name: >-
+    summary: Create a ServerSecurityAlertPolicies.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new ServerSecurityAlertPolicies(client:
+        PostgreSQLManagementClientContext)
+      parameters:
+        - id: client
+          type: >-
+            <xref uid="@azure/arm-postgresql.PostgreSQLManagementClientContext"
+            />
+          description: |
+            Reference to the service client.
+methods:
+  - name: >-
       beginCreateOrUpdate(string, string, ServerSecurityAlertPolicy,
       msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.beginCreateOrUpdate'
+    package: '@azure/arm-postgresql'
     summary: Creates or updates a threat detection policy.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function beginCreateOrUpdate(resourceGroupName: string, serverName:
@@ -31,37 +44,29 @@ items:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
-          description: |-
-            The name of the resource group that contains the resource. You can
-            obtain this value from the Azure Resource Manager API or the portal.
+          type: string
+          description: The name of the resource group. The name is case insensitive.
         - id: serverName
-          type:
-            - string
+          type: string
           description: The name of the server.
         - id: parameters
-          type:
-            - '@azure/arm-postgresql.ServerSecurityAlertPolicy'
+          type: <xref uid="@azure/arm-postgresql.ServerSecurityAlertPolicy" />
           description: The server security alert policy.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<LROPoller>
-    package: '@azure/arm-postgresql'
-  - uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.createOrUpdate'
-    name: >-
+        type: Promise&lt;LROPoller&gt;
+        description: Promise<msRestAzure.LROPoller>
+  - name: >-
       createOrUpdate(string, string, ServerSecurityAlertPolicy,
       msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.createOrUpdate'
+    package: '@azure/arm-postgresql'
     summary: Creates or updates a threat detection policy.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createOrUpdate(resourceGroupName: string, serverName: string,
@@ -69,68 +74,57 @@ items:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
-          description: |-
-            The name of the resource group that contains the resource. You can
-            obtain this value from the Azure Resource Manager API or the portal.
+          type: string
+          description: The name of the resource group. The name is case insensitive.
         - id: serverName
-          type:
-            - string
+          type: string
           description: The name of the server.
         - id: parameters
-          type:
-            - '@azure/arm-postgresql.ServerSecurityAlertPolicy'
+          type: <xref uid="@azure/arm-postgresql.ServerSecurityAlertPolicy" />
           description: The server security alert policy.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.ServerSecurityAlertPoliciesCreateOrUpdateResponse>
+        type: >-
+          Promise&lt;<xref
+          uid="Models.ServerSecurityAlertPoliciesCreateOrUpdateResponse" />&gt;
+        description: Promise<Models.ServerSecurityAlertPoliciesCreateOrUpdateResponse>
+  - name: 'get(string, string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.get'
     package: '@azure/arm-postgresql'
-  - uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.get'
-    name: 'get(string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a server's security alert policy.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function get(resourceGroupName: string, serverName: string, options?:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
-          description: |-
-            The name of the resource group that contains the resource. You can
-            obtain this value from the Azure Resource Manager API or the portal.
+          type: string
+          description: The name of the resource group. The name is case insensitive.
         - id: serverName
-          type:
-            - string
+          type: string
           description: The name of the server.
         - id: options
-          type:
-            - msRest.RequestOptionsBase
+          type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
-          optional: true
       return:
-        type:
-          - Promise<Models.ServerSecurityAlertPoliciesGetResponse>
-    package: '@azure/arm-postgresql'
-  - uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.get_2'
-    name: >-
+        type: >-
+          Promise&lt;<xref uid="Models.ServerSecurityAlertPoliciesGetResponse"
+          />&gt;
+        description: Promise<Models.ServerSecurityAlertPoliciesGetResponse>
+  - name: >-
       get(string, string, RequestOptionsBase,
       ServiceCallback<ServerSecurityAlertPolicy>)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.get_2'
+    package: '@azure/arm-postgresql'
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function get(resourceGroupName: string, serverName: string, options:
@@ -138,97 +132,201 @@ items:
         ServiceCallback<ServerSecurityAlertPolicy>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
-          description: |-
-            The name of the resource group that contains the resource. You can
-            obtain this value from the Azure Resource Manager API or the portal.
+          type: string
+          description: The name of the resource group. The name is case insensitive.
         - id: serverName
-          type:
-            - string
+          type: string
           description: The name of the server.
         - id: options
-          type:
-            - RequestOptionsBase
+          type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-postgresql.ServerSecurityAlertPolicy>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-postgresql.ServerSecurityAlertPolicy" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ServerSecurityAlertPoliciesGetResponse>
+  - name: 'get(string, string, ServiceCallback<ServerSecurityAlertPolicy>)'
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.get_1'
     package: '@azure/arm-postgresql'
-  - uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.get_1'
-    name: 'get(string, string, ServiceCallback<ServerSecurityAlertPolicy>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function get(resourceGroupName: string, serverName: string, callback:
         ServiceCallback<ServerSecurityAlertPolicy>)
       parameters:
         - id: resourceGroupName
-          type:
-            - string
-          description: |-
-            The name of the resource group that contains the resource. You can
-            obtain this value from the Azure Resource Manager API or the portal.
+          type: string
+          description: The name of the resource group. The name is case insensitive.
         - id: serverName
-          type:
-            - string
+          type: string
           description: The name of the server.
         - id: callback
-          type:
-            - ServiceCallback<@azure/arm-postgresql.ServerSecurityAlertPolicy>
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-postgresql.ServerSecurityAlertPolicy" />&gt;
           description: |
             The callback
-      return:
-        type:
-          - Promise<Models.ServerSecurityAlertPoliciesGetResponse>
+  - name: 'listByServer(string, string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.listByServer'
     package: '@azure/arm-postgresql'
-  - uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.constructor'
-    name: ServerSecurityAlertPolicies(PostgreSQLManagementClientContext)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Create a ServerSecurityAlertPolicies.
+    summary: Get the server's threat detection policies.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
-        new ServerSecurityAlertPolicies(client:
-        PostgreSQLManagementClientContext)
+        function listByServer(resourceGroupName: string, serverName: string,
+        options?: msRest.RequestOptionsBase)
       parameters:
-        - id: client
-          type:
-            - '@azure/arm-postgresql.PostgreSQLManagementClientContext'
-          description: |
-            Reference to the service client.
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: serverName
+          type: string
+          description: The name of the server.
+        - id: options
+          type: <xref uid="msRest.RequestOptionsBase" />
+          description: ''
+      return:
+        type: >-
+          Promise&lt;<xref
+          uid="Models.ServerSecurityAlertPoliciesListByServerResponse" />&gt;
+        description: Promise<Models.ServerSecurityAlertPoliciesListByServerResponse>
+  - name: >-
+      listByServer(string, string, RequestOptionsBase,
+      ServiceCallback<ServerSecurityAlertPolicyListResult>)
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.listByServer_2'
     package: '@azure/arm-postgresql'
-references:
-  - uid: '@azure/arm-postgresql.PostgreSQLManagementClientContext'
-    name: PostgreSQLManagementClientContext
-    spec.typeScript:
-      - name: PostgreSQLManagementClientContext
-        fullName: PostgreSQLManagementClientContext
-        uid: '@azure/arm-postgresql.PostgreSQLManagementClientContext'
-  - uid: '@azure/arm-postgresql.ServerSecurityAlertPolicy'
-    name: ServerSecurityAlertPolicy
-    spec.typeScript:
-      - name: ServerSecurityAlertPolicy
-        fullName: ServerSecurityAlertPolicy
-        uid: '@azure/arm-postgresql.ServerSecurityAlertPolicy'
-  - uid: ServiceCallback<@azure/arm-postgresql.ServerSecurityAlertPolicy>
-    name: ServerSecurityAlertPolicy>
-    spec.typeScript:
-      - name: ServiceCallback<
-        fullName: ServiceCallback<
-      - name: ServerSecurityAlertPolicy
-        fullName: ServerSecurityAlertPolicy
-        uid: '@azure/arm-postgresql.ServerSecurityAlertPolicy'
-      - name: '>'
-        fullName: '>'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listByServer(resourceGroupName: string, serverName: string,
+        options: RequestOptionsBase, callback:
+        ServiceCallback<ServerSecurityAlertPolicyListResult>)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: serverName
+          type: string
+          description: The name of the server.
+        - id: options
+          type: RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-postgresql.ServerSecurityAlertPolicyListResult"
+            />&gt;
+          description: |
+            The callback
+  - name: >-
+      listByServer(string, string,
+      ServiceCallback<ServerSecurityAlertPolicyListResult>)
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.listByServer_1'
+    package: '@azure/arm-postgresql'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listByServer(resourceGroupName: string, serverName: string,
+        callback: ServiceCallback<ServerSecurityAlertPolicyListResult>)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: serverName
+          type: string
+          description: The name of the server.
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-postgresql.ServerSecurityAlertPolicyListResult"
+            />&gt;
+          description: |
+            The callback
+  - name: 'listByServerNext(string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.listByServerNext'
+    package: '@azure/arm-postgresql'
+    summary: Get the server's threat detection policies.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listByServerNext(nextPageLink: string, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type: <xref uid="msRest.RequestOptionsBase" />
+          description: ''
+      return:
+        type: >-
+          Promise&lt;<xref
+          uid="Models.ServerSecurityAlertPoliciesListByServerNextResponse"
+          />&gt;
+        description: Promise<Models.ServerSecurityAlertPoliciesListByServerNextResponse>
+  - name: >-
+      listByServerNext(string, RequestOptionsBase,
+      ServiceCallback<ServerSecurityAlertPolicyListResult>)
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.listByServerNext_2'
+    package: '@azure/arm-postgresql'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listByServerNext(nextPageLink: string, options:
+        RequestOptionsBase, callback:
+        ServiceCallback<ServerSecurityAlertPolicyListResult>)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type: RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-postgresql.ServerSecurityAlertPolicyListResult"
+            />&gt;
+          description: |
+            The callback
+  - name: >-
+      listByServerNext(string,
+      ServiceCallback<ServerSecurityAlertPolicyListResult>)
+    uid: '@azure/arm-postgresql.ServerSecurityAlertPolicies.listByServerNext_1'
+    package: '@azure/arm-postgresql'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listByServerNext(nextPageLink: string, callback:
+        ServiceCallback<ServerSecurityAlertPolicyListResult>)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-postgresql.ServerSecurityAlertPolicyListResult"
+            />&gt;
+          description: |
+            The callback

@@ -1,106 +1,148 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-network.PrivateEndpointConnection'
-    name: PrivateEndpointConnection
-    fullName: PrivateEndpointConnection
-    children:
-      - '@azure/arm-network.PrivateEndpointConnection.id'
-      - '@azure/arm-network.PrivateEndpointConnection.name'
-      - '@azure/arm-network.PrivateEndpointConnection.privateEndpoint'
-      - >-
-        @azure/arm-network.PrivateEndpointConnection.privateLinkServiceConnectionState
-    langs:
-      - typeScript
-    type: interface
-    summary: PrivateEndpointConnection resource.
-    extends:
-      name: '@azure/arm-network.SubResource'
+### YamlMime:TSType
+name: PrivateEndpointConnection
+uid: '@azure/arm-network.PrivateEndpointConnection'
+package: '@azure/arm-network'
+summary: PrivateEndpointConnection resource.
+fullName: PrivateEndpointConnection
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: etag
+    uid: '@azure/arm-network.PrivateEndpointConnection.etag'
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.PrivateEndpointConnection.id'
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      A unique read-only string that changes whenever the resource is updated.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: etag
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'etag?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: id
+    uid: '@azure/arm-network.PrivateEndpointConnection.id'
+    package: '@azure/arm-network'
     summary: Resource ID.
-    optional: true
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: linkIdentifier
+    uid: '@azure/arm-network.PrivateEndpointConnection.linkIdentifier'
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.PrivateEndpointConnection.name'
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      The consumer link id.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: linkIdentifier
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'linkIdentifier?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: name
+    uid: '@azure/arm-network.PrivateEndpointConnection.name'
+    package: '@azure/arm-network'
     summary: >-
       The name of the resource that is unique within a resource group. This name
       can be used to
 
       access the resource.
-    optional: true
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'name?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: privateEndpoint
+    uid: '@azure/arm-network.PrivateEndpointConnection.privateEndpoint'
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.PrivateEndpointConnection.privateEndpoint'
-    name: privateEndpoint
+    summary: >-
+      The resource of private end point.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: privateEndpoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The resource of private end point.
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'privateEndpoint?: PrivateEndpoint'
       return:
-        type:
-          - '@azure/arm-network.PrivateEndpoint'
-    package: '@azure/arm-network'
-  - uid: >-
+        type: <xref uid="@azure/arm-network.PrivateEndpoint" />
+        description: ''
+  - name: privateLinkServiceConnectionState
+    uid: >-
       @azure/arm-network.PrivateEndpointConnection.privateLinkServiceConnectionState
-    name: privateLinkServiceConnectionState
-    fullName: privateLinkServiceConnectionState
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/arm-network'
     summary: >-
       A collection of information about the state of the connection between
       service consumer and
 
       provider.
-    optional: true
+    fullName: privateLinkServiceConnectionState
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'privateLinkServiceConnectionState?: PrivateLinkServiceConnectionState'
       return:
-        type:
-          - '@azure/arm-network.PrivateLinkServiceConnectionState'
+        type: <xref uid="@azure/arm-network.PrivateLinkServiceConnectionState" />
+        description: ''
+  - name: provisioningState
+    uid: '@azure/arm-network.PrivateEndpointConnection.provisioningState'
     package: '@azure/arm-network'
-references:
-  - uid: '@azure/arm-network.SubResource'
-    name: SubResource
-    spec.typeScript:
-      - name: SubResource
-        fullName: SubResource
-        uid: '@azure/arm-network.SubResource'
-  - uid: '@azure/arm-network.PrivateEndpoint'
-    name: PrivateEndpoint
-    spec.typeScript:
-      - name: PrivateEndpoint
-        fullName: PrivateEndpoint
-        uid: '@azure/arm-network.PrivateEndpoint'
-  - uid: '@azure/arm-network.PrivateLinkServiceConnectionState'
-    name: PrivateLinkServiceConnectionState
-    spec.typeScript:
-      - name: PrivateLinkServiceConnectionState
-        fullName: PrivateLinkServiceConnectionState
-        uid: '@azure/arm-network.PrivateLinkServiceConnectionState'
+    summary: >-
+      The provisioning state of the private endpoint connection resource.
+      Possible values include:
+
+      'Succeeded', 'Updating', 'Deleting', 'Failed'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: provisioningState
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'provisioningState?: ProvisioningState'
+      return:
+        type: <xref uid="@azure/arm-network.ProvisioningState" />
+        description: ''
+  - name: type
+    uid: '@azure/arm-network.PrivateEndpointConnection.type'
+    package: '@azure/arm-network'
+    summary: >-
+      The resource type.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+extends: <xref uid="@azure/arm-network.SubResource" />

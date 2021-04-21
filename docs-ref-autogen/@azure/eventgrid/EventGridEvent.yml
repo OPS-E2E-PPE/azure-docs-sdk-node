@@ -1,133 +1,102 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/eventgrid.EventGridEvent'
-    name: EventGridEvent
-    fullName: EventGridEvent
-    children:
-      - '@azure/eventgrid.EventGridEvent.data'
-      - '@azure/eventgrid.EventGridEvent.dataVersion'
-      - '@azure/eventgrid.EventGridEvent.eventTime'
-      - '@azure/eventgrid.EventGridEvent.eventType'
-      - '@azure/eventgrid.EventGridEvent.id'
-      - '@azure/eventgrid.EventGridEvent.metadataVersion'
-      - '@azure/eventgrid.EventGridEvent.subject'
-      - '@azure/eventgrid.EventGridEvent.topic'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: EventGridEvent
+uid: '@azure/eventgrid.EventGridEvent'
+package: '@azure/eventgrid'
+summary: An event in the in the Event Grid Schema.
+fullName: EventGridEvent<T>
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: data
+    uid: '@azure/eventgrid.EventGridEvent.data'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.EventGridEvent.data'
-    name: data
+    summary: Event data specific to the event type.
     fullName: data
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'data: any'
+      content: 'data: T'
       return:
-        type:
-          - any
+        type: T
+        description: ''
+  - name: dataVersion
+    uid: '@azure/eventgrid.EventGridEvent.dataVersion'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.EventGridEvent.dataVersion'
-    name: dataVersion
+    summary: The schema version of the data object.
     fullName: dataVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'dataVersion: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: eventTime
+    uid: '@azure/eventgrid.EventGridEvent.eventTime'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.EventGridEvent.eventTime'
-    name: eventTime
+    summary: The time the event was generated.
     fullName: eventTime
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'eventTime: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: eventType
+    uid: '@azure/eventgrid.EventGridEvent.eventType'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.EventGridEvent.eventType'
-    name: eventType
+    summary: The type of the event.
     fullName: eventType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'eventType: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: id
+    uid: '@azure/eventgrid.EventGridEvent.id'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.EventGridEvent.id'
-    name: id
+    summary: An unique identifier for the event.
     fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: subject
+    uid: '@azure/eventgrid.EventGridEvent.subject'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.EventGridEvent.metadataVersion'
-    name: metadataVersion
-    fullName: metadataVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'metadataVersion?: undefined | string'
-      return:
-        type:
-          - undefined | string
-    package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.EventGridEvent.subject'
-    name: subject
+    summary: A resource path relative to the topic path.
     fullName: subject
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'subject: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: topic
+    uid: '@azure/eventgrid.EventGridEvent.topic'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.EventGridEvent.topic'
-    name: topic
+    summary: The resource path of the event source.
     fullName: topic
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'topic?: undefined | string'
+      content: 'topic?: string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/eventgrid'
+        type: string
+        description: ''

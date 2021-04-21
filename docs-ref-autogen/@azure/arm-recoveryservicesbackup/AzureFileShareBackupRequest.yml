@@ -1,44 +1,38 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureFileShareBackupRequest'
-    name: AzureFileShareBackupRequest
-    fullName: AzureFileShareBackupRequest
-    children:
-      - '@azure/arm-recoveryservicesbackup.AzureFileShareBackupRequest.objectType'
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureFileShareBackupRequest.recoveryPointExpiryTimeInUTC
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: AzureFileShareBackupRequest
+uid: '@azure/arm-recoveryservicesbackup.AzureFileShareBackupRequest'
+package: '@azure/arm-recoveryservicesbackup'
+summary: AzureFileShare workload-specific backup request.
+fullName: AzureFileShareBackupRequest
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: objectType
+    uid: '@azure/arm-recoveryservicesbackup.AzureFileShareBackupRequest.objectType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureFileShareBackupRequest.objectType'
-    name: objectType
+    summary: Polymorphic Discriminator
     fullName: objectType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'objectType: "AzureFileShareBackupRequest"'
       return:
-        type:
-          - '"AzureFileShareBackupRequest"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"AzureFileShareBackupRequest"'
+        description: ''
+  - name: recoveryPointExpiryTimeInUTC
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureFileShareBackupRequest.recoveryPointExpiryTimeInUTC
-    name: recoveryPointExpiryTimeInUTC
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Backup copy will expire after the time specified (UTC).
     fullName: recoveryPointExpiryTimeInUTC
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'recoveryPointExpiryTimeInUTC?: Date'
       return:
-        type:
-          - Date
-    package: '@azure/arm-recoveryservicesbackup'
+        type: Date
+        description: ''
