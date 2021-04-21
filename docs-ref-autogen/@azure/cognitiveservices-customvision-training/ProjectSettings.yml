@@ -1,74 +1,154 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/cognitiveservices-customvision-training.ProjectSettings'
-    name: ProjectSettings
-    fullName: ProjectSettings
-    children:
-      - >-
-        @azure/cognitiveservices-customvision-training.ProjectSettings.classificationType
-      - '@azure/cognitiveservices-customvision-training.ProjectSettings.domainId'
-      - >-
-        @azure/cognitiveservices-customvision-training.ProjectSettings.targetExportPlatforms
-    langs:
-      - typeScript
-    type: interface
-    summary: Represents settings associated with a project.
-    package: '@azure/cognitiveservices-customvision-training'
-  - uid: >-
+### YamlMime:TSType
+name: ProjectSettings
+uid: '@azure/cognitiveservices-customvision-training.ProjectSettings'
+package: '@azure/cognitiveservices-customvision-training'
+summary: Represents settings associated with a project.
+fullName: ProjectSettings
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: classificationType
+    uid: >-
       @azure/cognitiveservices-customvision-training.ProjectSettings.classificationType
-    name: classificationType
-    fullName: classificationType
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/cognitiveservices-customvision-training'
     summary: >-
       Gets or sets the classification type of the project. Possible values
       include: 'Multiclass',
 
       'Multilabel'
-    optional: true
+    fullName: classificationType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'classificationType?: Classifier'
       return:
-        type:
-          - '@azure/cognitiveservices-customvision-training.Classifier'
+        type: >-
+          <xref uid="@azure/cognitiveservices-customvision-training.Classifier"
+          />
+        description: ''
+  - name: detectionParameters
+    uid: >-
+      @azure/cognitiveservices-customvision-training.ProjectSettings.detectionParameters
     package: '@azure/cognitiveservices-customvision-training'
-  - uid: '@azure/cognitiveservices-customvision-training.ProjectSettings.domainId'
-    name: domainId
-    fullName: domainId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      Detection parameters in use, if any.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: detectionParameters
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'detectionParameters?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: domainId
+    uid: '@azure/cognitiveservices-customvision-training.ProjectSettings.domainId'
+    package: '@azure/cognitiveservices-customvision-training'
     summary: Gets or sets the id of the Domain to use with this project.
-    optional: true
+    fullName: domainId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'domainId?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: exportModelContainerUri
+    uid: >-
+      @azure/cognitiveservices-customvision-training.ProjectSettings.exportModelContainerUri
     package: '@azure/cognitiveservices-customvision-training'
-  - uid: >-
+    summary: >-
+      The uri to the Azure Storage container that will be used to store exported
+      models.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: exportModelContainerUri
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'exportModelContainerUri?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: imageProcessingSettings
+    uid: >-
+      @azure/cognitiveservices-customvision-training.ProjectSettings.imageProcessingSettings
+    package: '@azure/cognitiveservices-customvision-training'
+    summary: Gets or sets image preprocessing settings.
+    fullName: imageProcessingSettings
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'imageProcessingSettings?: ImageProcessingSettings'
+      return:
+        type: >-
+          <xref
+          uid="@azure/cognitiveservices-customvision-training.ImageProcessingSettings"
+          />
+        description: ''
+  - name: notificationQueueUri
+    uid: >-
+      @azure/cognitiveservices-customvision-training.ProjectSettings.notificationQueueUri
+    package: '@azure/cognitiveservices-customvision-training'
+    summary: >-
+      The uri to the Azure Storage queue that will be used to send
+      project-related notifications.
+
+      See <a href="https://go.microsoft.com/fwlink/?linkid=2144149">Storage
+      notifications</a>
+
+      documentation for setup and message format.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: notificationQueueUri
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'notificationQueueUri?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: targetExportPlatforms
+    uid: >-
       @azure/cognitiveservices-customvision-training.ProjectSettings.targetExportPlatforms
-    name: targetExportPlatforms
-    fullName: targetExportPlatforms
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: '@azure/cognitiveservices-customvision-training'
     summary: A list of ExportPlatform that the trained model should be able to support.
-    optional: true
+    fullName: targetExportPlatforms
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'targetExportPlatforms?: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: useNegativeSet
+    uid: >-
+      @azure/cognitiveservices-customvision-training.ProjectSettings.useNegativeSet
     package: '@azure/cognitiveservices-customvision-training'
-references:
-  - uid: '@azure/cognitiveservices-customvision-training.Classifier'
-    name: Classifier
-    spec.typeScript:
-      - name: Classifier
-        fullName: Classifier
-        uid: '@azure/cognitiveservices-customvision-training.Classifier'
+    summary: >-
+      Indicates if negative set is being used.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: useNegativeSet
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'useNegativeSet?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''

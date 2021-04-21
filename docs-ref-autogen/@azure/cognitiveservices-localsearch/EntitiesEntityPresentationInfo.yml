@@ -1,114 +1,105 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo'
-    name: EntitiesEntityPresentationInfo
-    fullName: EntitiesEntityPresentationInfo
-    children:
-      - >-
-        @azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo.entityScenario
-      - >-
-        @azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo.entitySubTypeHints
-      - >-
-        @azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo.entityTypeDisplayHint
-      - >-
-        @azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo.entityTypeHints
-      - >-
-        @azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo.query
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/cognitiveservices-localsearch'
-  - uid: >-
+### YamlMime:TSType
+name: EntitiesEntityPresentationInfo
+uid: '@azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo'
+package: '@azure/cognitiveservices-localsearch'
+summary: Defines additional information about an entity such as type hints.
+fullName: EntitiesEntityPresentationInfo
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: entityScenario
+    uid: >-
       @azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo.entityScenario
-    name: entityScenario
+    package: '@azure/cognitiveservices-localsearch'
+    summary: >-
+      The supported scenario. Possible values include: 'DominantEntity',
+      'DisambiguationItem',
+
+      'ListItem'. Default value: 'DominantEntity'.
     fullName: entityScenario
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'entityScenario: EntityScenario'
       return:
-        type:
-          - '@azure/cognitiveservices-localsearch.EntityScenario'
-    package: '@azure/cognitiveservices-localsearch'
-  - uid: >-
+        type: <xref uid="@azure/cognitiveservices-localsearch.EntityScenario" />
+        description: ''
+  - name: entitySubTypeHints
+    uid: >-
       @azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo.entitySubTypeHints
-    name: entitySubTypeHints
+    package: '@azure/cognitiveservices-localsearch'
+    summary: >-
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: entitySubTypeHints
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'entitySubTypeHints?: string[]'
       return:
-        type:
-          - 'string[]'
-    package: '@azure/cognitiveservices-localsearch'
-  - uid: >-
+        type: 'string[]'
+        description: ''
+  - name: entityTypeDisplayHint
+    uid: >-
       @azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo.entityTypeDisplayHint
-    name: entityTypeDisplayHint
+    package: '@azure/cognitiveservices-localsearch'
+    summary: >-
+      A display version of the entity hint. For example, if entityTypeHints is
+      Artist, this field
+
+      may be set to American Singer.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: entityTypeDisplayHint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'entityTypeDisplayHint?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/cognitiveservices-localsearch'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: entityTypeHints
+    uid: >-
       @azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo.entityTypeHints
-    name: entityTypeHints
+    package: '@azure/cognitiveservices-localsearch'
+    summary: >-
+      A list of hints that indicate the entity's type. The list could contain a
+      single hint such as
+
+      Movie or a list of hints such as Place, LocalBusiness, Restaurant. Each
+      successive hint in the
+
+      array narrows the entity's type.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: entityTypeHints
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'entityTypeHints?: EntityType[]'
       return:
-        type:
-          - '@azure/cognitiveservices-localsearch.EntityType[]'
+        type: '<xref uid="@azure/cognitiveservices-localsearch.EntityType" />[]'
+        description: ''
+  - name: query
+    uid: '@azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo.query'
     package: '@azure/cognitiveservices-localsearch'
-  - uid: '@azure/cognitiveservices-localsearch.EntitiesEntityPresentationInfo.query'
-    name: query
+    summary: >-
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: query
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'query?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/cognitiveservices-localsearch'
-references:
-  - uid: '@azure/cognitiveservices-localsearch.EntityScenario'
-    name: EntityScenario
-    spec.typeScript:
-      - name: EntityScenario
-        fullName: EntityScenario
-        uid: '@azure/cognitiveservices-localsearch.EntityScenario'
-  - uid: '@azure/cognitiveservices-localsearch.EntityType[]'
-    name: 'EntityType[]'
-    spec.typeScript:
-      - name: EntityType
-        fullName: EntityType
-        uid: '@azure/cognitiveservices-localsearch.EntityType'
-      - name: '[]'
-        fullName: '[]'
+        type: undefined | string
+        description: ''

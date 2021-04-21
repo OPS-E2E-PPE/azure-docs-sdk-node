@@ -1,76 +1,93 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/service-bus'
-    name: '@azure/service-bus'
-    summary: ''
-    children:
-      - '@azure/service-bus.ReceiveMode'
-      - '@azure/service-bus.QueueClient'
-      - '@azure/service-bus.Receiver'
-      - '@azure/service-bus.Sender'
-      - '@azure/service-bus.ServiceBusClient'
-      - '@azure/service-bus.ServiceBusMessage'
-      - '@azure/service-bus.SessionReceiver'
-      - '@azure/service-bus.SubscriptionClient'
-      - '@azure/service-bus.TopicClient'
-      - '@azure/service-bus.Client'
-      - '@azure/service-bus.CorrelationFilter'
-      - '@azure/service-bus.DeadLetterOptions'
-      - '@azure/service-bus.MessageHandlerOptions'
-      - '@azure/service-bus.OnError'
-      - '@azure/service-bus.OnMessage'
-      - '@azure/service-bus.ReceivedMessage'
-      - '@azure/service-bus.ReceivedMessageInfo'
-      - '@azure/service-bus.RuleDescription'
-      - '@azure/service-bus.SendableMessageInfo'
-      - '@azure/service-bus.ServiceBusClientOptions'
-      - '@azure/service-bus.SessionMessageHandlerOptions'
-      - '@azure/service-bus.SessionReceiverOptions'
-    type: package
-    langs:
-      - typeScript
-references:
-  - uid: '@azure/service-bus.ReceiveMode'
-    name: ReceiveMode
-  - uid: '@azure/service-bus.QueueClient'
-    name: QueueClient
-  - uid: '@azure/service-bus.Receiver'
-    name: Receiver
-  - uid: '@azure/service-bus.Sender'
-    name: Sender
-  - uid: '@azure/service-bus.ServiceBusClient'
-    name: ServiceBusClient
-  - uid: '@azure/service-bus.ServiceBusMessage'
-    name: ServiceBusMessage
-  - uid: '@azure/service-bus.SessionReceiver'
-    name: SessionReceiver
-  - uid: '@azure/service-bus.SubscriptionClient'
-    name: SubscriptionClient
-  - uid: '@azure/service-bus.TopicClient'
-    name: TopicClient
-  - uid: '@azure/service-bus.Client'
-    name: Client
-  - uid: '@azure/service-bus.CorrelationFilter'
-    name: CorrelationFilter
-  - uid: '@azure/service-bus.DeadLetterOptions'
-    name: DeadLetterOptions
-  - uid: '@azure/service-bus.MessageHandlerOptions'
-    name: MessageHandlerOptions
-  - uid: '@azure/service-bus.OnError'
-    name: OnError
-  - uid: '@azure/service-bus.OnMessage'
-    name: OnMessage
-  - uid: '@azure/service-bus.ReceivedMessage'
-    name: ReceivedMessage
-  - uid: '@azure/service-bus.ReceivedMessageInfo'
-    name: ReceivedMessageInfo
-  - uid: '@azure/service-bus.RuleDescription'
-    name: RuleDescription
-  - uid: '@azure/service-bus.SendableMessageInfo'
-    name: SendableMessageInfo
-  - uid: '@azure/service-bus.ServiceBusClientOptions'
-    name: ServiceBusClientOptions
-  - uid: '@azure/service-bus.SessionMessageHandlerOptions'
-    name: SessionMessageHandlerOptions
-  - uid: '@azure/service-bus.SessionReceiverOptions'
-    name: SessionReceiverOptions
+### YamlMime:TSPackage
+uid: '@azure/service-bus'
+name: '@azure/service-bus'
+summary: ''
+type: package
+classes:
+  - '@azure/service-bus.ServiceBusAdministrationClient'
+  - '@azure/service-bus.ServiceBusClient'
+  - '@azure/service-bus.ServiceBusError'
+interfaces:
+  - '@azure/service-bus.AuthorizationRule'
+  - '@azure/service-bus.CorrelationRuleFilter'
+  - '@azure/service-bus.CreateMessageBatchOptions'
+  - '@azure/service-bus.CreateQueueOptions'
+  - '@azure/service-bus.CreateSubscriptionOptions'
+  - '@azure/service-bus.CreateTopicOptions'
+  - '@azure/service-bus.DeadLetterOptions'
+  - '@azure/service-bus.GetMessageIteratorOptions'
+  - '@azure/service-bus.MessageHandlers'
+  - '@azure/service-bus.NamespaceProperties'
+  - '@azure/service-bus.PeekMessagesOptions'
+  - '@azure/service-bus.ProcessErrorArgs'
+  - '@azure/service-bus.QueueProperties'
+  - '@azure/service-bus.QueueRuntimeProperties'
+  - '@azure/service-bus.ReceiveMessagesOptions'
+  - '@azure/service-bus.RuleProperties'
+  - '@azure/service-bus.ServiceBusClientOptions'
+  - '@azure/service-bus.ServiceBusConnectionStringProperties'
+  - '@azure/service-bus.ServiceBusMessage'
+  - '@azure/service-bus.ServiceBusMessageBatch'
+  - '@azure/service-bus.ServiceBusReceivedMessage'
+  - '@azure/service-bus.ServiceBusReceiver'
+  - '@azure/service-bus.ServiceBusReceiverOptions'
+  - '@azure/service-bus.ServiceBusSender'
+  - '@azure/service-bus.ServiceBusSessionReceiver'
+  - '@azure/service-bus.ServiceBusSessionReceiverOptions'
+  - '@azure/service-bus.SqlRuleFilter'
+  - '@azure/service-bus.SubscribeOptions'
+  - '@azure/service-bus.SubscriptionProperties'
+  - '@azure/service-bus.SubscriptionRuntimeProperties'
+  - '@azure/service-bus.TopicProperties'
+  - '@azure/service-bus.TopicRuntimeProperties'
+  - '@azure/service-bus.TryAddOptions'
+typeAliases:
+  - '@azure/service-bus.EntitiesResponse'
+  - '@azure/service-bus.EntityAvailabilityStatus'
+  - '@azure/service-bus.EntityStatus'
+  - '@azure/service-bus.OperationOptionsBase'
+  - '@azure/service-bus.ServiceBusErrorCode'
+  - '@azure/service-bus.SqlRuleAction'
+  - '@azure/service-bus.WithResponse'
+functions:
+  - name: isServiceBusError(unknown)
+    uid: '@azure/service-bus.isServiceBusError'
+    package: '@azure/service-bus'
+    summary: Determines if an error is of type `ServiceBusError`
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function isServiceBusError(err: unknown)'
+      parameters:
+        - id: err
+          type: unknown
+          description: |
+            An error to check to see if it's of type ServiceBusError
+      return:
+        type: boolean
+        description: ''
+  - name: parseServiceBusConnectionString(string)
+    uid: '@azure/service-bus.parseServiceBusConnectionString'
+    package: '@azure/service-bus'
+    summary: >-
+      Parses given connection string into the different properties applicable to
+      Azure Service Bus.
+
+      The properties are useful to then construct a ServiceBusClient.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function parseServiceBusConnectionString(connectionString: string)'
+      parameters:
+        - id: connectionString
+          type: string
+          description: >
+            The connection string associated with the Shared Access Policy
+            created
+
+            for the Service Bus namespace, queue or topic.
+      return:
+        type: <xref uid="@azure/service-bus.ServiceBusConnectionStringProperties" />
+        description: ''

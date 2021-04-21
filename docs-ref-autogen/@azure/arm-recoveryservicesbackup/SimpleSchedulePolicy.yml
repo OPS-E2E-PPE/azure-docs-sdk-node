@@ -1,110 +1,82 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.SimpleSchedulePolicy'
-    name: SimpleSchedulePolicy
-    fullName: SimpleSchedulePolicy
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.schedulePolicyType
-      - '@azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.scheduleRunDays'
-      - >-
-        @azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.scheduleRunFrequency
-      - '@azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.scheduleRunTimes'
-      - >-
-        @azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.scheduleWeeklyFrequency
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: SimpleSchedulePolicy
+uid: '@azure/arm-recoveryservicesbackup.SimpleSchedulePolicy'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Simple policy schedule.
+fullName: SimpleSchedulePolicy
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: schedulePolicyType
+    uid: '@azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.schedulePolicyType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.schedulePolicyType'
-    name: schedulePolicyType
+    summary: Polymorphic Discriminator
     fullName: schedulePolicyType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'schedulePolicyType: "SimpleSchedulePolicy"'
       return:
-        type:
-          - '"SimpleSchedulePolicy"'
+        type: '"SimpleSchedulePolicy"'
+        description: ''
+  - name: scheduleRunDays
+    uid: '@azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.scheduleRunDays'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.scheduleRunDays'
-    name: scheduleRunDays
+    summary: List of days of week this schedule has to be run.
     fullName: scheduleRunDays
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scheduleRunDays?: DayOfWeek[]'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.DayOfWeek[]'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '<xref uid="@azure/arm-recoveryservicesbackup.DayOfWeek" />[]'
+        description: ''
+  - name: scheduleRunFrequency
+    uid: >-
       @azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.scheduleRunFrequency
-    name: scheduleRunFrequency
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Frequency of the schedule operation of this policy. Possible values
+      include: 'Invalid',
+
+      'Daily', 'Weekly'
     fullName: scheduleRunFrequency
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scheduleRunFrequency?: ScheduleRunType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.ScheduleRunType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.ScheduleRunType" />
+        description: ''
+  - name: scheduleRunTimes
+    uid: '@azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.scheduleRunTimes'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.scheduleRunTimes'
-    name: scheduleRunTimes
+    summary: List of times of day this schedule has to be run.
     fullName: scheduleRunTimes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scheduleRunTimes?: Date[] | string[]'
       return:
-        type:
-          - 'Date[] | string[]'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: 'Date[] | string[]'
+        description: ''
+  - name: scheduleWeeklyFrequency
+    uid: >-
       @azure/arm-recoveryservicesbackup.SimpleSchedulePolicy.scheduleWeeklyFrequency
-    name: scheduleWeeklyFrequency
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: At every number weeks this schedule has to be run.
     fullName: scheduleWeeklyFrequency
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scheduleWeeklyFrequency?: undefined | number'
       return:
-        type:
-          - undefined | number
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.DayOfWeek[]'
-    name: 'DayOfWeek[]'
-    spec.typeScript:
-      - name: DayOfWeek
-        fullName: DayOfWeek
-        uid: '@azure/arm-recoveryservicesbackup.DayOfWeek'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-recoveryservicesbackup.ScheduleRunType'
-    name: ScheduleRunType
-    spec.typeScript:
-      - name: ScheduleRunType
-        fullName: ScheduleRunType
-        uid: '@azure/arm-recoveryservicesbackup.ScheduleRunType'
+        type: undefined | number
+        description: ''

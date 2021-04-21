@@ -1,124 +1,100 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint'
-    name: AzureWorkloadSQLPointInTimeRecoveryPoint
-    fullName: AzureWorkloadSQLPointInTimeRecoveryPoint
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.extendedInfo
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.objectType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.recoveryPointTimeInUTC
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.timeRanges
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.type
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureWorkloadSQLPointInTimeRecoveryPoint
+uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Recovery point specific to PointInTime
+fullName: AzureWorkloadSQLPointInTimeRecoveryPoint
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: extendedInfo
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.extendedInfo
-    name: extendedInfo
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Extended Info that provides data directory details. Will be populated in
+      two cases:
+
+      When a specific recovery point is accessed using GetRecoveryPoint
+
+      Or when ListRecoveryPoints is called for Log RP only with ExtendedInfo
+      query filter
     fullName: extendedInfo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'extendedInfo?: AzureWorkloadSQLRecoveryPointExtendedInfo'
       return:
-        type:
-          - >-
-            @azure/arm-recoveryservicesbackup.AzureWorkloadSQLRecoveryPointExtendedInfo
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservicesbackup.AzureWorkloadSQLRecoveryPointExtendedInfo"
+          />
+        description: ''
+  - name: objectType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.objectType
-    name: objectType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: objectType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'objectType: "AzureWorkloadSQLPointInTimeRecoveryPoint"'
       return:
-        type:
-          - '"AzureWorkloadSQLPointInTimeRecoveryPoint"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"AzureWorkloadSQLPointInTimeRecoveryPoint"'
+        description: ''
+  - name: recoveryPointTimeInUTC
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.recoveryPointTimeInUTC
-    name: recoveryPointTimeInUTC
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      UTC time at which recovery point was created
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: recoveryPointTimeInUTC
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'recoveryPointTimeInUTC?: Date'
       return:
-        type:
-          - Date
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: Date
+        description: ''
+  - name: timeRanges
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.timeRanges
-    name: timeRanges
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: List of log ranges
     fullName: timeRanges
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'timeRanges?: PointInTimeRange[]'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.PointInTimeRange[]'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '<xref uid="@azure/arm-recoveryservicesbackup.PointInTimeRange" />[]'
+        description: ''
+  - name: type
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRecoveryPoint.type
-    name: type
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Type of restore point. Possible values include: 'Invalid', 'Full', 'Log',
+      'Differential'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type?: RestorePointType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.RestorePointType'
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: >-
-      @azure/arm-recoveryservicesbackup.AzureWorkloadSQLRecoveryPointExtendedInfo
-    name: AzureWorkloadSQLRecoveryPointExtendedInfo
-    spec.typeScript:
-      - name: AzureWorkloadSQLRecoveryPointExtendedInfo
-        fullName: AzureWorkloadSQLRecoveryPointExtendedInfo
-        uid: >-
-          @azure/arm-recoveryservicesbackup.AzureWorkloadSQLRecoveryPointExtendedInfo
-  - uid: '@azure/arm-recoveryservicesbackup.PointInTimeRange[]'
-    name: 'PointInTimeRange[]'
-    spec.typeScript:
-      - name: PointInTimeRange
-        fullName: PointInTimeRange
-        uid: '@azure/arm-recoveryservicesbackup.PointInTimeRange'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-recoveryservicesbackup.RestorePointType'
-    name: RestorePointType
-    spec.typeScript:
-      - name: RestorePointType
-        fullName: RestorePointType
-        uid: '@azure/arm-recoveryservicesbackup.RestorePointType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.RestorePointType" />
+        description: ''

@@ -1,85 +1,85 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.OperationResultInfoBaseResource'
-    name: OperationResultInfoBaseResource
-    fullName: OperationResultInfoBaseResource
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.OperationResultInfoBaseResource.headers
-      - >-
-        @azure/arm-recoveryservicesbackup.OperationResultInfoBaseResource.operation
-      - >-
-        @azure/arm-recoveryservicesbackup.OperationResultInfoBaseResource.statusCode
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: '@azure/arm-recoveryservicesbackup.OperationWorkerResponse'
+### YamlMime:TSType
+name: OperationResultInfoBaseResource
+uid: '@azure/arm-recoveryservicesbackup.OperationResultInfoBaseResource'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Base class for operation result info.
+fullName: OperationResultInfoBaseResource
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: headers
+    uid: '@azure/arm-recoveryservicesbackup.OperationResultInfoBaseResource.headers'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.OperationResultInfoBaseResource.headers'
-    name: headers
+    summary: HTTP headers associated with this operation.
     fullName: headers
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'headers?: undefined | [key: string]: function'
       return:
-        type:
-          - 'undefined | [key: string]: function'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: 'undefined | [key: string]: function'
+        description: ''
+  - name: operation
+    uid: >-
       @azure/arm-recoveryservicesbackup.OperationResultInfoBaseResource.operation
-    name: operation
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: OperationResultInfoBaseResource operation
     fullName: operation
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'operation?: OperationResultInfoBaseUnion'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.OperationResultInfoBaseUnion'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservicesbackup.OperationResultInfoBaseUnion"
+          />
+        description: ''
+  - name: statusCode
+    uid: >-
       @azure/arm-recoveryservicesbackup.OperationResultInfoBaseResource.statusCode
-    name: statusCode
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      HTTP Status Code of the operation. Possible values include: 'Continue',
+      'SwitchingProtocols',
+
+      'OK', 'Created', 'Accepted', 'NonAuthoritativeInformation', 'NoContent',
+      'ResetContent',
+
+      'PartialContent', 'MultipleChoices', 'Ambiguous', 'MovedPermanently',
+      'Moved', 'Found',
+
+      'Redirect', 'SeeOther', 'RedirectMethod', 'NotModified', 'UseProxy',
+      'Unused',
+
+      'TemporaryRedirect', 'RedirectKeepVerb', 'BadRequest', 'Unauthorized',
+      'PaymentRequired',
+
+      'Forbidden', 'NotFound', 'MethodNotAllowed', 'NotAcceptable',
+      'ProxyAuthenticationRequired',
+
+      'RequestTimeout', 'Conflict', 'Gone', 'LengthRequired',
+      'PreconditionFailed',
+
+      'RequestEntityTooLarge', 'RequestUriTooLong', 'UnsupportedMediaType',
+
+      'RequestedRangeNotSatisfiable', 'ExpectationFailed', 'UpgradeRequired',
+      'InternalServerError',
+
+      'NotImplemented', 'BadGateway', 'ServiceUnavailable', 'GatewayTimeout',
+
+      'HttpVersionNotSupported'
     fullName: statusCode
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'statusCode?: HttpStatusCode'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.HttpStatusCode'
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.OperationWorkerResponse'
-    name: OperationWorkerResponse
-    spec.typeScript:
-      - name: OperationWorkerResponse
-        fullName: OperationWorkerResponse
-        uid: '@azure/arm-recoveryservicesbackup.OperationWorkerResponse'
-  - uid: '@azure/arm-recoveryservicesbackup.OperationResultInfoBaseUnion'
-    name: OperationResultInfoBaseUnion
-    spec.typeScript:
-      - name: OperationResultInfoBaseUnion
-        fullName: OperationResultInfoBaseUnion
-        uid: '@azure/arm-recoveryservicesbackup.OperationResultInfoBaseUnion'
-  - uid: '@azure/arm-recoveryservicesbackup.HttpStatusCode'
-    name: HttpStatusCode
-    spec.typeScript:
-      - name: HttpStatusCode
-        fullName: HttpStatusCode
-        uid: '@azure/arm-recoveryservicesbackup.HttpStatusCode'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.HttpStatusCode" />
+        description: ''
+extends: <xref uid="@azure/arm-recoveryservicesbackup.OperationWorkerResponse" />

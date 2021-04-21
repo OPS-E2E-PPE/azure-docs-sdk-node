@@ -1,91 +1,132 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-network.ConnectionMonitorParameters'
-    name: ConnectionMonitorParameters
-    fullName: ConnectionMonitorParameters
-    children:
-      - '@azure/arm-network.ConnectionMonitorParameters.autoStart'
-      - '@azure/arm-network.ConnectionMonitorParameters.destination'
-      - >-
-        @azure/arm-network.ConnectionMonitorParameters.monitoringIntervalInSeconds
-      - '@azure/arm-network.ConnectionMonitorParameters.source'
-    langs:
-      - typeScript
-    type: interface
-    summary: Parameters that define the operation to create a connection monitor.
+### YamlMime:TSType
+name: ConnectionMonitorParameters
+uid: '@azure/arm-network.ConnectionMonitorParameters'
+package: '@azure/arm-network'
+summary: Parameters that define the operation to create a connection monitor.
+fullName: ConnectionMonitorParameters
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: autoStart
+    uid: '@azure/arm-network.ConnectionMonitorParameters.autoStart'
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ConnectionMonitorParameters.autoStart'
-    name: autoStart
-    fullName: autoStart
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Determines if the connection monitor will start automatically once
       created. Default value:
 
       true.
-    optional: true
+    fullName: autoStart
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'autoStart?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
+        type: undefined | false | true
+        description: ''
+  - name: destination
+    uid: '@azure/arm-network.ConnectionMonitorParameters.destination'
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ConnectionMonitorParameters.destination'
-    name: destination
-    fullName: destination
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Describes the destination of connection monitor.
+    fullName: destination
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'destination: ConnectionMonitorDestination'
+      content: 'destination?: ConnectionMonitorDestination'
       return:
-        type:
-          - '@azure/arm-network.ConnectionMonitorDestination'
+        type: <xref uid="@azure/arm-network.ConnectionMonitorDestination" />
+        description: ''
+  - name: endpoints
+    uid: '@azure/arm-network.ConnectionMonitorParameters.endpoints'
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ConnectionMonitorParameters.monitoringIntervalInSeconds'
-    name: monitoringIntervalInSeconds
-    fullName: monitoringIntervalInSeconds
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: List of connection monitor endpoints.
+    fullName: endpoints
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'endpoints?: ConnectionMonitorEndpoint[]'
+      return:
+        type: '<xref uid="@azure/arm-network.ConnectionMonitorEndpoint" />[]'
+        description: ''
+  - name: monitoringIntervalInSeconds
+    uid: '@azure/arm-network.ConnectionMonitorParameters.monitoringIntervalInSeconds'
+    package: '@azure/arm-network'
     summary: 'Monitoring interval in seconds. Default value: 60.'
-    optional: true
+    fullName: monitoringIntervalInSeconds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'monitoringIntervalInSeconds?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: notes
+    uid: '@azure/arm-network.ConnectionMonitorParameters.notes'
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.ConnectionMonitorParameters.source'
-    name: source
-    fullName: source
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Describes the source of connection monitor.
+    summary: Optional notes to be associated with the connection monitor.
+    fullName: notes
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'source: ConnectionMonitorSource'
+      content: 'notes?: undefined | string'
       return:
-        type:
-          - '@azure/arm-network.ConnectionMonitorSource'
+        type: undefined | string
+        description: ''
+  - name: outputs
+    uid: '@azure/arm-network.ConnectionMonitorParameters.outputs'
     package: '@azure/arm-network'
-references:
-  - uid: '@azure/arm-network.ConnectionMonitorDestination'
-    name: ConnectionMonitorDestination
-    spec.typeScript:
-      - name: ConnectionMonitorDestination
-        fullName: ConnectionMonitorDestination
-        uid: '@azure/arm-network.ConnectionMonitorDestination'
-  - uid: '@azure/arm-network.ConnectionMonitorSource'
-    name: ConnectionMonitorSource
-    spec.typeScript:
-      - name: ConnectionMonitorSource
-        fullName: ConnectionMonitorSource
-        uid: '@azure/arm-network.ConnectionMonitorSource'
+    summary: List of connection monitor outputs.
+    fullName: outputs
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'outputs?: ConnectionMonitorOutput[]'
+      return:
+        type: '<xref uid="@azure/arm-network.ConnectionMonitorOutput" />[]'
+        description: ''
+  - name: source
+    uid: '@azure/arm-network.ConnectionMonitorParameters.source'
+    package: '@azure/arm-network'
+    summary: Describes the source of connection monitor.
+    fullName: source
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'source?: ConnectionMonitorSource'
+      return:
+        type: <xref uid="@azure/arm-network.ConnectionMonitorSource" />
+        description: ''
+  - name: testConfigurations
+    uid: '@azure/arm-network.ConnectionMonitorParameters.testConfigurations'
+    package: '@azure/arm-network'
+    summary: List of connection monitor test configurations.
+    fullName: testConfigurations
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'testConfigurations?: ConnectionMonitorTestConfiguration[]'
+      return:
+        type: '<xref uid="@azure/arm-network.ConnectionMonitorTestConfiguration" />[]'
+        description: ''
+  - name: testGroups
+    uid: '@azure/arm-network.ConnectionMonitorParameters.testGroups'
+    package: '@azure/arm-network'
+    summary: List of connection monitor test groups.
+    fullName: testGroups
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'testGroups?: ConnectionMonitorTestGroup[]'
+      return:
+        type: '<xref uid="@azure/arm-network.ConnectionMonitorTestGroup" />[]'
+        description: ''

@@ -1,101 +1,81 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-machinelearningcompute.AutoScaleConfiguration'
-    name: AutoScaleConfiguration
-    fullName: AutoScaleConfiguration
-    children:
-      - '@azure/arm-machinelearningcompute.AutoScaleConfiguration.maxReplicas'
-      - '@azure/arm-machinelearningcompute.AutoScaleConfiguration.minReplicas'
-      - >-
-        @azure/arm-machinelearningcompute.AutoScaleConfiguration.refreshPeriodInSeconds
-      - '@azure/arm-machinelearningcompute.AutoScaleConfiguration.status'
-      - >-
-        @azure/arm-machinelearningcompute.AutoScaleConfiguration.targetUtilization
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: AutoScaleConfiguration
+uid: '@azure/arm-machinelearningcompute.AutoScaleConfiguration'
+package: '@azure/arm-machinelearningcompute'
+summary: AutoScale configuration properties.
+fullName: AutoScaleConfiguration
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: maxReplicas
+    uid: '@azure/arm-machinelearningcompute.AutoScaleConfiguration.maxReplicas'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.AutoScaleConfiguration.maxReplicas'
-    name: maxReplicas
+    summary: 'The maximum number of replicas for each service. Default value: 100.'
     fullName: maxReplicas
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'maxReplicas?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: minReplicas
+    uid: '@azure/arm-machinelearningcompute.AutoScaleConfiguration.minReplicas'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.AutoScaleConfiguration.minReplicas'
-    name: minReplicas
+    summary: 'The minimum number of replicas for each service. Default value: 1.'
     fullName: minReplicas
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'minReplicas?: undefined | number'
       return:
-        type:
-          - undefined | number
-    package: '@azure/arm-machinelearningcompute'
-  - uid: >-
+        type: undefined | number
+        description: ''
+  - name: refreshPeriodInSeconds
+    uid: >-
       @azure/arm-machinelearningcompute.AutoScaleConfiguration.refreshPeriodInSeconds
-    name: refreshPeriodInSeconds
+    package: '@azure/arm-machinelearningcompute'
+    summary: Refresh period in seconds.
     fullName: refreshPeriodInSeconds
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'refreshPeriodInSeconds?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: status
+    uid: '@azure/arm-machinelearningcompute.AutoScaleConfiguration.status'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.AutoScaleConfiguration.status'
-    name: status
+    summary: >-
+      If auto-scale is enabled for all services. Each service can turn it off
+      individually. Possible
+
+      values include: 'Enabled', 'Disabled'. Default value: 'Disabled'.
     fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'status?: Status'
       return:
-        type:
-          - '@azure/arm-machinelearningcompute.Status'
+        type: <xref uid="@azure/arm-machinelearningcompute.Status" />
+        description: ''
+  - name: targetUtilization
+    uid: '@azure/arm-machinelearningcompute.AutoScaleConfiguration.targetUtilization'
     package: '@azure/arm-machinelearningcompute'
-  - uid: '@azure/arm-machinelearningcompute.AutoScaleConfiguration.targetUtilization'
-    name: targetUtilization
+    summary: The target utilization.
     fullName: targetUtilization
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'targetUtilization?: undefined | number'
       return:
-        type:
-          - undefined | number
-    package: '@azure/arm-machinelearningcompute'
-references:
-  - uid: '@azure/arm-machinelearningcompute.Status'
-    name: Status
-    spec.typeScript:
-      - name: Status
-        fullName: Status
-        uid: '@azure/arm-machinelearningcompute.Status'
+        type: undefined | number
+        description: ''

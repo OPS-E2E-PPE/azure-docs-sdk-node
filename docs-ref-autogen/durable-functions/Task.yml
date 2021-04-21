@@ -1,173 +1,78 @@
-### YamlMime:UniversalReference
-items:
-  - uid: durable-functions.Task
-    name: Task
-    fullName: Task
-    children:
-      - durable-functions.Task.action
-      - durable-functions.Task.exception
-      - durable-functions.Task.id
-      - durable-functions.Task.isCompleted
-      - durable-functions.Task.isFaulted
-      - durable-functions.Task.result
-      - durable-functions.Task.constructor
-      - durable-functions.Task.timestamp
-    langs:
-      - typeScript
-    type: class
-    summary: ''
+### YamlMime:TSType
+name: Task
+uid: durable-functions.Task
+package: durable-functions
+summary: |
+  Represents some pending action. Similar to a native JavaScript promise in
+  that it acts as a placeholder for outstanding asynchronous work, but has
+  a synchronous implementation and is specific to Durable Functions.
+  Tasks are only returned to an orchestration function when a
+  [[DurableOrchestrationContext]] operation is not called with `yield`. They
+  are useful for parallelization and timeout operations in conjunction with
+  Task.all and Task.any.
+
+  We discourage the usage of `instanceof`-style guards on this type,
+  as it is subject to change in the future.
+fullName: Task
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+properties:
+  - name: exception
+    uid: durable-functions.Task.exception
     package: durable-functions
-  - uid: durable-functions.Task.action
-    name: action
-    fullName: action
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'action: IAction'
-      return:
-        type:
-          - durable-functions.IAction
-    package: durable-functions
-  - uid: durable-functions.Task.exception
-    name: exception
+    summary: |-
+      The error thrown when attempting to perform the task's action. If
+      the Task has not yet completed or has completed successfully,
+      `undefined`.
     fullName: exception
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'exception?: unknown'
+      content: 'exception?: Error | undefined'
       return:
-        type:
-          - unknown
+        type: Error | undefined
+        description: ''
+  - name: isCompleted
+    uid: durable-functions.Task.isCompleted
     package: durable-functions
-  - uid: durable-functions.Task.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'id?: number'
-      return:
-        type:
-          - number
-    package: durable-functions
-  - uid: durable-functions.Task.isCompleted
-    name: isCompleted
+    summary: |-
+      Whether the task has completed. Note that completion is not
+      equivalent to success.
     fullName: isCompleted
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isCompleted: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: isFaulted
+    uid: durable-functions.Task.isFaulted
     package: durable-functions
-  - uid: durable-functions.Task.isFaulted
-    name: isFaulted
+    summary: Whether the task faulted in some way due to error.
     fullName: isFaulted
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isFaulted: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: result
+    uid: durable-functions.Task.result
     package: durable-functions
-  - uid: durable-functions.Task.result
-    name: result
+    summary: 'The result of the task, if completed. Otherwise `undefined`.'
     fullName: result
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'result?: unknown'
       return:
-        type:
-          - unknown
-    package: durable-functions
-  - uid: durable-functions.Task.constructor
-    name: 'Task(boolean, boolean, IAction, unknown, Date, number, unknown)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        new Task(isCompleted: boolean, isFaulted: boolean, action: IAction,
-        result?: unknown, timestamp?: Date, id?: number, exception?: unknown)
-      parameters:
-        - id: isCompleted
-          type:
-            - boolean
-          description: ''
-        - id: isFaulted
-          type:
-            - boolean
-          description: ''
-        - id: action
-          type:
-            - durable-functions.IAction
-          description: ''
-        - id: result
-          type:
-            - unknown
-          description: ''
-          optional: true
-        - id: timestamp
-          type:
-            - Date
-          description: ''
-          optional: true
-        - id: id
-          type:
-            - number
-          description: ''
-          optional: true
-        - id: exception
-          type:
-            - unknown
-          description: ''
-          optional: true
-    package: durable-functions
-  - uid: durable-functions.Task.timestamp
-    name: timestamp
-    fullName: timestamp
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'timestamp?: Date'
-      return:
-        type:
-          - Date
-    package: durable-functions
-references:
-  - uid: durable-functions.IAction
-    name: IAction
-    spec.typeScript:
-      - name: IAction
-        fullName: IAction
-        uid: durable-functions.IAction
+        type: unknown
+        description: ''

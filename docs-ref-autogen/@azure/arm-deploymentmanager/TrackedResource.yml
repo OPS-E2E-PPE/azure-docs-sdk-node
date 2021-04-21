@@ -1,99 +1,93 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-deploymentmanager.TrackedResource'
-    name: TrackedResource
-    fullName: TrackedResource
-    children:
-      - '@azure/arm-deploymentmanager.TrackedResource.id'
-      - '@azure/arm-deploymentmanager.TrackedResource.location'
-      - '@azure/arm-deploymentmanager.TrackedResource.name'
-      - '@azure/arm-deploymentmanager.TrackedResource.tags'
-      - '@azure/arm-deploymentmanager.TrackedResource.type'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: '@azure/arm-deploymentmanager.Resource'
+### YamlMime:TSType
+name: TrackedResource
+uid: '@azure/arm-deploymentmanager.TrackedResource'
+package: '@azure/arm-deploymentmanager'
+summary: The resource model definition for a ARM tracked top level resource
+fullName: TrackedResource
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: '@azure/arm-deploymentmanager.TrackedResource.id'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.TrackedResource.id'
-    name: id
+    summary: >-
+      Fully qualified resource Id for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: location
+    uid: '@azure/arm-deploymentmanager.TrackedResource.location'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.TrackedResource.location'
-    name: location
+    summary: The geo-location where the resource lives
     fullName: location
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'location: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: name
+    uid: '@azure/arm-deploymentmanager.TrackedResource.name'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.TrackedResource.name'
-    name: name
+    summary: >-
+      The name of the resource
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'name?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: tags
+    uid: '@azure/arm-deploymentmanager.TrackedResource.tags'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.TrackedResource.tags'
-    name: tags
+    summary: Resource tags.
     fullName: tags
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
-        type:
-          - 'undefined | [key: string]: string'
+        type: 'undefined | [key: string]: string'
+        description: ''
+  - name: type
+    uid: '@azure/arm-deploymentmanager.TrackedResource.type'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.TrackedResource.type'
-    name: type
+    summary: >-
+      The type of the resource. Ex- Microsoft.Compute/virtualMachines or
+
+      Microsoft.Storage/storageAccounts.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-deploymentmanager'
-references:
-  - uid: '@azure/arm-deploymentmanager.Resource'
-    name: Resource
-    spec.typeScript:
-      - name: Resource
-        fullName: Resource
-        uid: '@azure/arm-deploymentmanager.Resource'
+        type: undefined | string
+        description: ''
+extends: <xref uid="@azure/arm-deploymentmanager.Resource" />

@@ -1,315 +1,322 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem'
-    name: MabFileFolderProtectedItem
-    fullName: MabFileFolderProtectedItem
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.backupManagementType
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.backupSetName
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.computerName
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.containerName
-      - '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.createMode'
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.deferredDeleteSyncTimeInUTC
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.extendedInfo
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.friendlyName
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.isScheduledForDeferredDelete
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.lastBackupStatus
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.lastRecoveryPoint
-      - '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.policyId'
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.protectedItemType
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.protectionState
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.sourceResourceId
-      - >-
-        @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.workloadType
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: MabFileFolderProtectedItem
+uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem'
+package: '@azure/arm-recoveryservicesbackup'
+summary: MAB workload-specific backup item.
+fullName: MabFileFolderProtectedItem
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Type of backup management for the backed up item. Possible values include:
+      'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.BackupManagementType" />
+        description: ''
+  - name: backupSetName
+    uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.backupSetName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.backupSetName'
-    name: backupSetName
+    summary: Name of the backup set the backup item belongs to
     fullName: backupSetName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupSetName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: computerName
+    uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.computerName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.computerName'
-    name: computerName
+    summary: Name of the computer associated with this backup item.
     fullName: computerName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'computerName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: containerName
+    uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.containerName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.containerName'
-    name: containerName
+    summary: Unique name of container
     fullName: containerName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'containerName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: createMode
+    uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.createMode'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.createMode'
-    name: createMode
+    summary: >-
+      Create mode to indicate recovery of existing soft deleted data source or
+      creation of new data
+
+      source. Possible values include: 'Invalid', 'Default', 'Recover'
     fullName: createMode
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'createMode?: CreateMode'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.CreateMode'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.CreateMode" />
+        description: ''
+  - name: deferredDeleteSyncTimeInUTC
+    uid: >-
       @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.deferredDeleteSyncTimeInUTC
-    name: deferredDeleteSyncTimeInUTC
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Sync time for deferred deletion in UTC
     fullName: deferredDeleteSyncTimeInUTC
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deferredDeleteSyncTimeInUTC?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: deferredDeleteTimeInUTC
+    uid: >-
+      @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.deferredDeleteTimeInUTC
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.extendedInfo'
-    name: extendedInfo
+    summary: Time for deferred deletion in UTC
+    fullName: deferredDeleteTimeInUTC
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'deferredDeleteTimeInUTC?: Date'
+      return:
+        type: Date
+        description: ''
+  - name: deferredDeleteTimeRemaining
+    uid: >-
+      @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.deferredDeleteTimeRemaining
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Time remaining before the DS marked for deferred delete is permanently
+      deleted
+    fullName: deferredDeleteTimeRemaining
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'deferredDeleteTimeRemaining?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: extendedInfo
+    uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.extendedInfo'
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Additional information with this backup item.
     fullName: extendedInfo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'extendedInfo?: MabFileFolderProtectedItemExtendedInfo'
       return:
-        type:
-          - >-
-            @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItemExtendedInfo
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItemExtendedInfo"
+          />
+        description: ''
+  - name: friendlyName
+    uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.friendlyName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.friendlyName'
-    name: friendlyName
+    summary: Friendly name of this backup item.
     fullName: friendlyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: isDeferredDeleteScheduleUpcoming
+    uid: >-
+      @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.isDeferredDeleteScheduleUpcoming
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+    summary: Flag to identify whether the deferred deleted DS is to be purged soon
+    fullName: isDeferredDeleteScheduleUpcoming
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isDeferredDeleteScheduleUpcoming?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: isRehydrate
+    uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.isRehydrate'
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Flag to identify that deferred deleted DS is to be moved into Pause state
+    fullName: isRehydrate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isRehydrate?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: isScheduledForDeferredDelete
+    uid: >-
       @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.isScheduledForDeferredDelete
-    name: isScheduledForDeferredDelete
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Flag to identify whether the DS is scheduled for deferred delete
     fullName: isScheduledForDeferredDelete
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isScheduledForDeferredDelete?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | false | true
+        description: ''
+  - name: lastBackupStatus
+    uid: >-
       @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.lastBackupStatus
-    name: lastBackupStatus
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Status of last backup operation.
     fullName: lastBackupStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastBackupStatus?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: lastBackupTime
+    uid: >-
+      @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.lastBackupTime
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+    summary: Timestamp of the last backup operation on this backup item.
+    fullName: lastBackupTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lastBackupTime?: Date'
+      return:
+        type: Date
+        description: ''
+  - name: lastRecoveryPoint
+    uid: >-
       @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.lastRecoveryPoint
-    name: lastRecoveryPoint
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Timestamp when the last (latest) backup copy was created for this backup
+      item.
     fullName: lastRecoveryPoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastRecoveryPoint?: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: policyId
+    uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.policyId'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.policyId'
-    name: policyId
+    summary: ID of the backup policy with which this item is backed up.
     fullName: policyId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'policyId?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: protectedItemType
+    uid: >-
       @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.protectedItemType
-    name: protectedItemType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: protectedItemType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectedItemType: "MabFileFolderProtectedItem"'
       return:
-        type:
-          - '"MabFileFolderProtectedItem"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"MabFileFolderProtectedItem"'
+        description: ''
+  - name: protectionState
+    uid: >-
       @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.protectionState
-    name: protectionState
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: 'Protected, ProtectionStopped, IRPending or ProtectionError'
     fullName: protectionState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectionState?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: sourceResourceId
+    uid: >-
       @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.sourceResourceId
-    name: sourceResourceId
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: ARM ID of the resource to be backed up.
     fullName: sourceResourceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceResourceId?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: workloadType
+    uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.workloadType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItem.workloadType'
-    name: workloadType
+    summary: >-
+      Type of workload this item represents. Possible values include: 'Invalid',
+      'VM', 'FileFolder',
+
+      'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM',
+      'SystemState', 'Client',
+
+      'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase',
+      'SAPAseDatabase'
     fullName: workloadType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workloadType?: DataSourceType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.DataSourceType'
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-    name: BackupManagementType
-    spec.typeScript:
-      - name: BackupManagementType
-        fullName: BackupManagementType
-        uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-  - uid: '@azure/arm-recoveryservicesbackup.CreateMode'
-    name: CreateMode
-    spec.typeScript:
-      - name: CreateMode
-        fullName: CreateMode
-        uid: '@azure/arm-recoveryservicesbackup.CreateMode'
-  - uid: '@azure/arm-recoveryservicesbackup.MabFileFolderProtectedItemExtendedInfo'
-    name: MabFileFolderProtectedItemExtendedInfo
-    spec.typeScript:
-      - name: MabFileFolderProtectedItemExtendedInfo
-        fullName: MabFileFolderProtectedItemExtendedInfo
-        uid: >-
-          @azure/arm-recoveryservicesbackup.MabFileFolderProtectedItemExtendedInfo
-  - uid: '@azure/arm-recoveryservicesbackup.DataSourceType'
-    name: DataSourceType
-    spec.typeScript:
-      - name: DataSourceType
-        fullName: DataSourceType
-        uid: '@azure/arm-recoveryservicesbackup.DataSourceType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.DataSourceType" />
+        description: ''

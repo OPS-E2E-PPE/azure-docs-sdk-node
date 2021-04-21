@@ -1,50 +1,75 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-iotcentral.Operation'
-    name: Operation
-    fullName: Operation
-    children:
-      - '@azure/arm-iotcentral.Operation.display'
-      - '@azure/arm-iotcentral.Operation.name'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: Operation
+uid: '@azure/arm-iotcentral.Operation'
+package: '@azure/arm-iotcentral'
+summary: IoT Central REST API operation
+fullName: Operation
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: display
+    uid: '@azure/arm-iotcentral.Operation.display'
     package: '@azure/arm-iotcentral'
-  - uid: '@azure/arm-iotcentral.Operation.display'
-    name: display
+    summary: The object that represents the operation.
     fullName: display
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'display?: OperationDisplay'
       return:
-        type:
-          - '@azure/arm-iotcentral.OperationDisplay'
+        type: <xref uid="@azure/arm-iotcentral.OperationDisplay" />
+        description: ''
+  - name: name
+    uid: '@azure/arm-iotcentral.Operation.name'
     package: '@azure/arm-iotcentral'
-  - uid: '@azure/arm-iotcentral.Operation.name'
-    name: name
+    summary: >-
+      Operation name: {provider}/{resource}/{read | write | action | delete}
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'name?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: origin
+    uid: '@azure/arm-iotcentral.Operation.origin'
     package: '@azure/arm-iotcentral'
-references:
-  - uid: '@azure/arm-iotcentral.OperationDisplay'
-    name: OperationDisplay
-    spec.typeScript:
-      - name: OperationDisplay
-        fullName: OperationDisplay
-        uid: '@azure/arm-iotcentral.OperationDisplay'
+    summary: >-
+      The intended executor of the operation.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: origin
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'origin?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: properties
+    uid: '@azure/arm-iotcentral.Operation.properties'
+    package: '@azure/arm-iotcentral'
+    summary: >-
+      Additional descriptions for the operation.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: properties
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'properties?: any'
+      return:
+        type: any
+        description: ''

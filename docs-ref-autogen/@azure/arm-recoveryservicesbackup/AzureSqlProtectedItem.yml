@@ -1,239 +1,270 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem'
-    name: AzureSqlProtectedItem
-    fullName: AzureSqlProtectedItem
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.backupManagementType
-      - '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.backupSetName'
-      - '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.containerName'
-      - '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.createMode'
-      - '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.extendedInfo'
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.lastRecoveryPoint
-      - '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.policyId'
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.protectedItemDataId
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.protectedItemType
-      - '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.protectionState'
-      - '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.sourceResourceId'
-      - '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.workloadType'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureSqlProtectedItem
+uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Azure SQL workload-specific backup item.
+fullName: AzureSqlProtectedItem
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Type of backup management for the backed up item. Possible values include:
+      'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.BackupManagementType" />
+        description: ''
+  - name: backupSetName
+    uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.backupSetName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.backupSetName'
-    name: backupSetName
+    summary: Name of the backup set the backup item belongs to
     fullName: backupSetName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupSetName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: containerName
+    uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.containerName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.containerName'
-    name: containerName
+    summary: Unique name of container
     fullName: containerName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'containerName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: createMode
+    uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.createMode'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.createMode'
-    name: createMode
+    summary: >-
+      Create mode to indicate recovery of existing soft deleted data source or
+      creation of new data
+
+      source. Possible values include: 'Invalid', 'Default', 'Recover'
     fullName: createMode
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'createMode?: CreateMode'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.CreateMode'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.CreateMode" />
+        description: ''
+  - name: deferredDeleteTimeInUTC
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.deferredDeleteTimeInUTC
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.extendedInfo'
-    name: extendedInfo
+    summary: Time for deferred deletion in UTC
+    fullName: deferredDeleteTimeInUTC
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'deferredDeleteTimeInUTC?: Date'
+      return:
+        type: Date
+        description: ''
+  - name: deferredDeleteTimeRemaining
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.deferredDeleteTimeRemaining
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Time remaining before the DS marked for deferred delete is permanently
+      deleted
+    fullName: deferredDeleteTimeRemaining
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'deferredDeleteTimeRemaining?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: extendedInfo
+    uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.extendedInfo'
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Additional information for this backup item.
     fullName: extendedInfo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'extendedInfo?: AzureSqlProtectedItemExtendedInfo'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItemExtendedInfo'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservicesbackup.AzureSqlProtectedItemExtendedInfo"
+          />
+        description: ''
+  - name: isDeferredDeleteScheduleUpcoming
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.isDeferredDeleteScheduleUpcoming
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.lastRecoveryPoint'
-    name: lastRecoveryPoint
+    summary: Flag to identify whether the deferred deleted DS is to be purged soon
+    fullName: isDeferredDeleteScheduleUpcoming
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isDeferredDeleteScheduleUpcoming?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: isRehydrate
+    uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.isRehydrate'
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Flag to identify that deferred deleted DS is to be moved into Pause state
+    fullName: isRehydrate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isRehydrate?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: isScheduledForDeferredDelete
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.isScheduledForDeferredDelete
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Flag to identify whether the DS is scheduled for deferred delete
+    fullName: isScheduledForDeferredDelete
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isScheduledForDeferredDelete?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: lastRecoveryPoint
+    uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.lastRecoveryPoint'
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Timestamp when the last (latest) backup copy was created for this backup
+      item.
     fullName: lastRecoveryPoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastRecoveryPoint?: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: policyId
+    uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.policyId'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.policyId'
-    name: policyId
+    summary: ID of the backup policy with which this item is backed up.
     fullName: policyId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'policyId?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: protectedItemDataId
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.protectedItemDataId
-    name: protectedItemDataId
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Internal ID of a backup item. Used by Azure SQL Backup engine to contact
+      Recovery Services.
     fullName: protectedItemDataId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectedItemDataId?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: protectedItemType
+    uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.protectedItemType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.protectedItemType'
-    name: protectedItemType
+    summary: Polymorphic Discriminator
     fullName: protectedItemType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectedItemType: "Microsoft.Sql/servers/databases"'
       return:
-        type:
-          - '"Microsoft.Sql/servers/databases"'
+        type: '"<xref uid="Microsoft.Sql/servers/databases" />"'
+        description: ''
+  - name: protectionState
+    uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.protectionState'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.protectionState'
-    name: protectionState
+    summary: >-
+      Backup state of the backed up item. Possible values include: 'Invalid',
+      'IRPending',
+
+      'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
     fullName: protectionState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectionState?: ProtectedItemState'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.ProtectedItemState'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.ProtectedItemState" />
+        description: ''
+  - name: sourceResourceId
+    uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.sourceResourceId'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.sourceResourceId'
-    name: sourceResourceId
+    summary: ARM ID of the resource to be backed up.
     fullName: sourceResourceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceResourceId?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: workloadType
+    uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.workloadType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItem.workloadType'
-    name: workloadType
+    summary: >-
+      Type of workload this item represents. Possible values include: 'Invalid',
+      'VM', 'FileFolder',
+
+      'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM',
+      'SystemState', 'Client',
+
+      'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase',
+      'SAPAseDatabase'
     fullName: workloadType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workloadType?: DataSourceType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.DataSourceType'
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-    name: BackupManagementType
-    spec.typeScript:
-      - name: BackupManagementType
-        fullName: BackupManagementType
-        uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-  - uid: '@azure/arm-recoveryservicesbackup.CreateMode'
-    name: CreateMode
-    spec.typeScript:
-      - name: CreateMode
-        fullName: CreateMode
-        uid: '@azure/arm-recoveryservicesbackup.CreateMode'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItemExtendedInfo'
-    name: AzureSqlProtectedItemExtendedInfo
-    spec.typeScript:
-      - name: AzureSqlProtectedItemExtendedInfo
-        fullName: AzureSqlProtectedItemExtendedInfo
-        uid: '@azure/arm-recoveryservicesbackup.AzureSqlProtectedItemExtendedInfo'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemState'
-    name: ProtectedItemState
-    spec.typeScript:
-      - name: ProtectedItemState
-        fullName: ProtectedItemState
-        uid: '@azure/arm-recoveryservicesbackup.ProtectedItemState'
-  - uid: '@azure/arm-recoveryservicesbackup.DataSourceType'
-    name: DataSourceType
-    spec.typeScript:
-      - name: DataSourceType
-        fullName: DataSourceType
-        uid: '@azure/arm-recoveryservicesbackup.DataSourceType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.DataSourceType" />
+        description: ''

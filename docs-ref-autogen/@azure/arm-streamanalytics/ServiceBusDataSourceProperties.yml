@@ -1,65 +1,85 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-streamanalytics.ServiceBusDataSourceProperties'
-    name: ServiceBusDataSourceProperties
-    fullName: ServiceBusDataSourceProperties
-    children:
-      - >-
-        @azure/arm-streamanalytics.ServiceBusDataSourceProperties.serviceBusNamespace
-      - >-
-        @azure/arm-streamanalytics.ServiceBusDataSourceProperties.sharedAccessPolicyKey
-      - >-
-        @azure/arm-streamanalytics.ServiceBusDataSourceProperties.sharedAccessPolicyName
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: ServiceBusDataSourceProperties
+uid: '@azure/arm-streamanalytics.ServiceBusDataSourceProperties'
+package: '@azure/arm-streamanalytics'
+summary: >-
+  The common properties that are associated with Service Bus data sources
+  (Queues, Topics, Event
+
+  Hubs, etc.).
+fullName: ServiceBusDataSourceProperties
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: authenticationMode
+    uid: >-
+      @azure/arm-streamanalytics.ServiceBusDataSourceProperties.authenticationMode
     package: '@azure/arm-streamanalytics'
-  - uid: >-
+    summary: >-
+      Authentication Mode. Possible values include: 'Msi', 'UserToken',
+      'ConnectionString'
+    fullName: authenticationMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authenticationMode?: AuthenticationMode'
+      return:
+        type: <xref uid="@azure/arm-streamanalytics.AuthenticationMode" />
+        description: ''
+  - name: serviceBusNamespace
+    uid: >-
       @azure/arm-streamanalytics.ServiceBusDataSourceProperties.serviceBusNamespace
-    name: serviceBusNamespace
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The namespace that is associated with the desired Event Hub, Service Bus
+      Queue, Service Bus
+
+      Topic, etc. Required on PUT (CreateOrReplace) requests.
     fullName: serviceBusNamespace
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'serviceBusNamespace?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-streamanalytics'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: sharedAccessPolicyKey
+    uid: >-
       @azure/arm-streamanalytics.ServiceBusDataSourceProperties.sharedAccessPolicyKey
-    name: sharedAccessPolicyKey
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The shared access policy key for the specified shared access policy.
+      Required on PUT
+
+      (CreateOrReplace) requests.
     fullName: sharedAccessPolicyKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sharedAccessPolicyKey?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-streamanalytics'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: sharedAccessPolicyName
+    uid: >-
       @azure/arm-streamanalytics.ServiceBusDataSourceProperties.sharedAccessPolicyName
-    name: sharedAccessPolicyName
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The shared access policy name for the Event Hub, Service Bus Queue,
+      Service Bus Topic, etc.
+
+      Required on PUT (CreateOrReplace) requests.
     fullName: sharedAccessPolicyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sharedAccessPolicyName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-streamanalytics'
+        type: undefined | string
+        description: ''

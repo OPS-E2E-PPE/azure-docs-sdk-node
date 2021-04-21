@@ -1,223 +1,160 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-iothub.Configuration
-    name: Configuration
-    fullName: Configuration
-    children:
-      - azure-iothub.Configuration.content
-      - azure-iothub.Configuration.createdTimeUtc
-      - azure-iothub.Configuration.etag
-      - azure-iothub.Configuration.id
-      - azure-iothub.Configuration.labels
-      - azure-iothub.Configuration.lastUpdatedTimeUtc
-      - azure-iothub.Configuration.metrics
-      - azure-iothub.Configuration.priority
-      - azure-iothub.Configuration.schemaVersion
-      - azure-iothub.Configuration.systemMetrics
-      - azure-iothub.Configuration.targetCondition
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      The Configuration object represents the configuration of a single device
-      or it can represent a deployment which can be applied as a configuration
-      to devices based on the targetCondition.
+### YamlMime:TSType
+name: Configuration
+uid: azure-iothub.Configuration
+package: azure-iothub
+summary: The configuration for Iot Hub device and module twins.
+fullName: Configuration
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: content
+    uid: azure-iothub.Configuration.content
     package: azure-iothub
-  - uid: azure-iothub.Configuration.content
-    name: content
+    summary: The content of the configuration.
     fullName: content
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Content of the configuration
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'content?: ConfigurationContent'
       return:
-        type:
-          - azure-iothub.ConfigurationContent
+        type: <xref uid="azure-iothub.ConfigurationContent" />
+        description: ''
+  - name: createdTimeUtc
+    uid: azure-iothub.Configuration.createdTimeUtc
     package: azure-iothub
-  - uid: azure-iothub.Configuration.createdTimeUtc
-    name: createdTimeUtc
+    summary: The creation date and time of the configuration.
     fullName: createdTimeUtc
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'createdTimeUtc?: string'
+      content: 'createdTimeUtc?: Date'
       return:
-        type:
-          - string
+        type: Date
+        description: ''
+  - name: etag
+    uid: azure-iothub.Configuration.etag
     package: azure-iothub
-  - uid: azure-iothub.Configuration.etag
-    name: etag
+    summary: The ETag of the configuration.
     fullName: etag
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      A string used for protecting opportunistic concurrency updates by the
-      caller. This gets updated when deployment is update
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'etag?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: id
+    uid: azure-iothub.Configuration.id
     package: azure-iothub
-  - uid: azure-iothub.Configuration.id
-    name: id
+    summary: The unique identifier of the configuration.
     fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Id of this configuration.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'id: string'
+      content: 'id?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: labels
+    uid: azure-iothub.Configuration.labels
     package: azure-iothub
-  - uid: azure-iothub.Configuration.labels
-    name: labels
+    summary: The key-value pairs used to describe the configuration.
     fullName: labels
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      This is a dictionary<string, string> of labels.
-
-      Labels are a set of case-sensitive string key value pairs that you can use
-      to describe a deployment.
-
-      Both keys and values are case-sensitive strings (up to 128 char long) of
-      ASCII 7-bit alphanumeric chars + {'-', ':', '.', '+', '%', '_', '#', '*',
-      '?', '!', '(', ')', ',', '=', '@', ';', '''}
-
-      (Note that $ is reserved)
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'labels?: [key: string]: string'
       return:
-        type:
-          - '[key: string]: string'
+        type: '[key: string]\: string'
+        description: ''
+  - name: lastUpdatedTimeUtc
+    uid: azure-iothub.Configuration.lastUpdatedTimeUtc
     package: azure-iothub
-  - uid: azure-iothub.Configuration.lastUpdatedTimeUtc
-    name: lastUpdatedTimeUtc
+    summary: The update date and time of the configuration.
     fullName: lastUpdatedTimeUtc
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'lastUpdatedTimeUtc?: string'
+      content: 'lastUpdatedTimeUtc?: Date'
       return:
-        type:
-          - string
+        type: Date
+        description: ''
+  - name: metrics
+    uid: azure-iothub.Configuration.metrics
     package: azure-iothub
-  - uid: azure-iothub.Configuration.metrics
-    name: metrics
+    summary: >-
+      The custom metrics specified by the developer as queries against twin
+      reported properties.
     fullName: metrics
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Custom Configuration Metrics
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'metrics?: ConfigurationMetrics'
       return:
-        type:
-          - azure-iothub.ConfigurationMetrics
+        type: <xref uid="azure-iothub.ConfigurationMetrics" />
+        description: ''
+  - name: priority
+    uid: azure-iothub.Configuration.priority
     package: azure-iothub
-  - uid: azure-iothub.Configuration.priority
-    name: priority
+    summary: The priority number assigned to the configuration.
     fullName: priority
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      When two deployments target the same device, the deployment with higher
-      priority gets applied. If two deployments have the same priority, the
-      deployment with the later creation date gets applied.
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'priority?: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: schemaVersion
+    uid: azure-iothub.Configuration.schemaVersion
     package: azure-iothub
-  - uid: azure-iothub.Configuration.schemaVersion
-    name: schemaVersion
+    summary: The schema version of the configuration.
     fullName: schemaVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Version of the schema.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'schemaVersion: string'
+      content: 'schemaVersion?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: systemMetrics
+    uid: azure-iothub.Configuration.systemMetrics
     package: azure-iothub
-  - uid: azure-iothub.Configuration.systemMetrics
-    name: systemMetrics
+    summary: The system metrics computed by the IoT Hub that cannot be customized.
     fullName: systemMetrics
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: System Configuration Metrics
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'systemMetrics?: ConfigurationMetrics'
       return:
-        type:
-          - azure-iothub.ConfigurationMetrics
+        type: <xref uid="azure-iothub.ConfigurationMetrics" />
+        description: ''
+  - name: targetCondition
+    uid: azure-iothub.Configuration.targetCondition
     package: azure-iothub
-  - uid: azure-iothub.Configuration.targetCondition
-    name: targetCondition
-    fullName: targetCondition
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
-      The target condition is continuously evaluated to include any new devices
-      that meet the requirements or remove devices that no longer do through the
-      life time of the deployment.
+      The query used to define the targeted devices or modules. The query is
+      based on twin tags
 
-      Use any Boolean condition on device twins tags or deviceId to select the
-      target devices, e.g. tags.environment='prod' or deviceId='linuxprod' or
-      tags.environment = 'prod' AND tags.location = 'westus'.
-    optional: true
+      and/or reported properties.
+    fullName: targetCondition
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'targetCondition?: string'
       return:
-        type:
-          - string
-    package: azure-iothub
-references:
-  - uid: azure-iothub.ConfigurationContent
-    name: ConfigurationContent
-    spec.typeScript:
-      - name: ConfigurationContent
-        fullName: ConfigurationContent
-        uid: azure-iothub.ConfigurationContent
-  - uid: azure-iothub.ConfigurationMetrics
-    name: ConfigurationMetrics
-    spec.typeScript:
-      - name: ConfigurationMetrics
-        fullName: ConfigurationMetrics
-        uid: azure-iothub.ConfigurationMetrics
+        type: string
+        description: ''

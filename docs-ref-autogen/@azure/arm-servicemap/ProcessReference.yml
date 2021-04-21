@@ -1,96 +1,88 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-servicemap.ProcessReference'
-    name: ProcessReference
-    fullName: ProcessReference
-    children:
-      - '@azure/arm-servicemap.ProcessReference.id'
-      - '@azure/arm-servicemap.ProcessReference.kind'
-      - '@azure/arm-servicemap.ProcessReference.machine'
-      - '@azure/arm-servicemap.ProcessReference.name'
-      - '@azure/arm-servicemap.ProcessReference.type'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: ProcessReference
+uid: '@azure/arm-servicemap.ProcessReference'
+package: '@azure/arm-servicemap'
+summary: Reference to a process.
+fullName: ProcessReference
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: '@azure/arm-servicemap.ProcessReference.id'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.ProcessReference.id'
-    name: id
+    summary: Resource URI.
     fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: kind
+    uid: '@azure/arm-servicemap.ProcessReference.kind'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.ProcessReference.kind'
-    name: kind
+    summary: Polymorphic Discriminator
     fullName: kind
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'kind: "ref:process"'
       return:
-        type:
-          - '"ref:process"'
+        type: '"ref:process"'
+        description: ''
+  - name: machine
+    uid: '@azure/arm-servicemap.ProcessReference.machine'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.ProcessReference.machine'
-    name: machine
+    summary: >-
+      Machine hosting the process.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: machine
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'machine?: MachineReference'
       return:
-        type:
-          - '@azure/arm-servicemap.MachineReference'
+        type: <xref uid="@azure/arm-servicemap.MachineReference" />
+        description: ''
+  - name: name
+    uid: '@azure/arm-servicemap.ProcessReference.name'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.ProcessReference.name'
-    name: name
+    summary: >-
+      Resource name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'name?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: type
+    uid: '@azure/arm-servicemap.ProcessReference.type'
     package: '@azure/arm-servicemap'
-  - uid: '@azure/arm-servicemap.ProcessReference.type'
-    name: type
+    summary: >-
+      Resource type qualifier.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-servicemap'
-references:
-  - uid: '@azure/arm-servicemap.MachineReference'
-    name: MachineReference
-    spec.typeScript:
-      - name: MachineReference
-        fullName: MachineReference
-        uid: '@azure/arm-servicemap.MachineReference'
+        type: undefined | string
+        description: ''

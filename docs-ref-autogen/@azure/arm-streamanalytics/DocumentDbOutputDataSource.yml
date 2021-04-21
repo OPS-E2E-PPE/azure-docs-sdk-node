@@ -1,124 +1,132 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource'
-    name: DocumentDbOutputDataSource
-    fullName: DocumentDbOutputDataSource
-    children:
-      - '@azure/arm-streamanalytics.DocumentDbOutputDataSource.accountId'
-      - '@azure/arm-streamanalytics.DocumentDbOutputDataSource.accountKey'
-      - >-
-        @azure/arm-streamanalytics.DocumentDbOutputDataSource.collectionNamePattern
-      - '@azure/arm-streamanalytics.DocumentDbOutputDataSource.database'
-      - '@azure/arm-streamanalytics.DocumentDbOutputDataSource.documentId'
-      - '@azure/arm-streamanalytics.DocumentDbOutputDataSource.partitionKey'
-      - '@azure/arm-streamanalytics.DocumentDbOutputDataSource.type'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: DocumentDbOutputDataSource
+uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource'
+package: '@azure/arm-streamanalytics'
+summary: Describes a DocumentDB output data source.
+fullName: DocumentDbOutputDataSource
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: accountId
+    uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.accountId'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.accountId'
-    name: accountId
+    summary: >-
+      The DocumentDB account name or ID. Required on PUT (CreateOrReplace)
+      requests.
     fullName: accountId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'accountId?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: accountKey
+    uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.accountKey'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.accountKey'
-    name: accountKey
+    summary: >-
+      The account key for the DocumentDB account. Required on PUT
+      (CreateOrReplace) requests.
     fullName: accountKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'accountKey?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-streamanalytics'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: collectionNamePattern
+    uid: >-
       @azure/arm-streamanalytics.DocumentDbOutputDataSource.collectionNamePattern
-    name: collectionNamePattern
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The collection name pattern for the collections to be used. The collection
+      name format can be
+
+      constructed using the optional {partition} token, where partitions start
+      from 0. See the
+
+      DocumentDB section of
+
+      https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output
+      for more
+
+      information. Required on PUT (CreateOrReplace) requests.
     fullName: collectionNamePattern
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'collectionNamePattern?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: database
+    uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.database'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.database'
-    name: database
+    summary: >-
+      The name of the DocumentDB database. Required on PUT (CreateOrReplace)
+      requests.
     fullName: database
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'database?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: documentId
+    uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.documentId'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.documentId'
-    name: documentId
+    summary: >-
+      The name of the field in output events used to specify the primary key
+      which insert or update
+
+      operations are based on.
     fullName: documentId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'documentId?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: partitionKey
+    uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.partitionKey'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.partitionKey'
-    name: partitionKey
+    summary: >-
+      The name of the field in output events used to specify the key for
+      partitioning output across
+
+      collections. If 'collectionNamePattern' contains the {partition} token,
+      this property is
+
+      required to be specified.
     fullName: partitionKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'partitionKey?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: type
+    uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.type'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.DocumentDbOutputDataSource.type'
-    name: type
+    summary: Polymorphic Discriminator
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: "Microsoft.Storage/DocumentDB"'
       return:
-        type:
-          - '"Microsoft.Storage/DocumentDB"'
-    package: '@azure/arm-streamanalytics'
+        type: '"<xref uid="Microsoft.Storage/DocumentDB" />"'
+        description: ''

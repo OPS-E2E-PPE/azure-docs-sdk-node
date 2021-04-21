@@ -1,66 +1,150 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-operationalinsights.DataSource'
-    name: DataSource
-    fullName: DataSource
-    children:
-      - '@azure/arm-operationalinsights.DataSource.eTag'
-      - '@azure/arm-operationalinsights.DataSource.kind'
-      - '@azure/arm-operationalinsights.DataSource.properties'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: BaseResource
+### YamlMime:TSType
+name: DataSource
+uid: '@azure/arm-operationalinsights.DataSource'
+package: '@azure/arm-operationalinsights'
+summary: Datasources under OMS Workspace.
+fullName: DataSource
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: etag
+    uid: '@azure/arm-operationalinsights.DataSource.etag'
     package: '@azure/arm-operationalinsights'
-  - uid: '@azure/arm-operationalinsights.DataSource.eTag'
-    name: eTag
-    fullName: eTag
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    summary: The ETag of the data source.
+    fullName: etag
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'eTag?: undefined | string'
+      content: 'etag?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: id
+    uid: '@azure/arm-operationalinsights.DataSource.id'
     package: '@azure/arm-operationalinsights'
-  - uid: '@azure/arm-operationalinsights.DataSource.kind'
-    name: kind
+    summary: >-
+      Fully qualified resource ID for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: kind
+    uid: '@azure/arm-operationalinsights.DataSource.kind'
+    package: '@azure/arm-operationalinsights'
+    summary: >-
+      Possible values include: 'WindowsEvent', 'WindowsPerformanceCounter',
+      'IISLogs',
+
+      'LinuxSyslog', 'LinuxSyslogCollection', 'LinuxPerformanceObject',
+
+      'LinuxPerformanceCollection', 'CustomLog', 'CustomLogCollection',
+      'AzureAuditLog',
+
+      'AzureActivityLog', 'GenericDataSource', 'ChangeTrackingCustomPath',
+      'ChangeTrackingPath',
+
+      'ChangeTrackingServices', 'ChangeTrackingDataTypeConfiguration',
+
+      'ChangeTrackingDefaultRegistry', 'ChangeTrackingRegistry',
+      'ChangeTrackingLinuxPath',
+
+      'LinuxChangeTrackingPath', 'ChangeTrackingContentLocation',
+      'WindowsTelemetry', 'Office365',
+
+      'SecurityWindowsBaselineConfiguration',
+      'SecurityCenterSecurityWindowsBaselineConfiguration',
+
+      'SecurityEventCollectionConfiguration',
+
+      'SecurityInsightsSecurityEventCollectionConfiguration',
+      'ImportComputerGroup',
+
+      'NetworkMonitoring', 'Itsm', 'DnsAnalytics', 'ApplicationInsights',
+      'SqlDataClassification'
     fullName: kind
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'kind: DataSourceKind'
       return:
-        type:
-          - '@azure/arm-operationalinsights.DataSourceKind'
+        type: <xref uid="@azure/arm-operationalinsights.DataSourceKind" />
+        description: ''
+  - name: name
+    uid: '@azure/arm-operationalinsights.DataSource.name'
     package: '@azure/arm-operationalinsights'
-  - uid: '@azure/arm-operationalinsights.DataSource.properties'
-    name: properties
+    summary: >-
+      The name of the resource
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: properties
+    uid: '@azure/arm-operationalinsights.DataSource.properties'
+    package: '@azure/arm-operationalinsights'
+    summary: >-
+      The data source properties in raw json format, each kind of data source
+      have it's own schema.
     fullName: properties
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'properties: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: tags
+    uid: '@azure/arm-operationalinsights.DataSource.tags'
     package: '@azure/arm-operationalinsights'
-references:
-  - uid: '@azure/arm-operationalinsights.DataSourceKind'
-    name: DataSourceKind
-    spec.typeScript:
-      - name: DataSourceKind
-        fullName: DataSourceKind
-        uid: '@azure/arm-operationalinsights.DataSourceKind'
+    summary: Resource tags.
+    fullName: tags
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type: 'undefined | [key: string]: string'
+        description: ''
+  - name: type
+    uid: '@azure/arm-operationalinsights.DataSource.type'
+    package: '@azure/arm-operationalinsights'
+    summary: >-
+      The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or
+
+      "Microsoft.Storage/storageAccounts"
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+extends: <xref uid="@azure/arm-operationalinsights.ProxyResource" />

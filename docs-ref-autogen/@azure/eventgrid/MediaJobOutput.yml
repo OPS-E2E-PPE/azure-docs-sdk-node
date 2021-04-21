@@ -1,101 +1,78 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/eventgrid.MediaJobOutput'
-    name: MediaJobOutput
-    fullName: MediaJobOutput
-    children:
-      - '@azure/eventgrid.MediaJobOutput.error'
-      - '@azure/eventgrid.MediaJobOutput.label'
-      - '@azure/eventgrid.MediaJobOutput.odatatype'
-      - '@azure/eventgrid.MediaJobOutput.progress'
-      - '@azure/eventgrid.MediaJobOutput.state'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: MediaJobOutput
+uid: '@azure/eventgrid.MediaJobOutput'
+package: '@azure/eventgrid'
+summary: The event data for a Job output.
+fullName: MediaJobOutput
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: error
+    uid: '@azure/eventgrid.MediaJobOutput.error'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.MediaJobOutput.error'
-    name: error
+    summary: Gets the Job output error.
     fullName: error
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'error?: MediaJobError'
       return:
-        type:
-          - '@azure/eventgrid.MediaJobError'
+        type: <xref uid="@azure/eventgrid.MediaJobError" />
+        description: ''
+  - name: label
+    uid: '@azure/eventgrid.MediaJobOutput.label'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.MediaJobOutput.label'
-    name: label
+    summary: Gets the Job output label.
     fullName: label
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'label?: undefined | string'
+      content: 'label?: string'
       return:
-        type:
-          - undefined | string
+        type: string
+        description: ''
+  - name: odataType
+    uid: '@azure/eventgrid.MediaJobOutput.odataType'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.MediaJobOutput.odatatype'
-    name: odatatype
-    fullName: odatatype
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    summary: >-
+      Polymorphic discriminator, which specifies the different types this object
+      can be
+    fullName: odataType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'odatatype: "MediaJobOutput"'
+      content: 'odataType: "#Microsoft.Media.JobOutputAsset"'
       return:
-        type:
-          - '"MediaJobOutput"'
+        type: '"#<xref uid="Microsoft.Media.JobOutputAsset" />"'
+        description: ''
+  - name: progress
+    uid: '@azure/eventgrid.MediaJobOutput.progress'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.MediaJobOutput.progress'
-    name: progress
+    summary: Gets the Job output progress.
     fullName: progress
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'progress: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: state
+    uid: '@azure/eventgrid.MediaJobOutput.state'
     package: '@azure/eventgrid'
-  - uid: '@azure/eventgrid.MediaJobOutput.state'
-    name: state
+    summary: Gets the Job output state.
     fullName: state
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'state: MediaJobState'
       return:
-        type:
-          - '@azure/eventgrid.MediaJobState'
-    package: '@azure/eventgrid'
-references:
-  - uid: '@azure/eventgrid.MediaJobError'
-    name: MediaJobError
-    spec.typeScript:
-      - name: MediaJobError
-        fullName: MediaJobError
-        uid: '@azure/eventgrid.MediaJobError'
-  - uid: '@azure/eventgrid.MediaJobState'
-    name: MediaJobState
-    spec.typeScript:
-      - name: MediaJobState
-        fullName: MediaJobState
-        uid: '@azure/eventgrid.MediaJobState'
+        type: <xref uid="@azure/eventgrid.MediaJobState" />
+        description: ''

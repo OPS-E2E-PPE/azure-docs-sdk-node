@@ -1,63 +1,78 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-streamanalytics.OAuthBasedDataSourceProperties'
-    name: OAuthBasedDataSourceProperties
-    fullName: OAuthBasedDataSourceProperties
-    children:
-      - '@azure/arm-streamanalytics.OAuthBasedDataSourceProperties.refreshToken'
-      - >-
-        @azure/arm-streamanalytics.OAuthBasedDataSourceProperties.tokenUserDisplayName
-      - >-
-        @azure/arm-streamanalytics.OAuthBasedDataSourceProperties.tokenUserPrincipalName
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: OAuthBasedDataSourceProperties
+uid: '@azure/arm-streamanalytics.OAuthBasedDataSourceProperties'
+package: '@azure/arm-streamanalytics'
+summary: >-
+  The properties that are associated with data sources that use OAuth as their
+  authentication
+
+  model.
+fullName: OAuthBasedDataSourceProperties
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: refreshToken
+    uid: '@azure/arm-streamanalytics.OAuthBasedDataSourceProperties.refreshToken'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.OAuthBasedDataSourceProperties.refreshToken'
-    name: refreshToken
+    summary: >-
+      A refresh token that can be used to obtain a valid access token that can
+      then be used to
+
+      authenticate with the data source. A valid refresh token is currently only
+      obtainable via the
+
+      Azure Portal. It is recommended to put a dummy string value here when
+      creating the data source
+
+      and then going to the Azure Portal to authenticate the data source which
+      will update this
+
+      property with a valid refresh token. Required on PUT (CreateOrReplace)
+      requests.
     fullName: refreshToken
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'refreshToken?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-streamanalytics'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: tokenUserDisplayName
+    uid: >-
       @azure/arm-streamanalytics.OAuthBasedDataSourceProperties.tokenUserDisplayName
-    name: tokenUserDisplayName
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The user display name of the user that was used to obtain the refresh
+      token. Use this property
+
+      to help remember which user was used to obtain the refresh token.
     fullName: tokenUserDisplayName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tokenUserDisplayName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-streamanalytics'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: tokenUserPrincipalName
+    uid: >-
       @azure/arm-streamanalytics.OAuthBasedDataSourceProperties.tokenUserPrincipalName
-    name: tokenUserPrincipalName
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The user principal name (UPN) of the user that was used to obtain the
+      refresh token. Use this
+
+      property to help remember which user was used to obtain the refresh token.
     fullName: tokenUserPrincipalName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tokenUserPrincipalName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-streamanalytics'
+        type: undefined | string
+        description: ''

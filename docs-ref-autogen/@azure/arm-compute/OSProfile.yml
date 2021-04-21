@@ -1,29 +1,21 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-compute.OSProfile'
-    name: OSProfile
-    fullName: OSProfile
-    children:
-      - '@azure/arm-compute.OSProfile.adminPassword'
-      - '@azure/arm-compute.OSProfile.adminUsername'
-      - '@azure/arm-compute.OSProfile.allowExtensionOperations'
-      - '@azure/arm-compute.OSProfile.computerName'
-      - '@azure/arm-compute.OSProfile.customData'
-      - '@azure/arm-compute.OSProfile.linuxConfiguration'
-      - '@azure/arm-compute.OSProfile.secrets'
-      - '@azure/arm-compute.OSProfile.windowsConfiguration'
-    langs:
-      - typeScript
-    type: interface
-    summary: Specifies the operating system settings for the virtual machine.
+### YamlMime:TSType
+name: OSProfile
+uid: '@azure/arm-compute.OSProfile'
+package: '@azure/arm-compute'
+summary: >-
+  Specifies the operating system settings for the virtual machine. Some of the
+  settings cannot be
+
+  changed once VM is provisioned.
+fullName: OSProfile
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: adminPassword
+    uid: '@azure/arm-compute.OSProfile.adminPassword'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.OSProfile.adminPassword'
-    name: adminPassword
-    fullName: adminPassword
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Specifies the password of the administrator account. <br><br>
       **Minimum-length (Windows):** 8
@@ -59,43 +51,44 @@ items:
       Azure Linux VMs using the VMAccess
 
       Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)
-    optional: true
+    fullName: adminPassword
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'adminPassword?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: adminUsername
+    uid: '@azure/arm-compute.OSProfile.adminUsername'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.OSProfile.adminUsername'
-    name: adminUsername
-    fullName: adminUsername
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
-      Specifies the name of the administrator account. <br><br> **Windows-only
-      restriction:** Cannot
+      Specifies the name of the administrator account. <br><br> This property
+      cannot be updated
 
-      end in "." <br><br> **Disallowed values:** "administrator", "admin",
-      "user", "user1", "test",
+      after the VM is created. <br><br> **Windows-only restriction:** Cannot end
+      in "." <br><br>
 
-      "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm",
-      "admin2", "aspnet",
+      **Disallowed values:** "administrator", "admin", "user", "user1", "test",
+      "user2", "test1",
 
-      "backup", "console", "david", "guest", "john", "owner", "root", "server",
-      "sql", "support",
+      "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet",
+      "backup", "console",
 
-      "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br>
-      **Minimum-length
+      "david", "guest", "john", "owner", "root", "server", "sql", "support",
+      "support_388945a0",
 
-      (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters
-      <br><br> **Max-length
+      "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length
+      (Linux):** 1  character
 
-      (Windows):** 20 characters  <br><br><li> For root access to the Linux VM,
-      see [Using root
+      <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length
+      (Windows):** 20
 
-      privileges on Linux virtual machines in
+      characters  <br><br><li> For root access to the Linux VM, see [Using root
+      privileges on Linux
+
+      virtual machines in
 
       Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li>
 
@@ -105,40 +98,36 @@ items:
       [Selecting User Names for Linux on
 
       Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
-    optional: true
+    fullName: adminUsername
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'adminUsername?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: allowExtensionOperations
+    uid: '@azure/arm-compute.OSProfile.allowExtensionOperations'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.OSProfile.allowExtensionOperations'
-    name: allowExtensionOperations
-    fullName: allowExtensionOperations
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Specifies whether extension operations should be allowed on the virtual
       machine. <br><br>This
 
       may only be set to False when no extensions are present on the virtual
       machine.
-    optional: true
+    fullName: allowExtensionOperations
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'allowExtensionOperations?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
+        type: undefined | false | true
+        description: ''
+  - name: computerName
+    uid: '@azure/arm-compute.OSProfile.computerName'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.OSProfile.computerName'
-    name: computerName
-    fullName: computerName
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Specifies the host OS name of the virtual machine. <br><br> This name
       cannot be updated after
@@ -152,20 +141,18 @@ items:
       infrastructure services implementation
 
       guidelines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).
-    optional: true
+    fullName: computerName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'computerName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: customData
+    uid: '@azure/arm-compute.OSProfile.customData'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.OSProfile.customData'
-    name: customData
-    fullName: customData
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Specifies a base-64 encoded string of custom data. The base-64 encoded
       string is decoded to a
@@ -173,26 +160,37 @@ items:
       binary array that is saved as a file on the Virtual Machine. The maximum
       length of the binary
 
-      array is 65535 bytes. <br><br> For using cloud-init for your VM, see
-      [Using cloud-init to
+      array is 65535 bytes. <br><br> **Note: Do not pass any secrets or
+      passwords in customData
 
-      customize a Linux VM during
+      property** <br><br> This property cannot be updated after the VM is
+      created. <br><br>
+
+      customData is passed to the VM to be saved as a file, for more information
+      see [Custom Data on
+
+      Azure
+
+      VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/)
+
+      <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to
+      customize a Linux VM
+
+      during
 
       creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
-    optional: true
+    fullName: customData
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'customData?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: linuxConfiguration
+    uid: '@azure/arm-compute.OSProfile.linuxConfiguration'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.OSProfile.linuxConfiguration'
-    name: linuxConfiguration
-    fullName: linuxConfiguration
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Specifies the Linux operating system settings on the virtual machine.
       <br><br>For a list of
@@ -205,63 +203,60 @@ items:
       Non-Endorsed
 
       Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
-    optional: true
+    fullName: linuxConfiguration
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'linuxConfiguration?: LinuxConfiguration'
       return:
-        type:
-          - '@azure/arm-compute.LinuxConfiguration'
+        type: <xref uid="@azure/arm-compute.LinuxConfiguration" />
+        description: ''
+  - name: requireGuestProvisionSignal
+    uid: '@azure/arm-compute.OSProfile.requireGuestProvisionSignal'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.OSProfile.secrets'
-    name: secrets
-    fullName: secrets
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      Specifies whether the guest provision signal is required to infer
+      provision success of the
+
+      virtual machine.  **Note: This property is for private testing only, and
+      all customers must
+
+      not set the property to false.**
+    fullName: requireGuestProvisionSignal
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'requireGuestProvisionSignal?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: secrets
+    uid: '@azure/arm-compute.OSProfile.secrets'
+    package: '@azure/arm-compute'
     summary: >-
       Specifies set of certificates that should be installed onto the virtual
       machine.
-    optional: true
+    fullName: secrets
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'secrets?: VaultSecretGroup[]'
       return:
-        type:
-          - '@azure/arm-compute.VaultSecretGroup[]'
+        type: '<xref uid="@azure/arm-compute.VaultSecretGroup" />[]'
+        description: ''
+  - name: windowsConfiguration
+    uid: '@azure/arm-compute.OSProfile.windowsConfiguration'
     package: '@azure/arm-compute'
-  - uid: '@azure/arm-compute.OSProfile.windowsConfiguration'
-    name: windowsConfiguration
-    fullName: windowsConfiguration
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Specifies Windows operating system settings on the virtual machine.
-    optional: true
+    fullName: windowsConfiguration
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'windowsConfiguration?: WindowsConfiguration'
       return:
-        type:
-          - '@azure/arm-compute.WindowsConfiguration'
-    package: '@azure/arm-compute'
-references:
-  - uid: '@azure/arm-compute.LinuxConfiguration'
-    name: LinuxConfiguration
-    spec.typeScript:
-      - name: LinuxConfiguration
-        fullName: LinuxConfiguration
-        uid: '@azure/arm-compute.LinuxConfiguration'
-  - uid: '@azure/arm-compute.VaultSecretGroup[]'
-    name: 'VaultSecretGroup[]'
-    spec.typeScript:
-      - name: VaultSecretGroup
-        fullName: VaultSecretGroup
-        uid: '@azure/arm-compute.VaultSecretGroup'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-compute.WindowsConfiguration'
-    name: WindowsConfiguration
-    spec.typeScript:
-      - name: WindowsConfiguration
-        fullName: WindowsConfiguration
-        uid: '@azure/arm-compute.WindowsConfiguration'
+        type: <xref uid="@azure/arm-compute.WindowsConfiguration" />
+        description: ''

@@ -1,23 +1,17 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/cognitiveservices-customvision-training.CustomVisionError'
-    name: CustomVisionError
-    fullName: CustomVisionError
-    children:
-      - '@azure/cognitiveservices-customvision-training.CustomVisionError.code'
-      - '@azure/cognitiveservices-customvision-training.CustomVisionError.message'
-    langs:
-      - typeScript
-    type: interface
-    summary: An interface representing CustomVisionError.
+### YamlMime:TSType
+name: CustomVisionError
+uid: '@azure/cognitiveservices-customvision-training.CustomVisionError'
+package: '@azure/cognitiveservices-customvision-training'
+summary: An interface representing CustomVisionError.
+fullName: CustomVisionError
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: code
+    uid: '@azure/cognitiveservices-customvision-training.CustomVisionError.code'
     package: '@azure/cognitiveservices-customvision-training'
-  - uid: '@azure/cognitiveservices-customvision-training.CustomVisionError.code'
-    name: code
-    fullName: code
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The error code. Possible values include: 'NoError', 'BadRequest',
 
@@ -33,25 +27,32 @@ items:
       'BadRequestProjectUnsupportedDomainTypeChange',
       'BadRequestProjectUnsupportedExportPlatform',
 
+      'BadRequestProjectImagePreprocessingSettings',
+      'BadRequestProjectDuplicated',
+
       'BadRequestIterationName', 'BadRequestIterationNameNotUnique',
 
       'BadRequestIterationDescription', 'BadRequestIterationIsNotTrained',
 
-      'BadRequestWorkspaceCannotBeModified', 'BadRequestWorkspaceNotDeletable',
-      'BadRequestTagName',
+      'BadRequestIterationValidationFailed',
+      'BadRequestWorkspaceCannotBeModified',
 
-      'BadRequestTagNameNotUnique', 'BadRequestTagDescription',
-      'BadRequestTagType',
+      'BadRequestWorkspaceNotDeletable', 'BadRequestTagName',
+      'BadRequestTagNameNotUnique',
 
-      'BadRequestMultipleNegativeTag', 'BadRequestImageTags',
+      'BadRequestTagDescription', 'BadRequestTagType',
+      'BadRequestMultipleNegativeTag',
+
+      'BadRequestMultipleGeneralProductTag', 'BadRequestImageTags',
       'BadRequestImageRegions',
 
       'BadRequestNegativeAndRegularTagOnSameImage',
-      'BadRequestRequiredParamIsNull',
+      'BadRequestUnsupportedDomain',
 
-      'BadRequestIterationIsPublished', 'BadRequestInvalidPublishName',
+      'BadRequestRequiredParamIsNull', 'BadRequestIterationIsPublished',
 
-      'BadRequestInvalidPublishTarget', 'BadRequestUnpublishFailed',
+      'BadRequestInvalidPublishName', 'BadRequestInvalidPublishTarget',
+      'BadRequestUnpublishFailed',
 
       'BadRequestIterationNotPublished', 'BadRequestSubscriptionApi',
 
@@ -67,11 +68,13 @@ items:
 
       'BadRequestImageUrl', 'BadRequestImageFormat', 'BadRequestImageSizeBytes',
 
-      'BadRequestImageExceededCount', 'BadRequestTrainingNotNeeded',
+      'BadRequestImageDimensions', 'BadRequestImageAspectRatio',
+      'BadRequestImageExceededCount',
 
+      'BadRequestTrainingNotNeeded',
       'BadRequestTrainingNotNeededButTrainingPipelineUpdated',
-      'BadRequestTrainingValidationFailed',
 
+      'BadRequestTrainingValidationFailed',
       'BadRequestClassificationTrainingValidationFailed',
 
       'BadRequestMultiClassClassificationTrainingValidationFailed',
@@ -84,45 +87,65 @@ items:
       'BadRequestDetectionTrainingNotAllowNegativeTag',
       'BadRequestInvalidEmailAddress',
 
+      'BadRequestRetiredDomainNotSupportedForTraining',
+
       'BadRequestDomainNotSupportedForAdvancedTraining',
 
       'BadRequestExportPlatformNotSupportedForAdvancedTraining',
 
       'BadRequestReservedBudgetInHoursNotEnoughForAdvancedTraining',
 
-      'BadRequestExportValidationFailed', 'BadRequestExportAlreadyInProgress',
+      'BadRequestCustomBaseModelIterationStatusNotCompleted',
 
-      'BadRequestPredictionIdsMissing', 'BadRequestPredictionIdsExceededCount',
+      'BadRequestCustomBaseModelDomainNotCompatible',
 
+      'BadRequestCustomBaseModelArchitectureRetired',
+      'BadRequestExportValidationFailed',
+
+      'BadRequestExportAlreadyInProgress', 'BadRequestPredictionIdsMissing',
+
+      'BadRequestPredictionIdsExceededCount',
       'BadRequestPredictionTagsExceededCount',
+
       'BadRequestPredictionResultsExceededCount',
-
       'BadRequestPredictionInvalidApplicationName',
+
       'BadRequestPredictionInvalidQueryParameters',
+      'BadRequestInvalidImportToken',
 
-      'BadRequestInvalid', 'UnsupportedMediaType', 'Forbidden', 'ForbiddenUser',
+      'BadRequestExportWhileTraining', 'BadRequestImageMetadataKey',
+      'BadRequestImageMetadataValue',
 
-      'ForbiddenUserResource', 'ForbiddenUserSignupDisabled',
+      'BadRequestOperationNotSupported', 'BadRequestInvalidArtifactUri',
 
-      'ForbiddenUserSignupAllowanceExceeded', 'ForbiddenUserDoesNotExist',
-      'ForbiddenUserDisabled',
+      'BadRequestCustomerManagedKeyRevoked', 'BadRequestInvalidUri',
+      'BadRequestInvalid',
 
-      'ForbiddenUserInsufficientCapability', 'ForbiddenDRModeEnabled',
-      'ForbiddenInvalid',
+      'UnsupportedMediaType', 'Forbidden', 'ForbiddenUser',
+      'ForbiddenUserResource',
 
-      'NotFound', 'NotFoundProject', 'NotFoundProjectDefaultIteration',
-      'NotFoundIteration',
+      'ForbiddenUserSignupDisabled', 'ForbiddenUserSignupAllowanceExceeded',
 
-      'NotFoundIterationPerformance', 'NotFoundTag', 'NotFoundImage',
-      'NotFoundDomain',
+      'ForbiddenUserDoesNotExist', 'ForbiddenUserDisabled',
+      'ForbiddenUserInsufficientCapability',
 
-      'NotFoundApimSubscription', 'NotFoundInvalid', 'Conflict',
-      'ConflictInvalid', 'ErrorUnknown',
+      'ForbiddenDRModeEnabled', 'ForbiddenInvalid', 'NotFound',
+      'NotFoundProject',
 
-      'ErrorProjectInvalidWorkspace',
-      'ErrorProjectInvalidPipelineConfiguration',
+      'NotFoundProjectDefaultIteration', 'NotFoundIteration',
+      'NotFoundIterationPerformance',
 
-      'ErrorProjectInvalidDomain', 'ErrorProjectTrainingRequestFailed',
+      'NotFoundTag', 'NotFoundImage', 'NotFoundDomain',
+      'NotFoundApimSubscription',
+
+      'NotFoundInvalid', 'Conflict', 'ConflictInvalid', 'ErrorUnknown',
+      'ErrorIterationCopyFailed',
+
+      'ErrorPreparePerformanceMigrationFailed', 'ErrorProjectInvalidWorkspace',
+
+      'ErrorProjectInvalidPipelineConfiguration', 'ErrorProjectInvalidDomain',
+
+      'ErrorProjectTrainingRequestFailed', 'ErrorProjectImportRequestFailed',
 
       'ErrorProjectExportRequestFailed', 'ErrorFeaturizationServiceUnavailable',
 
@@ -140,32 +163,30 @@ items:
       'ErrorPredictionModelNotCached', 'ErrorPrediction',
       'ErrorPredictionStorage',
 
-      'ErrorRegionProposal', 'ErrorInvalid'
+      'ErrorRegionProposal', 'ErrorUnknownBaseModel', 'ErrorServerTimeOut',
+      'ErrorInvalid'
+    fullName: code
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'code: CustomVisionErrorCodes'
       return:
-        type:
-          - >-
-            @azure/cognitiveservices-customvision-training.CustomVisionErrorCodes
+        type: >-
+          <xref
+          uid="@azure/cognitiveservices-customvision-training.CustomVisionErrorCodes"
+          />
+        description: ''
+  - name: message
+    uid: '@azure/cognitiveservices-customvision-training.CustomVisionError.message'
     package: '@azure/cognitiveservices-customvision-training'
-  - uid: '@azure/cognitiveservices-customvision-training.CustomVisionError.message'
-    name: message
-    fullName: message
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: A message explaining the error reported by the service.
+    fullName: message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'message: string'
       return:
-        type:
-          - string
-    package: '@azure/cognitiveservices-customvision-training'
-references:
-  - uid: '@azure/cognitiveservices-customvision-training.CustomVisionErrorCodes'
-    name: CustomVisionErrorCodes
-    spec.typeScript:
-      - name: CustomVisionErrorCodes
-        fullName: CustomVisionErrorCodes
-        uid: '@azure/cognitiveservices-customvision-training.CustomVisionErrorCodes'
+        type: string
+        description: ''

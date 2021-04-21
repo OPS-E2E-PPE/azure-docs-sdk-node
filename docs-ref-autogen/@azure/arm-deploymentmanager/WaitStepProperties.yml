@@ -1,49 +1,37 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-deploymentmanager.WaitStepProperties'
-    name: WaitStepProperties
-    fullName: WaitStepProperties
-    children:
-      - '@azure/arm-deploymentmanager.WaitStepProperties.attributes'
-      - '@azure/arm-deploymentmanager.WaitStepProperties.stepType'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: WaitStepProperties
+uid: '@azure/arm-deploymentmanager.WaitStepProperties'
+package: '@azure/arm-deploymentmanager'
+summary: Defines the properties of a Wait step.
+fullName: WaitStepProperties
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: attributes
+    uid: '@azure/arm-deploymentmanager.WaitStepProperties.attributes'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.WaitStepProperties.attributes'
-    name: attributes
+    summary: The Wait attributes
     fullName: attributes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'attributes?: WaitStepAttributes'
+      content: 'attributes: WaitStepAttributes'
       return:
-        type:
-          - '@azure/arm-deploymentmanager.WaitStepAttributes'
+        type: <xref uid="@azure/arm-deploymentmanager.WaitStepAttributes" />
+        description: ''
+  - name: stepType
+    uid: '@azure/arm-deploymentmanager.WaitStepProperties.stepType'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.WaitStepProperties.stepType'
-    name: stepType
+    summary: Polymorphic Discriminator
     fullName: stepType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'stepType: "Wait"'
       return:
-        type:
-          - '"Wait"'
-    package: '@azure/arm-deploymentmanager'
-references:
-  - uid: '@azure/arm-deploymentmanager.WaitStepAttributes'
-    name: WaitStepAttributes
-    spec.typeScript:
-      - name: WaitStepAttributes
-        fullName: WaitStepAttributes
-        uid: '@azure/arm-deploymentmanager.WaitStepAttributes'
+        type: '"Wait"'
+        description: ''

@@ -1,106 +1,155 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource'
-    name: AzureSqlDatabaseOutputDataSource
-    fullName: AzureSqlDatabaseOutputDataSource
-    children:
-      - '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.database'
-      - '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.password'
-      - '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.server'
-      - '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.table'
-      - '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.type'
-      - '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.user'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: AzureSqlDatabaseOutputDataSource
+uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource'
+package: '@azure/arm-streamanalytics'
+summary: Describes an Azure SQL database output data source.
+fullName: AzureSqlDatabaseOutputDataSource
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: authenticationMode
+    uid: >-
+      @azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.authenticationMode
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.database'
-    name: database
+    summary: >-
+      Authentication Mode. Possible values include: 'Msi', 'UserToken',
+      'ConnectionString'
+    fullName: authenticationMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authenticationMode?: AuthenticationMode'
+      return:
+        type: <xref uid="@azure/arm-streamanalytics.AuthenticationMode" />
+        description: ''
+  - name: database
+    uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.database'
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The name of the Azure SQL database. Required on PUT (CreateOrReplace)
+      requests.
     fullName: database
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'database?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: maxBatchCount
+    uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.maxBatchCount'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.password'
-    name: password
+    summary: >-
+      Max Batch count for write to Sql database, the default value is 10,000.
+      Optional on PUT
+
+      requests.
+    fullName: maxBatchCount
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxBatchCount?: undefined | number'
+      return:
+        type: undefined | number
+        description: ''
+  - name: maxWriterCount
+    uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.maxWriterCount'
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      Max Write r count, currently only 1(single writer) and 0(based on query
+      partition) are
+
+      available. Optional on PUT requests.
+    fullName: maxWriterCount
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxWriterCount?: undefined | number'
+      return:
+        type: undefined | number
+        description: ''
+  - name: password
+    uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.password'
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The password that will be used to connect to the Azure SQL database.
+      Required on PUT
+
+      (CreateOrReplace) requests.
     fullName: password
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'password?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: server
+    uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.server'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.server'
-    name: server
+    summary: >-
+      The name of the SQL server containing the Azure SQL database. Required on
+      PUT
+
+      (CreateOrReplace) requests.
     fullName: server
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'server?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: table
+    uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.table'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.table'
-    name: table
+    summary: >-
+      The name of the table in the Azure SQL database. Required on PUT
+      (CreateOrReplace) requests.
     fullName: table
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'table?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: type
+    uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.type'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.type'
-    name: type
+    summary: Polymorphic Discriminator
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: "Microsoft.Sql/Server/Database"'
       return:
-        type:
-          - '"Microsoft.Sql/Server/Database"'
+        type: '"<xref uid="Microsoft.Sql/Server/Database" />"'
+        description: ''
+  - name: user
+    uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.user'
     package: '@azure/arm-streamanalytics'
-  - uid: '@azure/arm-streamanalytics.AzureSqlDatabaseOutputDataSource.user'
-    name: user
+    summary: >-
+      The user name that will be used to connect to the Azure SQL database.
+      Required on PUT
+
+      (CreateOrReplace) requests.
     fullName: user
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'user?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-streamanalytics'
+        type: undefined | string
+        description: ''

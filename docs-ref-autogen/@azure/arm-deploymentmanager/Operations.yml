@@ -1,111 +1,81 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-deploymentmanager.Operations'
-    name: Operations
-    fullName: Operations
-    children:
-      - '@azure/arm-deploymentmanager.Operations.get'
-      - '@azure/arm-deploymentmanager.Operations.get_2'
-      - '@azure/arm-deploymentmanager.Operations.get_1'
-      - '@azure/arm-deploymentmanager.Operations.constructor'
-    langs:
-      - typeScript
-    type: class
-    summary: Class representing a Operations.
+### YamlMime:TSType
+name: Operations
+uid: '@azure/arm-deploymentmanager.Operations'
+package: '@azure/arm-deploymentmanager'
+summary: Class representing a Operations.
+fullName: Operations
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: Operations(AzureDeploymentManagerContext)
+    uid: '@azure/arm-deploymentmanager.Operations.constructor'
     package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.Operations.get'
-    name: get(msRest.RequestOptionsBase)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function get(options?: msRest.RequestOptionsBase)'
-      parameters:
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<Models.OperationsGetResponse>
-    package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.Operations.get_2'
-    name: 'get(RequestOptionsBase, ServiceCallback<Operation[]>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function get(options: RequestOptionsBase, callback:
-        ServiceCallback<Operation[]>)
-      parameters:
-        - id: options
-          type:
-            - RequestOptionsBase
-          description: The optional parameters
-        - id: callback
-          type:
-            - 'ServiceCallback<@azure/arm-deploymentmanager.Operation[]>'
-          description: |
-            The callback
-      return:
-        type:
-          - Promise<Models.OperationsGetResponse>
-    package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.Operations.get_1'
-    name: 'get(ServiceCallback<Operation[]>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function get(callback: ServiceCallback<Operation[]>)'
-      parameters:
-        - id: callback
-          type:
-            - 'ServiceCallback<@azure/arm-deploymentmanager.Operation[]>'
-          description: |
-            The callback
-      return:
-        type:
-          - Promise<Models.OperationsGetResponse>
-    package: '@azure/arm-deploymentmanager'
-  - uid: '@azure/arm-deploymentmanager.Operations.constructor'
-    name: Operations(AzureDeploymentManagerContext)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
     summary: Create a Operations.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'new Operations(client: AzureDeploymentManagerContext)'
       parameters:
         - id: client
-          type:
-            - '@azure/arm-deploymentmanager.AzureDeploymentManagerContext'
+          type: >-
+            <xref
+            uid="@azure/arm-deploymentmanager.AzureDeploymentManagerContext" />
           description: |
             Reference to the service client.
+methods:
+  - name: list(msRest.RequestOptionsBase)
+    uid: '@azure/arm-deploymentmanager.Operations.list'
     package: '@azure/arm-deploymentmanager'
-references:
-  - uid: '@azure/arm-deploymentmanager.AzureDeploymentManagerContext'
-    name: AzureDeploymentManagerContext
-    spec.typeScript:
-      - name: AzureDeploymentManagerContext
-        fullName: AzureDeploymentManagerContext
-        uid: '@azure/arm-deploymentmanager.AzureDeploymentManagerContext'
-  - uid: 'ServiceCallback<@azure/arm-deploymentmanager.Operation[]>'
-    name: 'Operation[]>'
-    spec.typeScript:
-      - name: ServiceCallback<
-        fullName: ServiceCallback<
-      - name: Operation
-        fullName: Operation
-        uid: '@azure/arm-deploymentmanager.Operation'
-      - name: '[]>'
-        fullName: '[]>'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type: <xref uid="msRest.RequestOptionsBase" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.OperationsListResponse" />&gt;
+        description: Promise<Models.OperationsListResponse>
+  - name: 'list(RequestOptionsBase, ServiceCallback<OperationsList>)'
+    uid: '@azure/arm-deploymentmanager.Operations.list_2'
+    package: '@azure/arm-deploymentmanager'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function list(options: RequestOptionsBase, callback:
+        ServiceCallback<OperationsList>)
+      parameters:
+        - id: options
+          type: RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-deploymentmanager.OperationsList" />&gt;
+          description: |
+            The callback
+  - name: list(ServiceCallback<OperationsList>)
+    uid: '@azure/arm-deploymentmanager.Operations.list_1'
+    package: '@azure/arm-deploymentmanager'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function list(callback: ServiceCallback<OperationsList>)'
+      parameters:
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-deploymentmanager.OperationsList" />&gt;
+          description: |
+            The callback

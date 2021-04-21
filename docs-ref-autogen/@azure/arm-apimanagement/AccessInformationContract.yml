@@ -1,75 +1,103 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-apimanagement.AccessInformationContract'
-    name: AccessInformationContract
-    fullName: AccessInformationContract
-    children:
-      - '@azure/arm-apimanagement.AccessInformationContract.enabled'
-      - '@azure/arm-apimanagement.AccessInformationContract.id'
-      - '@azure/arm-apimanagement.AccessInformationContract.primaryKey'
-      - '@azure/arm-apimanagement.AccessInformationContract.secondaryKey'
-    langs:
-      - typeScript
-    type: interface
-    summary: Tenant access information contract of the API Management service.
+### YamlMime:TSType
+name: AccessInformationContract
+uid: '@azure/arm-apimanagement.AccessInformationContract'
+package: '@azure/arm-apimanagement'
+summary: Tenant Settings.
+fullName: AccessInformationContract
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: accessInformationContractId
+    uid: >-
+      @azure/arm-apimanagement.AccessInformationContract.accessInformationContractId
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.AccessInformationContract.enabled'
-    name: enabled
-    fullName: enabled
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Access Information type ('access' or 'gitAccess')
+    fullName: accessInformationContractId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'accessInformationContractId?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: enabled
+    uid: '@azure/arm-apimanagement.AccessInformationContract.enabled'
+    package: '@azure/arm-apimanagement'
     summary: Determines whether direct access is enabled.
-    optional: true
+    fullName: enabled
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'enabled?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
+        type: undefined | false | true
+        description: ''
+  - name: id
+    uid: '@azure/arm-apimanagement.AccessInformationContract.id'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.AccessInformationContract.id'
-    name: id
+    summary: >-
+      Resource ID.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Identifier.
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: name
+    uid: '@azure/arm-apimanagement.AccessInformationContract.name'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.AccessInformationContract.primaryKey'
-    name: primaryKey
-    fullName: primaryKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Primary access key.
-    optional: true
+    summary: >-
+      Resource name.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'primaryKey?: undefined | string'
+      content: 'name?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: principalId
+    uid: '@azure/arm-apimanagement.AccessInformationContract.principalId'
     package: '@azure/arm-apimanagement'
-  - uid: '@azure/arm-apimanagement.AccessInformationContract.secondaryKey'
-    name: secondaryKey
-    fullName: secondaryKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Secondary access key.
-    optional: true
+    summary: Principal (User) Identifier.
+    fullName: principalId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'secondaryKey?: undefined | string'
+      content: 'principalId?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: type
+    uid: '@azure/arm-apimanagement.AccessInformationContract.type'
     package: '@azure/arm-apimanagement'
+    summary: >-
+      Resource type for API Management resource.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+extends: <xref uid="@azure/arm-apimanagement.Resource" />

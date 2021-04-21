@@ -1,209 +1,198 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters'
-    name: IoTHubEventSourceCreateOrUpdateParameters
-    fullName: IoTHubEventSourceCreateOrUpdateParameters
-    children:
-      - >-
-        @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.consumerGroupName
-      - >-
-        @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.creationTime
-      - >-
-        @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.eventSourceResourceId
-      - >-
-        @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.iotHubName
-      - >-
-        @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.keyName
-      - >-
-        @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.kind
-      - >-
-        @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.location
-      - >-
-        @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.provisioningState
-      - >-
-        @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.sharedAccessKey
-      - >-
-        @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.tags
-      - >-
-        @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.timestampPropertyName
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-timeseriesinsights'
-  - uid: >-
+### YamlMime:TSType
+name: IoTHubEventSourceCreateOrUpdateParameters
+uid: '@azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters'
+package: '@azure/arm-timeseriesinsights'
+summary: >-
+  Parameters supplied to the Create or Update Event Source operation for an
+  IoTHub event source.
+fullName: IoTHubEventSourceCreateOrUpdateParameters
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: consumerGroupName
+    uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.consumerGroupName
-    name: consumerGroupName
+    package: '@azure/arm-timeseriesinsights'
+    summary: >-
+      The name of the iot hub's consumer group that holds the partitions from
+      which events will be
+
+      read.
     fullName: consumerGroupName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'consumerGroupName: string'
       return:
-        type:
-          - string
-    package: '@azure/arm-timeseriesinsights'
-  - uid: >-
+        type: string
+        description: ''
+  - name: creationTime
+    uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.creationTime
-    name: creationTime
+    package: '@azure/arm-timeseriesinsights'
+    summary: >-
+      The time the resource was created.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: creationTime
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'creationTime?: Date'
       return:
-        type:
-          - Date
-    package: '@azure/arm-timeseriesinsights'
-  - uid: >-
+        type: Date
+        description: ''
+  - name: eventSourceResourceId
+    uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.eventSourceResourceId
-    name: eventSourceResourceId
+    package: '@azure/arm-timeseriesinsights'
+    summary: The resource id of the event source in Azure Resource Manager.
     fullName: eventSourceResourceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'eventSourceResourceId: string'
       return:
-        type:
-          - string
-    package: '@azure/arm-timeseriesinsights'
-  - uid: >-
+        type: string
+        description: ''
+  - name: iotHubName
+    uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.iotHubName
-    name: iotHubName
+    package: '@azure/arm-timeseriesinsights'
+    summary: The name of the iot hub.
     fullName: iotHubName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'iotHubName: string'
       return:
-        type:
-          - string
-    package: '@azure/arm-timeseriesinsights'
-  - uid: >-
+        type: string
+        description: ''
+  - name: keyName
+    uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.keyName
-    name: keyName
+    package: '@azure/arm-timeseriesinsights'
+    summary: >-
+      The name of the Shared Access Policy key that grants the Time Series
+      Insights service access
+
+      to the iot hub. This shared access policy key must grant 'service connect'
+      permissions to the
+
+      iot hub.
     fullName: keyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'keyName: string'
       return:
-        type:
-          - string
-    package: '@azure/arm-timeseriesinsights'
-  - uid: >-
+        type: string
+        description: ''
+  - name: kind
+    uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.kind
-    name: kind
+    package: '@azure/arm-timeseriesinsights'
+    summary: Polymorphic Discriminator
     fullName: kind
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'kind: "Microsoft.IoTHub"'
       return:
-        type:
-          - '"Microsoft.IoTHub"'
-    package: '@azure/arm-timeseriesinsights'
-  - uid: >-
+        type: '"<xref uid="Microsoft.IoTHub" />"'
+        description: ''
+  - name: location
+    uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.location
-    name: location
+    package: '@azure/arm-timeseriesinsights'
+    summary: The location of the resource.
     fullName: location
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'location: string'
       return:
-        type:
-          - string
-    package: '@azure/arm-timeseriesinsights'
-  - uid: >-
+        type: string
+        description: ''
+  - name: provisioningState
+    uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.provisioningState
-    name: provisioningState
+    package: '@azure/arm-timeseriesinsights'
+    summary: >-
+      Provisioning state of the resource. Possible values include: 'Accepted',
+      'Creating',
+
+      'Updating', 'Succeeded', 'Failed', 'Deleting'
     fullName: provisioningState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'provisioningState?: ProvisioningState'
       return:
-        type:
-          - '@azure/arm-timeseriesinsights.ProvisioningState'
-    package: '@azure/arm-timeseriesinsights'
-  - uid: >-
+        type: <xref uid="@azure/arm-timeseriesinsights.ProvisioningState" />
+        description: ''
+  - name: sharedAccessKey
+    uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.sharedAccessKey
-    name: sharedAccessKey
+    package: '@azure/arm-timeseriesinsights'
+    summary: >-
+      The value of the Shared Access Policy key that grants the Time Series
+      Insights service read
+
+      access to the iot hub. This property is not shown in event source
+      responses.
     fullName: sharedAccessKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sharedAccessKey: string'
       return:
-        type:
-          - string
-    package: '@azure/arm-timeseriesinsights'
-  - uid: >-
+        type: string
+        description: ''
+  - name: tags
+    uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.tags
-    name: tags
+    package: '@azure/arm-timeseriesinsights'
+    summary: Key-value pairs of additional properties for the resource.
     fullName: tags
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tags?: undefined | [key: string]: string'
       return:
-        type:
-          - 'undefined | [key: string]: string'
-    package: '@azure/arm-timeseriesinsights'
-  - uid: >-
+        type: 'undefined | [key: string]: string'
+        description: ''
+  - name: timestampPropertyName
+    uid: >-
       @azure/arm-timeseriesinsights.IoTHubEventSourceCreateOrUpdateParameters.timestampPropertyName
-    name: timestampPropertyName
+    package: '@azure/arm-timeseriesinsights'
+    summary: >-
+      The event property that will be used as the event source's timestamp. If a
+      value isn't
+
+      specified for timestampPropertyName, or if null or empty-string is
+      specified, the event
+
+      creation time will be used.
     fullName: timestampPropertyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'timestampPropertyName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-timeseriesinsights'
-references:
-  - uid: '@azure/arm-timeseriesinsights.ProvisioningState'
-    name: ProvisioningState
-    spec.typeScript:
-      - name: ProvisioningState
-        fullName: ProvisioningState
-        uid: '@azure/arm-timeseriesinsights.ProvisioningState'
+        type: undefined | string
+        description: ''

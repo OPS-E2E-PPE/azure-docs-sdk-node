@@ -1,161 +1,134 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer'
-    name: AzureIaaSClassicComputeVMContainer
-    fullName: AzureIaaSClassicComputeVMContainer
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.backupManagementType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.containerType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.friendlyName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.healthStatus
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.registrationStatus
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.resourceGroup
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.virtualMachineId
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.virtualMachineVersion
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureIaaSClassicComputeVMContainer
+uid: '@azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer'
+package: '@azure/arm-recoveryservicesbackup'
+summary: IaaS VM workload-specific backup item representing a classic virtual machine.
+fullName: AzureIaaSClassicComputeVMContainer
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Type of backup management for the container. Possible values include:
+      'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.BackupManagementType'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.BackupManagementType" />
+        description: ''
+  - name: containerType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.containerType
-    name: containerType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: containerType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'containerType: "Microsoft.ClassicCompute/virtualMachines"'
       return:
-        type:
-          - '"Microsoft.ClassicCompute/virtualMachines"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"<xref uid="Microsoft.ClassicCompute/virtualMachines" />"'
+        description: ''
+  - name: friendlyName
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.friendlyName
-    name: friendlyName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Friendly name of the container.
     fullName: friendlyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: healthStatus
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.healthStatus
-    name: healthStatus
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Status of health of the container.
     fullName: healthStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'healthStatus?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: registrationStatus
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.registrationStatus
-    name: registrationStatus
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Status of registration of the container with the Recovery Services Vault.
     fullName: registrationStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'registrationStatus?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: resourceGroup
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.resourceGroup
-    name: resourceGroup
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Resource group name of Recovery Services Vault.
     fullName: resourceGroup
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'resourceGroup?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: virtualMachineId
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.virtualMachineId
-    name: virtualMachineId
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Fully qualified ARM url of the virtual machine represented by this Azure
+      IaaS VM container.
     fullName: virtualMachineId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'virtualMachineId?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: virtualMachineVersion
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureIaaSClassicComputeVMContainer.virtualMachineVersion
-    name: virtualMachineVersion
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Specifies whether the container represents a Classic or an Azure Resource
+      Manager VM.
     fullName: virtualMachineVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'virtualMachineVersion?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-    name: BackupManagementType
-    spec.typeScript:
-      - name: BackupManagementType
-        fullName: BackupManagementType
-        uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
+        type: undefined | string
+        description: ''

@@ -1,344 +1,280 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails'
-    name: DataBoxDiskJobDetails
-    fullName: DataBoxDiskJobDetails
-    children:
-      - '@azure/arm-databox.DataBoxDiskJobDetails.chainOfCustodySasKey'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.contactDetails'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.copyLogDetails'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.copyProgress'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.deliveryPackage'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.destinationAccountDetails'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.disksAndSizeDetails'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.errorDetails'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.expectedDataSizeInTeraBytes'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.jobDetailsType'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.jobStages'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.passkey'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.preferences'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.preferredDisks'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.returnPackage'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.reverseShipmentLabelSasKey'
-      - '@azure/arm-databox.DataBoxDiskJobDetails.shippingAddress'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: DataBoxDiskJobDetails
+uid: '@azure/arm-databox.DataBoxDiskJobDetails'
+package: '@azure/arm-databox'
+summary: DataBox Disk Job Details.
+fullName: DataBoxDiskJobDetails
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: chainOfCustodySasKey
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.chainOfCustodySasKey'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.chainOfCustodySasKey'
-    name: chainOfCustodySasKey
+    summary: >-
+      Shared access key to download the chain of custody logs
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: chainOfCustodySasKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'chainOfCustodySasKey?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: contactDetails
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.contactDetails'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.contactDetails'
-    name: contactDetails
+    summary: Contact details for notification and shipping.
     fullName: contactDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'contactDetails: ContactDetails'
       return:
-        type:
-          - '@azure/arm-databox.ContactDetails'
+        type: <xref uid="@azure/arm-databox.ContactDetails" />
+        description: ''
+  - name: copyLogDetails
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.copyLogDetails'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.copyLogDetails'
-    name: copyLogDetails
+    summary: >-
+      List of copy log details.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: copyLogDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'copyLogDetails?: CopyLogDetailsUnion[]'
       return:
-        type:
-          - '@azure/arm-databox.CopyLogDetailsUnion[]'
+        type: '<xref uid="@azure/arm-databox.CopyLogDetailsUnion" />[]'
+        description: ''
+  - name: copyProgress
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.copyProgress'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.copyProgress'
-    name: copyProgress
+    summary: >-
+      Copy progress per disk.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: copyProgress
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'copyProgress?: DataBoxDiskCopyProgress[]'
       return:
-        type:
-          - '@azure/arm-databox.DataBoxDiskCopyProgress[]'
+        type: '<xref uid="@azure/arm-databox.DataBoxDiskCopyProgress" />[]'
+        description: ''
+  - name: deliveryPackage
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.deliveryPackage'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.deliveryPackage'
-    name: deliveryPackage
+    summary: >-
+      Delivery package shipping details.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: deliveryPackage
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deliveryPackage?: PackageShippingDetails'
       return:
-        type:
-          - '@azure/arm-databox.PackageShippingDetails'
+        type: <xref uid="@azure/arm-databox.PackageShippingDetails" />
+        description: ''
+  - name: destinationAccountDetails
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.destinationAccountDetails'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.destinationAccountDetails'
-    name: destinationAccountDetails
+    summary: Destination account details.
     fullName: destinationAccountDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'destinationAccountDetails: DestinationAccountDetails[]'
+      content: 'destinationAccountDetails: DestinationAccountDetailsUnion[]'
       return:
-        type:
-          - '@azure/arm-databox.DestinationAccountDetails[]'
+        type: '<xref uid="@azure/arm-databox.DestinationAccountDetailsUnion" />[]'
+        description: ''
+  - name: disksAndSizeDetails
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.disksAndSizeDetails'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.disksAndSizeDetails'
-    name: disksAndSizeDetails
+    summary: >-
+      Contains the map of disk serial number to the disk size being used for the
+      job. Is returned
+
+      only after the disks are shipped to the customer.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: disksAndSizeDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'disksAndSizeDetails?: undefined | [key: string]: number'
       return:
-        type:
-          - 'undefined | [key: string]: number'
+        type: 'undefined | [key: string]: number'
+        description: ''
+  - name: errorDetails
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.errorDetails'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.errorDetails'
-    name: errorDetails
+    summary: >-
+      Error details for failure. This is optional.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: errorDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'errorDetails?: JobErrorDetails[]'
       return:
-        type:
-          - '@azure/arm-databox.JobErrorDetails[]'
+        type: '<xref uid="@azure/arm-databox.JobErrorDetails" />[]'
+        description: ''
+  - name: expectedDataSizeInTerabytes
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.expectedDataSizeInTerabytes'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.expectedDataSizeInTeraBytes'
-    name: expectedDataSizeInTeraBytes
-    fullName: expectedDataSizeInTeraBytes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    summary: >-
+      The expected size of the data, which needs to be transferred in this job,
+      in terabytes.
+    fullName: expectedDataSizeInTerabytes
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'expectedDataSizeInTeraBytes?: undefined | number'
+      content: 'expectedDataSizeInTerabytes?: undefined | number'
       return:
-        type:
-          - undefined | number
+        type: undefined | number
+        description: ''
+  - name: jobDetailsType
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.jobDetailsType'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.jobDetailsType'
-    name: jobDetailsType
+    summary: Polymorphic Discriminator
     fullName: jobDetailsType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'jobDetailsType: "DataBoxDisk"'
       return:
-        type:
-          - '"DataBoxDisk"'
+        type: '"DataBoxDisk"'
+        description: ''
+  - name: jobStages
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.jobStages'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.jobStages'
-    name: jobStages
+    summary: >-
+      List of stages that run in the job.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: jobStages
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'jobStages?: JobStages[]'
       return:
-        type:
-          - '@azure/arm-databox.JobStages[]'
+        type: '<xref uid="@azure/arm-databox.JobStages" />[]'
+        description: ''
+  - name: passkey
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.passkey'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.passkey'
-    name: passkey
+    summary: User entered passkey for DataBox Disk job.
     fullName: passkey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'passkey?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: preferences
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.preferences'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.preferences'
-    name: preferences
+    summary: Preferences for the order.
     fullName: preferences
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'preferences?: Preferences'
       return:
-        type:
-          - '@azure/arm-databox.Preferences'
+        type: <xref uid="@azure/arm-databox.Preferences" />
+        description: ''
+  - name: preferredDisks
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.preferredDisks'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.preferredDisks'
-    name: preferredDisks
+    summary: >-
+      User preference on what size disks are needed for the job. The map is from
+      the disk size in TB
+
+      to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will
+      be checked against
+
+      an int.
     fullName: preferredDisks
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'preferredDisks?: undefined | [key: string]: number'
       return:
-        type:
-          - 'undefined | [key: string]: number'
+        type: 'undefined | [key: string]: number'
+        description: ''
+  - name: returnPackage
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.returnPackage'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.returnPackage'
-    name: returnPackage
+    summary: >-
+      Return package shipping details.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: returnPackage
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'returnPackage?: PackageShippingDetails'
       return:
-        type:
-          - '@azure/arm-databox.PackageShippingDetails'
+        type: <xref uid="@azure/arm-databox.PackageShippingDetails" />
+        description: ''
+  - name: reverseShipmentLabelSasKey
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.reverseShipmentLabelSasKey'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.reverseShipmentLabelSasKey'
-    name: reverseShipmentLabelSasKey
+    summary: >-
+      Shared access key to download the return shipment label
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: reverseShipmentLabelSasKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'reverseShipmentLabelSasKey?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: shippingAddress
+    uid: '@azure/arm-databox.DataBoxDiskJobDetails.shippingAddress'
     package: '@azure/arm-databox'
-  - uid: '@azure/arm-databox.DataBoxDiskJobDetails.shippingAddress'
-    name: shippingAddress
+    summary: Shipping address of the customer.
     fullName: shippingAddress
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'shippingAddress: ShippingAddress'
       return:
-        type:
-          - '@azure/arm-databox.ShippingAddress'
-    package: '@azure/arm-databox'
-references:
-  - uid: '@azure/arm-databox.ContactDetails'
-    name: ContactDetails
-    spec.typeScript:
-      - name: ContactDetails
-        fullName: ContactDetails
-        uid: '@azure/arm-databox.ContactDetails'
-  - uid: '@azure/arm-databox.CopyLogDetailsUnion[]'
-    name: 'CopyLogDetailsUnion[]'
-    spec.typeScript:
-      - name: CopyLogDetailsUnion
-        fullName: CopyLogDetailsUnion
-        uid: '@azure/arm-databox.CopyLogDetailsUnion'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-databox.DataBoxDiskCopyProgress[]'
-    name: 'DataBoxDiskCopyProgress[]'
-    spec.typeScript:
-      - name: DataBoxDiskCopyProgress
-        fullName: DataBoxDiskCopyProgress
-        uid: '@azure/arm-databox.DataBoxDiskCopyProgress'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-databox.PackageShippingDetails'
-    name: PackageShippingDetails
-    spec.typeScript:
-      - name: PackageShippingDetails
-        fullName: PackageShippingDetails
-        uid: '@azure/arm-databox.PackageShippingDetails'
-  - uid: '@azure/arm-databox.DestinationAccountDetails[]'
-    name: 'DestinationAccountDetails[]'
-    spec.typeScript:
-      - name: DestinationAccountDetails
-        fullName: DestinationAccountDetails
-        uid: '@azure/arm-databox.DestinationAccountDetails'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-databox.JobErrorDetails[]'
-    name: 'JobErrorDetails[]'
-    spec.typeScript:
-      - name: JobErrorDetails
-        fullName: JobErrorDetails
-        uid: '@azure/arm-databox.JobErrorDetails'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-databox.JobStages[]'
-    name: 'JobStages[]'
-    spec.typeScript:
-      - name: JobStages
-        fullName: JobStages
-        uid: '@azure/arm-databox.JobStages'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-databox.Preferences'
-    name: Preferences
-    spec.typeScript:
-      - name: Preferences
-        fullName: Preferences
-        uid: '@azure/arm-databox.Preferences'
-  - uid: '@azure/arm-databox.ShippingAddress'
-    name: ShippingAddress
-    spec.typeScript:
-      - name: ShippingAddress
-        fullName: ShippingAddress
-        uid: '@azure/arm-databox.ShippingAddress'
+        type: <xref uid="@azure/arm-databox.ShippingAddress" />
+        description: ''

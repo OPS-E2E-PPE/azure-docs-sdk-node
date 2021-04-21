@@ -1,97 +1,105 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-datafactory.WebActivityAuthentication'
-    name: WebActivityAuthentication
-    fullName: WebActivityAuthentication
-    children:
-      - '@azure/arm-datafactory.WebActivityAuthentication.password'
-      - '@azure/arm-datafactory.WebActivityAuthentication.pfx'
-      - '@azure/arm-datafactory.WebActivityAuthentication.resource'
-      - '@azure/arm-datafactory.WebActivityAuthentication.type'
-      - '@azure/arm-datafactory.WebActivityAuthentication.username'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: WebActivityAuthentication
+uid: '@azure/arm-datafactory.WebActivityAuthentication'
+package: '@azure/arm-datafactory'
+summary: Web activity authentication properties.
+fullName: WebActivityAuthentication
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: password
+    uid: '@azure/arm-datafactory.WebActivityAuthentication.password'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.WebActivityAuthentication.password'
-    name: password
+    summary: >-
+      Password for the PFX file or basic authentication / Secret when used for
+      ServicePrincipal
     fullName: password
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'password?: SecureString'
+      content: 'password?: SecretBaseUnion'
       return:
-        type:
-          - '@azure/arm-datafactory.SecureString'
+        type: <xref uid="@azure/arm-datafactory.SecretBaseUnion" />
+        description: ''
+  - name: pfx
+    uid: '@azure/arm-datafactory.WebActivityAuthentication.pfx'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.WebActivityAuthentication.pfx'
-    name: pfx
+    summary: >-
+      Base64-encoded contents of a PFX file or Certificate when used for
+      ServicePrincipal
     fullName: pfx
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'pfx?: SecureString'
+      content: 'pfx?: SecretBaseUnion'
       return:
-        type:
-          - '@azure/arm-datafactory.SecureString'
+        type: <xref uid="@azure/arm-datafactory.SecretBaseUnion" />
+        description: ''
+  - name: resource
+    uid: '@azure/arm-datafactory.WebActivityAuthentication.resource'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.WebActivityAuthentication.resource'
-    name: resource
+    summary: >-
+      Resource for which Azure Auth token will be requested when using MSI
+      Authentication. Type:
+
+      string (or Expression with resultType string).
     fullName: resource
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'resource?: undefined | string'
+      content: 'resource?: any'
       return:
-        type:
-          - undefined | string
+        type: any
+        description: ''
+  - name: type
+    uid: '@azure/arm-datafactory.WebActivityAuthentication.type'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.WebActivityAuthentication.type'
-    name: type
+    summary: Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal)
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: username
+    uid: '@azure/arm-datafactory.WebActivityAuthentication.username'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.WebActivityAuthentication.username'
-    name: username
+    summary: >-
+      Web activity authentication user name for basic authentication or ClientID
+      when used for
+
+      ServicePrincipal. Type: string (or Expression with resultType string).
     fullName: username
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'username?: undefined | string'
+      content: 'username?: any'
       return:
-        type:
-          - undefined | string
+        type: any
+        description: ''
+  - name: userTenant
+    uid: '@azure/arm-datafactory.WebActivityAuthentication.userTenant'
     package: '@azure/arm-datafactory'
-references:
-  - uid: '@azure/arm-datafactory.SecureString'
-    name: SecureString
-    spec.typeScript:
-      - name: SecureString
-        fullName: SecureString
-        uid: '@azure/arm-datafactory.SecureString'
+    summary: >-
+      TenantId for which Azure Auth token will be requested when using
+      ServicePrincipal
+
+      Authentication. Type: string (or Expression with resultType string).
+    fullName: userTenant
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'userTenant?: any'
+      return:
+        type: any
+        description: ''

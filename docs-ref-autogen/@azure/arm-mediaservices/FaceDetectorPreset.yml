@@ -1,41 +1,95 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-mediaservices.FaceDetectorPreset'
-    name: FaceDetectorPreset
-    fullName: FaceDetectorPreset
-    children:
-      - '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
-      - '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Describes all the settings to be used when analyzing a video in order to
-      detect all the faces
+### YamlMime:TSType
+name: FaceDetectorPreset
+uid: '@azure/arm-mediaservices.FaceDetectorPreset'
+package: '@azure/arm-mediaservices'
+summary: >-
+  Describes all the settings to be used when analyzing a video in order to
+  detect (and optionally
 
-      present.
+  redact) all the faces present.
+fullName: FaceDetectorPreset
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: blurType
+    uid: '@azure/arm-mediaservices.FaceDetectorPreset.blurType'
     package: '@azure/arm-mediaservices'
-  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
-    name: odatatype
-    fullName: odatatype
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: 'Blur type. Possible values include: ''Box'', ''Low'', ''Med'', ''High'', ''Black'''
+    fullName: blurType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'blurType?: BlurType'
+      return:
+        type: <xref uid="@azure/arm-mediaservices.BlurType" />
+        description: ''
+  - name: experimentalOptions
+    uid: '@azure/arm-mediaservices.FaceDetectorPreset.experimentalOptions'
+    package: '@azure/arm-mediaservices'
+    summary: >-
+      Dictionary containing key value pairs for parameters not exposed in the
+      preset itself
+    fullName: experimentalOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'experimentalOptions?: undefined | [key: string]: string'
+      return:
+        type: 'undefined | [key: string]: string'
+        description: ''
+  - name: mode
+    uid: '@azure/arm-mediaservices.FaceDetectorPreset.mode'
+    package: '@azure/arm-mediaservices'
+    summary: >-
+      This mode provides the ability to choose between the following settings:
+      1) Analyze - For
+
+      detection only.This mode generates a metadata JSON file marking
+      appearances of faces
+
+      throughout the video.Where possible, appearances of the same person are
+      assigned the same ID.
+
+      2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This
+      enables a 2-pass
+
+      process, allowing for selective redaction of a subset of detected faces.It
+      takes in the
+
+      metadata file from a prior analyze pass, along with the source video, and
+      a user-selected
+
+      subset of IDs that require redaction. Possible values include: 'Analyze',
+      'Redact', 'Combined'
+    fullName: mode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'mode?: FaceRedactorMode'
+      return:
+        type: <xref uid="@azure/arm-mediaservices.FaceRedactorMode" />
+        description: ''
+  - name: odatatype
+    uid: '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+    package: '@azure/arm-mediaservices'
     summary: Polymorphic Discriminator
+    fullName: odatatype
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'odatatype: "#Microsoft.Media.FaceDetectorPreset"'
       return:
-        type:
-          - '"#Microsoft.Media.FaceDetectorPreset"'
+        type: '"#<xref uid="Microsoft.Media.FaceDetectorPreset" />"'
+        description: ''
+  - name: resolution
+    uid: '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
     package: '@azure/arm-mediaservices'
-  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
-    name: resolution
-    fullName: resolution
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Specifies the maximum resolution at which your video is analyzed. The
       default behavior is
@@ -64,17 +118,12 @@ items:
       detected. Possible
 
       values include: 'SourceResolution', 'StandardDefinition'
-    optional: true
+    fullName: resolution
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'resolution?: AnalysisResolution'
       return:
-        type:
-          - '@azure/arm-mediaservices.AnalysisResolution'
-    package: '@azure/arm-mediaservices'
-references:
-  - uid: '@azure/arm-mediaservices.AnalysisResolution'
-    name: AnalysisResolution
-    spec.typeScript:
-      - name: AnalysisResolution
-        fullName: AnalysisResolution
-        uid: '@azure/arm-mediaservices.AnalysisResolution'
+        type: <xref uid="@azure/arm-mediaservices.AnalysisResolution" />
+        description: ''

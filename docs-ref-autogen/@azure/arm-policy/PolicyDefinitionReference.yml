@@ -1,43 +1,69 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-policy.PolicyDefinitionReference'
-    name: PolicyDefinitionReference
-    fullName: PolicyDefinitionReference
-    children:
-      - '@azure/arm-policy.PolicyDefinitionReference.parameters'
-      - '@azure/arm-policy.PolicyDefinitionReference.policyDefinitionId'
-    langs:
-      - typeScript
-    type: interface
-    summary: The policy definition reference.
+### YamlMime:TSType
+name: PolicyDefinitionReference
+uid: '@azure/arm-policy.PolicyDefinitionReference'
+package: '@azure/arm-policy'
+summary: The policy definition reference.
+fullName: PolicyDefinitionReference
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: groupNames
+    uid: '@azure/arm-policy.PolicyDefinitionReference.groupNames'
     package: '@azure/arm-policy'
-  - uid: '@azure/arm-policy.PolicyDefinitionReference.parameters'
-    name: parameters
+    summary: The name of the groups that this policy definition reference belongs to.
+    fullName: groupNames
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'groupNames?: string[]'
+      return:
+        type: 'string[]'
+        description: ''
+  - name: parameters
+    uid: '@azure/arm-policy.PolicyDefinitionReference.parameters'
+    package: '@azure/arm-policy'
+    summary: >-
+      The parameter values for the referenced policy rule. The keys are the
+      parameter names.
     fullName: parameters
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Required if a parameter is used in policy rule.
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'parameters?: any'
+      content: 'parameters?: undefined | [key: string]: ParameterValuesValue'
       return:
-        type:
-          - any
+        type: >-
+          undefined | [key: string]: <xref
+          uid="@azure/arm-policy.ParameterValuesValue" />
+        description: ''
+  - name: policyDefinitionId
+    uid: '@azure/arm-policy.PolicyDefinitionReference.policyDefinitionId'
     package: '@azure/arm-policy'
-  - uid: '@azure/arm-policy.PolicyDefinitionReference.policyDefinitionId'
-    name: policyDefinitionId
-    fullName: policyDefinitionId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The ID of the policy definition or policy set definition.
-    optional: true
+    fullName: policyDefinitionId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'policyDefinitionId?: undefined | string'
+      content: 'policyDefinitionId: string'
       return:
-        type:
-          - undefined | string
+        type: string
+        description: ''
+  - name: policyDefinitionReferenceId
+    uid: '@azure/arm-policy.PolicyDefinitionReference.policyDefinitionReferenceId'
     package: '@azure/arm-policy'
+    summary: >-
+      A unique id (within the policy set definition) for this policy definition
+      reference.
+    fullName: policyDefinitionReferenceId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'policyDefinitionReferenceId?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''

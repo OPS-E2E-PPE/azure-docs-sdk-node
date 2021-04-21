@@ -1,194 +1,167 @@
-### YamlMime:UniversalReference
-items:
-  - uid: >-
-      @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest
-    name: AzureWorkloadSQLPointInTimeRestoreRequest
-    fullName: AzureWorkloadSQLPointInTimeRestoreRequest
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.alternateDirectoryPaths
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.isNonRecoverable
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.objectType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.pointInTime
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.propertyBag
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.recoveryType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.shouldUseAlternateTargetLocation
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.sourceResourceId
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.targetInfo
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureWorkloadSQLPointInTimeRestoreRequest
+uid: '@azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest'
+package: '@azure/arm-recoveryservicesbackup'
+summary: AzureWorkload SQL -specific restore. Specifically for PointInTime/Log restore
+fullName: AzureWorkloadSQLPointInTimeRestoreRequest
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: alternateDirectoryPaths
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.alternateDirectoryPaths
-    name: alternateDirectoryPaths
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Data directory details
     fullName: alternateDirectoryPaths
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'alternateDirectoryPaths?: SQLDataDirectoryMapping[]'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.SQLDataDirectoryMapping[]'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: >-
+          <xref uid="@azure/arm-recoveryservicesbackup.SQLDataDirectoryMapping"
+          />[]
+        description: ''
+  - name: isNonRecoverable
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.isNonRecoverable
-    name: isNonRecoverable
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      SQL specific property where user can chose to set no-recovery when restore
+      operation is tried
     fullName: isNonRecoverable
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isNonRecoverable?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | false | true
+        description: ''
+  - name: objectType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.objectType
-    name: objectType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: objectType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'objectType: "AzureWorkloadSQLPointInTimeRestoreRequest"'
       return:
-        type:
-          - '"AzureWorkloadSQLPointInTimeRestoreRequest"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"AzureWorkloadSQLPointInTimeRestoreRequest"'
+        description: ''
+  - name: pointInTime
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.pointInTime
-    name: pointInTime
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: PointInTime value
     fullName: pointInTime
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'pointInTime?: Date'
       return:
-        type:
-          - Date
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: Date
+        description: ''
+  - name: propertyBag
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.propertyBag
-    name: propertyBag
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Workload specific property bag.
     fullName: propertyBag
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'propertyBag?: undefined | [key: string]: string'
       return:
-        type:
-          - 'undefined | [key: string]: string'
+        type: 'undefined | [key: string]: string'
+        description: ''
+  - name: recoveryMode
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.recoveryMode
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+    summary: >-
+      Defines whether the current recovery mode is file restore or database
+      restore. Possible values
+
+      include: 'Invalid', 'FileRecovery', 'WorkloadRecovery'
+    fullName: recoveryMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'recoveryMode?: RecoveryMode'
+      return:
+        type: <xref uid="@azure/arm-recoveryservicesbackup.RecoveryMode" />
+        description: ''
+  - name: recoveryType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.recoveryType
-    name: recoveryType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Type of this recovery. Possible values include: 'Invalid',
+      'OriginalLocation',
+
+      'AlternateLocation', 'RestoreDisks', 'Offline'
     fullName: recoveryType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'recoveryType?: RecoveryType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.RecoveryType'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.RecoveryType" />
+        description: ''
+  - name: shouldUseAlternateTargetLocation
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.shouldUseAlternateTargetLocation
-    name: shouldUseAlternateTargetLocation
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Default option set to true. If this is set to false, alternate data
+      directory must be provided
     fullName: shouldUseAlternateTargetLocation
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'shouldUseAlternateTargetLocation?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | false | true
+        description: ''
+  - name: sourceResourceId
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.sourceResourceId
-    name: sourceResourceId
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Fully qualified ARM ID of the VM on which workload that was running is
+      being recovered.
     fullName: sourceResourceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceResourceId?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: targetInfo
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureWorkloadSQLPointInTimeRestoreRequest.targetInfo
-    name: targetInfo
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Details of target database
     fullName: targetInfo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'targetInfo?: TargetRestoreInfo'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.TargetRestoreInfo'
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.SQLDataDirectoryMapping[]'
-    name: 'SQLDataDirectoryMapping[]'
-    spec.typeScript:
-      - name: SQLDataDirectoryMapping
-        fullName: SQLDataDirectoryMapping
-        uid: '@azure/arm-recoveryservicesbackup.SQLDataDirectoryMapping'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-recoveryservicesbackup.RecoveryType'
-    name: RecoveryType
-    spec.typeScript:
-      - name: RecoveryType
-        fullName: RecoveryType
-        uid: '@azure/arm-recoveryservicesbackup.RecoveryType'
-  - uid: '@azure/arm-recoveryservicesbackup.TargetRestoreInfo'
-    name: TargetRestoreInfo
-    spec.typeScript:
-      - name: TargetRestoreInfo
-        fullName: TargetRestoreInfo
-        uid: '@azure/arm-recoveryservicesbackup.TargetRestoreInfo'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.TargetRestoreInfo" />
+        description: ''

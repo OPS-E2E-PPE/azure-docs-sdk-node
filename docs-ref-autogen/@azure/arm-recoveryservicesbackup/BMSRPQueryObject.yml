@@ -1,82 +1,69 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.BMSRPQueryObject'
-    name: BMSRPQueryObject
-    fullName: BMSRPQueryObject
-    children:
-      - '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.endDate'
-      - '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.extendedInfo'
-      - '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.restorePointQueryType'
-      - '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.startDate'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: BMSRPQueryObject
+uid: '@azure/arm-recoveryservicesbackup.BMSRPQueryObject'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Filters to list backup copies.
+fullName: BMSRPQueryObject
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: endDate
+    uid: '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.endDate'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.endDate'
-    name: endDate
+    summary: Backup copies created before this time.
     fullName: endDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'endDate?: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: extendedInfo
+    uid: '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.extendedInfo'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.extendedInfo'
-    name: extendedInfo
+    summary: >-
+      In Get Recovery Point, it tells whether extended information about
+      recovery point is asked.
     fullName: extendedInfo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'extendedInfo?: undefined | false | true'
       return:
-        type:
-          - undefined | false | true
+        type: undefined | false | true
+        description: ''
+  - name: restorePointQueryType
+    uid: '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.restorePointQueryType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.restorePointQueryType'
-    name: restorePointQueryType
+    summary: >-
+      RestorePoint type. Possible values include: 'Invalid', 'Full', 'Log',
+      'Differential',
+
+      'FullAndDifferential', 'All'
     fullName: restorePointQueryType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'restorePointQueryType?: RestorePointQueryType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.RestorePointQueryType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.RestorePointQueryType" />
+        description: ''
+  - name: startDate
+    uid: '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.startDate'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.BMSRPQueryObject.startDate'
-    name: startDate
+    summary: Backup copies created after this time.
     fullName: startDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'startDate?: Date'
       return:
-        type:
-          - Date
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.RestorePointQueryType'
-    name: RestorePointQueryType
-    spec.typeScript:
-      - name: RestorePointQueryType
-        fullName: RestorePointQueryType
-        uid: '@azure/arm-recoveryservicesbackup.RestorePointQueryType'
+        type: Date
+        description: ''

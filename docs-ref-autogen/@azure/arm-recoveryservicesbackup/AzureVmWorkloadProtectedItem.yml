@@ -1,433 +1,446 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem'
-    name: AzureVmWorkloadProtectedItem
-    fullName: AzureVmWorkloadProtectedItem
-    children:
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.backupManagementType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.backupSetName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.containerName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.createMode
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.extendedInfo
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.friendlyName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.lastBackupErrorDetail
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.lastBackupStatus
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.lastBackupTime
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.lastRecoveryPoint
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.parentName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.parentType
-      - '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.policyId'
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.protectedItemDataSourceId
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.protectedItemHealthStatus
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.protectedItemType
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.protectionState
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.protectionStatus
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.serverName
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.sourceResourceId
-      - >-
-        @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.workloadType
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+### YamlMime:TSType
+name: AzureVmWorkloadProtectedItem
+uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem'
+package: '@azure/arm-recoveryservicesbackup'
+summary: Azure VM workload-specific protected item.
+fullName: AzureVmWorkloadProtectedItem
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backupManagementType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.backupManagementType
-    name: backupManagementType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Type of backup management for the backed up item. Possible values include:
+      'Invalid',
+
+      'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql',
+      'AzureStorage', 'AzureWorkload',
+
+      'DefaultBackup'
     fullName: backupManagementType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupManagementType?: BackupManagementType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.BackupManagementType'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.BackupManagementType" />
+        description: ''
+  - name: backupSetName
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.backupSetName
-    name: backupSetName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Name of the backup set the backup item belongs to
     fullName: backupSetName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backupSetName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: containerName
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.containerName
-    name: containerName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Unique name of container
     fullName: containerName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'containerName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: createMode
+    uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.createMode'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.createMode'
-    name: createMode
+    summary: >-
+      Create mode to indicate recovery of existing soft deleted data source or
+      creation of new data
+
+      source. Possible values include: 'Invalid', 'Default', 'Recover'
     fullName: createMode
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'createMode?: CreateMode'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.CreateMode'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.CreateMode" />
+        description: ''
+  - name: deferredDeleteTimeInUTC
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.deferredDeleteTimeInUTC
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+    summary: Time for deferred deletion in UTC
+    fullName: deferredDeleteTimeInUTC
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'deferredDeleteTimeInUTC?: Date'
+      return:
+        type: Date
+        description: ''
+  - name: deferredDeleteTimeRemaining
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.deferredDeleteTimeRemaining
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Time remaining before the DS marked for deferred delete is permanently
+      deleted
+    fullName: deferredDeleteTimeRemaining
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'deferredDeleteTimeRemaining?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: extendedInfo
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.extendedInfo
-    name: extendedInfo
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Additional information for this backup item.
     fullName: extendedInfo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'extendedInfo?: AzureVmWorkloadProtectedItemExtendedInfo'
       return:
-        type:
-          - >-
-            @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItemExtendedInfo
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItemExtendedInfo"
+          />
+        description: ''
+  - name: friendlyName
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.friendlyName
-    name: friendlyName
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Friendly name of the DB represented by this backup item.
     fullName: friendlyName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'friendlyName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: healthDetails
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.healthDetails
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+    summary: Health details on this backup item.
+    fullName: healthDetails
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'healthDetails?: HealthDetails[]'
+      return:
+        type: '<xref uid="@azure/arm-recoveryservicesbackup.HealthDetails" />[]'
+        description: ''
+  - name: healthStatus
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.healthStatus
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Health status of protected item. Possible values include: 'Passed',
+      'ActionRequired',
+
+      'ActionSuggested', 'Healthy', 'TransientDegraded', 'PersistentDegraded',
+      'TransientUnhealthy',
+
+      'PersistentUnhealthy', 'Invalid'
+    fullName: healthStatus
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'healthStatus?: HealthStatus'
+      return:
+        type: <xref uid="@azure/arm-recoveryservicesbackup.HealthStatus" />
+        description: ''
+  - name: isDeferredDeleteScheduleUpcoming
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.isDeferredDeleteScheduleUpcoming
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Flag to identify whether the deferred deleted DS is to be purged soon
+    fullName: isDeferredDeleteScheduleUpcoming
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isDeferredDeleteScheduleUpcoming?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: isRehydrate
+    uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.isRehydrate'
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Flag to identify that deferred deleted DS is to be moved into Pause state
+    fullName: isRehydrate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isRehydrate?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: isScheduledForDeferredDelete
+    uid: >-
+      @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.isScheduledForDeferredDelete
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Flag to identify whether the DS is scheduled for deferred delete
+    fullName: isScheduledForDeferredDelete
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isScheduledForDeferredDelete?: undefined | false | true'
+      return:
+        type: undefined | false | true
+        description: ''
+  - name: lastBackupErrorDetail
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.lastBackupErrorDetail
-    name: lastBackupErrorDetail
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Error details in last backup
     fullName: lastBackupErrorDetail
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastBackupErrorDetail?: ErrorDetail'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.ErrorDetail'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.ErrorDetail" />
+        description: ''
+  - name: lastBackupStatus
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.lastBackupStatus
-    name: lastBackupStatus
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Last backup operation status. Possible values: Healthy, Unhealthy.
+      Possible values include:
+
+      'Invalid', 'Healthy', 'Unhealthy', 'IRPending'
     fullName: lastBackupStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastBackupStatus?: LastBackupStatus'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.LastBackupStatus'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.LastBackupStatus" />
+        description: ''
+  - name: lastBackupTime
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.lastBackupTime
-    name: lastBackupTime
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Timestamp of the last backup operation on this backup item.
     fullName: lastBackupTime
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastBackupTime?: Date'
       return:
-        type:
-          - Date
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: Date
+        description: ''
+  - name: lastRecoveryPoint
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.lastRecoveryPoint
-    name: lastRecoveryPoint
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Timestamp when the last (latest) backup copy was created for this backup
+      item.
     fullName: lastRecoveryPoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastRecoveryPoint?: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: parentName
+    uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.parentName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.parentName'
-    name: parentName
+    summary: Parent name of the DB such as Instance or Availability Group.
     fullName: parentName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'parentName?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: parentType
+    uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.parentType'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.parentType'
-    name: parentType
+    summary: >-
+      Parent type of protected item, example: for a DB, standalone server or
+      distributed
     fullName: parentType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'parentType?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: policyId
+    uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.policyId'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.policyId'
-    name: policyId
+    summary: ID of the backup policy with which this item is backed up.
     fullName: policyId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'policyId?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: protectedItemDataSourceId
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.protectedItemDataSourceId
-    name: protectedItemDataSourceId
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Data ID of the protected item.
     fullName: protectedItemDataSourceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectedItemDataSourceId?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: protectedItemHealthStatus
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.protectedItemHealthStatus
-    name: protectedItemHealthStatus
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Health status of the backup item, evaluated based on last heartbeat
+      received. Possible values
+
+      include: 'Invalid', 'Healthy', 'Unhealthy', 'NotReachable', 'IRPending'
     fullName: protectedItemHealthStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectedItemHealthStatus?: ProtectedItemHealthStatus'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.ProtectedItemHealthStatus'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservicesbackup.ProtectedItemHealthStatus" />
+        description: ''
+  - name: protectedItemType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.protectedItemType
-    name: protectedItemType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Polymorphic Discriminator
     fullName: protectedItemType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectedItemType: "AzureVmWorkloadProtectedItem"'
       return:
-        type:
-          - '"AzureVmWorkloadProtectedItem"'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: '"AzureVmWorkloadProtectedItem"'
+        description: ''
+  - name: protectionState
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.protectionState
-    name: protectionState
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Backup state of this backup item. Possible values include: 'Invalid',
+      'IRPending',
+
+      'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
     fullName: protectionState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectionState?: ProtectionState'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.ProtectionState'
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: <xref uid="@azure/arm-recoveryservicesbackup.ProtectionState" />
+        description: ''
+  - name: protectionStatus
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.protectionStatus
-    name: protectionStatus
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: Backup status of this backup item.
     fullName: protectionStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'protectionStatus?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: serverName
+    uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.serverName'
     package: '@azure/arm-recoveryservicesbackup'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.serverName'
-    name: serverName
+    summary: Host/Cluster Name for instance or AG
     fullName: serverName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'serverName?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: sourceResourceId
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.sourceResourceId
-    name: sourceResourceId
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: ARM ID of the resource to be backed up.
     fullName: sourceResourceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceResourceId?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/arm-recoveryservicesbackup'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: workloadType
+    uid: >-
       @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItem.workloadType
-    name: workloadType
+    package: '@azure/arm-recoveryservicesbackup'
+    summary: >-
+      Type of workload this item represents. Possible values include: 'Invalid',
+      'VM', 'FileFolder',
+
+      'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM',
+      'SystemState', 'Client',
+
+      'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase',
+      'SAPAseDatabase'
     fullName: workloadType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workloadType?: DataSourceType'
       return:
-        type:
-          - '@azure/arm-recoveryservicesbackup.DataSourceType'
-    package: '@azure/arm-recoveryservicesbackup'
-references:
-  - uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-    name: BackupManagementType
-    spec.typeScript:
-      - name: BackupManagementType
-        fullName: BackupManagementType
-        uid: '@azure/arm-recoveryservicesbackup.BackupManagementType'
-  - uid: '@azure/arm-recoveryservicesbackup.CreateMode'
-    name: CreateMode
-    spec.typeScript:
-      - name: CreateMode
-        fullName: CreateMode
-        uid: '@azure/arm-recoveryservicesbackup.CreateMode'
-  - uid: '@azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItemExtendedInfo'
-    name: AzureVmWorkloadProtectedItemExtendedInfo
-    spec.typeScript:
-      - name: AzureVmWorkloadProtectedItemExtendedInfo
-        fullName: AzureVmWorkloadProtectedItemExtendedInfo
-        uid: >-
-          @azure/arm-recoveryservicesbackup.AzureVmWorkloadProtectedItemExtendedInfo
-  - uid: '@azure/arm-recoveryservicesbackup.ErrorDetail'
-    name: ErrorDetail
-    spec.typeScript:
-      - name: ErrorDetail
-        fullName: ErrorDetail
-        uid: '@azure/arm-recoveryservicesbackup.ErrorDetail'
-  - uid: '@azure/arm-recoveryservicesbackup.LastBackupStatus'
-    name: LastBackupStatus
-    spec.typeScript:
-      - name: LastBackupStatus
-        fullName: LastBackupStatus
-        uid: '@azure/arm-recoveryservicesbackup.LastBackupStatus'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemHealthStatus'
-    name: ProtectedItemHealthStatus
-    spec.typeScript:
-      - name: ProtectedItemHealthStatus
-        fullName: ProtectedItemHealthStatus
-        uid: '@azure/arm-recoveryservicesbackup.ProtectedItemHealthStatus'
-  - uid: '@azure/arm-recoveryservicesbackup.ProtectionState'
-    name: ProtectionState
-    spec.typeScript:
-      - name: ProtectionState
-        fullName: ProtectionState
-        uid: '@azure/arm-recoveryservicesbackup.ProtectionState'
-  - uid: '@azure/arm-recoveryservicesbackup.DataSourceType'
-    name: DataSourceType
-    spec.typeScript:
-      - name: DataSourceType
-        fullName: DataSourceType
-        uid: '@azure/arm-recoveryservicesbackup.DataSourceType'
+        type: <xref uid="@azure/arm-recoveryservicesbackup.DataSourceType" />
+        description: ''

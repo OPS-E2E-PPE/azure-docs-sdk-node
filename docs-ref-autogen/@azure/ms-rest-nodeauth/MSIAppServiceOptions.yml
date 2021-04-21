@@ -1,120 +1,105 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions'
-    name: MSIAppServiceOptions
-    fullName: MSIAppServiceOptions
-    children:
-      - '@azure/ms-rest-nodeauth.MSIAppServiceOptions.httpClient'
-      - '@azure/ms-rest-nodeauth.MSIAppServiceOptions.msiApiVersion'
-      - '@azure/ms-rest-nodeauth.MSIAppServiceOptions.msiEndpoint'
-      - '@azure/ms-rest-nodeauth.MSIAppServiceOptions.msiSecret'
-      - '@azure/ms-rest-nodeauth.MSIAppServiceOptions.resource'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: '@azure/ms-rest-nodeauth.MSIOptions'
+### YamlMime:TSType
+name: MSIAppServiceOptions
+uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions'
+package: '@azure/ms-rest-nodeauth'
+summary: Defines the optional parameters for authentication with MSI for AppService.
+fullName: MSIAppServiceOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: clientId
+    uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions.clientId'
     package: '@azure/ms-rest-nodeauth'
-  - uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions.httpClient'
-    name: httpClient
-    fullName: httpClient
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
-      {HttpClient} [httpClient] - The client responsible for sending HTTP
-      requests.
+      The clientId of the managed identity you would like the token for.
+      Required, if
 
+      your app service has user-assigned managed identities.
+    fullName: clientId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'clientId?: undefined | string'
+      return:
+        type: undefined | string
+        description: ''
+  - name: httpClient
+    uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions.httpClient'
+    package: '@azure/ms-rest-nodeauth'
+    summary: |-
+      The client responsible for sending HTTP requests.
       By default it is Axios-based <xref:DefaultHttpClient>.
-    optional: true
+    fullName: httpClient
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'httpClient?: HttpClient'
       return:
-        type:
-          - HttpClient
+        type: HttpClient
+        description: ''
+  - name: msiApiVersion
+    uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions.msiApiVersion'
     package: '@azure/ms-rest-nodeauth'
-  - uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions.msiApiVersion'
-    name: msiApiVersion
+    summary: The api-version of the local MSI agent. Default value is "2017-09-01".
     fullName: msiApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      {string} [msiApiVersion] - The api-version of the local MSI agent. Default
-      value is "2017-09-01".
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'msiApiVersion?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: msiEndpoint
+    uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions.msiEndpoint'
     package: '@azure/ms-rest-nodeauth'
-  - uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions.msiEndpoint'
-    name: msiEndpoint
-    fullName: msiEndpoint
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
-      {string} [msiEndpoint] - The local URL from which your app can request
-      tokens.
+      The local URL from which your app can request tokens.
 
-      Either provide this parameter or set the environment variable
-      `MSI_ENDPOINT`.
-
-      For example: `export MSI_ENDPOINT="http://127.0.0.1:41741/MSI/token/"`
-    optional: true
+      Unless this property is specified, any of the two environment variables
+      `IDENTITY_ENDPOINT` or `MSI_ENDPOINT` will be used as the default value.
+    fullName: msiEndpoint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'msiEndpoint?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: msiSecret
+    uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions.msiSecret'
     package: '@azure/ms-rest-nodeauth'
-  - uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions.msiSecret'
-    name: msiSecret
-    fullName: msiSecret
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
-      {string} [msiSecret] - The secret used in communication between your code
-      and the local MSI agent.
+      The secret used in communication between your code and the local MSI
+      agent.
 
-      Either provide this parameter or set the environment variable
-      `MSI_SECRET`.
-
-      For example: `export MSI_SECRET="69418689F1E342DD946CB82994CDA3CB"`
-    optional: true
+      Unless this property is specified, any of the two environment variables
+      `IDENTITY_SECRET` or `MSI_SECRET` will be used as the default value.
+    fullName: msiSecret
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'msiSecret?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: resource
+    uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions.resource'
     package: '@azure/ms-rest-nodeauth'
-  - uid: '@azure/ms-rest-nodeauth.MSIAppServiceOptions.resource'
-    name: resource
-    fullName: resource
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
-    optional: true
+    fullName: resource
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'resource?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/ms-rest-nodeauth'
-references:
-  - uid: '@azure/ms-rest-nodeauth.MSIOptions'
-    name: MSIOptions
-    spec.typeScript:
-      - name: MSIOptions
-        fullName: MSIOptions
-        uid: '@azure/ms-rest-nodeauth.MSIOptions'
+        type: undefined | string
+        description: ''
+extends: <xref uid="@azure/ms-rest-nodeauth.MSIOptions" />

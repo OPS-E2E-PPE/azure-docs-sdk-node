@@ -1,50 +1,61 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/servicefabric.Setting'
-    name: Setting
-    fullName: Setting
-    children:
-      - '@azure/servicefabric.Setting.name'
-      - '@azure/servicefabric.Setting.value'
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Describes a setting for the container. The setting file path can be
-      fetched from environment
+### YamlMime:TSType
+name: Setting
+uid: '@azure/servicefabric.Setting'
+package: '@azure/servicefabric'
+summary: >-
+  Describes a setting for the container. The setting file path can be fetched
+  from environment
 
-      variable "Fabric_SettingPath". The path for Windows container is
-      "C:\\secrets". The path for
+  variable "Fabric_SettingPath". The path for Windows container is
+  "C:\\secrets". The path for
 
-      Linux container is "/var/secrets".
+  Linux container is "/var/secrets".
+fullName: Setting
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: name
+    uid: '@azure/servicefabric.Setting.name'
     package: '@azure/servicefabric'
-  - uid: '@azure/servicefabric.Setting.name'
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The name of the setting.
-    optional: true
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'name?: undefined | string'
       return:
-        type:
-          - undefined | string
+        type: undefined | string
+        description: ''
+  - name: type
+    uid: '@azure/servicefabric.Setting.type'
     package: '@azure/servicefabric'
-  - uid: '@azure/servicefabric.Setting.value'
-    name: value
+    summary: >-
+      The type of the setting being given in value. Possible values include:
+      'ClearText',
+
+      'KeyVaultReference', 'SecretValueReference'. Default value: 'ClearText'.
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type?: SettingType'
+      return:
+        type: <xref uid="@azure/servicefabric.SettingType" />
+        description: ''
+  - name: value
+    uid: '@azure/servicefabric.Setting.value'
+    package: '@azure/servicefabric'
+    summary: 'The value of the setting, will be processed based on the type provided.'
     fullName: value
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The value of the setting.
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'value?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/servicefabric'
+        type: undefined | string
+        description: ''

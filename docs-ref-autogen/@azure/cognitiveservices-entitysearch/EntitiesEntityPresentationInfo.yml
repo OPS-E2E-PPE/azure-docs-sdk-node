@@ -1,79 +1,74 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/cognitiveservices-entitysearch.EntitiesEntityPresentationInfo'
-    name: EntitiesEntityPresentationInfo
-    fullName: EntitiesEntityPresentationInfo
-    children:
-      - >-
-        @azure/cognitiveservices-entitysearch.EntitiesEntityPresentationInfo.entityScenario
-      - >-
-        @azure/cognitiveservices-entitysearch.EntitiesEntityPresentationInfo.entityTypeDisplayHint
-      - >-
-        @azure/cognitiveservices-entitysearch.EntitiesEntityPresentationInfo.entityTypeHints
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: '@azure/cognitiveservices-entitysearch'
-  - uid: >-
+### YamlMime:TSType
+name: EntitiesEntityPresentationInfo
+uid: '@azure/cognitiveservices-entitysearch.EntitiesEntityPresentationInfo'
+package: '@azure/cognitiveservices-entitysearch'
+summary: Defines additional information about an entity such as type hints.
+fullName: EntitiesEntityPresentationInfo
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: entityScenario
+    uid: >-
       @azure/cognitiveservices-entitysearch.EntitiesEntityPresentationInfo.entityScenario
-    name: entityScenario
+    package: '@azure/cognitiveservices-entitysearch'
+    summary: >-
+      The supported scenario. Possible values include: 'DominantEntity',
+      'DisambiguationItem',
+
+      'ListItem'. Default value: 'DominantEntity'.
     fullName: entityScenario
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'entityScenario: EntityScenario'
       return:
-        type:
-          - '@azure/cognitiveservices-entitysearch.EntityScenario'
-    package: '@azure/cognitiveservices-entitysearch'
-  - uid: >-
+        type: <xref uid="@azure/cognitiveservices-entitysearch.EntityScenario" />
+        description: ''
+  - name: entityTypeDisplayHint
+    uid: >-
       @azure/cognitiveservices-entitysearch.EntitiesEntityPresentationInfo.entityTypeDisplayHint
-    name: entityTypeDisplayHint
+    package: '@azure/cognitiveservices-entitysearch'
+    summary: >-
+      A display version of the entity hint. For example, if entityTypeHints is
+      Artist, this field
+
+      may be set to American Singer.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: entityTypeDisplayHint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'entityTypeDisplayHint?: undefined | string'
       return:
-        type:
-          - undefined | string
-    package: '@azure/cognitiveservices-entitysearch'
-  - uid: >-
+        type: undefined | string
+        description: ''
+  - name: entityTypeHints
+    uid: >-
       @azure/cognitiveservices-entitysearch.EntitiesEntityPresentationInfo.entityTypeHints
-    name: entityTypeHints
+    package: '@azure/cognitiveservices-entitysearch'
+    summary: >-
+      A list of hints that indicate the entity's type. The list could contain a
+      single hint such as
+
+      Movie or a list of hints such as Place, LocalBusiness, Restaurant. Each
+      successive hint in the
+
+      array narrows the entity's type.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     fullName: entityTypeHints
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'entityTypeHints?: EntityType[]'
       return:
-        type:
-          - '@azure/cognitiveservices-entitysearch.EntityType[]'
-    package: '@azure/cognitiveservices-entitysearch'
-references:
-  - uid: '@azure/cognitiveservices-entitysearch.EntityScenario'
-    name: EntityScenario
-    spec.typeScript:
-      - name: EntityScenario
-        fullName: EntityScenario
-        uid: '@azure/cognitiveservices-entitysearch.EntityScenario'
-  - uid: '@azure/cognitiveservices-entitysearch.EntityType[]'
-    name: 'EntityType[]'
-    spec.typeScript:
-      - name: EntityType
-        fullName: EntityType
-        uid: '@azure/cognitiveservices-entitysearch.EntityType'
-      - name: '[]'
-        fullName: '[]'
+        type: '<xref uid="@azure/cognitiveservices-entitysearch.EntityType" />[]'
+        description: ''

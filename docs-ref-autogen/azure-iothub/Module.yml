@@ -1,194 +1,158 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-iothub.Module
-    name: Module
-    fullName: Module
-    children:
-      - azure-iothub.Module.authentication
-      - azure-iothub.Module.cloudToDeviceMessageCount
-      - azure-iothub.Module.connectionState
-      - azure-iothub.Module.connectionStateUpdatedTime
-      - azure-iothub.Module.deviceId
-      - azure-iothub.Module.etag
-      - azure-iothub.Module.generationId
-      - azure-iothub.Module.lastActivityTime
-      - azure-iothub.Module.managedBy
-      - azure-iothub.Module.moduleId
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: Module
+uid: azure-iothub.Module
+package: azure-iothub
+summary: The module identity on a device.
+fullName: Module
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: authentication
+    uid: azure-iothub.Module.authentication
     package: azure-iothub
-  - uid: azure-iothub.Module.authentication
-    name: authentication
+    summary: >-
+      The authentication mechanism used by the module when connecting to the
+      service and edge hub.
     fullName: authentication
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Contains the symmetric keys used to authenticate this module.
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'authentication?: Authentication'
+      content: 'authentication?: AuthenticationMechanism'
       return:
-        type:
-          - azure-iothub.Device.Authentication
+        type: <xref uid="azure-iothub.AuthenticationMechanism" />
+        description: ''
+  - name: cloudToDeviceMessageCount
+    uid: azure-iothub.Module.cloudToDeviceMessageCount
     package: azure-iothub
-  - uid: azure-iothub.Module.cloudToDeviceMessageCount
-    name: cloudToDeviceMessageCount
+    summary: >-
+      The number of cloud-to-module messages currently queued to be sent to the
+      module.
     fullName: cloudToDeviceMessageCount
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Number of c2d messages waiting to by delivered to the module.
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'cloudToDeviceMessageCount?: string'
+      content: 'cloudToDeviceMessageCount?: number'
       return:
-        type:
-          - string
+        type: number
+        description: ''
+  - name: connectionState
+    uid: azure-iothub.Module.connectionState
     package: azure-iothub
-  - uid: azure-iothub.Module.connectionState
-    name: connectionState
+    summary: >-
+      The connection state of the device. Possible values include:
+      'Disconnected', 'Connected'
     fullName: connectionState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Whether the module is 'connected' or 'disconnected'. It is not recommended
-      to use this property to determine if the module is actually connected
-      right now though,
-
-      since the module connection may have timed out and the IoT hub may not
-      have detected it.
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'connectionState?: Device.ConnectionState'
+      content: 'connectionState?: ConnectionState2'
       return:
-        type:
-          - azure-iothub.Device.ConnectionState
+        type: <xref uid="azure-iothub.ConnectionState2" />
+        description: ''
+  - name: connectionStateUpdatedTime
+    uid: azure-iothub.Module.connectionStateUpdatedTime
     package: azure-iothub
-  - uid: azure-iothub.Module.connectionStateUpdatedTime
-    name: connectionStateUpdatedTime
+    summary: The date and time the connection state was last updated.
     fullName: connectionStateUpdatedTime
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Timestamp representing the last time `connectionState` changed.
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'connectionStateUpdatedTime?: string'
+      content: 'connectionStateUpdatedTime?: Date'
       return:
-        type:
-          - string
+        type: Date
+        description: ''
+  - name: deviceId
+    uid: azure-iothub.Module.deviceId
     package: azure-iothub
-  - uid: azure-iothub.Module.deviceId
-    name: deviceId
+    summary: The unique identifier of the device.
     fullName: deviceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Unique device identifier as it exists in the Azure IoT hub device
-      registry.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'deviceId: string'
+      content: 'deviceId?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: etag
+    uid: azure-iothub.Module.etag
     package: azure-iothub
-  - uid: azure-iothub.Module.etag
-    name: etag
+    summary: >-
+      The string representing a weak ETag for the module identity, as per
+      RFC7232.
     fullName: etag
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Weak entity tag assigned to this module identity description
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'etag?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: generationId
+    uid: azure-iothub.Module.generationId
     package: azure-iothub
-  - uid: azure-iothub.Module.generationId
-    name: generationId
-    fullName: generationId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
-      Used to disambiguate devices that have been deleted/recreated with the
-      same `moduleId`
-    optional: true
+      The IoT Hub generated, case-sensitive string up to 128 characters long.
+      This value is used to
+
+      distinguish modules with the same moduleId, when they have been deleted
+      and re-created.
+    fullName: generationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'generationId?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: lastActivityTime
+    uid: azure-iothub.Module.lastActivityTime
     package: azure-iothub
-  - uid: azure-iothub.Module.lastActivityTime
-    name: lastActivityTime
+    summary: 'The date and time the device last connected, received, or sent a message.'
     fullName: lastActivityTime
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Timestamp representing the last time the module authenticated, sent a
-      message, or received a message.
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'lastActivityTime?: string'
+      content: 'lastActivityTime?: Date'
       return:
-        type:
-          - string
+        type: Date
+        description: ''
+  - name: managedBy
+    uid: azure-iothub.Module.managedBy
     package: azure-iothub
-  - uid: azure-iothub.Module.managedBy
-    name: managedBy
+    summary: >-
+      Identifies who manages this module. For instance, this value is
+      \"IotEdge\" if the edge
+
+      runtime owns this module.
     fullName: managedBy
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Represents the modules managed by owner
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'managedBy?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: moduleId
+    uid: azure-iothub.Module.moduleId
     package: azure-iothub
-  - uid: azure-iothub.Module.moduleId
-    name: moduleId
+    summary: The unique identifier of the module.
     fullName: moduleId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Module ID
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'moduleId: string'
+      content: 'moduleId?: string'
       return:
-        type:
-          - string
-    package: azure-iothub
-references:
-  - uid: azure-iothub.Device.Authentication
-    name: Authentication
-    spec.typeScript:
-      - name: Authentication
-        fullName: Authentication
-        uid: azure-iothub.Device.Authentication
-  - uid: azure-iothub.Device.ConnectionState
-    name: ConnectionState
-    spec.typeScript:
-      - name: ConnectionState
-        fullName: ConnectionState
-        uid: azure-iothub.Device.ConnectionState
+        type: string
+        description: ''

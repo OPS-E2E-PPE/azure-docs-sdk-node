@@ -1,90 +1,103 @@
-### YamlMime:UniversalReference
-items:
-  - uid: '@azure/arm-datafactory.AzureQueueSink'
-    name: AzureQueueSink
-    fullName: AzureQueueSink
-    children:
-      - '@azure/arm-datafactory.AzureQueueSink.sinkRetryCount'
-      - '@azure/arm-datafactory.AzureQueueSink.sinkRetryWait'
-      - '@azure/arm-datafactory.AzureQueueSink.type'
-      - '@azure/arm-datafactory.AzureQueueSink.writeBatchSize'
-      - '@azure/arm-datafactory.AzureQueueSink.writeBatchTimeout'
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: AzureQueueSink
+uid: '@azure/arm-datafactory.AzureQueueSink'
+package: '@azure/arm-datafactory'
+summary: A copy activity Azure Queue sink.
+fullName: AzureQueueSink
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: maxConcurrentConnections
+    uid: '@azure/arm-datafactory.AzureQueueSink.maxConcurrentConnections'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureQueueSink.sinkRetryCount'
-    name: sinkRetryCount
+    summary: >-
+      The maximum concurrent connection count for the sink data store. Type:
+      integer (or Expression
+
+      with resultType integer).
+    fullName: maxConcurrentConnections
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxConcurrentConnections?: any'
+      return:
+        type: any
+        description: ''
+  - name: sinkRetryCount
+    uid: '@azure/arm-datafactory.AzureQueueSink.sinkRetryCount'
+    package: '@azure/arm-datafactory'
+    summary: 'Sink retry count. Type: integer (or Expression with resultType integer).'
     fullName: sinkRetryCount
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sinkRetryCount?: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: sinkRetryWait
+    uid: '@azure/arm-datafactory.AzureQueueSink.sinkRetryWait'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureQueueSink.sinkRetryWait'
-    name: sinkRetryWait
+    summary: >-
+      Sink retry wait. Type: string (or Expression with resultType string),
+      pattern:
+
+      ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
     fullName: sinkRetryWait
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sinkRetryWait?: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: type
+    uid: '@azure/arm-datafactory.AzureQueueSink.type'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureQueueSink.type'
-    name: type
+    summary: Polymorphic Discriminator
     fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: "AzureQueueSink"'
       return:
-        type:
-          - '"AzureQueueSink"'
+        type: '"AzureQueueSink"'
+        description: ''
+  - name: writeBatchSize
+    uid: '@azure/arm-datafactory.AzureQueueSink.writeBatchSize'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureQueueSink.writeBatchSize'
-    name: writeBatchSize
+    summary: >-
+      Write batch size. Type: integer (or Expression with resultType integer),
+      minimum: 0.
     fullName: writeBatchSize
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'writeBatchSize?: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: writeBatchTimeout
+    uid: '@azure/arm-datafactory.AzureQueueSink.writeBatchTimeout'
     package: '@azure/arm-datafactory'
-  - uid: '@azure/arm-datafactory.AzureQueueSink.writeBatchTimeout'
-    name: writeBatchTimeout
+    summary: >-
+      Write batch timeout. Type: string (or Expression with resultType string),
+      pattern:
+
+      ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
     fullName: writeBatchTimeout
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'writeBatchTimeout?: any'
       return:
-        type:
-          - any
-    package: '@azure/arm-datafactory'
+        type: any
+        description: ''
