@@ -1,20 +1,38 @@
 {
   "docsets_to_publish": [
     {
-      "docset_name": "node-api",
+      "docset_name": "node-api-ppe",
       "build_source_folder": ".",
-      "build_output_subfolder": "node-api",
+      "build_output_subfolder": "node-api-ppe",
       "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
+      "moniker_ranges": [
+        "azure-node-latest",
+        "azure-node-preview",
+        "azure-node-legacy",
+        "az-js-storage-v12",
+        "az-js-storage-v10",
+        "az-js-keyvault-v4",
+        "az-js-keyvault-v4-preview",
+        "az-js-servicebus-v7",
+        "az-js-servicebus-v1",
+        "az-js-cosmos-v3",
+        "az-js-cosmos-mgmt-latest",
+        "az-js-keyvault-mgmt-latest",
+        "az-js-servicebus-mgmt-latest",
+        "az-js-storage-mgmt-latest"
+      ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
-        "UniversalReference": "Content",
+        "TSType": "Content",
+        "TSPackage": "Content",
+        "TSEnum": "Content",
+        "TSTypeAlias": "Content",
         "LandingData": "Content",
-        "APIConnector": "Content"
+        "APIConnector": "Content",
+        "ReferenceContainer": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
@@ -23,28 +41,9 @@
         "_dependentPackages/uref.plugins/content"
       ],
       "DiffFolder": [
-        "api"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
-          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
-        ]
-      }
-    },
-    {
-      "docset_name": "node-api-ppe",
-      "build_source_folder": ".",
-      "build_output_subfolder": "node-api-ppe",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
+        "docs-ref-autogen/overview",
+        "preview-packages/docs-ref-autogen/overview"
+      ]
     }
   ],
   "notification_subscribers": [],
@@ -53,11 +52,18 @@
   "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
+  "enable_incremental_build": false,
   "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure-sdk-for-js",
+      "url": "https://github.com/Azure/azure-sdk-for-js",
       "branch": "master",
       "branch_mapping": {}
     }
@@ -87,23 +93,20 @@
     {
       "TopLevelTOC": "docs-ref-mapping/reference.yml",
       "ReferenceTOC": "docs-ref-autogen/toc.yml",
-      "ConceptualTOC": "docs-ref-conceptual/toc.yml",
       "ReferenceTOCUrl": "/javascript/api/azure_node_ref_toc/toc.json",
-      "ConceptualTOCUrl": "/javascript/azure/toc.json?view=azure-node-latest",
+      "ConceptualTOCUrl": "/azure/developer/javascript/toc.json?view=master",
       "OutputFolder": "docs-ref-autogen/overview",
       "HideEmptyNode": false,
       "ContainerPageMetadata": {
         "langs": [
           "js"
         ]
-      },
-      "ContainerPageYamlMime": "YamlMime:UniversalReference"
+      }
     },
     {
       "TopLevelTOC": "preview-packages/docs-ref-mapping/reference.yml",
       "ReferenceTOC": "preview-packages/docs-ref-autogen/toc.yml",
-      "ConceptualTOC": "docs-ref-conceptual/toc.yml",
-      "ConceptualTOCUrl": "/javascript/azure/toc.json?view=azure-node-preview",
+      "ConceptualTOCUrl": "/azure/developer/javascript/toc.json?view=master",
       "ReferenceTOCUrl": "/javascript/api/azure_node_ref_toc_preview/toc.json?view=azure-node-preview",
       "OutputFolder": "preview-packages/docs-ref-autogen/overview",
       "HideEmptyNode": false,
@@ -111,8 +114,22 @@
         "langs": [
           "js"
         ]
-      },
-      "ContainerPageYamlMime": "YamlMime:UniversalReference"
+      }
+    },
+    {
+      "TopLevelTOC": "previous-packages/docs-ref-mapping/reference.yml",
+      "ReferenceTOC": "previous-packages/docs-ref-autogen/toc.yml",
+      "ConceptualTOCUrl": "/azure/developer/javascript/toc.json?view=master",
+      "OutputFolder": "previous-packages/docs-ref-autogen/overview",
+      "HideEmptyNode": false,
+      "ContainerPageMetadata": {
+        "langs": [
+          "js"
+        ]
+      }
     }
-  ]
+],
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
